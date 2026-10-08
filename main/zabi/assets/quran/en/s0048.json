@@ -1,0 +1,295 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 48,
+            "serial_number": "48",
+            "arabic_name": "الفتح",
+            "translated_name": "Al-Fath",
+            "verses_translate_name": "Verses",
+            "verses_count": "29"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 511,
+                "page_number": "511",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 4584,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا",
+                        "translated_name": "WE HAVE GIVEN you a splendent victory"
+                    },
+                    {
+                        "id": 4585,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "لِّيَغْفِرَ لَكَ ٱللَّهُ مَا تَقَدَّمَ مِن ذَنۢبِكَ وَمَا تَأَخَّرَ وَيُتِمَّ نِعْمَتَهُۥ عَلَيْكَ وَيَهْدِيَكَ صِرَٰطًا مُّسْتَقِيمًا",
+                        "translated_name": "That God may save you from earlier and subsequent blames, and complete His favours on you, and guide you on the straight path,"
+                    },
+                    {
+                        "id": 4586,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "وَيَنصُرَكَ ٱللَّهُ نَصْرًا عَزِيزًا",
+                        "translated_name": "And help you with surpassing help."
+                    },
+                    {
+                        "id": 4587,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "هُوَ ٱلَّذِىٓ أَنزَلَ ٱلسَّكِينَةَ فِى قُلُوبِ ٱلْمُؤْمِنِينَ لِيَزْدَادُوٓا۟ إِيمَـٰنًا مَّعَ إِيمَـٰنِهِمْ ۗ وَلِلَّهِ جُنُودُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَكَانَ ٱللَّهُ عَلِيمًا حَكِيمًا",
+                        "translated_name": "It is He who sent down the sense of security into the hearts of believers so that their faith may increase with belief, -- God's are the armies of the heavens and the earth; and God is all-knowing and all-wise; --"
+                    },
+                    {
+                        "id": 4588,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "لِّيُدْخِلَ ٱلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ جَنَّـٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَا وَيُكَفِّرَ عَنْهُمْ سَيِّـَٔاتِهِمْ ۚ وَكَانَ ذَٰلِكَ عِندَ ٱللَّهِ فَوْزًا عَظِيمًا",
+                        "translated_name": "And that He may admit men and women who believe into gardens with rivers running by, to live for ever there, and absolve their evil, -- This, in the sight of God, will be the great fulfilment --"
+                    },
+                    {
+                        "id": 4589,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "وَيُعَذِّبَ ٱلْمُنَـٰفِقِينَ وَٱلْمُنَـٰفِقَـٰتِ وَٱلْمُشْرِكِينَ وَٱلْمُشْرِكَـٰتِ ٱلظَّآنِّينَ بِٱللَّهِ ظَنَّ ٱلسَّوْءِ ۚ عَلَيْهِمْ دَآئِرَةُ ٱلسَّوْءِ ۖ وَغَضِبَ ٱللَّهُ عَلَيْهِمْ وَلَعَنَهُمْ وَأَعَدَّ لَهُمْ جَهَنَّمَ ۖ وَسَآءَتْ مَصِيرًا",
+                        "translated_name": "And that He may punish men and women (who are) hypocrites, and idolaters and idolatresses who entertain evil notions of God: It is against them that the wheel of misfortune will turn, and God will be wroth with them, and condemn them. For them He has prepared Hell, an evil destination!"
+                    },
+                    {
+                        "id": 4590,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "وَلِلَّهِ جُنُودُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَكَانَ ٱللَّهُ عَزِيزًا حَكِيمًا",
+                        "translated_name": "For God's are the armies of the heavens and the earth; and God is all-knowing and all-wise."
+                    },
+                    {
+                        "id": 4591,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "إِنَّآ أَرْسَلْنَـٰكَ شَـٰهِدًا وَمُبَشِّرًا وَنَذِيرًا",
+                        "translated_name": "We have sent you as witness (of the truth) and harbinger of good news and a warner,"
+                    },
+                    {
+                        "id": 4592,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "لِّتُؤْمِنُوا۟ بِٱللَّهِ وَرَسُولِهِۦ وَتُعَزِّرُوهُ وَتُوَقِّرُوهُ وَتُسَبِّحُوهُ بُكْرَةً وَأَصِيلًا",
+                        "translated_name": "So that (men) may believe in God and His Apostle, and honour Him and revere Him, and sing His praises morning and evening."
+                    }
+                ],
+                "page_arabic_ayah": "إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا (١)  لِّيَغْفِرَ لَكَ ٱللَّهُ مَا تَقَدَّمَ مِن ذَنۢبِكَ وَمَا تَأَخَّرَ وَيُتِمَّ نِعْمَتَهُۥ عَلَيْكَ وَيَهْدِيَكَ صِرَٰطًا مُّسْتَقِيمًا (٢)  وَيَنصُرَكَ ٱللَّهُ نَصْرًا عَزِيزًا (٣)  هُوَ ٱلَّذِىٓ أَنزَلَ ٱلسَّكِينَةَ فِى قُلُوبِ ٱلْمُؤْمِنِينَ لِيَزْدَادُوٓا۟ إِيمَـٰنًا مَّعَ إِيمَـٰنِهِمْ ۗ وَلِلَّهِ جُنُودُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَكَانَ ٱللَّهُ عَلِيمًا حَكِيمًا (٤)  لِّيُدْخِلَ ٱلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ جَنَّـٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَا وَيُكَفِّرَ عَنْهُمْ سَيِّـَٔاتِهِمْ ۚ وَكَانَ ذَٰلِكَ عِندَ ٱللَّهِ فَوْزًا عَظِيمًا (٥)  وَيُعَذِّبَ ٱلْمُنَـٰفِقِينَ وَٱلْمُنَـٰفِقَـٰتِ وَٱلْمُشْرِكِينَ وَٱلْمُشْرِكَـٰتِ ٱلظَّآنِّينَ بِٱللَّهِ ظَنَّ ٱلسَّوْءِ ۚ عَلَيْهِمْ دَآئِرَةُ ٱلسَّوْءِ ۖ وَغَضِبَ ٱللَّهُ عَلَيْهِمْ وَلَعَنَهُمْ وَأَعَدَّ لَهُمْ جَهَنَّمَ ۖ وَسَآءَتْ مَصِيرًا (٦)  وَلِلَّهِ جُنُودُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَكَانَ ٱللَّهُ عَزِيزًا حَكِيمًا (٧)  إِنَّآ أَرْسَلْنَـٰكَ شَـٰهِدًا وَمُبَشِّرًا وَنَذِيرًا (٨)  لِّتُؤْمِنُوا۟ بِٱللَّهِ وَرَسُولِهِۦ وَتُعَزِّرُوهُ وَتُوَقِّرُوهُ وَتُسَبِّحُوهُ بُكْرَةً وَأَصِيلًا (٩)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 512,
+                "page_number": "512",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 4593,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "إِنَّ ٱلَّذِينَ يُبَايِعُونَكَ إِنَّمَا يُبَايِعُونَ ٱللَّهَ يَدُ ٱللَّهِ فَوْقَ أَيْدِيهِمْ ۚ فَمَن نَّكَثَ فَإِنَّمَا يَنكُثُ عَلَىٰ نَفْسِهِۦ ۖ وَمَنْ أَوْفَىٰ بِمَا عَـٰهَدَ عَلَيْهُ ٱللَّهَ فَسَيُؤْتِيهِ أَجْرًا عَظِيمًا",
+                        "translated_name": "Those who swear allegiance to you indeed swear allegiance to God; and God's protection is over them. Then whosoever breaks the promise breaks it to his own loss; but whosoever fulfills the promise made to God will receive a great reward from Him."
+                    },
+                    {
+                        "id": 4594,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "سَيَقُولُ لَكَ ٱلْمُخَلَّفُونَ مِنَ ٱلْأَعْرَابِ شَغَلَتْنَآ أَمْوَٰلُنَا وَأَهْلُونَا فَٱسْتَغْفِرْ لَنَا ۚ يَقُولُونَ بِأَلْسِنَتِهِم مَّا لَيْسَ فِى قُلُوبِهِمْ ۚ قُلْ فَمَن يَمْلِكُ لَكُم مِّنَ ٱللَّهِ شَيْـًٔا إِنْ أَرَادَ بِكُمْ ضَرًّا أَوْ أَرَادَ بِكُمْ نَفْعًۢا ۚ بَلْ كَانَ ٱللَّهُ بِمَا تَعْمَلُونَ خَبِيرًۢا",
+                        "translated_name": "The Arabs of the desert who had stayed behind will now say to you: \"We were occupied with our flocks and herds and families, so ask forgiveness for us. They say with their tongues what is not in their hearts. Tell them: \"Who can prevail with God for you if He wish you harm or benefit? Surely God is well aware of what you do."
+                    },
+                    {
+                        "id": 4595,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "بَلْ ظَنَنتُمْ أَن لَّن يَنقَلِبَ ٱلرَّسُولُ وَٱلْمُؤْمِنُونَ إِلَىٰٓ أَهْلِيهِمْ أَبَدًا وَزُيِّنَ ذَٰلِكَ فِى قُلُوبِكُمْ وَظَنَنتُمْ ظَنَّ ٱلسَّوْءِ وَكُنتُمْ قَوْمًۢا بُورًا",
+                        "translated_name": "In fact you imagined that the Prophet and the faithful would never come back home; and this seemed pleasing to your hearts, and you entertained evil thoughts. You are a people lost."
+                    },
+                    {
+                        "id": 4596,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "وَمَن لَّمْ يُؤْمِنۢ بِٱللَّهِ وَرَسُولِهِۦ فَإِنَّآ أَعْتَدْنَا لِلْكَـٰفِرِينَ سَعِيرًا",
+                        "translated_name": "He who does not believe in God and His Apostle (should know) We have prepared for unbelievers a blazing fire.\""
+                    },
+                    {
+                        "id": 4597,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "وَلِلَّهِ مُلْكُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ يَغْفِرُ لِمَن يَشَآءُ وَيُعَذِّبُ مَن يَشَآءُ ۚ وَكَانَ ٱللَّهُ غَفُورًا رَّحِيمًا",
+                        "translated_name": "To God belongs the kingdom of the heavens and the earth; He may forgive whosoever He please, and afflict whosoever He will. Yet God is forgiving and kind."
+                    },
+                    {
+                        "id": 4598,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "سَيَقُولُ ٱلْمُخَلَّفُونَ إِذَا ٱنطَلَقْتُمْ إِلَىٰ مَغَانِمَ لِتَأْخُذُوهَا ذَرُونَا نَتَّبِعْكُمْ ۖ يُرِيدُونَ أَن يُبَدِّلُوا۟ كَلَـٰمَ ٱللَّهِ ۚ قُل لَّن تَتَّبِعُونَا كَذَٰلِكُمْ قَالَ ٱللَّهُ مِن قَبْلُ ۖ فَسَيَقُولُونَ بَلْ تَحْسُدُونَنَا ۚ بَلْ كَانُوا۟ لَا يَفْقَهُونَ إِلَّا قَلِيلًا",
+                        "translated_name": "Those who had stayed behind will say: \"When you depart for taking the spoils, allow us to follow you.\" They wish to change the word of God. Tell them: \"You will not follow us. That is what God has already said before.\" They will say: \"You are envious of our gain.\" The fact is they understand but little."
+                    }
+                ],
+                "page_arabic_ayah": "إِنَّ ٱلَّذِينَ يُبَايِعُونَكَ إِنَّمَا يُبَايِعُونَ ٱللَّهَ يَدُ ٱللَّهِ فَوْقَ أَيْدِيهِمْ ۚ فَمَن نَّكَثَ فَإِنَّمَا يَنكُثُ عَلَىٰ نَفْسِهِۦ ۖ وَمَنْ أَوْفَىٰ بِمَا عَـٰهَدَ عَلَيْهُ ٱللَّهَ فَسَيُؤْتِيهِ أَجْرًا عَظِيمًا (١٠)  سَيَقُولُ لَكَ ٱلْمُخَلَّفُونَ مِنَ ٱلْأَعْرَابِ شَغَلَتْنَآ أَمْوَٰلُنَا وَأَهْلُونَا فَٱسْتَغْفِرْ لَنَا ۚ يَقُولُونَ بِأَلْسِنَتِهِم مَّا لَيْسَ فِى قُلُوبِهِمْ ۚ قُلْ فَمَن يَمْلِكُ لَكُم مِّنَ ٱللَّهِ شَيْـًٔا إِنْ أَرَادَ بِكُمْ ضَرًّا أَوْ أَرَادَ بِكُمْ نَفْعًۢا ۚ بَلْ كَانَ ٱللَّهُ بِمَا تَعْمَلُونَ خَبِيرًۢا (١١)  بَلْ ظَنَنتُمْ أَن لَّن يَنقَلِبَ ٱلرَّسُولُ وَٱلْمُؤْمِنُونَ إِلَىٰٓ أَهْلِيهِمْ أَبَدًا وَزُيِّنَ ذَٰلِكَ فِى قُلُوبِكُمْ وَظَنَنتُمْ ظَنَّ ٱلسَّوْءِ وَكُنتُمْ قَوْمًۢا بُورًا (١٢)  وَمَن لَّمْ يُؤْمِنۢ بِٱللَّهِ وَرَسُولِهِۦ فَإِنَّآ أَعْتَدْنَا لِلْكَـٰفِرِينَ سَعِيرًا (١٣)  وَلِلَّهِ مُلْكُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ يَغْفِرُ لِمَن يَشَآءُ وَيُعَذِّبُ مَن يَشَآءُ ۚ وَكَانَ ٱللَّهُ غَفُورًا رَّحِيمًا (١٤)  سَيَقُولُ ٱلْمُخَلَّفُونَ إِذَا ٱنطَلَقْتُمْ إِلَىٰ مَغَانِمَ لِتَأْخُذُوهَا ذَرُونَا نَتَّبِعْكُمْ ۖ يُرِيدُونَ أَن يُبَدِّلُوا۟ كَلَـٰمَ ٱللَّهِ ۚ قُل لَّن تَتَّبِعُونَا كَذَٰلِكُمْ قَالَ ٱللَّهُ مِن قَبْلُ ۖ فَسَيَقُولُونَ بَلْ تَحْسُدُونَنَا ۚ بَلْ كَانُوا۟ لَا يَفْقَهُونَ إِلَّا قَلِيلًا (١٥)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 513,
+                "page_number": "513",
+                "page_key": 2,
+                "page_verses": [
+                    {
+                        "id": 4599,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "قُل لِّلْمُخَلَّفِينَ مِنَ ٱلْأَعْرَابِ سَتُدْعَوْنَ إِلَىٰ قَوْمٍ أُو۟لِى بَأْسٍ شَدِيدٍ تُقَـٰتِلُونَهُمْ أَوْ يُسْلِمُونَ ۖ فَإِن تُطِيعُوا۟ يُؤْتِكُمُ ٱللَّهُ أَجْرًا حَسَنًا ۖ وَإِن تَتَوَلَّوْا۟ كَمَا تَوَلَّيْتُم مِّن قَبْلُ يُعَذِّبْكُمْ عَذَابًا أَلِيمًا",
+                        "translated_name": "Say to the desert Arabs who had stayed behind: \"You will be called against a formidable people. You will fight them till they surrender. If you obey, then He will give you a good reward; but if you turn back, as you had done before, He will punish you with a grievous affliction.\""
+                    },
+                    {
+                        "id": 4600,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "لَّيْسَ عَلَى ٱلْأَعْمَىٰ حَرَجٌ وَلَا عَلَى ٱلْأَعْرَجِ حَرَجٌ وَلَا عَلَى ٱلْمَرِيضِ حَرَجٌ ۗ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ يُدْخِلْهُ جَنَّـٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ۖ وَمَن يَتَوَلَّ يُعَذِّبْهُ عَذَابًا أَلِيمًا",
+                        "translated_name": "It is not binding on the blind, the lame or the sick (to follow this command); but those who obey God and His Apostle will be admitted by God to gardens with running streams; but those who turn back will suffer a painful doom."
+                    },
+                    {
+                        "id": 4601,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "۞ لَّقَدْ رَضِىَ ٱللَّهُ عَنِ ٱلْمُؤْمِنِينَ إِذْ يُبَايِعُونَكَ تَحْتَ ٱلشَّجَرَةِ فَعَلِمَ مَا فِى قُلُوبِهِمْ فَأَنزَلَ ٱلسَّكِينَةَ عَلَيْهِمْ وَأَثَـٰبَهُمْ فَتْحًا قَرِيبًا",
+                        "translated_name": "God was pleased with the believers when they swore allegiance to you under the tree, for He knew well what was in their hearts, and sent down tranquility on them, and rewarded them with an expeditious victory"
+                    },
+                    {
+                        "id": 4602,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "وَمَغَانِمَ كَثِيرَةً يَأْخُذُونَهَا ۗ وَكَانَ ٱللَّهُ عَزِيزًا حَكِيمًا",
+                        "translated_name": "And the many spoils that they were to take. God is all-mighty and all-wise."
+                    },
+                    {
+                        "id": 4603,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "20",
+                        "arabic_name": "وَعَدَكُمُ ٱللَّهُ مَغَانِمَ كَثِيرَةً تَأْخُذُونَهَا فَعَجَّلَ لَكُمْ هَـٰذِهِۦ وَكَفَّ أَيْدِىَ ٱلنَّاسِ عَنكُمْ وَلِتَكُونَ ءَايَةً لِّلْمُؤْمِنِينَ وَيَهْدِيَكُمْ صِرَٰطًا مُّسْتَقِيمًا",
+                        "translated_name": "God had promised you many spoils that you would capture; so He gave this soon enough to you, and stayed the hands of men from you that it may serve as a sign for believers, and guide you on the straight path;"
+                    },
+                    {
+                        "id": 4604,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "21",
+                        "arabic_name": "وَأُخْرَىٰ لَمْ تَقْدِرُوا۟ عَلَيْهَا قَدْ أَحَاطَ ٱللَّهُ بِهَا ۚ وَكَانَ ٱللَّهُ عَلَىٰ كُلِّ شَىْءٍ قَدِيرًا",
+                        "translated_name": "And other (benefits) which you have not yet obtained, are within the compass of God, for God has power over everything."
+                    },
+                    {
+                        "id": 4605,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "22",
+                        "arabic_name": "وَلَوْ قَـٰتَلَكُمُ ٱلَّذِينَ كَفَرُوا۟ لَوَلَّوُا۟ ٱلْأَدْبَـٰرَ ثُمَّ لَا يَجِدُونَ وَلِيًّا وَلَا نَصِيرًا",
+                        "translated_name": "Had the unbelievers fought you they would have turned their backs and not found a protector or helper."
+                    },
+                    {
+                        "id": 4606,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "23",
+                        "arabic_name": "سُنَّةَ ٱللَّهِ ٱلَّتِى قَدْ خَلَتْ مِن قَبْلُ ۖ وَلَن تَجِدَ لِسُنَّةِ ٱللَّهِ تَبْدِيلًا",
+                        "translated_name": "This is the law of God, effective as before: You will not find any change in the law of God."
+                    }
+                ],
+                "page_arabic_ayah": "قُل لِّلْمُخَلَّفِينَ مِنَ ٱلْأَعْرَابِ سَتُدْعَوْنَ إِلَىٰ قَوْمٍ أُو۟لِى بَأْسٍ شَدِيدٍ تُقَـٰتِلُونَهُمْ أَوْ يُسْلِمُونَ ۖ فَإِن تُطِيعُوا۟ يُؤْتِكُمُ ٱللَّهُ أَجْرًا حَسَنًا ۖ وَإِن تَتَوَلَّوْا۟ كَمَا تَوَلَّيْتُم مِّن قَبْلُ يُعَذِّبْكُمْ عَذَابًا أَلِيمًا (١٦)  لَّيْسَ عَلَى ٱلْأَعْمَىٰ حَرَجٌ وَلَا عَلَى ٱلْأَعْرَجِ حَرَجٌ وَلَا عَلَى ٱلْمَرِيضِ حَرَجٌ ۗ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ يُدْخِلْهُ جَنَّـٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ۖ وَمَن يَتَوَلَّ يُعَذِّبْهُ عَذَابًا أَلِيمًا (١٧)  ۞ لَّقَدْ رَضِىَ ٱللَّهُ عَنِ ٱلْمُؤْمِنِينَ إِذْ يُبَايِعُونَكَ تَحْتَ ٱلشَّجَرَةِ فَعَلِمَ مَا فِى قُلُوبِهِمْ فَأَنزَلَ ٱلسَّكِينَةَ عَلَيْهِمْ وَأَثَـٰبَهُمْ فَتْحًا قَرِيبًا (١٨)  وَمَغَانِمَ كَثِيرَةً يَأْخُذُونَهَا ۗ وَكَانَ ٱللَّهُ عَزِيزًا حَكِيمًا (١٩)  وَعَدَكُمُ ٱللَّهُ مَغَانِمَ كَثِيرَةً تَأْخُذُونَهَا فَعَجَّلَ لَكُمْ هَـٰذِهِۦ وَكَفَّ أَيْدِىَ ٱلنَّاسِ عَنكُمْ وَلِتَكُونَ ءَايَةً لِّلْمُؤْمِنِينَ وَيَهْدِيَكُمْ صِرَٰطًا مُّسْتَقِيمًا (٢٠)  وَأُخْرَىٰ لَمْ تَقْدِرُوا۟ عَلَيْهَا قَدْ أَحَاطَ ٱللَّهُ بِهَا ۚ وَكَانَ ٱللَّهُ عَلَىٰ كُلِّ شَىْءٍ قَدِيرًا (٢١)  وَلَوْ قَـٰتَلَكُمُ ٱلَّذِينَ كَفَرُوا۟ لَوَلَّوُا۟ ٱلْأَدْبَـٰرَ ثُمَّ لَا يَجِدُونَ وَلِيًّا وَلَا نَصِيرًا (٢٢)  سُنَّةَ ٱللَّهِ ٱلَّتِى قَدْ خَلَتْ مِن قَبْلُ ۖ وَلَن تَجِدَ لِسُنَّةِ ٱللَّهِ تَبْدِيلًا (٢٣)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 514,
+                "page_number": "514",
+                "page_key": 3,
+                "page_verses": [
+                    {
+                        "id": 4607,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "24",
+                        "arabic_name": "وَهُوَ ٱلَّذِى كَفَّ أَيْدِيَهُمْ عَنكُمْ وَأَيْدِيَكُمْ عَنْهُم بِبَطْنِ مَكَّةَ مِنۢ بَعْدِ أَنْ أَظْفَرَكُمْ عَلَيْهِمْ ۚ وَكَانَ ٱللَّهُ بِمَا تَعْمَلُونَ بَصِيرًا",
+                        "translated_name": "It was He who restrained their hands from you in the heart of Makkah, and your hands from them, after He had given you victory over them, as God sees all that you do."
+                    },
+                    {
+                        "id": 4608,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "25",
+                        "arabic_name": "هُمُ ٱلَّذِينَ كَفَرُوا۟ وَصَدُّوكُمْ عَنِ ٱلْمَسْجِدِ ٱلْحَرَامِ وَٱلْهَدْىَ مَعْكُوفًا أَن يَبْلُغَ مَحِلَّهُۥ ۚ وَلَوْلَا رِجَالٌ مُّؤْمِنُونَ وَنِسَآءٌ مُّؤْمِنَـٰتٌ لَّمْ تَعْلَمُوهُمْ أَن تَطَـُٔوهُمْ فَتُصِيبَكُم مِّنْهُم مَّعَرَّةٌۢ بِغَيْرِ عِلْمٍ ۖ لِّيُدْخِلَ ٱللَّهُ فِى رَحْمَتِهِۦ مَن يَشَآءُ ۚ لَوْ تَزَيَّلُوا۟ لَعَذَّبْنَا ٱلَّذِينَ كَفَرُوا۟ مِنْهُمْ عَذَابًا أَلِيمًا",
+                        "translated_name": "It were those who disbelieved who hindered you from (going to) the Holy Mosque, preventing your offerings from arriving at the place of sacrifice. Had it not been for (the presence of) believers, men and women, (among the unbelievers) of whom you were unaware, and whom you might have trampled and thus incurred guilt unknowingly on account of them, (the matter would have been settled). (But this was not done) so that God may admit into His favour whom He willed. If these (believers) had been separated from them, He would have inflicted a grievous punishment on the unbelievers."
+                    },
+                    {
+                        "id": 4609,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "26",
+                        "arabic_name": "إِذْ جَعَلَ ٱلَّذِينَ كَفَرُوا۟ فِى قُلُوبِهِمُ ٱلْحَمِيَّةَ حَمِيَّةَ ٱلْجَـٰهِلِيَّةِ فَأَنزَلَ ٱللَّهُ سَكِينَتَهُۥ عَلَىٰ رَسُولِهِۦ وَعَلَى ٱلْمُؤْمِنِينَ وَأَلْزَمَهُمْ كَلِمَةَ ٱلتَّقْوَىٰ وَكَانُوٓا۟ أَحَقَّ بِهَا وَأَهْلَهَا ۚ وَكَانَ ٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمًا",
+                        "translated_name": "When the unbelievers fostered a sense of honour in their hearts, a sense of pagan honour, God sent down a sense of tranquility on His Apostle and the believers, and obliged them to an act of self-restraint, for they were deserving and worthy of it. God is cognisant of everything."
+                    },
+                    {
+                        "id": 4610,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "27",
+                        "arabic_name": "لَّقَدْ صَدَقَ ٱللَّهُ رَسُولَهُ ٱلرُّءْيَا بِٱلْحَقِّ ۖ لَتَدْخُلُنَّ ٱلْمَسْجِدَ ٱلْحَرَامَ إِن شَآءَ ٱللَّهُ ءَامِنِينَ مُحَلِّقِينَ رُءُوسَكُمْ وَمُقَصِّرِينَ لَا تَخَافُونَ ۖ فَعَلِمَ مَا لَمْ تَعْلَمُوا۟ فَجَعَلَ مِن دُونِ ذَٰلِكَ فَتْحًا قَرِيبًا",
+                        "translated_name": "God has truly made the vision of His Apostle come true: You will surely enter the Holy Mosque in security if God please, without any fear, having shaved your heads and cut your hair. He knew what you did not know, and has vouchsafed you, apart from this, a victory near at hand."
+                    },
+                    {
+                        "id": 4611,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "28",
+                        "arabic_name": "هُوَ ٱلَّذِىٓ أَرْسَلَ رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ ٱلْحَقِّ لِيُظْهِرَهُۥ عَلَى ٱلدِّينِ كُلِّهِۦ ۚ وَكَفَىٰ بِٱللَّهِ شَهِيدًا",
+                        "translated_name": "It is He who has sent His Apostle with the guidance and the true faith, so that He may exalt it over every other creed. God is sufficient as a witness."
+                    }
+                ],
+                "page_arabic_ayah": "وَهُوَ ٱلَّذِى كَفَّ أَيْدِيَهُمْ عَنكُمْ وَأَيْدِيَكُمْ عَنْهُم بِبَطْنِ مَكَّةَ مِنۢ بَعْدِ أَنْ أَظْفَرَكُمْ عَلَيْهِمْ ۚ وَكَانَ ٱللَّهُ بِمَا تَعْمَلُونَ بَصِيرًا (٢٤)  هُمُ ٱلَّذِينَ كَفَرُوا۟ وَصَدُّوكُمْ عَنِ ٱلْمَسْجِدِ ٱلْحَرَامِ وَٱلْهَدْىَ مَعْكُوفًا أَن يَبْلُغَ مَحِلَّهُۥ ۚ وَلَوْلَا رِجَالٌ مُّؤْمِنُونَ وَنِسَآءٌ مُّؤْمِنَـٰتٌ لَّمْ تَعْلَمُوهُمْ أَن تَطَـُٔوهُمْ فَتُصِيبَكُم مِّنْهُم مَّعَرَّةٌۢ بِغَيْرِ عِلْمٍ ۖ لِّيُدْخِلَ ٱللَّهُ فِى رَحْمَتِهِۦ مَن يَشَآءُ ۚ لَوْ تَزَيَّلُوا۟ لَعَذَّبْنَا ٱلَّذِينَ كَفَرُوا۟ مِنْهُمْ عَذَابًا أَلِيمًا (٢٥)  إِذْ جَعَلَ ٱلَّذِينَ كَفَرُوا۟ فِى قُلُوبِهِمُ ٱلْحَمِيَّةَ حَمِيَّةَ ٱلْجَـٰهِلِيَّةِ فَأَنزَلَ ٱللَّهُ سَكِينَتَهُۥ عَلَىٰ رَسُولِهِۦ وَعَلَى ٱلْمُؤْمِنِينَ وَأَلْزَمَهُمْ كَلِمَةَ ٱلتَّقْوَىٰ وَكَانُوٓا۟ أَحَقَّ بِهَا وَأَهْلَهَا ۚ وَكَانَ ٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمًا (٢٦)  لَّقَدْ صَدَقَ ٱللَّهُ رَسُولَهُ ٱلرُّءْيَا بِٱلْحَقِّ ۖ لَتَدْخُلُنَّ ٱلْمَسْجِدَ ٱلْحَرَامَ إِن شَآءَ ٱللَّهُ ءَامِنِينَ مُحَلِّقِينَ رُءُوسَكُمْ وَمُقَصِّرِينَ لَا تَخَافُونَ ۖ فَعَلِمَ مَا لَمْ تَعْلَمُوا۟ فَجَعَلَ مِن دُونِ ذَٰلِكَ فَتْحًا قَرِيبًا (٢٧)  هُوَ ٱلَّذِىٓ أَرْسَلَ رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ ٱلْحَقِّ لِيُظْهِرَهُۥ عَلَى ٱلدِّينِ كُلِّهِۦ ۚ وَكَفَىٰ بِٱللَّهِ شَهِيدًا (٢٨)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 515,
+                "page_number": "515",
+                "page_key": 4,
+                "page_verses": [
+                    {
+                        "id": 4612,
+                        "chapter_id": 48,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "29",
+                        "arabic_name": "مُّحَمَّدٌ رَّسُولُ ٱللَّهِ ۚ وَٱلَّذِينَ مَعَهُۥٓ أَشِدَّآءُ عَلَى ٱلْكُفَّارِ رُحَمَآءُ بَيْنَهُمْ ۖ تَرَىٰهُمْ رُكَّعًا سُجَّدًا يَبْتَغُونَ فَضْلًا مِّنَ ٱللَّهِ وَرِضْوَٰنًا ۖ سِيمَاهُمْ فِى وُجُوهِهِم مِّنْ أَثَرِ ٱلسُّجُودِ ۚ ذَٰلِكَ مَثَلُهُمْ فِى ٱلتَّوْرَىٰةِ ۚ وَمَثَلُهُمْ فِى ٱلْإِنجِيلِ كَزَرْعٍ أَخْرَجَ شَطْـَٔهُۥ فَـَٔازَرَهُۥ فَٱسْتَغْلَظَ فَٱسْتَوَىٰ عَلَىٰ سُوقِهِۦ يُعْجِبُ ٱلزُّرَّاعَ لِيَغِيظَ بِهِمُ ٱلْكُفَّارَ ۗ وَعَدَ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ مِنْهُم مَّغْفِرَةً وَأَجْرًا عَظِيمًۢا",
+                        "translated_name": "Muhammad is the Prophet of God; and those who are with him are severe with infidels but compassionate among themselves. You may see them kneeling and bowing in reverence, seeking His favour and acceptance. Their mark is on their foreheads from the effect of prostrations. Their likeness in the Torah, and their likeness in the Gospel, is like a seed that sends out a stalk, then makes it firm, and it becomes strong and rises straight upon its stem, gladdening the cultivator's heart, in order to fill the unbelievers with dismay. God has promised those who believe and do the right forgiveness and a great reward."
+                    }
+                ],
+                "page_arabic_ayah": "مُّحَمَّدٌ رَّسُولُ ٱللَّهِ ۚ وَٱلَّذِينَ مَعَهُۥٓ أَشِدَّآءُ عَلَى ٱلْكُفَّارِ رُحَمَآءُ بَيْنَهُمْ ۖ تَرَىٰهُمْ رُكَّعًا سُجَّدًا يَبْتَغُونَ فَضْلًا مِّنَ ٱللَّهِ وَرِضْوَٰنًا ۖ سِيمَاهُمْ فِى وُجُوهِهِم مِّنْ أَثَرِ ٱلسُّجُودِ ۚ ذَٰلِكَ مَثَلُهُمْ فِى ٱلتَّوْرَىٰةِ ۚ وَمَثَلُهُمْ فِى ٱلْإِنجِيلِ كَزَرْعٍ أَخْرَجَ شَطْـَٔهُۥ فَـَٔازَرَهُۥ فَٱسْتَغْلَظَ فَٱسْتَوَىٰ عَلَىٰ سُوقِهِۦ يُعْجِبُ ٱلزُّرَّاعَ لِيَغِيظَ بِهِمُ ٱلْكُفَّارَ ۗ وَعَدَ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ مِنْهُم مَّغْفِرَةً وَأَجْرًا عَظِيمًۢا (٢٩)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

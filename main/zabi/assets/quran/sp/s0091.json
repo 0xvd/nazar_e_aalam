@@ -1,0 +1,145 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 91,
+            "serial_number": "91",
+            "arabic_name": "الشمس",
+            "translated_name": "Ash-Shams",
+            "verses_translate_name": "versos",
+            "verses_count": "15"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 595,
+                "page_number": "595",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6044,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "وَٱلشَّمْسِ وَضُحَىٰهَا",
+                        "translated_name": "Juro por el Sol y por el esplendor de la mañana"
+                    },
+                    {
+                        "id": 6045,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "وَٱلْقَمَرِ إِذَا تَلَىٰهَا",
+                        "translated_name": "y por la Luna cuando le sigue"
+                    },
+                    {
+                        "id": 6046,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَٱلنَّهَارِ إِذَا جَلَّىٰهَا",
+                        "translated_name": "y por el día cuando la muestra"
+                    },
+                    {
+                        "id": 6047,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "وَٱلَّيْلِ إِذَا يَغْشَىٰهَا",
+                        "translated_name": "y por la noche cuando la cubre"
+                    },
+                    {
+                        "id": 6048,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "وَٱلسَّمَآءِ وَمَا بَنَىٰهَا",
+                        "translated_name": "y por el cielo y Quien lo construyó"
+                    },
+                    {
+                        "id": 6049,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "وَٱلْأَرْضِ وَمَا طَحَىٰهَا",
+                        "translated_name": "y por la Tierra y Quien la extendió"
+                    },
+                    {
+                        "id": 6050,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "وَنَفْسٍ وَمَا سَوَّىٰهَا",
+                        "translated_name": "y por un alma y Quien la creo de forma armoniosa y equilibrada,"
+                    },
+                    {
+                        "id": 6051,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَىٰهَا",
+                        "translated_name": "inspirándole lo que la corrompe y el temor que la mantiene a salvo:"
+                    },
+                    {
+                        "id": 6052,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "قَدْ أَفْلَحَ مَن زَكَّىٰهَا",
+                        "translated_name": "Ciertamente, habrá triunfado quien la purifique"
+                    },
+                    {
+                        "id": 6053,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "وَقَدْ خَابَ مَن دَسَّىٰهَا",
+                        "translated_name": "y habrá fracasado quien la corrompa"
+                    },
+                    {
+                        "id": 6054,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "كَذَّبَتْ ثَمُودُ بِطَغْوَىٰهَآ",
+                        "translated_name": "Tamud, en su rebeldía, desmintió"
+                    },
+                    {
+                        "id": 6055,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "إِذِ ٱنۢبَعَثَ أَشْقَىٰهَا",
+                        "translated_name": "cuando el más miserable de ellos se alzó,"
+                    },
+                    {
+                        "id": 6056,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "فَقَالَ لَهُمْ رَسُولُ ٱللَّهِ نَاقَةَ ٱللَّهِ وَسُقْيَـٰهَا",
+                        "translated_name": "a pesar de que el Mensajero de Dios les había dicho: «¡Ésta es la camella de Dios, dejadla beber!»"
+                    },
+                    {
+                        "id": 6057,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "فَكَذَّبُوهُ فَعَقَرُوهَا فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنۢبِهِمْ فَسَوَّىٰهَا",
+                        "translated_name": "Pero le desmintieron y la mataron y su Señor les castigó por su pecado y les aniquiló a todos por igual,"
+                    },
+                    {
+                        "id": 6058,
+                        "chapter_id": 91,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "وَلَا يَخَافُ عُقْبَـٰهَا",
+                        "translated_name": "sin temer las consecuencias."
+                    }
+                ],
+                "page_arabic_ayah": "وَٱلشَّمْسِ وَضُحَىٰهَا (١)  وَٱلْقَمَرِ إِذَا تَلَىٰهَا (٢)  وَٱلنَّهَارِ إِذَا جَلَّىٰهَا (٣)  وَٱلَّيْلِ إِذَا يَغْشَىٰهَا (٤)  وَٱلسَّمَآءِ وَمَا بَنَىٰهَا (٥)  وَٱلْأَرْضِ وَمَا طَحَىٰهَا (٦)  وَنَفْسٍ وَمَا سَوَّىٰهَا (٧)  فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَىٰهَا (٨)  قَدْ أَفْلَحَ مَن زَكَّىٰهَا (٩)  وَقَدْ خَابَ مَن دَسَّىٰهَا (١٠)  كَذَّبَتْ ثَمُودُ بِطَغْوَىٰهَآ (١١)  إِذِ ٱنۢبَعَثَ أَشْقَىٰهَا (١٢)  فَقَالَ لَهُمْ رَسُولُ ٱللَّهِ نَاقَةَ ٱللَّهِ وَسُقْيَـٰهَا (١٣)  فَكَذَّبُوهُ فَعَقَرُوهَا فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنۢبِهِمْ فَسَوَّىٰهَا (١٤)  وَلَا يَخَافُ عُقْبَـٰهَا (١٥)",
+                "is_read": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "common": {
+        "profile": "الملف الشخصي",
+        "settings": "الإعدادات",
+        "logout": "تسجيل الخروج",
+        "language": "اللغة",
+        "english": "English",
+        "arabic": "العربية",
+        "save": "حفظ",
+        "cancel": "إلغاء",
+        "yes": "نعم",
+        "delete_confirm_title": "هل أنت متأكد من الحذف؟",
+        "delete_confirm_message": "سيتم حذف هذا المحتوى بشكل نهائي",
+        "search": "بحث...",
+        "action": "الإجراء",
+        "status": "الحالة",
+        "name": "الاسم",
+        "title": "العنوان",
+        "category": "التصنيف",
+        "position": "الترتيب",
+        "add": "إضافة",
+        "edit": "تعديل",
+        "update": "تحديث",
+        "add_item": "إضافة {item}",
+        "update_item": "تحديث {item}"
+    },
+    "auth": {
+        "tagline": "لوحة تحكم تطبيق إسلامي",
+        "welcome_back": "مرحبًا بعودتك",
+        "subtitle": "سجّل الدخول للوصول إلى لوحة التحكم",
+        "role": "الدور",
+        "choose_role": "اختر الدور",
+        "admin": "مسؤول",
+        "email": "البريد الإلكتروني",
+        "email_placeholder": "you{'@'}example.com",
+        "password": "كلمة المرور",
+        "password_placeholder": "أدخل كلمة المرور",
+        "forgot_password": "هل نسيت كلمة المرور؟",
+        "sign_in": "تسجيل الدخول"
+    }
+}

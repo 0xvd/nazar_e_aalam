@@ -1,0 +1,285 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 32,
+            "serial_number": "32",
+            "arabic_name": "السجدة",
+            "translated_name": "As-Sajdah",
+            "verses_translate_name": "Verses",
+            "verses_count": "30"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 415,
+                "page_number": "415",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 3504,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "الٓمٓ",
+                        "translated_name": "ALIF LAM MIM."
+                    },
+                    {
+                        "id": 3505,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "تَنزِيلُ ٱلْكِتَـٰبِ لَا رَيْبَ فِيهِ مِن رَّبِّ ٱلْعَـٰلَمِينَ",
+                        "translated_name": "The revelation of this Book free of doubt and involution is from the Lord of all the worlds."
+                    },
+                    {
+                        "id": 3506,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "أَمْ يَقُولُونَ ٱفْتَرَىٰهُ ۚ بَلْ هُوَ ٱلْحَقُّ مِن رَّبِّكَ لِتُنذِرَ قَوْمًا مَّآ أَتَىٰهُم مِّن نَّذِيرٍ مِّن قَبْلِكَ لَعَلَّهُمْ يَهْتَدُونَ",
+                        "translated_name": "Or do they say he has fabricated it? In fact, it is the truth from your Lord so that you may warn the people to whom no admonisher was sent before you. They may haply come to guidance."
+                    },
+                    {
+                        "id": 3507,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "ٱللَّهُ ٱلَّذِى خَلَقَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ وَمَا بَيْنَهُمَا فِى سِتَّةِ أَيَّامٍ ثُمَّ ٱسْتَوَىٰ عَلَى ٱلْعَرْشِ ۖ مَا لَكُم مِّن دُونِهِۦ مِن وَلِىٍّ وَلَا شَفِيعٍ ۚ أَفَلَا تَتَذَكَّرُونَ",
+                        "translated_name": "It is God who created the heavens and the earth and all that lies between them, in six spans, then assumed all authority. You have no protector other than Him, nor any intercessor. Will you not be warned even then?"
+                    },
+                    {
+                        "id": 3508,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "يُدَبِّرُ ٱلْأَمْرَ مِنَ ٱلسَّمَآءِ إِلَى ٱلْأَرْضِ ثُمَّ يَعْرُجُ إِلَيْهِ فِى يَوْمٍ كَانَ مِقْدَارُهُۥٓ أَلْفَ سَنَةٍ مِّمَّا تَعُدُّونَ",
+                        "translated_name": "He regulates all affairs from high to low, then they rise to perfection step by step in a (heavenly) day whose measure is a thousand years of your reckoning."
+                    },
+                    {
+                        "id": 3509,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "ذَٰلِكَ عَـٰلِمُ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ ٱلْعَزِيزُ ٱلرَّحِيمُ",
+                        "translated_name": "Such is (He) the knower of the unknown and the known, the mighty and the merciful,"
+                    },
+                    {
+                        "id": 3510,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "ٱلَّذِىٓ أَحْسَنَ كُلَّ شَىْءٍ خَلَقَهُۥ ۖ وَبَدَأَ خَلْقَ ٱلْإِنسَـٰنِ مِن طِينٍ",
+                        "translated_name": "Who made all things He created excellent; and first fashioned man from clay,"
+                    },
+                    {
+                        "id": 3511,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "ثُمَّ جَعَلَ نَسْلَهُۥ مِن سُلَـٰلَةٍ مِّن مَّآءٍ مَّهِينٍ",
+                        "translated_name": "Then made his offspring from the extract of base fluid,"
+                    },
+                    {
+                        "id": 3512,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "ثُمَّ سَوَّىٰهُ وَنَفَخَ فِيهِ مِن رُّوحِهِۦ ۖ وَجَعَلَ لَكُمُ ٱلسَّمْعَ وَٱلْأَبْصَـٰرَ وَٱلْأَفْـِٔدَةَ ۚ قَلِيلًا مَّا تَشْكُرُونَ",
+                        "translated_name": "Then proportioned and breathed into him of His spirit, and gave you the senses of hearing, sight and feeling. And yet how little are the thanks you offer!"
+                    },
+                    {
+                        "id": 3513,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "وَقَالُوٓا۟ أَءِذَا ضَلَلْنَا فِى ٱلْأَرْضِ أَءِنَّا لَفِى خَلْقٍ جَدِيدٍۭ ۚ بَلْ هُم بِلِقَآءِ رَبِّهِمْ كَـٰفِرُونَ",
+                        "translated_name": "But they say: \"When we have mingled with the earth, shall we be created anew?\" In fact they deny the meeting with their Lord."
+                    },
+                    {
+                        "id": 3514,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "۞ قُلْ يَتَوَفَّىٰكُم مَّلَكُ ٱلْمَوْتِ ٱلَّذِى وُكِّلَ بِكُمْ ثُمَّ إِلَىٰ رَبِّكُمْ تُرْجَعُونَ",
+                        "translated_name": "Say: \"The angel of death appointed over you will take away your soul, then you will be sent back to your Lord.\""
+                    }
+                ],
+                "page_arabic_ayah": "الٓمٓ (١)  تَنزِيلُ ٱلْكِتَـٰبِ لَا رَيْبَ فِيهِ مِن رَّبِّ ٱلْعَـٰلَمِينَ (٢)  أَمْ يَقُولُونَ ٱفْتَرَىٰهُ ۚ بَلْ هُوَ ٱلْحَقُّ مِن رَّبِّكَ لِتُنذِرَ قَوْمًا مَّآ أَتَىٰهُم مِّن نَّذِيرٍ مِّن قَبْلِكَ لَعَلَّهُمْ يَهْتَدُونَ (٣)  ٱللَّهُ ٱلَّذِى خَلَقَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ وَمَا بَيْنَهُمَا فِى سِتَّةِ أَيَّامٍ ثُمَّ ٱسْتَوَىٰ عَلَى ٱلْعَرْشِ ۖ مَا لَكُم مِّن دُونِهِۦ مِن وَلِىٍّ وَلَا شَفِيعٍ ۚ أَفَلَا تَتَذَكَّرُونَ (٤)  يُدَبِّرُ ٱلْأَمْرَ مِنَ ٱلسَّمَآءِ إِلَى ٱلْأَرْضِ ثُمَّ يَعْرُجُ إِلَيْهِ فِى يَوْمٍ كَانَ مِقْدَارُهُۥٓ أَلْفَ سَنَةٍ مِّمَّا تَعُدُّونَ (٥)  ذَٰلِكَ عَـٰلِمُ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ ٱلْعَزِيزُ ٱلرَّحِيمُ (٦)  ٱلَّذِىٓ أَحْسَنَ كُلَّ شَىْءٍ خَلَقَهُۥ ۖ وَبَدَأَ خَلْقَ ٱلْإِنسَـٰنِ مِن طِينٍ (٧)  ثُمَّ جَعَلَ نَسْلَهُۥ مِن سُلَـٰلَةٍ مِّن مَّآءٍ مَّهِينٍ (٨)  ثُمَّ سَوَّىٰهُ وَنَفَخَ فِيهِ مِن رُّوحِهِۦ ۖ وَجَعَلَ لَكُمُ ٱلسَّمْعَ وَٱلْأَبْصَـٰرَ وَٱلْأَفْـِٔدَةَ ۚ قَلِيلًا مَّا تَشْكُرُونَ (٩)  وَقَالُوٓا۟ أَءِذَا ضَلَلْنَا فِى ٱلْأَرْضِ أَءِنَّا لَفِى خَلْقٍ جَدِيدٍۭ ۚ بَلْ هُم بِلِقَآءِ رَبِّهِمْ كَـٰفِرُونَ (١٠)  ۞ قُلْ يَتَوَفَّىٰكُم مَّلَكُ ٱلْمَوْتِ ٱلَّذِى وُكِّلَ بِكُمْ ثُمَّ إِلَىٰ رَبِّكُمْ تُرْجَعُونَ (١١)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 416,
+                "page_number": "416",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 3515,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "وَلَوْ تَرَىٰٓ إِذِ ٱلْمُجْرِمُونَ نَاكِسُوا۟ رُءُوسِهِمْ عِندَ رَبِّهِمْ رَبَّنَآ أَبْصَرْنَا وَسَمِعْنَا فَٱرْجِعْنَا نَعْمَلْ صَـٰلِحًا إِنَّا مُوقِنُونَ",
+                        "translated_name": "If only you could see when the sinners will stand before their Lord, heads hung low, (and say:) \"O Lord, we have seen and heard. So send us back. We shall do the right, for we have come to believe with certainty.\""
+                    },
+                    {
+                        "id": 3516,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "وَلَوْ شِئْنَا لَـَٔاتَيْنَا كُلَّ نَفْسٍ هُدَىٰهَا وَلَـٰكِنْ حَقَّ ٱلْقَوْلُ مِنِّى لَأَمْلَأَنَّ جَهَنَّمَ مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ أَجْمَعِينَ",
+                        "translated_name": "Had We intended We could have given every soul its guidance; but inevitable is My word that I will fill up Hell with men and jinns together."
+                    },
+                    {
+                        "id": 3517,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "فَذُوقُوا۟ بِمَا نَسِيتُمْ لِقَآءَ يَوْمِكُمْ هَـٰذَآ إِنَّا نَسِينَـٰكُمْ ۖ وَذُوقُوا۟ عَذَابَ ٱلْخُلْدِ بِمَا كُنتُمْ تَعْمَلُونَ",
+                        "translated_name": "So now suffer. As you forgot the meeting of this your Day of Doom, so have We forgotten you. Now taste the everlasting punishment for your deeds."
+                    },
+                    {
+                        "id": 3518,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "إِنَّمَا يُؤْمِنُ بِـَٔايَـٰتِنَا ٱلَّذِينَ إِذَا ذُكِّرُوا۟ بِهَا خَرُّوا۟ سُجَّدًا وَسَبَّحُوا۟ بِحَمْدِ رَبِّهِمْ وَهُمْ لَا يَسْتَكْبِرُونَ ۩",
+                        "translated_name": "Only they believe in Our revelations who, when they are reminded, bow in adoration, and give praise to their Lord, and do not become arrogant."
+                    },
+                    {
+                        "id": 3519,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "تَتَجَافَىٰ جُنُوبُهُمْ عَنِ ٱلْمَضَاجِعِ يَدْعُونَ رَبَّهُمْ خَوْفًا وَطَمَعًا وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ",
+                        "translated_name": "Their backs do not rest on their beds, and they pray to their Lord in fear and hope, and spend of what We have given them (in charity)."
+                    },
+                    {
+                        "id": 3520,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "فَلَا تَعْلَمُ نَفْسٌ مَّآ أُخْفِىَ لَهُم مِّن قُرَّةِ أَعْيُنٍ جَزَآءًۢ بِمَا كَانُوا۟ يَعْمَلُونَ",
+                        "translated_name": "No soul knows what peace and joy lie hidden from them as reward for what they have done."
+                    },
+                    {
+                        "id": 3521,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "أَفَمَن كَانَ مُؤْمِنًا كَمَن كَانَ فَاسِقًا ۚ لَّا يَسْتَوُۥنَ",
+                        "translated_name": "Is one who is a believer like one who is a transgressor? No, they are not alike."
+                    },
+                    {
+                        "id": 3522,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "أَمَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ فَلَهُمْ جَنَّـٰتُ ٱلْمَأْوَىٰ نُزُلًۢا بِمَا كَانُوا۟ يَعْمَلُونَ",
+                        "translated_name": "As for those who believe and do the right, there are gardens for abode as welcome for what they had done."
+                    },
+                    {
+                        "id": 3523,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "20",
+                        "arabic_name": "وَأَمَّا ٱلَّذِينَ فَسَقُوا۟ فَمَأْوَىٰهُمُ ٱلنَّارُ ۖ كُلَّمَآ أَرَادُوٓا۟ أَن يَخْرُجُوا۟ مِنْهَآ أُعِيدُوا۟ فِيهَا وَقِيلَ لَهُمْ ذُوقُوا۟ عَذَابَ ٱلنَّارِ ٱلَّذِى كُنتُم بِهِۦ تُكَذِّبُونَ",
+                        "translated_name": "As for those who disobey, their abode is Hell. Whensoever they wish to escape from it they would be dragged back into it, and told: \"Taste the torment of the Fire which you used to call a lie.\""
+                    }
+                ],
+                "page_arabic_ayah": "وَلَوْ تَرَىٰٓ إِذِ ٱلْمُجْرِمُونَ نَاكِسُوا۟ رُءُوسِهِمْ عِندَ رَبِّهِمْ رَبَّنَآ أَبْصَرْنَا وَسَمِعْنَا فَٱرْجِعْنَا نَعْمَلْ صَـٰلِحًا إِنَّا مُوقِنُونَ (١٢)  وَلَوْ شِئْنَا لَـَٔاتَيْنَا كُلَّ نَفْسٍ هُدَىٰهَا وَلَـٰكِنْ حَقَّ ٱلْقَوْلُ مِنِّى لَأَمْلَأَنَّ جَهَنَّمَ مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ أَجْمَعِينَ (١٣)  فَذُوقُوا۟ بِمَا نَسِيتُمْ لِقَآءَ يَوْمِكُمْ هَـٰذَآ إِنَّا نَسِينَـٰكُمْ ۖ وَذُوقُوا۟ عَذَابَ ٱلْخُلْدِ بِمَا كُنتُمْ تَعْمَلُونَ (١٤)  إِنَّمَا يُؤْمِنُ بِـَٔايَـٰتِنَا ٱلَّذِينَ إِذَا ذُكِّرُوا۟ بِهَا خَرُّوا۟ سُجَّدًا وَسَبَّحُوا۟ بِحَمْدِ رَبِّهِمْ وَهُمْ لَا يَسْتَكْبِرُونَ ۩ (١٥)  تَتَجَافَىٰ جُنُوبُهُمْ عَنِ ٱلْمَضَاجِعِ يَدْعُونَ رَبَّهُمْ خَوْفًا وَطَمَعًا وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ (١٦)  فَلَا تَعْلَمُ نَفْسٌ مَّآ أُخْفِىَ لَهُم مِّن قُرَّةِ أَعْيُنٍ جَزَآءًۢ بِمَا كَانُوا۟ يَعْمَلُونَ (١٧)  أَفَمَن كَانَ مُؤْمِنًا كَمَن كَانَ فَاسِقًا ۚ لَّا يَسْتَوُۥنَ (١٨)  أَمَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ فَلَهُمْ جَنَّـٰتُ ٱلْمَأْوَىٰ نُزُلًۢا بِمَا كَانُوا۟ يَعْمَلُونَ (١٩)  وَأَمَّا ٱلَّذِينَ فَسَقُوا۟ فَمَأْوَىٰهُمُ ٱلنَّارُ ۖ كُلَّمَآ أَرَادُوٓا۟ أَن يَخْرُجُوا۟ مِنْهَآ أُعِيدُوا۟ فِيهَا وَقِيلَ لَهُمْ ذُوقُوا۟ عَذَابَ ٱلنَّارِ ٱلَّذِى كُنتُم بِهِۦ تُكَذِّبُونَ (٢٠)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 417,
+                "page_number": "417",
+                "page_key": 2,
+                "page_verses": [
+                    {
+                        "id": 3524,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "21",
+                        "arabic_name": "وَلَنُذِيقَنَّهُم مِّنَ ٱلْعَذَابِ ٱلْأَدْنَىٰ دُونَ ٱلْعَذَابِ ٱلْأَكْبَرِ لَعَلَّهُمْ يَرْجِعُونَ",
+                        "translated_name": "But We shall make them taste the affliction of this world before the greater torment, so that they may retract."
+                    },
+                    {
+                        "id": 3525,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "22",
+                        "arabic_name": "وَمَنْ أَظْلَمُ مِمَّن ذُكِّرَ بِـَٔايَـٰتِ رَبِّهِۦ ثُمَّ أَعْرَضَ عَنْهَآ ۚ إِنَّا مِنَ ٱلْمُجْرِمِينَ مُنتَقِمُونَ",
+                        "translated_name": "Who is more wicked than he who is reminded of his Lord's revelations yet turns away from them; We will surely requite the sinners."
+                    },
+                    {
+                        "id": 3526,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "23",
+                        "arabic_name": "وَلَقَدْ ءَاتَيْنَا مُوسَى ٱلْكِتَـٰبَ فَلَا تَكُن فِى مِرْيَةٍ مِّن لِّقَآئِهِۦ ۖ وَجَعَلْنَـٰهُ هُدًى لِّبَنِىٓ إِسْرَٰٓءِيلَ",
+                        "translated_name": "Verily We gave Moses the Book; so be not in doubt about his having received it; and We made it a guidance for the children of Israel."
+                    },
+                    {
+                        "id": 3527,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "24",
+                        "arabic_name": "وَجَعَلْنَا مِنْهُمْ أَئِمَّةً يَهْدُونَ بِأَمْرِنَا لَمَّا صَبَرُوا۟ ۖ وَكَانُوا۟ بِـَٔايَـٰتِنَا يُوقِنُونَ",
+                        "translated_name": "When they persevered and firmly believed Our revelations We appointed learned men among them who guided them by Our command."
+                    },
+                    {
+                        "id": 3528,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "25",
+                        "arabic_name": "إِنَّ رَبَّكَ هُوَ يَفْصِلُ بَيْنَهُمْ يَوْمَ ٱلْقِيَـٰمَةِ فِيمَا كَانُوا۟ فِيهِ يَخْتَلِفُونَ",
+                        "translated_name": "Surely your Lord will decide between them about what they were at variance, on the Day of Resurrection."
+                    },
+                    {
+                        "id": 3529,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "26",
+                        "arabic_name": "أَوَلَمْ يَهْدِ لَهُمْ كَمْ أَهْلَكْنَا مِن قَبْلِهِم مِّنَ ٱلْقُرُونِ يَمْشُونَ فِى مَسَـٰكِنِهِمْ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ ۖ أَفَلَا يَسْمَعُونَ",
+                        "translated_name": "Did they not find guidance in the many generations We had destroyed before them, over whose dwellings they (now) walk? There were indeed signs in this. Will they even then not listen?"
+                    },
+                    {
+                        "id": 3530,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "27",
+                        "arabic_name": "أَوَلَمْ يَرَوْا۟ أَنَّا نَسُوقُ ٱلْمَآءَ إِلَى ٱلْأَرْضِ ٱلْجُرُزِ فَنُخْرِجُ بِهِۦ زَرْعًا تَأْكُلُ مِنْهُ أَنْعَـٰمُهُمْ وَأَنفُسُهُمْ ۖ أَفَلَا يُبْصِرُونَ",
+                        "translated_name": "Do they not see that We drive the rain towards a land that is dry, then grow grain from it which their cattle and they themselves eat? Will they not see even then?"
+                    },
+                    {
+                        "id": 3531,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "28",
+                        "arabic_name": "وَيَقُولُونَ مَتَىٰ هَـٰذَا ٱلْفَتْحُ إِن كُنتُمْ صَـٰدِقِينَ",
+                        "translated_name": "Yet they say: \"When will this decree come, if you speak the truth?\""
+                    },
+                    {
+                        "id": 3532,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "29",
+                        "arabic_name": "قُلْ يَوْمَ ٱلْفَتْحِ لَا يَنفَعُ ٱلَّذِينَ كَفَرُوٓا۟ إِيمَـٰنُهُمْ وَلَا هُمْ يُنظَرُونَ",
+                        "translated_name": "Say: \"Of no use will be the acceptance of belief to unbelievers on the Day of Decision, nor will they be granted respite."
+                    },
+                    {
+                        "id": 3533,
+                        "chapter_id": 32,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "30",
+                        "arabic_name": "فَأَعْرِضْ عَنْهُمْ وَٱنتَظِرْ إِنَّهُم مُّنتَظِرُونَ",
+                        "translated_name": "Therefore turn away from them and wait as they are waiting."
+                    }
+                ],
+                "page_arabic_ayah": "وَلَنُذِيقَنَّهُم مِّنَ ٱلْعَذَابِ ٱلْأَدْنَىٰ دُونَ ٱلْعَذَابِ ٱلْأَكْبَرِ لَعَلَّهُمْ يَرْجِعُونَ (٢١)  وَمَنْ أَظْلَمُ مِمَّن ذُكِّرَ بِـَٔايَـٰتِ رَبِّهِۦ ثُمَّ أَعْرَضَ عَنْهَآ ۚ إِنَّا مِنَ ٱلْمُجْرِمِينَ مُنتَقِمُونَ (٢٢)  وَلَقَدْ ءَاتَيْنَا مُوسَى ٱلْكِتَـٰبَ فَلَا تَكُن فِى مِرْيَةٍ مِّن لِّقَآئِهِۦ ۖ وَجَعَلْنَـٰهُ هُدًى لِّبَنِىٓ إِسْرَٰٓءِيلَ (٢٣)  وَجَعَلْنَا مِنْهُمْ أَئِمَّةً يَهْدُونَ بِأَمْرِنَا لَمَّا صَبَرُوا۟ ۖ وَكَانُوا۟ بِـَٔايَـٰتِنَا يُوقِنُونَ (٢٤)  إِنَّ رَبَّكَ هُوَ يَفْصِلُ بَيْنَهُمْ يَوْمَ ٱلْقِيَـٰمَةِ فِيمَا كَانُوا۟ فِيهِ يَخْتَلِفُونَ (٢٥)  أَوَلَمْ يَهْدِ لَهُمْ كَمْ أَهْلَكْنَا مِن قَبْلِهِم مِّنَ ٱلْقُرُونِ يَمْشُونَ فِى مَسَـٰكِنِهِمْ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ ۖ أَفَلَا يَسْمَعُونَ (٢٦)  أَوَلَمْ يَرَوْا۟ أَنَّا نَسُوقُ ٱلْمَآءَ إِلَى ٱلْأَرْضِ ٱلْجُرُزِ فَنُخْرِجُ بِهِۦ زَرْعًا تَأْكُلُ مِنْهُ أَنْعَـٰمُهُمْ وَأَنفُسُهُمْ ۖ أَفَلَا يُبْصِرُونَ (٢٧)  وَيَقُولُونَ مَتَىٰ هَـٰذَا ٱلْفَتْحُ إِن كُنتُمْ صَـٰدِقِينَ (٢٨)  قُلْ يَوْمَ ٱلْفَتْحِ لَا يَنفَعُ ٱلَّذِينَ كَفَرُوٓا۟ إِيمَـٰنُهُمْ وَلَا هُمْ يُنظَرُونَ (٢٩)  فَأَعْرِضْ عَنْهُمْ وَٱنتَظِرْ إِنَّهُم مُّنتَظِرُونَ (٣٠)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

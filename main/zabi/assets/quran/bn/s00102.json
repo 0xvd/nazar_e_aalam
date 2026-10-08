@@ -1,0 +1,89 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 102,
+            "serial_number": "১০২",
+            "arabic_name": "التكاثر",
+            "translated_name": "তাকাসূর",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "৮"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 600,
+                "page_number": "600",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6169,
+                        "chapter_id": 102,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "أَلْهَىٰكُمُ ٱلتَّكَاثُرُ",
+                        "translated_name": "প্রাচুর্যের প্রতিযোগিতা তোমাদের মতিভ্রম ঘটায়, --"
+                    },
+                    {
+                        "id": 6170,
+                        "chapter_id": 102,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "حَتَّىٰ زُرْتُمُ ٱلْمَقَابِرَ",
+                        "translated_name": "যতক্ষণ না তোমরা কবরে আসো।"
+                    },
+                    {
+                        "id": 6171,
+                        "chapter_id": 102,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "كَلَّا سَوْفَ تَعْلَمُونَ",
+                        "translated_name": "না! শীঘ্রই তোমরা জানতে পারবে!"
+                    },
+                    {
+                        "id": 6172,
+                        "chapter_id": 102,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "4",
+                        "arabic_name": "ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ",
+                        "translated_name": "আবার বলি, -- না, শীঘ্রই তোমরা জানতে পারবে!"
+                    },
+                    {
+                        "id": 6173,
+                        "chapter_id": 102,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "5",
+                        "arabic_name": "كَلَّا لَوْ تَعْلَمُونَ عِلْمَ ٱلْيَقِينِ",
+                        "translated_name": "না, যদি তোমরা জানতে নিশ্চিত জ্ঞানে!"
+                    },
+                    {
+                        "id": 6174,
+                        "chapter_id": 102,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "6",
+                        "arabic_name": "لَتَرَوُنَّ ٱلْجَحِيمَ",
+                        "translated_name": "তোমরা তো ভয়ংকর আগুন দেখবেই।"
+                    },
+                    {
+                        "id": 6175,
+                        "chapter_id": 102,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "7",
+                        "arabic_name": "ثُمَّ لَتَرَوُنَّهَا عَيْنَ ٱلْيَقِينِ",
+                        "translated_name": "আবার বলি, তোমরা অবশ্যই এটি দেখবে নিশ্চিত দৃষ্টিতে।"
+                    },
+                    {
+                        "id": 6176,
+                        "chapter_id": 102,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "8",
+                        "arabic_name": "ثُمَّ لَتُسْـَٔلُنَّ يَوْمَئِذٍ عَنِ ٱلنَّعِيمِ",
+                        "translated_name": "এরপর সেইদিন তোমাদের অবশ্যই জিজ্ঞাসা করা হবে অবদান সম্পর্কে।"
+                    }
+                ],
+                "page_arabic_ayah": "أَلْهَىٰكُمُ ٱلتَّكَاثُرُ (١)  حَتَّىٰ زُرْتُمُ ٱلْمَقَابِرَ (٢)  كَلَّا سَوْفَ تَعْلَمُونَ (٣)  ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ (٤)  كَلَّا لَوْ تَعْلَمُونَ عِلْمَ ٱلْيَقِينِ (٥)  لَتَرَوُنَّ ٱلْجَحِيمَ (٦)  ثُمَّ لَتَرَوُنَّهَا عَيْنَ ٱلْيَقِينِ (٧)  ثُمَّ لَتُسْـَٔلُنَّ يَوْمَئِذٍ عَنِ ٱلنَّعِيمِ (٨)",
+                "is_read": false
+            }
+        ]
+    }
+}

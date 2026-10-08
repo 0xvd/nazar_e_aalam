@@ -1,0 +1,81 @@
+  {
+  "status": true,
+  "message": "Data fetched successfully",
+  "data": {
+    "chapter": {
+      "id": 1,
+      "serial_number": "1",
+      "arabic_name": "الفاتحة",
+      "translated_name": "Al-Fatihah",
+      "verses_translate_name": "Verses",
+      "verses_count": "7"
+    },
+    "chapter_info": [
+      {
+        "eng_page_number": 1,
+        "page_number": "1",
+        "page_key": 0,
+        "page_verses": [
+          {
+            "id": 1,
+            "chapter_id": 1,
+            "verses_translate_name": "Verses",
+            "verses_number": "1",
+            "arabic_name": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+            "translated_name": "In the name of Allah, the Entirely Merciful, the Especially Merciful."
+          },
+          {
+            "id": 2,
+            "chapter_id": 1,
+            "verses_translate_name": "Verses",
+            "verses_number": "2",
+            "arabic_name": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+            "translated_name": "All praise is due to Allah, Lord of the worlds."
+          },
+          {
+            "id": 3,
+            "chapter_id": 1,
+            "verses_translate_name": "Verses",
+            "verses_number": "3",
+            "arabic_name": "الرَّحْمَٰنِ الرَّحِيمِ",
+            "translated_name": "The Entirely Merciful, the Especially Merciful."
+          },
+          {
+            "id": 4,
+            "chapter_id": 1,
+            "verses_translate_name": "Verses",
+            "verses_number": "4",
+            "arabic_name": "مَالِكِ يَوْمِ الدِّينِ",
+            "translated_name": "Sovereign of the Day of Recompense."
+          },
+          {
+            "id": 5,
+            "chapter_id": 1,
+            "verses_translate_name": "Verses",
+            "verses_number": "5",
+            "arabic_name": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+            "translated_name": "It is You we worship and You we ask for help."
+          },
+          {
+            "id": 6,
+            "chapter_id": 1,
+            "verses_translate_name": "Verses",
+            "verses_number": "6",
+            "arabic_name": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+            "translated_name": "Guide us to the straight path –"
+          },
+          {
+            "id": 7,
+            "chapter_id": 1,
+            "verses_translate_name": "Verses",
+            "verses_number": "7",
+            "arabic_name": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+            "translated_name": "The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray."
+          }
+        ],
+        "page_arabic_ayah": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ (١)  الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ (٢)  الرَّحْمَٰنِ الرَّحِيمِ (٣)  مَالِكِ يَوْمِ الدِّينِ (٤)  إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ (٥)  اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ (٦)  صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ (٧)",
+        "is_read": false
+      }
+    ]
+  }
+}

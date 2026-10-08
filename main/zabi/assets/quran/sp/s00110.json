@@ -1,0 +1,49 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 110,
+            "serial_number": "110",
+            "arabic_name": "النصر",
+            "translated_name": "An-Nasr",
+            "verses_translate_name": "versos",
+            "verses_count": "3"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 603,
+                "page_number": "603",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6214,
+                        "chapter_id": 110,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ",
+                        "translated_name": "Cuando llegue el auxilio de Dios y la victoria"
+                    },
+                    {
+                        "id": 6215,
+                        "chapter_id": 110,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "وَرَأَيْتَ ٱلنَّاسَ يَدْخُلُونَ فِى دِينِ ٱللَّهِ أَفْوَاجًا",
+                        "translated_name": "y veas a los seres humanos entrando en la religión de Dios en oleadas sucesivas,"
+                    },
+                    {
+                        "id": 6216,
+                        "chapter_id": 110,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَٱسْتَغْفِرْهُ ۚ إِنَّهُۥ كَانَ تَوَّابًۢا",
+                        "translated_name": "glorifica con alabanzas a tu Señor y busca Su perdón. En verdad, Él acepta al que se arrepiente."
+                    }
+                ],
+                "page_arabic_ayah": "إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ (١)  وَرَأَيْتَ ٱلنَّاسَ يَدْخُلُونَ فِى دِينِ ٱللَّهِ أَفْوَاجًا (٢)  فَسَبِّحْ بِحَمْدِ رَبِّكَ وَٱسْتَغْفِرْهُ ۚ إِنَّهُۥ كَانَ تَوَّابًۢا (٣)",
+                "is_read": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "blog": {
+        "title": "مقالات المدونة",
+        "singular": "مقال",
+        "table": {
+            "thumbnail": "الصورة المصغرة",
+            "published": "تاريخ النشر"
+        },
+        "form": {
+            "title_label": "العنوان",
+            "title_placeholder": "عنوان المقال",
+            "slug_label": "الرابط المختصر",
+            "slug_placeholder": "يتم إنشاؤه تلقائيًا من العنوان",
+            "category_label": "التصنيف",
+            "category_placeholder": "مثال: القرآن، الصلاة، نمط الحياة",
+            "status_label": "الحالة",
+            "status_draft": "مسودة",
+            "status_published": "منشور",
+            "excerpt_label": "المقتطف",
+            "excerpt_hint": "(يظهر في صفحة القائمة)",
+            "excerpt_placeholder": "ملخص قصير...",
+            "content_label": "المحتوى",
+            "content_placeholder": "اكتب محتوى المقال هنا...",
+            "fullscreen_enter": "ملء الشاشة",
+            "fullscreen_exit": "إنهاء ملء الشاشة",
+            "thumbnail_label": "الصورة المصغرة",
+            "thumbnail_hint": "(يُفضّل 1200×630 بكسل)",
+            "thumbnail_max_size": "يجب أن تكون الصورة أصغر من {size}.",
+            "thumbnail_uploading": "جارٍ رفع الصورة المصغرة… {progress}%",
+            "thumbnail_upload_failed": "فشل رفع الصورة المصغرة.",
+            "thumbnail_retry": "إعادة المحاولة",
+            "thumbnail_retry_before_save": "يرجى إعادة محاولة رفع الصورة المصغرة قبل الحفظ.",
+            "seo_hint": "(تحسين محركات البحث)",
+            "meta_title_label": "عنوان الميتا",
+            "meta_title_placeholder": "اتركه فارغًا لاستخدام عنوان المقال",
+            "meta_description_label": "وصف الميتا",
+            "meta_description_placeholder": "اتركه فارغًا لاستخدام المقتطف"
+        }
+    }
+}

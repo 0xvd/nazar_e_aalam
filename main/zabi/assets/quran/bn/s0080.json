@@ -1,0 +1,361 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 80,
+            "serial_number": "৮০",
+            "arabic_name": "عبس",
+            "translated_name": "আবাসা",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "৪২"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 585,
+                "page_number": "585",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5759,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "عَبَسَ وَتَوَلَّىٰٓ",
+                        "translated_name": "তিনি ভ্রকুটি করলেন এবং ফিরে বসলেন,"
+                    },
+                    {
+                        "id": 5760,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "أَن جَآءَهُ ٱلْأَعْمَىٰ",
+                        "translated_name": "কেননা একজন অন্ধ তাঁর কাছে এসেছিল।"
+                    },
+                    {
+                        "id": 5761,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "وَمَا يُدْرِيكَ لَعَلَّهُۥ يَزَّكَّىٰٓ",
+                        "translated_name": "আর কী তোমাকে বুঝতে দেবে যে সে হয়ত পবিত্র হতে চেয়েছিল,"
+                    },
+                    {
+                        "id": 5762,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "4",
+                        "arabic_name": "أَوْ يَذَّكَّرُ فَتَنفَعَهُ ٱلذِّكْرَىٰٓ",
+                        "translated_name": "অথবা সে মনোনিবেশ করত, ফলে স্মারকবাণী তার উপকারে আসত?"
+                    },
+                    {
+                        "id": 5763,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "5",
+                        "arabic_name": "أَمَّا مَنِ ٱسْتَغْنَىٰ",
+                        "translated_name": "আর তার ক্ষেত্রে যে নিজেকে সমৃদ্ধ ভাবে,"
+                    },
+                    {
+                        "id": 5764,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "6",
+                        "arabic_name": "فَأَنتَ لَهُۥ تَصَدَّىٰ",
+                        "translated_name": "তুমি তো তার প্রতিই মনোযোগ দেখাচ্ছ।"
+                    },
+                    {
+                        "id": 5765,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "7",
+                        "arabic_name": "وَمَا عَلَيْكَ أَلَّا يَزَّكَّىٰ",
+                        "translated_name": "অথচ তোমার উপরে নেই যদি সে নিজেকে পবিত্র না করে।"
+                    },
+                    {
+                        "id": 5766,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "8",
+                        "arabic_name": "وَأَمَّا مَن جَآءَكَ يَسْعَىٰ",
+                        "translated_name": "আর তার ক্ষেত্রে যে তোমার কাছে এসেছিল আগ্রহ নিয়ে,"
+                    },
+                    {
+                        "id": 5767,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "9",
+                        "arabic_name": "وَهُوَ يَخْشَىٰ",
+                        "translated_name": "আর সে ভয় করছিল,"
+                    },
+                    {
+                        "id": 5768,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "10",
+                        "arabic_name": "فَأَنتَ عَنْهُ تَلَهَّىٰ",
+                        "translated_name": "কিন্ত তুমি তার প্রতি অবহেলা দেখালে।"
+                    },
+                    {
+                        "id": 5769,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "11",
+                        "arabic_name": "كَلَّآ إِنَّهَا تَذْكِرَةٌ",
+                        "translated_name": "কদাচ না! নিঃসন্দেহ এ এক স্মরণীয় বার্তা,"
+                    },
+                    {
+                        "id": 5770,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "12",
+                        "arabic_name": "فَمَن شَآءَ ذَكَرَهُۥ",
+                        "translated_name": "অতএব যে ইচ্ছা করে সে তা স্মরণ রাখুক।"
+                    },
+                    {
+                        "id": 5771,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "13",
+                        "arabic_name": "فِى صُحُفٍ مُّكَرَّمَةٍ",
+                        "translated_name": "সম্মানিত পৃষ্ঠাগুলোয় --"
+                    },
+                    {
+                        "id": 5772,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "14",
+                        "arabic_name": "مَّرْفُوعَةٍ مُّطَهَّرَةٍۭ",
+                        "translated_name": "সুউন্নত, সুপবিত্র,"
+                    },
+                    {
+                        "id": 5773,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "15",
+                        "arabic_name": "بِأَيْدِى سَفَرَةٍ",
+                        "translated_name": "লেখকদের হস্তাক্ষরে,"
+                    },
+                    {
+                        "id": 5774,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "16",
+                        "arabic_name": "كِرَامٍۭ بَرَرَةٍ",
+                        "translated_name": "সম্মানিত, গুণান্নিত।"
+                    },
+                    {
+                        "id": 5775,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "17",
+                        "arabic_name": "قُتِلَ ٱلْإِنسَـٰنُ مَآ أَكْفَرَهُۥ",
+                        "translated_name": "যা তাকে অকৃতজ্ঞ বানিয়েছে সেজন্য মানুষকে ধ্বংস করা হোক।"
+                    },
+                    {
+                        "id": 5776,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "18",
+                        "arabic_name": "مِنْ أَىِّ شَىْءٍ خَلَقَهُۥ",
+                        "translated_name": "কী জিনিস থেকে তাকে তিনি সৃষ্টি করেছেন?"
+                    },
+                    {
+                        "id": 5777,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "19",
+                        "arabic_name": "مِن نُّطْفَةٍ خَلَقَهُۥ فَقَدَّرَهُۥ",
+                        "translated_name": "এক শুক্রকীট থেকে! তিনি তাকে সৃষ্টি করেছেন, তারপর তিনি তাকে সুসমঞ্জস করেছেন,"
+                    },
+                    {
+                        "id": 5778,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "20",
+                        "arabic_name": "ثُمَّ ٱلسَّبِيلَ يَسَّرَهُۥ",
+                        "translated_name": "তারপর তার জন্য পথ সহজ করে দিয়েছেন,"
+                    },
+                    {
+                        "id": 5779,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "21",
+                        "arabic_name": "ثُمَّ أَمَاتَهُۥ فَأَقْبَرَهُۥ",
+                        "translated_name": "তারপর তিনি তার মৃত্যু ঘটান, এবং তাকে কবরস্থ করেন,"
+                    },
+                    {
+                        "id": 5780,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "22",
+                        "arabic_name": "ثُمَّ إِذَا شَآءَ أَنشَرَهُۥ",
+                        "translated_name": "তারপর যখন তিনি চাইবেন তখন তাকে পুনর্জীবিত করবেন।"
+                    },
+                    {
+                        "id": 5781,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "23",
+                        "arabic_name": "كَلَّا لَمَّا يَقْضِ مَآ أَمَرَهُۥ",
+                        "translated_name": "না, তাকে তিনি যা আদেশ করেছিলেন তা সে পালন করে নি।"
+                    },
+                    {
+                        "id": 5782,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "24",
+                        "arabic_name": "فَلْيَنظُرِ ٱلْإِنسَـٰنُ إِلَىٰ طَعَامِهِۦٓ",
+                        "translated_name": "অতএব মানুষ তার খাদ্যের দিকে ভেবে দেখুক --"
+                    },
+                    {
+                        "id": 5783,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "25",
+                        "arabic_name": "أَنَّا صَبَبْنَا ٱلْمَآءَ صَبًّا",
+                        "translated_name": "কেমন ক’রে আমরা বৃষ্টি বর্ষণ করি বর্ষণধারায়,"
+                    },
+                    {
+                        "id": 5784,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "26",
+                        "arabic_name": "ثُمَّ شَقَقْنَا ٱلْأَرْضَ شَقًّا",
+                        "translated_name": "তারপর আমরা মাটিকে ফাটিয়ে দিই চৌচির ক’রে,"
+                    },
+                    {
+                        "id": 5785,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "27",
+                        "arabic_name": "فَأَنۢبَتْنَا فِيهَا حَبًّا",
+                        "translated_name": "তারপর তাতে আমরা জন্মাই শস্য,"
+                    },
+                    {
+                        "id": 5786,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "28",
+                        "arabic_name": "وَعِنَبًا وَقَضْبًا",
+                        "translated_name": "আর আঙ্গুর ও শাকসবজি,"
+                    },
+                    {
+                        "id": 5787,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "29",
+                        "arabic_name": "وَزَيْتُونًا وَنَخْلًا",
+                        "translated_name": "আর জলপাই ও খেজুর,"
+                    },
+                    {
+                        "id": 5788,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "30",
+                        "arabic_name": "وَحَدَآئِقَ غُلْبًا",
+                        "translated_name": "আর ঘন গাছপালাময় বাগান,"
+                    },
+                    {
+                        "id": 5789,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "31",
+                        "arabic_name": "وَفَـٰكِهَةً وَأَبًّا",
+                        "translated_name": "আর ফলফসল ও তৃণলতা, --"
+                    },
+                    {
+                        "id": 5790,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "32",
+                        "arabic_name": "مَّتَـٰعًا لَّكُمْ وَلِأَنْعَـٰمِكُمْ",
+                        "translated_name": "তোমাদের জন্য খাদ্যভান্ডার ও তোমাদের গবাদি-পশুর জন্যেও।"
+                    },
+                    {
+                        "id": 5791,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "33",
+                        "arabic_name": "فَإِذَا جَآءَتِ ٱلصَّآخَّةُ",
+                        "translated_name": "তারপর যেদিন কান-ফাটানো আওয়াজ আসবে --"
+                    },
+                    {
+                        "id": 5792,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "34",
+                        "arabic_name": "يَوْمَ يَفِرُّ ٱلْمَرْءُ مِنْ أَخِيهِ",
+                        "translated_name": "সেইদিন মানুষ তার ভাইকে ছেড়ে পালাবে,"
+                    },
+                    {
+                        "id": 5793,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "35",
+                        "arabic_name": "وَأُمِّهِۦ وَأَبِيهِ",
+                        "translated_name": "আর তার মাকে ও তার বাবাকে,"
+                    },
+                    {
+                        "id": 5794,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "36",
+                        "arabic_name": "وَصَـٰحِبَتِهِۦ وَبَنِيهِ",
+                        "translated_name": "আর তার পতিপত্নীকে ও তার সন্তানসন্ততিকে।"
+                    },
+                    {
+                        "id": 5795,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "37",
+                        "arabic_name": "لِكُلِّ ٱمْرِئٍ مِّنْهُمْ يَوْمَئِذٍ شَأْنٌ يُغْنِيهِ",
+                        "translated_name": "সেদিন তাদের মধ্যের প্রত্যেক লোকেরই এত ব্যস্ততা থাকবে যে তাকে বেখেয়াল করে দেবে।"
+                    },
+                    {
+                        "id": 5796,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "38",
+                        "arabic_name": "وُجُوهٌ يَوْمَئِذٍ مُّسْفِرَةٌ",
+                        "translated_name": "অনেক মুখ সেইদিন হবে উজ্জ্বল,"
+                    },
+                    {
+                        "id": 5797,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "39",
+                        "arabic_name": "ضَاحِكَةٌ مُّسْتَبْشِرَةٌ",
+                        "translated_name": "হাসিমাখা, আনন্দমুখর,"
+                    },
+                    {
+                        "id": 5798,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "40",
+                        "arabic_name": "وَوُجُوهٌ يَوْمَئِذٍ عَلَيْهَا غَبَرَةٌ",
+                        "translated_name": "আর সেইদিন অনেক মুখ -- তাদের উপরে ধূলো-বালি,"
+                    },
+                    {
+                        "id": 5799,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "41",
+                        "arabic_name": "تَرْهَقُهَا قَتَرَةٌ",
+                        "translated_name": "কালো- আঁধার তাদের ঢেকে ফেলবে।"
+                    },
+                    {
+                        "id": 5800,
+                        "chapter_id": 80,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "42",
+                        "arabic_name": "أُو۟لَـٰٓئِكَ هُمُ ٱلْكَفَرَةُ ٱلْفَجَرَةُ",
+                        "translated_name": "এরা নিজেরাই সত্যপ্রত্যাখ্যানকারী, দুষ্কৃতিকারী।"
+                    }
+                ],
+                "page_arabic_ayah": "عَبَسَ وَتَوَلَّىٰٓ (١)  أَن جَآءَهُ ٱلْأَعْمَىٰ (٢)  وَمَا يُدْرِيكَ لَعَلَّهُۥ يَزَّكَّىٰٓ (٣)  أَوْ يَذَّكَّرُ فَتَنفَعَهُ ٱلذِّكْرَىٰٓ (٤)  أَمَّا مَنِ ٱسْتَغْنَىٰ (٥)  فَأَنتَ لَهُۥ تَصَدَّىٰ (٦)  وَمَا عَلَيْكَ أَلَّا يَزَّكَّىٰ (٧)  وَأَمَّا مَن جَآءَكَ يَسْعَىٰ (٨)  وَهُوَ يَخْشَىٰ (٩)  فَأَنتَ عَنْهُ تَلَهَّىٰ (١٠)  كَلَّآ إِنَّهَا تَذْكِرَةٌ (١١)  فَمَن شَآءَ ذَكَرَهُۥ (١٢)  فِى صُحُفٍ مُّكَرَّمَةٍ (١٣)  مَّرْفُوعَةٍ مُّطَهَّرَةٍۭ (١٤)  بِأَيْدِى سَفَرَةٍ (١٥)  كِرَامٍۭ بَرَرَةٍ (١٦)  قُتِلَ ٱلْإِنسَـٰنُ مَآ أَكْفَرَهُۥ (١٧)  مِنْ أَىِّ شَىْءٍ خَلَقَهُۥ (١٨)  مِن نُّطْفَةٍ خَلَقَهُۥ فَقَدَّرَهُۥ (١٩)  ثُمَّ ٱلسَّبِيلَ يَسَّرَهُۥ (٢٠)  ثُمَّ أَمَاتَهُۥ فَأَقْبَرَهُۥ (٢١)  ثُمَّ إِذَا شَآءَ أَنشَرَهُۥ (٢٢)  كَلَّا لَمَّا يَقْضِ مَآ أَمَرَهُۥ (٢٣)  فَلْيَنظُرِ ٱلْإِنسَـٰنُ إِلَىٰ طَعَامِهِۦٓ (٢٤)  أَنَّا صَبَبْنَا ٱلْمَآءَ صَبًّا (٢٥)  ثُمَّ شَقَقْنَا ٱلْأَرْضَ شَقًّا (٢٦)  فَأَنۢبَتْنَا فِيهَا حَبًّا (٢٧)  وَعِنَبًا وَقَضْبًا (٢٨)  وَزَيْتُونًا وَنَخْلًا (٢٩)  وَحَدَآئِقَ غُلْبًا (٣٠)  وَفَـٰكِهَةً وَأَبًّا (٣١)  مَّتَـٰعًا لَّكُمْ وَلِأَنْعَـٰمِكُمْ (٣٢)  فَإِذَا جَآءَتِ ٱلصَّآخَّةُ (٣٣)  يَوْمَ يَفِرُّ ٱلْمَرْءُ مِنْ أَخِيهِ (٣٤)  وَأُمِّهِۦ وَأَبِيهِ (٣٥)  وَصَـٰحِبَتِهِۦ وَبَنِيهِ (٣٦)  لِكُلِّ ٱمْرِئٍ مِّنْهُمْ يَوْمَئِذٍ شَأْنٌ يُغْنِيهِ (٣٧)  وُجُوهٌ يَوْمَئِذٍ مُّسْفِرَةٌ (٣٨)  ضَاحِكَةٌ مُّسْتَبْشِرَةٌ (٣٩)  وَوُجُوهٌ يَوْمَئِذٍ عَلَيْهَا غَبَرَةٌ (٤٠)  تَرْهَقُهَا قَتَرَةٌ (٤١)  أُو۟لَـٰٓئِكَ هُمُ ٱلْكَفَرَةُ ٱلْفَجَرَةُ (٤٢)",
+                "is_read": false
+            }
+        ]
+    }
+}

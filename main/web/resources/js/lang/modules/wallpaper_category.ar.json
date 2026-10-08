@@ -1,0 +1,13 @@
+{
+    "wallpaper_category": {
+        "title": "قائمة تصنيفات الخلفيات",
+        "singular": "التصنيف",
+        "add": "إضافة تصنيف",
+        "search_placeholder": "🔍 البحث في التصنيفات...",
+        "total_wallpaper": "إجمالي الخلفيات : ({count})",
+        "form": {
+            "name_label": "الاسم",
+            "name_placeholder": "أدخل الاسم"
+        }
+    }
+}

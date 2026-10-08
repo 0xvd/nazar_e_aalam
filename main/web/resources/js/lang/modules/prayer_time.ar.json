@@ -1,0 +1,55 @@
+{
+    "prayer_time": {
+        "list": {
+            "title": "مواقيت الصلاة",
+            "select_city": "اختر المدينة",
+            "delete_city_prayer_time": "حذف مواقيت الصلاة لمدينة {city}",
+            "add": "إضافة وقت صلاة",
+            "month_prayer_time": "مواقيت صلاة {month}",
+            "table": {
+                "city": "المدينة",
+                "date": "التاريخ",
+                "imsak": "الإمساك",
+                "sunrise": "الشروق",
+                "fajr_start": "بداية الفجر",
+                "zuhr_start": "بداية الظهر",
+                "asr_start": "بداية العصر",
+                "maghrib_start": "بداية المغرب",
+                "isha_start": "بداية العشاء",
+                "iftar_start": "بداية الإفطار",
+                "sehri_start": "بداية السحور"
+            }
+        },
+        "import": {
+            "title": "استيراد مواقيت الصلاة",
+            "instructions_title": "تعليمات ملف الإكسل:",
+            "instruction_date_format": "يجب أن يكون تنسيق التاريخ <code>DD/MM/YYYY</code> (مثال: 01/01/2025).",
+            "instruction_columns": "تأكد من صحة أسماء <b>الأعمدة</b>: <b>\"Time\"</b>، <b>\"City\"</b>، والأعمدة الأخرى المطلوبة.",
+            "instruction_file_size": "يجب ألا يتجاوز حجم الملف 150 كيلوبايت.",
+            "download_example": "تنزيل ملف نموذجي",
+            "upload_file_label": "رفع الملف",
+            "submit": "إرسال",
+            "select_file_error": "يرجى اختيار ملف",
+            "file_type_error": "يُسمح فقط بملفات .xlsx أو .xls أو .csv",
+            "file_size_error": "يجب ألا يتجاوز حجم الملف 150 كيلوبايت"
+        },
+        "create": {
+            "title": "إضافة وقت صلاة",
+            "update_title": "تحديث وقت الصلاة",
+            "back": "رجوع",
+            "city_label": "المدينة",
+            "select_city": "اختر المدينة",
+            "date_label": "التاريخ",
+            "imsak_label": "وقت الإمساك",
+            "sunrise_label": "الشروق",
+            "fajr_start_label": "بداية الفجر",
+            "zuhr_start_label": "بداية الظهر",
+            "asr_start_label": "بداية العصر",
+            "maghrib_start_label": "بداية المغرب",
+            "isha_start_label": "بداية العشاء",
+            "iftar_start_label": "بداية الإفطار",
+            "sehri_start_label": "بداية السحور",
+            "submit": "إرسال"
+        }
+    }
+}

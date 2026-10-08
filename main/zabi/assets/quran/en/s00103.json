@@ -1,0 +1,51 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 103,
+            "serial_number": "103",
+            "arabic_name": "العصر",
+            "translated_name": "Al-'Asr",
+            "verses_translate_name": "Verses",
+            "verses_count": "3"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 601,
+                "page_number": "601",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6177,
+                        "chapter_id": 103,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "وَٱلْعَصْرِ",
+                        "translated_name": "TIME AND AGE are witness"
+                    },
+                    {
+                        "id": 6178,
+                        "chapter_id": 103,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ",
+                        "translated_name": "Man is certainly loss,"
+                    },
+                    {
+                        "id": 6179,
+                        "chapter_id": 103,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
+                        "translated_name": "Except those who believe, and do good and enjoin truth on one another, and enjoin one another to bear with fortitude (the trials that befall)."
+                    }
+                ],
+                "page_arabic_ayah": "وَٱلْعَصْرِ (١)  إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ (٢)  إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ (٣)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

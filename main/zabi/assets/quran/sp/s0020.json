@@ -1,0 +1,1186 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 20,
+            "serial_number": "20",
+            "arabic_name": "طه",
+            "translated_name": "Taha",
+            "verses_translate_name": "versos",
+            "verses_count": "135"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 312,
+                "page_number": "312",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 2349,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "طه",
+                        "translated_name": "Ta Ha."
+                    },
+                    {
+                        "id": 2350,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "مَآ أَنزَلْنَا عَلَيْكَ ٱلْقُرْءَانَ لِتَشْقَىٰٓ",
+                        "translated_name": "No hicimos descender el Corán sobre ti para crearte molestias"
+                    },
+                    {
+                        "id": 2351,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "إِلَّا تَذْكِرَةً لِّمَن يَخْشَىٰ",
+                        "translated_name": "sino para invitar al recuerdo a quienes son temerosos."
+                    },
+                    {
+                        "id": 2352,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "تَنزِيلًا مِّمَّنْ خَلَقَ ٱلْأَرْضَ وَٱلسَّمَـٰوَٰتِ ٱلْعُلَى",
+                        "translated_name": "Hecho descender por Quien creó la Tierra y los altos cielos."
+                    },
+                    {
+                        "id": 2353,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "ٱلرَّحْمَـٰنُ عَلَى ٱلْعَرْشِ ٱسْتَوَىٰ",
+                        "translated_name": "El Clementísimo está sobre el Trono."
+                    },
+                    {
+                        "id": 2354,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "لَهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ وَمَا بَيْنَهُمَا وَمَا تَحْتَ ٱلثَّرَىٰ",
+                        "translated_name": "A Él pertenece lo que hay en los cielos y en la Tierra y lo que hay entre ambos y lo que hay bajo ella."
+                    },
+                    {
+                        "id": 2355,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "وَإِن تَجْهَرْ بِٱلْقَوْلِ فَإِنَّهُۥ يَعْلَمُ ٱلسِّرَّ وَأَخْفَى",
+                        "translated_name": "Y, aunque hables en voz baja, en verdad, Él conoce lo secreto y lo más oculto."
+                    },
+                    {
+                        "id": 2356,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ۖ لَهُ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ",
+                        "translated_name": "Al.lah, no hay más dios que Él. A Él pertenecen los nombres mejores."
+                    },
+                    {
+                        "id": 2357,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "وَهَلْ أَتَىٰكَ حَدِيثُ مُوسَىٰٓ",
+                        "translated_name": "¿Te ha llegado el relato de Moisés?"
+                    },
+                    {
+                        "id": 2358,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "إِذْ رَءَا نَارًا فَقَالَ لِأَهْلِهِ ٱمْكُثُوٓا۟ إِنِّىٓ ءَانَسْتُ نَارًا لَّعَلِّىٓ ءَاتِيكُم مِّنْهَا بِقَبَسٍ أَوْ أَجِدُ عَلَى ٱلنَّارِ هُدًى",
+                        "translated_name": "Cuando vio un fuego y dijo a su familia: «¡Esperad! En verdad, he creído divisar un fuego. Puede que traiga unas brasas para vosotros o que encuentre el camino con él.»"
+                    },
+                    {
+                        "id": 2359,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "فَلَمَّآ أَتَىٰهَا نُودِىَ يَـٰمُوسَىٰٓ",
+                        "translated_name": "Y cuando llegó a él, fue llamado: «¡Oh, Moisés!"
+                    },
+                    {
+                        "id": 2360,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "إِنِّىٓ أَنَا۠ رَبُّكَ فَٱخْلَعْ نَعْلَيْكَ ۖ إِنَّكَ بِٱلْوَادِ ٱلْمُقَدَّسِ طُوًى",
+                        "translated_name": "¡En verdad, Yo soy tu Señor! Así pues, quítate tus sandalias. Estás, en verdad, en el valle sagrado de Tuwa."
+                    }
+                ],
+                "page_arabic_ayah": "طه (١)  مَآ أَنزَلْنَا عَلَيْكَ ٱلْقُرْءَانَ لِتَشْقَىٰٓ (٢)  إِلَّا تَذْكِرَةً لِّمَن يَخْشَىٰ (٣)  تَنزِيلًا مِّمَّنْ خَلَقَ ٱلْأَرْضَ وَٱلسَّمَـٰوَٰتِ ٱلْعُلَى (٤)  ٱلرَّحْمَـٰنُ عَلَى ٱلْعَرْشِ ٱسْتَوَىٰ (٥)  لَهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ وَمَا بَيْنَهُمَا وَمَا تَحْتَ ٱلثَّرَىٰ (٦)  وَإِن تَجْهَرْ بِٱلْقَوْلِ فَإِنَّهُۥ يَعْلَمُ ٱلسِّرَّ وَأَخْفَى (٧)  ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ۖ لَهُ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ (٨)  وَهَلْ أَتَىٰكَ حَدِيثُ مُوسَىٰٓ (٩)  إِذْ رَءَا نَارًا فَقَالَ لِأَهْلِهِ ٱمْكُثُوٓا۟ إِنِّىٓ ءَانَسْتُ نَارًا لَّعَلِّىٓ ءَاتِيكُم مِّنْهَا بِقَبَسٍ أَوْ أَجِدُ عَلَى ٱلنَّارِ هُدًى (١٠)  فَلَمَّآ أَتَىٰهَا نُودِىَ يَـٰمُوسَىٰٓ (١١)  إِنِّىٓ أَنَا۠ رَبُّكَ فَٱخْلَعْ نَعْلَيْكَ ۖ إِنَّكَ بِٱلْوَادِ ٱلْمُقَدَّسِ طُوًى (١٢)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 313,
+                "page_number": "313",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 2361,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "وَأَنَا ٱخْتَرْتُكَ فَٱسْتَمِعْ لِمَا يُوحَىٰٓ",
+                        "translated_name": "Y Yo te he elegido, así que escucha lo que te ha sido revelado."
+                    },
+                    {
+                        "id": 2362,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "إِنَّنِىٓ أَنَا ٱللَّهُ لَآ إِلَـٰهَ إِلَّآ أَنَا۠ فَٱعْبُدْنِى وَأَقِمِ ٱلصَّلَوٰةَ لِذِكْرِىٓ",
+                        "translated_name": "En verdad, Yo soy Dios. No hay más dios que Yo. Así pues ¡Adoradme y haced la oración en recuerdo Mío!"
+                    },
+                    {
+                        "id": 2363,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "إِنَّ ٱلسَّاعَةَ ءَاتِيَةٌ أَكَادُ أُخْفِيهَا لِتُجْزَىٰ كُلُّ نَفْسٍۭ بِمَا تَسْعَىٰ",
+                        "translated_name": "En verdad, la Hora viene. He querido mantenerla oculta para que cada alma sea recompensada conforme a su esfuerzo."
+                    },
+                    {
+                        "id": 2364,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "16",
+                        "arabic_name": "فَلَا يَصُدَّنَّكَ عَنْهَا مَن لَّا يُؤْمِنُ بِهَا وَٱتَّبَعَ هَوَىٰهُ فَتَرْدَىٰ",
+                        "translated_name": "Que no te aparten de ella quienes no creen en ella y siguen sus pasiones y seas aniquilado."
+                    },
+                    {
+                        "id": 2365,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "17",
+                        "arabic_name": "وَمَا تِلْكَ بِيَمِينِكَ يَـٰمُوسَىٰ",
+                        "translated_name": "¿Y qué es eso ¡Oh, Moisés! que tienes en tu mano derecha?»"
+                    },
+                    {
+                        "id": 2366,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "18",
+                        "arabic_name": "قَالَ هِىَ عَصَاىَ أَتَوَكَّؤُا۟ عَلَيْهَا وَأَهُشُّ بِهَا عَلَىٰ غَنَمِى وَلِىَ فِيهَا مَـَٔارِبُ أُخْرَىٰ",
+                        "translated_name": "Él dijo: «Es mi bastón. En él me apoyo y con él vareo los árboles para alimentar a mi ganado y también le doy otros usos.»"
+                    },
+                    {
+                        "id": 2367,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "19",
+                        "arabic_name": "قَالَ أَلْقِهَا يَـٰمُوسَىٰ",
+                        "translated_name": "Dijo [Dios]: «¡Lánzalo! ¡Oh, Moisés!»"
+                    },
+                    {
+                        "id": 2368,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "20",
+                        "arabic_name": "فَأَلْقَىٰهَا فَإِذَا هِىَ حَيَّةٌ تَسْعَىٰ",
+                        "translated_name": "Y lo arrojó y fue una serpiente reptando veloz."
+                    },
+                    {
+                        "id": 2369,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "21",
+                        "arabic_name": "قَالَ خُذْهَا وَلَا تَخَفْ ۖ سَنُعِيدُهَا سِيرَتَهَا ٱلْأُولَىٰ",
+                        "translated_name": "Dijo [Dios]: «¡Tómalo y no tengas miedo! Lo devolveremos a su condición primera."
+                    },
+                    {
+                        "id": 2370,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "22",
+                        "arabic_name": "وَٱضْمُمْ يَدَكَ إِلَىٰ جَنَاحِكَ تَخْرُجْ بَيْضَآءَ مِنْ غَيْرِ سُوٓءٍ ءَايَةً أُخْرَىٰ",
+                        "translated_name": "Y guarda tu mano bajo tu axila. Saldrá blanca, sin defecto alguno. Es otra señal,"
+                    },
+                    {
+                        "id": 2371,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "23",
+                        "arabic_name": "لِنُرِيَكَ مِنْ ءَايَـٰتِنَا ٱلْكُبْرَى",
+                        "translated_name": "para hacerte ver algunas de Nuestras grandes señales.»"
+                    },
+                    {
+                        "id": 2372,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "24",
+                        "arabic_name": "ٱذْهَبْ إِلَىٰ فِرْعَوْنَ إِنَّهُۥ طَغَىٰ",
+                        "translated_name": "«Y ve al Faraón. En verdad, él se ha endiosado.»"
+                    },
+                    {
+                        "id": 2373,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "25",
+                        "arabic_name": "قَالَ رَبِّ ٱشْرَحْ لِى صَدْرِى",
+                        "translated_name": "Dijo [Moisés]: «¡Señor mío! Ensancha mi pecho"
+                    },
+                    {
+                        "id": 2374,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "26",
+                        "arabic_name": "وَيَسِّرْ لِىٓ أَمْرِى",
+                        "translated_name": "y facilita mi misión"
+                    },
+                    {
+                        "id": 2375,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "27",
+                        "arabic_name": "وَٱحْلُلْ عُقْدَةً مِّن لِّسَانِى",
+                        "translated_name": "y desata el nudo de mi lengua"
+                    },
+                    {
+                        "id": 2376,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "28",
+                        "arabic_name": "يَفْقَهُوا۟ قَوْلِى",
+                        "translated_name": "para que entiendan mis palabras."
+                    },
+                    {
+                        "id": 2377,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "29",
+                        "arabic_name": "وَٱجْعَل لِّى وَزِيرًا مِّنْ أَهْلِى",
+                        "translated_name": "Y ponme un ayudante de mi familia."
+                    },
+                    {
+                        "id": 2378,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "30",
+                        "arabic_name": "هَـٰرُونَ أَخِى",
+                        "translated_name": "A Aarón, mi hermano."
+                    },
+                    {
+                        "id": 2379,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "31",
+                        "arabic_name": "ٱشْدُدْ بِهِۦٓ أَزْرِى",
+                        "translated_name": "Fortalece con él mi poder"
+                    },
+                    {
+                        "id": 2380,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "32",
+                        "arabic_name": "وَأَشْرِكْهُ فِىٓ أَمْرِى",
+                        "translated_name": "y asóciale a mi misión"
+                    },
+                    {
+                        "id": 2381,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "33",
+                        "arabic_name": "كَىْ نُسَبِّحَكَ كَثِيرًا",
+                        "translated_name": "para que Te glorifiquemos mucho"
+                    },
+                    {
+                        "id": 2382,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "34",
+                        "arabic_name": "وَنَذْكُرَكَ كَثِيرًا",
+                        "translated_name": "y Te recordemos mucho."
+                    },
+                    {
+                        "id": 2383,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "35",
+                        "arabic_name": "إِنَّكَ كُنتَ بِنَا بَصِيرًا",
+                        "translated_name": "En verdad, Tú siempre has estado informado de nuestra situación.»"
+                    },
+                    {
+                        "id": 2384,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "36",
+                        "arabic_name": "قَالَ قَدْ أُوتِيتَ سُؤْلَكَ يَـٰمُوسَىٰ",
+                        "translated_name": "Dijo: «El poder que Dios me ha dado es mejor. Y dejaremos que ese día se mezclen unos con otros como olas y será tocada la trompeta y les reuniremos a todos. Dijo [Dios]: «Ciertamente te he concedido tus peticiones ¡Oh, Moisés!"
+                    },
+                    {
+                        "id": 2385,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "37",
+                        "arabic_name": "وَلَقَدْ مَنَنَّا عَلَيْكَ مَرَّةً أُخْرَىٰٓ",
+                        "translated_name": "Y, ciertamente, ya te habíamos agraciado otra vez"
+                    }
+                ],
+                "page_arabic_ayah": "وَأَنَا ٱخْتَرْتُكَ فَٱسْتَمِعْ لِمَا يُوحَىٰٓ (١٣)  إِنَّنِىٓ أَنَا ٱللَّهُ لَآ إِلَـٰهَ إِلَّآ أَنَا۠ فَٱعْبُدْنِى وَأَقِمِ ٱلصَّلَوٰةَ لِذِكْرِىٓ (١٤)  إِنَّ ٱلسَّاعَةَ ءَاتِيَةٌ أَكَادُ أُخْفِيهَا لِتُجْزَىٰ كُلُّ نَفْسٍۭ بِمَا تَسْعَىٰ (١٥)  فَلَا يَصُدَّنَّكَ عَنْهَا مَن لَّا يُؤْمِنُ بِهَا وَٱتَّبَعَ هَوَىٰهُ فَتَرْدَىٰ (١٦)  وَمَا تِلْكَ بِيَمِينِكَ يَـٰمُوسَىٰ (١٧)  قَالَ هِىَ عَصَاىَ أَتَوَكَّؤُا۟ عَلَيْهَا وَأَهُشُّ بِهَا عَلَىٰ غَنَمِى وَلِىَ فِيهَا مَـَٔارِبُ أُخْرَىٰ (١٨)  قَالَ أَلْقِهَا يَـٰمُوسَىٰ (١٩)  فَأَلْقَىٰهَا فَإِذَا هِىَ حَيَّةٌ تَسْعَىٰ (٢٠)  قَالَ خُذْهَا وَلَا تَخَفْ ۖ سَنُعِيدُهَا سِيرَتَهَا ٱلْأُولَىٰ (٢١)  وَٱضْمُمْ يَدَكَ إِلَىٰ جَنَاحِكَ تَخْرُجْ بَيْضَآءَ مِنْ غَيْرِ سُوٓءٍ ءَايَةً أُخْرَىٰ (٢٢)  لِنُرِيَكَ مِنْ ءَايَـٰتِنَا ٱلْكُبْرَى (٢٣)  ٱذْهَبْ إِلَىٰ فِرْعَوْنَ إِنَّهُۥ طَغَىٰ (٢٤)  قَالَ رَبِّ ٱشْرَحْ لِى صَدْرِى (٢٥)  وَيَسِّرْ لِىٓ أَمْرِى (٢٦)  وَٱحْلُلْ عُقْدَةً مِّن لِّسَانِى (٢٧)  يَفْقَهُوا۟ قَوْلِى (٢٨)  وَٱجْعَل لِّى وَزِيرًا مِّنْ أَهْلِى (٢٩)  هَـٰرُونَ أَخِى (٣٠)  ٱشْدُدْ بِهِۦٓ أَزْرِى (٣١)  وَأَشْرِكْهُ فِىٓ أَمْرِى (٣٢)  كَىْ نُسَبِّحَكَ كَثِيرًا (٣٣)  وَنَذْكُرَكَ كَثِيرًا (٣٤)  إِنَّكَ كُنتَ بِنَا بَصِيرًا (٣٥)  قَالَ قَدْ أُوتِيتَ سُؤْلَكَ يَـٰمُوسَىٰ (٣٦)  وَلَقَدْ مَنَنَّا عَلَيْكَ مَرَّةً أُخْرَىٰٓ (٣٧)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 314,
+                "page_number": "314",
+                "page_key": 2,
+                "page_verses": [
+                    {
+                        "id": 2386,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "38",
+                        "arabic_name": "إِذْ أَوْحَيْنَآ إِلَىٰٓ أُمِّكَ مَا يُوحَىٰٓ",
+                        "translated_name": "cuando Nosotros revelamos a tu madre lo que le fue revelado:"
+                    },
+                    {
+                        "id": 2387,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "39",
+                        "arabic_name": "أَنِ ٱقْذِفِيهِ فِى ٱلتَّابُوتِ فَٱقْذِفِيهِ فِى ٱلْيَمِّ فَلْيُلْقِهِ ٱلْيَمُّ بِٱلسَّاحِلِ يَأْخُذْهُ عَدُوٌّ لِّى وَعَدُوٌّ لَّهُۥ ۚ وَأَلْقَيْتُ عَلَيْكَ مَحَبَّةً مِّنِّى وَلِتُصْنَعَ عَلَىٰ عَيْنِىٓ",
+                        "translated_name": "Ponle en la cesta y pon ésta en el río y el río la depositará en la costa. Le recogerá un enemigo Mío y enemigo suyo.» Y deposité sobre ti Mi amor, para que fueras criado bajo Mi mirada"
+                    },
+                    {
+                        "id": 2388,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "40",
+                        "arabic_name": "إِذْ تَمْشِىٓ أُخْتُكَ فَتَقُولُ هَلْ أَدُلُّكُمْ عَلَىٰ مَن يَكْفُلُهُۥ ۖ فَرَجَعْنَـٰكَ إِلَىٰٓ أُمِّكَ كَىْ تَقَرَّ عَيْنُهَا وَلَا تَحْزَنَ ۚ وَقَتَلْتَ نَفْسًا فَنَجَّيْنَـٰكَ مِنَ ٱلْغَمِّ وَفَتَنَّـٰكَ فُتُونًا ۚ فَلَبِثْتَ سِنِينَ فِىٓ أَهْلِ مَدْيَنَ ثُمَّ جِئْتَ عَلَىٰ قَدَرٍ يَـٰمُوسَىٰ",
+                        "translated_name": "cuando tu hermana fue y dijo: «¿Queréis que os indique a quien se ocupe de él?» y te hicimos regresar a tu madre para que se alegraran sus ojos y no estuviera triste. Y mataste a un hombre y Nosotros te salvamos de la angustia y te pusimos a prueba en la dificultad. Y permaneciste durante años con la gente de Madyan. Luego, viniste cuando estaba decretado ¡Oh, Moisés!"
+                    },
+                    {
+                        "id": 2389,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "41",
+                        "arabic_name": "وَٱصْطَنَعْتُكَ لِنَفْسِى",
+                        "translated_name": "Te he escogido y purificado para Mí."
+                    },
+                    {
+                        "id": 2390,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "42",
+                        "arabic_name": "ٱذْهَبْ أَنتَ وَأَخُوكَ بِـَٔايَـٰتِى وَلَا تَنِيَا فِى ذِكْرِى",
+                        "translated_name": "¡Id, tú y tu hermano con Mis señales y no os debilitéis en el recuerdo de Mí!"
+                    },
+                    {
+                        "id": 2391,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "43",
+                        "arabic_name": "ٱذْهَبَآ إِلَىٰ فِرْعَوْنَ إِنَّهُۥ طَغَىٰ",
+                        "translated_name": "¡Id ambos al Faraón! ¡En verdad, se ha endiosado!"
+                    },
+                    {
+                        "id": 2392,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "44",
+                        "arabic_name": "فَقُولَا لَهُۥ قَوْلًا لَّيِّنًا لَّعَلَّهُۥ يَتَذَكَّرُ أَوْ يَخْشَىٰ",
+                        "translated_name": "Y habladle con amabilidad. Quizás así se deje llamar al recuerdo o tema."
+                    },
+                    {
+                        "id": 2393,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "45",
+                        "arabic_name": "قَالَا رَبَّنَآ إِنَّنَا نَخَافُ أَن يَفْرُطَ عَلَيْنَآ أَوْ أَن يَطْغَىٰ",
+                        "translated_name": "Ellos dijeron: «¡Señor nuestro! ¡En verdad, tememos que se precipite sobre nosotros o que se extralimite en su opresión!»"
+                    },
+                    {
+                        "id": 2394,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "46",
+                        "arabic_name": "قَالَ لَا تَخَافَآ ۖ إِنَّنِى مَعَكُمَآ أَسْمَعُ وَأَرَىٰ",
+                        "translated_name": "Dijo: «¡No temáis! En verdad, Yo estaré con vosotros dos. Oiré y veré."
+                    },
+                    {
+                        "id": 2395,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "47",
+                        "arabic_name": "فَأْتِيَاهُ فَقُولَآ إِنَّا رَسُولَا رَبِّكَ فَأَرْسِلْ مَعَنَا بَنِىٓ إِسْرَٰٓءِيلَ وَلَا تُعَذِّبْهُمْ ۖ قَدْ جِئْنَـٰكَ بِـَٔايَةٍ مِّن رَّبِّكَ ۖ وَٱلسَّلَـٰمُ عَلَىٰ مَنِ ٱتَّبَعَ ٱلْهُدَىٰٓ",
+                        "translated_name": "Así que id a él y decidle: En verdad, somos Mensajeros de tu Señor. Deja, por tanto, ir con nosotros a los Hijos de Israel y no les castigues. Ciertamente, hemos venido a ti con una señal procedente de tu Señor. La paz sea con quien sigue la Guía."
+                    },
+                    {
+                        "id": 2396,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "48",
+                        "arabic_name": "إِنَّا قَدْ أُوحِىَ إِلَيْنَآ أَنَّ ٱلْعَذَابَ عَلَىٰ مَن كَذَّبَ وَتَوَلَّىٰ",
+                        "translated_name": "En verdad, nos ha sido revelado que quien desmienta y de la espalda será castigado.»"
+                    },
+                    {
+                        "id": 2397,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "49",
+                        "arabic_name": "قَالَ فَمَن رَّبُّكُمَا يَـٰمُوسَىٰ",
+                        "translated_name": "Dijo [Faraón]: «¿Quién es entonces ¡Oh, Moisés! vuestro Señor?»"
+                    },
+                    {
+                        "id": 2398,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "50",
+                        "arabic_name": "قَالَ رَبُّنَا ٱلَّذِىٓ أَعْطَىٰ كُلَّ شَىْءٍ خَلْقَهُۥ ثُمَّ هَدَىٰ",
+                        "translated_name": "Dijo: «Nuestro señor es Quien ha creado toda cosa y luego la ha guiado.»"
+                    },
+                    {
+                        "id": 2399,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "51",
+                        "arabic_name": "قَالَ فَمَا بَالُ ٱلْقُرُونِ ٱلْأُولَىٰ",
+                        "translated_name": "Dijo: «¿Y qué fue de las generaciones primeras?»"
+                    }
+                ],
+                "page_arabic_ayah": "إِذْ أَوْحَيْنَآ إِلَىٰٓ أُمِّكَ مَا يُوحَىٰٓ (٣٨)  أَنِ ٱقْذِفِيهِ فِى ٱلتَّابُوتِ فَٱقْذِفِيهِ فِى ٱلْيَمِّ فَلْيُلْقِهِ ٱلْيَمُّ بِٱلسَّاحِلِ يَأْخُذْهُ عَدُوٌّ لِّى وَعَدُوٌّ لَّهُۥ ۚ وَأَلْقَيْتُ عَلَيْكَ مَحَبَّةً مِّنِّى وَلِتُصْنَعَ عَلَىٰ عَيْنِىٓ (٣٩)  إِذْ تَمْشِىٓ أُخْتُكَ فَتَقُولُ هَلْ أَدُلُّكُمْ عَلَىٰ مَن يَكْفُلُهُۥ ۖ فَرَجَعْنَـٰكَ إِلَىٰٓ أُمِّكَ كَىْ تَقَرَّ عَيْنُهَا وَلَا تَحْزَنَ ۚ وَقَتَلْتَ نَفْسًا فَنَجَّيْنَـٰكَ مِنَ ٱلْغَمِّ وَفَتَنَّـٰكَ فُتُونًا ۚ فَلَبِثْتَ سِنِينَ فِىٓ أَهْلِ مَدْيَنَ ثُمَّ جِئْتَ عَلَىٰ قَدَرٍ يَـٰمُوسَىٰ (٤٠)  وَٱصْطَنَعْتُكَ لِنَفْسِى (٤١)  ٱذْهَبْ أَنتَ وَأَخُوكَ بِـَٔايَـٰتِى وَلَا تَنِيَا فِى ذِكْرِى (٤٢)  ٱذْهَبَآ إِلَىٰ فِرْعَوْنَ إِنَّهُۥ طَغَىٰ (٤٣)  فَقُولَا لَهُۥ قَوْلًا لَّيِّنًا لَّعَلَّهُۥ يَتَذَكَّرُ أَوْ يَخْشَىٰ (٤٤)  قَالَا رَبَّنَآ إِنَّنَا نَخَافُ أَن يَفْرُطَ عَلَيْنَآ أَوْ أَن يَطْغَىٰ (٤٥)  قَالَ لَا تَخَافَآ ۖ إِنَّنِى مَعَكُمَآ أَسْمَعُ وَأَرَىٰ (٤٦)  فَأْتِيَاهُ فَقُولَآ إِنَّا رَسُولَا رَبِّكَ فَأَرْسِلْ مَعَنَا بَنِىٓ إِسْرَٰٓءِيلَ وَلَا تُعَذِّبْهُمْ ۖ قَدْ جِئْنَـٰكَ بِـَٔايَةٍ مِّن رَّبِّكَ ۖ وَٱلسَّلَـٰمُ عَلَىٰ مَنِ ٱتَّبَعَ ٱلْهُدَىٰٓ (٤٧)  إِنَّا قَدْ أُوحِىَ إِلَيْنَآ أَنَّ ٱلْعَذَابَ عَلَىٰ مَن كَذَّبَ وَتَوَلَّىٰ (٤٨)  قَالَ فَمَن رَّبُّكُمَا يَـٰمُوسَىٰ (٤٩)  قَالَ رَبُّنَا ٱلَّذِىٓ أَعْطَىٰ كُلَّ شَىْءٍ خَلْقَهُۥ ثُمَّ هَدَىٰ (٥٠)  قَالَ فَمَا بَالُ ٱلْقُرُونِ ٱلْأُولَىٰ (٥١)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 315,
+                "page_number": "315",
+                "page_key": 3,
+                "page_verses": [
+                    {
+                        "id": 2400,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "52",
+                        "arabic_name": "قَالَ عِلْمُهَا عِندَ رَبِّى فِى كِتَـٰبٍ ۖ لَّا يَضِلُّ رَبِّى وَلَا يَنسَى",
+                        "translated_name": "Dijo: «El conocimiento de ellos está junto a mi Señor en una Escritura. Mi Señor no se equivoca ni se olvida.»"
+                    },
+                    {
+                        "id": 2401,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "53",
+                        "arabic_name": "ٱلَّذِى جَعَلَ لَكُمُ ٱلْأَرْضَ مَهْدًا وَسَلَكَ لَكُمْ فِيهَا سُبُلًا وَأَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً فَأَخْرَجْنَا بِهِۦٓ أَزْوَٰجًا مِّن نَّبَاتٍ شَتَّىٰ",
+                        "translated_name": "Él es Quien ha puesto para vosotros la Tierra como un lecho y ha trazado en ella, para vosotros, caminos e hizo descender del cielo agua, por medio de la cual hacemos surgir diversas clases de plantas por parejas."
+                    },
+                    {
+                        "id": 2402,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "54",
+                        "arabic_name": "كُلُوا۟ وَٱرْعَوْا۟ أَنْعَـٰمَكُمْ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّأُو۟لِى ٱلنُّهَىٰ",
+                        "translated_name": "¡Comed y pastoread vuestro ganado! En verdad, en ello hay señales para quien posee inteligencia."
+                    },
+                    {
+                        "id": 2403,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "55",
+                        "arabic_name": "۞ مِنْهَا خَلَقْنَـٰكُمْ وَفِيهَا نُعِيدُكُمْ وَمِنْهَا نُخْرِجُكُمْ تَارَةً أُخْرَىٰ",
+                        "translated_name": "De ella os hemos creado y a ella os hacemos regresar y de ella os haremos salir otra vez."
+                    },
+                    {
+                        "id": 2404,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "56",
+                        "arabic_name": "وَلَقَدْ أَرَيْنَـٰهُ ءَايَـٰتِنَا كُلَّهَا فَكَذَّبَ وَأَبَىٰ",
+                        "translated_name": "Ciertamente, le hicimos ver todas Nuestras señales, pero él las negó y rechazó."
+                    },
+                    {
+                        "id": 2405,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "57",
+                        "arabic_name": "قَالَ أَجِئْتَنَا لِتُخْرِجَنَا مِنْ أَرْضِنَا بِسِحْرِكَ يَـٰمُوسَىٰ",
+                        "translated_name": "Dijo: «¡Oh Moisés! ¿Has venido a nosotros para sacarnos de nuestra tierra con tu magia?"
+                    },
+                    {
+                        "id": 2406,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "58",
+                        "arabic_name": "فَلَنَأْتِيَنَّكَ بِسِحْرٍ مِّثْلِهِۦ فَٱجْعَلْ بَيْنَنَا وَبَيْنَكَ مَوْعِدًا لَّا نُخْلِفُهُۥ نَحْنُ وَلَآ أَنتَ مَكَانًا سُوًى",
+                        "translated_name": "Pues vendremos a ti con una magia semejante. Fija una cita entre nosotros y tú en un terreno neutral, a la que ni nosotros ni tú faltaremos.»"
+                    },
+                    {
+                        "id": 2407,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "59",
+                        "arabic_name": "قَالَ مَوْعِدُكُمْ يَوْمُ ٱلزِّينَةِ وَأَن يُحْشَرَ ٱلنَّاسُ ضُحًى",
+                        "translated_name": "Dijo: «Vuestra cita será el Día del Adorno y que la gente se reúna al medio día.»"
+                    },
+                    {
+                        "id": 2408,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "60",
+                        "arabic_name": "فَتَوَلَّىٰ فِرْعَوْنُ فَجَمَعَ كَيْدَهُۥ ثُمَّ أَتَىٰ",
+                        "translated_name": "El Faraón se retiró. Preparó su plan y acudió."
+                    },
+                    {
+                        "id": 2409,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "61",
+                        "arabic_name": "قَالَ لَهُم مُّوسَىٰ وَيْلَكُمْ لَا تَفْتَرُوا۟ عَلَى ٱللَّهِ كَذِبًا فَيُسْحِتَكُم بِعَذَابٍ ۖ وَقَدْ خَابَ مَنِ ٱفْتَرَىٰ",
+                        "translated_name": "Moisés les dijo: «¡Ay de vosotros! ¡No inventéis mentiras sobre Dios, pues os aniquilará con un castigo! ¡Ciertamente, quien invente mentiras fracasará!»"
+                    },
+                    {
+                        "id": 2410,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "62",
+                        "arabic_name": "فَتَنَـٰزَعُوٓا۟ أَمْرَهُم بَيْنَهُمْ وَأَسَرُّوا۟ ٱلنَّجْوَىٰ",
+                        "translated_name": "Así que discutieron la cuestión entre ellos y mantuvieron en secreto sus deliberaciones."
+                    },
+                    {
+                        "id": 2411,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "63",
+                        "arabic_name": "قَالُوٓا۟ إِنْ هَـٰذَٰنِ لَسَـٰحِرَٰنِ يُرِيدَانِ أَن يُخْرِجَاكُم مِّنْ أَرْضِكُم بِسِحْرِهِمَا وَيَذْهَبَا بِطَرِيقَتِكُمُ ٱلْمُثْلَىٰ",
+                        "translated_name": "Dijeron. «En verdad, esos dos son magos que quieren expulsaros de vuestra tierra con su magia y destruir vuestras tradiciones."
+                    },
+                    {
+                        "id": 2412,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "64",
+                        "arabic_name": "فَأَجْمِعُوا۟ كَيْدَكُمْ ثُمَّ ٱئْتُوا۟ صَفًّا ۚ وَقَدْ أَفْلَحَ ٱلْيَوْمَ مَنِ ٱسْتَعْلَىٰ",
+                        "translated_name": "Así que, reunid vuestros artificios y venid en una fila cerrada. Quien gane hoy será el triunfador.»"
+                    }
+                ],
+                "page_arabic_ayah": "قَالَ عِلْمُهَا عِندَ رَبِّى فِى كِتَـٰبٍ ۖ لَّا يَضِلُّ رَبِّى وَلَا يَنسَى (٥٢)  ٱلَّذِى جَعَلَ لَكُمُ ٱلْأَرْضَ مَهْدًا وَسَلَكَ لَكُمْ فِيهَا سُبُلًا وَأَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً فَأَخْرَجْنَا بِهِۦٓ أَزْوَٰجًا مِّن نَّبَاتٍ شَتَّىٰ (٥٣)  كُلُوا۟ وَٱرْعَوْا۟ أَنْعَـٰمَكُمْ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّأُو۟لِى ٱلنُّهَىٰ (٥٤)  ۞ مِنْهَا خَلَقْنَـٰكُمْ وَفِيهَا نُعِيدُكُمْ وَمِنْهَا نُخْرِجُكُمْ تَارَةً أُخْرَىٰ (٥٥)  وَلَقَدْ أَرَيْنَـٰهُ ءَايَـٰتِنَا كُلَّهَا فَكَذَّبَ وَأَبَىٰ (٥٦)  قَالَ أَجِئْتَنَا لِتُخْرِجَنَا مِنْ أَرْضِنَا بِسِحْرِكَ يَـٰمُوسَىٰ (٥٧)  فَلَنَأْتِيَنَّكَ بِسِحْرٍ مِّثْلِهِۦ فَٱجْعَلْ بَيْنَنَا وَبَيْنَكَ مَوْعِدًا لَّا نُخْلِفُهُۥ نَحْنُ وَلَآ أَنتَ مَكَانًا سُوًى (٥٨)  قَالَ مَوْعِدُكُمْ يَوْمُ ٱلزِّينَةِ وَأَن يُحْشَرَ ٱلنَّاسُ ضُحًى (٥٩)  فَتَوَلَّىٰ فِرْعَوْنُ فَجَمَعَ كَيْدَهُۥ ثُمَّ أَتَىٰ (٦٠)  قَالَ لَهُم مُّوسَىٰ وَيْلَكُمْ لَا تَفْتَرُوا۟ عَلَى ٱللَّهِ كَذِبًا فَيُسْحِتَكُم بِعَذَابٍ ۖ وَقَدْ خَابَ مَنِ ٱفْتَرَىٰ (٦١)  فَتَنَـٰزَعُوٓا۟ أَمْرَهُم بَيْنَهُمْ وَأَسَرُّوا۟ ٱلنَّجْوَىٰ (٦٢)  قَالُوٓا۟ إِنْ هَـٰذَٰنِ لَسَـٰحِرَٰنِ يُرِيدَانِ أَن يُخْرِجَاكُم مِّنْ أَرْضِكُم بِسِحْرِهِمَا وَيَذْهَبَا بِطَرِيقَتِكُمُ ٱلْمُثْلَىٰ (٦٣)  فَأَجْمِعُوا۟ كَيْدَكُمْ ثُمَّ ٱئْتُوا۟ صَفًّا ۚ وَقَدْ أَفْلَحَ ٱلْيَوْمَ مَنِ ٱسْتَعْلَىٰ (٦٤)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 316,
+                "page_number": "316",
+                "page_key": 4,
+                "page_verses": [
+                    {
+                        "id": 2413,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "65",
+                        "arabic_name": "قَالُوا۟ يَـٰمُوسَىٰٓ إِمَّآ أَن تُلْقِىَ وَإِمَّآ أَن نَّكُونَ أَوَّلَ مَنْ أَلْقَىٰ",
+                        "translated_name": "Ellos dijeron: «¡Oh Moisés! ¡Lanza tú o seremos nosotros los primeros en lanzar!»"
+                    },
+                    {
+                        "id": 2414,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "66",
+                        "arabic_name": "قَالَ بَلْ أَلْقُوا۟ ۖ فَإِذَا حِبَالُهُمْ وَعِصِيُّهُمْ يُخَيَّلُ إِلَيْهِ مِن سِحْرِهِمْ أَنَّهَا تَسْعَىٰ",
+                        "translated_name": "Dijo: «¡Lanzad pues!» Entonces le pareció, por efecto de su magia, que sus cuerdas y bastones caminaban"
+                    },
+                    {
+                        "id": 2415,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "67",
+                        "arabic_name": "فَأَوْجَسَ فِى نَفْسِهِۦ خِيفَةً مُّوسَىٰ",
+                        "translated_name": "y Moisés sintió miedo en su interior."
+                    },
+                    {
+                        "id": 2416,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "68",
+                        "arabic_name": "قُلْنَا لَا تَخَفْ إِنَّكَ أَنتَ ٱلْأَعْلَىٰ",
+                        "translated_name": "Dijimos: «¡No temas! ¡En verdad, tú eres superior!»"
+                    },
+                    {
+                        "id": 2417,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "69",
+                        "arabic_name": "وَأَلْقِ مَا فِى يَمِينِكَ تَلْقَفْ مَا صَنَعُوٓا۟ ۖ إِنَّمَا صَنَعُوا۟ كَيْدُ سَـٰحِرٍ ۖ وَلَا يُفْلِحُ ٱلسَّاحِرُ حَيْثُ أَتَىٰ",
+                        "translated_name": "«¡Lanza lo que tienes en tu mano derecha y se tragará lo que han creado!» «En verdad, lo que han creado son trucos de mago y el mago no triunfará donde quiera que vaya.»"
+                    },
+                    {
+                        "id": 2418,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "70",
+                        "arabic_name": "فَأُلْقِىَ ٱلسَّحَرَةُ سُجَّدًا قَالُوٓا۟ ءَامَنَّا بِرَبِّ هَـٰرُونَ وَمُوسَىٰ",
+                        "translated_name": "Y los magos cayeron prosternados. Dijeron: «¡Creemos en el Señor de Aarón y Moisés!»"
+                    },
+                    {
+                        "id": 2419,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "71",
+                        "arabic_name": "قَالَ ءَامَنتُمْ لَهُۥ قَبْلَ أَنْ ءَاذَنَ لَكُمْ ۖ إِنَّهُۥ لَكَبِيرُكُمُ ٱلَّذِى عَلَّمَكُمُ ٱلسِّحْرَ ۖ فَلَأُقَطِّعَنَّ أَيْدِيَكُمْ وَأَرْجُلَكُم مِّنْ خِلَـٰفٍ وَلَأُصَلِّبَنَّكُمْ فِى جُذُوعِ ٱلنَّخْلِ وَلَتَعْلَمُنَّ أَيُّنَآ أَشَدُّ عَذَابًا وَأَبْقَىٰ",
+                        "translated_name": "Dijo [Faraón]: «¿Habéis creído en Él antes de que yo os diera permiso?» «Él es vuestro maestro y el que os ha enseñado a vosotros la magia. Os cortaré las manos y los pies opuestos y os crucificaré en el tronco de una palmera y sabréis quién de nosotros castiga de manera más dura y permanente.»"
+                    },
+                    {
+                        "id": 2420,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "72",
+                        "arabic_name": "قَالُوا۟ لَن نُّؤْثِرَكَ عَلَىٰ مَا جَآءَنَا مِنَ ٱلْبَيِّنَـٰتِ وَٱلَّذِى فَطَرَنَا ۖ فَٱقْضِ مَآ أَنتَ قَاضٍ ۖ إِنَّمَا تَقْضِى هَـٰذِهِ ٱلْحَيَوٰةَ ٱلدُّنْيَآ",
+                        "translated_name": "Ellos dijeron: «Nunca te preferiremos a ti por encima de las pruebas claras que nos han llegado y de Aquel que nos ha creado.» «Decidas lo que decidas, tú decides sobre la vida de este mundo»"
+                    },
+                    {
+                        "id": 2421,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "73",
+                        "arabic_name": "إِنَّآ ءَامَنَّا بِرَبِّنَا لِيَغْفِرَ لَنَا خَطَـٰيَـٰنَا وَمَآ أَكْرَهْتَنَا عَلَيْهِ مِنَ ٱلسِّحْرِ ۗ وَٱللَّهُ خَيْرٌ وَأَبْقَىٰٓ",
+                        "translated_name": "«En verdad, hemos creído en nuestro Señor para que nos perdone por nuestros errores y por la magia que nos has obligado a realizar. Dios es mejor y más duradero.»"
+                    },
+                    {
+                        "id": 2422,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "74",
+                        "arabic_name": "إِنَّهُۥ مَن يَأْتِ رَبَّهُۥ مُجْرِمًا فَإِنَّ لَهُۥ جَهَنَّمَ لَا يَمُوتُ فِيهَا وَلَا يَحْيَىٰ",
+                        "translated_name": "En verdad, quien venga a su Señor como un pecador obtendrá el Infierno, en el cual no morirá ni vivirá."
+                    },
+                    {
+                        "id": 2423,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "75",
+                        "arabic_name": "وَمَن يَأْتِهِۦ مُؤْمِنًا قَدْ عَمِلَ ٱلصَّـٰلِحَـٰتِ فَأُو۟لَـٰٓئِكَ لَهُمُ ٱلدَّرَجَـٰتُ ٱلْعُلَىٰ",
+                        "translated_name": "Y quienes vengan a Él como creyentes que han obrado rectamente obtendrán los grados más elevados."
+                    },
+                    {
+                        "id": 2424,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "76",
+                        "arabic_name": "جَنَّـٰتُ عَدْنٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَا ۚ وَذَٰلِكَ جَزَآءُ مَن تَزَكَّىٰ",
+                        "translated_name": "Los Jardines del Edén, de cuyas profundidades brotan los ríos y en los que estarán eternamente. Y esa será la recompensa de quien se haya purificado."
+                    }
+                ],
+                "page_arabic_ayah": "قَالُوا۟ يَـٰمُوسَىٰٓ إِمَّآ أَن تُلْقِىَ وَإِمَّآ أَن نَّكُونَ أَوَّلَ مَنْ أَلْقَىٰ (٦٥)  قَالَ بَلْ أَلْقُوا۟ ۖ فَإِذَا حِبَالُهُمْ وَعِصِيُّهُمْ يُخَيَّلُ إِلَيْهِ مِن سِحْرِهِمْ أَنَّهَا تَسْعَىٰ (٦٦)  فَأَوْجَسَ فِى نَفْسِهِۦ خِيفَةً مُّوسَىٰ (٦٧)  قُلْنَا لَا تَخَفْ إِنَّكَ أَنتَ ٱلْأَعْلَىٰ (٦٨)  وَأَلْقِ مَا فِى يَمِينِكَ تَلْقَفْ مَا صَنَعُوٓا۟ ۖ إِنَّمَا صَنَعُوا۟ كَيْدُ سَـٰحِرٍ ۖ وَلَا يُفْلِحُ ٱلسَّاحِرُ حَيْثُ أَتَىٰ (٦٩)  فَأُلْقِىَ ٱلسَّحَرَةُ سُجَّدًا قَالُوٓا۟ ءَامَنَّا بِرَبِّ هَـٰرُونَ وَمُوسَىٰ (٧٠)  قَالَ ءَامَنتُمْ لَهُۥ قَبْلَ أَنْ ءَاذَنَ لَكُمْ ۖ إِنَّهُۥ لَكَبِيرُكُمُ ٱلَّذِى عَلَّمَكُمُ ٱلسِّحْرَ ۖ فَلَأُقَطِّعَنَّ أَيْدِيَكُمْ وَأَرْجُلَكُم مِّنْ خِلَـٰفٍ وَلَأُصَلِّبَنَّكُمْ فِى جُذُوعِ ٱلنَّخْلِ وَلَتَعْلَمُنَّ أَيُّنَآ أَشَدُّ عَذَابًا وَأَبْقَىٰ (٧١)  قَالُوا۟ لَن نُّؤْثِرَكَ عَلَىٰ مَا جَآءَنَا مِنَ ٱلْبَيِّنَـٰتِ وَٱلَّذِى فَطَرَنَا ۖ فَٱقْضِ مَآ أَنتَ قَاضٍ ۖ إِنَّمَا تَقْضِى هَـٰذِهِ ٱلْحَيَوٰةَ ٱلدُّنْيَآ (٧٢)  إِنَّآ ءَامَنَّا بِرَبِّنَا لِيَغْفِرَ لَنَا خَطَـٰيَـٰنَا وَمَآ أَكْرَهْتَنَا عَلَيْهِ مِنَ ٱلسِّحْرِ ۗ وَٱللَّهُ خَيْرٌ وَأَبْقَىٰٓ (٧٣)  إِنَّهُۥ مَن يَأْتِ رَبَّهُۥ مُجْرِمًا فَإِنَّ لَهُۥ جَهَنَّمَ لَا يَمُوتُ فِيهَا وَلَا يَحْيَىٰ (٧٤)  وَمَن يَأْتِهِۦ مُؤْمِنًا قَدْ عَمِلَ ٱلصَّـٰلِحَـٰتِ فَأُو۟لَـٰٓئِكَ لَهُمُ ٱلدَّرَجَـٰتُ ٱلْعُلَىٰ (٧٥)  جَنَّـٰتُ عَدْنٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَا ۚ وَذَٰلِكَ جَزَآءُ مَن تَزَكَّىٰ (٧٦)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 317,
+                "page_number": "317",
+                "page_key": 5,
+                "page_verses": [
+                    {
+                        "id": 2425,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "77",
+                        "arabic_name": "وَلَقَدْ أَوْحَيْنَآ إِلَىٰ مُوسَىٰٓ أَنْ أَسْرِ بِعِبَادِى فَٱضْرِبْ لَهُمْ طَرِيقًا فِى ٱلْبَحْرِ يَبَسًا لَّا تَخَـٰفُ دَرَكًا وَلَا تَخْشَىٰ",
+                        "translated_name": "Y, ciertamente, revelamos a Moisés: «Saca a Mis siervos en el secreto de la noche y abre para ellos un camino seco en el mar. No temas que os persigan y no tengas miedo.»"
+                    },
+                    {
+                        "id": 2426,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "78",
+                        "arabic_name": "فَأَتْبَعَهُمْ فِرْعَوْنُ بِجُنُودِهِۦ فَغَشِيَهُم مِّنَ ٱلْيَمِّ مَا غَشِيَهُمْ",
+                        "translated_name": "Y les persiguió el Faraón con su ejército y el mar les cubrió totalmente con sus olas."
+                    },
+                    {
+                        "id": 2427,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "79",
+                        "arabic_name": "وَأَضَلَّ فِرْعَوْنُ قَوْمَهُۥ وَمَا هَدَىٰ",
+                        "translated_name": "El Faraón extravió a su pueblo y no le guió."
+                    },
+                    {
+                        "id": 2428,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "80",
+                        "arabic_name": "يَـٰبَنِىٓ إِسْرَٰٓءِيلَ قَدْ أَنجَيْنَـٰكُم مِّنْ عَدُوِّكُمْ وَوَٰعَدْنَـٰكُمْ جَانِبَ ٱلطُّورِ ٱلْأَيْمَنَ وَنَزَّلْنَا عَلَيْكُمُ ٱلْمَنَّ وَٱلسَّلْوَىٰ",
+                        "translated_name": "«¡Oh, Hijos de Israel! Os salvamos de vuestros enemigos y os citamos junto a la ladera derecha del monte e hicimos descender para vosotros el maná y las codornices."
+                    },
+                    {
+                        "id": 2429,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "81",
+                        "arabic_name": "كُلُوا۟ مِن طَيِّبَـٰتِ مَا رَزَقْنَـٰكُمْ وَلَا تَطْغَوْا۟ فِيهِ فَيَحِلَّ عَلَيْكُمْ غَضَبِى ۖ وَمَن يَحْلِلْ عَلَيْهِ غَضَبِى فَقَدْ هَوَىٰ",
+                        "translated_name": "Comed de lo bueno y puro que os hemos proporcionado y no os endioséis en ello, pues provocaríais Mi ira sobre vosotros y quien provoque Mi ira sobre él, ciertamente, se hundirá.»"
+                    },
+                    {
+                        "id": 2430,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "82",
+                        "arabic_name": "وَإِنِّى لَغَفَّارٌ لِّمَن تَابَ وَءَامَنَ وَعَمِلَ صَـٰلِحًا ثُمَّ ٱهْتَدَىٰ",
+                        "translated_name": "Y, en verdad, Yo soy muy perdonador con quien se arrepiente y tiene fe y actúa rectamente y, por tanto, sigue la buena guía."
+                    },
+                    {
+                        "id": 2431,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "83",
+                        "arabic_name": "۞ وَمَآ أَعْجَلَكَ عَن قَوْمِكَ يَـٰمُوسَىٰ",
+                        "translated_name": "«¡Oh, Moisés! ¿Por qué te has adelantado tan apresuradamente a tu pueblo?»"
+                    },
+                    {
+                        "id": 2432,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "84",
+                        "arabic_name": "قَالَ هُمْ أُو۟لَآءِ عَلَىٰٓ أَثَرِى وَعَجِلْتُ إِلَيْكَ رَبِّ لِتَرْضَىٰ",
+                        "translated_name": "Dijo: «Ellos vienen siguiendo mis pasos y yo me apresuré en venir a Ti, Señor mío, para complacerte.»"
+                    },
+                    {
+                        "id": 2433,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "85",
+                        "arabic_name": "قَالَ فَإِنَّا قَدْ فَتَنَّا قَوْمَكَ مِنۢ بَعْدِكَ وَأَضَلَّهُمُ ٱلسَّامِرِىُّ",
+                        "translated_name": "Dijo (Dios): «En verdad, pusimos a prueba a tu pueblo después de que tú les dejases y el samaritano les extravió.»"
+                    },
+                    {
+                        "id": 2434,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "86",
+                        "arabic_name": "فَرَجَعَ مُوسَىٰٓ إِلَىٰ قَوْمِهِۦ غَضْبَـٰنَ أَسِفًا ۚ قَالَ يَـٰقَوْمِ أَلَمْ يَعِدْكُمْ رَبُّكُمْ وَعْدًا حَسَنًا ۚ أَفَطَالَ عَلَيْكُمُ ٱلْعَهْدُ أَمْ أَرَدتُّمْ أَن يَحِلَّ عَلَيْكُمْ غَضَبٌ مِّن رَّبِّكُمْ فَأَخْلَفْتُم مَّوْعِدِى",
+                        "translated_name": "Moisés regresó a su pueblo enfadado y muy preocupado. Dijo: «¡Oh, pueblo mío! ¿Acaso vuestro Señor no os hizo una buena promesa? ¿Acaso os pareció demasiado larga la espera en mi ausencia o quisisteis provocar sobre vosotros la ira de vuestro Señor y por eso faltasteis a la promesa que me hicisteis?»"
+                    },
+                    {
+                        "id": 2435,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "87",
+                        "arabic_name": "قَالُوا۟ مَآ أَخْلَفْنَا مَوْعِدَكَ بِمَلْكِنَا وَلَـٰكِنَّا حُمِّلْنَآ أَوْزَارًا مِّن زِينَةِ ٱلْقَوْمِ فَقَذَفْنَـٰهَا فَكَذَٰلِكَ أَلْقَى ٱلسَّامِرِىُّ",
+                        "translated_name": "Dijeron: «No faltamos a la promesa que te hicimos por deseo propio, sino que cargábamos las joyas del pueblo y las arrojamos al fuego y el samaritano hizo esto con ellas.»"
+                    }
+                ],
+                "page_arabic_ayah": "وَلَقَدْ أَوْحَيْنَآ إِلَىٰ مُوسَىٰٓ أَنْ أَسْرِ بِعِبَادِى فَٱضْرِبْ لَهُمْ طَرِيقًا فِى ٱلْبَحْرِ يَبَسًا لَّا تَخَـٰفُ دَرَكًا وَلَا تَخْشَىٰ (٧٧)  فَأَتْبَعَهُمْ فِرْعَوْنُ بِجُنُودِهِۦ فَغَشِيَهُم مِّنَ ٱلْيَمِّ مَا غَشِيَهُمْ (٧٨)  وَأَضَلَّ فِرْعَوْنُ قَوْمَهُۥ وَمَا هَدَىٰ (٧٩)  يَـٰبَنِىٓ إِسْرَٰٓءِيلَ قَدْ أَنجَيْنَـٰكُم مِّنْ عَدُوِّكُمْ وَوَٰعَدْنَـٰكُمْ جَانِبَ ٱلطُّورِ ٱلْأَيْمَنَ وَنَزَّلْنَا عَلَيْكُمُ ٱلْمَنَّ وَٱلسَّلْوَىٰ (٨٠)  كُلُوا۟ مِن طَيِّبَـٰتِ مَا رَزَقْنَـٰكُمْ وَلَا تَطْغَوْا۟ فِيهِ فَيَحِلَّ عَلَيْكُمْ غَضَبِى ۖ وَمَن يَحْلِلْ عَلَيْهِ غَضَبِى فَقَدْ هَوَىٰ (٨١)  وَإِنِّى لَغَفَّارٌ لِّمَن تَابَ وَءَامَنَ وَعَمِلَ صَـٰلِحًا ثُمَّ ٱهْتَدَىٰ (٨٢)  ۞ وَمَآ أَعْجَلَكَ عَن قَوْمِكَ يَـٰمُوسَىٰ (٨٣)  قَالَ هُمْ أُو۟لَآءِ عَلَىٰٓ أَثَرِى وَعَجِلْتُ إِلَيْكَ رَبِّ لِتَرْضَىٰ (٨٤)  قَالَ فَإِنَّا قَدْ فَتَنَّا قَوْمَكَ مِنۢ بَعْدِكَ وَأَضَلَّهُمُ ٱلسَّامِرِىُّ (٨٥)  فَرَجَعَ مُوسَىٰٓ إِلَىٰ قَوْمِهِۦ غَضْبَـٰنَ أَسِفًا ۚ قَالَ يَـٰقَوْمِ أَلَمْ يَعِدْكُمْ رَبُّكُمْ وَعْدًا حَسَنًا ۚ أَفَطَالَ عَلَيْكُمُ ٱلْعَهْدُ أَمْ أَرَدتُّمْ أَن يَحِلَّ عَلَيْكُمْ غَضَبٌ مِّن رَّبِّكُمْ فَأَخْلَفْتُم مَّوْعِدِى (٨٦)  قَالُوا۟ مَآ أَخْلَفْنَا مَوْعِدَكَ بِمَلْكِنَا وَلَـٰكِنَّا حُمِّلْنَآ أَوْزَارًا مِّن زِينَةِ ٱلْقَوْمِ فَقَذَفْنَـٰهَا فَكَذَٰلِكَ أَلْقَى ٱلسَّامِرِىُّ (٨٧)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 318,
+                "page_number": "318",
+                "page_key": 6,
+                "page_verses": [
+                    {
+                        "id": 2436,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "88",
+                        "arabic_name": "فَأَخْرَجَ لَهُمْ عِجْلًا جَسَدًا لَّهُۥ خُوَارٌ فَقَالُوا۟ هَـٰذَآ إِلَـٰهُكُمْ وَإِلَـٰهُ مُوسَىٰ فَنَسِىَ",
+                        "translated_name": "Y fabricó para ellos la estatua de un ternero que mugía. Y dijeron: «Éste es vuestro dios y el dios de Moisés, y se olvidó.»"
+                    },
+                    {
+                        "id": 2437,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "89",
+                        "arabic_name": "أَفَلَا يَرَوْنَ أَلَّا يَرْجِعُ إِلَيْهِمْ قَوْلًا وَلَا يَمْلِكُ لَهُمْ ضَرًّا وَلَا نَفْعًا",
+                        "translated_name": "¿Acaso no vieron que no les respondía y que no tenía poder para perjudicarles ni beneficiarles?"
+                    },
+                    {
+                        "id": 2438,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "90",
+                        "arabic_name": "وَلَقَدْ قَالَ لَهُمْ هَـٰرُونُ مِن قَبْلُ يَـٰقَوْمِ إِنَّمَا فُتِنتُم بِهِۦ ۖ وَإِنَّ رَبَّكُمُ ٱلرَّحْمَـٰنُ فَٱتَّبِعُونِى وَأَطِيعُوٓا۟ أَمْرِى",
+                        "translated_name": "Ciertamente, Aarón les había dicho anteriormente: «¡Oh, pueblo mío! ¡En verdad, se os está poniendo a prueba con ello y, en verdad, vuestro Señor es el Clementísimo! ¡Seguidme pues y obedeced mis órdenes!»"
+                    },
+                    {
+                        "id": 2439,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "91",
+                        "arabic_name": "قَالُوا۟ لَن نَّبْرَحَ عَلَيْهِ عَـٰكِفِينَ حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ",
+                        "translated_name": "Ellos dijeron: «¡No dejaremos de adorarle hasta que Moisés regrese a nosotros!»"
+                    },
+                    {
+                        "id": 2440,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "92",
+                        "arabic_name": "قَالَ يَـٰهَـٰرُونُ مَا مَنَعَكَ إِذْ رَأَيْتَهُمْ ضَلُّوٓا۟",
+                        "translated_name": "(Moisés) dijo: «¡Oh, Aarón! ¿Qué te impidió, cuando les vistes que se extraviaban,"
+                    },
+                    {
+                        "id": 2441,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "93",
+                        "arabic_name": "أَلَّا تَتَّبِعَنِ ۖ أَفَعَصَيْتَ أَمْرِى",
+                        "translated_name": "seguirme? ¿Acaso desobedeciste mis órdenes?»"
+                    },
+                    {
+                        "id": 2442,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "94",
+                        "arabic_name": "قَالَ يَبْنَؤُمَّ لَا تَأْخُذْ بِلِحْيَتِى وَلَا بِرَأْسِىٓ ۖ إِنِّى خَشِيتُ أَن تَقُولَ فَرَّقْتَ بَيْنَ بَنِىٓ إِسْرَٰٓءِيلَ وَلَمْ تَرْقُبْ قَوْلِى",
+                        "translated_name": "Él dijo: «¡Oh, hijo de mi madre! ¡No me tires de la barba ni me tomes de la cabeza! En verdad, temí que me dijeras: ‘Has dividido a los Hijos de Israel y no tuviste en cuenta mis palabras.’»"
+                    },
+                    {
+                        "id": 2443,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "95",
+                        "arabic_name": "قَالَ فَمَا خَطْبُكَ يَـٰسَـٰمِرِىُّ",
+                        "translated_name": "(Moisés) dijo: «Y tú, Samaritano ¿Qué tienes que decir?»"
+                    },
+                    {
+                        "id": 2444,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "96",
+                        "arabic_name": "قَالَ بَصُرْتُ بِمَا لَمْ يَبْصُرُوا۟ بِهِۦ فَقَبَضْتُ قَبْضَةً مِّنْ أَثَرِ ٱلرَّسُولِ فَنَبَذْتُهَا وَكَذَٰلِكَ سَوَّلَتْ لِى نَفْسِى",
+                        "translated_name": "Él dijo: «Yo observé lo que ellos no observaron y tomé un puñado de la huella del Mensajero y lo arrojé. Eso fue lo que mi ego me sugirió.»"
+                    },
+                    {
+                        "id": 2445,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "97",
+                        "arabic_name": "قَالَ فَٱذْهَبْ فَإِنَّ لَكَ فِى ٱلْحَيَوٰةِ أَن تَقُولَ لَا مِسَاسَ ۖ وَإِنَّ لَكَ مَوْعِدًا لَّن تُخْلَفَهُۥ ۖ وَٱنظُرْ إِلَىٰٓ إِلَـٰهِكَ ٱلَّذِى ظَلْتَ عَلَيْهِ عَاكِفًا ۖ لَّنُحَرِّقَنَّهُۥ ثُمَّ لَنَنسِفَنَّهُۥ فِى ٱلْيَمِّ نَسْفًا",
+                        "translated_name": "(Moisés) dijo: «¡Vete! En verdad, durante toda tu vida tendrás que decir: ‘¡No me toques!’ Y, en verdad, tienes una cita a la que no podrás faltar. Y mira a tu dios, al cual seguiste con devoción. Lo quemaremos y dispersaremos totalmente sus restos en el mar.»"
+                    },
+                    {
+                        "id": 2446,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "98",
+                        "arabic_name": "إِنَّمَآ إِلَـٰهُكُمُ ٱللَّهُ ٱلَّذِى لَآ إِلَـٰهَ إِلَّا هُوَ ۚ وَسِعَ كُلَّ شَىْءٍ عِلْمًا",
+                        "translated_name": "En verdad, tu dios es Dios. No hay otro dios más que Él. Su conocimiento abarca todas las cosas."
+                    }
+                ],
+                "page_arabic_ayah": "فَأَخْرَجَ لَهُمْ عِجْلًا جَسَدًا لَّهُۥ خُوَارٌ فَقَالُوا۟ هَـٰذَآ إِلَـٰهُكُمْ وَإِلَـٰهُ مُوسَىٰ فَنَسِىَ (٨٨)  أَفَلَا يَرَوْنَ أَلَّا يَرْجِعُ إِلَيْهِمْ قَوْلًا وَلَا يَمْلِكُ لَهُمْ ضَرًّا وَلَا نَفْعًا (٨٩)  وَلَقَدْ قَالَ لَهُمْ هَـٰرُونُ مِن قَبْلُ يَـٰقَوْمِ إِنَّمَا فُتِنتُم بِهِۦ ۖ وَإِنَّ رَبَّكُمُ ٱلرَّحْمَـٰنُ فَٱتَّبِعُونِى وَأَطِيعُوٓا۟ أَمْرِى (٩٠)  قَالُوا۟ لَن نَّبْرَحَ عَلَيْهِ عَـٰكِفِينَ حَتَّىٰ يَرْجِعَ إِلَيْنَا مُوسَىٰ (٩١)  قَالَ يَـٰهَـٰرُونُ مَا مَنَعَكَ إِذْ رَأَيْتَهُمْ ضَلُّوٓا۟ (٩٢)  أَلَّا تَتَّبِعَنِ ۖ أَفَعَصَيْتَ أَمْرِى (٩٣)  قَالَ يَبْنَؤُمَّ لَا تَأْخُذْ بِلِحْيَتِى وَلَا بِرَأْسِىٓ ۖ إِنِّى خَشِيتُ أَن تَقُولَ فَرَّقْتَ بَيْنَ بَنِىٓ إِسْرَٰٓءِيلَ وَلَمْ تَرْقُبْ قَوْلِى (٩٤)  قَالَ فَمَا خَطْبُكَ يَـٰسَـٰمِرِىُّ (٩٥)  قَالَ بَصُرْتُ بِمَا لَمْ يَبْصُرُوا۟ بِهِۦ فَقَبَضْتُ قَبْضَةً مِّنْ أَثَرِ ٱلرَّسُولِ فَنَبَذْتُهَا وَكَذَٰلِكَ سَوَّلَتْ لِى نَفْسِى (٩٦)  قَالَ فَٱذْهَبْ فَإِنَّ لَكَ فِى ٱلْحَيَوٰةِ أَن تَقُولَ لَا مِسَاسَ ۖ وَإِنَّ لَكَ مَوْعِدًا لَّن تُخْلَفَهُۥ ۖ وَٱنظُرْ إِلَىٰٓ إِلَـٰهِكَ ٱلَّذِى ظَلْتَ عَلَيْهِ عَاكِفًا ۖ لَّنُحَرِّقَنَّهُۥ ثُمَّ لَنَنسِفَنَّهُۥ فِى ٱلْيَمِّ نَسْفًا (٩٧)  إِنَّمَآ إِلَـٰهُكُمُ ٱللَّهُ ٱلَّذِى لَآ إِلَـٰهَ إِلَّا هُوَ ۚ وَسِعَ كُلَّ شَىْءٍ عِلْمًا (٩٨)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 319,
+                "page_number": "319",
+                "page_key": 7,
+                "page_verses": [
+                    {
+                        "id": 2447,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "99",
+                        "arabic_name": "كَذَٰلِكَ نَقُصُّ عَلَيْكَ مِنْ أَنۢبَآءِ مَا قَدْ سَبَقَ ۚ وَقَدْ ءَاتَيْنَـٰكَ مِن لَّدُنَّا ذِكْرًا",
+                        "translated_name": "Así es como te hemos relatado algunas noticias de lo que sucedió en el pasado. Ciertamente, te hemos dado un Recuerdo procedente de Nosotros."
+                    },
+                    {
+                        "id": 2448,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "100",
+                        "arabic_name": "مَّنْ أَعْرَضَ عَنْهُ فَإِنَّهُۥ يَحْمِلُ يَوْمَ ٱلْقِيَـٰمَةِ وِزْرًا",
+                        "translated_name": "Quien se aparte de él cargará el Día del Levantamiento con un pesado fardo"
+                    },
+                    {
+                        "id": 2449,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "101",
+                        "arabic_name": "خَـٰلِدِينَ فِيهِ ۖ وَسَآءَ لَهُمْ يَوْمَ ٱلْقِيَـٰمَةِ حِمْلًا",
+                        "translated_name": "que portará eternamente. ¡Qué mala carga para ellos el Día del Levantamiento!"
+                    },
+                    {
+                        "id": 2450,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "102",
+                        "arabic_name": "يَوْمَ يُنفَخُ فِى ٱلصُّورِ ۚ وَنَحْشُرُ ٱلْمُجْرِمِينَ يَوْمَئِذٍ زُرْقًا",
+                        "translated_name": "El día en que sea tocada la trompeta. Y juntaremos ese día a los pecadores con los ojos morados,"
+                    },
+                    {
+                        "id": 2451,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "103",
+                        "arabic_name": "يَتَخَـٰفَتُونَ بَيْنَهُمْ إِن لَّبِثْتُمْ إِلَّا عَشْرًا",
+                        "translated_name": "que susurrarán entre ellos: “Sólo hemos permanecido diez días [muertos].»"
+                    },
+                    {
+                        "id": 2452,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "104",
+                        "arabic_name": "نَّحْنُ أَعْلَمُ بِمَا يَقُولُونَ إِذْ يَقُولُ أَمْثَلُهُمْ طَرِيقَةً إِن لَّبِثْتُمْ إِلَّا يَوْمًا",
+                        "translated_name": "Nosotros somos quienes mejor sabemos de lo que hablan cuando el mejor de ellos dice: «Sólo permanecisteis un día.»"
+                    },
+                    {
+                        "id": 2453,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "105",
+                        "arabic_name": "وَيَسْـَٔلُونَكَ عَنِ ٱلْجِبَالِ فَقُلْ يَنسِفُهَا رَبِّى نَسْفًا",
+                        "translated_name": "Y te preguntan sobre las montañas. Di: «Mi Señor las pulverizará y aventará"
+                    },
+                    {
+                        "id": 2454,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "106",
+                        "arabic_name": "فَيَذَرُهَا قَاعًا صَفْصَفًا",
+                        "translated_name": "y las dejará como una llanura desértica."
+                    },
+                    {
+                        "id": 2455,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "107",
+                        "arabic_name": "لَّا تَرَىٰ فِيهَا عِوَجًا وَلَآ أَمْتًا",
+                        "translated_name": "No verás en ella valles ni colinas.»"
+                    },
+                    {
+                        "id": 2456,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "108",
+                        "arabic_name": "يَوْمَئِذٍ يَتَّبِعُونَ ٱلدَّاعِىَ لَا عِوَجَ لَهُۥ ۖ وَخَشَعَتِ ٱلْأَصْوَاتُ لِلرَّحْمَـٰنِ فَلَا تَسْمَعُ إِلَّا هَمْسًا",
+                        "translated_name": "Ese día seguirán a quien les convocará sin cometer un solo error y se apagarán las voces ante el Clementísimo y no escucharás más que un susurro."
+                    },
+                    {
+                        "id": 2457,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "109",
+                        "arabic_name": "يَوْمَئِذٍ لَّا تَنفَعُ ٱلشَّفَـٰعَةُ إِلَّا مَنْ أَذِنَ لَهُ ٱلرَّحْمَـٰنُ وَرَضِىَ لَهُۥ قَوْلًا",
+                        "translated_name": "Ese día no servirá la intercesión excepto de aquel a quien el Clementísimo de permiso y de cuya palabra Él esté satisfecho."
+                    },
+                    {
+                        "id": 2458,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "110",
+                        "arabic_name": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِهِۦ عِلْمًا",
+                        "translated_name": "Él conoce lo que ellos tienen entre sus manos y lo que hay a sus espaldas, pero ellos no abarcan el conocimiento que Él posee."
+                    },
+                    {
+                        "id": 2459,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "111",
+                        "arabic_name": "۞ وَعَنَتِ ٱلْوُجُوهُ لِلْحَىِّ ٱلْقَيُّومِ ۖ وَقَدْ خَابَ مَنْ حَمَلَ ظُلْمًا",
+                        "translated_name": "Sus rostros se humillarán ante Quien es la Vida y el Sustentador de la vida y, ciertamente, habrá fallado quien cargue con injusticias."
+                    },
+                    {
+                        "id": 2460,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "112",
+                        "arabic_name": "وَمَن يَعْمَلْ مِنَ ٱلصَّـٰلِحَـٰتِ وَهُوَ مُؤْمِنٌ فَلَا يَخَافُ ظُلْمًا وَلَا هَضْمًا",
+                        "translated_name": "Y quien haya realizado buenas obras y sea creyente no temerá ser oprimido ni ser tratado injustamente."
+                    },
+                    {
+                        "id": 2461,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "113",
+                        "arabic_name": "وَكَذَٰلِكَ أَنزَلْنَـٰهُ قُرْءَانًا عَرَبِيًّا وَصَرَّفْنَا فِيهِ مِنَ ٱلْوَعِيدِ لَعَلَّهُمْ يَتَّقُونَ أَوْ يُحْدِثُ لَهُمْ ذِكْرًا",
+                        "translated_name": "Así es como lo hemos hecho descender, como un Corán árabe, y hemos expuesto en él amonestaciones de distintas maneras para que, quizás así, sean temerosos o les sirva de recuerdo."
+                    }
+                ],
+                "page_arabic_ayah": "كَذَٰلِكَ نَقُصُّ عَلَيْكَ مِنْ أَنۢبَآءِ مَا قَدْ سَبَقَ ۚ وَقَدْ ءَاتَيْنَـٰكَ مِن لَّدُنَّا ذِكْرًا (٩٩)  مَّنْ أَعْرَضَ عَنْهُ فَإِنَّهُۥ يَحْمِلُ يَوْمَ ٱلْقِيَـٰمَةِ وِزْرًا (١٠٠)  خَـٰلِدِينَ فِيهِ ۖ وَسَآءَ لَهُمْ يَوْمَ ٱلْقِيَـٰمَةِ حِمْلًا (١٠١)  يَوْمَ يُنفَخُ فِى ٱلصُّورِ ۚ وَنَحْشُرُ ٱلْمُجْرِمِينَ يَوْمَئِذٍ زُرْقًا (١٠٢)  يَتَخَـٰفَتُونَ بَيْنَهُمْ إِن لَّبِثْتُمْ إِلَّا عَشْرًا (١٠٣)  نَّحْنُ أَعْلَمُ بِمَا يَقُولُونَ إِذْ يَقُولُ أَمْثَلُهُمْ طَرِيقَةً إِن لَّبِثْتُمْ إِلَّا يَوْمًا (١٠٤)  وَيَسْـَٔلُونَكَ عَنِ ٱلْجِبَالِ فَقُلْ يَنسِفُهَا رَبِّى نَسْفًا (١٠٥)  فَيَذَرُهَا قَاعًا صَفْصَفًا (١٠٦)  لَّا تَرَىٰ فِيهَا عِوَجًا وَلَآ أَمْتًا (١٠٧)  يَوْمَئِذٍ يَتَّبِعُونَ ٱلدَّاعِىَ لَا عِوَجَ لَهُۥ ۖ وَخَشَعَتِ ٱلْأَصْوَاتُ لِلرَّحْمَـٰنِ فَلَا تَسْمَعُ إِلَّا هَمْسًا (١٠٨)  يَوْمَئِذٍ لَّا تَنفَعُ ٱلشَّفَـٰعَةُ إِلَّا مَنْ أَذِنَ لَهُ ٱلرَّحْمَـٰنُ وَرَضِىَ لَهُۥ قَوْلًا (١٠٩)  يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِهِۦ عِلْمًا (١١٠)  ۞ وَعَنَتِ ٱلْوُجُوهُ لِلْحَىِّ ٱلْقَيُّومِ ۖ وَقَدْ خَابَ مَنْ حَمَلَ ظُلْمًا (١١١)  وَمَن يَعْمَلْ مِنَ ٱلصَّـٰلِحَـٰتِ وَهُوَ مُؤْمِنٌ فَلَا يَخَافُ ظُلْمًا وَلَا هَضْمًا (١١٢)  وَكَذَٰلِكَ أَنزَلْنَـٰهُ قُرْءَانًا عَرَبِيًّا وَصَرَّفْنَا فِيهِ مِنَ ٱلْوَعِيدِ لَعَلَّهُمْ يَتَّقُونَ أَوْ يُحْدِثُ لَهُمْ ذِكْرًا (١١٣)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 320,
+                "page_number": "320",
+                "page_key": 8,
+                "page_verses": [
+                    {
+                        "id": 2462,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "114",
+                        "arabic_name": "فَتَعَـٰلَى ٱللَّهُ ٱلْمَلِكُ ٱلْحَقُّ ۗ وَلَا تَعْجَلْ بِٱلْقُرْءَانِ مِن قَبْلِ أَن يُقْضَىٰٓ إِلَيْكَ وَحْيُهُۥ ۖ وَقُل رَّبِّ زِدْنِى عِلْمًا",
+                        "translated_name": "Ensalzado sea Dios, el Soberano verdadero. Y no te apresures con la recitación del Corán antes de que se complete su revelación y di: “¡Señor mío! ¡Incrementa mi conocimiento!"
+                    },
+                    {
+                        "id": 2463,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "115",
+                        "arabic_name": "وَلَقَدْ عَهِدْنَآ إِلَىٰٓ ءَادَمَ مِن قَبْلُ فَنَسِىَ وَلَمْ نَجِدْ لَهُۥ عَزْمًا",
+                        "translated_name": "Anteriormente, habíamos aceptado una promesa de Adán pero él la olvidó y no encontramos en él firmeza."
+                    },
+                    {
+                        "id": 2464,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "116",
+                        "arabic_name": "وَإِذْ قُلْنَا لِلْمَلَـٰٓئِكَةِ ٱسْجُدُوا۟ لِـَٔادَمَ فَسَجَدُوٓا۟ إِلَّآ إِبْلِيسَ أَبَىٰ",
+                        "translated_name": "Cuando dijimos a los ángeles: «Prosternaos ante Adán.» y se prosternaron todos menos Iblís que se negó."
+                    },
+                    {
+                        "id": 2465,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "117",
+                        "arabic_name": "فَقُلْنَا يَـٰٓـَٔادَمُ إِنَّ هَـٰذَا عَدُوٌّ لَّكَ وَلِزَوْجِكَ فَلَا يُخْرِجَنَّكُمَا مِنَ ٱلْجَنَّةِ فَتَشْقَىٰٓ",
+                        "translated_name": "Dijimos: «¡Oh, Adán! En verdad, éste es un enemigo para ti y para tu pareja, así que no le permitáis que os saque del Jardín pues sufriríais."
+                    },
+                    {
+                        "id": 2466,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "118",
+                        "arabic_name": "إِنَّ لَكَ أَلَّا تَجُوعَ فِيهَا وَلَا تَعْرَىٰ",
+                        "translated_name": "En verdad, en él no sufrirás hambre ni desnudez"
+                    },
+                    {
+                        "id": 2467,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "119",
+                        "arabic_name": "وَأَنَّكَ لَا تَظْمَؤُا۟ فِيهَا وَلَا تَضْحَىٰ",
+                        "translated_name": "y en él no pasarás sed ni calor.»"
+                    },
+                    {
+                        "id": 2468,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "120",
+                        "arabic_name": "فَوَسْوَسَ إِلَيْهِ ٱلشَّيْطَـٰنُ قَالَ يَـٰٓـَٔادَمُ هَلْ أَدُلُّكَ عَلَىٰ شَجَرَةِ ٱلْخُلْدِ وَمُلْكٍ لَّا يَبْلَىٰ",
+                        "translated_name": "Pero le tentó Satanás. Dijo: «¡Oh, Adán! ¿Puedo mostrarte el árbol de la inmortalidad y del gobierno imperecedero?»"
+                    },
+                    {
+                        "id": 2469,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "121",
+                        "arabic_name": "فَأَكَلَا مِنْهَا فَبَدَتْ لَهُمَا سَوْءَٰتُهُمَا وَطَفِقَا يَخْصِفَانِ عَلَيْهِمَا مِن وَرَقِ ٱلْجَنَّةِ ۚ وَعَصَىٰٓ ءَادَمُ رَبَّهُۥ فَغَوَىٰ",
+                        "translated_name": "Entonces, ambos comieron de él y se les hizo evidente su desnudez y comenzaron a cubrirse mutuamente con hojas del Jardín. Adán desobedeció a su Señor y se extravió."
+                    },
+                    {
+                        "id": 2470,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "122",
+                        "arabic_name": "ثُمَّ ٱجْتَبَـٰهُ رَبُّهُۥ فَتَابَ عَلَيْهِ وَهَدَىٰ",
+                        "translated_name": "Luego, su Señor le escogió, aceptó su arrepentimiento y le guió."
+                    },
+                    {
+                        "id": 2471,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "123",
+                        "arabic_name": "قَالَ ٱهْبِطَا مِنْهَا جَمِيعًۢا ۖ بَعْضُكُمْ لِبَعْضٍ عَدُوٌّ ۖ فَإِمَّا يَأْتِيَنَّكُم مِّنِّى هُدًى فَمَنِ ٱتَّبَعَ هُدَاىَ فَلَا يَضِلُّ وَلَا يَشْقَىٰ",
+                        "translated_name": "Dijo: «Descended ambos de él, todos juntos. Seréis enemigos unos de otros.» Y si viene a vosotros una guía procedente de Mí, quien siga Mi guía no se extraviará ni se sentirá desgraciado."
+                    },
+                    {
+                        "id": 2472,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "124",
+                        "arabic_name": "وَمَنْ أَعْرَضَ عَن ذِكْرِى فَإِنَّ لَهُۥ مَعِيشَةً ضَنكًا وَنَحْشُرُهُۥ يَوْمَ ٱلْقِيَـٰمَةِ أَعْمَىٰ",
+                        "translated_name": "Pero quien se aparte de Mi recuerdo tendrá una vida difícil y el Día del Levantamiento le resucitaremos ciego."
+                    },
+                    {
+                        "id": 2473,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "125",
+                        "arabic_name": "قَالَ رَبِّ لِمَ حَشَرْتَنِىٓ أَعْمَىٰ وَقَدْ كُنتُ بَصِيرًا",
+                        "translated_name": "Dirá: «¡Dios mío! ¿Por qué me resucitas ciego, si yo veía?»"
+                    }
+                ],
+                "page_arabic_ayah": "فَتَعَـٰلَى ٱللَّهُ ٱلْمَلِكُ ٱلْحَقُّ ۗ وَلَا تَعْجَلْ بِٱلْقُرْءَانِ مِن قَبْلِ أَن يُقْضَىٰٓ إِلَيْكَ وَحْيُهُۥ ۖ وَقُل رَّبِّ زِدْنِى عِلْمًا (١١٤)  وَلَقَدْ عَهِدْنَآ إِلَىٰٓ ءَادَمَ مِن قَبْلُ فَنَسِىَ وَلَمْ نَجِدْ لَهُۥ عَزْمًا (١١٥)  وَإِذْ قُلْنَا لِلْمَلَـٰٓئِكَةِ ٱسْجُدُوا۟ لِـَٔادَمَ فَسَجَدُوٓا۟ إِلَّآ إِبْلِيسَ أَبَىٰ (١١٦)  فَقُلْنَا يَـٰٓـَٔادَمُ إِنَّ هَـٰذَا عَدُوٌّ لَّكَ وَلِزَوْجِكَ فَلَا يُخْرِجَنَّكُمَا مِنَ ٱلْجَنَّةِ فَتَشْقَىٰٓ (١١٧)  إِنَّ لَكَ أَلَّا تَجُوعَ فِيهَا وَلَا تَعْرَىٰ (١١٨)  وَأَنَّكَ لَا تَظْمَؤُا۟ فِيهَا وَلَا تَضْحَىٰ (١١٩)  فَوَسْوَسَ إِلَيْهِ ٱلشَّيْطَـٰنُ قَالَ يَـٰٓـَٔادَمُ هَلْ أَدُلُّكَ عَلَىٰ شَجَرَةِ ٱلْخُلْدِ وَمُلْكٍ لَّا يَبْلَىٰ (١٢٠)  فَأَكَلَا مِنْهَا فَبَدَتْ لَهُمَا سَوْءَٰتُهُمَا وَطَفِقَا يَخْصِفَانِ عَلَيْهِمَا مِن وَرَقِ ٱلْجَنَّةِ ۚ وَعَصَىٰٓ ءَادَمُ رَبَّهُۥ فَغَوَىٰ (١٢١)  ثُمَّ ٱجْتَبَـٰهُ رَبُّهُۥ فَتَابَ عَلَيْهِ وَهَدَىٰ (١٢٢)  قَالَ ٱهْبِطَا مِنْهَا جَمِيعًۢا ۖ بَعْضُكُمْ لِبَعْضٍ عَدُوٌّ ۖ فَإِمَّا يَأْتِيَنَّكُم مِّنِّى هُدًى فَمَنِ ٱتَّبَعَ هُدَاىَ فَلَا يَضِلُّ وَلَا يَشْقَىٰ (١٢٣)  وَمَنْ أَعْرَضَ عَن ذِكْرِى فَإِنَّ لَهُۥ مَعِيشَةً ضَنكًا وَنَحْشُرُهُۥ يَوْمَ ٱلْقِيَـٰمَةِ أَعْمَىٰ (١٢٤)  قَالَ رَبِّ لِمَ حَشَرْتَنِىٓ أَعْمَىٰ وَقَدْ كُنتُ بَصِيرًا (١٢٥)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 321,
+                "page_number": "321",
+                "page_key": 9,
+                "page_verses": [
+                    {
+                        "id": 2474,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "126",
+                        "arabic_name": "قَالَ كَذَٰلِكَ أَتَتْكَ ءَايَـٰتُنَا فَنَسِيتَهَا ۖ وَكَذَٰلِكَ ٱلْيَوْمَ تُنسَىٰ",
+                        "translated_name": "Dirá: «Así como te di Nuestras señales y tú las olvidaste, de la misma manera hoy tú eres olvidado.»"
+                    },
+                    {
+                        "id": 2475,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "127",
+                        "arabic_name": "وَكَذَٰلِكَ نَجْزِى مَنْ أَسْرَفَ وَلَمْ يُؤْمِنۢ بِـَٔايَـٰتِ رَبِّهِۦ ۚ وَلَعَذَابُ ٱلْـَٔاخِرَةِ أَشَدُّ وَأَبْقَىٰٓ",
+                        "translated_name": "Y a quien se propase y no crea en las señales de su Señor Nosotros le recompensaremos de la misma manera. Y el castigo de la otra vida es peor y más duradero."
+                    },
+                    {
+                        "id": 2476,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "128",
+                        "arabic_name": "أَفَلَمْ يَهْدِ لَهُمْ كَمْ أَهْلَكْنَا قَبْلَهُم مِّنَ ٱلْقُرُونِ يَمْشُونَ فِى مَسَـٰكِنِهِمْ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّأُو۟لِى ٱلنُّهَىٰ",
+                        "translated_name": "¿Es que no les sirve de guía ver cuántas generaciones, por cuyas moradas caminan, hemos destruido antes de ellos? En verdad, en ello hay señales para quienes poseen inteligencia."
+                    },
+                    {
+                        "id": 2477,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "129",
+                        "arabic_name": "وَلَوْلَا كَلِمَةٌ سَبَقَتْ مِن رَّبِّكَ لَكَانَ لِزَامًا وَأَجَلٌ مُّسَمًّى",
+                        "translated_name": "Y si no hubiese sido por una palabra previa de tu Señor y por un plazo determinado previamente ellos también lo habrían sido."
+                    },
+                    {
+                        "id": 2478,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "130",
+                        "arabic_name": "فَٱصْبِرْ عَلَىٰ مَا يَقُولُونَ وَسَبِّحْ بِحَمْدِ رَبِّكَ قَبْلَ طُلُوعِ ٱلشَّمْسِ وَقَبْلَ غُرُوبِهَا ۖ وَمِنْ ءَانَآئِ ٱلَّيْلِ فَسَبِّحْ وَأَطْرَافَ ٱلنَّهَارِ لَعَلَّكَ تَرْضَىٰ",
+                        "translated_name": "Por tanto, se paciente con lo que dicen y glorifica con alabanzas a tu Señor antes de la salida del Sol y antes de que se oculte. Y glorifícale parte de la noche y en los extremos del día. Quizás así estés satisfecho y feliz."
+                    },
+                    {
+                        "id": 2479,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "131",
+                        "arabic_name": "وَلَا تَمُدَّنَّ عَيْنَيْكَ إِلَىٰ مَا مَتَّعْنَا بِهِۦٓ أَزْوَٰجًا مِّنْهُمْ زَهْرَةَ ٱلْحَيَوٰةِ ٱلدُّنْيَا لِنَفْتِنَهُمْ فِيهِ ۚ وَرِزْقُ رَبِّكَ خَيْرٌ وَأَبْقَىٰ",
+                        "translated_name": "Y no alargues tus ojos hacia lo que Nosotros hemos proporcionado a algunos de ellos, flor de esta vida mundanal, para ponerles a prueba con ello, pues la provisión de tu Señor es mejor y más duradera."
+                    },
+                    {
+                        "id": 2480,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "132",
+                        "arabic_name": "وَأْمُرْ أَهْلَكَ بِٱلصَّلَوٰةِ وَٱصْطَبِرْ عَلَيْهَا ۖ لَا نَسْـَٔلُكَ رِزْقًا ۖ نَّحْنُ نَرْزُقُكَ ۗ وَٱلْعَـٰقِبَةُ لِلتَّقْوَىٰ",
+                        "translated_name": "Y ordena a tu gente la oración y persevera en ella. No te pedimos que nos proveas. Nosotros te proveemos a ti. Y el buen final es para el temor de Dios."
+                    },
+                    {
+                        "id": 2481,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "133",
+                        "arabic_name": "وَقَالُوا۟ لَوْلَا يَأْتِينَا بِـَٔايَةٍ مِّن رَّبِّهِۦٓ ۚ أَوَلَمْ تَأْتِهِم بَيِّنَةُ مَا فِى ٱلصُّحُفِ ٱلْأُولَىٰ",
+                        "translated_name": "Y dicen: “¿Por qué no nos trae una señal procedente de su Señor?” ¿Acaso no ha venido a ellos la prueba clara de lo que contenían las Escrituras primeras?"
+                    },
+                    {
+                        "id": 2482,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "134",
+                        "arabic_name": "وَلَوْ أَنَّآ أَهْلَكْنَـٰهُم بِعَذَابٍ مِّن قَبْلِهِۦ لَقَالُوا۟ رَبَّنَا لَوْلَآ أَرْسَلْتَ إِلَيْنَا رَسُولًا فَنَتَّبِعَ ءَايَـٰتِكَ مِن قَبْلِ أَن نَّذِلَّ وَنَخْزَىٰ",
+                        "translated_name": "Si Yo les hubiera destruido con un castigo antes de ello, habrían dicho: «¡Señor nuestro! ¿Por qué no nos envías un Mensajero para que sigamos Tus señales antes de que nos alcance la humillación y la desgracia?»"
+                    },
+                    {
+                        "id": 2483,
+                        "chapter_id": 20,
+                        "verses_translate_name": "versos",
+                        "verses_number": "135",
+                        "arabic_name": "قُلْ كُلٌّ مُّتَرَبِّصٌ فَتَرَبَّصُوا۟ ۖ فَسَتَعْلَمُونَ مَنْ أَصْحَـٰبُ ٱلصِّرَٰطِ ٱلسَّوِىِّ وَمَنِ ٱهْتَدَىٰ",
+                        "translated_name": "Di: «Todos estamos a la espera. Así pues, esperad y pronto sabréis quiénes son la gente del camino llano y quiénes son los guiados.»"
+                    }
+                ],
+                "page_arabic_ayah": "قَالَ كَذَٰلِكَ أَتَتْكَ ءَايَـٰتُنَا فَنَسِيتَهَا ۖ وَكَذَٰلِكَ ٱلْيَوْمَ تُنسَىٰ (١٢٦)  وَكَذَٰلِكَ نَجْزِى مَنْ أَسْرَفَ وَلَمْ يُؤْمِنۢ بِـَٔايَـٰتِ رَبِّهِۦ ۚ وَلَعَذَابُ ٱلْـَٔاخِرَةِ أَشَدُّ وَأَبْقَىٰٓ (١٢٧)  أَفَلَمْ يَهْدِ لَهُمْ كَمْ أَهْلَكْنَا قَبْلَهُم مِّنَ ٱلْقُرُونِ يَمْشُونَ فِى مَسَـٰكِنِهِمْ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّأُو۟لِى ٱلنُّهَىٰ (١٢٨)  وَلَوْلَا كَلِمَةٌ سَبَقَتْ مِن رَّبِّكَ لَكَانَ لِزَامًا وَأَجَلٌ مُّسَمًّى (١٢٩)  فَٱصْبِرْ عَلَىٰ مَا يَقُولُونَ وَسَبِّحْ بِحَمْدِ رَبِّكَ قَبْلَ طُلُوعِ ٱلشَّمْسِ وَقَبْلَ غُرُوبِهَا ۖ وَمِنْ ءَانَآئِ ٱلَّيْلِ فَسَبِّحْ وَأَطْرَافَ ٱلنَّهَارِ لَعَلَّكَ تَرْضَىٰ (١٣٠)  وَلَا تَمُدَّنَّ عَيْنَيْكَ إِلَىٰ مَا مَتَّعْنَا بِهِۦٓ أَزْوَٰجًا مِّنْهُمْ زَهْرَةَ ٱلْحَيَوٰةِ ٱلدُّنْيَا لِنَفْتِنَهُمْ فِيهِ ۚ وَرِزْقُ رَبِّكَ خَيْرٌ وَأَبْقَىٰ (١٣١)  وَأْمُرْ أَهْلَكَ بِٱلصَّلَوٰةِ وَٱصْطَبِرْ عَلَيْهَا ۖ لَا نَسْـَٔلُكَ رِزْقًا ۖ نَّحْنُ نَرْزُقُكَ ۗ وَٱلْعَـٰقِبَةُ لِلتَّقْوَىٰ (١٣٢)  وَقَالُوا۟ لَوْلَا يَأْتِينَا بِـَٔايَةٍ مِّن رَّبِّهِۦٓ ۚ أَوَلَمْ تَأْتِهِم بَيِّنَةُ مَا فِى ٱلصُّحُفِ ٱلْأُولَىٰ (١٣٣)  وَلَوْ أَنَّآ أَهْلَكْنَـٰهُم بِعَذَابٍ مِّن قَبْلِهِۦ لَقَالُوا۟ رَبَّنَا لَوْلَآ أَرْسَلْتَ إِلَيْنَا رَسُولًا فَنَتَّبِعَ ءَايَـٰتِكَ مِن قَبْلِ أَن نَّذِلَّ وَنَخْزَىٰ (١٣٤)  قُلْ كُلٌّ مُّتَرَبِّصٌ فَتَرَبَّصُوا۟ ۖ فَسَتَعْلَمُونَ مَنْ أَصْحَـٰبُ ٱلصِّرَٰطِ ٱلسَّوِىِّ وَمَنِ ٱهْتَدَىٰ (١٣٥)",
+                "is_read": false
+            }
+        ]
+    }
+}

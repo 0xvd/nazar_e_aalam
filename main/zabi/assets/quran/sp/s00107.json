@@ -1,0 +1,81 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 107,
+            "serial_number": "107",
+            "arabic_name": "الماعون",
+            "translated_name": "Al-Ma'un",
+            "verses_translate_name": "versos",
+            "verses_count": "7"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 602,
+                "page_number": "602",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6198,
+                        "chapter_id": 107,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "أَرَءَيْتَ ٱلَّذِى يُكَذِّبُ بِٱلدِّينِ",
+                        "translated_name": "¿Has visto a quien desmiente el Día de la Recompensa?"
+                    },
+                    {
+                        "id": 6199,
+                        "chapter_id": 107,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "فَذَٰلِكَ ٱلَّذِى يَدُعُّ ٱلْيَتِيمَ",
+                        "translated_name": "Es el mismo que aparta de sí violentamente al huérfano"
+                    },
+                    {
+                        "id": 6200,
+                        "chapter_id": 107,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَلَا يَحُضُّ عَلَىٰ طَعَامِ ٱلْمِسْكِينِ",
+                        "translated_name": "y que no anima a alimentar al necesitado."
+                    },
+                    {
+                        "id": 6201,
+                        "chapter_id": 107,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "فَوَيْلٌ لِّلْمُصَلِّينَ",
+                        "translated_name": "Así pues ¡Ay de los que rezan"
+                    },
+                    {
+                        "id": 6202,
+                        "chapter_id": 107,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "ٱلَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ",
+                        "translated_name": "y que son negligentes con su oración!"
+                    },
+                    {
+                        "id": 6203,
+                        "chapter_id": 107,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "ٱلَّذِينَ هُمْ يُرَآءُونَ",
+                        "translated_name": "Aquellos que la hacen para ser vistos"
+                    },
+                    {
+                        "id": 6204,
+                        "chapter_id": 107,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "وَيَمْنَعُونَ ٱلْمَاعُونَ",
+                        "translated_name": "y niegan la ayuda."
+                    }
+                ],
+                "page_arabic_ayah": "أَرَءَيْتَ ٱلَّذِى يُكَذِّبُ بِٱلدِّينِ (١)  فَذَٰلِكَ ٱلَّذِى يَدُعُّ ٱلْيَتِيمَ (٢)  وَلَا يَحُضُّ عَلَىٰ طَعَامِ ٱلْمِسْكِينِ (٣)  فَوَيْلٌ لِّلْمُصَلِّينَ (٤)  ٱلَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ (٥)  ٱلَّذِينَ هُمْ يُرَآءُونَ (٦)  وَيَمْنَعُونَ ٱلْمَاعُونَ (٧)",
+                "is_read": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "profile": {
+        "change_password": {
+            "title": "Change Password",
+            "subtitle": "Update your account password",
+            "password_hint": "Use at least 8 characters, including a number and a symbol for a stronger password.",
+            "current_password_label": "Current Password",
+            "current_password_placeholder": "Enter current password",
+            "new_password_label": "New Password",
+            "new_password_placeholder": "Enter new password",
+            "confirm_password_label": "Confirm New Password",
+            "confirm_password_placeholder": "Re-enter new password",
+            "submit": "Update password",
+            "strength": {
+                "weak": "Weak",
+                "fair": "Fair",
+                "good": "Good",
+                "strong": "Strong"
+            }
+        },
+        "personal_information": {
+            "title": "Personal Information",
+            "subtitle": "Update your name, contact details and profile picture",
+            "change_photo": "Change photo",
+            "photo_title": "Profile photo",
+            "photo_hint": "JPG, PNG or GIF · Max 2 MB",
+            "first_name_label": "First Name",
+            "first_name_placeholder": "First name",
+            "last_name_label": "Last Name",
+            "last_name_placeholder": "Last name",
+            "email_label": "Email Address",
+            "phone_label": "Phone Number",
+            "dob_label": "Date of Birth",
+            "gender_label": "Gender",
+            "gender_male": "Male",
+            "gender_female": "Female",
+            "gender_other": "Other",
+            "submit": "Save changes"
+        }
+    }
+}

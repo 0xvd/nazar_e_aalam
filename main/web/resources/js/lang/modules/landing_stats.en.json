@@ -1,0 +1,22 @@
+{
+    "landing_stats": {
+        "title": "Stats & Badges",
+        "subtitle": "Manage the trust badges shown on your landing page",
+        "preview_page": "Preview Page",
+        "live_preview": "Live Preview",
+        "error_saving": "Error saving",
+        "section": {
+            "trust_badges": "Trust Badges"
+        },
+        "form": {
+            "rating_label": "Rating",
+            "downloads_count_label": "Downloads Count",
+            "languages_count_label": "Languages Count"
+        },
+        "preview": {
+            "rating": "Rating",
+            "downloads": "Downloads",
+            "languages": "Languages"
+        }
+    }
+}

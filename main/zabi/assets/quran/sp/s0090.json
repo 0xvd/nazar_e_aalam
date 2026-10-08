@@ -1,0 +1,185 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 90,
+            "serial_number": "90",
+            "arabic_name": "البلد",
+            "translated_name": "Al-Balad",
+            "verses_translate_name": "versos",
+            "verses_count": "20"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 594,
+                "page_number": "594",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6024,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "لَآ أُقْسِمُ بِهَـٰذَا ٱلْبَلَدِ",
+                        "translated_name": "Juro por esta ciudad,"
+                    },
+                    {
+                        "id": 6025,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "وَأَنتَ حِلٌّۢ بِهَـٰذَا ٱلْبَلَدِ",
+                        "translated_name": "por esta ciudad en la que tú resides,"
+                    },
+                    {
+                        "id": 6026,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَوَالِدٍ وَمَا وَلَدَ",
+                        "translated_name": "y por un padre y lo que engendra:"
+                    },
+                    {
+                        "id": 6027,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "لَقَدْ خَلَقْنَا ٱلْإِنسَـٰنَ فِى كَبَدٍ",
+                        "translated_name": "Ciertamente, hemos creado al ser humano en el esfuerzo y el cansancio."
+                    },
+                    {
+                        "id": 6028,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "أَيَحْسَبُ أَن لَّن يَقْدِرَ عَلَيْهِ أَحَدٌ",
+                        "translated_name": "¿Cree que nadie tiene poder sobre él?"
+                    },
+                    {
+                        "id": 6029,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "يَقُولُ أَهْلَكْتُ مَالًا لُّبَدًا",
+                        "translated_name": "Dice: «¡He derrochado una gran fortuna!»"
+                    },
+                    {
+                        "id": 6030,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "أَيَحْسَبُ أَن لَّمْ يَرَهُۥٓ أَحَدٌ",
+                        "translated_name": "¿Cree que nadie le ve?"
+                    },
+                    {
+                        "id": 6031,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "أَلَمْ نَجْعَل لَّهُۥ عَيْنَيْنِ",
+                        "translated_name": "¿Acaso no le hemos puesto dos ojos?"
+                    },
+                    {
+                        "id": 6032,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "وَلِسَانًا وَشَفَتَيْنِ",
+                        "translated_name": "¿Y una lengua y dos labios?"
+                    },
+                    {
+                        "id": 6033,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "وَهَدَيْنَـٰهُ ٱلنَّجْدَيْنِ",
+                        "translated_name": "¿Y no le hemos indicado las dos vías?"
+                    },
+                    {
+                        "id": 6034,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "فَلَا ٱقْتَحَمَ ٱلْعَقَبَةَ",
+                        "translated_name": "Sin embargo no se apresura a subir la cuesta."
+                    },
+                    {
+                        "id": 6035,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "وَمَآ أَدْرَىٰكَ مَا ٱلْعَقَبَةُ",
+                        "translated_name": "¿Y qué te hará saber lo que es la cuesta?"
+                    },
+                    {
+                        "id": 6036,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "فَكُّ رَقَبَةٍ",
+                        "translated_name": "Es liberar a un esclavo"
+                    },
+                    {
+                        "id": 6037,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "أَوْ إِطْعَـٰمٌ فِى يَوْمٍ ذِى مَسْغَبَةٍ",
+                        "translated_name": "o alimentar en días de hambre"
+                    },
+                    {
+                        "id": 6038,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "يَتِيمًا ذَا مَقْرَبَةٍ",
+                        "translated_name": "a un familiar huérfano"
+                    },
+                    {
+                        "id": 6039,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "16",
+                        "arabic_name": "أَوْ مِسْكِينًا ذَا مَتْرَبَةٍ",
+                        "translated_name": "o a un necesitado polvoriento,"
+                    },
+                    {
+                        "id": 6040,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "17",
+                        "arabic_name": "ثُمَّ كَانَ مِنَ ٱلَّذِينَ ءَامَنُوا۟ وَتَوَاصَوْا۟ بِٱلصَّبْرِ وَتَوَاصَوْا۟ بِٱلْمَرْحَمَةِ",
+                        "translated_name": "y ser de los que creen y se aconsejan mutuamente la paciencia y se aconsejan mutuamente la misericordia."
+                    },
+                    {
+                        "id": 6041,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "18",
+                        "arabic_name": "أُو۟لَـٰٓئِكَ أَصْحَـٰبُ ٱلْمَيْمَنَةِ",
+                        "translated_name": "¡Esos son la gente de la derecha!"
+                    },
+                    {
+                        "id": 6042,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "19",
+                        "arabic_name": "وَٱلَّذِينَ كَفَرُوا۟ بِـَٔايَـٰتِنَا هُمْ أَصْحَـٰبُ ٱلْمَشْـَٔمَةِ",
+                        "translated_name": "Y aquellos que no creen en Nuestras señales son la gente de la izquierda,"
+                    },
+                    {
+                        "id": 6043,
+                        "chapter_id": 90,
+                        "verses_translate_name": "versos",
+                        "verses_number": "20",
+                        "arabic_name": "عَلَيْهِمْ نَارٌ مُّؤْصَدَةٌۢ",
+                        "translated_name": "a quienes el Fuego rodeará por todos lados."
+                    }
+                ],
+                "page_arabic_ayah": "لَآ أُقْسِمُ بِهَـٰذَا ٱلْبَلَدِ (١)  وَأَنتَ حِلٌّۢ بِهَـٰذَا ٱلْبَلَدِ (٢)  وَوَالِدٍ وَمَا وَلَدَ (٣)  لَقَدْ خَلَقْنَا ٱلْإِنسَـٰنَ فِى كَبَدٍ (٤)  أَيَحْسَبُ أَن لَّن يَقْدِرَ عَلَيْهِ أَحَدٌ (٥)  يَقُولُ أَهْلَكْتُ مَالًا لُّبَدًا (٦)  أَيَحْسَبُ أَن لَّمْ يَرَهُۥٓ أَحَدٌ (٧)  أَلَمْ نَجْعَل لَّهُۥ عَيْنَيْنِ (٨)  وَلِسَانًا وَشَفَتَيْنِ (٩)  وَهَدَيْنَـٰهُ ٱلنَّجْدَيْنِ (١٠)  فَلَا ٱقْتَحَمَ ٱلْعَقَبَةَ (١١)  وَمَآ أَدْرَىٰكَ مَا ٱلْعَقَبَةُ (١٢)  فَكُّ رَقَبَةٍ (١٣)  أَوْ إِطْعَـٰمٌ فِى يَوْمٍ ذِى مَسْغَبَةٍ (١٤)  يَتِيمًا ذَا مَقْرَبَةٍ (١٥)  أَوْ مِسْكِينًا ذَا مَتْرَبَةٍ (١٦)  ثُمَّ كَانَ مِنَ ٱلَّذِينَ ءَامَنُوا۟ وَتَوَاصَوْا۟ بِٱلصَّبْرِ وَتَوَاصَوْا۟ بِٱلْمَرْحَمَةِ (١٧)  أُو۟لَـٰٓئِكَ أَصْحَـٰبُ ٱلْمَيْمَنَةِ (١٨)  وَٱلَّذِينَ كَفَرُوا۟ بِـَٔايَـٰتِنَا هُمْ أَصْحَـٰبُ ٱلْمَشْـَٔمَةِ (١٩)  عَلَيْهِمْ نَارٌ مُّؤْصَدَةٌۢ (٢٠)",
+                "is_read": false
+            }
+        ]
+    }
+}

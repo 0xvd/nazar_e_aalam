@@ -1,0 +1,24 @@
+{
+    "user": {
+        "title": "قائمة المستخدمين",
+        "singular": "مستخدم",
+        "invite_user": "دعوة مستخدم",
+        "table": {
+            "image": "الصورة",
+            "first_name": "الاسم الأول",
+            "last_name": "اسم العائلة",
+            "email": "البريد الإلكتروني",
+            "role": "الدور"
+        },
+        "form": {
+            "first_name_label": "الاسم الأول",
+            "first_name_placeholder": "أدخل الاسم الأول",
+            "last_name_label": "اسم العائلة",
+            "last_name_placeholder": "أدخل اسم العائلة",
+            "email_label": "البريد الإلكتروني",
+            "email_placeholder": "أدخل البريد الإلكتروني",
+            "role_label": "الدور",
+            "role_placeholder": "اختر الدور"
+        }
+    }
+}

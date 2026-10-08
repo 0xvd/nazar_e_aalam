@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zabi Admin Panel</title>
+        <!-- Include Tailwind CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <!-- Include custom styles -->
+        <style>
+            /* Add your custom styles here */
+            body {
+                background-color: #f3f4f6;
+                overflow: hidden;
+            }
+            .container {
+                max-width: 500px;
+                z-index: 1;
+            }
+            .button-primary {
+                background-color: #4f46e5;
+            }
+            .button-primary:hover {
+                background-color: #4338ca;
+            }
+            .button-secondary {
+                background-color: #6b7280;
+            }
+            .button-secondary:hover {
+                background-color: #4f5968;
+            }
+            .button-whatsapp {
+                background-color: #25d366; /* WhatsApp color */
+            }
+            .button-whatsapp:hover {
+                background-color: #128c7e; /* WhatsApp darker color on hover */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="flex justify-center items-center h-screen relative">
+            <div class="container bg-white shadow-md rounded p-8">
+                <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">
+                    Zabi Admin Panel
+                </h1>
+                <div class="flex justify-center space-x-4">
+                    <a
+                        href="https://zabi.theme29.com"
+                        target="_blank"
+                        class="button-primary text-white py-2 px-6 rounded-full text-center text-sm transition duration-300 ease-in-out"
+                        >View Demo</a
+                    >
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

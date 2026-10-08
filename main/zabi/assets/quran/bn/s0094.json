@@ -1,0 +1,89 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 94,
+            "serial_number": "৯৪",
+            "arabic_name": "الشرح",
+            "translated_name": "আল ইনশিরাহ",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "৮"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 596,
+                "page_number": "596",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6091,
+                        "chapter_id": 94,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
+                        "translated_name": "আমরা কি তোমার বক্ষ প্রশস্ত করে দিই নি?"
+                    },
+                    {
+                        "id": 6092,
+                        "chapter_id": 94,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "وَوَضَعْنَا عَنكَ وِزْرَكَ",
+                        "translated_name": "আর আমরা তোমার থেকে লাঘব করেছি তোমার ভার, --"
+                    },
+                    {
+                        "id": 6093,
+                        "chapter_id": 94,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "ٱلَّذِىٓ أَنقَضَ ظَهْرَكَ",
+                        "translated_name": "যা চেপে বসেছিল তোমার পিঠে;"
+                    },
+                    {
+                        "id": 6094,
+                        "chapter_id": 94,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "4",
+                        "arabic_name": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+                        "translated_name": "আর আমরা তোমার জন্য উন্নত করেছি তোমার নামোল্লেখ।"
+                    },
+                    {
+                        "id": 6095,
+                        "chapter_id": 94,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "5",
+                        "arabic_name": "فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+                        "translated_name": "অতএব কষ্টের সঙ্গেই তো আরাম রয়েছে,"
+                    },
+                    {
+                        "id": 6096,
+                        "chapter_id": 94,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "6",
+                        "arabic_name": "إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+                        "translated_name": "নিশ্চয় কষ্টের সঙ্গে আরাম রয়েছে।"
+                    },
+                    {
+                        "id": 6097,
+                        "chapter_id": 94,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "7",
+                        "arabic_name": "فَإِذَا فَرَغْتَ فَٱنصَبْ",
+                        "translated_name": "সুতরাং যখন তুমি মুক্ত হয়েছে তখন কঠোর পরিশ্রম করো,"
+                    },
+                    {
+                        "id": 6098,
+                        "chapter_id": 94,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "8",
+                        "arabic_name": "وَإِلَىٰ رَبِّكَ فَٱرْغَب",
+                        "translated_name": "আর তোমার প্রভুর প্রতি তবে একান্তভাবে মনোনিবেশ করো।"
+                    }
+                ],
+                "page_arabic_ayah": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ (١)  وَوَضَعْنَا عَنكَ وِزْرَكَ (٢)  ٱلَّذِىٓ أَنقَضَ ظَهْرَكَ (٣)  وَرَفَعْنَا لَكَ ذِكْرَكَ (٤)  فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا (٥)  إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا (٦)  فَإِذَا فَرَغْتَ فَٱنصَبْ (٧)  وَإِلَىٰ رَبِّكَ فَٱرْغَب (٨)",
+                "is_read": false
+            }
+        ]
+    }
+}

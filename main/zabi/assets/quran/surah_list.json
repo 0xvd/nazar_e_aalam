@@ -1,0 +1,1144 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "serial_number": "1",
+            "arabic_name": "الفاتحة",
+            "start_page": 1,
+            "end_page": 1,
+            "translate_name": "Al-Fatihah",
+            "verses_translate_name": "Verses",
+            "verses_count": "7"
+        },
+        {
+            "id": 2,
+            "serial_number": "2",
+            "arabic_name": "البقرة",
+            "start_page": 2,
+            "end_page": 49,
+            "translate_name": "Al-Baqarah",
+            "verses_translate_name": "Verses",
+            "verses_count": "286"
+        },
+        {
+            "id": 3,
+            "serial_number": "3",
+            "arabic_name": "آل عمران",
+            "start_page": 50,
+            "end_page": 76,
+            "translate_name": "Ali 'Imran",
+            "verses_translate_name": "Verses",
+            "verses_count": "200"
+        },
+        {
+            "id": 4,
+            "serial_number": "4",
+            "arabic_name": "النساء",
+            "start_page": 77,
+            "end_page": 106,
+            "translate_name": "An-Nisa",
+            "verses_translate_name": "Verses",
+            "verses_count": "176"
+        },
+        {
+            "id": 5,
+            "serial_number": "5",
+            "arabic_name": "المائدة",
+            "start_page": 106,
+            "end_page": 127,
+            "translate_name": "Al-Ma'idah",
+            "verses_translate_name": "Verses",
+            "verses_count": "120"
+        },
+        {
+            "id": 6,
+            "serial_number": "6",
+            "arabic_name": "الأنعام",
+            "start_page": 128,
+            "end_page": 150,
+            "translate_name": "Al-An'am",
+            "verses_translate_name": "Verses",
+            "verses_count": "165"
+        },
+        {
+            "id": 7,
+            "serial_number": "7",
+            "arabic_name": "الأعراف",
+            "start_page": 151,
+            "end_page": 176,
+            "translate_name": "Al-A'raf",
+            "verses_translate_name": "Verses",
+            "verses_count": "206"
+        },
+        {
+            "id": 8,
+            "serial_number": "8",
+            "arabic_name": "الأنفال",
+            "start_page": 177,
+            "end_page": 186,
+            "translate_name": "Al-Anfal",
+            "verses_translate_name": "Verses",
+            "verses_count": "75"
+        },
+        {
+            "id": 9,
+            "serial_number": "9",
+            "arabic_name": "التوبة",
+            "start_page": 187,
+            "end_page": 207,
+            "translate_name": "At-Tawbah",
+            "verses_translate_name": "Verses",
+            "verses_count": "129"
+        },
+        {
+            "id": 10,
+            "serial_number": "10",
+            "arabic_name": "يونس",
+            "start_page": 208,
+            "end_page": 221,
+            "translate_name": "Yunus",
+            "verses_translate_name": "Verses",
+            "verses_count": "109"
+        },
+        {
+            "id": 11,
+            "serial_number": "11",
+            "arabic_name": "هود",
+            "start_page": 221,
+            "end_page": 235,
+            "translate_name": "Hud",
+            "verses_translate_name": "Verses",
+            "verses_count": "123"
+        },
+        {
+            "id": 12,
+            "serial_number": "12",
+            "arabic_name": "يوسف",
+            "start_page": 235,
+            "end_page": 248,
+            "translate_name": "Yusuf",
+            "verses_translate_name": "Verses",
+            "verses_count": "111"
+        },
+        {
+            "id": 13,
+            "serial_number": "13",
+            "arabic_name": "الرعد",
+            "start_page": 249,
+            "end_page": 255,
+            "translate_name": "Ar-Ra'd",
+            "verses_translate_name": "Verses",
+            "verses_count": "43"
+        },
+        {
+            "id": 14,
+            "serial_number": "14",
+            "arabic_name": "ابراهيم",
+            "start_page": 255,
+            "end_page": 261,
+            "translate_name": "Ibrahim",
+            "verses_translate_name": "Verses",
+            "verses_count": "52"
+        },
+        {
+            "id": 15,
+            "serial_number": "15",
+            "arabic_name": "الحجر",
+            "start_page": 262,
+            "end_page": 267,
+            "translate_name": "Al-Hijr",
+            "verses_translate_name": "Verses",
+            "verses_count": "99"
+        },
+        {
+            "id": 16,
+            "serial_number": "16",
+            "arabic_name": "النحل",
+            "start_page": 267,
+            "end_page": 281,
+            "translate_name": "An-Nahl",
+            "verses_translate_name": "Verses",
+            "verses_count": "128"
+        },
+        {
+            "id": 17,
+            "serial_number": "17",
+            "arabic_name": "الإسراء",
+            "start_page": 282,
+            "end_page": 293,
+            "translate_name": "Al-Isra",
+            "verses_translate_name": "Verses",
+            "verses_count": "111"
+        },
+        {
+            "id": 18,
+            "serial_number": "18",
+            "arabic_name": "الكهف",
+            "start_page": 293,
+            "end_page": 304,
+            "translate_name": "Al-Kahf",
+            "verses_translate_name": "Verses",
+            "verses_count": "110"
+        },
+        {
+            "id": 19,
+            "serial_number": "19",
+            "arabic_name": "مريم",
+            "start_page": 305,
+            "end_page": 312,
+            "translate_name": "Maryam",
+            "verses_translate_name": "Verses",
+            "verses_count": "98"
+        },
+        {
+            "id": 20,
+            "serial_number": "20",
+            "arabic_name": "طه",
+            "start_page": 312,
+            "end_page": 321,
+            "translate_name": "Taha",
+            "verses_translate_name": "Verses",
+            "verses_count": "135"
+        },
+        {
+            "id": 21,
+            "serial_number": "21",
+            "arabic_name": "الأنبياء",
+            "start_page": 322,
+            "end_page": 331,
+            "translate_name": "Al-Anbya",
+            "verses_translate_name": "Verses",
+            "verses_count": "112"
+        },
+        {
+            "id": 22,
+            "serial_number": "22",
+            "arabic_name": "الحج",
+            "start_page": 332,
+            "end_page": 341,
+            "translate_name": "Al-Hajj",
+            "verses_translate_name": "Verses",
+            "verses_count": "78"
+        },
+        {
+            "id": 23,
+            "serial_number": "23",
+            "arabic_name": "المؤمنون",
+            "start_page": 342,
+            "end_page": 349,
+            "translate_name": "Al-Mu'minun",
+            "verses_translate_name": "Verses",
+            "verses_count": "118"
+        },
+        {
+            "id": 24,
+            "serial_number": "24",
+            "arabic_name": "النور",
+            "start_page": 350,
+            "end_page": 359,
+            "translate_name": "An-Nur",
+            "verses_translate_name": "Verses",
+            "verses_count": "64"
+        },
+        {
+            "id": 25,
+            "serial_number": "25",
+            "arabic_name": "الفرقان",
+            "start_page": 359,
+            "end_page": 366,
+            "translate_name": "Al-Furqan",
+            "verses_translate_name": "Verses",
+            "verses_count": "77"
+        },
+        {
+            "id": 26,
+            "serial_number": "26",
+            "arabic_name": "الشعراء",
+            "start_page": 367,
+            "end_page": 376,
+            "translate_name": "Ash-Shu'ara",
+            "verses_translate_name": "Verses",
+            "verses_count": "227"
+        },
+        {
+            "id": 27,
+            "serial_number": "27",
+            "arabic_name": "النمل",
+            "start_page": 377,
+            "end_page": 385,
+            "translate_name": "An-Naml",
+            "verses_translate_name": "Verses",
+            "verses_count": "93"
+        },
+        {
+            "id": 28,
+            "serial_number": "28",
+            "arabic_name": "القصص",
+            "start_page": 385,
+            "end_page": 396,
+            "translate_name": "Al-Qasas",
+            "verses_translate_name": "Verses",
+            "verses_count": "88"
+        },
+        {
+            "id": 29,
+            "serial_number": "29",
+            "arabic_name": "العنكبوت",
+            "start_page": 396,
+            "end_page": 404,
+            "translate_name": "Al-'Ankabut",
+            "verses_translate_name": "Verses",
+            "verses_count": "69"
+        },
+        {
+            "id": 30,
+            "serial_number": "30",
+            "arabic_name": "الروم",
+            "start_page": 404,
+            "end_page": 410,
+            "translate_name": "Ar-Rum",
+            "verses_translate_name": "Verses",
+            "verses_count": "60"
+        },
+        {
+            "id": 31,
+            "serial_number": "31",
+            "arabic_name": "لقمان",
+            "start_page": 411,
+            "end_page": 414,
+            "translate_name": "Luqman",
+            "verses_translate_name": "Verses",
+            "verses_count": "34"
+        },
+        {
+            "id": 32,
+            "serial_number": "32",
+            "arabic_name": "السجدة",
+            "start_page": 415,
+            "end_page": 417,
+            "translate_name": "As-Sajdah",
+            "verses_translate_name": "Verses",
+            "verses_count": "30"
+        },
+        {
+            "id": 33,
+            "serial_number": "33",
+            "arabic_name": "الأحزاب",
+            "start_page": 418,
+            "end_page": 427,
+            "translate_name": "Al-Ahzab",
+            "verses_translate_name": "Verses",
+            "verses_count": "73"
+        },
+        {
+            "id": 34,
+            "serial_number": "34",
+            "arabic_name": "سبإ",
+            "start_page": 428,
+            "end_page": 434,
+            "translate_name": "Saba",
+            "verses_translate_name": "Verses",
+            "verses_count": "54"
+        },
+        {
+            "id": 35,
+            "serial_number": "35",
+            "arabic_name": "فاطر",
+            "start_page": 434,
+            "end_page": 440,
+            "translate_name": "Fatir",
+            "verses_translate_name": "Verses",
+            "verses_count": "45"
+        },
+        {
+            "id": 36,
+            "serial_number": "36",
+            "arabic_name": "يس",
+            "start_page": 440,
+            "end_page": 445,
+            "translate_name": "Ya-Sin",
+            "verses_translate_name": "Verses",
+            "verses_count": "83"
+        },
+        {
+            "id": 37,
+            "serial_number": "37",
+            "arabic_name": "الصافات",
+            "start_page": 446,
+            "end_page": 452,
+            "translate_name": "As-Saffat",
+            "verses_translate_name": "Verses",
+            "verses_count": "182"
+        },
+        {
+            "id": 38,
+            "serial_number": "38",
+            "arabic_name": "ص",
+            "start_page": 453,
+            "end_page": 458,
+            "translate_name": "Sad",
+            "verses_translate_name": "Verses",
+            "verses_count": "88"
+        },
+        {
+            "id": 39,
+            "serial_number": "39",
+            "arabic_name": "الزمر",
+            "start_page": 458,
+            "end_page": 467,
+            "translate_name": "Az-Zumar",
+            "verses_translate_name": "Verses",
+            "verses_count": "75"
+        },
+        {
+            "id": 40,
+            "serial_number": "40",
+            "arabic_name": "غافر",
+            "start_page": 467,
+            "end_page": 476,
+            "translate_name": "Ghafir",
+            "verses_translate_name": "Verses",
+            "verses_count": "85"
+        },
+        {
+            "id": 41,
+            "serial_number": "41",
+            "arabic_name": "فصلت",
+            "start_page": 477,
+            "end_page": 482,
+            "translate_name": "Fussilat",
+            "verses_translate_name": "Verses",
+            "verses_count": "54"
+        },
+        {
+            "id": 42,
+            "serial_number": "42",
+            "arabic_name": "الشورى",
+            "start_page": 483,
+            "end_page": 489,
+            "translate_name": "Ash-Shuraa",
+            "verses_translate_name": "Verses",
+            "verses_count": "53"
+        },
+        {
+            "id": 43,
+            "serial_number": "43",
+            "arabic_name": "الزخرف",
+            "start_page": 489,
+            "end_page": 495,
+            "translate_name": "Az-Zukhruf",
+            "verses_translate_name": "Verses",
+            "verses_count": "89"
+        },
+        {
+            "id": 44,
+            "serial_number": "44",
+            "arabic_name": "الدخان",
+            "start_page": 496,
+            "end_page": 498,
+            "translate_name": "Ad-Dukhan",
+            "verses_translate_name": "Verses",
+            "verses_count": "59"
+        },
+        {
+            "id": 45,
+            "serial_number": "45",
+            "arabic_name": "الجاثية",
+            "start_page": 499,
+            "end_page": 502,
+            "translate_name": "Al-Jathiyah",
+            "verses_translate_name": "Verses",
+            "verses_count": "37"
+        },
+        {
+            "id": 46,
+            "serial_number": "46",
+            "arabic_name": "الأحقاف",
+            "start_page": 502,
+            "end_page": 506,
+            "translate_name": "Al-Ahqaf",
+            "verses_translate_name": "Verses",
+            "verses_count": "35"
+        },
+        {
+            "id": 47,
+            "serial_number": "47",
+            "arabic_name": "محمد",
+            "start_page": 507,
+            "end_page": 510,
+            "translate_name": "Muhammad",
+            "verses_translate_name": "Verses",
+            "verses_count": "38"
+        },
+        {
+            "id": 48,
+            "serial_number": "48",
+            "arabic_name": "الفتح",
+            "start_page": 511,
+            "end_page": 515,
+            "translate_name": "Al-Fath",
+            "verses_translate_name": "Verses",
+            "verses_count": "29"
+        },
+        {
+            "id": 49,
+            "serial_number": "49",
+            "arabic_name": "الحجرات",
+            "start_page": 515,
+            "end_page": 517,
+            "translate_name": "Al-Hujurat",
+            "verses_translate_name": "Verses",
+            "verses_count": "18"
+        },
+        {
+            "id": 50,
+            "serial_number": "50",
+            "arabic_name": "ق",
+            "start_page": 518,
+            "end_page": 520,
+            "translate_name": "Qaf",
+            "verses_translate_name": "Verses",
+            "verses_count": "45"
+        },
+        {
+            "id": 51,
+            "serial_number": "51",
+            "arabic_name": "الذاريات",
+            "start_page": 520,
+            "end_page": 523,
+            "translate_name": "Adh-Dhariyat",
+            "verses_translate_name": "Verses",
+            "verses_count": "60"
+        },
+        {
+            "id": 52,
+            "serial_number": "52",
+            "arabic_name": "الطور",
+            "start_page": 523,
+            "end_page": 525,
+            "translate_name": "At-Tur",
+            "verses_translate_name": "Verses",
+            "verses_count": "49"
+        },
+        {
+            "id": 53,
+            "serial_number": "53",
+            "arabic_name": "النجم",
+            "start_page": 526,
+            "end_page": 528,
+            "translate_name": "An-Najm",
+            "verses_translate_name": "Verses",
+            "verses_count": "62"
+        },
+        {
+            "id": 54,
+            "serial_number": "54",
+            "arabic_name": "القمر",
+            "start_page": 528,
+            "end_page": 531,
+            "translate_name": "Al-Qamar",
+            "verses_translate_name": "Verses",
+            "verses_count": "55"
+        },
+        {
+            "id": 55,
+            "serial_number": "55",
+            "arabic_name": "الرحمن",
+            "start_page": 531,
+            "end_page": 534,
+            "translate_name": "Ar-Rahman",
+            "verses_translate_name": "Verses",
+            "verses_count": "78"
+        },
+        {
+            "id": 56,
+            "serial_number": "56",
+            "arabic_name": "الواقعة",
+            "start_page": 534,
+            "end_page": 537,
+            "translate_name": "Al-Waqi'ah",
+            "verses_translate_name": "Verses",
+            "verses_count": "96"
+        },
+        {
+            "id": 57,
+            "serial_number": "57",
+            "arabic_name": "الحديد",
+            "start_page": 537,
+            "end_page": 541,
+            "translate_name": "Al-Hadid",
+            "verses_translate_name": "Verses",
+            "verses_count": "29"
+        },
+        {
+            "id": 58,
+            "serial_number": "58",
+            "arabic_name": "المجادلة",
+            "start_page": 542,
+            "end_page": 545,
+            "translate_name": "Al-Mujadila",
+            "verses_translate_name": "Verses",
+            "verses_count": "22"
+        },
+        {
+            "id": 59,
+            "serial_number": "59",
+            "arabic_name": "الحشر",
+            "start_page": 545,
+            "end_page": 548,
+            "translate_name": "Al-Hashr",
+            "verses_translate_name": "Verses",
+            "verses_count": "24"
+        },
+        {
+            "id": 60,
+            "serial_number": "60",
+            "arabic_name": "الممتحنة",
+            "start_page": 549,
+            "end_page": 551,
+            "translate_name": "Al-Mumtahanah",
+            "verses_translate_name": "Verses",
+            "verses_count": "13"
+        },
+        {
+            "id": 61,
+            "serial_number": "61",
+            "arabic_name": "الصف",
+            "start_page": 551,
+            "end_page": 552,
+            "translate_name": "As-Saf",
+            "verses_translate_name": "Verses",
+            "verses_count": "14"
+        },
+        {
+            "id": 62,
+            "serial_number": "62",
+            "arabic_name": "الجمعة",
+            "start_page": 553,
+            "end_page": 554,
+            "translate_name": "Al-Jumu'ah",
+            "verses_translate_name": "Verses",
+            "verses_count": "11"
+        },
+        {
+            "id": 63,
+            "serial_number": "63",
+            "arabic_name": "المنافقون",
+            "start_page": 554,
+            "end_page": 555,
+            "translate_name": "Al-Munafiqun",
+            "verses_translate_name": "Verses",
+            "verses_count": "11"
+        },
+        {
+            "id": 64,
+            "serial_number": "64",
+            "arabic_name": "التغابن",
+            "start_page": 556,
+            "end_page": 557,
+            "translate_name": "At-Taghabun",
+            "verses_translate_name": "Verses",
+            "verses_count": "18"
+        },
+        {
+            "id": 65,
+            "serial_number": "65",
+            "arabic_name": "الطلاق",
+            "start_page": 558,
+            "end_page": 559,
+            "translate_name": "At-Talaq",
+            "verses_translate_name": "Verses",
+            "verses_count": "12"
+        },
+        {
+            "id": 66,
+            "serial_number": "66",
+            "arabic_name": "التحريم",
+            "start_page": 560,
+            "end_page": 561,
+            "translate_name": "At-Tahrim",
+            "verses_translate_name": "Verses",
+            "verses_count": "12"
+        },
+        {
+            "id": 67,
+            "serial_number": "67",
+            "arabic_name": "الملك",
+            "start_page": 562,
+            "end_page": 564,
+            "translate_name": "Al-Mulk",
+            "verses_translate_name": "Verses",
+            "verses_count": "30"
+        },
+        {
+            "id": 68,
+            "serial_number": "68",
+            "arabic_name": "القلم",
+            "start_page": 564,
+            "end_page": 566,
+            "translate_name": "Al-Qalam",
+            "verses_translate_name": "Verses",
+            "verses_count": "52"
+        },
+        {
+            "id": 69,
+            "serial_number": "69",
+            "arabic_name": "الحاقة",
+            "start_page": 566,
+            "end_page": 568,
+            "translate_name": "Al-Haqqah",
+            "verses_translate_name": "Verses",
+            "verses_count": "52"
+        },
+        {
+            "id": 70,
+            "serial_number": "70",
+            "arabic_name": "المعارج",
+            "start_page": 568,
+            "end_page": 570,
+            "translate_name": "Al-Ma'arij",
+            "verses_translate_name": "Verses",
+            "verses_count": "44"
+        },
+        {
+            "id": 71,
+            "serial_number": "71",
+            "arabic_name": "نوح",
+            "start_page": 570,
+            "end_page": 571,
+            "translate_name": "Nuh",
+            "verses_translate_name": "Verses",
+            "verses_count": "28"
+        },
+        {
+            "id": 72,
+            "serial_number": "72",
+            "arabic_name": "الجن",
+            "start_page": 572,
+            "end_page": 573,
+            "translate_name": "Al-Jinn",
+            "verses_translate_name": "Verses",
+            "verses_count": "28"
+        },
+        {
+            "id": 73,
+            "serial_number": "73",
+            "arabic_name": "المزمل",
+            "start_page": 574,
+            "end_page": 575,
+            "translate_name": "Al-Muzzammil",
+            "verses_translate_name": "Verses",
+            "verses_count": "20"
+        },
+        {
+            "id": 74,
+            "serial_number": "74",
+            "arabic_name": "المدثر",
+            "start_page": 575,
+            "end_page": 577,
+            "translate_name": "Al-Muddaththir",
+            "verses_translate_name": "Verses",
+            "verses_count": "56"
+        },
+        {
+            "id": 75,
+            "serial_number": "75",
+            "arabic_name": "القيامة",
+            "start_page": 577,
+            "end_page": 578,
+            "translate_name": "Al-Qiyamah",
+            "verses_translate_name": "Verses",
+            "verses_count": "40"
+        },
+        {
+            "id": 76,
+            "serial_number": "76",
+            "arabic_name": "الانسان",
+            "start_page": 578,
+            "end_page": 580,
+            "translate_name": "Al-Insan",
+            "verses_translate_name": "Verses",
+            "verses_count": "31"
+        },
+        {
+            "id": 77,
+            "serial_number": "77",
+            "arabic_name": "المرسلات",
+            "start_page": 580,
+            "end_page": 581,
+            "translate_name": "Al-Mursalat",
+            "verses_translate_name": "Verses",
+            "verses_count": "50"
+        },
+        {
+            "id": 78,
+            "serial_number": "78",
+            "arabic_name": "النبإ",
+            "start_page": 582,
+            "end_page": 583,
+            "translate_name": "An-Naba",
+            "verses_translate_name": "Verses",
+            "verses_count": "40"
+        },
+        {
+            "id": 79,
+            "serial_number": "79",
+            "arabic_name": "النازعات",
+            "start_page": 583,
+            "end_page": 584,
+            "translate_name": "An-Nazi'at",
+            "verses_translate_name": "Verses",
+            "verses_count": "46"
+        },
+        {
+            "id": 80,
+            "serial_number": "80",
+            "arabic_name": "عبس",
+            "start_page": 585,
+            "end_page": 585,
+            "translate_name": "'Abasa",
+            "verses_translate_name": "Verses",
+            "verses_count": "42"
+        },
+        {
+            "id": 81,
+            "serial_number": "81",
+            "arabic_name": "التكوير",
+            "start_page": 586,
+            "end_page": 586,
+            "translate_name": "At-Takwir",
+            "verses_translate_name": "Verses",
+            "verses_count": "29"
+        },
+        {
+            "id": 82,
+            "serial_number": "82",
+            "arabic_name": "الإنفطار",
+            "start_page": 587,
+            "end_page": 587,
+            "translate_name": "Al-Infitar",
+            "verses_translate_name": "Verses",
+            "verses_count": "19"
+        },
+        {
+            "id": 83,
+            "serial_number": "83",
+            "arabic_name": "المطففين",
+            "start_page": 587,
+            "end_page": 589,
+            "translate_name": "Al-Mutaffifin",
+            "verses_translate_name": "Verses",
+            "verses_count": "36"
+        },
+        {
+            "id": 84,
+            "serial_number": "84",
+            "arabic_name": "الإنشقاق",
+            "start_page": 589,
+            "end_page": 589,
+            "translate_name": "Al-Inshiqaq",
+            "verses_translate_name": "Verses",
+            "verses_count": "25"
+        },
+        {
+            "id": 85,
+            "serial_number": "85",
+            "arabic_name": "البروج",
+            "start_page": 590,
+            "end_page": 590,
+            "translate_name": "Al-Buruj",
+            "verses_translate_name": "Verses",
+            "verses_count": "22"
+        },
+        {
+            "id": 86,
+            "serial_number": "86",
+            "arabic_name": "الطارق",
+            "start_page": 591,
+            "end_page": 591,
+            "translate_name": "At-Tariq",
+            "verses_translate_name": "Verses",
+            "verses_count": "17"
+        },
+        {
+            "id": 87,
+            "serial_number": "87",
+            "arabic_name": "الأعلى",
+            "start_page": 591,
+            "end_page": 592,
+            "translate_name": "Al-A'la",
+            "verses_translate_name": "Verses",
+            "verses_count": "19"
+        },
+        {
+            "id": 88,
+            "serial_number": "88",
+            "arabic_name": "الغاشية",
+            "start_page": 592,
+            "end_page": 592,
+            "translate_name": "Al-Ghashiyah",
+            "verses_translate_name": "Verses",
+            "verses_count": "26"
+        },
+        {
+            "id": 89,
+            "serial_number": "89",
+            "arabic_name": "الفجر",
+            "start_page": 593,
+            "end_page": 594,
+            "translate_name": "Al-Fajr",
+            "verses_translate_name": "Verses",
+            "verses_count": "30"
+        },
+        {
+            "id": 90,
+            "serial_number": "90",
+            "arabic_name": "البلد",
+            "start_page": 594,
+            "end_page": 594,
+            "translate_name": "Al-Balad",
+            "verses_translate_name": "Verses",
+            "verses_count": "20"
+        },
+        {
+            "id": 91,
+            "serial_number": "91",
+            "arabic_name": "الشمس",
+            "start_page": 595,
+            "end_page": 595,
+            "translate_name": "Ash-Shams",
+            "verses_translate_name": "Verses",
+            "verses_count": "15"
+        },
+        {
+            "id": 92,
+            "serial_number": "92",
+            "arabic_name": "الليل",
+            "start_page": 595,
+            "end_page": 596,
+            "translate_name": "Al-Layl",
+            "verses_translate_name": "Verses",
+            "verses_count": "21"
+        },
+        {
+            "id": 93,
+            "serial_number": "93",
+            "arabic_name": "الضحى",
+            "start_page": 596,
+            "end_page": 596,
+            "translate_name": "Ad-Duhaa",
+            "verses_translate_name": "Verses",
+            "verses_count": "11"
+        },
+        {
+            "id": 94,
+            "serial_number": "94",
+            "arabic_name": "الشرح",
+            "start_page": 596,
+            "end_page": 596,
+            "translate_name": "Ash-Sharh",
+            "verses_translate_name": "Verses",
+            "verses_count": "8"
+        },
+        {
+            "id": 95,
+            "serial_number": "95",
+            "arabic_name": "التين",
+            "start_page": 597,
+            "end_page": 597,
+            "translate_name": "At-Tin",
+            "verses_translate_name": "Verses",
+            "verses_count": "8"
+        },
+        {
+            "id": 96,
+            "serial_number": "96",
+            "arabic_name": "العلق",
+            "start_page": 597,
+            "end_page": 597,
+            "translate_name": "Al-'Alaq",
+            "verses_translate_name": "Verses",
+            "verses_count": "19"
+        },
+        {
+            "id": 97,
+            "serial_number": "97",
+            "arabic_name": "القدر",
+            "start_page": 598,
+            "end_page": 598,
+            "translate_name": "Al-Qadr",
+            "verses_translate_name": "Verses",
+            "verses_count": "5"
+        },
+        {
+            "id": 98,
+            "serial_number": "98",
+            "arabic_name": "البينة",
+            "start_page": 598,
+            "end_page": 599,
+            "translate_name": "Al-Bayyinah",
+            "verses_translate_name": "Verses",
+            "verses_count": "8"
+        },
+        {
+            "id": 99,
+            "serial_number": "99",
+            "arabic_name": "الزلزلة",
+            "start_page": 599,
+            "end_page": 599,
+            "translate_name": "Az-Zalzalah",
+            "verses_translate_name": "Verses",
+            "verses_count": "8"
+        },
+        {
+            "id": 100,
+            "serial_number": "100",
+            "arabic_name": "العاديات",
+            "start_page": 599,
+            "end_page": 600,
+            "translate_name": "Al-'Adiyat",
+            "verses_translate_name": "Verses",
+            "verses_count": "11"
+        },
+        {
+            "id": 101,
+            "serial_number": "101",
+            "arabic_name": "القارعة",
+            "start_page": 600,
+            "end_page": 600,
+            "translate_name": "Al-Qari'ah",
+            "verses_translate_name": "Verses",
+            "verses_count": "11"
+        },
+        {
+            "id": 102,
+            "serial_number": "102",
+            "arabic_name": "التكاثر",
+            "start_page": 600,
+            "end_page": 600,
+            "translate_name": "At-Takathur",
+            "verses_translate_name": "Verses",
+            "verses_count": "8"
+        },
+        {
+            "id": 103,
+            "serial_number": "103",
+            "arabic_name": "العصر",
+            "start_page": 601,
+            "end_page": 601,
+            "translate_name": "Al-'Asr",
+            "verses_translate_name": "Verses",
+            "verses_count": "3"
+        },
+        {
+            "id": 104,
+            "serial_number": "104",
+            "arabic_name": "الهمزة",
+            "start_page": 601,
+            "end_page": 601,
+            "translate_name": "Al-Humazah",
+            "verses_translate_name": "Verses",
+            "verses_count": "9"
+        },
+        {
+            "id": 105,
+            "serial_number": "105",
+            "arabic_name": "الفيل",
+            "start_page": 601,
+            "end_page": 601,
+            "translate_name": "Al-Fil",
+            "verses_translate_name": "Verses",
+            "verses_count": "5"
+        },
+        {
+            "id": 106,
+            "serial_number": "106",
+            "arabic_name": "قريش",
+            "start_page": 602,
+            "end_page": 602,
+            "translate_name": "Quraysh",
+            "verses_translate_name": "Verses",
+            "verses_count": "4"
+        },
+        {
+            "id": 107,
+            "serial_number": "107",
+            "arabic_name": "الماعون",
+            "start_page": 602,
+            "end_page": 602,
+            "translate_name": "Al-Ma'un",
+            "verses_translate_name": "Verses",
+            "verses_count": "7"
+        },
+        {
+            "id": 108,
+            "serial_number": "108",
+            "arabic_name": "الكوثر",
+            "start_page": 602,
+            "end_page": 602,
+            "translate_name": "Al-Kawthar",
+            "verses_translate_name": "Verses",
+            "verses_count": "3"
+        },
+        {
+            "id": 109,
+            "serial_number": "109",
+            "arabic_name": "الكافرون",
+            "start_page": 603,
+            "end_page": 603,
+            "translate_name": "Al-Kafirun",
+            "verses_translate_name": "Verses",
+            "verses_count": "6"
+        },
+        {
+            "id": 110,
+            "serial_number": "110",
+            "arabic_name": "النصر",
+            "start_page": 603,
+            "end_page": 603,
+            "translate_name": "An-Nasr",
+            "verses_translate_name": "Verses",
+            "verses_count": "3"
+        },
+        {
+            "id": 111,
+            "serial_number": "111",
+            "arabic_name": "المسد",
+            "start_page": 603,
+            "end_page": 603,
+            "translate_name": "Al-Masad",
+            "verses_translate_name": "Verses",
+            "verses_count": "5"
+        },
+        {
+            "id": 112,
+            "serial_number": "112",
+            "arabic_name": "الإخلاص",
+            "start_page": 604,
+            "end_page": 604,
+            "translate_name": "Al-Ikhlas",
+            "verses_translate_name": "Verses",
+            "verses_count": "4"
+        },
+        {
+            "id": 113,
+            "serial_number": "113",
+            "arabic_name": "الفلق",
+            "start_page": 604,
+            "end_page": 604,
+            "translate_name": "Al-Falaq",
+            "verses_translate_name": "Verses",
+            "verses_count": "5"
+        },
+        {
+            "id": 114,
+            "serial_number": "114",
+            "arabic_name": "الناس",
+            "start_page": 604,
+            "end_page": 604,
+            "translate_name": "An-Nas",
+            "verses_translate_name": "Verses",
+            "verses_count": "6"
+        }
+    ]
+  }

@@ -1,0 +1,34 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": [
+        {
+            "id": 1,
+            "full_name": "Ahmed Ali",
+            "short_name": "Ahmed Ali *",
+            "language": "English",
+            "language_code": "en"
+        },
+        {
+            "id": 2,
+            "full_name": "জহুরুল হক",
+            "short_name": "Hoque",
+            "language": "Bengali",
+            "language_code": "bn"
+        },
+        {
+            "id": 3,
+            "full_name": "Bornez",
+            "short_name": "Bornez",
+            "language": "Spanish",
+            "language_code": "sp"
+        },
+        {
+            "id": 4,
+            "full_name": "تفسير الجلالين",
+            "short_name": "تفسير الجلالين",
+            "language": "Arabic",
+            "language_code": "ar"
+        }
+    ]
+}

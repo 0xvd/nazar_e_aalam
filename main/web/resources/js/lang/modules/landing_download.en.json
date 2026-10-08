@@ -1,0 +1,28 @@
+{
+    "landing_download": {
+        "title": "Download CTA",
+        "subtitle": "Manage the call-to-action section that promotes app downloads",
+        "preview_page": "Preview Page",
+        "error_saving": "Error saving",
+        "section": {
+            "headline": "Headline",
+            "links": "Links"
+        },
+        "form": {
+            "title_label": "Title",
+            "title_placeholder": "Enter title",
+            "title_highlight_label": "Title Highlight",
+            "gold_colored": "gold colored",
+            "title_highlight_placeholder": "Enter highlighted part",
+            "description_label": "Description",
+            "description_placeholder": "Enter description",
+            "app_store_url_label": "App Store URL",
+            "play_store_url_label": "Play Store URL",
+            "codecanyon_url_label": "CodeCanyon URL",
+            "codecanyon_prompt_text_label": "CodeCanyon Prompt Text",
+            "codecanyon_link_text_label": "CodeCanyon Link Text",
+            "show_codecanyon_link_label": "Show CodeCanyon Line",
+            "show_codecanyon_link_desc": "Display the \"Want to resell or customize?\" line under the download buttons"
+        }
+    }
+}

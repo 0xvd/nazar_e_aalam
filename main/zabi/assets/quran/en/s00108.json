@@ -1,0 +1,51 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 108,
+            "serial_number": "108",
+            "arabic_name": "الكوثر",
+            "translated_name": "Al-Kawthar",
+            "verses_translate_name": "Verses",
+            "verses_count": "3"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 602,
+                "page_number": "602",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6205,
+                        "chapter_id": 108,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "إِنَّآ أَعْطَيْنَـٰكَ ٱلْكَوْثَرَ",
+                        "translated_name": "HAVE SURELY given you pre-eminence (in numbers and following);"
+                    },
+                    {
+                        "id": 6206,
+                        "chapter_id": 108,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "فَصَلِّ لِرَبِّكَ وَٱنْحَرْ",
+                        "translated_name": "So serve your Lord with full dedication and sacrifice."
+                    },
+                    {
+                        "id": 6207,
+                        "chapter_id": 108,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ",
+                        "translated_name": "It is surely your opponents whose line will come to end."
+                    }
+                ],
+                "page_arabic_ayah": "إِنَّآ أَعْطَيْنَـٰكَ ٱلْكَوْثَرَ (١)  فَصَلِّ لِرَبِّكَ وَٱنْحَرْ (٢)  إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ (٣)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

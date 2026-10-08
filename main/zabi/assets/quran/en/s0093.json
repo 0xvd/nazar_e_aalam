@@ -1,0 +1,115 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 93,
+            "serial_number": "93",
+            "arabic_name": "الضحى",
+            "translated_name": "Ad-Duhaa",
+            "verses_translate_name": "Verses",
+            "verses_count": "11"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 596,
+                "page_number": "596",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6080,
+                        "chapter_id": 93,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "وَٱلضُّحَىٰ",
+                        "translated_name": "I CALL TO witness the early hours of morning,"
+                    },
+                    {
+                        "id": 6081,
+                        "chapter_id": 93,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "وَٱلَّيْلِ إِذَا سَجَىٰ",
+                        "translated_name": "And the night when dark and still,"
+                    },
+                    {
+                        "id": 6082,
+                        "chapter_id": 93,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+                        "translated_name": "Your Lord has neither left you, nor despises you."
+                    },
+                    {
+                        "id": 6083,
+                        "chapter_id": 93,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "وَلَلْـَٔاخِرَةُ خَيْرٌ لَّكَ مِنَ ٱلْأُولَىٰ",
+                        "translated_name": "What is to come is better for you than what has gone before;"
+                    },
+                    {
+                        "id": 6084,
+                        "chapter_id": 93,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰٓ",
+                        "translated_name": "For your Lord will certainly give you, and you will be content."
+                    },
+                    {
+                        "id": 6085,
+                        "chapter_id": 93,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "أَلَمْ يَجِدْكَ يَتِيمًا فَـَٔاوَىٰ",
+                        "translated_name": "Did He not find you an orphan and take care of you?"
+                    },
+                    {
+                        "id": 6086,
+                        "chapter_id": 93,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "وَوَجَدَكَ ضَآلًّا فَهَدَىٰ",
+                        "translated_name": "Did He not find you perplexed, and show you the way?"
+                    },
+                    {
+                        "id": 6087,
+                        "chapter_id": 93,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "وَوَجَدَكَ عَآئِلًا فَأَغْنَىٰ",
+                        "translated_name": "Did He not find you poor and enrich you?"
+                    },
+                    {
+                        "id": 6088,
+                        "chapter_id": 93,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "فَأَمَّا ٱلْيَتِيمَ فَلَا تَقْهَرْ",
+                        "translated_name": "So do not oppress the orphan,"
+                    },
+                    {
+                        "id": 6089,
+                        "chapter_id": 93,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "وَأَمَّا ٱلسَّآئِلَ فَلَا تَنْهَرْ",
+                        "translated_name": "And do not drive the beggar away,"
+                    },
+                    {
+                        "id": 6090,
+                        "chapter_id": 93,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ",
+                        "translated_name": "And keep recounting the favours of your Lord."
+                    }
+                ],
+                "page_arabic_ayah": "وَٱلضُّحَىٰ (١)  وَٱلَّيْلِ إِذَا سَجَىٰ (٢)  مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ (٣)  وَلَلْـَٔاخِرَةُ خَيْرٌ لَّكَ مِنَ ٱلْأُولَىٰ (٤)  وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰٓ (٥)  أَلَمْ يَجِدْكَ يَتِيمًا فَـَٔاوَىٰ (٦)  وَوَجَدَكَ ضَآلًّا فَهَدَىٰ (٧)  وَوَجَدَكَ عَآئِلًا فَأَغْنَىٰ (٨)  فَأَمَّا ٱلْيَتِيمَ فَلَا تَقْهَرْ (٩)  وَأَمَّا ٱلسَّآئِلَ فَلَا تَنْهَرْ (١٠)  وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ (١١)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

@@ -1,0 +1,23 @@
+{
+    "dhikr": {
+        "title": "Dhikrs List",
+        "singular": "Dhikr",
+        "table": {
+            "short_name_en": "Short name (En)",
+            "short_name_ar": "Short name (Ar)",
+            "full_name_en": "Full name (En)",
+            "full_name_ar": "Full name (Ar)"
+        },
+        "form": {
+            "short_name_en_label": "Short Name (En)",
+            "short_name_en_placeholder": "Enter english short name",
+            "full_name_en_label": "Full Name (En)",
+            "full_name_en_placeholder": "Enter english full name",
+            "short_name_ar_label": "Short Name (Ar)",
+            "short_name_ar_placeholder": "Enter short name ar",
+            "full_name_ar_label": "Full Name (Ar)",
+            "full_name_ar_placeholder": "Enter full name ar",
+            "position_placeholder": "Enter position"
+        }
+    }
+}

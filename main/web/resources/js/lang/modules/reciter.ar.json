@@ -1,0 +1,17 @@
+{
+    "reciter": {
+        "title": "قائمة القارئين",
+        "singular": "القارئ",
+        "add": "إضافة قارئ",
+        "table": {
+            "reciter": "القارئ",
+            "total_sura": "إجمالي السور"
+        },
+        "form": {
+            "name_placeholder": "أدخل الاسم",
+            "position_placeholder": "أدخل الترتيب",
+            "profile_picture": "الصورة الشخصية",
+            "upload_picture": "رفع صورة"
+        }
+    }
+}

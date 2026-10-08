@@ -1,0 +1,75 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 109,
+            "serial_number": "109",
+            "arabic_name": "الكافرون",
+            "translated_name": "Al-Kafirun",
+            "verses_translate_name": "Verses",
+            "verses_count": "6"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 603,
+                "page_number": "603",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6208,
+                        "chapter_id": 109,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "قُلْ يَـٰٓأَيُّهَا ٱلْكَـٰفِرُونَ",
+                        "translated_name": "SAY: \"O YOU unbelievers,"
+                    },
+                    {
+                        "id": 6209,
+                        "chapter_id": 109,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "لَآ أَعْبُدُ مَا تَعْبُدُونَ",
+                        "translated_name": "I do not worship what you worship,"
+                    },
+                    {
+                        "id": 6210,
+                        "chapter_id": 109,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "وَلَآ أَنتُمْ عَـٰبِدُونَ مَآ أَعْبُدُ",
+                        "translated_name": "Nor do you worship who I worship,"
+                    },
+                    {
+                        "id": 6211,
+                        "chapter_id": 109,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "وَلَآ أَنَا۠ عَابِدٌ مَّا عَبَدتُّمْ",
+                        "translated_name": "Nor will I worship what you worship,"
+                    },
+                    {
+                        "id": 6212,
+                        "chapter_id": 109,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "وَلَآ أَنتُمْ عَـٰبِدُونَ مَآ أَعْبُدُ",
+                        "translated_name": "Nor will you worship who I worship:"
+                    },
+                    {
+                        "id": 6213,
+                        "chapter_id": 109,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "لَكُمْ دِينُكُمْ وَلِىَ دِينِ",
+                        "translated_name": "To you your way, to me my way"
+                    }
+                ],
+                "page_arabic_ayah": "قُلْ يَـٰٓأَيُّهَا ٱلْكَـٰفِرُونَ (١)  لَآ أَعْبُدُ مَا تَعْبُدُونَ (٢)  وَلَآ أَنتُمْ عَـٰبِدُونَ مَآ أَعْبُدُ (٣)  وَلَآ أَنَا۠ عَابِدٌ مَّا عَبَدتُّمْ (٤)  وَلَآ أَنتُمْ عَـٰبِدُونَ مَآ أَعْبُدُ (٥)  لَكُمْ دِينُكُمْ وَلِىَ دِينِ (٦)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

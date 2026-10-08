@@ -1,0 +1,26 @@
+{
+    "sifat": {
+        "title": "Sifat List",
+        "singular": "Sifat",
+        "table": {
+            "name_en": "Name (En)",
+            "name_ar": "Name (Ar)",
+            "translated_name": "Translated name",
+            "meaning": "Meaning",
+            "name_benefits": "Name Benefits"
+        },
+        "form": {
+            "name_en_label": "Name (En)",
+            "name_en_placeholder": "Enter english name",
+            "name_ar_label": "Name (Ar)",
+            "name_ar_placeholder": "Enter arabic name",
+            "translated_name_label": "Translated Name (Ar)",
+            "translated_name_placeholder": "Enter translated name (Ar)",
+            "meaning_label": "Meaning (En)",
+            "meaning_placeholder": "Enter meaning",
+            "name_benefits_label": "Name Benefits",
+            "name_benefits_placeholder": "Enter name benefits",
+            "position_placeholder": "Enter position"
+        }
+    }
+}

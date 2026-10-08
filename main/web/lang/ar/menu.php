@@ -1,0 +1,38 @@
+<?php
+
+return [
+
+    'dashboard' => 'لوحة التحكم',
+    'administrator' => 'المسؤول',
+    'roles' => 'الأدوار',
+    'users' => 'المستخدمون',
+    'prayer_times' => 'مواقيت الصلاة',
+    'add_prayer_time' => 'إضافة وقت صلاة',
+    'prayer_times_list' => 'مواقيت الصلاة',
+    'import_prayer_times' => 'استيراد مواقيت الصلاة',
+    'audio_quran' => 'القرآن الصوتي',
+    'reciter_list' => 'قائمة القراء',
+    'bulk_audio_import' => 'استيراد صوتي مجمّع',
+    'dua' => 'الأدعية',
+    'dhikr' => 'الأذكار',
+    'wallpaper' => 'الخلفيات',
+    'wallpaper_category' => 'التصنيف',
+    'wallpaper_list' => 'الخلفيات',
+    'sifat_name' => 'صفات الله',
+    'haram_code' => 'رموز الحرام',
+    'donation' => 'التبرعات',
+    'donation_category' => 'التصنيف',
+    'donation_list' => 'قائمة التبرعات',
+    'payment_methods' => 'طرق الدفع',
+    'landing_page' => 'الصفحة الرئيسية',
+    'hero_section' => 'القسم الرئيسي',
+    'stats_badges' => 'الإحصائيات والشعارات',
+    'features_grid' => 'شبكة الميزات',
+    'section_content' => 'محتوى الأقسام',
+    'download_cta' => 'دعوة التحميل',
+    'footer' => 'التذييل',
+    'seo' => 'تحسين محركات البحث',
+    'blog' => 'المقالات',
+    'settings' => 'الإعدادات',
+
+];

@@ -1,0 +1,361 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 80,
+            "serial_number": "80",
+            "arabic_name": "عبس",
+            "translated_name": "'Abasa",
+            "verses_translate_name": "versos",
+            "verses_count": "42"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 585,
+                "page_number": "585",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5759,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "عَبَسَ وَتَوَلَّىٰٓ",
+                        "translated_name": "Frunció el ceño y volvió la espalda"
+                    },
+                    {
+                        "id": 5760,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "أَن جَآءَهُ ٱلْأَعْمَىٰ",
+                        "translated_name": "cuando el ciego vino junto a él."
+                    },
+                    {
+                        "id": 5761,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَمَا يُدْرِيكَ لَعَلَّهُۥ يَزَّكَّىٰٓ",
+                        "translated_name": "Y ¿Cómo puedes saber? Puede que él se purificase"
+                    },
+                    {
+                        "id": 5762,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "أَوْ يَذَّكَّرُ فَتَنفَعَهُ ٱلذِّكْرَىٰٓ",
+                        "translated_name": "o aceptase la amonestación y ésta le aprovechase."
+                    },
+                    {
+                        "id": 5763,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "أَمَّا مَنِ ٱسْتَغْنَىٰ",
+                        "translated_name": "A ese que alardea de su riqueza"
+                    },
+                    {
+                        "id": 5764,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "فَأَنتَ لَهُۥ تَصَدَّىٰ",
+                        "translated_name": "tú le atiendes complacido."
+                    },
+                    {
+                        "id": 5765,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "وَمَا عَلَيْكَ أَلَّا يَزَّكَّىٰ",
+                        "translated_name": "¿Y qué te importa si no se purifica?"
+                    },
+                    {
+                        "id": 5766,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "وَأَمَّا مَن جَآءَكَ يَسْعَىٰ",
+                        "translated_name": "Pero a quien acude a ti anhelante"
+                    },
+                    {
+                        "id": 5767,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "وَهُوَ يَخْشَىٰ",
+                        "translated_name": "y es temeroso"
+                    },
+                    {
+                        "id": 5768,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "فَأَنتَ عَنْهُ تَلَهَّىٰ",
+                        "translated_name": "no le prestas atención."
+                    },
+                    {
+                        "id": 5769,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "كَلَّآ إِنَّهَا تَذْكِرَةٌ",
+                        "translated_name": "¡Pero no! En verdad, esto es un recordatorio"
+                    },
+                    {
+                        "id": 5770,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "فَمَن شَآءَ ذَكَرَهُۥ",
+                        "translated_name": "-Así pues, quien quiera lo recordará-"
+                    },
+                    {
+                        "id": 5771,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "فِى صُحُفٍ مُّكَرَّمَةٍ",
+                        "translated_name": "recogido en páginas nobles,"
+                    },
+                    {
+                        "id": 5772,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "مَّرْفُوعَةٍ مُّطَهَّرَةٍۭ",
+                        "translated_name": "sublimes, purificadas,"
+                    },
+                    {
+                        "id": 5773,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "بِأَيْدِى سَفَرَةٍ",
+                        "translated_name": "de las manos de enviados"
+                    },
+                    {
+                        "id": 5774,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "16",
+                        "arabic_name": "كِرَامٍۭ بَرَرَةٍ",
+                        "translated_name": "nobles y píos."
+                    },
+                    {
+                        "id": 5775,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "17",
+                        "arabic_name": "قُتِلَ ٱلْإِنسَـٰنُ مَآ أَكْفَرَهُۥ",
+                        "translated_name": "¡Que perezca el ser humano! ¡Qué ingrato es!"
+                    },
+                    {
+                        "id": 5776,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "18",
+                        "arabic_name": "مِنْ أَىِّ شَىْءٍ خَلَقَهُۥ",
+                        "translated_name": "¿De qué cosa le ha creado Él?"
+                    },
+                    {
+                        "id": 5777,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "19",
+                        "arabic_name": "مِن نُّطْفَةٍ خَلَقَهُۥ فَقَدَّرَهُۥ",
+                        "translated_name": "De una gota le ha creado y le ha determinado de manera equilibrada."
+                    },
+                    {
+                        "id": 5778,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "20",
+                        "arabic_name": "ثُمَّ ٱلسَّبِيلَ يَسَّرَهُۥ",
+                        "translated_name": "Luego, ha hecho fácil el camino para él."
+                    },
+                    {
+                        "id": 5779,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "21",
+                        "arabic_name": "ثُمَّ أَمَاتَهُۥ فَأَقْبَرَهُۥ",
+                        "translated_name": "Luego, le hace morir y le entierra."
+                    },
+                    {
+                        "id": 5780,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "22",
+                        "arabic_name": "ثُمَّ إِذَا شَآءَ أَنشَرَهُۥ",
+                        "translated_name": "Luego, cuando Él quiera, le resucitará."
+                    },
+                    {
+                        "id": 5781,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "23",
+                        "arabic_name": "كَلَّا لَمَّا يَقْضِ مَآ أَمَرَهُۥ",
+                        "translated_name": "Pero no. No ha cumplido lo que Él le ha ordenado."
+                    },
+                    {
+                        "id": 5782,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "24",
+                        "arabic_name": "فَلْيَنظُرِ ٱلْإِنسَـٰنُ إِلَىٰ طَعَامِهِۦٓ",
+                        "translated_name": "Que el ser humano observe aquello de lo que se alimenta."
+                    },
+                    {
+                        "id": 5783,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "25",
+                        "arabic_name": "أَنَّا صَبَبْنَا ٱلْمَآءَ صَبًّا",
+                        "translated_name": "Cómo derramamos el agua en abundancia."
+                    },
+                    {
+                        "id": 5784,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "26",
+                        "arabic_name": "ثُمَّ شَقَقْنَا ٱلْأَرْضَ شَقًّا",
+                        "translated_name": "Luego, Nosotros hacemos que la Tierra se abra"
+                    },
+                    {
+                        "id": 5785,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "27",
+                        "arabic_name": "فَأَنۢبَتْنَا فِيهَا حَبًّا",
+                        "translated_name": "y hacemos que brote en ella el grano,"
+                    },
+                    {
+                        "id": 5786,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "28",
+                        "arabic_name": "وَعِنَبًا وَقَضْبًا",
+                        "translated_name": "la uva y los vegetales,"
+                    },
+                    {
+                        "id": 5787,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "29",
+                        "arabic_name": "وَزَيْتُونًا وَنَخْلًا",
+                        "translated_name": "el olivo y la palmera datilera"
+                    },
+                    {
+                        "id": 5788,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "30",
+                        "arabic_name": "وَحَدَآئِقَ غُلْبًا",
+                        "translated_name": "y frondosos jardines"
+                    },
+                    {
+                        "id": 5789,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "31",
+                        "arabic_name": "وَفَـٰكِهَةً وَأَبًّا",
+                        "translated_name": "y frutas y pastos"
+                    },
+                    {
+                        "id": 5790,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "32",
+                        "arabic_name": "مَّتَـٰعًا لَّكُمْ وَلِأَنْعَـٰمِكُمْ",
+                        "translated_name": "para disfrute vuestro y de vuestro ganado."
+                    },
+                    {
+                        "id": 5791,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "33",
+                        "arabic_name": "فَإِذَا جَآءَتِ ٱلصَّآخَّةُ",
+                        "translated_name": "Así pues, cuando llegue a vosotros el Tañido ensordecedor,"
+                    },
+                    {
+                        "id": 5792,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "34",
+                        "arabic_name": "يَوْمَ يَفِرُّ ٱلْمَرْءُ مِنْ أَخِيهِ",
+                        "translated_name": "el día en que huya el hombre de su hermano"
+                    },
+                    {
+                        "id": 5793,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "35",
+                        "arabic_name": "وَأُمِّهِۦ وَأَبِيهِ",
+                        "translated_name": "y de su madre y de su padre"
+                    },
+                    {
+                        "id": 5794,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "36",
+                        "arabic_name": "وَصَـٰحِبَتِهِۦ وَبَنِيهِ",
+                        "translated_name": "y de su esposa e hijos,"
+                    },
+                    {
+                        "id": 5795,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "37",
+                        "arabic_name": "لِكُلِّ ٱمْرِئٍ مِّنْهُمْ يَوْمَئِذٍ شَأْنٌ يُغْنِيهِ",
+                        "translated_name": "a cada cual, ese día, le bastará su propia preocupación"
+                    },
+                    {
+                        "id": 5796,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "38",
+                        "arabic_name": "وُجُوهٌ يَوْمَئِذٍ مُّسْفِرَةٌ",
+                        "translated_name": "Ese día habrá rostros resplandecientes,"
+                    },
+                    {
+                        "id": 5797,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "39",
+                        "arabic_name": "ضَاحِكَةٌ مُّسْتَبْشِرَةٌ",
+                        "translated_name": "sonrientes, felices"
+                    },
+                    {
+                        "id": 5798,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "40",
+                        "arabic_name": "وَوُجُوهٌ يَوْمَئِذٍ عَلَيْهَا غَبَرَةٌ",
+                        "translated_name": "y otros rostros, ese día, ensombrecidos,"
+                    },
+                    {
+                        "id": 5799,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "41",
+                        "arabic_name": "تَرْهَقُهَا قَتَرَةٌ",
+                        "translated_name": "cubiertos por la tristeza."
+                    },
+                    {
+                        "id": 5800,
+                        "chapter_id": 80,
+                        "verses_translate_name": "versos",
+                        "verses_number": "42",
+                        "arabic_name": "أُو۟لَـٰٓئِكَ هُمُ ٱلْكَفَرَةُ ٱلْفَجَرَةُ",
+                        "translated_name": "Esos serán los incrédulos, los depravados."
+                    }
+                ],
+                "page_arabic_ayah": "عَبَسَ وَتَوَلَّىٰٓ (١)  أَن جَآءَهُ ٱلْأَعْمَىٰ (٢)  وَمَا يُدْرِيكَ لَعَلَّهُۥ يَزَّكَّىٰٓ (٣)  أَوْ يَذَّكَّرُ فَتَنفَعَهُ ٱلذِّكْرَىٰٓ (٤)  أَمَّا مَنِ ٱسْتَغْنَىٰ (٥)  فَأَنتَ لَهُۥ تَصَدَّىٰ (٦)  وَمَا عَلَيْكَ أَلَّا يَزَّكَّىٰ (٧)  وَأَمَّا مَن جَآءَكَ يَسْعَىٰ (٨)  وَهُوَ يَخْشَىٰ (٩)  فَأَنتَ عَنْهُ تَلَهَّىٰ (١٠)  كَلَّآ إِنَّهَا تَذْكِرَةٌ (١١)  فَمَن شَآءَ ذَكَرَهُۥ (١٢)  فِى صُحُفٍ مُّكَرَّمَةٍ (١٣)  مَّرْفُوعَةٍ مُّطَهَّرَةٍۭ (١٤)  بِأَيْدِى سَفَرَةٍ (١٥)  كِرَامٍۭ بَرَرَةٍ (١٦)  قُتِلَ ٱلْإِنسَـٰنُ مَآ أَكْفَرَهُۥ (١٧)  مِنْ أَىِّ شَىْءٍ خَلَقَهُۥ (١٨)  مِن نُّطْفَةٍ خَلَقَهُۥ فَقَدَّرَهُۥ (١٩)  ثُمَّ ٱلسَّبِيلَ يَسَّرَهُۥ (٢٠)  ثُمَّ أَمَاتَهُۥ فَأَقْبَرَهُۥ (٢١)  ثُمَّ إِذَا شَآءَ أَنشَرَهُۥ (٢٢)  كَلَّا لَمَّا يَقْضِ مَآ أَمَرَهُۥ (٢٣)  فَلْيَنظُرِ ٱلْإِنسَـٰنُ إِلَىٰ طَعَامِهِۦٓ (٢٤)  أَنَّا صَبَبْنَا ٱلْمَآءَ صَبًّا (٢٥)  ثُمَّ شَقَقْنَا ٱلْأَرْضَ شَقًّا (٢٦)  فَأَنۢبَتْنَا فِيهَا حَبًّا (٢٧)  وَعِنَبًا وَقَضْبًا (٢٨)  وَزَيْتُونًا وَنَخْلًا (٢٩)  وَحَدَآئِقَ غُلْبًا (٣٠)  وَفَـٰكِهَةً وَأَبًّا (٣١)  مَّتَـٰعًا لَّكُمْ وَلِأَنْعَـٰمِكُمْ (٣٢)  فَإِذَا جَآءَتِ ٱلصَّآخَّةُ (٣٣)  يَوْمَ يَفِرُّ ٱلْمَرْءُ مِنْ أَخِيهِ (٣٤)  وَأُمِّهِۦ وَأَبِيهِ (٣٥)  وَصَـٰحِبَتِهِۦ وَبَنِيهِ (٣٦)  لِكُلِّ ٱمْرِئٍ مِّنْهُمْ يَوْمَئِذٍ شَأْنٌ يُغْنِيهِ (٣٧)  وُجُوهٌ يَوْمَئِذٍ مُّسْفِرَةٌ (٣٨)  ضَاحِكَةٌ مُّسْتَبْشِرَةٌ (٣٩)  وَوُجُوهٌ يَوْمَئِذٍ عَلَيْهَا غَبَرَةٌ (٤٠)  تَرْهَقُهَا قَتَرَةٌ (٤١)  أُو۟لَـٰٓئِكَ هُمُ ٱلْكَفَرَةُ ٱلْفَجَرَةُ (٤٢)",
+                "is_read": false
+            }
+        ]
+    }
+}

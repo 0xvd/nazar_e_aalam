@@ -1,0 +1,97 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 104,
+            "serial_number": "১০৪",
+            "arabic_name": "الهمزة",
+            "translated_name": "হুমাযাহ",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "৯"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 601,
+                "page_number": "601",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6180,
+                        "chapter_id": 104,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ",
+                        "translated_name": "ধিক্ প্রত্যেক নিন্দাকারী কুৎসারটনাকারীর প্রতি,"
+                    },
+                    {
+                        "id": 6181,
+                        "chapter_id": 104,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "ٱلَّذِى جَمَعَ مَالًا وَعَدَّدَهُۥ",
+                        "translated_name": "যে ধনসম্পদ জমা করছে এবং তা গুনছে,"
+                    },
+                    {
+                        "id": 6182,
+                        "chapter_id": 104,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ",
+                        "translated_name": "সে ভাবছে যে তার ধনসম্পত্তি তাকে অমর করবে।"
+                    },
+                    {
+                        "id": 6183,
+                        "chapter_id": 104,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "4",
+                        "arabic_name": "كَلَّا ۖ لَيُنۢبَذَنَّ فِى ٱلْحُطَمَةِ",
+                        "translated_name": "কখনো না! তাকে অবশ্যই নিক্ষেপ করা হবে সর্বনাশা দুর্ঘটনায়।"
+                    },
+                    {
+                        "id": 6184,
+                        "chapter_id": 104,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "5",
+                        "arabic_name": "وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ",
+                        "translated_name": "আর কিসে তোমাকে বোঝানো যাবে সেই হুতামাহ্ কি?"
+                    },
+                    {
+                        "id": 6185,
+                        "chapter_id": 104,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "6",
+                        "arabic_name": "نَارُ ٱللَّهِ ٱلْمُوقَدَةُ",
+                        "translated_name": "তা আল্লাহ্‌র হুতাশন, প্রজ্জ্বলিত রয়েছে --"
+                    },
+                    {
+                        "id": 6186,
+                        "chapter_id": 104,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "7",
+                        "arabic_name": "ٱلَّتِى تَطَّلِعُ عَلَى ٱلْأَفْـِٔدَةِ",
+                        "translated_name": "যা উদিত হয়েছে হৃদয়ের উপরে।"
+                    },
+                    {
+                        "id": 6187,
+                        "chapter_id": 104,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "8",
+                        "arabic_name": "إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ",
+                        "translated_name": "নিঃসন্দেহ এটি হচ্ছে তাদের চারপাশে এক বেড়া --"
+                    },
+                    {
+                        "id": 6188,
+                        "chapter_id": 104,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "9",
+                        "arabic_name": "فِى عَمَدٍ مُّمَدَّدَةٍۭ",
+                        "translated_name": "সারিসারি খুটিরঁ ভেতরে।"
+                    }
+                ],
+                "page_arabic_ayah": "وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ (١)  ٱلَّذِى جَمَعَ مَالًا وَعَدَّدَهُۥ (٢)  يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ (٣)  كَلَّا ۖ لَيُنۢبَذَنَّ فِى ٱلْحُطَمَةِ (٤)  وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ (٥)  نَارُ ٱللَّهِ ٱلْمُوقَدَةُ (٦)  ٱلَّتِى تَطَّلِعُ عَلَى ٱلْأَفْـِٔدَةِ (٧)  إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ (٨)  فِى عَمَدٍ مُّمَدَّدَةٍۭ (٩)",
+                "is_read": false
+            }
+        ]
+    }
+}

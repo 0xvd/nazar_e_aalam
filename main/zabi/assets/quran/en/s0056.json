@@ -1,0 +1,822 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 56,
+            "serial_number": "56",
+            "arabic_name": "الواقعة",
+            "translated_name": "Al-Waqi'ah",
+            "verses_translate_name": "Verses",
+            "verses_count": "96"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 534,
+                "page_number": "534",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 4980,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "إِذَا وَقَعَتِ ٱلْوَاقِعَةُ",
+                        "translated_name": "WHEN WHAT IS to happen comes to pass --"
+                    },
+                    {
+                        "id": 4981,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "لَيْسَ لِوَقْعَتِهَا كَاذِبَةٌ",
+                        "translated_name": "Which is bound to happen undoubtedly --"
+                    },
+                    {
+                        "id": 4982,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "خَافِضَةٌ رَّافِعَةٌ",
+                        "translated_name": "Degrading (some) and exalting (others);"
+                    },
+                    {
+                        "id": 4983,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "إِذَا رُجَّتِ ٱلْأَرْضُ رَجًّا",
+                        "translated_name": "When the earth is shaken up convulsively,"
+                    },
+                    {
+                        "id": 4984,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "وَبُسَّتِ ٱلْجِبَالُ بَسًّا",
+                        "translated_name": "The mountains bruised and crushed,"
+                    },
+                    {
+                        "id": 4985,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "فَكَانَتْ هَبَآءً مُّنۢبَثًّا",
+                        "translated_name": "Turned to dust, floating in the air,"
+                    },
+                    {
+                        "id": 4986,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "وَكُنتُمْ أَزْوَٰجًا ثَلَـٰثَةً",
+                        "translated_name": "You will become three categories:"
+                    },
+                    {
+                        "id": 4987,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "فَأَصْحَـٰبُ ٱلْمَيْمَنَةِ مَآ أَصْحَـٰبُ ٱلْمَيْمَنَةِ",
+                        "translated_name": "Those of the right hand -- how (happy) will be those of the right hand!"
+                    },
+                    {
+                        "id": 4988,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "وَأَصْحَـٰبُ ٱلْمَشْـَٔمَةِ مَآ أَصْحَـٰبُ ٱلْمَشْـَٔمَةِ",
+                        "translated_name": "Then those of the left hand -- how (unhappy) will be those of the left hand!"
+                    },
+                    {
+                        "id": 4989,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "وَٱلسَّـٰبِقُونَ ٱلسَّـٰبِقُونَ",
+                        "translated_name": "Then the foremost, how pre-excellent,"
+                    },
+                    {
+                        "id": 4990,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "أُو۟لَـٰٓئِكَ ٱلْمُقَرَّبُونَ",
+                        "translated_name": "Who will be honoured"
+                    },
+                    {
+                        "id": 4991,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "فِى جَنَّـٰتِ ٱلنَّعِيمِ",
+                        "translated_name": "In gardens of tranquility;"
+                    },
+                    {
+                        "id": 4992,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "ثُلَّةٌ مِّنَ ٱلْأَوَّلِينَ",
+                        "translated_name": "A number of the earlier peoples,"
+                    },
+                    {
+                        "id": 4993,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "وَقَلِيلٌ مِّنَ ٱلْـَٔاخِرِينَ",
+                        "translated_name": "And a few of later ages,"
+                    },
+                    {
+                        "id": 4994,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "عَلَىٰ سُرُرٍ مَّوْضُونَةٍ",
+                        "translated_name": "On couches wrought of gold,"
+                    },
+                    {
+                        "id": 4995,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "مُّتَّكِـِٔينَ عَلَيْهَا مُتَقَـٰبِلِينَ",
+                        "translated_name": "Reclining face to face."
+                    }
+                ],
+                "page_arabic_ayah": "إِذَا وَقَعَتِ ٱلْوَاقِعَةُ (١)  لَيْسَ لِوَقْعَتِهَا كَاذِبَةٌ (٢)  خَافِضَةٌ رَّافِعَةٌ (٣)  إِذَا رُجَّتِ ٱلْأَرْضُ رَجًّا (٤)  وَبُسَّتِ ٱلْجِبَالُ بَسًّا (٥)  فَكَانَتْ هَبَآءً مُّنۢبَثًّا (٦)  وَكُنتُمْ أَزْوَٰجًا ثَلَـٰثَةً (٧)  فَأَصْحَـٰبُ ٱلْمَيْمَنَةِ مَآ أَصْحَـٰبُ ٱلْمَيْمَنَةِ (٨)  وَأَصْحَـٰبُ ٱلْمَشْـَٔمَةِ مَآ أَصْحَـٰبُ ٱلْمَشْـَٔمَةِ (٩)  وَٱلسَّـٰبِقُونَ ٱلسَّـٰبِقُونَ (١٠)  أُو۟لَـٰٓئِكَ ٱلْمُقَرَّبُونَ (١١)  فِى جَنَّـٰتِ ٱلنَّعِيمِ (١٢)  ثُلَّةٌ مِّنَ ٱلْأَوَّلِينَ (١٣)  وَقَلِيلٌ مِّنَ ٱلْـَٔاخِرِينَ (١٤)  عَلَىٰ سُرُرٍ مَّوْضُونَةٍ (١٥)  مُّتَّكِـِٔينَ عَلَيْهَا مُتَقَـٰبِلِينَ (١٦)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 535,
+                "page_number": "535",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 4996,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "يَطُوفُ عَلَيْهِمْ وِلْدَٰنٌ مُّخَلَّدُونَ",
+                        "translated_name": "Youths of never-ending bloom will pass round to them"
+                    },
+                    {
+                        "id": 4997,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "بِأَكْوَابٍ وَأَبَارِيقَ وَكَأْسٍ مِّن مَّعِينٍ",
+                        "translated_name": "Cups and decanters, beakers full of sparkling wine,"
+                    },
+                    {
+                        "id": 4998,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "لَّا يُصَدَّعُونَ عَنْهَا وَلَا يُنزِفُونَ",
+                        "translated_name": "Unheady, uninebriating;"
+                    },
+                    {
+                        "id": 4999,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "20",
+                        "arabic_name": "وَفَـٰكِهَةٍ مِّمَّا يَتَخَيَّرُونَ",
+                        "translated_name": "And such fruits as they fancy,"
+                    },
+                    {
+                        "id": 5000,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "21",
+                        "arabic_name": "وَلَحْمِ طَيْرٍ مِّمَّا يَشْتَهُونَ",
+                        "translated_name": "Bird meats that they relish,"
+                    },
+                    {
+                        "id": 5001,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "22",
+                        "arabic_name": "وَحُورٌ عِينٌ",
+                        "translated_name": "And companions with big beautiful eyes"
+                    },
+                    {
+                        "id": 5002,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "23",
+                        "arabic_name": "كَأَمْثَـٰلِ ٱللُّؤْلُؤِ ٱلْمَكْنُونِ",
+                        "translated_name": "Like pearls within their shells,"
+                    },
+                    {
+                        "id": 5003,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "24",
+                        "arabic_name": "جَزَآءًۢ بِمَا كَانُوا۟ يَعْمَلُونَ",
+                        "translated_name": "As recompense for all they had done."
+                    },
+                    {
+                        "id": 5004,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "25",
+                        "arabic_name": "لَا يَسْمَعُونَ فِيهَا لَغْوًا وَلَا تَأْثِيمًا",
+                        "translated_name": "They will hear no nonsense there or talk of sin,"
+                    },
+                    {
+                        "id": 5005,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "26",
+                        "arabic_name": "إِلَّا قِيلًا سَلَـٰمًا سَلَـٰمًا",
+                        "translated_name": "Other than \"Peace, peace\" the salutation."
+                    },
+                    {
+                        "id": 5006,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "27",
+                        "arabic_name": "وَأَصْحَـٰبُ ٱلْيَمِينِ مَآ أَصْحَـٰبُ ٱلْيَمِينِ",
+                        "translated_name": "As for those of the right hand -- how (happy) those of the right hand --"
+                    },
+                    {
+                        "id": 5007,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "28",
+                        "arabic_name": "فِى سِدْرٍ مَّخْضُودٍ",
+                        "translated_name": "They will be in (the shade) of thornless lote"
+                    },
+                    {
+                        "id": 5008,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "29",
+                        "arabic_name": "وَطَلْحٍ مَّنضُودٍ",
+                        "translated_name": "And acacia covered with heaps of bloom,"
+                    },
+                    {
+                        "id": 5009,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "30",
+                        "arabic_name": "وَظِلٍّ مَّمْدُودٍ",
+                        "translated_name": "Lengthened shadows,"
+                    },
+                    {
+                        "id": 5010,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "31",
+                        "arabic_name": "وَمَآءٍ مَّسْكُوبٍ",
+                        "translated_name": "Gushing water,"
+                    },
+                    {
+                        "id": 5011,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "32",
+                        "arabic_name": "وَفَـٰكِهَةٍ كَثِيرَةٍ",
+                        "translated_name": "And fruits numberless,"
+                    },
+                    {
+                        "id": 5012,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "33",
+                        "arabic_name": "لَّا مَقْطُوعَةٍ وَلَا مَمْنُوعَةٍ",
+                        "translated_name": "Unending, unforbidden,"
+                    },
+                    {
+                        "id": 5013,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "34",
+                        "arabic_name": "وَفُرُشٍ مَّرْفُوعَةٍ",
+                        "translated_name": "And maidens incomparable."
+                    },
+                    {
+                        "id": 5014,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "35",
+                        "arabic_name": "إِنَّآ أَنشَأْنَـٰهُنَّ إِنشَآءً",
+                        "translated_name": "We have formed them in a distinctive fashion,"
+                    },
+                    {
+                        "id": 5015,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "36",
+                        "arabic_name": "فَجَعَلْنَـٰهُنَّ أَبْكَارًا",
+                        "translated_name": "And made them virginal,"
+                    },
+                    {
+                        "id": 5016,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "37",
+                        "arabic_name": "عُرُبًا أَتْرَابًا",
+                        "translated_name": "Loving companions matched in age,"
+                    },
+                    {
+                        "id": 5017,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "38",
+                        "arabic_name": "لِّأَصْحَـٰبِ ٱلْيَمِينِ",
+                        "translated_name": "For those of the right hand."
+                    },
+                    {
+                        "id": 5018,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "39",
+                        "arabic_name": "ثُلَّةٌ مِّنَ ٱلْأَوَّلِينَ",
+                        "translated_name": "A crowd of earlier generations"
+                    },
+                    {
+                        "id": 5019,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "40",
+                        "arabic_name": "وَثُلَّةٌ مِّنَ ٱلْـَٔاخِرِينَ",
+                        "translated_name": "And a crowd of the later."
+                    },
+                    {
+                        "id": 5020,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "41",
+                        "arabic_name": "وَأَصْحَـٰبُ ٱلشِّمَالِ مَآ أَصْحَـٰبُ ٱلشِّمَالِ",
+                        "translated_name": "But those of the left hand -- how (unhappy) those of the left hand --"
+                    },
+                    {
+                        "id": 5021,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "42",
+                        "arabic_name": "فِى سَمُومٍ وَحَمِيمٍ",
+                        "translated_name": "Will be in the scorching wind and boiling water,"
+                    },
+                    {
+                        "id": 5022,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "43",
+                        "arabic_name": "وَظِلٍّ مِّن يَحْمُومٍ",
+                        "translated_name": "Under the shadow of thick black smoke"
+                    },
+                    {
+                        "id": 5023,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "44",
+                        "arabic_name": "لَّا بَارِدٍ وَلَا كَرِيمٍ",
+                        "translated_name": "Neither cool nor agreeable."
+                    },
+                    {
+                        "id": 5024,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "45",
+                        "arabic_name": "إِنَّهُمْ كَانُوا۟ قَبْلَ ذَٰلِكَ مُتْرَفِينَ",
+                        "translated_name": "They were endowed with good things"
+                    },
+                    {
+                        "id": 5025,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "46",
+                        "arabic_name": "وَكَانُوا۟ يُصِرُّونَ عَلَى ٱلْحِنثِ ٱلْعَظِيمِ",
+                        "translated_name": "But persisted in that greater sin,"
+                    },
+                    {
+                        "id": 5026,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "47",
+                        "arabic_name": "وَكَانُوا۟ يَقُولُونَ أَئِذَا مِتْنَا وَكُنَّا تُرَابًا وَعِظَـٰمًا أَءِنَّا لَمَبْعُوثُونَ",
+                        "translated_name": "And said: \"What! When we are dead and turned to dust and bones, shall we then be raised again?"
+                    },
+                    {
+                        "id": 5027,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "48",
+                        "arabic_name": "أَوَءَابَآؤُنَا ٱلْأَوَّلُونَ",
+                        "translated_name": "And so will our fathers?\""
+                    },
+                    {
+                        "id": 5028,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "49",
+                        "arabic_name": "قُلْ إِنَّ ٱلْأَوَّلِينَ وَٱلْـَٔاخِرِينَ",
+                        "translated_name": "Say: \"Indeed, the earlier and the later generations"
+                    },
+                    {
+                        "id": 5029,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "50",
+                        "arabic_name": "لَمَجْمُوعُونَ إِلَىٰ مِيقَـٰتِ يَوْمٍ مَّعْلُومٍ",
+                        "translated_name": "Will be gathered together on a certain day which is predetermined."
+                    }
+                ],
+                "page_arabic_ayah": "يَطُوفُ عَلَيْهِمْ وِلْدَٰنٌ مُّخَلَّدُونَ (١٧)  بِأَكْوَابٍ وَأَبَارِيقَ وَكَأْسٍ مِّن مَّعِينٍ (١٨)  لَّا يُصَدَّعُونَ عَنْهَا وَلَا يُنزِفُونَ (١٩)  وَفَـٰكِهَةٍ مِّمَّا يَتَخَيَّرُونَ (٢٠)  وَلَحْمِ طَيْرٍ مِّمَّا يَشْتَهُونَ (٢١)  وَحُورٌ عِينٌ (٢٢)  كَأَمْثَـٰلِ ٱللُّؤْلُؤِ ٱلْمَكْنُونِ (٢٣)  جَزَآءًۢ بِمَا كَانُوا۟ يَعْمَلُونَ (٢٤)  لَا يَسْمَعُونَ فِيهَا لَغْوًا وَلَا تَأْثِيمًا (٢٥)  إِلَّا قِيلًا سَلَـٰمًا سَلَـٰمًا (٢٦)  وَأَصْحَـٰبُ ٱلْيَمِينِ مَآ أَصْحَـٰبُ ٱلْيَمِينِ (٢٧)  فِى سِدْرٍ مَّخْضُودٍ (٢٨)  وَطَلْحٍ مَّنضُودٍ (٢٩)  وَظِلٍّ مَّمْدُودٍ (٣٠)  وَمَآءٍ مَّسْكُوبٍ (٣١)  وَفَـٰكِهَةٍ كَثِيرَةٍ (٣٢)  لَّا مَقْطُوعَةٍ وَلَا مَمْنُوعَةٍ (٣٣)  وَفُرُشٍ مَّرْفُوعَةٍ (٣٤)  إِنَّآ أَنشَأْنَـٰهُنَّ إِنشَآءً (٣٥)  فَجَعَلْنَـٰهُنَّ أَبْكَارًا (٣٦)  عُرُبًا أَتْرَابًا (٣٧)  لِّأَصْحَـٰبِ ٱلْيَمِينِ (٣٨)  ثُلَّةٌ مِّنَ ٱلْأَوَّلِينَ (٣٩)  وَثُلَّةٌ مِّنَ ٱلْـَٔاخِرِينَ (٤٠)  وَأَصْحَـٰبُ ٱلشِّمَالِ مَآ أَصْحَـٰبُ ٱلشِّمَالِ (٤١)  فِى سَمُومٍ وَحَمِيمٍ (٤٢)  وَظِلٍّ مِّن يَحْمُومٍ (٤٣)  لَّا بَارِدٍ وَلَا كَرِيمٍ (٤٤)  إِنَّهُمْ كَانُوا۟ قَبْلَ ذَٰلِكَ مُتْرَفِينَ (٤٥)  وَكَانُوا۟ يُصِرُّونَ عَلَى ٱلْحِنثِ ٱلْعَظِيمِ (٤٦)  وَكَانُوا۟ يَقُولُونَ أَئِذَا مِتْنَا وَكُنَّا تُرَابًا وَعِظَـٰمًا أَءِنَّا لَمَبْعُوثُونَ (٤٧)  أَوَءَابَآؤُنَا ٱلْأَوَّلُونَ (٤٨)  قُلْ إِنَّ ٱلْأَوَّلِينَ وَٱلْـَٔاخِرِينَ (٤٩)  لَمَجْمُوعُونَ إِلَىٰ مِيقَـٰتِ يَوْمٍ مَّعْلُومٍ (٥٠)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 536,
+                "page_number": "536",
+                "page_key": 2,
+                "page_verses": [
+                    {
+                        "id": 5030,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "51",
+                        "arabic_name": "ثُمَّ إِنَّكُمْ أَيُّهَا ٱلضَّآلُّونَ ٱلْمُكَذِّبُونَ",
+                        "translated_name": "Then you, the erring and the deniers,"
+                    },
+                    {
+                        "id": 5031,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "52",
+                        "arabic_name": "لَـَٔاكِلُونَ مِن شَجَرٍ مِّن زَقُّومٍ",
+                        "translated_name": "Will eat of the tree of Zaqqum,"
+                    },
+                    {
+                        "id": 5032,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "53",
+                        "arabic_name": "فَمَالِـُٔونَ مِنْهَا ٱلْبُطُونَ",
+                        "translated_name": "Fill your bellies with it,"
+                    },
+                    {
+                        "id": 5033,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "54",
+                        "arabic_name": "فَشَـٰرِبُونَ عَلَيْهِ مِنَ ٱلْحَمِيمِ",
+                        "translated_name": "And drink over it scalding water,"
+                    },
+                    {
+                        "id": 5034,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "55",
+                        "arabic_name": "فَشَـٰرِبُونَ شُرْبَ ٱلْهِيمِ",
+                        "translated_name": "Lapping it up like female camels raging of thirst with disease.\""
+                    },
+                    {
+                        "id": 5035,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "56",
+                        "arabic_name": "هَـٰذَا نُزُلُهُمْ يَوْمَ ٱلدِّينِ",
+                        "translated_name": "Such will be their welcome on the Day of Judgement."
+                    },
+                    {
+                        "id": 5036,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "57",
+                        "arabic_name": "نَحْنُ خَلَقْنَـٰكُمْ فَلَوْلَا تُصَدِّقُونَ",
+                        "translated_name": "It is He who created you, then why do you not affirm the truth?"
+                    },
+                    {
+                        "id": 5037,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "58",
+                        "arabic_name": "أَفَرَءَيْتُم مَّا تُمْنُونَ",
+                        "translated_name": "Just consider (the semen) that you emit,"
+                    },
+                    {
+                        "id": 5038,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "59",
+                        "arabic_name": "ءَأَنتُمْ تَخْلُقُونَهُۥٓ أَمْ نَحْنُ ٱلْخَـٰلِقُونَ",
+                        "translated_name": "Do you create it, or We are its creator?"
+                    },
+                    {
+                        "id": 5039,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "60",
+                        "arabic_name": "نَحْنُ قَدَّرْنَا بَيْنَكُمُ ٱلْمَوْتَ وَمَا نَحْنُ بِمَسْبُوقِينَ",
+                        "translated_name": "We have incorporated death in your constitution, and We shall not be hindered"
+                    },
+                    {
+                        "id": 5040,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "61",
+                        "arabic_name": "عَلَىٰٓ أَن نُّبَدِّلَ أَمْثَـٰلَكُمْ وَنُنشِئَكُمْ فِى مَا لَا تَعْلَمُونَ",
+                        "translated_name": "From replacing you with others or raising you in a way you do not know."
+                    },
+                    {
+                        "id": 5041,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "62",
+                        "arabic_name": "وَلَقَدْ عَلِمْتُمُ ٱلنَّشْأَةَ ٱلْأُولَىٰ فَلَوْلَا تَذَكَّرُونَ",
+                        "translated_name": "You have known the first creation, then why do you not reflect?"
+                    },
+                    {
+                        "id": 5042,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "63",
+                        "arabic_name": "أَفَرَءَيْتُم مَّا تَحْرُثُونَ",
+                        "translated_name": "Just ponder over what you sow:"
+                    },
+                    {
+                        "id": 5043,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "64",
+                        "arabic_name": "ءَأَنتُمْ تَزْرَعُونَهُۥٓ أَمْ نَحْنُ ٱلزَّٰرِعُونَ",
+                        "translated_name": "Do you give it its increase, or are We the giver?"
+                    },
+                    {
+                        "id": 5044,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "65",
+                        "arabic_name": "لَوْ نَشَآءُ لَجَعَلْنَـٰهُ حُطَـٰمًا فَظَلْتُمْ تَفَكَّهُونَ",
+                        "translated_name": "We could turn it, if We pleased, into straw; then you would rue the day,"
+                    },
+                    {
+                        "id": 5045,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "66",
+                        "arabic_name": "إِنَّا لَمُغْرَمُونَ",
+                        "translated_name": "(And say:) \"We have fallen into debt;"
+                    },
+                    {
+                        "id": 5046,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "67",
+                        "arabic_name": "بَلْ نَحْنُ مَحْرُومُونَ",
+                        "translated_name": "Indeed, we have been deprived of the fruits of our labour.\""
+                    },
+                    {
+                        "id": 5047,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "68",
+                        "arabic_name": "أَفَرَءَيْتُمُ ٱلْمَآءَ ٱلَّذِى تَشْرَبُونَ",
+                        "translated_name": "Consider the water that you drink."
+                    },
+                    {
+                        "id": 5048,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "69",
+                        "arabic_name": "ءَأَنتُمْ أَنزَلْتُمُوهُ مِنَ ٱلْمُزْنِ أَمْ نَحْنُ ٱلْمُنزِلُونَ",
+                        "translated_name": "Do you send it down from the clouds, or We send it down?"
+                    },
+                    {
+                        "id": 5049,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "70",
+                        "arabic_name": "لَوْ نَشَآءُ جَعَلْنَـٰهُ أُجَاجًا فَلَوْلَا تَشْكُرُونَ",
+                        "translated_name": "We could make it brackish, if We pleased; so why do you not acknowledge thanks?"
+                    },
+                    {
+                        "id": 5050,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "71",
+                        "arabic_name": "أَفَرَءَيْتُمُ ٱلنَّارَ ٱلَّتِى تُورُونَ",
+                        "translated_name": "Consider the fire that you strike (and get by friction)."
+                    },
+                    {
+                        "id": 5051,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "72",
+                        "arabic_name": "ءَأَنتُمْ أَنشَأْتُمْ شَجَرَتَهَآ أَمْ نَحْنُ ٱلْمُنشِـُٔونَ",
+                        "translated_name": "Have you raised its tree, or We have raised it?"
+                    },
+                    {
+                        "id": 5052,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "73",
+                        "arabic_name": "نَحْنُ جَعَلْنَـٰهَا تَذْكِرَةً وَمَتَـٰعًا لِّلْمُقْوِينَ",
+                        "translated_name": "We have made it as a reminder and convenience for the needy."
+                    },
+                    {
+                        "id": 5053,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "74",
+                        "arabic_name": "فَسَبِّحْ بِٱسْمِ رَبِّكَ ٱلْعَظِيمِ",
+                        "translated_name": "So glorify your Lord, the most supreme."
+                    },
+                    {
+                        "id": 5054,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "75",
+                        "arabic_name": "۞ فَلَآ أُقْسِمُ بِمَوَٰقِعِ ٱلنُّجُومِ",
+                        "translated_name": "So I call the placement of the stars to witness --"
+                    },
+                    {
+                        "id": 5055,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "76",
+                        "arabic_name": "وَإِنَّهُۥ لَقَسَمٌ لَّوْ تَعْلَمُونَ عَظِيمٌ",
+                        "translated_name": "And this surely is great evidence if you can understand --"
+                    }
+                ],
+                "page_arabic_ayah": "ثُمَّ إِنَّكُمْ أَيُّهَا ٱلضَّآلُّونَ ٱلْمُكَذِّبُونَ (٥١)  لَـَٔاكِلُونَ مِن شَجَرٍ مِّن زَقُّومٍ (٥٢)  فَمَالِـُٔونَ مِنْهَا ٱلْبُطُونَ (٥٣)  فَشَـٰرِبُونَ عَلَيْهِ مِنَ ٱلْحَمِيمِ (٥٤)  فَشَـٰرِبُونَ شُرْبَ ٱلْهِيمِ (٥٥)  هَـٰذَا نُزُلُهُمْ يَوْمَ ٱلدِّينِ (٥٦)  نَحْنُ خَلَقْنَـٰكُمْ فَلَوْلَا تُصَدِّقُونَ (٥٧)  أَفَرَءَيْتُم مَّا تُمْنُونَ (٥٨)  ءَأَنتُمْ تَخْلُقُونَهُۥٓ أَمْ نَحْنُ ٱلْخَـٰلِقُونَ (٥٩)  نَحْنُ قَدَّرْنَا بَيْنَكُمُ ٱلْمَوْتَ وَمَا نَحْنُ بِمَسْبُوقِينَ (٦٠)  عَلَىٰٓ أَن نُّبَدِّلَ أَمْثَـٰلَكُمْ وَنُنشِئَكُمْ فِى مَا لَا تَعْلَمُونَ (٦١)  وَلَقَدْ عَلِمْتُمُ ٱلنَّشْأَةَ ٱلْأُولَىٰ فَلَوْلَا تَذَكَّرُونَ (٦٢)  أَفَرَءَيْتُم مَّا تَحْرُثُونَ (٦٣)  ءَأَنتُمْ تَزْرَعُونَهُۥٓ أَمْ نَحْنُ ٱلزَّٰرِعُونَ (٦٤)  لَوْ نَشَآءُ لَجَعَلْنَـٰهُ حُطَـٰمًا فَظَلْتُمْ تَفَكَّهُونَ (٦٥)  إِنَّا لَمُغْرَمُونَ (٦٦)  بَلْ نَحْنُ مَحْرُومُونَ (٦٧)  أَفَرَءَيْتُمُ ٱلْمَآءَ ٱلَّذِى تَشْرَبُونَ (٦٨)  ءَأَنتُمْ أَنزَلْتُمُوهُ مِنَ ٱلْمُزْنِ أَمْ نَحْنُ ٱلْمُنزِلُونَ (٦٩)  لَوْ نَشَآءُ جَعَلْنَـٰهُ أُجَاجًا فَلَوْلَا تَشْكُرُونَ (٧٠)  أَفَرَءَيْتُمُ ٱلنَّارَ ٱلَّتِى تُورُونَ (٧١)  ءَأَنتُمْ أَنشَأْتُمْ شَجَرَتَهَآ أَمْ نَحْنُ ٱلْمُنشِـُٔونَ (٧٢)  نَحْنُ جَعَلْنَـٰهَا تَذْكِرَةً وَمَتَـٰعًا لِّلْمُقْوِينَ (٧٣)  فَسَبِّحْ بِٱسْمِ رَبِّكَ ٱلْعَظِيمِ (٧٤)  ۞ فَلَآ أُقْسِمُ بِمَوَٰقِعِ ٱلنُّجُومِ (٧٥)  وَإِنَّهُۥ لَقَسَمٌ لَّوْ تَعْلَمُونَ عَظِيمٌ (٧٦)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 537,
+                "page_number": "537",
+                "page_key": 3,
+                "page_verses": [
+                    {
+                        "id": 5056,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "77",
+                        "arabic_name": "إِنَّهُۥ لَقُرْءَانٌ كَرِيمٌ",
+                        "translated_name": "That this is indeed the glorious Qur'an"
+                    },
+                    {
+                        "id": 5057,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "78",
+                        "arabic_name": "فِى كِتَـٰبٍ مَّكْنُونٍ",
+                        "translated_name": "(Inscribed) in the well-kept Book."
+                    },
+                    {
+                        "id": 5058,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "79",
+                        "arabic_name": "لَّا يَمَسُّهُۥٓ إِلَّا ٱلْمُطَهَّرُونَ",
+                        "translated_name": "Only they can reach it who are clean (of mind)."
+                    },
+                    {
+                        "id": 5059,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "80",
+                        "arabic_name": "تَنزِيلٌ مِّن رَّبِّ ٱلْعَـٰلَمِينَ",
+                        "translated_name": "It has been revealed by the Lord of all the worlds."
+                    },
+                    {
+                        "id": 5060,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "81",
+                        "arabic_name": "أَفَبِهَـٰذَا ٱلْحَدِيثِ أَنتُم مُّدْهِنُونَ",
+                        "translated_name": "Then why do you dissimulate this Revelation?"
+                    },
+                    {
+                        "id": 5061,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "82",
+                        "arabic_name": "وَتَجْعَلُونَ رِزْقَكُمْ أَنَّكُمْ تُكَذِّبُونَ",
+                        "translated_name": "You live by calling it a lie."
+                    },
+                    {
+                        "id": 5062,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "83",
+                        "arabic_name": "فَلَوْلَآ إِذَا بَلَغَتِ ٱلْحُلْقُومَ",
+                        "translated_name": "Then how is it that when the (dying) breath is withdrawn into the throat (and rattles),"
+                    },
+                    {
+                        "id": 5063,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "84",
+                        "arabic_name": "وَأَنتُمْ حِينَئِذٍ تَنظُرُونَ",
+                        "translated_name": "And you wait for the moment (of death),"
+                    },
+                    {
+                        "id": 5064,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "85",
+                        "arabic_name": "وَنَحْنُ أَقْرَبُ إِلَيْهِ مِنكُمْ وَلَـٰكِن لَّا تُبْصِرُونَ",
+                        "translated_name": "We are closer to him than you, even though you cannot see?"
+                    },
+                    {
+                        "id": 5065,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "86",
+                        "arabic_name": "فَلَوْلَآ إِن كُنتُمْ غَيْرَ مَدِينِينَ",
+                        "translated_name": "Then why, if you are not indebted (to Us for life),"
+                    },
+                    {
+                        "id": 5066,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "87",
+                        "arabic_name": "تَرْجِعُونَهَآ إِن كُنتُمْ صَـٰدِقِينَ",
+                        "translated_name": "Can you not bring him back? (Answer) if you are truthful"
+                    },
+                    {
+                        "id": 5067,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "88",
+                        "arabic_name": "فَأَمَّآ إِن كَانَ مِنَ ٱلْمُقَرَّبِينَ",
+                        "translated_name": "Then, if he is one of the honoured,"
+                    },
+                    {
+                        "id": 5068,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "89",
+                        "arabic_name": "فَرَوْحٌ وَرَيْحَانٌ وَجَنَّتُ نَعِيمٍ",
+                        "translated_name": "There will be peace and plenty, and gardens of tranquility for him."
+                    },
+                    {
+                        "id": 5069,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "90",
+                        "arabic_name": "وَأَمَّآ إِن كَانَ مِنْ أَصْحَـٰبِ ٱلْيَمِينِ",
+                        "translated_name": "If he is of those of the right hand,"
+                    },
+                    {
+                        "id": 5070,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "91",
+                        "arabic_name": "فَسَلَـٰمٌ لَّكَ مِنْ أَصْحَـٰبِ ٱلْيَمِينِ",
+                        "translated_name": "There will be the salutation by those of the right hand: \"Peace on you."
+                    },
+                    {
+                        "id": 5071,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "92",
+                        "arabic_name": "وَأَمَّآ إِن كَانَ مِنَ ٱلْمُكَذِّبِينَ ٱلضَّآلِّينَ",
+                        "translated_name": "But if he is of the deniers and the errants,"
+                    },
+                    {
+                        "id": 5072,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "93",
+                        "arabic_name": "فَنُزُلٌ مِّنْ حَمِيمٍ",
+                        "translated_name": "The welcome will be boiling water"
+                    },
+                    {
+                        "id": 5073,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "94",
+                        "arabic_name": "وَتَصْلِيَةُ جَحِيمٍ",
+                        "translated_name": "And the roasting in Hell."
+                    },
+                    {
+                        "id": 5074,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "95",
+                        "arabic_name": "إِنَّ هَـٰذَا لَهُوَ حَقُّ ٱلْيَقِينِ",
+                        "translated_name": "This is indeed the ultimate truth."
+                    },
+                    {
+                        "id": 5075,
+                        "chapter_id": 56,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "96",
+                        "arabic_name": "فَسَبِّحْ بِٱسْمِ رَبِّكَ ٱلْعَظِيمِ",
+                        "translated_name": "Then praise your Lord, the most supreme."
+                    }
+                ],
+                "page_arabic_ayah": "إِنَّهُۥ لَقُرْءَانٌ كَرِيمٌ (٧٧)  فِى كِتَـٰبٍ مَّكْنُونٍ (٧٨)  لَّا يَمَسُّهُۥٓ إِلَّا ٱلْمُطَهَّرُونَ (٧٩)  تَنزِيلٌ مِّن رَّبِّ ٱلْعَـٰلَمِينَ (٨٠)  أَفَبِهَـٰذَا ٱلْحَدِيثِ أَنتُم مُّدْهِنُونَ (٨١)  وَتَجْعَلُونَ رِزْقَكُمْ أَنَّكُمْ تُكَذِّبُونَ (٨٢)  فَلَوْلَآ إِذَا بَلَغَتِ ٱلْحُلْقُومَ (٨٣)  وَأَنتُمْ حِينَئِذٍ تَنظُرُونَ (٨٤)  وَنَحْنُ أَقْرَبُ إِلَيْهِ مِنكُمْ وَلَـٰكِن لَّا تُبْصِرُونَ (٨٥)  فَلَوْلَآ إِن كُنتُمْ غَيْرَ مَدِينِينَ (٨٦)  تَرْجِعُونَهَآ إِن كُنتُمْ صَـٰدِقِينَ (٨٧)  فَأَمَّآ إِن كَانَ مِنَ ٱلْمُقَرَّبِينَ (٨٨)  فَرَوْحٌ وَرَيْحَانٌ وَجَنَّتُ نَعِيمٍ (٨٩)  وَأَمَّآ إِن كَانَ مِنْ أَصْحَـٰبِ ٱلْيَمِينِ (٩٠)  فَسَلَـٰمٌ لَّكَ مِنْ أَصْحَـٰبِ ٱلْيَمِينِ (٩١)  وَأَمَّآ إِن كَانَ مِنَ ٱلْمُكَذِّبِينَ ٱلضَّآلِّينَ (٩٢)  فَنُزُلٌ مِّنْ حَمِيمٍ (٩٣)  وَتَصْلِيَةُ جَحِيمٍ (٩٤)  إِنَّ هَـٰذَا لَهُوَ حَقُّ ٱلْيَقِينِ (٩٥)  فَسَبِّحْ بِٱسْمِ رَبِّكَ ٱلْعَظِيمِ (٩٦)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

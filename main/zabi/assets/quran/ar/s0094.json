@@ -1,0 +1,89 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 94,
+            "serial_number": "٩٤",
+            "arabic_name": "الشرح",
+            "translated_name": "الشرح",
+            "verses_translate_name": "الآيات",
+            "verses_count": "٨"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 596,
+                "page_number": "596",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6091,
+                        "chapter_id": 94,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "1",
+                        "arabic_name": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
+                        "translated_name": "«ألم نشرح» استفهام تقرير أي شرحنا «لك» يا محمد «صدرك» بالنبوة وغيرها."
+                    },
+                    {
+                        "id": 6092,
+                        "chapter_id": 94,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "2",
+                        "arabic_name": "وَوَضَعْنَا عَنكَ وِزْرَكَ",
+                        "translated_name": "«ووضعنا» حططنا «عنك وزرك»."
+                    },
+                    {
+                        "id": 6093,
+                        "chapter_id": 94,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "3",
+                        "arabic_name": "ٱلَّذِىٓ أَنقَضَ ظَهْرَكَ",
+                        "translated_name": "(الذي أنقض) أثقل (ظهرك) وهذا كقوله تعالى: \"\" ليغفر لك الله ما تقدم من ذنبك \"\"."
+                    },
+                    {
+                        "id": 6094,
+                        "chapter_id": 94,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "4",
+                        "arabic_name": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+                        "translated_name": "«ورفعنا لك ذكرك» بأن تُذكر مع ذكري في الآذان والإقامة والتشهد والخطبة وغيرها."
+                    },
+                    {
+                        "id": 6095,
+                        "chapter_id": 94,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "5",
+                        "arabic_name": "فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+                        "translated_name": "«فإن مع العسر» الشدة «يسرا» سهولة."
+                    },
+                    {
+                        "id": 6096,
+                        "chapter_id": 94,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "6",
+                        "arabic_name": "إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+                        "translated_name": "«إن مع العسر يسراً» والنبي صلى الله عليه وسلم قاسى من الكفار شدة ثم حصل له اليسر بنصره عليهم."
+                    },
+                    {
+                        "id": 6097,
+                        "chapter_id": 94,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "7",
+                        "arabic_name": "فَإِذَا فَرَغْتَ فَٱنصَبْ",
+                        "translated_name": "«فإذا فرغت» من الصلاة «فانصب» اتعب في الدعاء."
+                    },
+                    {
+                        "id": 6098,
+                        "chapter_id": 94,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "8",
+                        "arabic_name": "وَإِلَىٰ رَبِّكَ فَٱرْغَب",
+                        "translated_name": "«وإلى ربك فارغب» تضرع."
+                    }
+                ],
+                "page_arabic_ayah": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ (١)  وَوَضَعْنَا عَنكَ وِزْرَكَ (٢)  ٱلَّذِىٓ أَنقَضَ ظَهْرَكَ (٣)  وَرَفَعْنَا لَكَ ذِكْرَكَ (٤)  فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا (٥)  إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا (٦)  فَإِذَا فَرَغْتَ فَٱنصَبْ (٧)  وَإِلَىٰ رَبِّكَ فَٱرْغَب (٨)",
+                "is_read": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "blog": {
+        "title": "Blog Posts",
+        "singular": "Post",
+        "table": {
+            "thumbnail": "Thumbnail",
+            "published": "Published"
+        },
+        "form": {
+            "title_label": "Title",
+            "title_placeholder": "Post title",
+            "slug_label": "Slug",
+            "slug_placeholder": "auto-generated-from-title",
+            "category_label": "Category",
+            "category_placeholder": "e.g. Quran, Prayer, Lifestyle",
+            "status_label": "Status",
+            "status_draft": "Draft",
+            "status_published": "Published",
+            "excerpt_label": "Excerpt",
+            "excerpt_hint": "(shown on listing page)",
+            "excerpt_placeholder": "Short summary...",
+            "content_label": "Content",
+            "content_placeholder": "Write your post content here...",
+            "fullscreen_enter": "Fullscreen",
+            "fullscreen_exit": "Exit Fullscreen",
+            "thumbnail_label": "Thumbnail",
+            "thumbnail_hint": "(recommended 1200×630px)",
+            "thumbnail_max_size": "Image must be smaller than {size}.",
+            "thumbnail_uploading": "Uploading thumbnail… {progress}%",
+            "thumbnail_upload_failed": "Thumbnail upload failed.",
+            "thumbnail_retry": "Retry",
+            "thumbnail_retry_before_save": "Please retry the thumbnail upload before saving.",
+            "seo_hint": "(SEO)",
+            "meta_title_label": "Meta Title",
+            "meta_title_placeholder": "Leave blank to use post title",
+            "meta_description_label": "Meta Description",
+            "meta_description_placeholder": "Leave blank to use excerpt"
+        }
+    }
+}

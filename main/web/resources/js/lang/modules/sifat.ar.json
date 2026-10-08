@@ -1,0 +1,26 @@
+{
+    "sifat": {
+        "title": "قائمة الصفات",
+        "singular": "الصفة",
+        "table": {
+            "name_en": "الاسم (إنجليزي)",
+            "name_ar": "الاسم (عربي)",
+            "translated_name": "الاسم المترجم",
+            "meaning": "المعنى",
+            "name_benefits": "فوائد الاسم"
+        },
+        "form": {
+            "name_en_label": "الاسم (إنجليزي)",
+            "name_en_placeholder": "أدخل الاسم بالإنجليزية",
+            "name_ar_label": "الاسم (عربي)",
+            "name_ar_placeholder": "أدخل الاسم بالعربية",
+            "translated_name_label": "الاسم المترجم (عربي)",
+            "translated_name_placeholder": "أدخل الاسم المترجم بالعربية",
+            "meaning_label": "المعنى (إنجليزي)",
+            "meaning_placeholder": "أدخل المعنى",
+            "name_benefits_label": "فوائد الاسم",
+            "name_benefits_placeholder": "أدخل فوائد الاسم",
+            "position_placeholder": "أدخل الترتيب"
+        }
+    }
+}

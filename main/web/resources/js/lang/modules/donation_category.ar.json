@@ -1,0 +1,9 @@
+{
+    "donation_category": {
+        "title": "قائمة التصنيفات",
+        "singular": "تصنيف",
+        "form": {
+            "name_placeholder": "أدخل الاسم"
+        }
+    }
+}

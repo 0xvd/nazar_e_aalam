@@ -1,0 +1,492 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 54,
+            "serial_number": "54",
+            "arabic_name": "القمر",
+            "translated_name": "Al-Qamar",
+            "verses_translate_name": "versos",
+            "verses_count": "55"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 528,
+                "page_number": "528",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 4847,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "ٱقْتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلْقَمَرُ",
+                        "translated_name": "La Hora está muy cerca y la Luna se ha partido."
+                    },
+                    {
+                        "id": 4848,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "وَإِن يَرَوْا۟ ءَايَةً يُعْرِضُوا۟ وَيَقُولُوا۟ سِحْرٌ مُّسْتَمِرٌّ",
+                        "translated_name": "Y si ven una señal se alejan y dicen: «¡Magia! ¡Continuamente!»"
+                    },
+                    {
+                        "id": 4849,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَكَذَّبُوا۟ وَٱتَّبَعُوٓا۟ أَهْوَآءَهُمْ ۚ وَكُلُّ أَمْرٍ مُّسْتَقِرٌّ",
+                        "translated_name": "Y desmienten y siguen sus deseos. Pero todo asunto está establecido"
+                    },
+                    {
+                        "id": 4850,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "وَلَقَدْ جَآءَهُم مِّنَ ٱلْأَنۢبَآءِ مَا فِيهِ مُزْدَجَرٌ",
+                        "translated_name": "y, ciertamente, han venido a ellos noticias con amonestación,"
+                    },
+                    {
+                        "id": 4851,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "حِكْمَةٌۢ بَـٰلِغَةٌ ۖ فَمَا تُغْنِ ٱلنُّذُرُ",
+                        "translated_name": "con una sabiduría absoluta. Pero la amonestación no les beneficia."
+                    },
+                    {
+                        "id": 4852,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "فَتَوَلَّ عَنْهُمْ ۘ يَوْمَ يَدْعُ ٱلدَّاعِ إِلَىٰ شَىْءٍ نُّكُرٍ",
+                        "translated_name": "Así pues, apártate de ellos. El día en el que el pregonero convoque hacia algo horroroso,"
+                    }
+                ],
+                "page_arabic_ayah": "ٱقْتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلْقَمَرُ (١)  وَإِن يَرَوْا۟ ءَايَةً يُعْرِضُوا۟ وَيَقُولُوا۟ سِحْرٌ مُّسْتَمِرٌّ (٢)  وَكَذَّبُوا۟ وَٱتَّبَعُوٓا۟ أَهْوَآءَهُمْ ۚ وَكُلُّ أَمْرٍ مُّسْتَقِرٌّ (٣)  وَلَقَدْ جَآءَهُم مِّنَ ٱلْأَنۢبَآءِ مَا فِيهِ مُزْدَجَرٌ (٤)  حِكْمَةٌۢ بَـٰلِغَةٌ ۖ فَمَا تُغْنِ ٱلنُّذُرُ (٥)  فَتَوَلَّ عَنْهُمْ ۘ يَوْمَ يَدْعُ ٱلدَّاعِ إِلَىٰ شَىْءٍ نُّكُرٍ (٦)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 529,
+                "page_number": "529",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 4853,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "خُشَّعًا أَبْصَـٰرُهُمْ يَخْرُجُونَ مِنَ ٱلْأَجْدَاثِ كَأَنَّهُمْ جَرَادٌ مُّنتَشِرٌ",
+                        "translated_name": "con la mirada humillada, saldrán de las tumbas como si fueran langostas dispersas,"
+                    },
+                    {
+                        "id": 4854,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "مُّهْطِعِينَ إِلَى ٱلدَّاعِ ۖ يَقُولُ ٱلْكَـٰفِرُونَ هَـٰذَا يَوْمٌ عَسِرٌ",
+                        "translated_name": "acudiendo apresuradamente hacia quien les convoca. Los que no creían dirán: «Este es un día difícil.»"
+                    },
+                    {
+                        "id": 4855,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "۞ كَذَّبَتْ قَبْلَهُمْ قَوْمُ نُوحٍ فَكَذَّبُوا۟ عَبْدَنَا وَقَالُوا۟ مَجْنُونٌ وَٱزْدُجِرَ",
+                        "translated_name": "El pueblo de Noé desmintió antes de ellos. Desmintieron a Nuestro siervo y dijeron: «¡Es un loco y los espíritus le torturan!»"
+                    },
+                    {
+                        "id": 4856,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "فَدَعَا رَبَّهُۥٓ أَنِّى مَغْلُوبٌ فَٱنتَصِرْ",
+                        "translated_name": "Así pues, él suplicó a su Señor: «¡En verdad, he fracasado! ¡Toma Tú la revancha!»"
+                    },
+                    {
+                        "id": 4857,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "فَفَتَحْنَآ أَبْوَٰبَ ٱلسَّمَآءِ بِمَآءٍ مُّنْهَمِرٍ",
+                        "translated_name": "Así que, abrimos las puertas del cielo con un agua torrencial"
+                    },
+                    {
+                        "id": 4858,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "وَفَجَّرْنَا ٱلْأَرْضَ عُيُونًا فَٱلْتَقَى ٱلْمَآءُ عَلَىٰٓ أَمْرٍ قَدْ قُدِرَ",
+                        "translated_name": "e hicimos que brotasen de la Tierra fuentes y se juntaron las aguas en la medida decretada"
+                    },
+                    {
+                        "id": 4859,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "وَحَمَلْنَـٰهُ عَلَىٰ ذَاتِ أَلْوَٰحٍ وَدُسُرٍ",
+                        "translated_name": "y le subimos sobre una armazón de tablas y clavos."
+                    },
+                    {
+                        "id": 4860,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "تَجْرِى بِأَعْيُنِنَا جَزَآءً لِّمَن كَانَ كُفِرَ",
+                        "translated_name": "que navegó bajo Nuestra mirada atenta, como un castigo para quienes no creían."
+                    },
+                    {
+                        "id": 4861,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "وَلَقَد تَّرَكْنَـٰهَآ ءَايَةً فَهَلْ مِن مُّدَّكِرٍ",
+                        "translated_name": "Y, ciertamente, lo hemos dejado como una señal. Así pues ¿Habrá alguien que recapacite?"
+                    },
+                    {
+                        "id": 4862,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "16",
+                        "arabic_name": "فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ",
+                        "translated_name": "¡Cómo fueron Mi castigo y Mis advertencias!"
+                    },
+                    {
+                        "id": 4863,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "17",
+                        "arabic_name": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ",
+                        "translated_name": "Ciertamente, hemos hecho el Corán fácil de recordar. ¿Habrá quien se deje amonestar?"
+                    },
+                    {
+                        "id": 4864,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "18",
+                        "arabic_name": "كَذَّبَتْ عَادٌ فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ",
+                        "translated_name": "Ad desmintió y ¡Cómo fueron Mi castigo y Mis advertencias!"
+                    },
+                    {
+                        "id": 4865,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "19",
+                        "arabic_name": "إِنَّآ أَرْسَلْنَا عَلَيْهِمْ رِيحًا صَرْصَرًا فِى يَوْمِ نَحْسٍ مُّسْتَمِرٍّ",
+                        "translated_name": "En verdad, Nosotros enviamos contra ellos un viento violento y helado en un día nefasto e interminable"
+                    },
+                    {
+                        "id": 4866,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "20",
+                        "arabic_name": "تَنزِعُ ٱلنَّاسَ كَأَنَّهُمْ أَعْجَازُ نَخْلٍ مُّنقَعِرٍ",
+                        "translated_name": "que derribaba a las gentes como troncos de palmeras sacados de cuajo de sus raíces"
+                    },
+                    {
+                        "id": 4867,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "21",
+                        "arabic_name": "فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ",
+                        "translated_name": "y ¡Cómo fueron Mi castigo y Mis advertencias!"
+                    },
+                    {
+                        "id": 4868,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "22",
+                        "arabic_name": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ",
+                        "translated_name": "Ciertamente, hemos hecho el Corán fácil de recordar. ¿Habrá quien se deje amonestar?"
+                    },
+                    {
+                        "id": 4869,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "23",
+                        "arabic_name": "كَذَّبَتْ ثَمُودُ بِٱلنُّذُرِ",
+                        "translated_name": "Zamud desmintió Mis amonestaciones."
+                    },
+                    {
+                        "id": 4870,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "24",
+                        "arabic_name": "فَقَالُوٓا۟ أَبَشَرًا مِّنَّا وَٰحِدًا نَّتَّبِعُهُۥٓ إِنَّآ إِذًا لَّفِى ضَلَـٰلٍ وَسُعُرٍ",
+                        "translated_name": "Y dijeron: «¿Acaso vamos a seguir a una persona que es uno de nosotros? Entonces estaríamos extraviados y dementes."
+                    },
+                    {
+                        "id": 4871,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "25",
+                        "arabic_name": "أَءُلْقِىَ ٱلذِّكْرُ عَلَيْهِ مِنۢ بَيْنِنَا بَلْ هُوَ كَذَّابٌ أَشِرٌ",
+                        "translated_name": "¿Iba a recibir el Recuerdo él de entre todos nosotros? ¡No! Más bien es alguien muy mentiroso y arrogante.»"
+                    },
+                    {
+                        "id": 4872,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "26",
+                        "arabic_name": "سَيَعْلَمُونَ غَدًا مَّنِ ٱلْكَذَّابُ ٱلْأَشِرُ",
+                        "translated_name": "«¡Mañana van a saber ellos quién es el mentiroso arrogante!"
+                    },
+                    {
+                        "id": 4873,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "27",
+                        "arabic_name": "إِنَّا مُرْسِلُوا۟ ٱلنَّاقَةِ فِتْنَةً لَّهُمْ فَٱرْتَقِبْهُمْ وَٱصْطَبِرْ",
+                        "translated_name": "En verdad, Les enviaré la camella como una prueba. Así pues, vigílales y ten paciencia.»"
+                    }
+                ],
+                "page_arabic_ayah": "خُشَّعًا أَبْصَـٰرُهُمْ يَخْرُجُونَ مِنَ ٱلْأَجْدَاثِ كَأَنَّهُمْ جَرَادٌ مُّنتَشِرٌ (٧)  مُّهْطِعِينَ إِلَى ٱلدَّاعِ ۖ يَقُولُ ٱلْكَـٰفِرُونَ هَـٰذَا يَوْمٌ عَسِرٌ (٨)  ۞ كَذَّبَتْ قَبْلَهُمْ قَوْمُ نُوحٍ فَكَذَّبُوا۟ عَبْدَنَا وَقَالُوا۟ مَجْنُونٌ وَٱزْدُجِرَ (٩)  فَدَعَا رَبَّهُۥٓ أَنِّى مَغْلُوبٌ فَٱنتَصِرْ (١٠)  فَفَتَحْنَآ أَبْوَٰبَ ٱلسَّمَآءِ بِمَآءٍ مُّنْهَمِرٍ (١١)  وَفَجَّرْنَا ٱلْأَرْضَ عُيُونًا فَٱلْتَقَى ٱلْمَآءُ عَلَىٰٓ أَمْرٍ قَدْ قُدِرَ (١٢)  وَحَمَلْنَـٰهُ عَلَىٰ ذَاتِ أَلْوَٰحٍ وَدُسُرٍ (١٣)  تَجْرِى بِأَعْيُنِنَا جَزَآءً لِّمَن كَانَ كُفِرَ (١٤)  وَلَقَد تَّرَكْنَـٰهَآ ءَايَةً فَهَلْ مِن مُّدَّكِرٍ (١٥)  فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ (١٦)  وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ (١٧)  كَذَّبَتْ عَادٌ فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ (١٨)  إِنَّآ أَرْسَلْنَا عَلَيْهِمْ رِيحًا صَرْصَرًا فِى يَوْمِ نَحْسٍ مُّسْتَمِرٍّ (١٩)  تَنزِعُ ٱلنَّاسَ كَأَنَّهُمْ أَعْجَازُ نَخْلٍ مُّنقَعِرٍ (٢٠)  فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ (٢١)  وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ (٢٢)  كَذَّبَتْ ثَمُودُ بِٱلنُّذُرِ (٢٣)  فَقَالُوٓا۟ أَبَشَرًا مِّنَّا وَٰحِدًا نَّتَّبِعُهُۥٓ إِنَّآ إِذًا لَّفِى ضَلَـٰلٍ وَسُعُرٍ (٢٤)  أَءُلْقِىَ ٱلذِّكْرُ عَلَيْهِ مِنۢ بَيْنِنَا بَلْ هُوَ كَذَّابٌ أَشِرٌ (٢٥)  سَيَعْلَمُونَ غَدًا مَّنِ ٱلْكَذَّابُ ٱلْأَشِرُ (٢٦)  إِنَّا مُرْسِلُوا۟ ٱلنَّاقَةِ فِتْنَةً لَّهُمْ فَٱرْتَقِبْهُمْ وَٱصْطَبِرْ (٢٧)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 530,
+                "page_number": "530",
+                "page_key": 2,
+                "page_verses": [
+                    {
+                        "id": 4874,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "28",
+                        "arabic_name": "وَنَبِّئْهُمْ أَنَّ ٱلْمَآءَ قِسْمَةٌۢ بَيْنَهُمْ ۖ كُلُّ شِرْبٍ مُّحْتَضَرٌ",
+                        "translated_name": "«E infórmales que deberán repartir el agua entre ellos y que cada uno deberá estar presente para beber cuando le toque su turno.»"
+                    },
+                    {
+                        "id": 4875,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "29",
+                        "arabic_name": "فَنَادَوْا۟ صَاحِبَهُمْ فَتَعَاطَىٰ فَعَقَرَ",
+                        "translated_name": "Pero ellos llamaron a su compañero que se ocupó de ello y la mató."
+                    },
+                    {
+                        "id": 4876,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "30",
+                        "arabic_name": "فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ",
+                        "translated_name": "y ¡Cómo fueron Mi castigo y Mis advertencias!"
+                    },
+                    {
+                        "id": 4877,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "31",
+                        "arabic_name": "إِنَّآ أَرْسَلْنَا عَلَيْهِمْ صَيْحَةً وَٰحِدَةً فَكَانُوا۟ كَهَشِيمِ ٱلْمُحْتَظِرِ",
+                        "translated_name": "En verdad, Enviamos sobre ellos un solo grito y quedaron como arbustos secos amontonados por el ganadero."
+                    },
+                    {
+                        "id": 4878,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "32",
+                        "arabic_name": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ",
+                        "translated_name": "Ciertamente, hemos hecho el Corán fácil de recordar. ¿Habrá quien se deje amonestar?"
+                    },
+                    {
+                        "id": 4879,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "33",
+                        "arabic_name": "كَذَّبَتْ قَوْمُ لُوطٍۭ بِٱلنُّذُرِ",
+                        "translated_name": "El pueblo de Loť desmintió Mis advertencias."
+                    },
+                    {
+                        "id": 4880,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "34",
+                        "arabic_name": "إِنَّآ أَرْسَلْنَا عَلَيْهِمْ حَاصِبًا إِلَّآ ءَالَ لُوطٍ ۖ نَّجَّيْنَـٰهُم بِسَحَرٍ",
+                        "translated_name": "En verdad, enviamos sobre ellos un huracán de piedras, excepto a la familia de Lot. Les salvamos un poco antes del amanecer."
+                    },
+                    {
+                        "id": 4881,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "35",
+                        "arabic_name": "نِّعْمَةً مِّنْ عِندِنَا ۚ كَذَٰلِكَ نَجْزِى مَن شَكَرَ",
+                        "translated_name": "Una merced de Nuestra parte. Así es como Nosotros recompensamos a quien es agradecido."
+                    },
+                    {
+                        "id": 4882,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "36",
+                        "arabic_name": "وَلَقَدْ أَنذَرَهُم بَطْشَتَنَا فَتَمَارَوْا۟ بِٱلنُّذُرِ",
+                        "translated_name": "Ciertamente, él les advirtió de Nuestro rigor, pero ellos discutieron Nuestras advertencias."
+                    },
+                    {
+                        "id": 4883,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "37",
+                        "arabic_name": "وَلَقَدْ رَٰوَدُوهُ عَن ضَيْفِهِۦ فَطَمَسْنَآ أَعْيُنَهُمْ فَذُوقُوا۟ عَذَابِى وَنُذُرِ",
+                        "translated_name": "Le exigieron que les entregase a sus invitados y cegamos sus ojos: «Probad Mi castigo y Mis advertencias.»"
+                    },
+                    {
+                        "id": 4884,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "38",
+                        "arabic_name": "وَلَقَدْ صَبَّحَهُم بُكْرَةً عَذَابٌ مُّسْتَقِرٌّ",
+                        "translated_name": "Y, ciertamente, temprano al amanecer les sorprendió un castigo firme y duradero."
+                    },
+                    {
+                        "id": 4885,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "39",
+                        "arabic_name": "فَذُوقُوا۟ عَذَابِى وَنُذُرِ",
+                        "translated_name": "«Probad, pues, Mi castigo y Mis advertencias.»"
+                    },
+                    {
+                        "id": 4886,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "40",
+                        "arabic_name": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ",
+                        "translated_name": "Ciertamente, hemos hecho el Corán fácil de recordar. ¿Habrá quien se deje amonestar?"
+                    },
+                    {
+                        "id": 4887,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "41",
+                        "arabic_name": "وَلَقَدْ جَآءَ ءَالَ فِرْعَوْنَ ٱلنُّذُرُ",
+                        "translated_name": "Y, ciertamente, a las gentes del Faraón les llegaron las advertencias."
+                    },
+                    {
+                        "id": 4888,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "42",
+                        "arabic_name": "كَذَّبُوا۟ بِـَٔايَـٰتِنَا كُلِّهَا فَأَخَذْنَـٰهُمْ أَخْذَ عَزِيزٍ مُّقْتَدِرٍ",
+                        "translated_name": "Desmintieron todas Nuestras señales, así que, les atrapamos como atrapa Uno que es todopoderoso, omnipotente."
+                    },
+                    {
+                        "id": 4889,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "43",
+                        "arabic_name": "أَكُفَّارُكُمْ خَيْرٌ مِّنْ أُو۟لَـٰٓئِكُمْ أَمْ لَكُم بَرَآءَةٌ فِى ٱلزُّبُرِ",
+                        "translated_name": "«¿Acaso vuestros incrédulos son mejores que ellos? ¿O hay para vosotros en las Escrituras una excepción?»"
+                    },
+                    {
+                        "id": 4890,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "44",
+                        "arabic_name": "أَمْ يَقُولُونَ نَحْنُ جَمِيعٌ مُّنتَصِرٌ",
+                        "translated_name": "¿O dicen: «Nosotros somos un grupo que se auxilia mutuamente y es invencible»?"
+                    },
+                    {
+                        "id": 4891,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "45",
+                        "arabic_name": "سَيُهْزَمُ ٱلْجَمْعُ وَيُوَلُّونَ ٱلدُّبُرَ",
+                        "translated_name": "¡El grupo será derrotado y dará la espalda!"
+                    },
+                    {
+                        "id": 4892,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "46",
+                        "arabic_name": "بَلِ ٱلسَّاعَةُ مَوْعِدُهُمْ وَٱلسَّاعَةُ أَدْهَىٰ وَأَمَرُّ",
+                        "translated_name": "Pero se les ha prometido la Hora, y la Hora será más terrible y más amarga."
+                    },
+                    {
+                        "id": 4893,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "47",
+                        "arabic_name": "إِنَّ ٱلْمُجْرِمِينَ فِى ضَلَـٰلٍ وَسُعُرٍ",
+                        "translated_name": "¡En verdad, los malhechores están extraviados y dementes!"
+                    },
+                    {
+                        "id": 4894,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "48",
+                        "arabic_name": "يَوْمَ يُسْحَبُونَ فِى ٱلنَّارِ عَلَىٰ وُجُوهِهِمْ ذُوقُوا۟ مَسَّ سَقَرَ",
+                        "translated_name": "El día en que sean arrastrados boca abajo al Fuego: «¡Probad el contacto del Infierno!»"
+                    },
+                    {
+                        "id": 4895,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "49",
+                        "arabic_name": "إِنَّا كُلَّ شَىْءٍ خَلَقْنَـٰهُ بِقَدَرٍ",
+                        "translated_name": "En verdad, hemos creado todo en su justa medida."
+                    }
+                ],
+                "page_arabic_ayah": "وَنَبِّئْهُمْ أَنَّ ٱلْمَآءَ قِسْمَةٌۢ بَيْنَهُمْ ۖ كُلُّ شِرْبٍ مُّحْتَضَرٌ (٢٨)  فَنَادَوْا۟ صَاحِبَهُمْ فَتَعَاطَىٰ فَعَقَرَ (٢٩)  فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ (٣٠)  إِنَّآ أَرْسَلْنَا عَلَيْهِمْ صَيْحَةً وَٰحِدَةً فَكَانُوا۟ كَهَشِيمِ ٱلْمُحْتَظِرِ (٣١)  وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ (٣٢)  كَذَّبَتْ قَوْمُ لُوطٍۭ بِٱلنُّذُرِ (٣٣)  إِنَّآ أَرْسَلْنَا عَلَيْهِمْ حَاصِبًا إِلَّآ ءَالَ لُوطٍ ۖ نَّجَّيْنَـٰهُم بِسَحَرٍ (٣٤)  نِّعْمَةً مِّنْ عِندِنَا ۚ كَذَٰلِكَ نَجْزِى مَن شَكَرَ (٣٥)  وَلَقَدْ أَنذَرَهُم بَطْشَتَنَا فَتَمَارَوْا۟ بِٱلنُّذُرِ (٣٦)  وَلَقَدْ رَٰوَدُوهُ عَن ضَيْفِهِۦ فَطَمَسْنَآ أَعْيُنَهُمْ فَذُوقُوا۟ عَذَابِى وَنُذُرِ (٣٧)  وَلَقَدْ صَبَّحَهُم بُكْرَةً عَذَابٌ مُّسْتَقِرٌّ (٣٨)  فَذُوقُوا۟ عَذَابِى وَنُذُرِ (٣٩)  وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ (٤٠)  وَلَقَدْ جَآءَ ءَالَ فِرْعَوْنَ ٱلنُّذُرُ (٤١)  كَذَّبُوا۟ بِـَٔايَـٰتِنَا كُلِّهَا فَأَخَذْنَـٰهُمْ أَخْذَ عَزِيزٍ مُّقْتَدِرٍ (٤٢)  أَكُفَّارُكُمْ خَيْرٌ مِّنْ أُو۟لَـٰٓئِكُمْ أَمْ لَكُم بَرَآءَةٌ فِى ٱلزُّبُرِ (٤٣)  أَمْ يَقُولُونَ نَحْنُ جَمِيعٌ مُّنتَصِرٌ (٤٤)  سَيُهْزَمُ ٱلْجَمْعُ وَيُوَلُّونَ ٱلدُّبُرَ (٤٥)  بَلِ ٱلسَّاعَةُ مَوْعِدُهُمْ وَٱلسَّاعَةُ أَدْهَىٰ وَأَمَرُّ (٤٦)  إِنَّ ٱلْمُجْرِمِينَ فِى ضَلَـٰلٍ وَسُعُرٍ (٤٧)  يَوْمَ يُسْحَبُونَ فِى ٱلنَّارِ عَلَىٰ وُجُوهِهِمْ ذُوقُوا۟ مَسَّ سَقَرَ (٤٨)  إِنَّا كُلَّ شَىْءٍ خَلَقْنَـٰهُ بِقَدَرٍ (٤٩)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 531,
+                "page_number": "531",
+                "page_key": 3,
+                "page_verses": [
+                    {
+                        "id": 4896,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "50",
+                        "arabic_name": "وَمَآ أَمْرُنَآ إِلَّا وَٰحِدَةٌ كَلَمْحٍۭ بِٱلْبَصَرِ",
+                        "translated_name": "Nuestra orden es como un parpadeo de ojos."
+                    },
+                    {
+                        "id": 4897,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "51",
+                        "arabic_name": "وَلَقَدْ أَهْلَكْنَآ أَشْيَاعَكُمْ فَهَلْ مِن مُّدَّكِرٍ",
+                        "translated_name": "Y, ciertamente, aniquilamos en el pasado a vuestros semejantes. Así pues ¿Hay alguien que se deje amonestar?"
+                    },
+                    {
+                        "id": 4898,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "52",
+                        "arabic_name": "وَكُلُّ شَىْءٍ فَعَلُوهُ فِى ٱلزُّبُرِ",
+                        "translated_name": "Todo lo que ellos han hecho está recogido en el libro de sus obras"
+                    },
+                    {
+                        "id": 4899,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "53",
+                        "arabic_name": "وَكُلُّ صَغِيرٍ وَكَبِيرٍ مُّسْتَطَرٌ",
+                        "translated_name": "y todo acto, pequeño o grande está registrado."
+                    },
+                    {
+                        "id": 4900,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "54",
+                        "arabic_name": "إِنَّ ٱلْمُتَّقِينَ فِى جَنَّـٰتٍ وَنَهَرٍ",
+                        "translated_name": "En verdad, los temerosos de Dios estarán en Jardines y Arroyos"
+                    },
+                    {
+                        "id": 4901,
+                        "chapter_id": 54,
+                        "verses_translate_name": "versos",
+                        "verses_number": "55",
+                        "arabic_name": "فِى مَقْعَدِ صِدْقٍ عِندَ مَلِيكٍ مُّقْتَدِرٍۭ",
+                        "translated_name": "en una reunión de gente sincera junto a un soberano todopoderoso."
+                    }
+                ],
+                "page_arabic_ayah": "وَمَآ أَمْرُنَآ إِلَّا وَٰحِدَةٌ كَلَمْحٍۭ بِٱلْبَصَرِ (٥٠)  وَلَقَدْ أَهْلَكْنَآ أَشْيَاعَكُمْ فَهَلْ مِن مُّدَّكِرٍ (٥١)  وَكُلُّ شَىْءٍ فَعَلُوهُ فِى ٱلزُّبُرِ (٥٢)  وَكُلُّ صَغِيرٍ وَكَبِيرٍ مُّسْتَطَرٌ (٥٣)  إِنَّ ٱلْمُتَّقِينَ فِى جَنَّـٰتٍ وَنَهَرٍ (٥٤)  فِى مَقْعَدِ صِدْقٍ عِندَ مَلِيكٍ مُّقْتَدِرٍۭ (٥٥)",
+                "is_read": false
+            }
+        ]
+    }
+}

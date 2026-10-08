@@ -1,0 +1,57 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 112,
+            "serial_number": "١١٢",
+            "arabic_name": "الإخلاص",
+            "translated_name": "الإخلاص",
+            "verses_translate_name": "الآيات",
+            "verses_count": "٤"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 604,
+                "page_number": "604",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6222,
+                        "chapter_id": 112,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "1",
+                        "arabic_name": "قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+                        "translated_name": "سئل النبي صلى الله عليه وسلم عن ربه فنزل: «قل هو الله أحد» فالله خبر هو وأحد بدل منه أو خبر ثان."
+                    },
+                    {
+                        "id": 6223,
+                        "chapter_id": 112,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "2",
+                        "arabic_name": "ٱللَّهُ ٱلصَّمَدُ",
+                        "translated_name": "«الله الصمد» مبتدأ وخبر أي المقصود في الحوائج على الدوام."
+                    },
+                    {
+                        "id": 6224,
+                        "chapter_id": 112,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "3",
+                        "arabic_name": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+                        "translated_name": "«لم يلد» لانتفاء مجانسته «ولم يولد» لانتفاء الحدوث عنه."
+                    },
+                    {
+                        "id": 6225,
+                        "chapter_id": 112,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "4",
+                        "arabic_name": "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+                        "translated_name": "«ولم يكن له كفواً أحد» أي مكافئًا ومماثلاً، وله متعلق بكفوًا، وقُدِّم عليه لأنه مَحطُّ القصد بالنفي وأَخَّر أحد وهو اسم يكن عن خبرها رعاية للفاصلة."
+                    }
+                ],
+                "page_arabic_ayah": "قُلْ هُوَ ٱللَّهُ أَحَدٌ (١)  ٱللَّهُ ٱلصَّمَدُ (٢)  لَمْ يَلِدْ وَلَمْ يُولَدْ (٣)  وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ (٤)",
+                "is_read": false
+            }
+        ]
+    }
+}

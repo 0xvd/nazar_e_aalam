@@ -1,0 +1,258 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 71,
+            "serial_number": "71",
+            "arabic_name": "نوح",
+            "translated_name": "Nuh",
+            "verses_translate_name": "versos",
+            "verses_count": "28"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 570,
+                "page_number": "570",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5420,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "إِنَّآ أَرْسَلْنَا نُوحًا إِلَىٰ قَوْمِهِۦٓ أَنْ أَنذِرْ قَوْمَكَ مِن قَبْلِ أَن يَأْتِيَهُمْ عَذَابٌ أَلِيمٌ",
+                        "translated_name": "En verdad, Nosotros enviamos a Noé a su pueblo: «¡Amonesta a tu pueblo antes que venga a ellos un castigo doloroso!»"
+                    },
+                    {
+                        "id": 5421,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "قَالَ يَـٰقَوْمِ إِنِّى لَكُمْ نَذِيرٌ مُّبِينٌ",
+                        "translated_name": "Él dijo: «¡Oh, pueblo mío! En verdad, yo soy para vosotros un amonestador claro."
+                    },
+                    {
+                        "id": 5422,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "أَنِ ٱعْبُدُوا۟ ٱللَّهَ وَٱتَّقُوهُ وَأَطِيعُونِ",
+                        "translated_name": "Adorad a Dios y sed temerosos de Él y obedecedme."
+                    },
+                    {
+                        "id": 5423,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "يَغْفِرْ لَكُم مِّن ذُنُوبِكُمْ وَيُؤَخِّرْكُمْ إِلَىٰٓ أَجَلٍ مُّسَمًّى ۚ إِنَّ أَجَلَ ٱللَّهِ إِذَا جَآءَ لَا يُؤَخَّرُ ۖ لَوْ كُنتُمْ تَعْلَمُونَ",
+                        "translated_name": "Él os perdonará por vuestros pecados y os dará un plazo por un tiempo determinado. En verdad, habéis de saber que cuando se cumpla el plazo de Dios no será pospuesto.»"
+                    },
+                    {
+                        "id": 5424,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "قَالَ رَبِّ إِنِّى دَعَوْتُ قَوْمِى لَيْلًا وَنَهَارًا",
+                        "translated_name": "Dijo: «¡Señor mío! ¡He llamado a mi pueblo noche y día"
+                    },
+                    {
+                        "id": 5425,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "فَلَمْ يَزِدْهُمْ دُعَآءِىٓ إِلَّا فِرَارًا",
+                        "translated_name": "y mi invitación sólo ha servido para que se alejen más!"
+                    },
+                    {
+                        "id": 5426,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "وَإِنِّى كُلَّمَا دَعَوْتُهُمْ لِتَغْفِرَ لَهُمْ جَعَلُوٓا۟ أَصَـٰبِعَهُمْ فِىٓ ءَاذَانِهِمْ وَٱسْتَغْشَوْا۟ ثِيَابَهُمْ وَأَصَرُّوا۟ وَٱسْتَكْبَرُوا۟ ٱسْتِكْبَارًا",
+                        "translated_name": "Y, en verdad, cada vez que les invito para que Tú les perdones, ponen sus dedos en sus oídos y se cubren con sus ropas, persisten en su hostilidad y se muestran extremadamente arrogantes.»"
+                    },
+                    {
+                        "id": 5427,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "ثُمَّ إِنِّى دَعَوْتُهُمْ جِهَارًا",
+                        "translated_name": "«Luego, les he invitado en voz alta y manifiesta.»"
+                    },
+                    {
+                        "id": 5428,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "ثُمَّ إِنِّىٓ أَعْلَنتُ لَهُمْ وَأَسْرَرْتُ لَهُمْ إِسْرَارًا",
+                        "translated_name": "«Luego, les he hablado en público y en privado"
+                    },
+                    {
+                        "id": 5429,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "فَقُلْتُ ٱسْتَغْفِرُوا۟ رَبَّكُمْ إِنَّهُۥ كَانَ غَفَّارًا",
+                        "translated_name": "y les he dicho: Pedid el perdón de vuestro Señor. En verdad, Él es muy perdonador.»"
+                    }
+                ],
+                "page_arabic_ayah": "إِنَّآ أَرْسَلْنَا نُوحًا إِلَىٰ قَوْمِهِۦٓ أَنْ أَنذِرْ قَوْمَكَ مِن قَبْلِ أَن يَأْتِيَهُمْ عَذَابٌ أَلِيمٌ (١)  قَالَ يَـٰقَوْمِ إِنِّى لَكُمْ نَذِيرٌ مُّبِينٌ (٢)  أَنِ ٱعْبُدُوا۟ ٱللَّهَ وَٱتَّقُوهُ وَأَطِيعُونِ (٣)  يَغْفِرْ لَكُم مِّن ذُنُوبِكُمْ وَيُؤَخِّرْكُمْ إِلَىٰٓ أَجَلٍ مُّسَمًّى ۚ إِنَّ أَجَلَ ٱللَّهِ إِذَا جَآءَ لَا يُؤَخَّرُ ۖ لَوْ كُنتُمْ تَعْلَمُونَ (٤)  قَالَ رَبِّ إِنِّى دَعَوْتُ قَوْمِى لَيْلًا وَنَهَارًا (٥)  فَلَمْ يَزِدْهُمْ دُعَآءِىٓ إِلَّا فِرَارًا (٦)  وَإِنِّى كُلَّمَا دَعَوْتُهُمْ لِتَغْفِرَ لَهُمْ جَعَلُوٓا۟ أَصَـٰبِعَهُمْ فِىٓ ءَاذَانِهِمْ وَٱسْتَغْشَوْا۟ ثِيَابَهُمْ وَأَصَرُّوا۟ وَٱسْتَكْبَرُوا۟ ٱسْتِكْبَارًا (٧)  ثُمَّ إِنِّى دَعَوْتُهُمْ جِهَارًا (٨)  ثُمَّ إِنِّىٓ أَعْلَنتُ لَهُمْ وَأَسْرَرْتُ لَهُمْ إِسْرَارًا (٩)  فَقُلْتُ ٱسْتَغْفِرُوا۟ رَبَّكُمْ إِنَّهُۥ كَانَ غَفَّارًا (١٠)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 571,
+                "page_number": "571",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 5430,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "يُرْسِلِ ٱلسَّمَآءَ عَلَيْكُم مِّدْرَارًا",
+                        "translated_name": "«Envía el cielo sobre vosotros cargado de abundantes lluvias"
+                    },
+                    {
+                        "id": 5431,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "وَيُمْدِدْكُم بِأَمْوَٰلٍ وَبَنِينَ وَيَجْعَل لَّكُمْ جَنَّـٰتٍ وَيَجْعَل لَّكُمْ أَنْهَـٰرًا",
+                        "translated_name": "e incrementa vuestros bienes e hijos y pone para vosotros jardines y pone para vosotros ríos.»"
+                    },
+                    {
+                        "id": 5432,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "مَّا لَكُمْ لَا تَرْجُونَ لِلَّهِ وَقَارًا",
+                        "translated_name": "«¿Qué pasa con vosotros que no ponéis vuestra esperanza en la grandeza de Dios"
+                    },
+                    {
+                        "id": 5433,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "وَقَدْ خَلَقَكُمْ أَطْوَارًا",
+                        "translated_name": "cuando es Él quien os ha creado con caracteres diferentes?»"
+                    },
+                    {
+                        "id": 5434,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "أَلَمْ تَرَوْا۟ كَيْفَ خَلَقَ ٱللَّهُ سَبْعَ سَمَـٰوَٰتٍ طِبَاقًا",
+                        "translated_name": "«¿No habéis visto cómo Dios ha creado siete cielos sucesivos"
+                    },
+                    {
+                        "id": 5435,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "16",
+                        "arabic_name": "وَجَعَلَ ٱلْقَمَرَ فِيهِنَّ نُورًا وَجَعَلَ ٱلشَّمْسَ سِرَاجًا",
+                        "translated_name": "y cómo ha puesto la Luna en ellos como una luz y ha puesto el Sol como una lámpara?»"
+                    },
+                    {
+                        "id": 5436,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "17",
+                        "arabic_name": "وَٱللَّهُ أَنۢبَتَكُم مِّنَ ٱلْأَرْضِ نَبَاتًا",
+                        "translated_name": "«Y Dios os hace crecer de la Tierra como plantas."
+                    },
+                    {
+                        "id": 5437,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "18",
+                        "arabic_name": "ثُمَّ يُعِيدُكُمْ فِيهَا وَيُخْرِجُكُمْ إِخْرَاجًا",
+                        "translated_name": "Luego, os hace regresar a ella y (luego) os hace salir totalmente.»"
+                    },
+                    {
+                        "id": 5438,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "19",
+                        "arabic_name": "وَٱللَّهُ جَعَلَ لَكُمُ ٱلْأَرْضَ بِسَاطًا",
+                        "translated_name": "«Y Dios puso la Tierra para vosotros plana como una alfombra"
+                    },
+                    {
+                        "id": 5439,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "20",
+                        "arabic_name": "لِّتَسْلُكُوا۟ مِنْهَا سُبُلًا فِجَاجًا",
+                        "translated_name": "para que viajéis por sus caminos.»"
+                    },
+                    {
+                        "id": 5440,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "21",
+                        "arabic_name": "قَالَ نُوحٌ رَّبِّ إِنَّهُمْ عَصَوْنِى وَٱتَّبَعُوا۟ مَن لَّمْ يَزِدْهُ مَالُهُۥ وَوَلَدُهُۥٓ إِلَّا خَسَارًا",
+                        "translated_name": "Noé dijo: «¡Señor mío! Ellos me han desobedecido y han seguido a quien sus bienes e hijos sólo incrementan su perjuicio"
+                    },
+                    {
+                        "id": 5441,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "22",
+                        "arabic_name": "وَمَكَرُوا۟ مَكْرًا كُبَّارًا",
+                        "translated_name": "y han preparado un gran plan.»"
+                    },
+                    {
+                        "id": 5442,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "23",
+                        "arabic_name": "وَقَالُوا۟ لَا تَذَرُنَّ ءَالِهَتَكُمْ وَلَا تَذَرُنَّ وَدًّا وَلَا سُوَاعًا وَلَا يَغُوثَ وَيَعُوقَ وَنَسْرًا",
+                        "translated_name": "Y dicen: «¡No abandonéis a vuestros dioses! ¡No abandonéis a Wad ni a Suwaa ni a Yaguza y Yauqa y Nasr!»"
+                    },
+                    {
+                        "id": 5443,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "24",
+                        "arabic_name": "وَقَدْ أَضَلُّوا۟ كَثِيرًا ۖ وَلَا تَزِدِ ٱلظَّـٰلِمِينَ إِلَّا ضَلَـٰلًا",
+                        "translated_name": "«¡Y, con seguridad, ellos han extraviado a muchos! ¡No incrementes a los opresores más que su extravío!»"
+                    },
+                    {
+                        "id": 5444,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "25",
+                        "arabic_name": "مِّمَّا خَطِيٓـَٔـٰتِهِمْ أُغْرِقُوا۟ فَأُدْخِلُوا۟ نَارًا فَلَمْ يَجِدُوا۟ لَهُم مِّن دُونِ ٱللَّهِ أَنصَارًا",
+                        "translated_name": "Fueron ahogados por sus iniquidades y se les hará entrar en un Fuego y no encontrarán, aparte de Dios, quien les auxilie."
+                    },
+                    {
+                        "id": 5445,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "26",
+                        "arabic_name": "وَقَالَ نُوحٌ رَّبِّ لَا تَذَرْ عَلَى ٱلْأَرْضِ مِنَ ٱلْكَـٰفِرِينَ دَيَّارًا",
+                        "translated_name": "Y Noé dijo: «¡Señor mío! ¡No dejes sobre la Tierra a ninguno de los que no son creyentes!"
+                    },
+                    {
+                        "id": 5446,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "27",
+                        "arabic_name": "إِنَّكَ إِن تَذَرْهُمْ يُضِلُّوا۟ عِبَادَكَ وَلَا يَلِدُوٓا۟ إِلَّا فَاجِرًا كَفَّارًا",
+                        "translated_name": "Si les dejas, extraviarán a Tus siervos y no engendrarán más que hijos corruptos y muy descreídos.»"
+                    },
+                    {
+                        "id": 5447,
+                        "chapter_id": 71,
+                        "verses_translate_name": "versos",
+                        "verses_number": "28",
+                        "arabic_name": "رَّبِّ ٱغْفِرْ لِى وَلِوَٰلِدَىَّ وَلِمَن دَخَلَ بَيْتِىَ مُؤْمِنًا وَلِلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ وَلَا تَزِدِ ٱلظَّـٰلِمِينَ إِلَّا تَبَارًۢا",
+                        "translated_name": "«¡Dios mío! ¡Perdóname y perdona a mis padres y a quien entre en mi casa siendo creyente, y a los creyentes y a las creyentes, y no incrementes a los opresores más que ruina!»"
+                    }
+                ],
+                "page_arabic_ayah": "يُرْسِلِ ٱلسَّمَآءَ عَلَيْكُم مِّدْرَارًا (١١)  وَيُمْدِدْكُم بِأَمْوَٰلٍ وَبَنِينَ وَيَجْعَل لَّكُمْ جَنَّـٰتٍ وَيَجْعَل لَّكُمْ أَنْهَـٰرًا (١٢)  مَّا لَكُمْ لَا تَرْجُونَ لِلَّهِ وَقَارًا (١٣)  وَقَدْ خَلَقَكُمْ أَطْوَارًا (١٤)  أَلَمْ تَرَوْا۟ كَيْفَ خَلَقَ ٱللَّهُ سَبْعَ سَمَـٰوَٰتٍ طِبَاقًا (١٥)  وَجَعَلَ ٱلْقَمَرَ فِيهِنَّ نُورًا وَجَعَلَ ٱلشَّمْسَ سِرَاجًا (١٦)  وَٱللَّهُ أَنۢبَتَكُم مِّنَ ٱلْأَرْضِ نَبَاتًا (١٧)  ثُمَّ يُعِيدُكُمْ فِيهَا وَيُخْرِجُكُمْ إِخْرَاجًا (١٨)  وَٱللَّهُ جَعَلَ لَكُمُ ٱلْأَرْضَ بِسَاطًا (١٩)  لِّتَسْلُكُوا۟ مِنْهَا سُبُلًا فِجَاجًا (٢٠)  قَالَ نُوحٌ رَّبِّ إِنَّهُمْ عَصَوْنِى وَٱتَّبَعُوا۟ مَن لَّمْ يَزِدْهُ مَالُهُۥ وَوَلَدُهُۥٓ إِلَّا خَسَارًا (٢١)  وَمَكَرُوا۟ مَكْرًا كُبَّارًا (٢٢)  وَقَالُوا۟ لَا تَذَرُنَّ ءَالِهَتَكُمْ وَلَا تَذَرُنَّ وَدًّا وَلَا سُوَاعًا وَلَا يَغُوثَ وَيَعُوقَ وَنَسْرًا (٢٣)  وَقَدْ أَضَلُّوا۟ كَثِيرًا ۖ وَلَا تَزِدِ ٱلظَّـٰلِمِينَ إِلَّا ضَلَـٰلًا (٢٤)  مِّمَّا خَطِيٓـَٔـٰتِهِمْ أُغْرِقُوا۟ فَأُدْخِلُوا۟ نَارًا فَلَمْ يَجِدُوا۟ لَهُم مِّن دُونِ ٱللَّهِ أَنصَارًا (٢٥)  وَقَالَ نُوحٌ رَّبِّ لَا تَذَرْ عَلَى ٱلْأَرْضِ مِنَ ٱلْكَـٰفِرِينَ دَيَّارًا (٢٦)  إِنَّكَ إِن تَذَرْهُمْ يُضِلُّوا۟ عِبَادَكَ وَلَا يَلِدُوٓا۟ إِلَّا فَاجِرًا كَفَّارًا (٢٧)  رَّبِّ ٱغْفِرْ لِى وَلِوَٰلِدَىَّ وَلِمَن دَخَلَ بَيْتِىَ مُؤْمِنًا وَلِلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ وَلَا تَزِدِ ٱلظَّـٰلِمِينَ إِلَّا تَبَارًۢا (٢٨)",
+                "is_read": false
+            }
+        ]
+    }
+}

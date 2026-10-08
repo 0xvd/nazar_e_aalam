@@ -1,0 +1,113 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 101,
+            "serial_number": "১০১",
+            "arabic_name": "القارعة",
+            "translated_name": "কারেয়া",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "১১"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 600,
+                "page_number": "600",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6158,
+                        "chapter_id": 101,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "ٱلْقَارِعَةُ",
+                        "translated_name": "মহাসংকট!"
+                    },
+                    {
+                        "id": 6159,
+                        "chapter_id": 101,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "مَا ٱلْقَارِعَةُ",
+                        "translated_name": "কী সে মহাসংকট?"
+                    },
+                    {
+                        "id": 6160,
+                        "chapter_id": 101,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "وَمَآ أَدْرَىٰكَ مَا ٱلْقَارِعَةُ",
+                        "translated_name": "হায়, কিভাবে তোমাকে বোঝানো যাবে সেই মহাসংকট কি?"
+                    },
+                    {
+                        "id": 6161,
+                        "chapter_id": 101,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "4",
+                        "arabic_name": "يَوْمَ يَكُونُ ٱلنَّاسُ كَٱلْفَرَاشِ ٱلْمَبْثُوثِ",
+                        "translated_name": "সেইদিন মানুষরা হবে বিক্ষিপ্ত পঙ্গপালের মতো,"
+                    },
+                    {
+                        "id": 6162,
+                        "chapter_id": 101,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "5",
+                        "arabic_name": "وَتَكُونُ ٱلْجِبَالُ كَٱلْعِهْنِ ٱلْمَنفُوشِ",
+                        "translated_name": "আর পাহাড়গুলো হয়ে যাবে ধোনা পশমের মতো।"
+                    },
+                    {
+                        "id": 6163,
+                        "chapter_id": 101,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "6",
+                        "arabic_name": "فَأَمَّا مَن ثَقُلَتْ مَوَٰزِينُهُۥ",
+                        "translated_name": "সুতরাং তার ক্ষেত্রে যার পাল্লা ভারী হবে, --"
+                    },
+                    {
+                        "id": 6164,
+                        "chapter_id": 101,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "7",
+                        "arabic_name": "فَهُوَ فِى عِيشَةٍ رَّاضِيَةٍ",
+                        "translated_name": "সে তো তখন হবে সন্তোষজনক জীবনযাপনে।"
+                    },
+                    {
+                        "id": 6165,
+                        "chapter_id": 101,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "8",
+                        "arabic_name": "وَأَمَّا مَنْ خَفَّتْ مَوَٰزِينُهُۥ",
+                        "translated_name": "কিন্ত তার ক্ষেত্রে যার পাল্লা হবে হাল্কা --"
+                    },
+                    {
+                        "id": 6166,
+                        "chapter_id": 101,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "9",
+                        "arabic_name": "فَأُمُّهُۥ هَاوِيَةٌ",
+                        "translated_name": "তার মাতা হবে হাবিয়াহ্‌।"
+                    },
+                    {
+                        "id": 6167,
+                        "chapter_id": 101,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "10",
+                        "arabic_name": "وَمَآ أَدْرَىٰكَ مَا هِيَهْ",
+                        "translated_name": "হায়, কি করে তোমাকে বোঝানো যাবে কী সেই!"
+                    },
+                    {
+                        "id": 6168,
+                        "chapter_id": 101,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "11",
+                        "arabic_name": "نَارٌ حَامِيَةٌۢ",
+                        "translated_name": "জ্বলন্ত আগুন।"
+                    }
+                ],
+                "page_arabic_ayah": "ٱلْقَارِعَةُ (١)  مَا ٱلْقَارِعَةُ (٢)  وَمَآ أَدْرَىٰكَ مَا ٱلْقَارِعَةُ (٣)  يَوْمَ يَكُونُ ٱلنَّاسُ كَٱلْفَرَاشِ ٱلْمَبْثُوثِ (٤)  وَتَكُونُ ٱلْجِبَالُ كَٱلْعِهْنِ ٱلْمَنفُوشِ (٥)  فَأَمَّا مَن ثَقُلَتْ مَوَٰزِينُهُۥ (٦)  فَهُوَ فِى عِيشَةٍ رَّاضِيَةٍ (٧)  وَأَمَّا مَنْ خَفَّتْ مَوَٰزِينُهُۥ (٨)  فَأُمُّهُۥ هَاوِيَةٌ (٩)  وَمَآ أَدْرَىٰكَ مَا هِيَهْ (١٠)  نَارٌ حَامِيَةٌۢ (١١)",
+                "is_read": false
+            }
+        ]
+    }
+}

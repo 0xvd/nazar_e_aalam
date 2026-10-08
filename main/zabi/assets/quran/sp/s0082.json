@@ -1,0 +1,177 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 82,
+            "serial_number": "82",
+            "arabic_name": "الإنفطار",
+            "translated_name": "Al-Infitar",
+            "verses_translate_name": "versos",
+            "verses_count": "19"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 587,
+                "page_number": "587",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5830,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "إِذَا ٱلسَّمَآءُ ٱنفَطَرَتْ",
+                        "translated_name": "Cuando el cielo se hienda,"
+                    },
+                    {
+                        "id": 5831,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "وَإِذَا ٱلْكَوَاكِبُ ٱنتَثَرَتْ",
+                        "translated_name": "cuando las estrellas se dispersen,"
+                    },
+                    {
+                        "id": 5832,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَإِذَا ٱلْبِحَارُ فُجِّرَتْ",
+                        "translated_name": "cuando los mares se confundan unos con otros,"
+                    },
+                    {
+                        "id": 5833,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "وَإِذَا ٱلْقُبُورُ بُعْثِرَتْ",
+                        "translated_name": "cuando los sepulcros sean vueltos del revés,"
+                    },
+                    {
+                        "id": 5834,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "عَلِمَتْ نَفْسٌ مَّا قَدَّمَتْ وَأَخَّرَتْ",
+                        "translated_name": "sabrá el alma lo que hizo y lo que dejó de hacer."
+                    },
+                    {
+                        "id": 5835,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ مَا غَرَّكَ بِرَبِّكَ ٱلْكَرِيمِ",
+                        "translated_name": "¡Oh, humano! ¿Qué fue lo que te sedujo y apartó de tu Señor, el Generosísimo,"
+                    },
+                    {
+                        "id": 5836,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "ٱلَّذِى خَلَقَكَ فَسَوَّىٰكَ فَعَدَلَكَ",
+                        "translated_name": "el Cual te creó, te formó y te perfeccionó"
+                    },
+                    {
+                        "id": 5837,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "فِىٓ أَىِّ صُورَةٍ مَّا شَآءَ رَكَّبَكَ",
+                        "translated_name": "y te compuso en la forma que quiso?"
+                    },
+                    {
+                        "id": 5838,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "كَلَّا بَلْ تُكَذِّبُونَ بِٱلدِّينِ",
+                        "translated_name": "¡Pero no! ¡Vosotros desmentís la Recompensa!"
+                    },
+                    {
+                        "id": 5839,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "وَإِنَّ عَلَيْكُمْ لَحَـٰفِظِينَ",
+                        "translated_name": "Y, en verdad, sobre vosotros hay ángeles guardianes,"
+                    },
+                    {
+                        "id": 5840,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "كِرَامًا كَـٰتِبِينَ",
+                        "translated_name": "honorables escribas de vuestras acciones."
+                    },
+                    {
+                        "id": 5841,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "يَعْلَمُونَ مَا تَفْعَلُونَ",
+                        "translated_name": "Ellos saben lo que hacéis."
+                    },
+                    {
+                        "id": 5842,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "إِنَّ ٱلْأَبْرَارَ لَفِى نَعِيمٍ",
+                        "translated_name": "En verdad, los que obraron bien estarán en la bendición"
+                    },
+                    {
+                        "id": 5843,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "وَإِنَّ ٱلْفُجَّارَ لَفِى جَحِيمٍ",
+                        "translated_name": "y, en verdad, los que hicieron el mal estarán en el Infierno,"
+                    },
+                    {
+                        "id": 5844,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "يَصْلَوْنَهَا يَوْمَ ٱلدِّينِ",
+                        "translated_name": "en el que entrarán y arderán el Día de la Recompensa"
+                    },
+                    {
+                        "id": 5845,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "16",
+                        "arabic_name": "وَمَا هُمْ عَنْهَا بِغَآئِبِينَ",
+                        "translated_name": "y del que no podrán ausentarse."
+                    },
+                    {
+                        "id": 5846,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "17",
+                        "arabic_name": "وَمَآ أَدْرَىٰكَ مَا يَوْمُ ٱلدِّينِ",
+                        "translated_name": "¿Y qué te hará entender lo que es el Día de la Recompensa?"
+                    },
+                    {
+                        "id": 5847,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "18",
+                        "arabic_name": "ثُمَّ مَآ أَدْرَىٰكَ مَا يَوْمُ ٱلدِّينِ",
+                        "translated_name": "Otra vez ¿Qué te hará entender lo que es el Día de la Recompensa?"
+                    },
+                    {
+                        "id": 5848,
+                        "chapter_id": 82,
+                        "verses_translate_name": "versos",
+                        "verses_number": "19",
+                        "arabic_name": "يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْـًٔا ۖ وَٱلْأَمْرُ يَوْمَئِذٍ لِّلَّهِ",
+                        "translated_name": "Es el día en el que un alma no poseerá nada que dar a otra alma y el mando en ese día será sólo de Dios."
+                    }
+                ],
+                "page_arabic_ayah": "إِذَا ٱلسَّمَآءُ ٱنفَطَرَتْ (١)  وَإِذَا ٱلْكَوَاكِبُ ٱنتَثَرَتْ (٢)  وَإِذَا ٱلْبِحَارُ فُجِّرَتْ (٣)  وَإِذَا ٱلْقُبُورُ بُعْثِرَتْ (٤)  عَلِمَتْ نَفْسٌ مَّا قَدَّمَتْ وَأَخَّرَتْ (٥)  يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ مَا غَرَّكَ بِرَبِّكَ ٱلْكَرِيمِ (٦)  ٱلَّذِى خَلَقَكَ فَسَوَّىٰكَ فَعَدَلَكَ (٧)  فِىٓ أَىِّ صُورَةٍ مَّا شَآءَ رَكَّبَكَ (٨)  كَلَّا بَلْ تُكَذِّبُونَ بِٱلدِّينِ (٩)  وَإِنَّ عَلَيْكُمْ لَحَـٰفِظِينَ (١٠)  كِرَامًا كَـٰتِبِينَ (١١)  يَعْلَمُونَ مَا تَفْعَلُونَ (١٢)  إِنَّ ٱلْأَبْرَارَ لَفِى نَعِيمٍ (١٣)  وَإِنَّ ٱلْفُجَّارَ لَفِى جَحِيمٍ (١٤)  يَصْلَوْنَهَا يَوْمَ ٱلدِّينِ (١٥)  وَمَا هُمْ عَنْهَا بِغَآئِبِينَ (١٦)  وَمَآ أَدْرَىٰكَ مَا يَوْمُ ٱلدِّينِ (١٧)  ثُمَّ مَآ أَدْرَىٰكَ مَا يَوْمُ ٱلدِّينِ (١٨)  يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْـًٔا ۖ وَٱلْأَمْرُ يَوْمَئِذٍ لِّلَّهِ (١٩)",
+                "is_read": false
+            }
+        ]
+    }
+}

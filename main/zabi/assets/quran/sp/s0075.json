@@ -1,0 +1,354 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 75,
+            "serial_number": "75",
+            "arabic_name": "القيامة",
+            "translated_name": "Al-Qiyamah",
+            "verses_translate_name": "versos",
+            "verses_count": "40"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 577,
+                "page_number": "577",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5552,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "لَآ أُقْسِمُ بِيَوْمِ ٱلْقِيَـٰمَةِ",
+                        "translated_name": "¡Juro por el Día del Levantamiento!"
+                    },
+                    {
+                        "id": 5553,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "وَلَآ أُقْسِمُ بِٱلنَّفْسِ ٱللَّوَّامَةِ",
+                        "translated_name": "¡Y juro por el alma que aconseja el bien!"
+                    },
+                    {
+                        "id": 5554,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "أَيَحْسَبُ ٱلْإِنسَـٰنُ أَلَّن نَّجْمَعَ عِظَامَهُۥ",
+                        "translated_name": "¿Piensa el ser humano que no reuniremos sus huesos?"
+                    },
+                    {
+                        "id": 5555,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "بَلَىٰ قَـٰدِرِينَ عَلَىٰٓ أَن نُّسَوِّىَ بَنَانَهُۥ",
+                        "translated_name": "Pues sí. Tenemos poder para recomponer sus huellas dactilares."
+                    },
+                    {
+                        "id": 5556,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "بَلْ يُرِيدُ ٱلْإِنسَـٰنُ لِيَفْجُرَ أَمَامَهُۥ",
+                        "translated_name": "Pero el ser humano desea seguir viviendo en el pecado."
+                    },
+                    {
+                        "id": 5557,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "يَسْـَٔلُ أَيَّانَ يَوْمُ ٱلْقِيَـٰمَةِ",
+                        "translated_name": "Pregunta él: «¿Cuándo tendrá lugar el Día del Levantamiento?»"
+                    },
+                    {
+                        "id": 5558,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "فَإِذَا بَرِقَ ٱلْبَصَرُ",
+                        "translated_name": "Así, cuando se debilite la vista"
+                    },
+                    {
+                        "id": 5559,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "وَخَسَفَ ٱلْقَمَرُ",
+                        "translated_name": "y se oculte la Luna"
+                    },
+                    {
+                        "id": 5560,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "وَجُمِعَ ٱلشَّمْسُ وَٱلْقَمَرُ",
+                        "translated_name": "y se junten el Sol y la Luna,"
+                    },
+                    {
+                        "id": 5561,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "يَقُولُ ٱلْإِنسَـٰنُ يَوْمَئِذٍ أَيْنَ ٱلْمَفَرُّ",
+                        "translated_name": "ese día el ser humano dirá: «¿Dónde está el lugar por el que escapar?»"
+                    },
+                    {
+                        "id": 5562,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "كَلَّا لَا وَزَرَ",
+                        "translated_name": "Pues no. No hay refugio."
+                    },
+                    {
+                        "id": 5563,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "إِلَىٰ رَبِّكَ يَوْمَئِذٍ ٱلْمُسْتَقَرُّ",
+                        "translated_name": "Ese día el lugar de encuentro será en dirección a tu Señor."
+                    },
+                    {
+                        "id": 5564,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "يُنَبَّؤُا۟ ٱلْإِنسَـٰنُ يَوْمَئِذٍۭ بِمَا قَدَّمَ وَأَخَّرَ",
+                        "translated_name": "Ese día será informado el ser humano de lo que envió por delante y de lo que dejó atrás."
+                    },
+                    {
+                        "id": 5565,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "بَلِ ٱلْإِنسَـٰنُ عَلَىٰ نَفْسِهِۦ بَصِيرَةٌ",
+                        "translated_name": "El ser humano es quien mejor conoce su propia alma"
+                    },
+                    {
+                        "id": 5566,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "وَلَوْ أَلْقَىٰ مَعَاذِيرَهُۥ",
+                        "translated_name": "aunque trate de disculparse."
+                    },
+                    {
+                        "id": 5567,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "16",
+                        "arabic_name": "لَا تُحَرِّكْ بِهِۦ لِسَانَكَ لِتَعْجَلَ بِهِۦٓ",
+                        "translated_name": "No muevas con él tu lengua para apresurarle."
+                    },
+                    {
+                        "id": 5568,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "17",
+                        "arabic_name": "إِنَّ عَلَيْنَا جَمْعَهُۥ وَقُرْءَانَهُۥ",
+                        "translated_name": "En verdad, reunirlo y recitarlo es responsabilidad Nuestra."
+                    },
+                    {
+                        "id": 5569,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "18",
+                        "arabic_name": "فَإِذَا قَرَأْنَـٰهُ فَٱتَّبِعْ قُرْءَانَهُۥ",
+                        "translated_name": "Así pues, cuando Nosotros lo hayamos terminado de recitar, repite su recitación."
+                    },
+                    {
+                        "id": 5570,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "19",
+                        "arabic_name": "ثُمَّ إِنَّ عَلَيْنَا بَيَانَهُۥ",
+                        "translated_name": "Luego, en verdad, Nosotros nos encargamos de explicarlo."
+                    }
+                ],
+                "page_arabic_ayah": "لَآ أُقْسِمُ بِيَوْمِ ٱلْقِيَـٰمَةِ (١)  وَلَآ أُقْسِمُ بِٱلنَّفْسِ ٱللَّوَّامَةِ (٢)  أَيَحْسَبُ ٱلْإِنسَـٰنُ أَلَّن نَّجْمَعَ عِظَامَهُۥ (٣)  بَلَىٰ قَـٰدِرِينَ عَلَىٰٓ أَن نُّسَوِّىَ بَنَانَهُۥ (٤)  بَلْ يُرِيدُ ٱلْإِنسَـٰنُ لِيَفْجُرَ أَمَامَهُۥ (٥)  يَسْـَٔلُ أَيَّانَ يَوْمُ ٱلْقِيَـٰمَةِ (٦)  فَإِذَا بَرِقَ ٱلْبَصَرُ (٧)  وَخَسَفَ ٱلْقَمَرُ (٨)  وَجُمِعَ ٱلشَّمْسُ وَٱلْقَمَرُ (٩)  يَقُولُ ٱلْإِنسَـٰنُ يَوْمَئِذٍ أَيْنَ ٱلْمَفَرُّ (١٠)  كَلَّا لَا وَزَرَ (١١)  إِلَىٰ رَبِّكَ يَوْمَئِذٍ ٱلْمُسْتَقَرُّ (١٢)  يُنَبَّؤُا۟ ٱلْإِنسَـٰنُ يَوْمَئِذٍۭ بِمَا قَدَّمَ وَأَخَّرَ (١٣)  بَلِ ٱلْإِنسَـٰنُ عَلَىٰ نَفْسِهِۦ بَصِيرَةٌ (١٤)  وَلَوْ أَلْقَىٰ مَعَاذِيرَهُۥ (١٥)  لَا تُحَرِّكْ بِهِۦ لِسَانَكَ لِتَعْجَلَ بِهِۦٓ (١٦)  إِنَّ عَلَيْنَا جَمْعَهُۥ وَقُرْءَانَهُۥ (١٧)  فَإِذَا قَرَأْنَـٰهُ فَٱتَّبِعْ قُرْءَانَهُۥ (١٨)  ثُمَّ إِنَّ عَلَيْنَا بَيَانَهُۥ (١٩)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 578,
+                "page_number": "578",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 5571,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "20",
+                        "arabic_name": "كَلَّا بَلْ تُحِبُّونَ ٱلْعَاجِلَةَ",
+                        "translated_name": "¡Pero no! Amáis la vida transitoria"
+                    },
+                    {
+                        "id": 5572,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "21",
+                        "arabic_name": "وَتَذَرُونَ ٱلْـَٔاخِرَةَ",
+                        "translated_name": "y descuidáis la Otra."
+                    },
+                    {
+                        "id": 5573,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "22",
+                        "arabic_name": "وُجُوهٌ يَوْمَئِذٍ نَّاضِرَةٌ",
+                        "translated_name": "Ese día, algunos rostros estarán radiantes"
+                    },
+                    {
+                        "id": 5574,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "23",
+                        "arabic_name": "إِلَىٰ رَبِّهَا نَاظِرَةٌ",
+                        "translated_name": "mirando a su Señor"
+                    },
+                    {
+                        "id": 5575,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "24",
+                        "arabic_name": "وَوُجُوهٌ يَوْمَئِذٍۭ بَاسِرَةٌ",
+                        "translated_name": "y algunos rostros, ese día, estarán contraídos"
+                    },
+                    {
+                        "id": 5576,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "25",
+                        "arabic_name": "تَظُنُّ أَن يُفْعَلَ بِهَا فَاقِرَةٌ",
+                        "translated_name": "al saber que sufrirán un castigo que les quebrará la columna."
+                    },
+                    {
+                        "id": 5577,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "26",
+                        "arabic_name": "كَلَّآ إِذَا بَلَغَتِ ٱلتَّرَاقِىَ",
+                        "translated_name": "¡Pero no! Cuando alcance las clavículas"
+                    },
+                    {
+                        "id": 5578,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "27",
+                        "arabic_name": "وَقِيلَ مَنْ ۜ رَاقٍ",
+                        "translated_name": "Y se diga: «¿Quién puede salvarle?»"
+                    },
+                    {
+                        "id": 5579,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "28",
+                        "arabic_name": "وَظَنَّ أَنَّهُ ٱلْفِرَاقُ",
+                        "translated_name": "y él sepa que le ha llegado el tiempo de la separación"
+                    },
+                    {
+                        "id": 5580,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "29",
+                        "arabic_name": "وَٱلْتَفَّتِ ٱلسَّاقُ بِٱلسَّاقِ",
+                        "translated_name": "y una pierna se junte con la otra,"
+                    },
+                    {
+                        "id": 5581,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "30",
+                        "arabic_name": "إِلَىٰ رَبِّكَ يَوْمَئِذٍ ٱلْمَسَاقُ",
+                        "translated_name": "ese día, será conducido hacia su Señor."
+                    },
+                    {
+                        "id": 5582,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "31",
+                        "arabic_name": "فَلَا صَدَّقَ وَلَا صَلَّىٰ",
+                        "translated_name": "Él nunca aceptó ni rezó"
+                    },
+                    {
+                        "id": 5583,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "32",
+                        "arabic_name": "وَلَـٰكِن كَذَّبَ وَتَوَلَّىٰ",
+                        "translated_name": "sino que desmintió y se apartó."
+                    },
+                    {
+                        "id": 5584,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "33",
+                        "arabic_name": "ثُمَّ ذَهَبَ إِلَىٰٓ أَهْلِهِۦ يَتَمَطَّىٰٓ",
+                        "translated_name": "Luego, fue hacia su gente con arrogancia."
+                    },
+                    {
+                        "id": 5585,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "34",
+                        "arabic_name": "أَوْلَىٰ لَكَ فَأَوْلَىٰ",
+                        "translated_name": "¡Es lo mejor para ti, es lo mejor!"
+                    },
+                    {
+                        "id": 5586,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "35",
+                        "arabic_name": "ثُمَّ أَوْلَىٰ لَكَ فَأَوْلَىٰٓ",
+                        "translated_name": "¡Sí! ¡Es lo mejor para ti, es lo mejor!"
+                    },
+                    {
+                        "id": 5587,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "36",
+                        "arabic_name": "أَيَحْسَبُ ٱلْإِنسَـٰنُ أَن يُتْرَكَ سُدًى",
+                        "translated_name": "¿Acaso cree el ser humano que será dejado a su antojo y no Nos ocuparemos de él?"
+                    },
+                    {
+                        "id": 5588,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "37",
+                        "arabic_name": "أَلَمْ يَكُ نُطْفَةً مِّن مَّنِىٍّ يُمْنَىٰ",
+                        "translated_name": "¿Acaso no fue una gota de esperma eyaculado?"
+                    },
+                    {
+                        "id": 5589,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "38",
+                        "arabic_name": "ثُمَّ كَانَ عَلَقَةً فَخَلَقَ فَسَوَّىٰ",
+                        "translated_name": "Luego fue algo suspendido y Él le creó y le dio forma"
+                    },
+                    {
+                        "id": 5590,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "39",
+                        "arabic_name": "فَجَعَلَ مِنْهُ ٱلزَّوْجَيْنِ ٱلذَّكَرَ وَٱلْأُنثَىٰٓ",
+                        "translated_name": "e hizo de él la pareja del macho y la hembra."
+                    },
+                    {
+                        "id": 5591,
+                        "chapter_id": 75,
+                        "verses_translate_name": "versos",
+                        "verses_number": "40",
+                        "arabic_name": "أَلَيْسَ ذَٰلِكَ بِقَـٰدِرٍ عَلَىٰٓ أَن يُحْـِۧىَ ٱلْمَوْتَىٰ",
+                        "translated_name": "¿Acaso alguien así no es capaz de dar vida a lo muerto?"
+                    }
+                ],
+                "page_arabic_ayah": "كَلَّا بَلْ تُحِبُّونَ ٱلْعَاجِلَةَ (٢٠)  وَتَذَرُونَ ٱلْـَٔاخِرَةَ (٢١)  وُجُوهٌ يَوْمَئِذٍ نَّاضِرَةٌ (٢٢)  إِلَىٰ رَبِّهَا نَاظِرَةٌ (٢٣)  وَوُجُوهٌ يَوْمَئِذٍۭ بَاسِرَةٌ (٢٤)  تَظُنُّ أَن يُفْعَلَ بِهَا فَاقِرَةٌ (٢٥)  كَلَّآ إِذَا بَلَغَتِ ٱلتَّرَاقِىَ (٢٦)  وَقِيلَ مَنْ ۜ رَاقٍ (٢٧)  وَظَنَّ أَنَّهُ ٱلْفِرَاقُ (٢٨)  وَٱلْتَفَّتِ ٱلسَّاقُ بِٱلسَّاقِ (٢٩)  إِلَىٰ رَبِّكَ يَوْمَئِذٍ ٱلْمَسَاقُ (٣٠)  فَلَا صَدَّقَ وَلَا صَلَّىٰ (٣١)  وَلَـٰكِن كَذَّبَ وَتَوَلَّىٰ (٣٢)  ثُمَّ ذَهَبَ إِلَىٰٓ أَهْلِهِۦ يَتَمَطَّىٰٓ (٣٣)  أَوْلَىٰ لَكَ فَأَوْلَىٰ (٣٤)  ثُمَّ أَوْلَىٰ لَكَ فَأَوْلَىٰٓ (٣٥)  أَيَحْسَبُ ٱلْإِنسَـٰنُ أَن يُتْرَكَ سُدًى (٣٦)  أَلَمْ يَكُ نُطْفَةً مِّن مَّنِىٍّ يُمْنَىٰ (٣٧)  ثُمَّ كَانَ عَلَقَةً فَخَلَقَ فَسَوَّىٰ (٣٨)  فَجَعَلَ مِنْهُ ٱلزَّوْجَيْنِ ٱلذَّكَرَ وَٱلْأُنثَىٰٓ (٣٩)  أَلَيْسَ ذَٰلِكَ بِقَـٰدِرٍ عَلَىٰٓ أَن يُحْـِۧىَ ٱلْمَوْتَىٰ (٤٠)",
+                "is_read": false
+            }
+        ]
+    }
+}

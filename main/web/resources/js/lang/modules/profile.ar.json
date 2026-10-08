@@ -1,0 +1,41 @@
+{
+    "profile": {
+        "change_password": {
+            "title": "تغيير كلمة المرور",
+            "subtitle": "تحديث كلمة مرور حسابك",
+            "password_hint": "استخدم 8 أحرف على الأقل، بما في ذلك رقم ورمز للحصول على كلمة مرور أقوى.",
+            "current_password_label": "كلمة المرور الحالية",
+            "current_password_placeholder": "أدخل كلمة المرور الحالية",
+            "new_password_label": "كلمة المرور الجديدة",
+            "new_password_placeholder": "أدخل كلمة المرور الجديدة",
+            "confirm_password_label": "تأكيد كلمة المرور الجديدة",
+            "confirm_password_placeholder": "أعد إدخال كلمة المرور الجديدة",
+            "submit": "تحديث كلمة المرور",
+            "strength": {
+                "weak": "ضعيفة",
+                "fair": "متوسطة",
+                "good": "جيدة",
+                "strong": "قوية"
+            }
+        },
+        "personal_information": {
+            "title": "المعلومات الشخصية",
+            "subtitle": "تحديث اسمك وبيانات التواصل والصورة الشخصية",
+            "change_photo": "تغيير الصورة",
+            "photo_title": "الصورة الشخصية",
+            "photo_hint": "JPG أو PNG أو GIF · بحد أقصى 2 ميجابايت",
+            "first_name_label": "الاسم الأول",
+            "first_name_placeholder": "الاسم الأول",
+            "last_name_label": "اسم العائلة",
+            "last_name_placeholder": "اسم العائلة",
+            "email_label": "البريد الإلكتروني",
+            "phone_label": "رقم الهاتف",
+            "dob_label": "تاريخ الميلاد",
+            "gender_label": "الجنس",
+            "gender_male": "ذكر",
+            "gender_female": "أنثى",
+            "gender_other": "آخر",
+            "submit": "حفظ التغييرات"
+        }
+    }
+}

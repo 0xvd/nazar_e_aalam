@@ -1,0 +1,331 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 83,
+            "serial_number": "83",
+            "arabic_name": "المطففين",
+            "translated_name": "Al-Mutaffifin",
+            "verses_translate_name": "versos",
+            "verses_count": "36"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 587,
+                "page_number": "587",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5849,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "وَيْلٌ لِّلْمُطَفِّفِينَ",
+                        "translated_name": "¡Ay de los defraudadores!"
+                    },
+                    {
+                        "id": 5850,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "ٱلَّذِينَ إِذَا ٱكْتَالُوا۟ عَلَى ٱلنَّاسِ يَسْتَوْفُونَ",
+                        "translated_name": "Esos que, cuando compran, exigen la medida exacta"
+                    },
+                    {
+                        "id": 5851,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَإِذَا كَالُوهُمْ أَو وَّزَنُوهُمْ يُخْسِرُونَ",
+                        "translated_name": "pero, cuando ellos dan la medida o el peso a otros, defraudan."
+                    },
+                    {
+                        "id": 5852,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "أَلَا يَظُنُّ أُو۟لَـٰٓئِكَ أَنَّهُم مَّبْعُوثُونَ",
+                        "translated_name": "¿Acaso no piensan que serán resucitados"
+                    },
+                    {
+                        "id": 5853,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "لِيَوْمٍ عَظِيمٍ",
+                        "translated_name": "para un día grandioso,"
+                    },
+                    {
+                        "id": 5854,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "يَوْمَ يَقُومُ ٱلنَّاسُ لِرَبِّ ٱلْعَـٰلَمِينَ",
+                        "translated_name": "el día en el que los humanos comparecerán ante el Señor de los Mundos?"
+                    }
+                ],
+                "page_arabic_ayah": "وَيْلٌ لِّلْمُطَفِّفِينَ (١)  ٱلَّذِينَ إِذَا ٱكْتَالُوا۟ عَلَى ٱلنَّاسِ يَسْتَوْفُونَ (٢)  وَإِذَا كَالُوهُمْ أَو وَّزَنُوهُمْ يُخْسِرُونَ (٣)  أَلَا يَظُنُّ أُو۟لَـٰٓئِكَ أَنَّهُم مَّبْعُوثُونَ (٤)  لِيَوْمٍ عَظِيمٍ (٥)  يَوْمَ يَقُومُ ٱلنَّاسُ لِرَبِّ ٱلْعَـٰلَمِينَ (٦)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 588,
+                "page_number": "588",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 5855,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "كَلَّآ إِنَّ كِتَـٰبَ ٱلْفُجَّارِ لَفِى سِجِّينٍ",
+                        "translated_name": "¡Pero no! En verdad, el registro de los malvados está en Siyyin."
+                    },
+                    {
+                        "id": 5856,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "وَمَآ أَدْرَىٰكَ مَا سِجِّينٌ",
+                        "translated_name": "¿Y qué te hará entender lo que es Siyyin?"
+                    },
+                    {
+                        "id": 5857,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "كِتَـٰبٌ مَّرْقُومٌ",
+                        "translated_name": "Es una escritura detallada."
+                    },
+                    {
+                        "id": 5858,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "¡Ay, ese día, de los desmentidores!"
+                    },
+                    {
+                        "id": 5859,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "ٱلَّذِينَ يُكَذِّبُونَ بِيَوْمِ ٱلدِّينِ",
+                        "translated_name": "¡Aquellos que desmentían el Día de la Recompensa!"
+                    },
+                    {
+                        "id": 5860,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "وَمَا يُكَذِّبُ بِهِۦٓ إِلَّا كُلُّ مُعْتَدٍ أَثِيمٍ",
+                        "translated_name": "Y nadie lo desmiente, excepto quien es un trasgresor pecador."
+                    },
+                    {
+                        "id": 5861,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "إِذَا تُتْلَىٰ عَلَيْهِ ءَايَـٰتُنَا قَالَ أَسَـٰطِيرُ ٱلْأَوَّلِينَ",
+                        "translated_name": "Cuando les son recitados nuestros versículos dicen: «¡Fábulas de los primitivos!»"
+                    },
+                    {
+                        "id": 5862,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "كَلَّا ۖ بَلْ ۜ رَانَ عَلَىٰ قُلُوبِهِم مَّا كَانُوا۟ يَكْسِبُونَ",
+                        "translated_name": "¡Pero no! ¡Lo que hacían enmoheció sus corazones!"
+                    },
+                    {
+                        "id": 5863,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "كَلَّآ إِنَّهُمْ عَن رَّبِّهِمْ يَوْمَئِذٍ لَّمَحْجُوبُونَ",
+                        "translated_name": "¡Pero no! ¡En verdad, ese día no podrán contemplar a su Señor!"
+                    },
+                    {
+                        "id": 5864,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "16",
+                        "arabic_name": "ثُمَّ إِنَّهُمْ لَصَالُوا۟ ٱلْجَحِيمِ",
+                        "translated_name": "Luego, entrarán y arderán en el Infierno."
+                    },
+                    {
+                        "id": 5865,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "17",
+                        "arabic_name": "ثُمَّ يُقَالُ هَـٰذَا ٱلَّذِى كُنتُم بِهِۦ تُكَذِّبُونَ",
+                        "translated_name": "Luego, se les dirá: «¡Esto era lo que desmentíais!»"
+                    },
+                    {
+                        "id": 5866,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "18",
+                        "arabic_name": "كَلَّآ إِنَّ كِتَـٰبَ ٱلْأَبْرَارِ لَفِى عِلِّيِّينَ",
+                        "translated_name": "¡Pero no! ¡En verdad, el registro de los que hacen el bien está en Il.liyyin!"
+                    },
+                    {
+                        "id": 5867,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "19",
+                        "arabic_name": "وَمَآ أَدْرَىٰكَ مَا عِلِّيُّونَ",
+                        "translated_name": "¿Y qué te hará entender lo que es Il.liyyin?"
+                    },
+                    {
+                        "id": 5868,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "20",
+                        "arabic_name": "كِتَـٰبٌ مَّرْقُومٌ",
+                        "translated_name": "Es una escritura detallada"
+                    },
+                    {
+                        "id": 5869,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "21",
+                        "arabic_name": "يَشْهَدُهُ ٱلْمُقَرَّبُونَ",
+                        "translated_name": "que los cercanos atestiguarán."
+                    },
+                    {
+                        "id": 5870,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "22",
+                        "arabic_name": "إِنَّ ٱلْأَبْرَارَ لَفِى نَعِيمٍ",
+                        "translated_name": "En verdad, quienes hacen el bien estarán entre bendiciones,"
+                    },
+                    {
+                        "id": 5871,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "23",
+                        "arabic_name": "عَلَى ٱلْأَرَآئِكِ يَنظُرُونَ",
+                        "translated_name": "reclinados en asientos, contemplando."
+                    },
+                    {
+                        "id": 5872,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "24",
+                        "arabic_name": "تَعْرِفُ فِى وُجُوهِهِمْ نَضْرَةَ ٱلنَّعِيمِ",
+                        "translated_name": "Reconocerás en sus rostros el resplandor de las bendiciones."
+                    },
+                    {
+                        "id": 5873,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "25",
+                        "arabic_name": "يُسْقَوْنَ مِن رَّحِيقٍ مَّخْتُومٍ",
+                        "translated_name": "Les será escanciado un néctar sellado."
+                    },
+                    {
+                        "id": 5874,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "26",
+                        "arabic_name": "خِتَـٰمُهُۥ مِسْكٌ ۚ وَفِى ذَٰلِكَ فَلْيَتَنَافَسِ ٱلْمُتَنَـٰفِسُونَ",
+                        "translated_name": "Su sello será almizcle -¡que quienes emulan emulen por ello!-"
+                    },
+                    {
+                        "id": 5875,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "27",
+                        "arabic_name": "وَمِزَاجُهُۥ مِن تَسْنِيمٍ",
+                        "translated_name": "mezclado con Tasnim,"
+                    },
+                    {
+                        "id": 5876,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "28",
+                        "arabic_name": "عَيْنًا يَشْرَبُ بِهَا ٱلْمُقَرَّبُونَ",
+                        "translated_name": "una fuente de la que beberán los cercanos."
+                    },
+                    {
+                        "id": 5877,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "29",
+                        "arabic_name": "إِنَّ ٱلَّذِينَ أَجْرَمُوا۟ كَانُوا۟ مِنَ ٱلَّذِينَ ءَامَنُوا۟ يَضْحَكُونَ",
+                        "translated_name": "En verdad, los malvados se burlaban de quienes eran creyentes"
+                    },
+                    {
+                        "id": 5878,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "30",
+                        "arabic_name": "وَإِذَا مَرُّوا۟ بِهِمْ يَتَغَامَزُونَ",
+                        "translated_name": "y cuando pasaban junto a ellos se hacían guiños de complicidad"
+                    },
+                    {
+                        "id": 5879,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "31",
+                        "arabic_name": "وَإِذَا ٱنقَلَبُوٓا۟ إِلَىٰٓ أَهْلِهِمُ ٱنقَلَبُوا۟ فَكِهِينَ",
+                        "translated_name": "cuando regresaban a sus gentes regresaban satisfechos y orgullosos de su comportamiento"
+                    },
+                    {
+                        "id": 5880,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "32",
+                        "arabic_name": "وَإِذَا رَأَوْهُمْ قَالُوٓا۟ إِنَّ هَـٰٓؤُلَآءِ لَضَآلُّونَ",
+                        "translated_name": "y cuando les veían decían: «¡En verdad que están extraviados!»"
+                    },
+                    {
+                        "id": 5881,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "33",
+                        "arabic_name": "وَمَآ أُرْسِلُوا۟ عَلَيْهِمْ حَـٰفِظِينَ",
+                        "translated_name": "aunque no habían sido enviados a ellos de protectores."
+                    },
+                    {
+                        "id": 5882,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "34",
+                        "arabic_name": "فَٱلْيَوْمَ ٱلَّذِينَ ءَامَنُوا۟ مِنَ ٱلْكُفَّارِ يَضْحَكُونَ",
+                        "translated_name": "Así pues, hoy los creyentes se reirán de los que no creen,"
+                    }
+                ],
+                "page_arabic_ayah": "كَلَّآ إِنَّ كِتَـٰبَ ٱلْفُجَّارِ لَفِى سِجِّينٍ (٧)  وَمَآ أَدْرَىٰكَ مَا سِجِّينٌ (٨)  كِتَـٰبٌ مَّرْقُومٌ (٩)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (١٠)  ٱلَّذِينَ يُكَذِّبُونَ بِيَوْمِ ٱلدِّينِ (١١)  وَمَا يُكَذِّبُ بِهِۦٓ إِلَّا كُلُّ مُعْتَدٍ أَثِيمٍ (١٢)  إِذَا تُتْلَىٰ عَلَيْهِ ءَايَـٰتُنَا قَالَ أَسَـٰطِيرُ ٱلْأَوَّلِينَ (١٣)  كَلَّا ۖ بَلْ ۜ رَانَ عَلَىٰ قُلُوبِهِم مَّا كَانُوا۟ يَكْسِبُونَ (١٤)  كَلَّآ إِنَّهُمْ عَن رَّبِّهِمْ يَوْمَئِذٍ لَّمَحْجُوبُونَ (١٥)  ثُمَّ إِنَّهُمْ لَصَالُوا۟ ٱلْجَحِيمِ (١٦)  ثُمَّ يُقَالُ هَـٰذَا ٱلَّذِى كُنتُم بِهِۦ تُكَذِّبُونَ (١٧)  كَلَّآ إِنَّ كِتَـٰبَ ٱلْأَبْرَارِ لَفِى عِلِّيِّينَ (١٨)  وَمَآ أَدْرَىٰكَ مَا عِلِّيُّونَ (١٩)  كِتَـٰبٌ مَّرْقُومٌ (٢٠)  يَشْهَدُهُ ٱلْمُقَرَّبُونَ (٢١)  إِنَّ ٱلْأَبْرَارَ لَفِى نَعِيمٍ (٢٢)  عَلَى ٱلْأَرَآئِكِ يَنظُرُونَ (٢٣)  تَعْرِفُ فِى وُجُوهِهِمْ نَضْرَةَ ٱلنَّعِيمِ (٢٤)  يُسْقَوْنَ مِن رَّحِيقٍ مَّخْتُومٍ (٢٥)  خِتَـٰمُهُۥ مِسْكٌ ۚ وَفِى ذَٰلِكَ فَلْيَتَنَافَسِ ٱلْمُتَنَـٰفِسُونَ (٢٦)  وَمِزَاجُهُۥ مِن تَسْنِيمٍ (٢٧)  عَيْنًا يَشْرَبُ بِهَا ٱلْمُقَرَّبُونَ (٢٨)  إِنَّ ٱلَّذِينَ أَجْرَمُوا۟ كَانُوا۟ مِنَ ٱلَّذِينَ ءَامَنُوا۟ يَضْحَكُونَ (٢٩)  وَإِذَا مَرُّوا۟ بِهِمْ يَتَغَامَزُونَ (٣٠)  وَإِذَا ٱنقَلَبُوٓا۟ إِلَىٰٓ أَهْلِهِمُ ٱنقَلَبُوا۟ فَكِهِينَ (٣١)  وَإِذَا رَأَوْهُمْ قَالُوٓا۟ إِنَّ هَـٰٓؤُلَآءِ لَضَآلُّونَ (٣٢)  وَمَآ أُرْسِلُوا۟ عَلَيْهِمْ حَـٰفِظِينَ (٣٣)  فَٱلْيَوْمَ ٱلَّذِينَ ءَامَنُوا۟ مِنَ ٱلْكُفَّارِ يَضْحَكُونَ (٣٤)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 589,
+                "page_number": "589",
+                "page_key": 2,
+                "page_verses": [
+                    {
+                        "id": 5883,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "35",
+                        "arabic_name": "عَلَى ٱلْأَرَآئِكِ يَنظُرُونَ",
+                        "translated_name": "reclinados en asientos, contemplando"
+                    },
+                    {
+                        "id": 5884,
+                        "chapter_id": 83,
+                        "verses_translate_name": "versos",
+                        "verses_number": "36",
+                        "arabic_name": "هَلْ ثُوِّبَ ٱلْكُفَّارُ مَا كَانُوا۟ يَفْعَلُونَ",
+                        "translated_name": "si los que no creían han sido recompensados por lo que hacían."
+                    }
+                ],
+                "page_arabic_ayah": "عَلَى ٱلْأَرَآئِكِ يَنظُرُونَ (٣٥)  هَلْ ثُوِّبَ ٱلْكُفَّارُ مَا كَانُوا۟ يَفْعَلُونَ (٣٦)",
+                "is_read": false
+            }
+        ]
+    }
+}

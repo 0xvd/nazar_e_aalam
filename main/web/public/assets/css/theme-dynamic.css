@@ -1,0 +1,172 @@
+/* ============================================================
+   Dynamic Theme Layer (admin panel)
+   Maps Bootstrap + structural chrome onto the theme CSS variables
+   emitted by resources/views/partials/theme-vars.blade.php.
+   Loaded after app.css / zabi-style.css so it can recolor accents
+   and provide a dark-mode surface layer for dark presets.
+   ============================================================ */
+
+/* ---- Accent recolor (all modes) ---- */
+.btn-primary,
+.btn-success {
+    background-color: var(--theme-primary) !important;
+    border-color: var(--theme-primary) !important;
+    color: var(--theme-on-primary) !important;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-success:hover,
+.btn-success:focus {
+    background-color: var(--theme-secondary) !important;
+    border-color: var(--theme-secondary) !important;
+    color: var(--theme-on-primary) !important;
+}
+.btn-outline-primary {
+    color: var(--theme-primary) !important;
+    border-color: var(--theme-primary) !important;
+}
+.btn-outline-primary:hover {
+    background-color: var(--theme-primary) !important;
+    color: var(--theme-on-primary) !important;
+}
+
+.text-primary {
+    color: var(--theme-primary) !important;
+}
+.bg-primary {
+    background-color: var(--theme-primary) !important;
+    color: var(--theme-on-primary) !important;
+}
+.text-success {
+    color: var(--theme-secondary) !important;
+}
+.text-warning {
+    color: var(--theme-accent) !important;
+}
+.text-danger {
+    color: var(--theme-error) !important;
+}
+
+a {
+    color: var(--theme-primary);
+}
+a:hover {
+    color: var(--theme-secondary);
+}
+
+.badge.bg-primary,
+.badge-primary {
+    background-color: var(--theme-primary) !important;
+    color: var(--theme-on-primary) !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--theme-primary) !important;
+    box-shadow: 0 0 0 0.2rem rgba(var(--theme-primary-rgb), 0.2) !important;
+}
+.form-check-input:checked {
+    background-color: var(--theme-primary) !important;
+    border-color: var(--theme-primary) !important;
+}
+
+/* Pagination (Bootstrap) */
+.page-item.active .page-link {
+    background-color: var(--theme-primary) !important;
+    border-color: var(--theme-primary) !important;
+    color: var(--theme-on-primary) !important;
+}
+.page-link {
+    color: var(--theme-primary);
+}
+
+/* Spinners / progress */
+.progress-bar {
+    background-color: var(--theme-primary) !important;
+}
+
+/* ============================================================
+   Dark mode surface layer (only for dark presets)
+   ============================================================ */
+html[data-theme-mode="dark"] body,
+html[data-theme-mode="dark"] .wrapper,
+html[data-theme-mode="dark"] .main,
+html[data-theme-mode="dark"] .content {
+    background-color: var(--theme-page) !important;
+    color: var(--theme-text);
+}
+
+html[data-theme-mode="dark"] .card,
+html[data-theme-mode="dark"] .modal-content,
+html[data-theme-mode="dark"] .dropdown-menu,
+html[data-theme-mode="dark"] .list-group-item,
+html[data-theme-mode="dark"] .offcanvas {
+    background-color: var(--theme-card) !important;
+    color: var(--theme-text);
+    border-color: var(--theme-border) !important;
+}
+
+html[data-theme-mode="dark"] .navbar,
+html[data-theme-mode="dark"] .navbar.navbar-expand .navbar-bg {
+    background-color: var(--theme-card) !important;
+    color: var(--theme-text);
+}
+
+html[data-theme-mode="dark"] .card-header,
+html[data-theme-mode="dark"] .card-footer {
+    background-color: transparent !important;
+    border-color: var(--theme-border) !important;
+    color: var(--theme-text);
+}
+
+html[data-theme-mode="dark"] h1,
+html[data-theme-mode="dark"] h2,
+html[data-theme-mode="dark"] h3,
+html[data-theme-mode="dark"] h4,
+html[data-theme-mode="dark"] h5,
+html[data-theme-mode="dark"] h6,
+html[data-theme-mode="dark"] .text-dark {
+    color: var(--theme-text) !important;
+}
+html[data-theme-mode="dark"] .text-muted,
+html[data-theme-mode="dark"] small {
+    color: var(--theme-text-faint) !important;
+}
+
+/* Forms in dark mode */
+html[data-theme-mode="dark"] .form-control,
+html[data-theme-mode="dark"] .form-select,
+html[data-theme-mode="dark"] .input-group-text {
+    background-color: var(--theme-muted-bg) !important;
+    border-color: var(--theme-border) !important;
+    color: var(--theme-text);
+}
+html[data-theme-mode="dark"] .form-control::placeholder {
+    color: var(--theme-text-faint);
+}
+
+/* Tables in dark mode */
+html[data-theme-mode="dark"] .table {
+    color: var(--theme-text);
+    border-color: var(--theme-border);
+}
+html[data-theme-mode="dark"] .table > :not(caption) > * > * {
+    background-color: var(--theme-card) !important;
+    border-bottom-color: var(--theme-border) !important;
+    color: var(--theme-text);
+}
+html[data-theme-mode="dark"] .table thead th {
+    background-color: var(--theme-muted-bg) !important;
+    color: var(--theme-text);
+}
+html[data-theme-mode="dark"] .table-hover > tbody > tr:hover > * {
+    background-color: var(--theme-muted-bg) !important;
+}
+
+/* Generic borders / dividers */
+html[data-theme-mode="dark"] hr,
+html[data-theme-mode="dark"] .border,
+html[data-theme-mode="dark"] .border-top,
+html[data-theme-mode="dark"] .border-bottom {
+    border-color: var(--theme-border) !important;
+}

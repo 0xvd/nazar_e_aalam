@@ -1,0 +1,23 @@
+{
+    "dua": {
+        "title": "قائمة الأدعية",
+        "singular": "الدعاء",
+        "table": {
+            "short_name_en": "الاسم المختصر (إنجليزي)",
+            "short_name_ar": "الاسم المختصر (عربي)",
+            "full_dua_en": "الدعاء الكامل (إنجليزي)",
+            "full_dua_ar": "الدعاء الكامل (عربي)"
+        },
+        "form": {
+            "short_name_en_label": "الاسم المختصر (إنجليزي)",
+            "short_name_en_placeholder": "أدخل الاسم المختصر بالإنجليزية",
+            "full_dua_en_label": "الدعاء الكامل (إنجليزي)",
+            "full_dua_en_placeholder": "أدخل الاسم الكامل بالإنجليزية",
+            "short_name_ar_label": "الاسم المختصر (عربي)",
+            "short_name_ar_placeholder": "أدخل الاسم المختصر بالعربية",
+            "full_dua_ar_label": "الدعاء الكامل (عربي)",
+            "full_dua_ar_placeholder": "أدخل الاسم الكامل بالعربية",
+            "position_placeholder": "أدخل الترتيب"
+        }
+    }
+}

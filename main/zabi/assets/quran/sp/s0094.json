@@ -1,0 +1,89 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 94,
+            "serial_number": "94",
+            "arabic_name": "الشرح",
+            "translated_name": "Ash-Sharh",
+            "verses_translate_name": "versos",
+            "verses_count": "8"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 596,
+                "page_number": "596",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6091,
+                        "chapter_id": 94,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
+                        "translated_name": "¿Acaso no hemos abierto tu pecho"
+                    },
+                    {
+                        "id": 6092,
+                        "chapter_id": 94,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "وَوَضَعْنَا عَنكَ وِزْرَكَ",
+                        "translated_name": "y te hemos liberado de la carga"
+                    },
+                    {
+                        "id": 6093,
+                        "chapter_id": 94,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "ٱلَّذِىٓ أَنقَضَ ظَهْرَكَ",
+                        "translated_name": "que pesaba sobre tu espalda?"
+                    },
+                    {
+                        "id": 6094,
+                        "chapter_id": 94,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+                        "translated_name": "¿Y hemos elevado para ti el recuerdo?"
+                    },
+                    {
+                        "id": 6095,
+                        "chapter_id": 94,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+                        "translated_name": "Así, en verdad, con la dificultad, la facilidad."
+                    },
+                    {
+                        "id": 6096,
+                        "chapter_id": 94,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+                        "translated_name": "En verdad, junto a la dificultad, la facilidad."
+                    },
+                    {
+                        "id": 6097,
+                        "chapter_id": 94,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "فَإِذَا فَرَغْتَ فَٱنصَبْ",
+                        "translated_name": "Así pues, cuando hayas acabado tus obligaciones, esfuérzate en tu adoración"
+                    },
+                    {
+                        "id": 6098,
+                        "chapter_id": 94,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "وَإِلَىٰ رَبِّكَ فَٱرْغَب",
+                        "translated_name": "y vuélvete a tu Señor anhelante."
+                    }
+                ],
+                "page_arabic_ayah": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ (١)  وَوَضَعْنَا عَنكَ وِزْرَكَ (٢)  ٱلَّذِىٓ أَنقَضَ ظَهْرَكَ (٣)  وَرَفَعْنَا لَكَ ذِكْرَكَ (٤)  فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا (٥)  إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا (٦)  فَإِذَا فَرَغْتَ فَٱنصَبْ (٧)  وَإِلَىٰ رَبِّكَ فَٱرْغَب (٨)",
+                "is_read": false
+            }
+        ]
+    }
+}

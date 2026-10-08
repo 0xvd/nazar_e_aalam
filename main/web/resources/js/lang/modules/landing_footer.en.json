@@ -1,0 +1,23 @@
+{
+    "landing_footer": {
+        "title": "Footer",
+        "subtitle": "Manage the footer brand text on your landing page",
+        "preview_page": "Preview Page",
+        "error_saving": "Error saving",
+        "section": {
+            "brand": "Brand",
+            "footer_preview": "Footer Preview"
+        },
+        "form": {
+            "app_name_label": "App Name",
+            "app_name_hint": "shown in footer",
+            "app_name_placeholder": "Enter app name",
+            "footer_description_label": "Footer Description",
+            "footer_description_placeholder": "Enter footer description"
+        },
+        "preview": {
+            "default_description": "Your complete Islamic companion app.",
+            "copyright_suffix": "· All rights reserved."
+        }
+    }
+}

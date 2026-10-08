@@ -1,0 +1,28 @@
+{
+    "landing_hero": {
+        "title": "القسم الرئيسي",
+        "subtitle": "إدارة القسم الرئيسي لصفحتك الرئيسية",
+        "preview_page": "معاينة الصفحة",
+        "error_saving": "حدث خطأ أثناء الحفظ",
+        "section": {
+            "app_identity": "هوية التطبيق",
+            "headline": "العنوان الرئيسي",
+            "download_links": "روابط التحميل"
+        },
+        "form": {
+            "app_name_label": "اسم التطبيق",
+            "app_name_placeholder": "أدخل اسم التطبيق",
+            "badge_text_label": "نص الشعار",
+            "badge_text_placeholder": "أدخل نص الشعار",
+            "hero_title_label": "العنوان الرئيسي",
+            "hero_title_placeholder": "أدخل العنوان الرئيسي",
+            "hero_subtitle_label": "العنوان الفرعي",
+            "hero_subtitle_placeholder": "أدخل العنوان الفرعي",
+            "highlighted_in_gold": "مميز بالذهبي",
+            "hero_description_label": "الوصف",
+            "hero_description_placeholder": "أدخل الوصف",
+            "app_store_url_label": "رابط App Store",
+            "play_store_url_label": "رابط Play Store"
+        }
+    }
+}

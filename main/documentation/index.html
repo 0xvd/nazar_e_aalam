@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/feature.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scss/style.css">
+    <link rel="shortcut icon" href="assets/image/favicon.ico">
+    <title>Zabi | Documentation</title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-aside" data-bs-offset="100" tabindex="0">
+<header class="doc-topbar">
+    <div class="d-flex align-items-center justify-content-between topbar-content">
+        <div>
+            <a href="index.html" class="d-block d-lg-none">
+                <img width="150" height="80" src="assets/image/zabi-logo-black.svg" class="img-fluid"
+                     alt="logo">
+            </a>
+        </div>
+        <div>
+            <a href="#" class="btn me-2 d-inline-block d-lg-none btn-toggle-sidenav">
+                <i class="feather-menu"></i>
+            </a>
+        </div>
+    </div>
+</header>
+<aside class="doc-sidebar">
+    <div class="navbar-primary">
+        <a href="index.html" class="d-inline-block">
+            <img width="150" height="80" src="assets/image/zabi-logo-black.svg" class="img-fluid"
+                 alt="logo">
+        </a>
+    </div>
+    <nav id="navbar-aside" class="navbar flex-column align-items-stretch">
+        <nav class="nav nav-pills flex-column navbar-aside">
+            <a class="nav-link active" href="./index.html">Installer (Mobile App)</a>
+            <nav class="nav nav-pills flex-column submenu-nav">
+                <a class="nav-link" href="#introduction">Introduction</a>
+                <a class="nav-link" href="#requirements">Requirements</a>
+                <a class="nav-link" href="#recommended">Recommended</a>
+                <a class="nav-link" href="#get_started">Get Started</a>
+                <a class="nav-link" href="#android_configuration">Android Configuration</a>
+                <a class="nav-link" href="#get_dependenciess">Get Dependencies</a>
+                <a class="nav-link" href="#modify_package_name">Modify Package Name</a>
+                <a class="nav-link" href="#run_application">Run & Build</a>
+            </nav>
+        </nav>
+    </nav>
+
+    <nav id="navbar-aside" class="navbar flex-column align-items-stretch">
+        <nav class="nav nav-pills flex-column navbar-aside">
+            <a class="nav-link" href="./installer.html">Installer (Web)</a>
+        </nav>
+    </nav>
+    <nav id="navbar-aside" class="navbar flex-column align-items-stretch">
+        <nav class="nav nav-pills flex-column navbar-aside">
+            <a class="nav-link" href="./admin.html">Admin Panel Introduction</a>
+        </nav>
+    </nav>
+
+</aside>
+<main>
+    <div class="doc-content-wrapper">
+        <section id="introduction" class="section-padding pb-0">
+            <h1 class="doc-title">Introduction</h1>
+            <p>
+                Flutter, a Google-created framework, facilitates open-source mobile app development for both Android and
+                iOS platforms.
+                It serves as the primary tool for creating applications, with shared configuration steps for Android and
+                iOS compilation.
+                This section will delve into these shared configuration steps.
+            </p>
+        </section>
+    </div>
+
+    <div class="doc-content-wrapper">
+        <section class="section-padding" id="requirements">
+            <h1 class="doc-title">Requirements</h1>
+            <ul>
+                <li><h3>Flutter version 3.41.0</h3></li>
+                <li><p>Dart version 3.10.7</p></li>
+                <li><p>Dev tools version 2.34.3</p></li>
+                <li><p>Engine revision edd8546116</p></li>
+                <li><p>Upstream repository <a href="https://github.com/flutter/flutter.git">https://github.com/flutter/flutter.git</a></p></li>
+                <li><p>Framework • revision 761747bfc5 (6 weeks ago) • 2024-06-05 22:15:13 +0200</p></li>
+                <li><p>To edit this project you must have Flutter and Dart installed and configured successfully on your device Install flutter</p></li>
+            </ul>
+
+            <section id="recommended" class="section-padding">
+                <h1 class="doc-title mb-3">Recommended</h1>
+                <p><b>Install Android Studio (Windows OS)</b></p>
+                <iframe width="850" height="315" src="https://www.youtube.com/embed/0zx_eFyHRU0"
+                        title="How to Install Android Studio on Windows 10" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                <p><b>Install Android Studio (Mac OS)</b></p>
+                <iframe width="850" height="315" src="https://www.youtube.com/embed/rNUoFXxT30U"
+                        title="How to download and  install Java JDK on Mac OS X  and Android Studio ( with JAVA_HOME )"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+
+                <p><b>Install Android Studio (Linux OS)</b></p>
+                <iframe width="850" height="315" src="https://www.youtube.com/embed/qtDfuAhA4MY"
+                        title="How to Install Android Studio on Ubuntu 22.04 LTS / 20.04 LTS | Android Studio on Ubuntu 22.04 LTS"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+
+                <p><b>Install Flutter(Windows OS)</b></p>
+                <iframe width="850" height="315" src="https://www.youtube.com/embed/fDnqXmLSqtg"
+                        title="2. Full Installation of Flutter on Windows - Your First Flutter App" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+
+                <p><b>Install Flutter(Mac OS)</b></p>
+                <iframe width="860" height="315" src="https://www.youtube.com/embed/mAQb57z7DZU"
+                        title="Flutter #1: How to Install Flutter on MacOS" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+
+                <p><b>Install Flutter(Linux OS)</b></p>
+                <iframe width="860" height="315" src="https://www.youtube.com/embed/e63OlW_2gpQ"
+                        title="Install Flutter and Create first flutter project on Ubuntu 22.04 LTS | Android Studio"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+
+
+            </section>
+            <section id="get_started" class="section-padding">
+                <h1 class="doc-title mb-3">Get Started</h1>
+                <p>Download and extract the Flutter application.Open the project using your preferred IDE: Android
+                    Studio, Visual Studio Code, or IntelliJ.</p>
+                <p>
+                    <img width="850"
+                         src="./assets/image/open-application-project.jpeg"
+                         class="img-fluid"
+                    />
+                </p>
+
+                <p>Edit the remote link in utils/app_constants.dart to establish a connection between your mobile app
+                    and the RestApi.</p>
+                <p>
+                    <img height="450" width="850" src="./assets/image/api-base-url-link.jpeg" class="img-fluid"/>
+                </p>
+                <p>Navigate to the "android/app/src/main/res/mipmap-mdpi/launcher_icon.png" directory and substitute the
+                    existing image with your desired logo or app icon.</p>
+                <p>
+                    <img src="./assets/image/app-icon-change.jpeg" class="img-fluid app_icon_img"/>
+                </p>
+            </section>
+        </section>
+        <section id="android_configuration" class="section-padding">
+            <h1 class="doc-title mb-3">Configuration for Android</h1>
+            <p>Change your app icon (ic_launcher.png) folders How to generate an app icon? after you generate icons
+                folder</p>
+            <ul>
+                <li>/mipmap-hdpi in /android/app/src/main/res/ folder</li>
+                <li>/mipmap-mdpi in /android/app/src/main/res/ folder</li>
+                <li>/mipmap-xhdpi in /android/app/src/main/res/ folder</li>
+                <li>/mipmap-xxhdpi in /android/app/src/main/res/ folder</li>
+                <li>/mipmap-xxxhdpi in /android/app/src/main/res/ folder</li>
+            </ul>
+        </section>
+        <section id="get_dependenciess" class="section-padding">
+            <h1 class="doc-title mb-3">Get Dependencies</h1>
+            <h4><i>Just run the following command</i></h4>
+            <ul>
+                <li><code>flutter clear</code></li>
+                <li><code>flutter pub get</code></li>
+            </ul>
+        </section>
+        <section id="modify_package_name" class="section-padding">
+            <h1 class="doc-title mb-3">Modify Package Name</h1>
+            <h4>To change the package name, follow these steps.</h4>
+            <h5><b>Modify the package name in the file located at /android/app/build.gradle.</b></h5>
+            <ul>
+                <li><code>defaultConfig {<br>
+                    applicationId "your package name"<br>
+                    minSdkVersion 23 <br>
+                    targetSdkVersion flutter.targetSdkVersion <br>
+                    versionCode flutterVersionCode.toInteger() <br>
+                    versionName flutterVersionName <br>
+                    }</code></li>
+                <li>Then run the following command <br> <code>flutter pub get</code></li>
+            </ul>
+        </section>
+        <section id="run_application" class="section-padding">
+            <h1 class="doc-title mb-3">Run Android Application</h1>
+            <h5>In the target selector, choose an Android device to run the app.
+                If no devices are available, go to Tools > Android > AVD Manager and create one.
+                For detailed instructions, refer to the section on Managing AVDs.</h5>
+            <h5>"If you're not utilizing Android Studio or IntelliJ, you can employ the command line to execute your
+                application with the following command:"</h5>
+            <code>flutter run</code><br><br>
+
+            <h1 class="doc-title">Build And Install App</h1>
+            <ul class="mb-5">
+                <li>Save your project after making changes.</li>
+                <li>Open the console.</li>
+                <li>Navigate to your project folder.</li>
+                <li>Execute the command: <code>flutter build apk --release</code> to build your app.</li>
+                <li>When publishing your app on the Play Store, it's advisable to either employ app bundles or divide
+                    the APK into smaller parts to minimize its size.
+                </li>
+                <li>To create an app bundle, execute the following command in Flutter: <code>flutter build appbundle
+                    --target-platform android-arm,android-arm64,android-x64</code><br>Learn more on
+                    <a href="https://developer.android.com/guide/app-bundle">https://developer.android.com/guide/app-bundle</a>
+                </li>
+                <li>Retrieve the APK file located in the build/output/apk folder. To install the application on your
+                    connected device, execute the following command.
+                </li>
+            </ul>
+        </section>
+    </div>
+
+</main>
+
+<div class="doc-sidebar-overlay"></div>
+
+<!-- Scripts -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 88,
+            "serial_number": "88",
+            "arabic_name": "الغاشية",
+            "translated_name": "Al-Ghashiyah",
+            "verses_translate_name": "versos",
+            "verses_count": "26"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 592,
+                "page_number": "592",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5968,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "هَلْ أَتَىٰكَ حَدِيثُ ٱلْغَـٰشِيَةِ",
+                        "translated_name": "¿Ha llegado a ti el relato de la que cubre?"
+                    },
+                    {
+                        "id": 5969,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "وُجُوهٌ يَوْمَئِذٍ خَـٰشِعَةٌ",
+                        "translated_name": "Algunos rostros, ese día, estarán sombríos,"
+                    },
+                    {
+                        "id": 5970,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "عَامِلَةٌ نَّاصِبَةٌ",
+                        "translated_name": "agitados, fatigados."
+                    },
+                    {
+                        "id": 5971,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "تَصْلَىٰ نَارًا حَامِيَةً",
+                        "translated_name": "Entrarán en el Fuego abrasador."
+                    },
+                    {
+                        "id": 5972,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "تُسْقَىٰ مِنْ عَيْنٍ ءَانِيَةٍ",
+                        "translated_name": "Se les dará de beber de una fuente hirviente."
+                    },
+                    {
+                        "id": 5973,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "لَّيْسَ لَهُمْ طَعَامٌ إِلَّا مِن ضَرِيعٍ",
+                        "translated_name": "No tendrán más alimento que Dariy,"
+                    },
+                    {
+                        "id": 5974,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "لَّا يُسْمِنُ وَلَا يُغْنِى مِن جُوعٍ",
+                        "translated_name": "que no engorda ni sacia el hambre."
+                    },
+                    {
+                        "id": 5975,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "وُجُوهٌ يَوْمَئِذٍ نَّاعِمَةٌ",
+                        "translated_name": "Otros rostros, ese día, resplandecerán"
+                    },
+                    {
+                        "id": 5976,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "لِّسَعْيِهَا رَاضِيَةٌ",
+                        "translated_name": "satisfechos por su esfuerzo,"
+                    },
+                    {
+                        "id": 5977,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "فِى جَنَّةٍ عَالِيَةٍ",
+                        "translated_name": "en un Jardín excelso,"
+                    },
+                    {
+                        "id": 5978,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "لَّا تَسْمَعُ فِيهَا لَـٰغِيَةً",
+                        "translated_name": "en el que no escucharán palabras vanas."
+                    },
+                    {
+                        "id": 5979,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "فِيهَا عَيْنٌ جَارِيَةٌ",
+                        "translated_name": "En él hay una fuente que mana."
+                    },
+                    {
+                        "id": 5980,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "فِيهَا سُرُرٌ مَّرْفُوعَةٌ",
+                        "translated_name": "En él, lechos elevados"
+                    },
+                    {
+                        "id": 5981,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "وَأَكْوَابٌ مَّوْضُوعَةٌ",
+                        "translated_name": "y copas servidas,"
+                    },
+                    {
+                        "id": 5982,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "وَنَمَارِقُ مَصْفُوفَةٌ",
+                        "translated_name": "filas de cojines en los que recostarse"
+                    },
+                    {
+                        "id": 5983,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "16",
+                        "arabic_name": "وَزَرَابِىُّ مَبْثُوثَةٌ",
+                        "translated_name": "y gruesas alfombras extendidas."
+                    },
+                    {
+                        "id": 5984,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "17",
+                        "arabic_name": "أَفَلَا يَنظُرُونَ إِلَى ٱلْإِبِلِ كَيْفَ خُلِقَتْ",
+                        "translated_name": "¿Acaso no han observado cómo han sido creados los camellos?"
+                    },
+                    {
+                        "id": 5985,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "18",
+                        "arabic_name": "وَإِلَى ٱلسَّمَآءِ كَيْفَ رُفِعَتْ",
+                        "translated_name": "¿Y cómo ha sido elevado el cielo?"
+                    },
+                    {
+                        "id": 5986,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "19",
+                        "arabic_name": "وَإِلَى ٱلْجِبَالِ كَيْفَ نُصِبَتْ",
+                        "translated_name": "¿Y cómo han sido fijadas las montañas?"
+                    },
+                    {
+                        "id": 5987,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "20",
+                        "arabic_name": "وَإِلَى ٱلْأَرْضِ كَيْفَ سُطِحَتْ",
+                        "translated_name": "¿Y cómo ha sido extendida la Tierra?"
+                    },
+                    {
+                        "id": 5988,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "21",
+                        "arabic_name": "فَذَكِّرْ إِنَّمَآ أَنتَ مُذَكِّرٌ",
+                        "translated_name": "Así pues ¡Amonesta! En verdad, tú sólo eres un amonestador."
+                    },
+                    {
+                        "id": 5989,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "22",
+                        "arabic_name": "لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ",
+                        "translated_name": "No tienes poder para obligarles."
+                    },
+                    {
+                        "id": 5990,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "23",
+                        "arabic_name": "إِلَّا مَن تَوَلَّىٰ وَكَفَرَ",
+                        "translated_name": "Pero a quien dé la espalda y descrea"
+                    },
+                    {
+                        "id": 5991,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "24",
+                        "arabic_name": "فَيُعَذِّبُهُ ٱللَّهُ ٱلْعَذَابَ ٱلْأَكْبَرَ",
+                        "translated_name": "Dios le castigará con el castigo mayor."
+                    },
+                    {
+                        "id": 5992,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "25",
+                        "arabic_name": "إِنَّ إِلَيْنَآ إِيَابَهُمْ",
+                        "translated_name": "En verdad, regresarán a Nosotros."
+                    },
+                    {
+                        "id": 5993,
+                        "chapter_id": 88,
+                        "verses_translate_name": "versos",
+                        "verses_number": "26",
+                        "arabic_name": "ثُمَّ إِنَّ عَلَيْنَا حِسَابَهُم",
+                        "translated_name": "Luego, en verdad, a Nosotros nos corresponderá ajustarles las cuentas"
+                    }
+                ],
+                "page_arabic_ayah": "هَلْ أَتَىٰكَ حَدِيثُ ٱلْغَـٰشِيَةِ (١)  وُجُوهٌ يَوْمَئِذٍ خَـٰشِعَةٌ (٢)  عَامِلَةٌ نَّاصِبَةٌ (٣)  تَصْلَىٰ نَارًا حَامِيَةً (٤)  تُسْقَىٰ مِنْ عَيْنٍ ءَانِيَةٍ (٥)  لَّيْسَ لَهُمْ طَعَامٌ إِلَّا مِن ضَرِيعٍ (٦)  لَّا يُسْمِنُ وَلَا يُغْنِى مِن جُوعٍ (٧)  وُجُوهٌ يَوْمَئِذٍ نَّاعِمَةٌ (٨)  لِّسَعْيِهَا رَاضِيَةٌ (٩)  فِى جَنَّةٍ عَالِيَةٍ (١٠)  لَّا تَسْمَعُ فِيهَا لَـٰغِيَةً (١١)  فِيهَا عَيْنٌ جَارِيَةٌ (١٢)  فِيهَا سُرُرٌ مَّرْفُوعَةٌ (١٣)  وَأَكْوَابٌ مَّوْضُوعَةٌ (١٤)  وَنَمَارِقُ مَصْفُوفَةٌ (١٥)  وَزَرَابِىُّ مَبْثُوثَةٌ (١٦)  أَفَلَا يَنظُرُونَ إِلَى ٱلْإِبِلِ كَيْفَ خُلِقَتْ (١٧)  وَإِلَى ٱلسَّمَآءِ كَيْفَ رُفِعَتْ (١٨)  وَإِلَى ٱلْجِبَالِ كَيْفَ نُصِبَتْ (١٩)  وَإِلَى ٱلْأَرْضِ كَيْفَ سُطِحَتْ (٢٠)  فَذَكِّرْ إِنَّمَآ أَنتَ مُذَكِّرٌ (٢١)  لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ (٢٢)  إِلَّا مَن تَوَلَّىٰ وَكَفَرَ (٢٣)  فَيُعَذِّبُهُ ٱللَّهُ ٱلْعَذَابَ ٱلْأَكْبَرَ (٢٤)  إِنَّ إِلَيْنَآ إِيَابَهُمْ (٢٥)  ثُمَّ إِنَّ عَلَيْنَا حِسَابَهُم (٢٦)",
+                "is_read": false
+            }
+        ]
+    }
+}

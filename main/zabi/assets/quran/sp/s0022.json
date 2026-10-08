@@ -1,0 +1,730 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 22,
+            "serial_number": "22",
+            "arabic_name": "الحج",
+            "translated_name": "Al-Hajj",
+            "verses_translate_name": "versos",
+            "verses_count": "78"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 332,
+                "page_number": "332",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 2596,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "يَـٰٓأَيُّهَا ٱلنَّاسُ ٱتَّقُوا۟ رَبَّكُمْ ۚ إِنَّ زَلْزَلَةَ ٱلسَّاعَةِ شَىْءٌ عَظِيمٌ",
+                        "translated_name": "¡Oh, gentes! ¡Temed a vuestro Señor! En verdad, el terremoto de la Hora será una cosa terrible."
+                    },
+                    {
+                        "id": 2597,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "يَوْمَ تَرَوْنَهَا تَذْهَلُ كُلُّ مُرْضِعَةٍ عَمَّآ أَرْضَعَتْ وَتَضَعُ كُلُّ ذَاتِ حَمْلٍ حَمْلَهَا وَتَرَى ٱلنَّاسَ سُكَـٰرَىٰ وَمَا هُم بِسُكَـٰرَىٰ وَلَـٰكِنَّ عَذَابَ ٱللَّهِ شَدِيدٌ",
+                        "translated_name": "El día en que lo veáis, olvidará toda nodriza a su lactante y toda embarazada abortará y verás a las gentes ebrias, pero no estarán ebrias sino que el castigo de Dios será severo."
+                    },
+                    {
+                        "id": 2598,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَمِنَ ٱلنَّاسِ مَن يُجَـٰدِلُ فِى ٱللَّهِ بِغَيْرِ عِلْمٍ وَيَتَّبِعُ كُلَّ شَيْطَـٰنٍ مَّرِيدٍ",
+                        "translated_name": "Entre las gentes, hay quienes disputan sobre Dios sin conocimiento y siguen a cualquier demonio rebelde,"
+                    },
+                    {
+                        "id": 2599,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "كُتِبَ عَلَيْهِ أَنَّهُۥ مَن تَوَلَّاهُ فَأَنَّهُۥ يُضِلُّهُۥ وَيَهْدِيهِ إِلَىٰ عَذَابِ ٱلسَّعِيرِ",
+                        "translated_name": "para el cual se ha decretado que extraviará a cualquiera que le tome por amigo y le conducirá hacia el castigo del Fuego flamígero."
+                    },
+                    {
+                        "id": 2600,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "يَـٰٓأَيُّهَا ٱلنَّاسُ إِن كُنتُمْ فِى رَيْبٍ مِّنَ ٱلْبَعْثِ فَإِنَّا خَلَقْنَـٰكُم مِّن تُرَابٍ ثُمَّ مِن نُّطْفَةٍ ثُمَّ مِنْ عَلَقَةٍ ثُمَّ مِن مُّضْغَةٍ مُّخَلَّقَةٍ وَغَيْرِ مُخَلَّقَةٍ لِّنُبَيِّنَ لَكُمْ ۚ وَنُقِرُّ فِى ٱلْأَرْحَامِ مَا نَشَآءُ إِلَىٰٓ أَجَلٍ مُّسَمًّى ثُمَّ نُخْرِجُكُمْ طِفْلًا ثُمَّ لِتَبْلُغُوٓا۟ أَشُدَّكُمْ ۖ وَمِنكُم مَّن يُتَوَفَّىٰ وَمِنكُم مَّن يُرَدُّ إِلَىٰٓ أَرْذَلِ ٱلْعُمُرِ لِكَيْلَا يَعْلَمَ مِنۢ بَعْدِ عِلْمٍ شَيْـًٔا ۚ وَتَرَى ٱلْأَرْضَ هَامِدَةً فَإِذَآ أَنزَلْنَا عَلَيْهَا ٱلْمَآءَ ٱهْتَزَّتْ وَرَبَتْ وَأَنۢبَتَتْ مِن كُلِّ زَوْجٍۭ بَهِيجٍ",
+                        "translated_name": "¡Oh, gentes! Si tenéis dudas sobre la resurrección, [sabed que] en verdad, Nosotros os creamos de barro, después de una gota, después de algo suspendido, después de una masa de carne, en parte formada, en parte sin formar, para dejároslo claro. Y depositamos en los senos maternos a quien Nosotros queremos hasta que se cumple un plazo establecido. Luego os sacamos pequeños, luego alcanzáis la madurez y la fuerza. Y de vosotros hay quienes mueren [jóvenes] y a otros se les hace alcanzar una edad tan avanzada que después de haber poseído algún conocimiento no conocen nada. Y ves la tierra árida, pero cuando hacemos que descienda sobre ella el agua, se agita, se esponja y fructifican por parejas todo tipo de plantas coloridas."
+                    }
+                ],
+                "page_arabic_ayah": "يَـٰٓأَيُّهَا ٱلنَّاسُ ٱتَّقُوا۟ رَبَّكُمْ ۚ إِنَّ زَلْزَلَةَ ٱلسَّاعَةِ شَىْءٌ عَظِيمٌ (١)  يَوْمَ تَرَوْنَهَا تَذْهَلُ كُلُّ مُرْضِعَةٍ عَمَّآ أَرْضَعَتْ وَتَضَعُ كُلُّ ذَاتِ حَمْلٍ حَمْلَهَا وَتَرَى ٱلنَّاسَ سُكَـٰرَىٰ وَمَا هُم بِسُكَـٰرَىٰ وَلَـٰكِنَّ عَذَابَ ٱللَّهِ شَدِيدٌ (٢)  وَمِنَ ٱلنَّاسِ مَن يُجَـٰدِلُ فِى ٱللَّهِ بِغَيْرِ عِلْمٍ وَيَتَّبِعُ كُلَّ شَيْطَـٰنٍ مَّرِيدٍ (٣)  كُتِبَ عَلَيْهِ أَنَّهُۥ مَن تَوَلَّاهُ فَأَنَّهُۥ يُضِلُّهُۥ وَيَهْدِيهِ إِلَىٰ عَذَابِ ٱلسَّعِيرِ (٤)  يَـٰٓأَيُّهَا ٱلنَّاسُ إِن كُنتُمْ فِى رَيْبٍ مِّنَ ٱلْبَعْثِ فَإِنَّا خَلَقْنَـٰكُم مِّن تُرَابٍ ثُمَّ مِن نُّطْفَةٍ ثُمَّ مِنْ عَلَقَةٍ ثُمَّ مِن مُّضْغَةٍ مُّخَلَّقَةٍ وَغَيْرِ مُخَلَّقَةٍ لِّنُبَيِّنَ لَكُمْ ۚ وَنُقِرُّ فِى ٱلْأَرْحَامِ مَا نَشَآءُ إِلَىٰٓ أَجَلٍ مُّسَمًّى ثُمَّ نُخْرِجُكُمْ طِفْلًا ثُمَّ لِتَبْلُغُوٓا۟ أَشُدَّكُمْ ۖ وَمِنكُم مَّن يُتَوَفَّىٰ وَمِنكُم مَّن يُرَدُّ إِلَىٰٓ أَرْذَلِ ٱلْعُمُرِ لِكَيْلَا يَعْلَمَ مِنۢ بَعْدِ عِلْمٍ شَيْـًٔا ۚ وَتَرَى ٱلْأَرْضَ هَامِدَةً فَإِذَآ أَنزَلْنَا عَلَيْهَا ٱلْمَآءَ ٱهْتَزَّتْ وَرَبَتْ وَأَنۢبَتَتْ مِن كُلِّ زَوْجٍۭ بَهِيجٍ (٥)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 333,
+                "page_number": "333",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 2601,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "ذَٰلِكَ بِأَنَّ ٱللَّهَ هُوَ ٱلْحَقُّ وَأَنَّهُۥ يُحْىِ ٱلْمَوْتَىٰ وَأَنَّهُۥ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ",
+                        "translated_name": "Esto es porque Dios es la Verdad y porque Él da vida a lo que estaba muerto y porque Él tiene poder sobre todas las cosas"
+                    },
+                    {
+                        "id": 2602,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "وَأَنَّ ٱلسَّاعَةَ ءَاتِيَةٌ لَّا رَيْبَ فِيهَا وَأَنَّ ٱللَّهَ يَبْعَثُ مَن فِى ٱلْقُبُورِ",
+                        "translated_name": "y porque la Hora viene, no hay duda en ello y porque Dios resucitará a quienes están en las tumbas."
+                    },
+                    {
+                        "id": 2603,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "وَمِنَ ٱلنَّاسِ مَن يُجَـٰدِلُ فِى ٱللَّهِ بِغَيْرِ عِلْمٍ وَلَا هُدًى وَلَا كِتَـٰبٍ مُّنِيرٍ",
+                        "translated_name": "Entre la gente hay quien disputa sobre Dios sin conocimiento y sin guía y sin una Escritura luminosa,"
+                    },
+                    {
+                        "id": 2604,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "ثَانِىَ عِطْفِهِۦ لِيُضِلَّ عَن سَبِيلِ ٱللَّهِ ۖ لَهُۥ فِى ٱلدُّنْيَا خِزْىٌ ۖ وَنُذِيقُهُۥ يَوْمَ ٱلْقِيَـٰمَةِ عَذَابَ ٱلْحَرِيقِ",
+                        "translated_name": "apartándose con arrogancia para desviar [a la gente] del camino de Dios. Será humillado en esta vida y el Día del Levantamiento le haremos probar el castigo abrasador."
+                    },
+                    {
+                        "id": 2605,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "ذَٰلِكَ بِمَا قَدَّمَتْ يَدَاكَ وَأَنَّ ٱللَّهَ لَيْسَ بِظَلَّـٰمٍ لِّلْعَبِيدِ",
+                        "translated_name": "«Eso, por lo que vuestras manos han enviado por delante y porque Dios no oprime a Sus siervos.»"
+                    },
+                    {
+                        "id": 2606,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "وَمِنَ ٱلنَّاسِ مَن يَعْبُدُ ٱللَّهَ عَلَىٰ حَرْفٍ ۖ فَإِنْ أَصَابَهُۥ خَيْرٌ ٱطْمَأَنَّ بِهِۦ ۖ وَإِنْ أَصَابَتْهُ فِتْنَةٌ ٱنقَلَبَ عَلَىٰ وَجْهِهِۦ خَسِرَ ٱلدُّنْيَا وَٱلْـَٔاخِرَةَ ۚ ذَٰلِكَ هُوَ ٱلْخُسْرَانُ ٱلْمُبِينُ",
+                        "translated_name": "Y entre la gente hay quien adora a Dios en un solo sentido: Si le sucede algo bueno lo disfruta pero si le viene una prueba cambia su rostro, perdiendo esta vida y la otra. Ésa es la pérdida auténtica."
+                    },
+                    {
+                        "id": 2607,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "يَدْعُوا۟ مِن دُونِ ٱللَّهِ مَا لَا يَضُرُّهُۥ وَمَا لَا يَنفَعُهُۥ ۚ ذَٰلِكَ هُوَ ٱلضَّلَـٰلُ ٱلْبَعِيدُ",
+                        "translated_name": "Invoca, en vez de a Dios, lo que no le puede perjudicar ni beneficiar. Ése es el extravío profundo."
+                    },
+                    {
+                        "id": 2608,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "يَدْعُوا۟ لَمَن ضَرُّهُۥٓ أَقْرَبُ مِن نَّفْعِهِۦ ۚ لَبِئْسَ ٱلْمَوْلَىٰ وَلَبِئْسَ ٱلْعَشِيرُ",
+                        "translated_name": "Invoca a quien más que beneficiar perjudica. ¡Qué mal protector y qué mala compañía!"
+                    },
+                    {
+                        "id": 2609,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "إِنَّ ٱللَّهَ يُدْخِلُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ جَنَّـٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ۚ إِنَّ ٱللَّهَ يَفْعَلُ مَا يُرِيدُ",
+                        "translated_name": "En verdad, Dios introduce a quienes son creyentes y obran rectamente en Jardines de cuyas profundidades brotan los ríos. En verdad, Dios hace lo que quiere."
+                    },
+                    {
+                        "id": 2610,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "مَن كَانَ يَظُنُّ أَن لَّن يَنصُرَهُ ٱللَّهُ فِى ٱلدُّنْيَا وَٱلْـَٔاخِرَةِ فَلْيَمْدُدْ بِسَبَبٍ إِلَى ٱلسَّمَآءِ ثُمَّ لْيَقْطَعْ فَلْيَنظُرْ هَلْ يُذْهِبَنَّ كَيْدُهُۥ مَا يَغِيظُ",
+                        "translated_name": "Quien piense que Dios no le ayudará en esta vida y en la otra, que extienda una cuerda hacia el cielo y corte y vea si su plan elimina aquello que le irritaba."
+                    }
+                ],
+                "page_arabic_ayah": "ذَٰلِكَ بِأَنَّ ٱللَّهَ هُوَ ٱلْحَقُّ وَأَنَّهُۥ يُحْىِ ٱلْمَوْتَىٰ وَأَنَّهُۥ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ (٦)  وَأَنَّ ٱلسَّاعَةَ ءَاتِيَةٌ لَّا رَيْبَ فِيهَا وَأَنَّ ٱللَّهَ يَبْعَثُ مَن فِى ٱلْقُبُورِ (٧)  وَمِنَ ٱلنَّاسِ مَن يُجَـٰدِلُ فِى ٱللَّهِ بِغَيْرِ عِلْمٍ وَلَا هُدًى وَلَا كِتَـٰبٍ مُّنِيرٍ (٨)  ثَانِىَ عِطْفِهِۦ لِيُضِلَّ عَن سَبِيلِ ٱللَّهِ ۖ لَهُۥ فِى ٱلدُّنْيَا خِزْىٌ ۖ وَنُذِيقُهُۥ يَوْمَ ٱلْقِيَـٰمَةِ عَذَابَ ٱلْحَرِيقِ (٩)  ذَٰلِكَ بِمَا قَدَّمَتْ يَدَاكَ وَأَنَّ ٱللَّهَ لَيْسَ بِظَلَّـٰمٍ لِّلْعَبِيدِ (١٠)  وَمِنَ ٱلنَّاسِ مَن يَعْبُدُ ٱللَّهَ عَلَىٰ حَرْفٍ ۖ فَإِنْ أَصَابَهُۥ خَيْرٌ ٱطْمَأَنَّ بِهِۦ ۖ وَإِنْ أَصَابَتْهُ فِتْنَةٌ ٱنقَلَبَ عَلَىٰ وَجْهِهِۦ خَسِرَ ٱلدُّنْيَا وَٱلْـَٔاخِرَةَ ۚ ذَٰلِكَ هُوَ ٱلْخُسْرَانُ ٱلْمُبِينُ (١١)  يَدْعُوا۟ مِن دُونِ ٱللَّهِ مَا لَا يَضُرُّهُۥ وَمَا لَا يَنفَعُهُۥ ۚ ذَٰلِكَ هُوَ ٱلضَّلَـٰلُ ٱلْبَعِيدُ (١٢)  يَدْعُوا۟ لَمَن ضَرُّهُۥٓ أَقْرَبُ مِن نَّفْعِهِۦ ۚ لَبِئْسَ ٱلْمَوْلَىٰ وَلَبِئْسَ ٱلْعَشِيرُ (١٣)  إِنَّ ٱللَّهَ يُدْخِلُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ جَنَّـٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ۚ إِنَّ ٱللَّهَ يَفْعَلُ مَا يُرِيدُ (١٤)  مَن كَانَ يَظُنُّ أَن لَّن يَنصُرَهُ ٱللَّهُ فِى ٱلدُّنْيَا وَٱلْـَٔاخِرَةِ فَلْيَمْدُدْ بِسَبَبٍ إِلَى ٱلسَّمَآءِ ثُمَّ لْيَقْطَعْ فَلْيَنظُرْ هَلْ يُذْهِبَنَّ كَيْدُهُۥ مَا يَغِيظُ (١٥)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 334,
+                "page_number": "334",
+                "page_key": 2,
+                "page_verses": [
+                    {
+                        "id": 2611,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "16",
+                        "arabic_name": "وَكَذَٰلِكَ أَنزَلْنَـٰهُ ءَايَـٰتٍۭ بَيِّنَـٰتٍ وَأَنَّ ٱللَّهَ يَهْدِى مَن يُرِيدُ",
+                        "translated_name": "Y así, Nosotros lo hemos hecho descender como una señal clara. Y Dios guía a quien Él quiere."
+                    },
+                    {
+                        "id": 2612,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "17",
+                        "arabic_name": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَٱلَّذِينَ هَادُوا۟ وَٱلصَّـٰبِـِٔينَ وَٱلنَّصَـٰرَىٰ وَٱلْمَجُوسَ وَٱلَّذِينَ أَشْرَكُوٓا۟ إِنَّ ٱللَّهَ يَفْصِلُ بَيْنَهُمْ يَوْمَ ٱلْقِيَـٰمَةِ ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍ شَهِيدٌ",
+                        "translated_name": "En verdad, Dios establecerá las diferencias entre los creyentes, los judíos, los sabeos, los cristianos y los magos y los politeístas el Día del Levantamiento. En verdad, Dios es testigo de todas las cosas."
+                    },
+                    {
+                        "id": 2613,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "18",
+                        "arabic_name": "أَلَمْ تَرَ أَنَّ ٱللَّهَ يَسْجُدُ لَهُۥ مَن فِى ٱلسَّمَـٰوَٰتِ وَمَن فِى ٱلْأَرْضِ وَٱلشَّمْسُ وَٱلْقَمَرُ وَٱلنُّجُومُ وَٱلْجِبَالُ وَٱلشَّجَرُ وَٱلدَّوَآبُّ وَكَثِيرٌ مِّنَ ٱلنَّاسِ ۖ وَكَثِيرٌ حَقَّ عَلَيْهِ ٱلْعَذَابُ ۗ وَمَن يُهِنِ ٱللَّهُ فَمَا لَهُۥ مِن مُّكْرِمٍ ۚ إِنَّ ٱللَّهَ يَفْعَلُ مَا يَشَآءُ ۩",
+                        "translated_name": "¿Acaso no habéis visto que para Dios se prosternan quienes están en los cielos y en la Tierra y el Sol y la Luna y las estrellas y las montañas y los árboles y los animales y muchos de los seres humanos? Pero muchos otros merecen el castigo. Quien es humillado por Dios no encontrará quien le honre. En verdad, Dios hace lo que quiere."
+                    },
+                    {
+                        "id": 2614,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "19",
+                        "arabic_name": "۞ هَـٰذَانِ خَصْمَانِ ٱخْتَصَمُوا۟ فِى رَبِّهِمْ ۖ فَٱلَّذِينَ كَفَرُوا۟ قُطِّعَتْ لَهُمْ ثِيَابٌ مِّن نَّارٍ يُصَبُّ مِن فَوْقِ رُءُوسِهِمُ ٱلْحَمِيمُ",
+                        "translated_name": "Esos dos contendientes se enfrentan por su Señor. Pero a los que no creen les serán cortados vestidos de fuego y desde lo alto de sus cabezas les será arrojada agua hirviente"
+                    },
+                    {
+                        "id": 2615,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "20",
+                        "arabic_name": "يُصْهَرُ بِهِۦ مَا فِى بُطُونِهِمْ وَٱلْجُلُودُ",
+                        "translated_name": "que fundirá sus entrañas y sus pieles."
+                    },
+                    {
+                        "id": 2616,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "21",
+                        "arabic_name": "وَلَهُم مَّقَـٰمِعُ مِنْ حَدِيدٍ",
+                        "translated_name": "Y hay para ellos martillos de hierro."
+                    },
+                    {
+                        "id": 2617,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "22",
+                        "arabic_name": "كُلَّمَآ أَرَادُوٓا۟ أَن يَخْرُجُوا۟ مِنْهَا مِنْ غَمٍّ أُعِيدُوا۟ فِيهَا وَذُوقُوا۟ عَذَابَ ٱلْحَرِيقِ",
+                        "translated_name": "Cada vez que quieran salir de ello, presos de angustia, se les hará regresar: «Saboread el castigo abrasador.»"
+                    },
+                    {
+                        "id": 2618,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "23",
+                        "arabic_name": "إِنَّ ٱللَّهَ يُدْخِلُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ جَنَّـٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ يُحَلَّوْنَ فِيهَا مِنْ أَسَاوِرَ مِن ذَهَبٍ وَلُؤْلُؤًا ۖ وَلِبَاسُهُمْ فِيهَا حَرِيرٌ",
+                        "translated_name": "En verdad, Dios hará entrar a quienes creen y realizan buenas acciones en Jardines de cuyas profundidades brotan los ríos. Serán adornados con brazaletes de oro y perlas y sus vestidos serán allí de seda."
+                    }
+                ],
+                "page_arabic_ayah": "وَكَذَٰلِكَ أَنزَلْنَـٰهُ ءَايَـٰتٍۭ بَيِّنَـٰتٍ وَأَنَّ ٱللَّهَ يَهْدِى مَن يُرِيدُ (١٦)  إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَٱلَّذِينَ هَادُوا۟ وَٱلصَّـٰبِـِٔينَ وَٱلنَّصَـٰرَىٰ وَٱلْمَجُوسَ وَٱلَّذِينَ أَشْرَكُوٓا۟ إِنَّ ٱللَّهَ يَفْصِلُ بَيْنَهُمْ يَوْمَ ٱلْقِيَـٰمَةِ ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍ شَهِيدٌ (١٧)  أَلَمْ تَرَ أَنَّ ٱللَّهَ يَسْجُدُ لَهُۥ مَن فِى ٱلسَّمَـٰوَٰتِ وَمَن فِى ٱلْأَرْضِ وَٱلشَّمْسُ وَٱلْقَمَرُ وَٱلنُّجُومُ وَٱلْجِبَالُ وَٱلشَّجَرُ وَٱلدَّوَآبُّ وَكَثِيرٌ مِّنَ ٱلنَّاسِ ۖ وَكَثِيرٌ حَقَّ عَلَيْهِ ٱلْعَذَابُ ۗ وَمَن يُهِنِ ٱللَّهُ فَمَا لَهُۥ مِن مُّكْرِمٍ ۚ إِنَّ ٱللَّهَ يَفْعَلُ مَا يَشَآءُ ۩ (١٨)  ۞ هَـٰذَانِ خَصْمَانِ ٱخْتَصَمُوا۟ فِى رَبِّهِمْ ۖ فَٱلَّذِينَ كَفَرُوا۟ قُطِّعَتْ لَهُمْ ثِيَابٌ مِّن نَّارٍ يُصَبُّ مِن فَوْقِ رُءُوسِهِمُ ٱلْحَمِيمُ (١٩)  يُصْهَرُ بِهِۦ مَا فِى بُطُونِهِمْ وَٱلْجُلُودُ (٢٠)  وَلَهُم مَّقَـٰمِعُ مِنْ حَدِيدٍ (٢١)  كُلَّمَآ أَرَادُوٓا۟ أَن يَخْرُجُوا۟ مِنْهَا مِنْ غَمٍّ أُعِيدُوا۟ فِيهَا وَذُوقُوا۟ عَذَابَ ٱلْحَرِيقِ (٢٢)  إِنَّ ٱللَّهَ يُدْخِلُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ جَنَّـٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ يُحَلَّوْنَ فِيهَا مِنْ أَسَاوِرَ مِن ذَهَبٍ وَلُؤْلُؤًا ۖ وَلِبَاسُهُمْ فِيهَا حَرِيرٌ (٢٣)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 335,
+                "page_number": "335",
+                "page_key": 3,
+                "page_verses": [
+                    {
+                        "id": 2619,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "24",
+                        "arabic_name": "وَهُدُوٓا۟ إِلَى ٱلطَّيِّبِ مِنَ ٱلْقَوْلِ وَهُدُوٓا۟ إِلَىٰ صِرَٰطِ ٱلْحَمِيدِ",
+                        "translated_name": "Y serán guiados a la buena palabra y serán guiados a la senda del Alabado."
+                    },
+                    {
+                        "id": 2620,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "25",
+                        "arabic_name": "إِنَّ ٱلَّذِينَ كَفَرُوا۟ وَيَصُدُّونَ عَن سَبِيلِ ٱللَّهِ وَٱلْمَسْجِدِ ٱلْحَرَامِ ٱلَّذِى جَعَلْنَـٰهُ لِلنَّاسِ سَوَآءً ٱلْعَـٰكِفُ فِيهِ وَٱلْبَادِ ۚ وَمَن يُرِدْ فِيهِ بِإِلْحَادٍۭ بِظُلْمٍ نُّذِقْهُ مِنْ عَذَابٍ أَلِيمٍ",
+                        "translated_name": "En verdad, a quienes no creen y ponen barreras para dificultar el acceso a la senda de Dios y a la Mezquita Sagrada, la cual dispusimos para toda la gente, tanto para los residentes como para los de fuera, y a quienes pretendan cometer en ella injusticia y opresión, les haremos probar del castigo doloroso."
+                    },
+                    {
+                        "id": 2621,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "26",
+                        "arabic_name": "وَإِذْ بَوَّأْنَا لِإِبْرَٰهِيمَ مَكَانَ ٱلْبَيْتِ أَن لَّا تُشْرِكْ بِى شَيْـًٔا وَطَهِّرْ بَيْتِىَ لِلطَّآئِفِينَ وَٱلْقَآئِمِينَ وَٱلرُّكَّعِ ٱلسُّجُودِ",
+                        "translated_name": "Y [recuerda] cuando dispusimos para Abraham el emplazamiento de La Casa: «No asocies nada a Mí y purifica Mi Casa para los que dan vueltas alrededor de ella, para los que permanecen en pie [rezando] y para los que se inclinan y prosternan.»"
+                    },
+                    {
+                        "id": 2622,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "27",
+                        "arabic_name": "وَأَذِّن فِى ٱلنَّاسِ بِٱلْحَجِّ يَأْتُوكَ رِجَالًا وَعَلَىٰ كُلِّ ضَامِرٍ يَأْتِينَ مِن كُلِّ فَجٍّ عَمِيقٍ",
+                        "translated_name": "«Y llama a la gente a la peregrinación. Vendrán a ti a pie o en flacos camellos desde todo camino alejado"
+                    },
+                    {
+                        "id": 2623,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "28",
+                        "arabic_name": "لِّيَشْهَدُوا۟ مَنَـٰفِعَ لَهُمْ وَيَذْكُرُوا۟ ٱسْمَ ٱللَّهِ فِىٓ أَيَّامٍ مَّعْلُومَـٰتٍ عَلَىٰ مَا رَزَقَهُم مِّنۢ بَهِيمَةِ ٱلْأَنْعَـٰمِ ۖ فَكُلُوا۟ مِنْهَا وَأَطْعِمُوا۟ ٱلْبَآئِسَ ٱلْفَقِيرَ",
+                        "translated_name": "para atestiguar los beneficios que para ellos hay y para recordar el nombre de Dios en los días sabidos, sobre las cabezas del ganado que Él les ha proporcionado.» «¡Comed pues de ellas y alimentad al indigente, al necesitado!»"
+                    },
+                    {
+                        "id": 2624,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "29",
+                        "arabic_name": "ثُمَّ لْيَقْضُوا۟ تَفَثَهُمْ وَلْيُوفُوا۟ نُذُورَهُمْ وَلْيَطَّوَّفُوا۟ بِٱلْبَيْتِ ٱلْعَتِيقِ",
+                        "translated_name": "«Luego, que limpien su suciedad, que completen sus votos y que circunvalen la Casa Antigua.»"
+                    },
+                    {
+                        "id": 2625,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "30",
+                        "arabic_name": "ذَٰلِكَ وَمَن يُعَظِّمْ حُرُمَـٰتِ ٱللَّهِ فَهُوَ خَيْرٌ لَّهُۥ عِندَ رَبِّهِۦ ۗ وَأُحِلَّتْ لَكُمُ ٱلْأَنْعَـٰمُ إِلَّا مَا يُتْلَىٰ عَلَيْكُمْ ۖ فَٱجْتَنِبُوا۟ ٱلرِّجْسَ مِنَ ٱلْأَوْثَـٰنِ وَٱجْتَنِبُوا۟ قَوْلَ ٱلزُّورِ",
+                        "translated_name": "Esto es lo ordenado. Y quien respete las prohibiciones establecidas por Dios hará lo mejor para él ante su Señor. «Y es lícito para vosotros todo el ganado, excepto lo que se os ha mencionado. Y absteneos de lo abominable que proviene de los ídolos y absteneos de la palabra vana,"
+                    }
+                ],
+                "page_arabic_ayah": "وَهُدُوٓا۟ إِلَى ٱلطَّيِّبِ مِنَ ٱلْقَوْلِ وَهُدُوٓا۟ إِلَىٰ صِرَٰطِ ٱلْحَمِيدِ (٢٤)  إِنَّ ٱلَّذِينَ كَفَرُوا۟ وَيَصُدُّونَ عَن سَبِيلِ ٱللَّهِ وَٱلْمَسْجِدِ ٱلْحَرَامِ ٱلَّذِى جَعَلْنَـٰهُ لِلنَّاسِ سَوَآءً ٱلْعَـٰكِفُ فِيهِ وَٱلْبَادِ ۚ وَمَن يُرِدْ فِيهِ بِإِلْحَادٍۭ بِظُلْمٍ نُّذِقْهُ مِنْ عَذَابٍ أَلِيمٍ (٢٥)  وَإِذْ بَوَّأْنَا لِإِبْرَٰهِيمَ مَكَانَ ٱلْبَيْتِ أَن لَّا تُشْرِكْ بِى شَيْـًٔا وَطَهِّرْ بَيْتِىَ لِلطَّآئِفِينَ وَٱلْقَآئِمِينَ وَٱلرُّكَّعِ ٱلسُّجُودِ (٢٦)  وَأَذِّن فِى ٱلنَّاسِ بِٱلْحَجِّ يَأْتُوكَ رِجَالًا وَعَلَىٰ كُلِّ ضَامِرٍ يَأْتِينَ مِن كُلِّ فَجٍّ عَمِيقٍ (٢٧)  لِّيَشْهَدُوا۟ مَنَـٰفِعَ لَهُمْ وَيَذْكُرُوا۟ ٱسْمَ ٱللَّهِ فِىٓ أَيَّامٍ مَّعْلُومَـٰتٍ عَلَىٰ مَا رَزَقَهُم مِّنۢ بَهِيمَةِ ٱلْأَنْعَـٰمِ ۖ فَكُلُوا۟ مِنْهَا وَأَطْعِمُوا۟ ٱلْبَآئِسَ ٱلْفَقِيرَ (٢٨)  ثُمَّ لْيَقْضُوا۟ تَفَثَهُمْ وَلْيُوفُوا۟ نُذُورَهُمْ وَلْيَطَّوَّفُوا۟ بِٱلْبَيْتِ ٱلْعَتِيقِ (٢٩)  ذَٰلِكَ وَمَن يُعَظِّمْ حُرُمَـٰتِ ٱللَّهِ فَهُوَ خَيْرٌ لَّهُۥ عِندَ رَبِّهِۦ ۗ وَأُحِلَّتْ لَكُمُ ٱلْأَنْعَـٰمُ إِلَّا مَا يُتْلَىٰ عَلَيْكُمْ ۖ فَٱجْتَنِبُوا۟ ٱلرِّجْسَ مِنَ ٱلْأَوْثَـٰنِ وَٱجْتَنِبُوا۟ قَوْلَ ٱلزُّورِ (٣٠)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 336,
+                "page_number": "336",
+                "page_key": 4,
+                "page_verses": [
+                    {
+                        "id": 2626,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "31",
+                        "arabic_name": "حُنَفَآءَ لِلَّهِ غَيْرَ مُشْرِكِينَ بِهِۦ ۚ وَمَن يُشْرِكْ بِٱللَّهِ فَكَأَنَّمَا خَرَّ مِنَ ٱلسَّمَآءِ فَتَخْطَفُهُ ٱلطَّيْرُ أَوْ تَهْوِى بِهِ ٱلرِّيحُ فِى مَكَانٍ سَحِيقٍ",
+                        "translated_name": "buscando sólo a Dios, sin asociar nada a Él.» Y quien adora otros dioses junto a Dios es como lo que cae del cielo y las aves lo devoran o lo arrastra el viento a un lugar lejanísimo."
+                    },
+                    {
+                        "id": 2627,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "32",
+                        "arabic_name": "ذَٰلِكَ وَمَن يُعَظِّمْ شَعَـٰٓئِرَ ٱللَّهِ فَإِنَّهَا مِن تَقْوَى ٱلْقُلُوبِ",
+                        "translated_name": "Así es. Y quien sea reverente con los ritos establecidos por Dios, en verdad, su comportamiento procederá del temor a Dios de los corazones."
+                    },
+                    {
+                        "id": 2628,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "33",
+                        "arabic_name": "لَكُمْ فِيهَا مَنَـٰفِعُ إِلَىٰٓ أَجَلٍ مُّسَمًّى ثُمَّ مَحِلُّهَآ إِلَى ٱلْبَيْتِ ٱلْعَتِيقِ",
+                        "translated_name": "Hay en ello, para vosotros, un beneficio hasta un plazo determinado, hasta que llegue su momento en la Casa Antigua."
+                    },
+                    {
+                        "id": 2629,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "34",
+                        "arabic_name": "وَلِكُلِّ أُمَّةٍ جَعَلْنَا مَنسَكًا لِّيَذْكُرُوا۟ ٱسْمَ ٱللَّهِ عَلَىٰ مَا رَزَقَهُم مِّنۢ بَهِيمَةِ ٱلْأَنْعَـٰمِ ۗ فَإِلَـٰهُكُمْ إِلَـٰهٌ وَٰحِدٌ فَلَهُۥٓ أَسْلِمُوا۟ ۗ وَبَشِّرِ ٱلْمُخْبِتِينَ",
+                        "translated_name": "Y hemos establecido ritos para todas las comunidades, para que recuerden el nombre de Dios sobre aquellas cabezas de ganado que Él les ha proveído. Vuestro Dios es un Dios Único, por tanto ¡Someteos a Él! Y transmite la buena nueva a los humildes."
+                    },
+                    {
+                        "id": 2630,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "35",
+                        "arabic_name": "ٱلَّذِينَ إِذَا ذُكِرَ ٱللَّهُ وَجِلَتْ قُلُوبُهُمْ وَٱلصَّـٰبِرِينَ عَلَىٰ مَآ أَصَابَهُمْ وَٱلْمُقِيمِى ٱلصَّلَوٰةِ وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ",
+                        "translated_name": "Aquellos a quienes, si se les recuerda a Dios, sus corazones tiemblan, son pacientes ante las desgracias, hacen la oración y, de lo que les proveemos, reparten."
+                    },
+                    {
+                        "id": 2631,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "36",
+                        "arabic_name": "وَٱلْبُدْنَ جَعَلْنَـٰهَا لَكُم مِّن شَعَـٰٓئِرِ ٱللَّهِ لَكُمْ فِيهَا خَيْرٌ ۖ فَٱذْكُرُوا۟ ٱسْمَ ٱللَّهِ عَلَيْهَا صَوَآفَّ ۖ فَإِذَا وَجَبَتْ جُنُوبُهَا فَكُلُوا۟ مِنْهَا وَأَطْعِمُوا۟ ٱلْقَانِعَ وَٱلْمُعْتَرَّ ۚ كَذَٰلِكَ سَخَّرْنَـٰهَا لَكُمْ لَعَلَّكُمْ تَشْكُرُونَ",
+                        "translated_name": "Hemos establecido para vosotros el sacrificio de los camellos como uno de los ritos de Dios. En ello hay un bien para vosotros. Mencionad, pues, el nombre de Dios cuando estén en fila. Y cuando hayan caído sobre sus flancos comed de ellos y alimentad a los necesitados y a los mendigos. Esto es lo que Nosotros hemos dispuesto para vuestro beneficio. Quizás así seáis agradecidos."
+                    },
+                    {
+                        "id": 2632,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "37",
+                        "arabic_name": "لَن يَنَالَ ٱللَّهَ لُحُومُهَا وَلَا دِمَآؤُهَا وَلَـٰكِن يَنَالُهُ ٱلتَّقْوَىٰ مِنكُمْ ۚ كَذَٰلِكَ سَخَّرَهَا لَكُمْ لِتُكَبِّرُوا۟ ٱللَّهَ عَلَىٰ مَا هَدَىٰكُمْ ۗ وَبَشِّرِ ٱلْمُحْسِنِينَ",
+                        "translated_name": "Ni su carne ni su sangre llegan a Dios, lo que llega a Él es vuestra piedad. Eso es lo que Dios ha dispuesto para vosotros, para que ensalcéis a Dios por la guía que os ha proporcionado. Y anuncia la buena nueva a los que hacen el bien."
+                    },
+                    {
+                        "id": 2633,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "38",
+                        "arabic_name": "۞ إِنَّ ٱللَّهَ يُدَٰفِعُ عَنِ ٱلَّذِينَ ءَامَنُوٓا۟ ۗ إِنَّ ٱللَّهَ لَا يُحِبُّ كُلَّ خَوَّانٍ كَفُورٍ",
+                        "translated_name": "En verdad, Dios defiende a quienes tienen fe. En verdad, Dios no ama a ningún traidor ingrato."
+                    }
+                ],
+                "page_arabic_ayah": "حُنَفَآءَ لِلَّهِ غَيْرَ مُشْرِكِينَ بِهِۦ ۚ وَمَن يُشْرِكْ بِٱللَّهِ فَكَأَنَّمَا خَرَّ مِنَ ٱلسَّمَآءِ فَتَخْطَفُهُ ٱلطَّيْرُ أَوْ تَهْوِى بِهِ ٱلرِّيحُ فِى مَكَانٍ سَحِيقٍ (٣١)  ذَٰلِكَ وَمَن يُعَظِّمْ شَعَـٰٓئِرَ ٱللَّهِ فَإِنَّهَا مِن تَقْوَى ٱلْقُلُوبِ (٣٢)  لَكُمْ فِيهَا مَنَـٰفِعُ إِلَىٰٓ أَجَلٍ مُّسَمًّى ثُمَّ مَحِلُّهَآ إِلَى ٱلْبَيْتِ ٱلْعَتِيقِ (٣٣)  وَلِكُلِّ أُمَّةٍ جَعَلْنَا مَنسَكًا لِّيَذْكُرُوا۟ ٱسْمَ ٱللَّهِ عَلَىٰ مَا رَزَقَهُم مِّنۢ بَهِيمَةِ ٱلْأَنْعَـٰمِ ۗ فَإِلَـٰهُكُمْ إِلَـٰهٌ وَٰحِدٌ فَلَهُۥٓ أَسْلِمُوا۟ ۗ وَبَشِّرِ ٱلْمُخْبِتِينَ (٣٤)  ٱلَّذِينَ إِذَا ذُكِرَ ٱللَّهُ وَجِلَتْ قُلُوبُهُمْ وَٱلصَّـٰبِرِينَ عَلَىٰ مَآ أَصَابَهُمْ وَٱلْمُقِيمِى ٱلصَّلَوٰةِ وَمِمَّا رَزَقْنَـٰهُمْ يُنفِقُونَ (٣٥)  وَٱلْبُدْنَ جَعَلْنَـٰهَا لَكُم مِّن شَعَـٰٓئِرِ ٱللَّهِ لَكُمْ فِيهَا خَيْرٌ ۖ فَٱذْكُرُوا۟ ٱسْمَ ٱللَّهِ عَلَيْهَا صَوَآفَّ ۖ فَإِذَا وَجَبَتْ جُنُوبُهَا فَكُلُوا۟ مِنْهَا وَأَطْعِمُوا۟ ٱلْقَانِعَ وَٱلْمُعْتَرَّ ۚ كَذَٰلِكَ سَخَّرْنَـٰهَا لَكُمْ لَعَلَّكُمْ تَشْكُرُونَ (٣٦)  لَن يَنَالَ ٱللَّهَ لُحُومُهَا وَلَا دِمَآؤُهَا وَلَـٰكِن يَنَالُهُ ٱلتَّقْوَىٰ مِنكُمْ ۚ كَذَٰلِكَ سَخَّرَهَا لَكُمْ لِتُكَبِّرُوا۟ ٱللَّهَ عَلَىٰ مَا هَدَىٰكُمْ ۗ وَبَشِّرِ ٱلْمُحْسِنِينَ (٣٧)  ۞ إِنَّ ٱللَّهَ يُدَٰفِعُ عَنِ ٱلَّذِينَ ءَامَنُوٓا۟ ۗ إِنَّ ٱللَّهَ لَا يُحِبُّ كُلَّ خَوَّانٍ كَفُورٍ (٣٨)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 337,
+                "page_number": "337",
+                "page_key": 5,
+                "page_verses": [
+                    {
+                        "id": 2634,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "39",
+                        "arabic_name": "أُذِنَ لِلَّذِينَ يُقَـٰتَلُونَ بِأَنَّهُمْ ظُلِمُوا۟ ۚ وَإِنَّ ٱللَّهَ عَلَىٰ نَصْرِهِمْ لَقَدِيرٌ",
+                        "translated_name": "Se ha dado permiso a quienes son atacados, por haber sido oprimidos. Y, en verdad, Dios tiene poder para auxiliarles."
+                    },
+                    {
+                        "id": 2635,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "40",
+                        "arabic_name": "ٱلَّذِينَ أُخْرِجُوا۟ مِن دِيَـٰرِهِم بِغَيْرِ حَقٍّ إِلَّآ أَن يَقُولُوا۟ رَبُّنَا ٱللَّهُ ۗ وَلَوْلَا دَفْعُ ٱللَّهِ ٱلنَّاسَ بَعْضَهُم بِبَعْضٍ لَّهُدِّمَتْ صَوَٰمِعُ وَبِيَعٌ وَصَلَوَٰتٌ وَمَسَـٰجِدُ يُذْكَرُ فِيهَا ٱسْمُ ٱللَّهِ كَثِيرًا ۗ وَلَيَنصُرَنَّ ٱللَّهُ مَن يَنصُرُهُۥٓ ۗ إِنَّ ٱللَّهَ لَقَوِىٌّ عَزِيزٌ",
+                        "translated_name": "Aquellos que han sido expulsados de sus hogares sin derecho, sólo por haber dicho «Dios es nuestro Señor.» Y si Dios no hubiera defendido a unas personas por medio de otras, habrían sido destruidos monasterios, iglesias, sinagogas y mezquitas, en las que se menciona mucho el nombre de Dios. Ciertamente, Dios auxilia a quienes Le auxilian. En verdad, Dios es fuerte, poderoso."
+                    },
+                    {
+                        "id": 2636,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "41",
+                        "arabic_name": "ٱلَّذِينَ إِن مَّكَّنَّـٰهُمْ فِى ٱلْأَرْضِ أَقَامُوا۟ ٱلصَّلَوٰةَ وَءَاتَوُا۟ ٱلزَّكَوٰةَ وَأَمَرُوا۟ بِٱلْمَعْرُوفِ وَنَهَوْا۟ عَنِ ٱلْمُنكَرِ ۗ وَلِلَّهِ عَـٰقِبَةُ ٱلْأُمُورِ",
+                        "translated_name": "Aquellos que, si les damos poder en la Tierra, hacen la oración, dan el impuesto religioso purificador de la riqueza, ordenan lo que está bien y prohíben lo que está mal. Y la conclusión de todos los asuntos está en manos de Dios."
+                    },
+                    {
+                        "id": 2637,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "42",
+                        "arabic_name": "وَإِن يُكَذِّبُوكَ فَقَدْ كَذَّبَتْ قَبْلَهُمْ قَوْمُ نُوحٍ وَعَادٌ وَثَمُودُ",
+                        "translated_name": "Y si te desmienten, también antes de ellos desmintieron el pueblo de Noé y el de Ad y el de Zamud"
+                    },
+                    {
+                        "id": 2638,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "43",
+                        "arabic_name": "وَقَوْمُ إِبْرَٰهِيمَ وَقَوْمُ لُوطٍ",
+                        "translated_name": "y el pueblo de Abraham y el pueblo de Lot"
+                    },
+                    {
+                        "id": 2639,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "44",
+                        "arabic_name": "وَأَصْحَـٰبُ مَدْيَنَ ۖ وَكُذِّبَ مُوسَىٰ فَأَمْلَيْتُ لِلْكَـٰفِرِينَ ثُمَّ أَخَذْتُهُمْ ۖ فَكَيْفَ كَانَ نَكِيرِ",
+                        "translated_name": "y los habitantes de Madyan y fue desmentido Moisés. Di un plazo a los que no creían y luego me apoderé de ellos. ¡Cómo fue Mi castigo!"
+                    },
+                    {
+                        "id": 2640,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "45",
+                        "arabic_name": "فَكَأَيِّن مِّن قَرْيَةٍ أَهْلَكْنَـٰهَا وَهِىَ ظَالِمَةٌ فَهِىَ خَاوِيَةٌ عَلَىٰ عُرُوشِهَا وَبِئْرٍ مُّعَطَّلَةٍ وَقَصْرٍ مَّشِيدٍ",
+                        "translated_name": "¡Cuántas ciudades hemos destruido por haber sido opresoras y quedaron totalmente en ruinas! ¡Cuántos pozos abandonados! ¡Cuántos palacios derrumbados!"
+                    },
+                    {
+                        "id": 2641,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "46",
+                        "arabic_name": "أَفَلَمْ يَسِيرُوا۟ فِى ٱلْأَرْضِ فَتَكُونَ لَهُمْ قُلُوبٌ يَعْقِلُونَ بِهَآ أَوْ ءَاذَانٌ يَسْمَعُونَ بِهَا ۖ فَإِنَّهَا لَا تَعْمَى ٱلْأَبْصَـٰرُ وَلَـٰكِن تَعْمَى ٱلْقُلُوبُ ٱلَّتِى فِى ٱلصُّدُورِ",
+                        "translated_name": "¿No han viajado jamás por la Tierra con corazones capaces de entender y oídos capaces de escuchar? No es su vista la que está cegada sino los corazones que hay en sus pechos los que no ven."
+                    }
+                ],
+                "page_arabic_ayah": "أُذِنَ لِلَّذِينَ يُقَـٰتَلُونَ بِأَنَّهُمْ ظُلِمُوا۟ ۚ وَإِنَّ ٱللَّهَ عَلَىٰ نَصْرِهِمْ لَقَدِيرٌ (٣٩)  ٱلَّذِينَ أُخْرِجُوا۟ مِن دِيَـٰرِهِم بِغَيْرِ حَقٍّ إِلَّآ أَن يَقُولُوا۟ رَبُّنَا ٱللَّهُ ۗ وَلَوْلَا دَفْعُ ٱللَّهِ ٱلنَّاسَ بَعْضَهُم بِبَعْضٍ لَّهُدِّمَتْ صَوَٰمِعُ وَبِيَعٌ وَصَلَوَٰتٌ وَمَسَـٰجِدُ يُذْكَرُ فِيهَا ٱسْمُ ٱللَّهِ كَثِيرًا ۗ وَلَيَنصُرَنَّ ٱللَّهُ مَن يَنصُرُهُۥٓ ۗ إِنَّ ٱللَّهَ لَقَوِىٌّ عَزِيزٌ (٤٠)  ٱلَّذِينَ إِن مَّكَّنَّـٰهُمْ فِى ٱلْأَرْضِ أَقَامُوا۟ ٱلصَّلَوٰةَ وَءَاتَوُا۟ ٱلزَّكَوٰةَ وَأَمَرُوا۟ بِٱلْمَعْرُوفِ وَنَهَوْا۟ عَنِ ٱلْمُنكَرِ ۗ وَلِلَّهِ عَـٰقِبَةُ ٱلْأُمُورِ (٤١)  وَإِن يُكَذِّبُوكَ فَقَدْ كَذَّبَتْ قَبْلَهُمْ قَوْمُ نُوحٍ وَعَادٌ وَثَمُودُ (٤٢)  وَقَوْمُ إِبْرَٰهِيمَ وَقَوْمُ لُوطٍ (٤٣)  وَأَصْحَـٰبُ مَدْيَنَ ۖ وَكُذِّبَ مُوسَىٰ فَأَمْلَيْتُ لِلْكَـٰفِرِينَ ثُمَّ أَخَذْتُهُمْ ۖ فَكَيْفَ كَانَ نَكِيرِ (٤٤)  فَكَأَيِّن مِّن قَرْيَةٍ أَهْلَكْنَـٰهَا وَهِىَ ظَالِمَةٌ فَهِىَ خَاوِيَةٌ عَلَىٰ عُرُوشِهَا وَبِئْرٍ مُّعَطَّلَةٍ وَقَصْرٍ مَّشِيدٍ (٤٥)  أَفَلَمْ يَسِيرُوا۟ فِى ٱلْأَرْضِ فَتَكُونَ لَهُمْ قُلُوبٌ يَعْقِلُونَ بِهَآ أَوْ ءَاذَانٌ يَسْمَعُونَ بِهَا ۖ فَإِنَّهَا لَا تَعْمَى ٱلْأَبْصَـٰرُ وَلَـٰكِن تَعْمَى ٱلْقُلُوبُ ٱلَّتِى فِى ٱلصُّدُورِ (٤٦)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 338,
+                "page_number": "338",
+                "page_key": 6,
+                "page_verses": [
+                    {
+                        "id": 2642,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "47",
+                        "arabic_name": "وَيَسْتَعْجِلُونَكَ بِٱلْعَذَابِ وَلَن يُخْلِفَ ٱللَّهُ وَعْدَهُۥ ۚ وَإِنَّ يَوْمًا عِندَ رَبِّكَ كَأَلْفِ سَنَةٍ مِّمَّا تَعُدُّونَ",
+                        "translated_name": "Te piden que apresures el castigo, pero Dios no falta a Su promesa. Y, en verdad, un día junto a tu Señor es como mil años de los que vosotros contáis."
+                    },
+                    {
+                        "id": 2643,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "48",
+                        "arabic_name": "وَكَأَيِّن مِّن قَرْيَةٍ أَمْلَيْتُ لَهَا وَهِىَ ظَالِمَةٌ ثُمَّ أَخَذْتُهَا وَإِلَىَّ ٱلْمَصِيرُ",
+                        "translated_name": "¡A cuántas ciudades he dado Yo un respiro siendo opresoras y después me apoderé de ellas! El retorno es hacia Mí."
+                    },
+                    {
+                        "id": 2644,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "49",
+                        "arabic_name": "قُلْ يَـٰٓأَيُّهَا ٱلنَّاسُ إِنَّمَآ أَنَا۠ لَكُمْ نَذِيرٌ مُّبِينٌ",
+                        "translated_name": "Di: «¡Oh, gentes! ¡Yo soy para vosotros un amonestador claro!»"
+                    },
+                    {
+                        "id": 2645,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "50",
+                        "arabic_name": "فَٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُم مَّغْفِرَةٌ وَرِزْقٌ كَرِيمٌ",
+                        "translated_name": "Y quienes tengan fe y obren rectamente obtendrán perdón y una provisión generosa,"
+                    },
+                    {
+                        "id": 2646,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "51",
+                        "arabic_name": "وَٱلَّذِينَ سَعَوْا۟ فِىٓ ءَايَـٰتِنَا مُعَـٰجِزِينَ أُو۟لَـٰٓئِكَ أَصْحَـٰبُ ٱلْجَحِيمِ",
+                        "translated_name": "pero quienes se esfuercen en despreciar Mis señales serán los moradores del Infierno."
+                    },
+                    {
+                        "id": 2647,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "52",
+                        "arabic_name": "وَمَآ أَرْسَلْنَا مِن قَبْلِكَ مِن رَّسُولٍ وَلَا نَبِىٍّ إِلَّآ إِذَا تَمَنَّىٰٓ أَلْقَى ٱلشَّيْطَـٰنُ فِىٓ أُمْنِيَّتِهِۦ فَيَنسَخُ ٱللَّهُ مَا يُلْقِى ٱلشَّيْطَـٰنُ ثُمَّ يُحْكِمُ ٱللَّهُ ءَايَـٰتِهِۦ ۗ وَٱللَّهُ عَلِيمٌ حَكِيمٌ",
+                        "translated_name": "Y no hemos enviado antes de ti a ningún Mensajero ni profeta que no tuviera un deseo, sin que Satanás se interpusiera en su deseo. Pero Dios anula los obstáculos puestos por Satanás y hace Dios que se cumplan Sus señales, pues Dios todo lo conoce, es sabio,"
+                    },
+                    {
+                        "id": 2648,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "53",
+                        "arabic_name": "لِّيَجْعَلَ مَا يُلْقِى ٱلشَّيْطَـٰنُ فِتْنَةً لِّلَّذِينَ فِى قُلُوبِهِم مَّرَضٌ وَٱلْقَاسِيَةِ قُلُوبُهُمْ ۗ وَإِنَّ ٱلظَّـٰلِمِينَ لَفِى شِقَاقٍۭ بَعِيدٍ",
+                        "translated_name": "haciendo de los obstáculos de Satanás una prueba para quienes tienen una enfermedad en sus corazones y para los duros de corazón -En verdad, los opresores mantienen un comportamiento profundamente inadecuado-"
+                    },
+                    {
+                        "id": 2649,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "54",
+                        "arabic_name": "وَلِيَعْلَمَ ٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ أَنَّهُ ٱلْحَقُّ مِن رَّبِّكَ فَيُؤْمِنُوا۟ بِهِۦ فَتُخْبِتَ لَهُۥ قُلُوبُهُمْ ۗ وَإِنَّ ٱللَّهَ لَهَادِ ٱلَّذِينَ ءَامَنُوٓا۟ إِلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ",
+                        "translated_name": "y para que sepan quienes obtuvieron conocimiento, que ello es la Verdad que proviene de tu Señor y crean en ella y humillen ante Él sus corazones. En verdad, Dios guía a quienes tienen fe hacia un camino recto."
+                    },
+                    {
+                        "id": 2650,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "55",
+                        "arabic_name": "وَلَا يَزَالُ ٱلَّذِينَ كَفَرُوا۟ فِى مِرْيَةٍ مِّنْهُ حَتَّىٰ تَأْتِيَهُمُ ٱلسَّاعَةُ بَغْتَةً أَوْ يَأْتِيَهُمْ عَذَابُ يَوْمٍ عَقِيمٍ",
+                        "translated_name": "Pero quienes no tienen fe no cesarán de dudar de él hasta que llegue a ellos la Hora repentinamente o llegue a ellos el castigo del día del que no nacerá otro."
+                    }
+                ],
+                "page_arabic_ayah": "وَيَسْتَعْجِلُونَكَ بِٱلْعَذَابِ وَلَن يُخْلِفَ ٱللَّهُ وَعْدَهُۥ ۚ وَإِنَّ يَوْمًا عِندَ رَبِّكَ كَأَلْفِ سَنَةٍ مِّمَّا تَعُدُّونَ (٤٧)  وَكَأَيِّن مِّن قَرْيَةٍ أَمْلَيْتُ لَهَا وَهِىَ ظَالِمَةٌ ثُمَّ أَخَذْتُهَا وَإِلَىَّ ٱلْمَصِيرُ (٤٨)  قُلْ يَـٰٓأَيُّهَا ٱلنَّاسُ إِنَّمَآ أَنَا۠ لَكُمْ نَذِيرٌ مُّبِينٌ (٤٩)  فَٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُم مَّغْفِرَةٌ وَرِزْقٌ كَرِيمٌ (٥٠)  وَٱلَّذِينَ سَعَوْا۟ فِىٓ ءَايَـٰتِنَا مُعَـٰجِزِينَ أُو۟لَـٰٓئِكَ أَصْحَـٰبُ ٱلْجَحِيمِ (٥١)  وَمَآ أَرْسَلْنَا مِن قَبْلِكَ مِن رَّسُولٍ وَلَا نَبِىٍّ إِلَّآ إِذَا تَمَنَّىٰٓ أَلْقَى ٱلشَّيْطَـٰنُ فِىٓ أُمْنِيَّتِهِۦ فَيَنسَخُ ٱللَّهُ مَا يُلْقِى ٱلشَّيْطَـٰنُ ثُمَّ يُحْكِمُ ٱللَّهُ ءَايَـٰتِهِۦ ۗ وَٱللَّهُ عَلِيمٌ حَكِيمٌ (٥٢)  لِّيَجْعَلَ مَا يُلْقِى ٱلشَّيْطَـٰنُ فِتْنَةً لِّلَّذِينَ فِى قُلُوبِهِم مَّرَضٌ وَٱلْقَاسِيَةِ قُلُوبُهُمْ ۗ وَإِنَّ ٱلظَّـٰلِمِينَ لَفِى شِقَاقٍۭ بَعِيدٍ (٥٣)  وَلِيَعْلَمَ ٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ أَنَّهُ ٱلْحَقُّ مِن رَّبِّكَ فَيُؤْمِنُوا۟ بِهِۦ فَتُخْبِتَ لَهُۥ قُلُوبُهُمْ ۗ وَإِنَّ ٱللَّهَ لَهَادِ ٱلَّذِينَ ءَامَنُوٓا۟ إِلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ (٥٤)  وَلَا يَزَالُ ٱلَّذِينَ كَفَرُوا۟ فِى مِرْيَةٍ مِّنْهُ حَتَّىٰ تَأْتِيَهُمُ ٱلسَّاعَةُ بَغْتَةً أَوْ يَأْتِيَهُمْ عَذَابُ يَوْمٍ عَقِيمٍ (٥٥)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 339,
+                "page_number": "339",
+                "page_key": 7,
+                "page_verses": [
+                    {
+                        "id": 2651,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "56",
+                        "arabic_name": "ٱلْمُلْكُ يَوْمَئِذٍ لِّلَّهِ يَحْكُمُ بَيْنَهُمْ ۚ فَٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ فِى جَنَّـٰتِ ٱلنَّعِيمِ",
+                        "translated_name": "Ese día la soberanía pertenecerá a Dios y Él juzgará entre ellos. Y quienes hayan tenido fe y actuado rectamente estarán en los Jardines de las Delicias."
+                    },
+                    {
+                        "id": 2652,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "57",
+                        "arabic_name": "وَٱلَّذِينَ كَفَرُوا۟ وَكَذَّبُوا۟ بِـَٔايَـٰتِنَا فَأُو۟لَـٰٓئِكَ لَهُمْ عَذَابٌ مُّهِينٌ",
+                        "translated_name": "Y quienes no hayan tenido fe y hayan desmentido Nuestras señales, obtendrán un castigo humillante."
+                    },
+                    {
+                        "id": 2653,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "58",
+                        "arabic_name": "وَٱلَّذِينَ هَاجَرُوا۟ فِى سَبِيلِ ٱللَّهِ ثُمَّ قُتِلُوٓا۟ أَوْ مَاتُوا۟ لَيَرْزُقَنَّهُمُ ٱللَّهُ رِزْقًا حَسَنًا ۚ وَإِنَّ ٱللَّهَ لَهُوَ خَيْرُ ٱلرَّٰزِقِينَ",
+                        "translated_name": "Y a quienes emigraron por la causa de Dios y fueron matados o mueran Dios les otorgará, con certeza, una buena provisión. Y, en verdad, Dios es Quien mejor provee."
+                    },
+                    {
+                        "id": 2654,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "59",
+                        "arabic_name": "لَيُدْخِلَنَّهُم مُّدْخَلًا يَرْضَوْنَهُۥ ۗ وَإِنَّ ٱللَّهَ لَعَلِيمٌ حَلِيمٌ",
+                        "translated_name": "Les hará entrar en un lugar que les satisfará. En verdad, Dios todo lo conoce, es indulgente."
+                    },
+                    {
+                        "id": 2655,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "60",
+                        "arabic_name": "۞ ذَٰلِكَ وَمَنْ عَاقَبَ بِمِثْلِ مَا عُوقِبَ بِهِۦ ثُمَّ بُغِىَ عَلَيْهِ لَيَنصُرَنَّهُ ٱللَّهُ ۗ إِنَّ ٱللَّهَ لَعَفُوٌّ غَفُورٌ",
+                        "translated_name": "Así es. A Quien devuelva un agravio semejante al que se le hizo sufrir y posteriormente vuelva a ser agredido, con certeza, Dios le auxiliará. En verdad, Dios es muy indulgente, perdonador."
+                    },
+                    {
+                        "id": 2656,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "61",
+                        "arabic_name": "ذَٰلِكَ بِأَنَّ ٱللَّهَ يُولِجُ ٱلَّيْلَ فِى ٱلنَّهَارِ وَيُولِجُ ٱلنَّهَارَ فِى ٱلَّيْلِ وَأَنَّ ٱللَّهَ سَمِيعٌۢ بَصِيرٌ",
+                        "translated_name": "Eso es así porque Dios hace entrar la noche en el día y hace entrar el día en la noche y porque Dios todo lo oye, todo lo ve."
+                    },
+                    {
+                        "id": 2657,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "62",
+                        "arabic_name": "ذَٰلِكَ بِأَنَّ ٱللَّهَ هُوَ ٱلْحَقُّ وَأَنَّ مَا يَدْعُونَ مِن دُونِهِۦ هُوَ ٱلْبَـٰطِلُ وَأَنَّ ٱللَّهَ هُوَ ٱلْعَلِىُّ ٱلْكَبِيرُ",
+                        "translated_name": "Eso es así porque Dios es la Verdad y lo que ellos invocan aparte de Él es falso y porque Dios es el Altísimo, el Grande."
+                    },
+                    {
+                        "id": 2658,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "63",
+                        "arabic_name": "أَلَمْ تَرَ أَنَّ ٱللَّهَ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً فَتُصْبِحُ ٱلْأَرْضُ مُخْضَرَّةً ۗ إِنَّ ٱللَّهَ لَطِيفٌ خَبِيرٌ",
+                        "translated_name": "¿Acaso no veis que Dios hace descender del cielo agua y la Tierra se vuelve verde? En verdad, Dios es sutil, bien informado."
+                    },
+                    {
+                        "id": 2659,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "64",
+                        "arabic_name": "لَّهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ وَإِنَّ ٱللَّهَ لَهُوَ ٱلْغَنِىُّ ٱلْحَمِيدُ",
+                        "translated_name": "A Él pertenece lo que hay en los cielos y lo que hay en la Tierra y, en verdad, Dios es el Rico en Sí mismo, el digno de Alabanza."
+                    }
+                ],
+                "page_arabic_ayah": "ٱلْمُلْكُ يَوْمَئِذٍ لِّلَّهِ يَحْكُمُ بَيْنَهُمْ ۚ فَٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ فِى جَنَّـٰتِ ٱلنَّعِيمِ (٥٦)  وَٱلَّذِينَ كَفَرُوا۟ وَكَذَّبُوا۟ بِـَٔايَـٰتِنَا فَأُو۟لَـٰٓئِكَ لَهُمْ عَذَابٌ مُّهِينٌ (٥٧)  وَٱلَّذِينَ هَاجَرُوا۟ فِى سَبِيلِ ٱللَّهِ ثُمَّ قُتِلُوٓا۟ أَوْ مَاتُوا۟ لَيَرْزُقَنَّهُمُ ٱللَّهُ رِزْقًا حَسَنًا ۚ وَإِنَّ ٱللَّهَ لَهُوَ خَيْرُ ٱلرَّٰزِقِينَ (٥٨)  لَيُدْخِلَنَّهُم مُّدْخَلًا يَرْضَوْنَهُۥ ۗ وَإِنَّ ٱللَّهَ لَعَلِيمٌ حَلِيمٌ (٥٩)  ۞ ذَٰلِكَ وَمَنْ عَاقَبَ بِمِثْلِ مَا عُوقِبَ بِهِۦ ثُمَّ بُغِىَ عَلَيْهِ لَيَنصُرَنَّهُ ٱللَّهُ ۗ إِنَّ ٱللَّهَ لَعَفُوٌّ غَفُورٌ (٦٠)  ذَٰلِكَ بِأَنَّ ٱللَّهَ يُولِجُ ٱلَّيْلَ فِى ٱلنَّهَارِ وَيُولِجُ ٱلنَّهَارَ فِى ٱلَّيْلِ وَأَنَّ ٱللَّهَ سَمِيعٌۢ بَصِيرٌ (٦١)  ذَٰلِكَ بِأَنَّ ٱللَّهَ هُوَ ٱلْحَقُّ وَأَنَّ مَا يَدْعُونَ مِن دُونِهِۦ هُوَ ٱلْبَـٰطِلُ وَأَنَّ ٱللَّهَ هُوَ ٱلْعَلِىُّ ٱلْكَبِيرُ (٦٢)  أَلَمْ تَرَ أَنَّ ٱللَّهَ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً فَتُصْبِحُ ٱلْأَرْضُ مُخْضَرَّةً ۗ إِنَّ ٱللَّهَ لَطِيفٌ خَبِيرٌ (٦٣)  لَّهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ وَإِنَّ ٱللَّهَ لَهُوَ ٱلْغَنِىُّ ٱلْحَمِيدُ (٦٤)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 340,
+                "page_number": "340",
+                "page_key": 8,
+                "page_verses": [
+                    {
+                        "id": 2660,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "65",
+                        "arabic_name": "أَلَمْ تَرَ أَنَّ ٱللَّهَ سَخَّرَ لَكُم مَّا فِى ٱلْأَرْضِ وَٱلْفُلْكَ تَجْرِى فِى ٱلْبَحْرِ بِأَمْرِهِۦ وَيُمْسِكُ ٱلسَّمَآءَ أَن تَقَعَ عَلَى ٱلْأَرْضِ إِلَّا بِإِذْنِهِۦٓ ۗ إِنَّ ٱللَّهَ بِٱلنَّاسِ لَرَءُوفٌ رَّحِيمٌ",
+                        "translated_name": "¿Acaso no has visto que Dios ha dispuesto para vosotros lo que hay en la Tierra y los barcos que surcan el mar a una orden Suya y mantiene el cielo para que no caiga sobre la Tierra, excepto con Su permiso. En verdad, Dios es con los seres humanos el más amable, Misericordiosísimo."
+                    },
+                    {
+                        "id": 2661,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "66",
+                        "arabic_name": "وَهُوَ ٱلَّذِىٓ أَحْيَاكُمْ ثُمَّ يُمِيتُكُمْ ثُمَّ يُحْيِيكُمْ ۗ إِنَّ ٱلْإِنسَـٰنَ لَكَفُورٌ",
+                        "translated_name": "Él es Quien os da la vida, luego os hace morir, luego os devuelve a la vida. En verdad, el ser humano es muy desagradecido."
+                    },
+                    {
+                        "id": 2662,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "67",
+                        "arabic_name": "لِّكُلِّ أُمَّةٍ جَعَلْنَا مَنسَكًا هُمْ نَاسِكُوهُ ۖ فَلَا يُنَـٰزِعُنَّكَ فِى ٱلْأَمْرِ ۚ وَٱدْعُ إِلَىٰ رَبِّكَ ۖ إِنَّكَ لَعَلَىٰ هُدًى مُّسْتَقِيمٍ",
+                        "translated_name": "Para cada comunidad hemos establecido un ritual con el que ellos adoran. Por tanto, que no discutan contigo sobre este tema. Invita a la gente hacia tu Señor. En verdad, estás sobre un camino recto."
+                    },
+                    {
+                        "id": 2663,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "68",
+                        "arabic_name": "وَإِن جَـٰدَلُوكَ فَقُلِ ٱللَّهُ أَعْلَمُ بِمَا تَعْمَلُونَ",
+                        "translated_name": "Y si discuten contigo, di: «Dios es quien mejor sabe lo que hacéis.»"
+                    },
+                    {
+                        "id": 2664,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "69",
+                        "arabic_name": "ٱللَّهُ يَحْكُمُ بَيْنَكُمْ يَوْمَ ٱلْقِيَـٰمَةِ فِيمَا كُنتُمْ فِيهِ تَخْتَلِفُونَ",
+                        "translated_name": "Dios juzgará entre vosotros el Día del Levantamiento sobre aquello en lo que no os poníais de acuerdo."
+                    },
+                    {
+                        "id": 2665,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "70",
+                        "arabic_name": "أَلَمْ تَعْلَمْ أَنَّ ٱللَّهَ يَعْلَمُ مَا فِى ٱلسَّمَآءِ وَٱلْأَرْضِ ۗ إِنَّ ذَٰلِكَ فِى كِتَـٰبٍ ۚ إِنَّ ذَٰلِكَ عَلَى ٱللَّهِ يَسِيرٌ",
+                        "translated_name": "¿Es que no sabéis que Dios conoce los que hay en los cielos y la Tierra? En verdad, todo eso está en una Escritura. En verdad, eso es fácil para Dios."
+                    },
+                    {
+                        "id": 2666,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "71",
+                        "arabic_name": "وَيَعْبُدُونَ مِن دُونِ ٱللَّهِ مَا لَمْ يُنَزِّلْ بِهِۦ سُلْطَـٰنًا وَمَا لَيْسَ لَهُم بِهِۦ عِلْمٌ ۗ وَمَا لِلظَّـٰلِمِينَ مِن نَّصِيرٍ",
+                        "translated_name": "Y adoran, en lugar de Dios, algo a lo que Él no ha concedido poder y sobre lo que no poseen ningún conocimiento. Los opresores no tendrán quien les auxilie."
+                    },
+                    {
+                        "id": 2667,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "72",
+                        "arabic_name": "وَإِذَا تُتْلَىٰ عَلَيْهِمْ ءَايَـٰتُنَا بَيِّنَـٰتٍ تَعْرِفُ فِى وُجُوهِ ٱلَّذِينَ كَفَرُوا۟ ٱلْمُنكَرَ ۖ يَكَادُونَ يَسْطُونَ بِٱلَّذِينَ يَتْلُونَ عَلَيْهِمْ ءَايَـٰتِنَا ۗ قُلْ أَفَأُنَبِّئُكُم بِشَرٍّ مِّن ذَٰلِكُمُ ۗ ٱلنَّارُ وَعَدَهَا ٱللَّهُ ٱلَّذِينَ كَفَرُوا۟ ۖ وَبِئْسَ ٱلْمَصِيرُ",
+                        "translated_name": "Y, cuando les son recitados Nuestros versículos claros, reconocerás el rechazo en los rostros de quienes no son creyentes. Poco les falta para lanzarse sobre quienes les recitan Nuestros versículos. Di: «¿Queréis que os informe de algo peor que eso?: Dios ha prometido el Fuego a quienes no son creyentes y ¡Que mal destino!»"
+                    }
+                ],
+                "page_arabic_ayah": "أَلَمْ تَرَ أَنَّ ٱللَّهَ سَخَّرَ لَكُم مَّا فِى ٱلْأَرْضِ وَٱلْفُلْكَ تَجْرِى فِى ٱلْبَحْرِ بِأَمْرِهِۦ وَيُمْسِكُ ٱلسَّمَآءَ أَن تَقَعَ عَلَى ٱلْأَرْضِ إِلَّا بِإِذْنِهِۦٓ ۗ إِنَّ ٱللَّهَ بِٱلنَّاسِ لَرَءُوفٌ رَّحِيمٌ (٦٥)  وَهُوَ ٱلَّذِىٓ أَحْيَاكُمْ ثُمَّ يُمِيتُكُمْ ثُمَّ يُحْيِيكُمْ ۗ إِنَّ ٱلْإِنسَـٰنَ لَكَفُورٌ (٦٦)  لِّكُلِّ أُمَّةٍ جَعَلْنَا مَنسَكًا هُمْ نَاسِكُوهُ ۖ فَلَا يُنَـٰزِعُنَّكَ فِى ٱلْأَمْرِ ۚ وَٱدْعُ إِلَىٰ رَبِّكَ ۖ إِنَّكَ لَعَلَىٰ هُدًى مُّسْتَقِيمٍ (٦٧)  وَإِن جَـٰدَلُوكَ فَقُلِ ٱللَّهُ أَعْلَمُ بِمَا تَعْمَلُونَ (٦٨)  ٱللَّهُ يَحْكُمُ بَيْنَكُمْ يَوْمَ ٱلْقِيَـٰمَةِ فِيمَا كُنتُمْ فِيهِ تَخْتَلِفُونَ (٦٩)  أَلَمْ تَعْلَمْ أَنَّ ٱللَّهَ يَعْلَمُ مَا فِى ٱلسَّمَآءِ وَٱلْأَرْضِ ۗ إِنَّ ذَٰلِكَ فِى كِتَـٰبٍ ۚ إِنَّ ذَٰلِكَ عَلَى ٱللَّهِ يَسِيرٌ (٧٠)  وَيَعْبُدُونَ مِن دُونِ ٱللَّهِ مَا لَمْ يُنَزِّلْ بِهِۦ سُلْطَـٰنًا وَمَا لَيْسَ لَهُم بِهِۦ عِلْمٌ ۗ وَمَا لِلظَّـٰلِمِينَ مِن نَّصِيرٍ (٧١)  وَإِذَا تُتْلَىٰ عَلَيْهِمْ ءَايَـٰتُنَا بَيِّنَـٰتٍ تَعْرِفُ فِى وُجُوهِ ٱلَّذِينَ كَفَرُوا۟ ٱلْمُنكَرَ ۖ يَكَادُونَ يَسْطُونَ بِٱلَّذِينَ يَتْلُونَ عَلَيْهِمْ ءَايَـٰتِنَا ۗ قُلْ أَفَأُنَبِّئُكُم بِشَرٍّ مِّن ذَٰلِكُمُ ۗ ٱلنَّارُ وَعَدَهَا ٱللَّهُ ٱلَّذِينَ كَفَرُوا۟ ۖ وَبِئْسَ ٱلْمَصِيرُ (٧٢)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 341,
+                "page_number": "341",
+                "page_key": 9,
+                "page_verses": [
+                    {
+                        "id": 2668,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "73",
+                        "arabic_name": "يَـٰٓأَيُّهَا ٱلنَّاسُ ضُرِبَ مَثَلٌ فَٱسْتَمِعُوا۟ لَهُۥٓ ۚ إِنَّ ٱلَّذِينَ تَدْعُونَ مِن دُونِ ٱللَّهِ لَن يَخْلُقُوا۟ ذُبَابًا وَلَوِ ٱجْتَمَعُوا۟ لَهُۥ ۖ وَإِن يَسْلُبْهُمُ ٱلذُّبَابُ شَيْـًٔا لَّا يَسْتَنقِذُوهُ مِنْهُ ۚ ضَعُفَ ٱلطَّالِبُ وَٱلْمَطْلُوبُ",
+                        "translated_name": "¡Oh, gentes! Se os pone un ejemplo ¡Escuchadle!: «En verdad, aquellos que invocáis en lugar de Dios no crearían ni una mosca aunque se reuniesen todos para ello y si una mosca se llevara algo de ellos no podrían recuperarlo.» ¡Qué débiles el pretendiente y el pretendido!"
+                    },
+                    {
+                        "id": 2669,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "74",
+                        "arabic_name": "مَا قَدَرُوا۟ ٱللَّهَ حَقَّ قَدْرِهِۦٓ ۗ إِنَّ ٱللَّهَ لَقَوِىٌّ عَزِيزٌ",
+                        "translated_name": "No valoran a Dios como Él merece ser valorado. En verdad, Dios es fuerte, poderoso."
+                    },
+                    {
+                        "id": 2670,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "75",
+                        "arabic_name": "ٱللَّهُ يَصْطَفِى مِنَ ٱلْمَلَـٰٓئِكَةِ رُسُلًا وَمِنَ ٱلنَّاسِ ۚ إِنَّ ٱللَّهَ سَمِيعٌۢ بَصِيرٌ",
+                        "translated_name": "Dios elige Mensajeros entre los ángeles y entre los hombres. En verdad, Dios todo lo oye, todo lo ve."
+                    },
+                    {
+                        "id": 2671,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "76",
+                        "arabic_name": "يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۗ وَإِلَى ٱللَّهِ تُرْجَعُ ٱلْأُمُورُ",
+                        "translated_name": "Él conoce lo que tienen entre sus manos y lo que tienen tras ellos y a Dios regresan todos los asuntos."
+                    },
+                    {
+                        "id": 2672,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "77",
+                        "arabic_name": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱرْكَعُوا۟ وَٱسْجُدُوا۟ وَٱعْبُدُوا۟ رَبَّكُمْ وَٱفْعَلُوا۟ ٱلْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ ۩",
+                        "translated_name": "¡Oh, los que sois creyentes! ¡Inclinaos y prosternaos y adorad a vuestro Señor y haced el bien! ¡Quizás así triunféis!"
+                    },
+                    {
+                        "id": 2673,
+                        "chapter_id": 22,
+                        "verses_translate_name": "versos",
+                        "verses_number": "78",
+                        "arabic_name": "وَجَـٰهِدُوا۟ فِى ٱللَّهِ حَقَّ جِهَادِهِۦ ۚ هُوَ ٱجْتَبَىٰكُمْ وَمَا جَعَلَ عَلَيْكُمْ فِى ٱلدِّينِ مِنْ حَرَجٍ ۚ مِّلَّةَ أَبِيكُمْ إِبْرَٰهِيمَ ۚ هُوَ سَمَّىٰكُمُ ٱلْمُسْلِمِينَ مِن قَبْلُ وَفِى هَـٰذَا لِيَكُونَ ٱلرَّسُولُ شَهِيدًا عَلَيْكُمْ وَتَكُونُوا۟ شُهَدَآءَ عَلَى ٱلنَّاسِ ۚ فَأَقِيمُوا۟ ٱلصَّلَوٰةَ وَءَاتُوا۟ ٱلزَّكَوٰةَ وَٱعْتَصِمُوا۟ بِٱللَّهِ هُوَ مَوْلَىٰكُمْ ۖ فَنِعْمَ ٱلْمَوْلَىٰ وَنِعْمَ ٱلنَّصِيرُ",
+                        "translated_name": "Y esforzaos por Dios con un esfuerzo verdadero por Él! Él os ha elegido y no ha puesto en la religión, la creencia de vuestro padre Abraham, ninguna dificultad para vosotros. Él os ha llamado musulmanes anteriormente y en éste, para que sea el Mensajero testigo sobre vosotros y seáis vosotros testigos sobre la gente. Por tanto, haced la oración, dad el impuesto purificador de la riqueza y aferraos a Dios. Él es vuestro Señor y Protector. Un excelente Protector y un excelente Defensor."
+                    }
+                ],
+                "page_arabic_ayah": "يَـٰٓأَيُّهَا ٱلنَّاسُ ضُرِبَ مَثَلٌ فَٱسْتَمِعُوا۟ لَهُۥٓ ۚ إِنَّ ٱلَّذِينَ تَدْعُونَ مِن دُونِ ٱللَّهِ لَن يَخْلُقُوا۟ ذُبَابًا وَلَوِ ٱجْتَمَعُوا۟ لَهُۥ ۖ وَإِن يَسْلُبْهُمُ ٱلذُّبَابُ شَيْـًٔا لَّا يَسْتَنقِذُوهُ مِنْهُ ۚ ضَعُفَ ٱلطَّالِبُ وَٱلْمَطْلُوبُ (٧٣)  مَا قَدَرُوا۟ ٱللَّهَ حَقَّ قَدْرِهِۦٓ ۗ إِنَّ ٱللَّهَ لَقَوِىٌّ عَزِيزٌ (٧٤)  ٱللَّهُ يَصْطَفِى مِنَ ٱلْمَلَـٰٓئِكَةِ رُسُلًا وَمِنَ ٱلنَّاسِ ۚ إِنَّ ٱللَّهَ سَمِيعٌۢ بَصِيرٌ (٧٥)  يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۗ وَإِلَى ٱللَّهِ تُرْجَعُ ٱلْأُمُورُ (٧٦)  يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱرْكَعُوا۟ وَٱسْجُدُوا۟ وَٱعْبُدُوا۟ رَبَّكُمْ وَٱفْعَلُوا۟ ٱلْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ ۩ (٧٧)  وَجَـٰهِدُوا۟ فِى ٱللَّهِ حَقَّ جِهَادِهِۦ ۚ هُوَ ٱجْتَبَىٰكُمْ وَمَا جَعَلَ عَلَيْكُمْ فِى ٱلدِّينِ مِنْ حَرَجٍ ۚ مِّلَّةَ أَبِيكُمْ إِبْرَٰهِيمَ ۚ هُوَ سَمَّىٰكُمُ ٱلْمُسْلِمِينَ مِن قَبْلُ وَفِى هَـٰذَا لِيَكُونَ ٱلرَّسُولُ شَهِيدًا عَلَيْكُمْ وَتَكُونُوا۟ شُهَدَآءَ عَلَى ٱلنَّاسِ ۚ فَأَقِيمُوا۟ ٱلصَّلَوٰةَ وَءَاتُوا۟ ٱلزَّكَوٰةَ وَٱعْتَصِمُوا۟ بِٱللَّهِ هُوَ مَوْلَىٰكُمْ ۖ فَنِعْمَ ٱلْمَوْلَىٰ وَنِعْمَ ٱلنَّصِيرُ (٧٨)",
+                "is_read": false
+            }
+        ]
+    }
+}

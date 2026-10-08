@@ -1,0 +1,13 @@
+{
+    "role": {
+        "title": "قائمة الأدوار",
+        "singular": "دور",
+        "form": {
+            "name_label": "اسم الدور",
+            "name_placeholder": "مثال: مدير المحتوى",
+            "select_all": "تحديد جميع الصلاحيات",
+            "permissions_title": "الصلاحيات",
+            "selected_count": "{selected} / {total} محدد"
+        }
+    }
+}

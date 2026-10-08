@@ -1,0 +1,461 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 69,
+            "serial_number": "69",
+            "arabic_name": "الحاقة",
+            "translated_name": "Al-Haqqah",
+            "verses_translate_name": "Verses",
+            "verses_count": "52"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 566,
+                "page_number": "566",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5324,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "ٱلْحَآقَّةُ",
+                        "translated_name": "THE CONCRETE REALITY."
+                    },
+                    {
+                        "id": 5325,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "مَا ٱلْحَآقَّةُ",
+                        "translated_name": "What is the concrete reality?"
+                    },
+                    {
+                        "id": 5326,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "وَمَآ أَدْرَىٰكَ مَا ٱلْحَآقَّةُ",
+                        "translated_name": "What do you comprehend by the concrete reality?"
+                    },
+                    {
+                        "id": 5327,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "كَذَّبَتْ ثَمُودُ وَعَادٌۢ بِٱلْقَارِعَةِ",
+                        "translated_name": "The Thamud and 'Ad denied the consequential calamity."
+                    },
+                    {
+                        "id": 5328,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "فَأَمَّا ثَمُودُ فَأُهْلِكُوا۟ بِٱلطَّاغِيَةِ",
+                        "translated_name": "So destroyed were the Thamud by a storm of thunder and lightning;"
+                    },
+                    {
+                        "id": 5329,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "وَأَمَّا عَادٌ فَأُهْلِكُوا۟ بِرِيحٍ صَرْصَرٍ عَاتِيَةٍ",
+                        "translated_name": "And the 'Ad were destroyed by the furious cold blast of roaring wind"
+                    },
+                    {
+                        "id": 5330,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "سَخَّرَهَا عَلَيْهِمْ سَبْعَ لَيَالٍ وَثَمَـٰنِيَةَ أَيَّامٍ حُسُومًا فَتَرَى ٱلْقَوْمَ فِيهَا صَرْعَىٰ كَأَنَّهُمْ أَعْجَازُ نَخْلٍ خَاوِيَةٍ",
+                        "translated_name": "Which He sent to assail them for seven nights and eight days running. You should have seen the people prostrate like the decayed trunks of date-palm trees."
+                    },
+                    {
+                        "id": 5331,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "فَهَلْ تَرَىٰ لَهُم مِّنۢ بَاقِيَةٍ",
+                        "translated_name": "Do you see any trace of them?"
+                    }
+                ],
+                "page_arabic_ayah": "ٱلْحَآقَّةُ (١)  مَا ٱلْحَآقَّةُ (٢)  وَمَآ أَدْرَىٰكَ مَا ٱلْحَآقَّةُ (٣)  كَذَّبَتْ ثَمُودُ وَعَادٌۢ بِٱلْقَارِعَةِ (٤)  فَأَمَّا ثَمُودُ فَأُهْلِكُوا۟ بِٱلطَّاغِيَةِ (٥)  وَأَمَّا عَادٌ فَأُهْلِكُوا۟ بِرِيحٍ صَرْصَرٍ عَاتِيَةٍ (٦)  سَخَّرَهَا عَلَيْهِمْ سَبْعَ لَيَالٍ وَثَمَـٰنِيَةَ أَيَّامٍ حُسُومًا فَتَرَى ٱلْقَوْمَ فِيهَا صَرْعَىٰ كَأَنَّهُمْ أَعْجَازُ نَخْلٍ خَاوِيَةٍ (٧)  فَهَلْ تَرَىٰ لَهُم مِّنۢ بَاقِيَةٍ (٨)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 567,
+                "page_number": "567",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 5332,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "وَجَآءَ فِرْعَوْنُ وَمَن قَبْلَهُۥ وَٱلْمُؤْتَفِكَـٰتُ بِٱلْخَاطِئَةِ",
+                        "translated_name": "Then came the Pharaoh, and those before him whose habitations were overthrown while they were committing crimes."
+                    },
+                    {
+                        "id": 5333,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "فَعَصَوْا۟ رَسُولَ رَبِّهِمْ فَأَخَذَهُمْ أَخْذَةً رَّابِيَةً",
+                        "translated_name": "When they disobeyed the apostle of their Lord He seized them with an overwhelming punishment."
+                    },
+                    {
+                        "id": 5334,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "إِنَّا لَمَّا طَغَا ٱلْمَآءُ حَمَلْنَـٰكُمْ فِى ٱلْجَارِيَةِ",
+                        "translated_name": "When the water rose in flood, We bore you in the ark,"
+                    },
+                    {
+                        "id": 5335,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "لِنَجْعَلَهَا لَكُمْ تَذْكِرَةً وَتَعِيَهَآ أُذُنٌ وَٰعِيَةٌ",
+                        "translated_name": "In order to make it a warning for you, and that the ear retentive may preserve it."
+                    },
+                    {
+                        "id": 5336,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "فَإِذَا نُفِخَ فِى ٱلصُّورِ نَفْخَةٌ وَٰحِدَةٌ",
+                        "translated_name": "When the single blast is sounded on the trumpet,"
+                    },
+                    {
+                        "id": 5337,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "وَحُمِلَتِ ٱلْأَرْضُ وَٱلْجِبَالُ فَدُكَّتَا دَكَّةً وَٰحِدَةً",
+                        "translated_name": "And the earth and mountains heaved and crushed to powder with one levelling blow,"
+                    },
+                    {
+                        "id": 5338,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "فَيَوْمَئِذٍ وَقَعَتِ ٱلْوَاقِعَةُ",
+                        "translated_name": "On that Day will come what is to come."
+                    },
+                    {
+                        "id": 5339,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "وَٱنشَقَّتِ ٱلسَّمَآءُ فَهِىَ يَوْمَئِذٍ وَاهِيَةٌ",
+                        "translated_name": "The sky will cleave asunder on that day and fall to pieces."
+                    },
+                    {
+                        "id": 5340,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "وَٱلْمَلَكُ عَلَىٰٓ أَرْجَآئِهَا ۚ وَيَحْمِلُ عَرْشَ رَبِّكَ فَوْقَهُمْ يَوْمَئِذٍ ثَمَـٰنِيَةٌ",
+                        "translated_name": "On its fringes will be angels, eight of them, bearing their Lord's throne aloft."
+                    },
+                    {
+                        "id": 5341,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "يَوْمَئِذٍ تُعْرَضُونَ لَا تَخْفَىٰ مِنكُمْ خَافِيَةٌ",
+                        "translated_name": "You will then be set before Him, and not one of you will remain unexposed."
+                    },
+                    {
+                        "id": 5342,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "فَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ بِيَمِينِهِۦ فَيَقُولُ هَآؤُمُ ٱقْرَءُوا۟ كِتَـٰبِيَهْ",
+                        "translated_name": "He who is given his ledger in his right hand, will say: \"Here, read my ledger."
+                    },
+                    {
+                        "id": 5343,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "20",
+                        "arabic_name": "إِنِّى ظَنَنتُ أَنِّى مُلَـٰقٍ حِسَابِيَهْ",
+                        "translated_name": "I was certain I'll be given my account.\""
+                    },
+                    {
+                        "id": 5344,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "21",
+                        "arabic_name": "فَهُوَ فِى عِيشَةٍ رَّاضِيَةٍ",
+                        "translated_name": "So he shall have an agreeable life"
+                    },
+                    {
+                        "id": 5345,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "22",
+                        "arabic_name": "فِى جَنَّةٍ عَالِيَةٍ",
+                        "translated_name": "In high empyrean"
+                    },
+                    {
+                        "id": 5346,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "23",
+                        "arabic_name": "قُطُوفُهَا دَانِيَةٌ",
+                        "translated_name": "With fruits hanging low within reach,"
+                    },
+                    {
+                        "id": 5347,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "24",
+                        "arabic_name": "كُلُوا۟ وَٱشْرَبُوا۟ هَنِيٓـًٔۢا بِمَآ أَسْلَفْتُمْ فِى ٱلْأَيَّامِ ٱلْخَالِيَةِ",
+                        "translated_name": "(And told:) \"Eat and drink to your fill as reward for (good) deeds you had done in days of yore.\""
+                    },
+                    {
+                        "id": 5348,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "25",
+                        "arabic_name": "وَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ بِشِمَالِهِۦ فَيَقُولُ يَـٰلَيْتَنِى لَمْ أُوتَ كِتَـٰبِيَهْ",
+                        "translated_name": "But whosoever gets his ledger in his left hand, will say: \"Would that I were never given my ledger,"
+                    },
+                    {
+                        "id": 5349,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "26",
+                        "arabic_name": "وَلَمْ أَدْرِ مَا حِسَابِيَهْ",
+                        "translated_name": "And not known my account!"
+                    },
+                    {
+                        "id": 5350,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "27",
+                        "arabic_name": "يَـٰلَيْتَهَا كَانَتِ ٱلْقَاضِيَةَ",
+                        "translated_name": "I wish death had put an end to me."
+                    },
+                    {
+                        "id": 5351,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "28",
+                        "arabic_name": "مَآ أَغْنَىٰ عَنِّى مَالِيَهْ ۜ",
+                        "translated_name": "Of no use was even my wealth."
+                    },
+                    {
+                        "id": 5352,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "29",
+                        "arabic_name": "هَلَكَ عَنِّى سُلْطَـٰنِيَهْ",
+                        "translated_name": "Vanished has my power from me.\""
+                    },
+                    {
+                        "id": 5353,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "30",
+                        "arabic_name": "خُذُوهُ فَغُلُّوهُ",
+                        "translated_name": "\"Seize him and manacle him,"
+                    },
+                    {
+                        "id": 5354,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "31",
+                        "arabic_name": "ثُمَّ ٱلْجَحِيمَ صَلُّوهُ",
+                        "translated_name": "Then cast him to be burnt in Hell;"
+                    },
+                    {
+                        "id": 5355,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "32",
+                        "arabic_name": "ثُمَّ فِى سِلْسِلَةٍ ذَرْعُهَا سَبْعُونَ ذِرَاعًا فَٱسْلُكُوهُ",
+                        "translated_name": "And string him to a chain seventy cubits long."
+                    },
+                    {
+                        "id": 5356,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "33",
+                        "arabic_name": "إِنَّهُۥ كَانَ لَا يُؤْمِنُ بِٱللَّهِ ٱلْعَظِيمِ",
+                        "translated_name": "He did not believe in God the supreme,"
+                    },
+                    {
+                        "id": 5357,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "34",
+                        "arabic_name": "وَلَا يَحُضُّ عَلَىٰ طَعَامِ ٱلْمِسْكِينِ",
+                        "translated_name": "Nor urged others to feed the poor."
+                    }
+                ],
+                "page_arabic_ayah": "وَجَآءَ فِرْعَوْنُ وَمَن قَبْلَهُۥ وَٱلْمُؤْتَفِكَـٰتُ بِٱلْخَاطِئَةِ (٩)  فَعَصَوْا۟ رَسُولَ رَبِّهِمْ فَأَخَذَهُمْ أَخْذَةً رَّابِيَةً (١٠)  إِنَّا لَمَّا طَغَا ٱلْمَآءُ حَمَلْنَـٰكُمْ فِى ٱلْجَارِيَةِ (١١)  لِنَجْعَلَهَا لَكُمْ تَذْكِرَةً وَتَعِيَهَآ أُذُنٌ وَٰعِيَةٌ (١٢)  فَإِذَا نُفِخَ فِى ٱلصُّورِ نَفْخَةٌ وَٰحِدَةٌ (١٣)  وَحُمِلَتِ ٱلْأَرْضُ وَٱلْجِبَالُ فَدُكَّتَا دَكَّةً وَٰحِدَةً (١٤)  فَيَوْمَئِذٍ وَقَعَتِ ٱلْوَاقِعَةُ (١٥)  وَٱنشَقَّتِ ٱلسَّمَآءُ فَهِىَ يَوْمَئِذٍ وَاهِيَةٌ (١٦)  وَٱلْمَلَكُ عَلَىٰٓ أَرْجَآئِهَا ۚ وَيَحْمِلُ عَرْشَ رَبِّكَ فَوْقَهُمْ يَوْمَئِذٍ ثَمَـٰنِيَةٌ (١٧)  يَوْمَئِذٍ تُعْرَضُونَ لَا تَخْفَىٰ مِنكُمْ خَافِيَةٌ (١٨)  فَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ بِيَمِينِهِۦ فَيَقُولُ هَآؤُمُ ٱقْرَءُوا۟ كِتَـٰبِيَهْ (١٩)  إِنِّى ظَنَنتُ أَنِّى مُلَـٰقٍ حِسَابِيَهْ (٢٠)  فَهُوَ فِى عِيشَةٍ رَّاضِيَةٍ (٢١)  فِى جَنَّةٍ عَالِيَةٍ (٢٢)  قُطُوفُهَا دَانِيَةٌ (٢٣)  كُلُوا۟ وَٱشْرَبُوا۟ هَنِيٓـًٔۢا بِمَآ أَسْلَفْتُمْ فِى ٱلْأَيَّامِ ٱلْخَالِيَةِ (٢٤)  وَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ بِشِمَالِهِۦ فَيَقُولُ يَـٰلَيْتَنِى لَمْ أُوتَ كِتَـٰبِيَهْ (٢٥)  وَلَمْ أَدْرِ مَا حِسَابِيَهْ (٢٦)  يَـٰلَيْتَهَا كَانَتِ ٱلْقَاضِيَةَ (٢٧)  مَآ أَغْنَىٰ عَنِّى مَالِيَهْ ۜ (٢٨)  هَلَكَ عَنِّى سُلْطَـٰنِيَهْ (٢٩)  خُذُوهُ فَغُلُّوهُ (٣٠)  ثُمَّ ٱلْجَحِيمَ صَلُّوهُ (٣١)  ثُمَّ فِى سِلْسِلَةٍ ذَرْعُهَا سَبْعُونَ ذِرَاعًا فَٱسْلُكُوهُ (٣٢)  إِنَّهُۥ كَانَ لَا يُؤْمِنُ بِٱللَّهِ ٱلْعَظِيمِ (٣٣)  وَلَا يَحُضُّ عَلَىٰ طَعَامِ ٱلْمِسْكِينِ (٣٤)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 568,
+                "page_number": "568",
+                "page_key": 2,
+                "page_verses": [
+                    {
+                        "id": 5358,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "35",
+                        "arabic_name": "فَلَيْسَ لَهُ ٱلْيَوْمَ هَـٰهُنَا حَمِيمٌ",
+                        "translated_name": "That is why he has no friend today,"
+                    },
+                    {
+                        "id": 5359,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "36",
+                        "arabic_name": "وَلَا طَعَامٌ إِلَّا مِنْ غِسْلِينٍ",
+                        "translated_name": "Nor food other than suppuration (filth)"
+                    },
+                    {
+                        "id": 5360,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "37",
+                        "arabic_name": "لَّا يَأْكُلُهُۥٓ إِلَّا ٱلْخَـٰطِـُٔونَ",
+                        "translated_name": "Which none but the hellish eat.\""
+                    },
+                    {
+                        "id": 5361,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "38",
+                        "arabic_name": "فَلَآ أُقْسِمُ بِمَا تُبْصِرُونَ",
+                        "translated_name": "So, I call to witness what you see"
+                    },
+                    {
+                        "id": 5362,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "39",
+                        "arabic_name": "وَمَا لَا تُبْصِرُونَ",
+                        "translated_name": "And what you do not see,"
+                    },
+                    {
+                        "id": 5363,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "40",
+                        "arabic_name": "إِنَّهُۥ لَقَوْلُ رَسُولٍ كَرِيمٍ",
+                        "translated_name": "That this is indeed the word of the noble Messenger,"
+                    },
+                    {
+                        "id": 5364,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "41",
+                        "arabic_name": "وَمَا هُوَ بِقَوْلِ شَاعِرٍ ۚ قَلِيلًا مَّا تُؤْمِنُونَ",
+                        "translated_name": "And not the word of a poet. How little is it that you believe!"
+                    },
+                    {
+                        "id": 5365,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "42",
+                        "arabic_name": "وَلَا بِقَوْلِ كَاهِنٍ ۚ قَلِيلًا مَّا تَذَكَّرُونَ",
+                        "translated_name": "Nor is it the word of a soothsayer. Little is it that you reflect!"
+                    },
+                    {
+                        "id": 5366,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "43",
+                        "arabic_name": "تَنزِيلٌ مِّن رَّبِّ ٱلْعَـٰلَمِينَ",
+                        "translated_name": "It has been sent down by the Lord of all the worlds."
+                    },
+                    {
+                        "id": 5367,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "44",
+                        "arabic_name": "وَلَوْ تَقَوَّلَ عَلَيْنَا بَعْضَ ٱلْأَقَاوِيلِ",
+                        "translated_name": "Had he attributed falsely any words to Us,"
+                    },
+                    {
+                        "id": 5368,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "45",
+                        "arabic_name": "لَأَخَذْنَا مِنْهُ بِٱلْيَمِينِ",
+                        "translated_name": "We would have seized him by his right hand,"
+                    },
+                    {
+                        "id": 5369,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "46",
+                        "arabic_name": "ثُمَّ لَقَطَعْنَا مِنْهُ ٱلْوَتِينَ",
+                        "translated_name": "Then cut off his aorta,"
+                    },
+                    {
+                        "id": 5370,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "47",
+                        "arabic_name": "فَمَا مِنكُم مِّنْ أَحَدٍ عَنْهُ حَـٰجِزِينَ",
+                        "translated_name": "And not one of you would have been able to stop (Us)."
+                    },
+                    {
+                        "id": 5371,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "48",
+                        "arabic_name": "وَإِنَّهُۥ لَتَذْكِرَةٌ لِّلْمُتَّقِينَ",
+                        "translated_name": "It is really a reminder for those who fear God and follow the straight path."
+                    },
+                    {
+                        "id": 5372,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "49",
+                        "arabic_name": "وَإِنَّا لَنَعْلَمُ أَنَّ مِنكُم مُّكَذِّبِينَ",
+                        "translated_name": "We certainly know that some among you do deny it."
+                    },
+                    {
+                        "id": 5373,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "50",
+                        "arabic_name": "وَإِنَّهُۥ لَحَسْرَةٌ عَلَى ٱلْكَـٰفِرِينَ",
+                        "translated_name": "It is surely the nemesis of unbelievers."
+                    },
+                    {
+                        "id": 5374,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "51",
+                        "arabic_name": "وَإِنَّهُۥ لَحَقُّ ٱلْيَقِينِ",
+                        "translated_name": "And He, He is indeed the ultimate Reality."
+                    },
+                    {
+                        "id": 5375,
+                        "chapter_id": 69,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "52",
+                        "arabic_name": "فَسَبِّحْ بِٱسْمِ رَبِّكَ ٱلْعَظِيمِ",
+                        "translated_name": "So glorify your Lord, the most supreme."
+                    }
+                ],
+                "page_arabic_ayah": "فَلَيْسَ لَهُ ٱلْيَوْمَ هَـٰهُنَا حَمِيمٌ (٣٥)  وَلَا طَعَامٌ إِلَّا مِنْ غِسْلِينٍ (٣٦)  لَّا يَأْكُلُهُۥٓ إِلَّا ٱلْخَـٰطِـُٔونَ (٣٧)  فَلَآ أُقْسِمُ بِمَا تُبْصِرُونَ (٣٨)  وَمَا لَا تُبْصِرُونَ (٣٩)  إِنَّهُۥ لَقَوْلُ رَسُولٍ كَرِيمٍ (٤٠)  وَمَا هُوَ بِقَوْلِ شَاعِرٍ ۚ قَلِيلًا مَّا تُؤْمِنُونَ (٤١)  وَلَا بِقَوْلِ كَاهِنٍ ۚ قَلِيلًا مَّا تَذَكَّرُونَ (٤٢)  تَنزِيلٌ مِّن رَّبِّ ٱلْعَـٰلَمِينَ (٤٣)  وَلَوْ تَقَوَّلَ عَلَيْنَا بَعْضَ ٱلْأَقَاوِيلِ (٤٤)  لَأَخَذْنَا مِنْهُ بِٱلْيَمِينِ (٤٥)  ثُمَّ لَقَطَعْنَا مِنْهُ ٱلْوَتِينَ (٤٦)  فَمَا مِنكُم مِّنْ أَحَدٍ عَنْهُ حَـٰجِزِينَ (٤٧)  وَإِنَّهُۥ لَتَذْكِرَةٌ لِّلْمُتَّقِينَ (٤٨)  وَإِنَّا لَنَعْلَمُ أَنَّ مِنكُم مُّكَذِّبِينَ (٤٩)  وَإِنَّهُۥ لَحَسْرَةٌ عَلَى ٱلْكَـٰفِرِينَ (٥٠)  وَإِنَّهُۥ لَحَقُّ ٱلْيَقِينِ (٥١)  فَسَبِّحْ بِٱسْمِ رَبِّكَ ٱلْعَظِيمِ (٥٢)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

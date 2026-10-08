@@ -1,0 +1,57 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 112,
+            "serial_number": "১১২",
+            "arabic_name": "الإخلاص",
+            "translated_name": "এখলাছ",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "৪"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 604,
+                "page_number": "604",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6222,
+                        "chapter_id": 112,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+                        "translated_name": "তুমি বলো -- ''তিনি আল্লাহ্‌, একক-অদ্বিতীয়;"
+                    },
+                    {
+                        "id": 6223,
+                        "chapter_id": 112,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "ٱللَّهُ ٱلصَّمَدُ",
+                        "translated_name": "''আল্লাহ্ -- পরম নির্ভরস্থল।"
+                    },
+                    {
+                        "id": 6224,
+                        "chapter_id": 112,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+                        "translated_name": "''তিনি জন্ম দেন না, এবং জন্ম নেনও নি,"
+                    },
+                    {
+                        "id": 6225,
+                        "chapter_id": 112,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "4",
+                        "arabic_name": "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+                        "translated_name": "''এবং কেউই তাঁর সমতুল্য হতে পারে না।’’"
+                    }
+                ],
+                "page_arabic_ayah": "قُلْ هُوَ ٱللَّهُ أَحَدٌ (١)  ٱللَّهُ ٱلصَّمَدُ (٢)  لَمْ يَلِدْ وَلَمْ يُولَدْ (٣)  وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ (٤)",
+                "is_read": false
+            }
+        ]
+    }
+}

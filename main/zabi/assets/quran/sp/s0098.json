@@ -1,0 +1,98 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 98,
+            "serial_number": "98",
+            "arabic_name": "البينة",
+            "translated_name": "Al-Bayyinah",
+            "verses_translate_name": "versos",
+            "verses_count": "8"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 598,
+                "page_number": "598",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6131,
+                        "chapter_id": 98,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "لَمْ يَكُنِ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَـٰبِ وَٱلْمُشْرِكِينَ مُنفَكِّينَ حَتَّىٰ تَأْتِيَهُمُ ٱلْبَيِّنَةُ",
+                        "translated_name": "No fueron separados los que no creían de la gente de la Escritura y los idólatras hasta que no llegó a ellos la prueba clara."
+                    },
+                    {
+                        "id": 6132,
+                        "chapter_id": 98,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "رَسُولٌ مِّنَ ٱللَّهِ يَتْلُوا۟ صُحُفًا مُّطَهَّرَةً",
+                        "translated_name": "Un Mensajero procedente de Dios que les recita escritos purificados"
+                    },
+                    {
+                        "id": 6133,
+                        "chapter_id": 98,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "فِيهَا كُتُبٌ قَيِّمَةٌ",
+                        "translated_name": "en los que hay mensajes y disposiciones claras y firmes."
+                    },
+                    {
+                        "id": 6134,
+                        "chapter_id": 98,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "وَمَا تَفَرَّقَ ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ إِلَّا مِنۢ بَعْدِ مَا جَآءَتْهُمُ ٱلْبَيِّنَةُ",
+                        "translated_name": "Y no se dividieron aquellos a quienes fue dada la Escritura excepto después de haber llegado a ellos la prueba clara."
+                    },
+                    {
+                        "id": 6135,
+                        "chapter_id": 98,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "وَمَآ أُمِرُوٓا۟ إِلَّا لِيَعْبُدُوا۟ ٱللَّهَ مُخْلِصِينَ لَهُ ٱلدِّينَ حُنَفَآءَ وَيُقِيمُوا۟ ٱلصَّلَوٰةَ وَيُؤْتُوا۟ ٱلزَّكَوٰةَ ۚ وَذَٰلِكَ دِينُ ٱلْقَيِّمَةِ",
+                        "translated_name": "Y no les fue ordenado sino que adorasen a Dios, con fe en Él únicamente, como verdaderos buscadores de la Verdad, que hicieran la oración y que diesen el impuesto purificador de la riqueza. Y esa es la religión verdadera."
+                    },
+                    {
+                        "id": 6136,
+                        "chapter_id": 98,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "إِنَّ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَـٰبِ وَٱلْمُشْرِكِينَ فِى نَارِ جَهَنَّمَ خَـٰلِدِينَ فِيهَآ ۚ أُو۟لَـٰٓئِكَ هُمْ شَرُّ ٱلْبَرِيَّةِ",
+                        "translated_name": "En verdad, los que no creen de la gente de la Escritura y los idólatras estarán eternamente en el fuego del Infierno. Ellos son lo peor de la Creación."
+                    },
+                    {
+                        "id": 6137,
+                        "chapter_id": 98,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ أُو۟لَـٰٓئِكَ هُمْ خَيْرُ ٱلْبَرِيَّةِ",
+                        "translated_name": "En verdad, quienes creen y actúan rectamente son lo mejor de la Creación"
+                    }
+                ],
+                "page_arabic_ayah": "لَمْ يَكُنِ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَـٰبِ وَٱلْمُشْرِكِينَ مُنفَكِّينَ حَتَّىٰ تَأْتِيَهُمُ ٱلْبَيِّنَةُ (١)  رَسُولٌ مِّنَ ٱللَّهِ يَتْلُوا۟ صُحُفًا مُّطَهَّرَةً (٢)  فِيهَا كُتُبٌ قَيِّمَةٌ (٣)  وَمَا تَفَرَّقَ ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ إِلَّا مِنۢ بَعْدِ مَا جَآءَتْهُمُ ٱلْبَيِّنَةُ (٤)  وَمَآ أُمِرُوٓا۟ إِلَّا لِيَعْبُدُوا۟ ٱللَّهَ مُخْلِصِينَ لَهُ ٱلدِّينَ حُنَفَآءَ وَيُقِيمُوا۟ ٱلصَّلَوٰةَ وَيُؤْتُوا۟ ٱلزَّكَوٰةَ ۚ وَذَٰلِكَ دِينُ ٱلْقَيِّمَةِ (٥)  إِنَّ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَـٰبِ وَٱلْمُشْرِكِينَ فِى نَارِ جَهَنَّمَ خَـٰلِدِينَ فِيهَآ ۚ أُو۟لَـٰٓئِكَ هُمْ شَرُّ ٱلْبَرِيَّةِ (٦)  إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ أُو۟لَـٰٓئِكَ هُمْ خَيْرُ ٱلْبَرِيَّةِ (٧)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 599,
+                "page_number": "599",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 6138,
+                        "chapter_id": 98,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "جَزَآؤُهُمْ عِندَ رَبِّهِمْ جَنَّـٰتُ عَدْنٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَآ أَبَدًا ۖ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ۚ ذَٰلِكَ لِمَنْ خَشِىَ رَبَّهُۥ",
+                        "translated_name": "Su recompensa junto a su Señor serán los Jardines del Edén, de cuyas profundidades brotan los ríos, en los que estarán eternamente, para siempre. Dios estará satisfecho de ellos y ellos lo estarán de Él. Eso será para quien tema a su Señor."
+                    }
+                ],
+                "page_arabic_ayah": "جَزَآؤُهُمْ عِندَ رَبِّهِمْ جَنَّـٰتُ عَدْنٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَآ أَبَدًا ۖ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ۚ ذَٰلِكَ لِمَنْ خَشِىَ رَبَّهُۥ (٨)",
+                "is_read": false
+            }
+        ]
+    }
+}

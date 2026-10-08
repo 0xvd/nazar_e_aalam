@@ -1,0 +1,23 @@
+{
+    "dua": {
+        "title": "Dua List",
+        "singular": "Dua",
+        "table": {
+            "short_name_en": "Short name (En)",
+            "short_name_ar": "Short name (Ar)",
+            "full_dua_en": "Full dua (En)",
+            "full_dua_ar": "Full dua (Ar)"
+        },
+        "form": {
+            "short_name_en_label": "Short Name (En)",
+            "short_name_en_placeholder": "Enter english short name",
+            "full_dua_en_label": "Full dua (En)",
+            "full_dua_en_placeholder": "Enter english full name",
+            "short_name_ar_label": "Short Name (Ar)",
+            "short_name_ar_placeholder": "Enter short name ar",
+            "full_dua_ar_label": "Full dua (Ar)",
+            "full_dua_ar_placeholder": "Enter full name ar",
+            "position_placeholder": "Enter position"
+        }
+    }
+}

@@ -1,0 +1,161 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 86,
+            "serial_number": "৮৬",
+            "arabic_name": "الطارق",
+            "translated_name": "আত্ব-তারিক্ব",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "১৭"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 591,
+                "page_number": "591",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5932,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "وَٱلسَّمَآءِ وَٱلطَّارِقِ",
+                        "translated_name": "ভাবো আকাশের ও রাতের আগন্তুকের কথা!"
+                    },
+                    {
+                        "id": 5933,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "وَمَآ أَدْرَىٰكَ مَا ٱلطَّارِقُ",
+                        "translated_name": "আর কী তোমাকে বুঝতে দেবে কে সেই রাতের আগন্তুক?"
+                    },
+                    {
+                        "id": 5934,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "ٱلنَّجْمُ ٱلثَّاقِبُ",
+                        "translated_name": "একটি অত্যুজ্জ্বল নক্ষত্র।"
+                    },
+                    {
+                        "id": 5935,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "4",
+                        "arabic_name": "إِن كُلُّ نَفْسٍ لَّمَّا عَلَيْهَا حَافِظٌ",
+                        "translated_name": "প্রত্যেক সার পক্ষেই -- তার উপরে একজন তত্ত্বাবধায়ক রয়েছে।"
+                    },
+                    {
+                        "id": 5936,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "5",
+                        "arabic_name": "فَلْيَنظُرِ ٱلْإِنسَـٰنُ مِمَّ خُلِقَ",
+                        "translated_name": "সুতরাং মানুষ ভেবে দেখুক কিসে থেকে তাকে সৃষ্টি করা হয়েছে।"
+                    },
+                    {
+                        "id": 5937,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "6",
+                        "arabic_name": "خُلِقَ مِن مَّآءٍ دَافِقٍ",
+                        "translated_name": "তাকে সৃষ্টি করা হয়েছে সবেগে-স্খলিত পানি থেকে, --"
+                    },
+                    {
+                        "id": 5938,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "7",
+                        "arabic_name": "يَخْرُجُ مِنۢ بَيْنِ ٱلصُّلْبِ وَٱلتَّرَآئِبِ",
+                        "translated_name": "যা নির্গত হয় মেরুদন্ড ও বুকের পাঁজরের মধ্য হতে।"
+                    },
+                    {
+                        "id": 5939,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "8",
+                        "arabic_name": "إِنَّهُۥ عَلَىٰ رَجْعِهِۦ لَقَادِرٌ",
+                        "translated_name": "নিঃসন্দেহ তিনি তার প্রত্যাবর্তনে অবশ্যই ক্ষমতাবান।"
+                    },
+                    {
+                        "id": 5940,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "9",
+                        "arabic_name": "يَوْمَ تُبْلَى ٱلسَّرَآئِرُ",
+                        "translated_name": "সেইদিন লুকোনো সব-কিছুকে প্রকাশ করা হবে;"
+                    },
+                    {
+                        "id": 5941,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "10",
+                        "arabic_name": "فَمَا لَهُۥ مِن قُوَّةٍ وَلَا نَاصِرٍ",
+                        "translated_name": "তখন তার থাকবে না কোনো ক্ষমতা ও না কোনো সাহায্যকারী।"
+                    },
+                    {
+                        "id": 5942,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "11",
+                        "arabic_name": "وَٱلسَّمَآءِ ذَاتِ ٱلرَّجْعِ",
+                        "translated_name": "ভাবো বর্ষণোন্নুখ আকাশের কথা,"
+                    },
+                    {
+                        "id": 5943,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "12",
+                        "arabic_name": "وَٱلْأَرْضِ ذَاتِ ٱلصَّدْعِ",
+                        "translated_name": "আর পৃথিবীর কথা যা বিদীর্ণ হয়।"
+                    },
+                    {
+                        "id": 5944,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "13",
+                        "arabic_name": "إِنَّهُۥ لَقَوْلٌ فَصْلٌ",
+                        "translated_name": "নিঃসন্দেহ এটি সুমীমাংসাকারী বক্তব্য,"
+                    },
+                    {
+                        "id": 5945,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "14",
+                        "arabic_name": "وَمَا هُوَ بِٱلْهَزْلِ",
+                        "translated_name": "আর এটি কোনো তামাশার জিনিস নয়।"
+                    },
+                    {
+                        "id": 5946,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "15",
+                        "arabic_name": "إِنَّهُمْ يَكِيدُونَ كَيْدًا",
+                        "translated_name": "নিঃসন্দেহ তারা চাল চালছে,"
+                    },
+                    {
+                        "id": 5947,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "16",
+                        "arabic_name": "وَأَكِيدُ كَيْدًا",
+                        "translated_name": "আর আমিও পরিকল্পনা উদ্ভাবন করছি।"
+                    },
+                    {
+                        "id": 5948,
+                        "chapter_id": 86,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "17",
+                        "arabic_name": "فَمَهِّلِ ٱلْكَـٰفِرِينَ أَمْهِلْهُمْ رُوَيْدًۢا",
+                        "translated_name": "অতএব তুমি অবিশ্বাসীদের অবকাশ দাও, তাদের অবকাশ দাও কিছুটা সময়।"
+                    }
+                ],
+                "page_arabic_ayah": "وَٱلسَّمَآءِ وَٱلطَّارِقِ (١)  وَمَآ أَدْرَىٰكَ مَا ٱلطَّارِقُ (٢)  ٱلنَّجْمُ ٱلثَّاقِبُ (٣)  إِن كُلُّ نَفْسٍ لَّمَّا عَلَيْهَا حَافِظٌ (٤)  فَلْيَنظُرِ ٱلْإِنسَـٰنُ مِمَّ خُلِقَ (٥)  خُلِقَ مِن مَّآءٍ دَافِقٍ (٦)  يَخْرُجُ مِنۢ بَيْنِ ٱلصُّلْبِ وَٱلتَّرَآئِبِ (٧)  إِنَّهُۥ عَلَىٰ رَجْعِهِۦ لَقَادِرٌ (٨)  يَوْمَ تُبْلَى ٱلسَّرَآئِرُ (٩)  فَمَا لَهُۥ مِن قُوَّةٍ وَلَا نَاصِرٍ (١٠)  وَٱلسَّمَآءِ ذَاتِ ٱلرَّجْعِ (١١)  وَٱلْأَرْضِ ذَاتِ ٱلصَّدْعِ (١٢)  إِنَّهُۥ لَقَوْلٌ فَصْلٌ (١٣)  وَمَا هُوَ بِٱلْهَزْلِ (١٤)  إِنَّهُمْ يَكِيدُونَ كَيْدًا (١٥)  وَأَكِيدُ كَيْدًا (١٦)  فَمَهِّلِ ٱلْكَـٰفِرِينَ أَمْهِلْهُمْ رُوَيْدًۢا (١٧)",
+                "is_read": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 103,
+            "serial_number": "103",
+            "arabic_name": "العصر",
+            "translated_name": "Al-'Asr",
+            "verses_translate_name": "versos",
+            "verses_count": "3"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 601,
+                "page_number": "601",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6177,
+                        "chapter_id": 103,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "وَٱلْعَصْرِ",
+                        "translated_name": "Juro por la época"
+                    },
+                    {
+                        "id": 6178,
+                        "chapter_id": 103,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ",
+                        "translated_name": "que, en verdad, el ser humano va hacia su perdición,"
+                    },
+                    {
+                        "id": 6179,
+                        "chapter_id": 103,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
+                        "translated_name": "excepto aquellos que creen y realizan buenas acciones y se aconsejan unos a otros la Verdad y se aconsejan unos a otros la paciencia."
+                    }
+                ],
+                "page_arabic_ayah": "وَٱلْعَصْرِ (١)  إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ (٢)  إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ (٣)",
+                "is_read": false
+            }
+        ]
+    }
+}

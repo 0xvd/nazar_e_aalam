@@ -1,0 +1,64 @@
+{
+    "dashboard": {
+        "welcome": {
+            "greeting": "Welcome back",
+            "managing_pre": "Managing",
+            "managing_post": "today",
+            "fallback_pre": "Welcome to",
+            "fallback_post": "Admin Panel",
+            "panel_active": "Panel Active"
+        },
+        "alerts": {
+            "quran_setup_required": "Quran Setup Required",
+            "quran_setup_text": "Please complete the Quran chapters setup to continue.",
+            "finish_setup": "Finish Setup",
+            "transliteration_pending": "Transliteration Pending",
+            "transliteration_text": "Set up transliteration for the Quran chapters.",
+            "complete": "Complete"
+        },
+        "sections": {
+            "islamic_content_overview": "Islamic Content Overview",
+            "operations_finance": "Operations & Finance",
+            "analytics": "Analytics"
+        },
+        "stats": {
+            "max": "of {count}",
+            "total_surah": "Total Surah",
+            "total_dua": "Total Dua",
+            "total_dhikr": "Total Dhikr",
+            "allah_names": "Allah's Names",
+            "haram_codes": "Haram Codes",
+            "total_users": "Total Users",
+            "donations": "Donations",
+            "payment_methods": "Payment Methods"
+        },
+        "charts": {
+            "country_title": "User Distribution by Country",
+            "country_subtitle": "Where your app users are located",
+            "platform_title": "Platform Breakdown",
+            "platform_subtitle": "iOS vs Android users"
+        },
+        "chat": {
+            "status_ready": "Islamic Assistant · Ready",
+            "status_error": "Key error — check settings",
+            "status_connecting": "Connecting…",
+            "clear_conversation": "Clear conversation",
+            "close": "Close",
+            "error_banner_pre": "Could not load the Groq API key from",
+            "error_banner_post": "Check the {key} in Settings.",
+            "welcome_title": "As-salamu alaykum!",
+            "welcome_subtitle": "I'm Noor, your Islamic AI assistant. Ask me anything about the Quran, Duas, Dhikr, or the admin panel.",
+            "suggestions": {
+                "fatiha": "What is Surah Al-Fatiha about?",
+                "add_dua": "How do I add a new Dua?",
+                "names_of_allah": "Explain the 99 Names of Allah",
+                "prayer_times": "How to manage Prayer Times?",
+                "morning_dhikr": "Best Dhikr for morning?",
+                "donations": "How to set up donations?"
+            },
+            "placeholder_ready": "Ask about Quran, Duas, or the panel…",
+            "placeholder_waiting": "Waiting for API key…",
+            "powered_by": "Powered by Groq · llama-3.3-70b-versatile"
+        }
+    }
+}

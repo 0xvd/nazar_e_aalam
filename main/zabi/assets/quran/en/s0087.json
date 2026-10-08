@@ -1,0 +1,188 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 87,
+            "serial_number": "87",
+            "arabic_name": "الأعلى",
+            "translated_name": "Al-A'la",
+            "verses_translate_name": "Verses",
+            "verses_count": "19"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 591,
+                "page_number": "591",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5949,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "سَبِّحِ ٱسْمَ رَبِّكَ ٱلْأَعْلَى",
+                        "translated_name": "GLORIFY THE NAME of your Lord, most high,"
+                    },
+                    {
+                        "id": 5950,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "ٱلَّذِى خَلَقَ فَسَوَّىٰ",
+                        "translated_name": "Who creates and proportions,"
+                    },
+                    {
+                        "id": 5951,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "وَٱلَّذِى قَدَّرَ فَهَدَىٰ",
+                        "translated_name": "Who determines and directs,"
+                    },
+                    {
+                        "id": 5952,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "وَٱلَّذِىٓ أَخْرَجَ ٱلْمَرْعَىٰ",
+                        "translated_name": "Who brings out the pastures"
+                    },
+                    {
+                        "id": 5953,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "فَجَعَلَهُۥ غُثَآءً أَحْوَىٰ",
+                        "translated_name": "Then reduces them to rusty rubbish."
+                    },
+                    {
+                        "id": 5954,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "سَنُقْرِئُكَ فَلَا تَنسَىٰٓ",
+                        "translated_name": "We shall make you recite (the Qur'an) so that you will not forget it,"
+                    },
+                    {
+                        "id": 5955,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "إِلَّا مَا شَآءَ ٱللَّهُ ۚ إِنَّهُۥ يَعْلَمُ ٱلْجَهْرَ وَمَا يَخْفَىٰ",
+                        "translated_name": "Unless God may please. He knows the visible and knows what is hidden."
+                    },
+                    {
+                        "id": 5956,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "وَنُيَسِّرُكَ لِلْيُسْرَىٰ",
+                        "translated_name": "We shall take you slowly towards ease."
+                    },
+                    {
+                        "id": 5957,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "فَذَكِّرْ إِن نَّفَعَتِ ٱلذِّكْرَىٰ",
+                        "translated_name": "So remind them if reminder is profitable:"
+                    },
+                    {
+                        "id": 5958,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "سَيَذَّكَّرُ مَن يَخْشَىٰ",
+                        "translated_name": "Those who fear will understand."
+                    },
+                    {
+                        "id": 5959,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "وَيَتَجَنَّبُهَا ٱلْأَشْقَى",
+                        "translated_name": "Only the wretch will turn aside,"
+                    },
+                    {
+                        "id": 5960,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "ٱلَّذِى يَصْلَى ٱلنَّارَ ٱلْكُبْرَىٰ",
+                        "translated_name": "Who will burn in the terrible Fire,"
+                    },
+                    {
+                        "id": 5961,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "ثُمَّ لَا يَمُوتُ فِيهَا وَلَا يَحْيَىٰ",
+                        "translated_name": "In which he will neither die nor live."
+                    },
+                    {
+                        "id": 5962,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "قَدْ أَفْلَحَ مَن تَزَكَّىٰ",
+                        "translated_name": "Surely he will succeed who grows in goodness,"
+                    },
+                    {
+                        "id": 5963,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "وَذَكَرَ ٱسْمَ رَبِّهِۦ فَصَلَّىٰ",
+                        "translated_name": "And recites the name of his Lord and serves with devotion."
+                    }
+                ],
+                "page_arabic_ayah": "سَبِّحِ ٱسْمَ رَبِّكَ ٱلْأَعْلَى (١)  ٱلَّذِى خَلَقَ فَسَوَّىٰ (٢)  وَٱلَّذِى قَدَّرَ فَهَدَىٰ (٣)  وَٱلَّذِىٓ أَخْرَجَ ٱلْمَرْعَىٰ (٤)  فَجَعَلَهُۥ غُثَآءً أَحْوَىٰ (٥)  سَنُقْرِئُكَ فَلَا تَنسَىٰٓ (٦)  إِلَّا مَا شَآءَ ٱللَّهُ ۚ إِنَّهُۥ يَعْلَمُ ٱلْجَهْرَ وَمَا يَخْفَىٰ (٧)  وَنُيَسِّرُكَ لِلْيُسْرَىٰ (٨)  فَذَكِّرْ إِن نَّفَعَتِ ٱلذِّكْرَىٰ (٩)  سَيَذَّكَّرُ مَن يَخْشَىٰ (١٠)  وَيَتَجَنَّبُهَا ٱلْأَشْقَى (١١)  ٱلَّذِى يَصْلَى ٱلنَّارَ ٱلْكُبْرَىٰ (١٢)  ثُمَّ لَا يَمُوتُ فِيهَا وَلَا يَحْيَىٰ (١٣)  قَدْ أَفْلَحَ مَن تَزَكَّىٰ (١٤)  وَذَكَرَ ٱسْمَ رَبِّهِۦ فَصَلَّىٰ (١٥)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 592,
+                "page_number": "592",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 5964,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "بَلْ تُؤْثِرُونَ ٱلْحَيَوٰةَ ٱلدُّنْيَا",
+                        "translated_name": "But no, you prefer the life of the world,"
+                    },
+                    {
+                        "id": 5965,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "وَٱلْـَٔاخِرَةُ خَيْرٌ وَأَبْقَىٰٓ",
+                        "translated_name": "Though the life to come is better and abiding."
+                    },
+                    {
+                        "id": 5966,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "إِنَّ هَـٰذَا لَفِى ٱلصُّحُفِ ٱلْأُولَىٰ",
+                        "translated_name": "This is surely in the earlier Books,"
+                    },
+                    {
+                        "id": 5967,
+                        "chapter_id": 87,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "صُحُفِ إِبْرَٰهِيمَ وَمُوسَىٰ",
+                        "translated_name": "The Books of Abraham and Moses."
+                    }
+                ],
+                "page_arabic_ayah": "بَلْ تُؤْثِرُونَ ٱلْحَيَوٰةَ ٱلدُّنْيَا (١٦)  وَٱلْـَٔاخِرَةُ خَيْرٌ وَأَبْقَىٰٓ (١٧)  إِنَّ هَـٰذَا لَفِى ٱلصُّحُفِ ٱلْأُولَىٰ (١٨)  صُحُفِ إِبْرَٰهِيمَ وَمُوسَىٰ (١٩)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

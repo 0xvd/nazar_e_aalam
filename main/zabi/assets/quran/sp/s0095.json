@@ -1,0 +1,89 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 95,
+            "serial_number": "95",
+            "arabic_name": "التين",
+            "translated_name": "At-Tin",
+            "verses_translate_name": "versos",
+            "verses_count": "8"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 597,
+                "page_number": "597",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6099,
+                        "chapter_id": 95,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "بِّسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ وَٱلتِّينِ وَٱلزَّيْتُونِ",
+                        "translated_name": "Juro por la higuera y el olivo"
+                    },
+                    {
+                        "id": 6100,
+                        "chapter_id": 95,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "وَطُورِ سِينِينَ",
+                        "translated_name": "y por el monte Sinaí"
+                    },
+                    {
+                        "id": 6101,
+                        "chapter_id": 95,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَهَـٰذَا ٱلْبَلَدِ ٱلْأَمِينِ",
+                        "translated_name": "y por esta ciudad segura"
+                    },
+                    {
+                        "id": 6102,
+                        "chapter_id": 95,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "لَقَدْ خَلَقْنَا ٱلْإِنسَـٰنَ فِىٓ أَحْسَنِ تَقْوِيمٍ",
+                        "translated_name": "que, ciertamente, hemos creado al ser humano en la mejor condición."
+                    },
+                    {
+                        "id": 6103,
+                        "chapter_id": 95,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "ثُمَّ رَدَدْنَـٰهُ أَسْفَلَ سَـٰفِلِينَ",
+                        "translated_name": "Luego, le hemos relegado a lo más bajo de lo bajo,"
+                    },
+                    {
+                        "id": 6104,
+                        "chapter_id": 95,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ",
+                        "translated_name": "excepto a aquellos que creen y actúan rectamente, pues para ellos hay una recompensa ilimitada."
+                    },
+                    {
+                        "id": 6105,
+                        "chapter_id": 95,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "فَمَا يُكَذِّبُكَ بَعْدُ بِٱلدِّينِ",
+                        "translated_name": "Así pues, ¿Qué es lo que te hace desmentir la Recompensa?"
+                    },
+                    {
+                        "id": 6106,
+                        "chapter_id": 95,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "أَلَيْسَ ٱللَّهُ بِأَحْكَمِ ٱلْحَـٰكِمِينَ",
+                        "translated_name": "¿No es Dios el mejor de los jueces?"
+                    }
+                ],
+                "page_arabic_ayah": "بِّسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ وَٱلتِّينِ وَٱلزَّيْتُونِ (١)  وَطُورِ سِينِينَ (٢)  وَهَـٰذَا ٱلْبَلَدِ ٱلْأَمِينِ (٣)  لَقَدْ خَلَقْنَا ٱلْإِنسَـٰنَ فِىٓ أَحْسَنِ تَقْوِيمٍ (٤)  ثُمَّ رَدَدْنَـٰهُ أَسْفَلَ سَـٰفِلِينَ (٥)  إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ (٦)  فَمَا يُكَذِّبُكَ بَعْدُ بِٱلدِّينِ (٧)  أَلَيْسَ ٱللَّهُ بِأَحْكَمِ ٱلْحَـٰكِمِينَ (٨)",
+                "is_read": false
+            }
+        ]
+    }
+}

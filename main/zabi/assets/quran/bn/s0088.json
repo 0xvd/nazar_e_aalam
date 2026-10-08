@@ -1,0 +1,233 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 88,
+            "serial_number": "৮৮",
+            "arabic_name": "الغاشية",
+            "translated_name": "আল গাশিয়াহ",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "২৬"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 592,
+                "page_number": "592",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5968,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "هَلْ أَتَىٰكَ حَدِيثُ ٱلْغَـٰشِيَةِ",
+                        "translated_name": "তোমার কাছে কি বিহবলকর ঘটনার সংবাদ পৌঁছেছে?"
+                    },
+                    {
+                        "id": 5969,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "وُجُوهٌ يَوْمَئِذٍ خَـٰشِعَةٌ",
+                        "translated_name": "সেইদিন অনেক মুখ হবে অবনত,"
+                    },
+                    {
+                        "id": 5970,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "عَامِلَةٌ نَّاصِبَةٌ",
+                        "translated_name": "পরিশ্রান্ত, অবসাদগ্রস্ত,"
+                    },
+                    {
+                        "id": 5971,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "4",
+                        "arabic_name": "تَصْلَىٰ نَارًا حَامِيَةً",
+                        "translated_name": "প্রবেশমান হবে জ্বলন্ত আগুনে;"
+                    },
+                    {
+                        "id": 5972,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "5",
+                        "arabic_name": "تُسْقَىٰ مِنْ عَيْنٍ ءَانِيَةٍ",
+                        "translated_name": "তাদের পান করানো হবে ফুটন্ত ফোয়ারা থেকে।"
+                    },
+                    {
+                        "id": 5973,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "6",
+                        "arabic_name": "لَّيْسَ لَهُمْ طَعَامٌ إِلَّا مِن ضَرِيعٍ",
+                        "translated_name": "তাদের জন্য বিষাক্ত কাঁটাগাছ থেকে ছাড়া অন্য কোনো খাদ্য থাকবে না,"
+                    },
+                    {
+                        "id": 5974,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "7",
+                        "arabic_name": "لَّا يُسْمِنُ وَلَا يُغْنِى مِن جُوعٍ",
+                        "translated_name": "তাদের নাদুসনুদুস বানাবে না এবং ক্ষুধাও মেটাবে না।"
+                    },
+                    {
+                        "id": 5975,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "8",
+                        "arabic_name": "وُجُوهٌ يَوْمَئِذٍ نَّاعِمَةٌ",
+                        "translated_name": "সেইদিন অনেক মুখ হবে শান্ত,"
+                    },
+                    {
+                        "id": 5976,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "9",
+                        "arabic_name": "لِّسَعْيِهَا رَاضِيَةٌ",
+                        "translated_name": "তাদের প্রচেষ্টার জন্য পরিতৃপ্ত,"
+                    },
+                    {
+                        "id": 5977,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "10",
+                        "arabic_name": "فِى جَنَّةٍ عَالِيَةٍ",
+                        "translated_name": "সমুচ্চ উদ্যানে,"
+                    },
+                    {
+                        "id": 5978,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "11",
+                        "arabic_name": "لَّا تَسْمَعُ فِيهَا لَـٰغِيَةً",
+                        "translated_name": "সেখানে তুমি শুনবে না কোনো বাজে কথা।"
+                    },
+                    {
+                        "id": 5979,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "12",
+                        "arabic_name": "فِيهَا عَيْنٌ جَارِيَةٌ",
+                        "translated_name": "সেখানে রয়েছে বহমান ঝরনা,"
+                    },
+                    {
+                        "id": 5980,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "13",
+                        "arabic_name": "فِيهَا سُرُرٌ مَّرْفُوعَةٌ",
+                        "translated_name": "সেখানে আছে উঁচু সিংহাসন,"
+                    },
+                    {
+                        "id": 5981,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "14",
+                        "arabic_name": "وَأَكْوَابٌ مَّوْضُوعَةٌ",
+                        "translated_name": "আর পানপাত্রগুলো হাতের কাছে স্থাপিত,"
+                    },
+                    {
+                        "id": 5982,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "15",
+                        "arabic_name": "وَنَمَارِقُ مَصْفُوفَةٌ",
+                        "translated_name": "আর তাকিয়াগুলো সারিসারি সাজানো,"
+                    },
+                    {
+                        "id": 5983,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "16",
+                        "arabic_name": "وَزَرَابِىُّ مَبْثُوثَةٌ",
+                        "translated_name": "আর গালিচাসব বিছানো।"
+                    },
+                    {
+                        "id": 5984,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "17",
+                        "arabic_name": "أَفَلَا يَنظُرُونَ إِلَى ٱلْإِبِلِ كَيْفَ خُلِقَتْ",
+                        "translated_name": "তারা কি তবে ভেবে দেখে না উটের দিকে -- কেমন করে তাকে সৃষ্টি করা হয়েছে,"
+                    },
+                    {
+                        "id": 5985,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "18",
+                        "arabic_name": "وَإِلَى ٱلسَّمَآءِ كَيْفَ رُفِعَتْ",
+                        "translated_name": "আর আকাশের দিকে -- কেমন করে তাকে তোলে রাখা হয়েছে।"
+                    },
+                    {
+                        "id": 5986,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "19",
+                        "arabic_name": "وَإِلَى ٱلْجِبَالِ كَيْفَ نُصِبَتْ",
+                        "translated_name": "আর পাহাড়-পর্বতের দিকে -- কেমন করে তাদের স্থাপন করা হয়েছে,"
+                    },
+                    {
+                        "id": 5987,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "20",
+                        "arabic_name": "وَإِلَى ٱلْأَرْضِ كَيْفَ سُطِحَتْ",
+                        "translated_name": "আর এই পৃথিবীর দিকে -- কেমন করে তাকে প্রসারিত করা হয়েছে?"
+                    },
+                    {
+                        "id": 5988,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "21",
+                        "arabic_name": "فَذَكِّرْ إِنَّمَآ أَنتَ مُذَكِّرٌ",
+                        "translated_name": "অতএব উপদেশ দিয়ে চলো, নিঃসন্দেহ তুমি তো একজন উপদেষ্টা।"
+                    },
+                    {
+                        "id": 5989,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "22",
+                        "arabic_name": "لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ",
+                        "translated_name": "তুমি তাদের উপরে আদৌ অধ্যক্ষ নও,"
+                    },
+                    {
+                        "id": 5990,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "23",
+                        "arabic_name": "إِلَّا مَن تَوَلَّىٰ وَكَفَرَ",
+                        "translated_name": "কিন্ত যে কেউ ফিরে যায় ও অবিশ্বাস পোষণ করে --"
+                    },
+                    {
+                        "id": 5991,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "24",
+                        "arabic_name": "فَيُعَذِّبُهُ ٱللَّهُ ٱلْعَذَابَ ٱلْأَكْبَرَ",
+                        "translated_name": "আল্লাহ্ তখন তাকে শাস্তি দেবেন কঠিনতম শাস্তিতে।"
+                    },
+                    {
+                        "id": 5992,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "25",
+                        "arabic_name": "إِنَّ إِلَيْنَآ إِيَابَهُمْ",
+                        "translated_name": "নিঃসন্দেহ আমাদের কাছেই তাদের প্রত্যাবর্তন,"
+                    },
+                    {
+                        "id": 5993,
+                        "chapter_id": 88,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "26",
+                        "arabic_name": "ثُمَّ إِنَّ عَلَيْنَا حِسَابَهُم",
+                        "translated_name": "অতঃপর আমাদের উপরেই তাদের হিসেব-নিকেশের ভার।"
+                    }
+                ],
+                "page_arabic_ayah": "هَلْ أَتَىٰكَ حَدِيثُ ٱلْغَـٰشِيَةِ (١)  وُجُوهٌ يَوْمَئِذٍ خَـٰشِعَةٌ (٢)  عَامِلَةٌ نَّاصِبَةٌ (٣)  تَصْلَىٰ نَارًا حَامِيَةً (٤)  تُسْقَىٰ مِنْ عَيْنٍ ءَانِيَةٍ (٥)  لَّيْسَ لَهُمْ طَعَامٌ إِلَّا مِن ضَرِيعٍ (٦)  لَّا يُسْمِنُ وَلَا يُغْنِى مِن جُوعٍ (٧)  وُجُوهٌ يَوْمَئِذٍ نَّاعِمَةٌ (٨)  لِّسَعْيِهَا رَاضِيَةٌ (٩)  فِى جَنَّةٍ عَالِيَةٍ (١٠)  لَّا تَسْمَعُ فِيهَا لَـٰغِيَةً (١١)  فِيهَا عَيْنٌ جَارِيَةٌ (١٢)  فِيهَا سُرُرٌ مَّرْفُوعَةٌ (١٣)  وَأَكْوَابٌ مَّوْضُوعَةٌ (١٤)  وَنَمَارِقُ مَصْفُوفَةٌ (١٥)  وَزَرَابِىُّ مَبْثُوثَةٌ (١٦)  أَفَلَا يَنظُرُونَ إِلَى ٱلْإِبِلِ كَيْفَ خُلِقَتْ (١٧)  وَإِلَى ٱلسَّمَآءِ كَيْفَ رُفِعَتْ (١٨)  وَإِلَى ٱلْجِبَالِ كَيْفَ نُصِبَتْ (١٩)  وَإِلَى ٱلْأَرْضِ كَيْفَ سُطِحَتْ (٢٠)  فَذَكِّرْ إِنَّمَآ أَنتَ مُذَكِّرٌ (٢١)  لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ (٢٢)  إِلَّا مَن تَوَلَّىٰ وَكَفَرَ (٢٣)  فَيُعَذِّبُهُ ٱللَّهُ ٱلْعَذَابَ ٱلْأَكْبَرَ (٢٤)  إِنَّ إِلَيْنَآ إِيَابَهُمْ (٢٥)  ثُمَّ إِنَّ عَلَيْنَا حِسَابَهُم (٢٦)",
+                "is_read": false
+            }
+        ]
+    }
+}

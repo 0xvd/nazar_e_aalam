@@ -1,0 +1,434 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 77,
+            "serial_number": "77",
+            "arabic_name": "المرسلات",
+            "translated_name": "Al-Mursalat",
+            "verses_translate_name": "versos",
+            "verses_count": "50"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 580,
+                "page_number": "580",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5623,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "وَٱلْمُرْسَلَـٰتِ عُرْفًا",
+                        "translated_name": "Juro por los sucesivos Mensajeros"
+                    },
+                    {
+                        "id": 5624,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "فَٱلْعَـٰصِفَـٰتِ عَصْفًا",
+                        "translated_name": "que viajan con la velocidad de un viento huracanado"
+                    },
+                    {
+                        "id": 5625,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَٱلنَّـٰشِرَٰتِ نَشْرًا",
+                        "translated_name": "y juro por quienes difunden por todos lados"
+                    },
+                    {
+                        "id": 5626,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "فَٱلْفَـٰرِقَـٰتِ فَرْقًا",
+                        "translated_name": "y establecen claramente las diferencias"
+                    },
+                    {
+                        "id": 5627,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "فَٱلْمُلْقِيَـٰتِ ذِكْرًا",
+                        "translated_name": "y juro por quienes facilitan el encuentro con el Recuerdo"
+                    },
+                    {
+                        "id": 5628,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "عُذْرًا أَوْ نُذْرًا",
+                        "translated_name": "que sirve de justificación y que amonesta:"
+                    },
+                    {
+                        "id": 5629,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "إِنَّمَا تُوعَدُونَ لَوَٰقِعٌ",
+                        "translated_name": "En verdad, lo que os fue prometido se cumplirá."
+                    },
+                    {
+                        "id": 5630,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "فَإِذَا ٱلنُّجُومُ طُمِسَتْ",
+                        "translated_name": "Así pues, cuando las estrellas pierdan su luz"
+                    },
+                    {
+                        "id": 5631,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "وَإِذَا ٱلسَّمَآءُ فُرِجَتْ",
+                        "translated_name": "y cuando el cielo se parta"
+                    },
+                    {
+                        "id": 5632,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "وَإِذَا ٱلْجِبَالُ نُسِفَتْ",
+                        "translated_name": "y cuando las montañas sean pulverizadas"
+                    },
+                    {
+                        "id": 5633,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "وَإِذَا ٱلرُّسُلُ أُقِّتَتْ",
+                        "translated_name": "y cuando sean emplazados los Mensajeros a dar su testimonio"
+                    },
+                    {
+                        "id": 5634,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "لِأَىِّ يَوْمٍ أُجِّلَتْ",
+                        "translated_name": "¿A qué día serán convocados?"
+                    },
+                    {
+                        "id": 5635,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "لِيَوْمِ ٱلْفَصْلِ",
+                        "translated_name": "Al Día de la Diferencia."
+                    },
+                    {
+                        "id": 5636,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "وَمَآ أَدْرَىٰكَ مَا يَوْمُ ٱلْفَصْلِ",
+                        "translated_name": "Y ¿Qué te hará entender lo que es el Día de la Diferencia?"
+                    },
+                    {
+                        "id": 5637,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "¡Ay ese día los desmentidores!"
+                    },
+                    {
+                        "id": 5638,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "16",
+                        "arabic_name": "أَلَمْ نُهْلِكِ ٱلْأَوَّلِينَ",
+                        "translated_name": "¿Acaso no destruimos a los primeros"
+                    },
+                    {
+                        "id": 5639,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "17",
+                        "arabic_name": "ثُمَّ نُتْبِعُهُمُ ٱلْـَٔاخِرِينَ",
+                        "translated_name": "e hicimos que los últimos les siguieran?"
+                    },
+                    {
+                        "id": 5640,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "18",
+                        "arabic_name": "كَذَٰلِكَ نَفْعَلُ بِٱلْمُجْرِمِينَ",
+                        "translated_name": "Así mismo haremos con los malhechores."
+                    },
+                    {
+                        "id": 5641,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "19",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "¡Ay ese día los desmentidores!"
+                    }
+                ],
+                "page_arabic_ayah": "وَٱلْمُرْسَلَـٰتِ عُرْفًا (١)  فَٱلْعَـٰصِفَـٰتِ عَصْفًا (٢)  وَٱلنَّـٰشِرَٰتِ نَشْرًا (٣)  فَٱلْفَـٰرِقَـٰتِ فَرْقًا (٤)  فَٱلْمُلْقِيَـٰتِ ذِكْرًا (٥)  عُذْرًا أَوْ نُذْرًا (٦)  إِنَّمَا تُوعَدُونَ لَوَٰقِعٌ (٧)  فَإِذَا ٱلنُّجُومُ طُمِسَتْ (٨)  وَإِذَا ٱلسَّمَآءُ فُرِجَتْ (٩)  وَإِذَا ٱلْجِبَالُ نُسِفَتْ (١٠)  وَإِذَا ٱلرُّسُلُ أُقِّتَتْ (١١)  لِأَىِّ يَوْمٍ أُجِّلَتْ (١٢)  لِيَوْمِ ٱلْفَصْلِ (١٣)  وَمَآ أَدْرَىٰكَ مَا يَوْمُ ٱلْفَصْلِ (١٤)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (١٥)  أَلَمْ نُهْلِكِ ٱلْأَوَّلِينَ (١٦)  ثُمَّ نُتْبِعُهُمُ ٱلْـَٔاخِرِينَ (١٧)  كَذَٰلِكَ نَفْعَلُ بِٱلْمُجْرِمِينَ (١٨)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (١٩)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 581,
+                "page_number": "581",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 5642,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "20",
+                        "arabic_name": "أَلَمْ نَخْلُقكُّم مِّن مَّآءٍ مَّهِينٍ",
+                        "translated_name": "¿Acaso no os hemos creado de un líquido viscoso"
+                    },
+                    {
+                        "id": 5643,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "21",
+                        "arabic_name": "فَجَعَلْنَـٰهُ فِى قَرَارٍ مَّكِينٍ",
+                        "translated_name": "que hemos colocado en un receptáculo seguro"
+                    },
+                    {
+                        "id": 5644,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "22",
+                        "arabic_name": "إِلَىٰ قَدَرٍ مَّعْلُومٍ",
+                        "translated_name": "durante un periodo determinado"
+                    },
+                    {
+                        "id": 5645,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "23",
+                        "arabic_name": "فَقَدَرْنَا فَنِعْمَ ٱلْقَـٰدِرُونَ",
+                        "translated_name": "y entonces hemos dispuesto? ¡Y qué bien disponemos!"
+                    },
+                    {
+                        "id": 5646,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "24",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "¡Ay, ese día, de los desmentidores!"
+                    },
+                    {
+                        "id": 5647,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "25",
+                        "arabic_name": "أَلَمْ نَجْعَلِ ٱلْأَرْضَ كِفَاتًا",
+                        "translated_name": "¿Acaso no hemos colocado la Tierra como lugar de encuentro"
+                    },
+                    {
+                        "id": 5648,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "26",
+                        "arabic_name": "أَحْيَآءً وَأَمْوَٰتًا",
+                        "translated_name": "para los vivos y los muertos?"
+                    },
+                    {
+                        "id": 5649,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "27",
+                        "arabic_name": "وَجَعَلْنَا فِيهَا رَوَٰسِىَ شَـٰمِخَـٰتٍ وَأَسْقَيْنَـٰكُم مَّآءً فُرَاتًا",
+                        "translated_name": "¿Y no hemos puesto en ella altas y firmes cordilleras y escanciado para vosotros agua dulce y deliciosa?"
+                    },
+                    {
+                        "id": 5650,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "28",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "¡Ay, ese día, de los desmentidores!"
+                    },
+                    {
+                        "id": 5651,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "29",
+                        "arabic_name": "ٱنطَلِقُوٓا۟ إِلَىٰ مَا كُنتُم بِهِۦ تُكَذِّبُونَ",
+                        "translated_name": "¡Id hacia aquello que desmentíais!"
+                    },
+                    {
+                        "id": 5652,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "30",
+                        "arabic_name": "ٱنطَلِقُوٓا۟ إِلَىٰ ظِلٍّ ذِى ثَلَـٰثِ شُعَبٍ",
+                        "translated_name": "Id hacia una nube de humo con tres ramificaciones,"
+                    },
+                    {
+                        "id": 5653,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "31",
+                        "arabic_name": "لَّا ظَلِيلٍ وَلَا يُغْنِى مِنَ ٱللَّهَبِ",
+                        "translated_name": "que no da sombra ni protege de las llamas."
+                    },
+                    {
+                        "id": 5654,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "32",
+                        "arabic_name": "إِنَّهَا تَرْمِى بِشَرَرٍ كَٱلْقَصْرِ",
+                        "translated_name": "En verdad, él lanza lenguas de fuego como castillos."
+                    },
+                    {
+                        "id": 5655,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "33",
+                        "arabic_name": "كَأَنَّهُۥ جِمَـٰلَتٌ صُفْرٌ",
+                        "translated_name": "¡Como si fueran camellos amarillos!"
+                    },
+                    {
+                        "id": 5656,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "34",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "¡Ay, ese día, de los desmentidores!"
+                    },
+                    {
+                        "id": 5657,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "35",
+                        "arabic_name": "هَـٰذَا يَوْمُ لَا يَنطِقُونَ",
+                        "translated_name": "¡Ese día no hablarán"
+                    },
+                    {
+                        "id": 5658,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "36",
+                        "arabic_name": "وَلَا يُؤْذَنُ لَهُمْ فَيَعْتَذِرُونَ",
+                        "translated_name": "y no se les permitirá ofrecer disculpas!"
+                    },
+                    {
+                        "id": 5659,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "37",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "¡Ay, ese día, de los desmentidores!"
+                    },
+                    {
+                        "id": 5660,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "38",
+                        "arabic_name": "هَـٰذَا يَوْمُ ٱلْفَصْلِ ۖ جَمَعْنَـٰكُمْ وَٱلْأَوَّلِينَ",
+                        "translated_name": "¡Ese es el Día de la Diferencia, en el que os hemos reunido a vosotros y a los primeros!"
+                    },
+                    {
+                        "id": 5661,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "39",
+                        "arabic_name": "فَإِن كَانَ لَكُمْ كَيْدٌ فَكِيدُونِ",
+                        "translated_name": "Así pues, si tenéis algún plan utilizadlo contra Mí."
+                    },
+                    {
+                        "id": 5662,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "40",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "¡Ay, ese día, de los desmentidores!"
+                    },
+                    {
+                        "id": 5663,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "41",
+                        "arabic_name": "إِنَّ ٱلْمُتَّقِينَ فِى ظِلَـٰلٍ وَعُيُونٍ",
+                        "translated_name": "En verdad, los temerosos de Dios tendrán sombras y fuentes"
+                    },
+                    {
+                        "id": 5664,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "42",
+                        "arabic_name": "وَفَوَٰكِهَ مِمَّا يَشْتَهُونَ",
+                        "translated_name": "y de las frutas que prefieran."
+                    },
+                    {
+                        "id": 5665,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "43",
+                        "arabic_name": "كُلُوا۟ وَٱشْرَبُوا۟ هَنِيٓـًٔۢا بِمَا كُنتُمْ تَعْمَلُونَ",
+                        "translated_name": "«¡Comed y bebed a placer (en recompensa) por lo que hacíais!»"
+                    },
+                    {
+                        "id": 5666,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "44",
+                        "arabic_name": "إِنَّا كَذَٰلِكَ نَجْزِى ٱلْمُحْسِنِينَ",
+                        "translated_name": "En verdad, así es como recompensamos a quienes hacen el bien."
+                    },
+                    {
+                        "id": 5667,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "45",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "¡Ay, ese día, de los desmentidores!"
+                    },
+                    {
+                        "id": 5668,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "46",
+                        "arabic_name": "كُلُوا۟ وَتَمَتَّعُوا۟ قَلِيلًا إِنَّكُم مُّجْرِمُونَ",
+                        "translated_name": "«¡Comed y disfrutad un poco! ¡En verdad que sois malhechores!»"
+                    },
+                    {
+                        "id": 5669,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "47",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "¡Ay, ese día, de los desmentidores!"
+                    },
+                    {
+                        "id": 5670,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "48",
+                        "arabic_name": "وَإِذَا قِيلَ لَهُمُ ٱرْكَعُوا۟ لَا يَرْكَعُونَ",
+                        "translated_name": "Y cuando se les dice «¡Inclinaos!» no se inclinan."
+                    },
+                    {
+                        "id": 5671,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "49",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "¡Ay, ese día, de los desmentidores!"
+                    },
+                    {
+                        "id": 5672,
+                        "chapter_id": 77,
+                        "verses_translate_name": "versos",
+                        "verses_number": "50",
+                        "arabic_name": "فَبِأَىِّ حَدِيثٍۭ بَعْدَهُۥ يُؤْمِنُونَ",
+                        "translated_name": "Así pues, ¿En qué discurso van a creer si no creen en él?"
+                    }
+                ],
+                "page_arabic_ayah": "أَلَمْ نَخْلُقكُّم مِّن مَّآءٍ مَّهِينٍ (٢٠)  فَجَعَلْنَـٰهُ فِى قَرَارٍ مَّكِينٍ (٢١)  إِلَىٰ قَدَرٍ مَّعْلُومٍ (٢٢)  فَقَدَرْنَا فَنِعْمَ ٱلْقَـٰدِرُونَ (٢٣)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٢٤)  أَلَمْ نَجْعَلِ ٱلْأَرْضَ كِفَاتًا (٢٥)  أَحْيَآءً وَأَمْوَٰتًا (٢٦)  وَجَعَلْنَا فِيهَا رَوَٰسِىَ شَـٰمِخَـٰتٍ وَأَسْقَيْنَـٰكُم مَّآءً فُرَاتًا (٢٧)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٢٨)  ٱنطَلِقُوٓا۟ إِلَىٰ مَا كُنتُم بِهِۦ تُكَذِّبُونَ (٢٩)  ٱنطَلِقُوٓا۟ إِلَىٰ ظِلٍّ ذِى ثَلَـٰثِ شُعَبٍ (٣٠)  لَّا ظَلِيلٍ وَلَا يُغْنِى مِنَ ٱللَّهَبِ (٣١)  إِنَّهَا تَرْمِى بِشَرَرٍ كَٱلْقَصْرِ (٣٢)  كَأَنَّهُۥ جِمَـٰلَتٌ صُفْرٌ (٣٣)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٣٤)  هَـٰذَا يَوْمُ لَا يَنطِقُونَ (٣٥)  وَلَا يُؤْذَنُ لَهُمْ فَيَعْتَذِرُونَ (٣٦)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٣٧)  هَـٰذَا يَوْمُ ٱلْفَصْلِ ۖ جَمَعْنَـٰكُمْ وَٱلْأَوَّلِينَ (٣٨)  فَإِن كَانَ لَكُمْ كَيْدٌ فَكِيدُونِ (٣٩)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٤٠)  إِنَّ ٱلْمُتَّقِينَ فِى ظِلَـٰلٍ وَعُيُونٍ (٤١)  وَفَوَٰكِهَ مِمَّا يَشْتَهُونَ (٤٢)  كُلُوا۟ وَٱشْرَبُوا۟ هَنِيٓـًٔۢا بِمَا كُنتُمْ تَعْمَلُونَ (٤٣)  إِنَّا كَذَٰلِكَ نَجْزِى ٱلْمُحْسِنِينَ (٤٤)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٤٥)  كُلُوا۟ وَتَمَتَّعُوا۟ قَلِيلًا إِنَّكُم مُّجْرِمُونَ (٤٦)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٤٧)  وَإِذَا قِيلَ لَهُمُ ٱرْكَعُوا۟ لَا يَرْكَعُونَ (٤٨)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٤٩)  فَبِأَىِّ حَدِيثٍۭ بَعْدَهُۥ يُؤْمِنُونَ (٥٠)",
+                "is_read": false
+            }
+        ]
+    }
+}

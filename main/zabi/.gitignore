@@ -1,0 +1,110 @@
+# -------------------------------
+# ❌ Miscellaneous (unwanted files)
+# -------------------------------
+*.class
+*.log
+*.pyc
+*.swp
+*.tmp
+*.lock
+*.bin
+*.savlive
+*.cxX
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history/
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# -------------------------------
+# 🧠 IntelliJ / Android Studio
+# -------------------------------
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# -------------------------------
+# 💻 VS Code
+# Uncomment if you want to ignore VSCode settings
+# -------------------------------
+.vscode/
+
+# -------------------------------
+# 🚀 Flutter / Dart / Pub
+# -------------------------------
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+**/doc/api/
+**/ios/Flutter/.last_build_id
+
+# -------------------------------
+# 📱 Android
+# -------------------------------
+/android/.gradle/
+/android/.idea/
+/android/local.properties
+/android/.kotlin/
+/android/app/.cxx/
+/android/app/debug/
+/android/app/profile/
+/android/app/release/
+
+# -------------------------------
+# 🍏 iOS
+# -------------------------------
+/ios/Pods/
+/ios/.symlinks/
+/ios/Flutter/Flutter.framework/
+/ios/Flutter/Flutter.podspec
+/ios/Flutter/Generated.xcconfig
+/ios/.generated/
+/ios/.DS_Store
+
+# -------------------------------
+# 🖥️ macOS
+# -------------------------------
+macos/Flutter/GeneratedPluginRegistrant.swift
+macos/Pods/
+macos/.DS_Store
+
+# -------------------------------
+# 🪟 Windows
+# -------------------------------
+windows/Flutter/generated_plugin_registrant.cc
+windows/flutter/generated_plugin_registrant.h
+windows/flutter/generated_plugins.cmake
+windows/.DS_Store
+
+# -------------------------------
+# 🌐 Web
+# -------------------------------
+web/.DS_Store
+
+# -------------------------------
+# 🐧 Linux
+# -------------------------------
+linux/Flutter/generated_plugin_registrant.cc
+linux/flutter/generated_plugin_registrant.h
+linux/flutter/generated_plugins.cmake
+linux/.DS_Store
+
+# -------------------------------
+# 🔐 Symbolication & Obfuscation
+# -------------------------------
+app.*.symbols
+app.*.map.json
+
+# -------------------------------
+# 📦 FVM
+# -------------------------------
+.fvm/
+.fvmrc

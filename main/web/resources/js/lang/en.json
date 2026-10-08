@@ -1,0 +1,41 @@
+{
+    "common": {
+        "profile": "Profile",
+        "settings": "Settings",
+        "logout": "Logout",
+        "language": "Language",
+        "english": "English",
+        "arabic": "العربية",
+        "save": "Save",
+        "cancel": "Cancel",
+        "yes": "Yes",
+        "delete_confirm_title": "Are you sure you want to delete?",
+        "delete_confirm_message": "This content will be deleted permanently",
+        "search": "Search...",
+        "action": "Action",
+        "status": "Status",
+        "name": "Name",
+        "title": "Title",
+        "category": "Category",
+        "position": "Position",
+        "add": "Add",
+        "edit": "Edit",
+        "update": "Update",
+        "add_item": "Add {item}",
+        "update_item": "Update {item}"
+    },
+    "auth": {
+        "tagline": "Islamic App Admin Panel",
+        "welcome_back": "Welcome back",
+        "subtitle": "Sign in to continue to your dashboard",
+        "role": "Role",
+        "choose_role": "Choose role",
+        "admin": "Admin",
+        "email": "Email address",
+        "email_placeholder": "you{'@'}example.com",
+        "password": "Password",
+        "password_placeholder": "Enter your password",
+        "forgot_password": "Forgot password?",
+        "sign_in": "Sign in"
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 99,
+            "serial_number": "99",
+            "arabic_name": "الزلزلة",
+            "translated_name": "Az-Zalzalah",
+            "verses_translate_name": "versos",
+            "verses_count": "8"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 599,
+                "page_number": "599",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6139,
+                        "chapter_id": 99,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "إِذَا زُلْزِلَتِ ٱلْأَرْضُ زِلْزَالَهَا",
+                        "translated_name": "Cuando la Tierra tiemble con su temblor"
+                    },
+                    {
+                        "id": 6140,
+                        "chapter_id": 99,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "وَأَخْرَجَتِ ٱلْأَرْضُ أَثْقَالَهَا",
+                        "translated_name": "y la Tierra expulse su carga"
+                    },
+                    {
+                        "id": 6141,
+                        "chapter_id": 99,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَقَالَ ٱلْإِنسَـٰنُ مَا لَهَا",
+                        "translated_name": "y diga el ser humano: «¿Qué le sucede?»"
+                    },
+                    {
+                        "id": 6142,
+                        "chapter_id": 99,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "يَوْمَئِذٍ تُحَدِّثُ أَخْبَارَهَا",
+                        "translated_name": "Ese día, relatará sus crónicas"
+                    },
+                    {
+                        "id": 6143,
+                        "chapter_id": 99,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا",
+                        "translated_name": "conforme a lo que Dios la inspire."
+                    },
+                    {
+                        "id": 6144,
+                        "chapter_id": 99,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "يَوْمَئِذٍ يَصْدُرُ ٱلنَّاسُ أَشْتَاتًا لِّيُرَوْا۟ أَعْمَـٰلَهُمْ",
+                        "translated_name": "Ese día, regresarán los seres humanos en grupos con estados diferentes, para que les sean mostradas sus acciones"
+                    },
+                    {
+                        "id": 6145,
+                        "chapter_id": 99,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُۥ",
+                        "translated_name": "Así pues, quien haga el peso de un átomo de bien, lo verá"
+                    },
+                    {
+                        "id": 6146,
+                        "chapter_id": 99,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُۥ",
+                        "translated_name": "y quien haga el peso de un átomo de mal, lo verá."
+                    }
+                ],
+                "page_arabic_ayah": "إِذَا زُلْزِلَتِ ٱلْأَرْضُ زِلْزَالَهَا (١)  وَأَخْرَجَتِ ٱلْأَرْضُ أَثْقَالَهَا (٢)  وَقَالَ ٱلْإِنسَـٰنُ مَا لَهَا (٣)  يَوْمَئِذٍ تُحَدِّثُ أَخْبَارَهَا (٤)  بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا (٥)  يَوْمَئِذٍ يَصْدُرُ ٱلنَّاسُ أَشْتَاتًا لِّيُرَوْا۟ أَعْمَـٰلَهُمْ (٦)  فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُۥ (٧)  وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُۥ (٨)",
+                "is_read": false
+            }
+        ]
+    }
+}

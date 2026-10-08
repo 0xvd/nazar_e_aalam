@@ -1,0 +1,55 @@
+{
+    "prayer_time": {
+        "list": {
+            "title": "Prayer Times",
+            "select_city": "Select City",
+            "delete_city_prayer_time": "Delete {city} prayer time",
+            "add": "Add Prayer Time",
+            "month_prayer_time": "{month} Prayer Time",
+            "table": {
+                "city": "City",
+                "date": "Date",
+                "imsak": "Imsak",
+                "sunrise": "Sunrise",
+                "fajr_start": "Fajr Start",
+                "zuhr_start": "Zuhr Start",
+                "asr_start": "Asr Start",
+                "maghrib_start": "Maghrib Start",
+                "isha_start": "Isha Start",
+                "iftar_start": "Iftar Start",
+                "sehri_start": "Sehri Start"
+            }
+        },
+        "import": {
+            "title": "Prayer Time Import",
+            "instructions_title": "Instructions for the Excel File:",
+            "instruction_date_format": "Date format should be <code>DD/MM/YYYY</code> (e.g., 01/01/2025).",
+            "instruction_columns": "Ensure the <b>Column</b> names are correct: <b>\"Time\"</b>, <b>\"City\"</b>, and other necessary columns.",
+            "instruction_file_size": "File size should not exceed 150 KB.",
+            "download_example": "Download Example File",
+            "upload_file_label": "Upload File",
+            "submit": "Submit",
+            "select_file_error": "Please select a file",
+            "file_type_error": "Only .xlsx, .xls, or .csv files are allowed",
+            "file_size_error": "File size must not exceed 150 KB"
+        },
+        "create": {
+            "title": "Add Prayer Time",
+            "update_title": "Update Prayer Time",
+            "back": "Back",
+            "city_label": "City",
+            "select_city": "Select City",
+            "date_label": "Date",
+            "imsak_label": "Imsak Time",
+            "sunrise_label": "Sunrise",
+            "fajr_start_label": "Fajr Start",
+            "zuhr_start_label": "Zuhur Start",
+            "asr_start_label": "Asr Start",
+            "maghrib_start_label": "Maghrib Start",
+            "isha_start_label": "Isha Start",
+            "iftar_start_label": "Iftar Start",
+            "sehri_start_label": "Sehri Start",
+            "submit": "Submit"
+        }
+    }
+}

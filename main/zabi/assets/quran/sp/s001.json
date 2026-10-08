@@ -1,0 +1,81 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 1,
+            "serial_number": "1",
+            "arabic_name": "الفاتحة",
+            "translated_name": "Al-Fatihah",
+            "verses_translate_name": "versos",
+            "verses_count": "7"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 1,
+                "page_number": "1",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 1,
+                        "chapter_id": 1,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+                        "translated_name": "En el nombre de Al.lah, el Clementísimo, el Misericordiosísimo."
+                    },
+                    {
+                        "id": 2,
+                        "chapter_id": 1,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+                        "translated_name": "La alabanza es para Dios, Señor de los mundos,"
+                    },
+                    {
+                        "id": 3,
+                        "chapter_id": 1,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+                        "translated_name": "el Clementísimo con toda la Creación, el Misericordiosísimo con los creyentes,"
+                    },
+                    {
+                        "id": 4,
+                        "chapter_id": 1,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "مَـٰلِكِ يَوْمِ ٱلدِّينِ",
+                        "translated_name": "Soberano del Día de la Recompensa."
+                    },
+                    {
+                        "id": 5,
+                        "chapter_id": 1,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+                        "translated_name": "Solamente a Ti adoramos y solamente a Ti pedimos ayuda."
+                    },
+                    {
+                        "id": 6,
+                        "chapter_id": 1,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+                        "translated_name": "Guíanos al camino recto,"
+                    },
+                    {
+                        "id": 7,
+                        "chapter_id": 1,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ",
+                        "translated_name": "el camino de aquellos a los que Tú has agraciado; no el de aquellos con los que Tú estás disgustado, ni el de los extraviados."
+                    }
+                ],
+                "page_arabic_ayah": "بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ (١)  ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ (٢)  ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ (٣)  مَـٰلِكِ يَوْمِ ٱلدِّينِ (٤)  إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ (٥)  ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ (٦)  صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ (٧)",
+                "is_read": false
+            }
+        ]
+    }
+}

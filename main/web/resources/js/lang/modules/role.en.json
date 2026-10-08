@@ -1,0 +1,13 @@
+{
+    "role": {
+        "title": "Role List",
+        "singular": "Role",
+        "form": {
+            "name_label": "Role Name",
+            "name_placeholder": "e.g. Content Manager",
+            "select_all": "Select All Permissions",
+            "permissions_title": "Permissions",
+            "selected_count": "{selected} / {total} selected"
+        }
+    }
+}

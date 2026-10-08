@@ -1,0 +1,49 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 108,
+            "serial_number": "١٠٨",
+            "arabic_name": "الكوثر",
+            "translated_name": "الكوثر",
+            "verses_translate_name": "الآيات",
+            "verses_count": "٣"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 602,
+                "page_number": "602",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6205,
+                        "chapter_id": 108,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "1",
+                        "arabic_name": "إِنَّآ أَعْطَيْنَـٰكَ ٱلْكَوْثَرَ",
+                        "translated_name": "«إنا أعطيناك» يا محمد «الكوثر» هو نهر في الجنة هو حوضه ترد عليه أمته، والكوثر: الخير الكثير من النبوَّة والقرآن والشفاعة ونحوها."
+                    },
+                    {
+                        "id": 6206,
+                        "chapter_id": 108,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "2",
+                        "arabic_name": "فَصَلِّ لِرَبِّكَ وَٱنْحَرْ",
+                        "translated_name": "«فصلِّ لربك» صلاة عيد النحر «وانحر» نسكك."
+                    },
+                    {
+                        "id": 6207,
+                        "chapter_id": 108,
+                        "verses_translate_name": "الآيات",
+                        "verses_number": "3",
+                        "arabic_name": "إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ",
+                        "translated_name": "«إن شانئك» أي مُبغضك «هو الأبتر» المنقطع عن كل خير، أو المنقطع العقب، نزلت في العاص بن وائل سمى النبي صلى الله عليه وسلم أبتر عند موت ابنه القاسم."
+                    }
+                ],
+                "page_arabic_ayah": "إِنَّآ أَعْطَيْنَـٰكَ ٱلْكَوْثَرَ (١)  فَصَلِّ لِرَبِّكَ وَٱنْحَرْ (٢)  إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ (٣)",
+                "is_read": false
+            }
+        ]
+    }
+}

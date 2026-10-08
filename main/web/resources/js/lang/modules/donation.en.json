@@ -1,0 +1,40 @@
+{
+    "donation": {
+        "title": "Donation Transactions",
+        "subtitle": "Track and manage all incoming donations",
+        "export_csv": "Export CSV",
+        "stats": {
+            "total_donations": "Total Donations",
+            "all_time_records": "All time records",
+            "total_collected": "Total Collected",
+            "from_completed_only": "From completed only",
+            "completed": "Completed",
+            "successfully_processed": "Successfully processed",
+            "pending": "Pending",
+            "awaiting_confirmation": "Awaiting confirmation"
+        },
+        "status": {
+            "all": "All",
+            "completed": "Completed",
+            "pending": "Pending",
+            "cancelled": "Cancelled"
+        },
+        "all_gateways": "All Gateways",
+        "per_page": "{count} / page",
+        "search_placeholder": "Search donor, category…",
+        "table": {
+            "donor": "Donor",
+            "category": "Category",
+            "gateway": "Gateway",
+            "amount": "Amount",
+            "date": "Date"
+        },
+        "empty": {
+            "title": "No donations found",
+            "try_adjusting_search": "Try adjusting your search term.",
+            "no_status_donations": "No {status} donations yet.",
+            "will_appear_here": "Donations will appear here once received."
+        },
+        "showing_range": "Showing {from}–{to} of {total} donations"
+    }
+}

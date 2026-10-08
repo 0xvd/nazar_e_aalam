@@ -1,0 +1,25 @@
+{
+    "wallpaper": {
+        "title": "Wallpapers",
+        "singular": "Wallpaper",
+        "lede": "Browse, preview, and manage images shown in the gallery.",
+        "add": "Add wallpaper",
+        "search_placeholder": "Search by name…",
+        "empty_title": "No wallpapers yet",
+        "empty_search_copy": "Nothing matches that search. Try another term.",
+        "empty_copy": "Add your first wallpaper to get started.",
+        "view": "View",
+        "edit": "Edit",
+        "delete": "Delete",
+        "modal": {
+            "name_label": "Name",
+            "name_placeholder": "Enter name",
+            "category_label": "Category",
+            "category_placeholder": "Select Category",
+            "image_label": "Upload Image"
+        },
+        "view_modal": {
+            "title": "View Wallpaper"
+        }
+    }
+}

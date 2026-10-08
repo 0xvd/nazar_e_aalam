@@ -1,0 +1,17 @@
+{
+    "reciter": {
+        "title": "Reciter List",
+        "singular": "Reciter",
+        "add": "Add Reciter",
+        "table": {
+            "reciter": "Reciter",
+            "total_sura": "Total Sura"
+        },
+        "form": {
+            "name_placeholder": "Enter Name",
+            "position_placeholder": "Enter position",
+            "profile_picture": "Profile Picture",
+            "upload_picture": "Upload Picture"
+        }
+    }
+}

@@ -1,0 +1,260 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 72,
+            "serial_number": "72",
+            "arabic_name": "الجن",
+            "translated_name": "Al-Jinn",
+            "verses_translate_name": "Verses",
+            "verses_count": "28"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 572,
+                "page_number": "572",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5448,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "قُلْ أُوحِىَ إِلَىَّ أَنَّهُ ٱسْتَمَعَ نَفَرٌ مِّنَ ٱلْجِنِّ فَقَالُوٓا۟ إِنَّا سَمِعْنَا قُرْءَانًا عَجَبًا",
+                        "translated_name": "SAY: \"I HAVE been informed that a number of jinns had listened; then said: 'We have heard the wondrous Qur'an,"
+                    },
+                    {
+                        "id": 5449,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "يَهْدِىٓ إِلَى ٱلرُّشْدِ فَـَٔامَنَّا بِهِۦ ۖ وَلَن نُّشْرِكَ بِرَبِّنَآ أَحَدًا",
+                        "translated_name": "Which guides to the right path; and we have come to believe in it, and will not associate any one with our Lord."
+                    },
+                    {
+                        "id": 5450,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "وَأَنَّهُۥ تَعَـٰلَىٰ جَدُّ رَبِّنَا مَا ٱتَّخَذَ صَـٰحِبَةً وَلَا وَلَدًا",
+                        "translated_name": "Exalted is the glory of our Lord; He has neither wife nor son."
+                    },
+                    {
+                        "id": 5451,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "وَأَنَّهُۥ كَانَ يَقُولُ سَفِيهُنَا عَلَى ٱللَّهِ شَطَطًا",
+                        "translated_name": "Certainly the foolish among us say preposterous things of God."
+                    },
+                    {
+                        "id": 5452,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "وَأَنَّا ظَنَنَّآ أَن لَّن تَقُولَ ٱلْإِنسُ وَٱلْجِنُّ عَلَى ٱللَّهِ كَذِبًا",
+                        "translated_name": "We had in fact thought that men and jinns would never speak a lie about God,"
+                    },
+                    {
+                        "id": 5453,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "وَأَنَّهُۥ كَانَ رِجَالٌ مِّنَ ٱلْإِنسِ يَعُوذُونَ بِرِجَالٍ مِّنَ ٱلْجِنِّ فَزَادُوهُمْ رَهَقًا",
+                        "translated_name": "But some men used to seek refuge with some jinns, and this increased their waywardness;"
+                    },
+                    {
+                        "id": 5454,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "وَأَنَّهُمْ ظَنُّوا۟ كَمَا ظَنَنتُمْ أَن لَّن يَبْعَثَ ٱللَّهُ أَحَدًا",
+                        "translated_name": "So they began to think, even as you do, that God would not resurrect any one."
+                    },
+                    {
+                        "id": 5455,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "وَأَنَّا لَمَسْنَا ٱلسَّمَآءَ فَوَجَدْنَـٰهَا مُلِئَتْ حَرَسًا شَدِيدًا وَشُهُبًا",
+                        "translated_name": "We sought to pry into the secrets of the heavens, but found it full of fierce guards and shooting flames."
+                    },
+                    {
+                        "id": 5456,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "وَأَنَّا كُنَّا نَقْعُدُ مِنْهَا مَقَـٰعِدَ لِلسَّمْعِ ۖ فَمَن يَسْتَمِعِ ٱلْـَٔانَ يَجِدْ لَهُۥ شِهَابًا رَّصَدًا",
+                        "translated_name": "We sat in observatories to listen; but any one who listened found a shooting star in wait for him."
+                    },
+                    {
+                        "id": 5457,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "وَأَنَّا لَا نَدْرِىٓ أَشَرٌّ أُرِيدَ بِمَن فِى ٱلْأَرْضِ أَمْ أَرَادَ بِهِمْ رَبُّهُمْ رَشَدًا",
+                        "translated_name": "We do not know if this means ill for the dwellers of the earth, or their Lord wishes guidance for them."
+                    },
+                    {
+                        "id": 5458,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "وَأَنَّا مِنَّا ٱلصَّـٰلِحُونَ وَمِنَّا دُونَ ذَٰلِكَ ۖ كُنَّا طَرَآئِقَ قِدَدًا",
+                        "translated_name": "For some of us are upright and some otherwise: Surely we follow different ways."
+                    },
+                    {
+                        "id": 5459,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "وَأَنَّا ظَنَنَّآ أَن لَّن نُّعْجِزَ ٱللَّهَ فِى ٱلْأَرْضِ وَلَن نُّعْجِزَهُۥ هَرَبًا",
+                        "translated_name": "We realised that we could not weaken the power of God on earth, nor outpace Him by running away."
+                    },
+                    {
+                        "id": 5460,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "وَأَنَّا لَمَّا سَمِعْنَا ٱلْهُدَىٰٓ ءَامَنَّا بِهِۦ ۖ فَمَن يُؤْمِنۢ بِرَبِّهِۦ فَلَا يَخَافُ بَخْسًا وَلَا رَهَقًا",
+                        "translated_name": "So when we heard the guidance we believed in it; and he who believes in his Lord will neither fear loss nor force."
+                    }
+                ],
+                "page_arabic_ayah": "قُلْ أُوحِىَ إِلَىَّ أَنَّهُ ٱسْتَمَعَ نَفَرٌ مِّنَ ٱلْجِنِّ فَقَالُوٓا۟ إِنَّا سَمِعْنَا قُرْءَانًا عَجَبًا (١)  يَهْدِىٓ إِلَى ٱلرُّشْدِ فَـَٔامَنَّا بِهِۦ ۖ وَلَن نُّشْرِكَ بِرَبِّنَآ أَحَدًا (٢)  وَأَنَّهُۥ تَعَـٰلَىٰ جَدُّ رَبِّنَا مَا ٱتَّخَذَ صَـٰحِبَةً وَلَا وَلَدًا (٣)  وَأَنَّهُۥ كَانَ يَقُولُ سَفِيهُنَا عَلَى ٱللَّهِ شَطَطًا (٤)  وَأَنَّا ظَنَنَّآ أَن لَّن تَقُولَ ٱلْإِنسُ وَٱلْجِنُّ عَلَى ٱللَّهِ كَذِبًا (٥)  وَأَنَّهُۥ كَانَ رِجَالٌ مِّنَ ٱلْإِنسِ يَعُوذُونَ بِرِجَالٍ مِّنَ ٱلْجِنِّ فَزَادُوهُمْ رَهَقًا (٦)  وَأَنَّهُمْ ظَنُّوا۟ كَمَا ظَنَنتُمْ أَن لَّن يَبْعَثَ ٱللَّهُ أَحَدًا (٧)  وَأَنَّا لَمَسْنَا ٱلسَّمَآءَ فَوَجَدْنَـٰهَا مُلِئَتْ حَرَسًا شَدِيدًا وَشُهُبًا (٨)  وَأَنَّا كُنَّا نَقْعُدُ مِنْهَا مَقَـٰعِدَ لِلسَّمْعِ ۖ فَمَن يَسْتَمِعِ ٱلْـَٔانَ يَجِدْ لَهُۥ شِهَابًا رَّصَدًا (٩)  وَأَنَّا لَا نَدْرِىٓ أَشَرٌّ أُرِيدَ بِمَن فِى ٱلْأَرْضِ أَمْ أَرَادَ بِهِمْ رَبُّهُمْ رَشَدًا (١٠)  وَأَنَّا مِنَّا ٱلصَّـٰلِحُونَ وَمِنَّا دُونَ ذَٰلِكَ ۖ كُنَّا طَرَآئِقَ قِدَدًا (١١)  وَأَنَّا ظَنَنَّآ أَن لَّن نُّعْجِزَ ٱللَّهَ فِى ٱلْأَرْضِ وَلَن نُّعْجِزَهُۥ هَرَبًا (١٢)  وَأَنَّا لَمَّا سَمِعْنَا ٱلْهُدَىٰٓ ءَامَنَّا بِهِۦ ۖ فَمَن يُؤْمِنۢ بِرَبِّهِۦ فَلَا يَخَافُ بَخْسًا وَلَا رَهَقًا (١٣)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 573,
+                "page_number": "573",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 5461,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "وَأَنَّا مِنَّا ٱلْمُسْلِمُونَ وَمِنَّا ٱلْقَـٰسِطُونَ ۖ فَمَنْ أَسْلَمَ فَأُو۟لَـٰٓئِكَ تَحَرَّوْا۟ رَشَدًا",
+                        "translated_name": "Some of us have come to submission, and some of us are iniquitous.'\" Those who have submitted have taken the right course;"
+                    },
+                    {
+                        "id": 5462,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "وَأَمَّا ٱلْقَـٰسِطُونَ فَكَانُوا۟ لِجَهَنَّمَ حَطَبًا",
+                        "translated_name": "But those who are iniquitous will be fuel for Hell."
+                    },
+                    {
+                        "id": 5463,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "وَأَلَّوِ ٱسْتَقَـٰمُوا۟ عَلَى ٱلطَّرِيقَةِ لَأَسْقَيْنَـٰهُم مَّآءً غَدَقًا",
+                        "translated_name": "(Say): \"If they keep to the right path We shall give them water in abundance to drink"
+                    },
+                    {
+                        "id": 5464,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "لِّنَفْتِنَهُمْ فِيهِ ۚ وَمَن يُعْرِضْ عَن ذِكْرِ رَبِّهِۦ يَسْلُكْهُ عَذَابًا صَعَدًا",
+                        "translated_name": "In order to try them through it. But whoever turns away from the remembrance of his Lord, will be given increasing torment by Him.\""
+                    },
+                    {
+                        "id": 5465,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "وَأَنَّ ٱلْمَسَـٰجِدَ لِلَّهِ فَلَا تَدْعُوا۟ مَعَ ٱللَّهِ أَحَدًا",
+                        "translated_name": "All places of worship are for God; so do not invoke any one with God."
+                    },
+                    {
+                        "id": 5466,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "وَأَنَّهُۥ لَمَّا قَامَ عَبْدُ ٱللَّهِ يَدْعُوهُ كَادُوا۟ يَكُونُونَ عَلَيْهِ لِبَدًا",
+                        "translated_name": "When the devotee of God stood up to invoke Him (the jinns) crowded upon him (to listen)."
+                    },
+                    {
+                        "id": 5467,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "20",
+                        "arabic_name": "قُلْ إِنَّمَآ أَدْعُوا۟ رَبِّى وَلَآ أُشْرِكُ بِهِۦٓ أَحَدًا",
+                        "translated_name": "Say: \"I call on my Lord alone and I do not associate any one with Him.\""
+                    },
+                    {
+                        "id": 5468,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "21",
+                        "arabic_name": "قُلْ إِنِّى لَآ أَمْلِكُ لَكُمْ ضَرًّا وَلَا رَشَدًا",
+                        "translated_name": "Say: \"Neither is your loss within my power nor bringing you to guidance.\""
+                    },
+                    {
+                        "id": 5469,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "22",
+                        "arabic_name": "قُلْ إِنِّى لَن يُجِيرَنِى مِنَ ٱللَّهِ أَحَدٌ وَلَنْ أَجِدَ مِن دُونِهِۦ مُلْتَحَدًا",
+                        "translated_name": "Say: \"No one can save me from God, nor can I find a place of refuge apart from Him,"
+                    },
+                    {
+                        "id": 5470,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "23",
+                        "arabic_name": "إِلَّا بَلَـٰغًا مِّنَ ٱللَّهِ وَرِسَـٰلَـٰتِهِۦ ۚ وَمَن يَعْصِ ٱللَّهَ وَرَسُولَهُۥ فَإِنَّ لَهُۥ نَارَ جَهَنَّمَ خَـٰلِدِينَ فِيهَآ أَبَدًا",
+                        "translated_name": "Unless I convey from God and deliver His message.\" For those who disobey God and His Apostle is the fire of Hell, where they will abide for ever;"
+                    },
+                    {
+                        "id": 5471,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "24",
+                        "arabic_name": "حَتَّىٰٓ إِذَا رَأَوْا۟ مَا يُوعَدُونَ فَسَيَعْلَمُونَ مَنْ أَضْعَفُ نَاصِرًا وَأَقَلُّ عَدَدًا",
+                        "translated_name": "Until they see what they are promised, when they will understand who is weaker in aid and poorer in numbers."
+                    },
+                    {
+                        "id": 5472,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "25",
+                        "arabic_name": "قُلْ إِنْ أَدْرِىٓ أَقَرِيبٌ مَّا تُوعَدُونَ أَمْ يَجْعَلُ لَهُۥ رَبِّىٓ أَمَدًا",
+                        "translated_name": "Say: \"I do not know if what is promised you is near, or if my Lord prolongs its term."
+                    },
+                    {
+                        "id": 5473,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "26",
+                        "arabic_name": "عَـٰلِمُ ٱلْغَيْبِ فَلَا يُظْهِرُ عَلَىٰ غَيْبِهِۦٓ أَحَدًا",
+                        "translated_name": "He is the knower of the Unknown, and He does not divulge His secret to any one"
+                    },
+                    {
+                        "id": 5474,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "27",
+                        "arabic_name": "إِلَّا مَنِ ٱرْتَضَىٰ مِن رَّسُولٍ فَإِنَّهُۥ يَسْلُكُ مِنۢ بَيْنِ يَدَيْهِ وَمِنْ خَلْفِهِۦ رَصَدًا",
+                        "translated_name": "Other than an apostle He has chosen, when He makes a sentinel walk in front of him and a sentinel behind,"
+                    },
+                    {
+                        "id": 5475,
+                        "chapter_id": 72,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "28",
+                        "arabic_name": "لِّيَعْلَمَ أَن قَدْ أَبْلَغُوا۟ رِسَـٰلَـٰتِ رَبِّهِمْ وَأَحَاطَ بِمَا لَدَيْهِمْ وَأَحْصَىٰ كُلَّ شَىْءٍ عَدَدًۢا",
+                        "translated_name": "So that He may know if they have delivered their Lord's messages. He comprehends all that has been given them, and keeps count of everything."
+                    }
+                ],
+                "page_arabic_ayah": "وَأَنَّا مِنَّا ٱلْمُسْلِمُونَ وَمِنَّا ٱلْقَـٰسِطُونَ ۖ فَمَنْ أَسْلَمَ فَأُو۟لَـٰٓئِكَ تَحَرَّوْا۟ رَشَدًا (١٤)  وَأَمَّا ٱلْقَـٰسِطُونَ فَكَانُوا۟ لِجَهَنَّمَ حَطَبًا (١٥)  وَأَلَّوِ ٱسْتَقَـٰمُوا۟ عَلَى ٱلطَّرِيقَةِ لَأَسْقَيْنَـٰهُم مَّآءً غَدَقًا (١٦)  لِّنَفْتِنَهُمْ فِيهِ ۚ وَمَن يُعْرِضْ عَن ذِكْرِ رَبِّهِۦ يَسْلُكْهُ عَذَابًا صَعَدًا (١٧)  وَأَنَّ ٱلْمَسَـٰجِدَ لِلَّهِ فَلَا تَدْعُوا۟ مَعَ ٱللَّهِ أَحَدًا (١٨)  وَأَنَّهُۥ لَمَّا قَامَ عَبْدُ ٱللَّهِ يَدْعُوهُ كَادُوا۟ يَكُونُونَ عَلَيْهِ لِبَدًا (١٩)  قُلْ إِنَّمَآ أَدْعُوا۟ رَبِّى وَلَآ أُشْرِكُ بِهِۦٓ أَحَدًا (٢٠)  قُلْ إِنِّى لَآ أَمْلِكُ لَكُمْ ضَرًّا وَلَا رَشَدًا (٢١)  قُلْ إِنِّى لَن يُجِيرَنِى مِنَ ٱللَّهِ أَحَدٌ وَلَنْ أَجِدَ مِن دُونِهِۦ مُلْتَحَدًا (٢٢)  إِلَّا بَلَـٰغًا مِّنَ ٱللَّهِ وَرِسَـٰلَـٰتِهِۦ ۚ وَمَن يَعْصِ ٱللَّهَ وَرَسُولَهُۥ فَإِنَّ لَهُۥ نَارَ جَهَنَّمَ خَـٰلِدِينَ فِيهَآ أَبَدًا (٢٣)  حَتَّىٰٓ إِذَا رَأَوْا۟ مَا يُوعَدُونَ فَسَيَعْلَمُونَ مَنْ أَضْعَفُ نَاصِرًا وَأَقَلُّ عَدَدًا (٢٤)  قُلْ إِنْ أَدْرِىٓ أَقَرِيبٌ مَّا تُوعَدُونَ أَمْ يَجْعَلُ لَهُۥ رَبِّىٓ أَمَدًا (٢٥)  عَـٰلِمُ ٱلْغَيْبِ فَلَا يُظْهِرُ عَلَىٰ غَيْبِهِۦٓ أَحَدًا (٢٦)  إِلَّا مَنِ ٱرْتَضَىٰ مِن رَّسُولٍ فَإِنَّهُۥ يَسْلُكُ مِنۢ بَيْنِ يَدَيْهِ وَمِنْ خَلْفِهِۦ رَصَدًا (٢٧)  لِّيَعْلَمَ أَن قَدْ أَبْلَغُوا۟ رِسَـٰلَـٰتِ رَبِّهِمْ وَأَحَاطَ بِمَا لَدَيْهِمْ وَأَحْصَىٰ كُلَّ شَىْءٍ عَدَدًۢا (٢٨)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

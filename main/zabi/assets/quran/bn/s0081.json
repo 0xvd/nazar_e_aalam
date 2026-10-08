@@ -1,0 +1,257 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 81,
+            "serial_number": "৮১",
+            "arabic_name": "التكوير",
+            "translated_name": "আত-তাকভীর",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "২৯"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 586,
+                "page_number": "586",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5801,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "إِذَا ٱلشَّمْسُ كُوِّرَتْ",
+                        "translated_name": "যখন সূর্য অন্ধকারাচ্ছন্ন হয়ে যাবে,"
+                    },
+                    {
+                        "id": 5802,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "وَإِذَا ٱلنُّجُومُ ٱنكَدَرَتْ",
+                        "translated_name": "আর যখন তারকারা নিস্তেজ হয়ে পড়বে,"
+                    },
+                    {
+                        "id": 5803,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "وَإِذَا ٱلْجِبَالُ سُيِّرَتْ",
+                        "translated_name": "আর যখন পাহাড়গুলোকে অপসারণ করা হবে,"
+                    },
+                    {
+                        "id": 5804,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "4",
+                        "arabic_name": "وَإِذَا ٱلْعِشَارُ عُطِّلَتْ",
+                        "translated_name": "আর যখন পূর্ণ-গর্ভা উষ্টীদের পরিত্যাগ করা হবে;"
+                    },
+                    {
+                        "id": 5805,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "5",
+                        "arabic_name": "وَإِذَا ٱلْوُحُوشُ حُشِرَتْ",
+                        "translated_name": "আর যখন বন্য পশুদের সমবেত করা হবে,"
+                    },
+                    {
+                        "id": 5806,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "6",
+                        "arabic_name": "وَإِذَا ٱلْبِحَارُ سُجِّرَتْ",
+                        "translated_name": "আর যখন সাগর-নদী ফেঁপে উঠবে,"
+                    },
+                    {
+                        "id": 5807,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "7",
+                        "arabic_name": "وَإِذَا ٱلنُّفُوسُ زُوِّجَتْ",
+                        "translated_name": "আর যখন মনপ্রাণকে একতাবদ্ধ করা হবে,"
+                    },
+                    {
+                        "id": 5808,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "8",
+                        "arabic_name": "وَإِذَا ٱلْمَوْءُۥدَةُ سُئِلَتْ",
+                        "translated_name": "আর যখন জীবন্ত-প্রোথিত কন্যাসন্তানকে প্রশ্ন করা হবে --"
+                    },
+                    {
+                        "id": 5809,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "9",
+                        "arabic_name": "بِأَىِّ ذَنۢبٍ قُتِلَتْ",
+                        "translated_name": "''কোন অপরাধে তাকে হত্যা করা হয়েছিল’’?"
+                    },
+                    {
+                        "id": 5810,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "10",
+                        "arabic_name": "وَإِذَا ٱلصُّحُفُ نُشِرَتْ",
+                        "translated_name": "আর যখন পৃষ্ঠাগুলো খুলে ধরা হবে,"
+                    },
+                    {
+                        "id": 5811,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "11",
+                        "arabic_name": "وَإِذَا ٱلسَّمَآءُ كُشِطَتْ",
+                        "translated_name": "আর যখন আকাশের ঢাকনি খুলে ফেলা হবে,"
+                    },
+                    {
+                        "id": 5812,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "12",
+                        "arabic_name": "وَإِذَا ٱلْجَحِيمُ سُعِّرَتْ",
+                        "translated_name": "আর যখন ভয়ংকর আগুন জ্বালিয়ে তোলা হবে,"
+                    },
+                    {
+                        "id": 5813,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "13",
+                        "arabic_name": "وَإِذَا ٱلْجَنَّةُ أُزْلِفَتْ",
+                        "translated_name": "আর যখন বেহেশতকে নিকটে আনা হবে, --"
+                    },
+                    {
+                        "id": 5814,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "14",
+                        "arabic_name": "عَلِمَتْ نَفْسٌ مَّآ أَحْضَرَتْ",
+                        "translated_name": "সত্ত্বা জানতে পারবে কী সে হাজির করেছে।"
+                    },
+                    {
+                        "id": 5815,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "15",
+                        "arabic_name": "فَلَآ أُقْسِمُ بِٱلْخُنَّسِ",
+                        "translated_name": "কাজেই না, আমি সাক্ষী মানছি গ্রহ-নক্ষত্রদের --"
+                    },
+                    {
+                        "id": 5816,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "16",
+                        "arabic_name": "ٱلْجَوَارِ ٱلْكُنَّسِ",
+                        "translated_name": "যারা চলে থাকে, অদৃশ্য হয়ে যায়,"
+                    },
+                    {
+                        "id": 5817,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "17",
+                        "arabic_name": "وَٱلَّيْلِ إِذَا عَسْعَسَ",
+                        "translated_name": "আর রাত্রিকে যখন তা বিগত হয়ে যায়,"
+                    },
+                    {
+                        "id": 5818,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "18",
+                        "arabic_name": "وَٱلصُّبْحِ إِذَا تَنَفَّسَ",
+                        "translated_name": "আর প্রভাতকে যখন তা উজ্জ্বল হতে থাকে,"
+                    },
+                    {
+                        "id": 5819,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "19",
+                        "arabic_name": "إِنَّهُۥ لَقَوْلُ رَسُولٍ كَرِيمٍ",
+                        "translated_name": "নিঃসন্দেহ এ তো হচ্ছে এক সম্মানিত রসূলের বাণী --"
+                    },
+                    {
+                        "id": 5820,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "20",
+                        "arabic_name": "ذِى قُوَّةٍ عِندَ ذِى ٱلْعَرْشِ مَكِينٍ",
+                        "translated_name": "শক্তির অধিকারী, আরশের অধীশ্বরের সামনে অধিষ্ঠিত,"
+                    },
+                    {
+                        "id": 5821,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "21",
+                        "arabic_name": "مُّطَاعٍ ثَمَّ أَمِينٍ",
+                        "translated_name": "যাঁকে মেনে চলতে হয়, আর যিনি বিশ্বাসভাজন।"
+                    },
+                    {
+                        "id": 5822,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "22",
+                        "arabic_name": "وَمَا صَاحِبُكُم بِمَجْنُونٍ",
+                        "translated_name": "আর তোমাদের সাথী তো পাগল নন।"
+                    },
+                    {
+                        "id": 5823,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "23",
+                        "arabic_name": "وَلَقَدْ رَءَاهُ بِٱلْأُفُقِ ٱلْمُبِينِ",
+                        "translated_name": "আর তিনি তো নিজেকে দেখেছিলেন স্পষ্ট দিগন্তে;"
+                    },
+                    {
+                        "id": 5824,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "24",
+                        "arabic_name": "وَمَا هُوَ عَلَى ٱلْغَيْبِ بِضَنِينٍ",
+                        "translated_name": "আর তিনি অদৃশ্য-সন্বন্ধে কৃপণ নন,"
+                    },
+                    {
+                        "id": 5825,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "25",
+                        "arabic_name": "وَمَا هُوَ بِقَوْلِ شَيْطَـٰنٍ رَّجِيمٍ",
+                        "translated_name": "আর এটি কোনো বিতাড়িত শয়তানের বক্তব্য নয়।"
+                    },
+                    {
+                        "id": 5826,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "26",
+                        "arabic_name": "فَأَيْنَ تَذْهَبُونَ",
+                        "translated_name": "তোমরা তাহলে কোন দিকে চলেছ?"
+                    },
+                    {
+                        "id": 5827,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "27",
+                        "arabic_name": "إِنْ هُوَ إِلَّا ذِكْرٌ لِّلْعَـٰلَمِينَ",
+                        "translated_name": "এটি আলবৎ বিশ্ববাসীর জন্য স্মরণীয় বার্তা বৈ তো নয়, --"
+                    },
+                    {
+                        "id": 5828,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "28",
+                        "arabic_name": "لِمَن شَآءَ مِنكُمْ أَن يَسْتَقِيمَ",
+                        "translated_name": "তোমাদের মধ্যেকার তার জন্য যে সহজ-সঠিক পথে চলতে চায়।"
+                    },
+                    {
+                        "id": 5829,
+                        "chapter_id": 81,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "29",
+                        "arabic_name": "وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ رَبُّ ٱلْعَـٰلَمِينَ",
+                        "translated_name": "আর বিশ্বজগতের প্রভু আল্লাহ্ যা চান তা ব্যতীত তোমরা অন্য কোনো-কিছু চাইবে না।"
+                    }
+                ],
+                "page_arabic_ayah": "إِذَا ٱلشَّمْسُ كُوِّرَتْ (١)  وَإِذَا ٱلنُّجُومُ ٱنكَدَرَتْ (٢)  وَإِذَا ٱلْجِبَالُ سُيِّرَتْ (٣)  وَإِذَا ٱلْعِشَارُ عُطِّلَتْ (٤)  وَإِذَا ٱلْوُحُوشُ حُشِرَتْ (٥)  وَإِذَا ٱلْبِحَارُ سُجِّرَتْ (٦)  وَإِذَا ٱلنُّفُوسُ زُوِّجَتْ (٧)  وَإِذَا ٱلْمَوْءُۥدَةُ سُئِلَتْ (٨)  بِأَىِّ ذَنۢبٍ قُتِلَتْ (٩)  وَإِذَا ٱلصُّحُفُ نُشِرَتْ (١٠)  وَإِذَا ٱلسَّمَآءُ كُشِطَتْ (١١)  وَإِذَا ٱلْجَحِيمُ سُعِّرَتْ (١٢)  وَإِذَا ٱلْجَنَّةُ أُزْلِفَتْ (١٣)  عَلِمَتْ نَفْسٌ مَّآ أَحْضَرَتْ (١٤)  فَلَآ أُقْسِمُ بِٱلْخُنَّسِ (١٥)  ٱلْجَوَارِ ٱلْكُنَّسِ (١٦)  وَٱلَّيْلِ إِذَا عَسْعَسَ (١٧)  وَٱلصُّبْحِ إِذَا تَنَفَّسَ (١٨)  إِنَّهُۥ لَقَوْلُ رَسُولٍ كَرِيمٍ (١٩)  ذِى قُوَّةٍ عِندَ ذِى ٱلْعَرْشِ مَكِينٍ (٢٠)  مُّطَاعٍ ثَمَّ أَمِينٍ (٢١)  وَمَا صَاحِبُكُم بِمَجْنُونٍ (٢٢)  وَلَقَدْ رَءَاهُ بِٱلْأُفُقِ ٱلْمُبِينِ (٢٣)  وَمَا هُوَ عَلَى ٱلْغَيْبِ بِضَنِينٍ (٢٤)  وَمَا هُوَ بِقَوْلِ شَيْطَـٰنٍ رَّجِيمٍ (٢٥)  فَأَيْنَ تَذْهَبُونَ (٢٦)  إِنْ هُوَ إِلَّا ذِكْرٌ لِّلْعَـٰلَمِينَ (٢٧)  لِمَن شَآءَ مِنكُمْ أَن يَسْتَقِيمَ (٢٨)  وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ رَبُّ ٱلْعَـٰلَمِينَ (٢٩)",
+                "is_read": false
+            }
+        ]
+    }
+}

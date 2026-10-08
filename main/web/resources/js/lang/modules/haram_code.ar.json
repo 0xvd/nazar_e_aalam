@@ -1,0 +1,18 @@
+{
+    "haram_code": {
+        "title": "قائمة الرموز المحرمة",
+        "singular": "الرمز المحرم",
+        "table": {
+            "code": "الرمز",
+            "description": "الوصف",
+            "status_info": "معلومات الحالة"
+        },
+        "form": {
+            "name_placeholder": "أدخل الاسم",
+            "code_label": "الرمز",
+            "code_placeholder": "أدخل الرمز",
+            "description_label": "الوصف",
+            "status_info_label": "معلومات الحالة"
+        }
+    }
+}

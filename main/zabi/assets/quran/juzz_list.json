@@ -1,0 +1,1266 @@
+    {
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": [
+        {
+            "juz_number": "1",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 1,
+                    "serial_number": "1",
+                    "arabic_name": "الفاتحة",
+                    "translated_name": "Al-Fatihah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-7"
+                },
+                {
+                    "chapter_id": 2,
+                    "serial_number": "2",
+                    "arabic_name": "البقرة",
+                    "translated_name": "Al-Baqarah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-141"
+                }
+            ]
+        },
+        {
+            "juz_number": "2",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 2,
+                    "serial_number": "2",
+                    "arabic_name": "البقرة",
+                    "translated_name": "Al-Baqarah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "142-252"
+                }
+            ]
+        },
+        {
+            "juz_number": "3",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 2,
+                    "serial_number": "2",
+                    "arabic_name": "البقرة",
+                    "translated_name": "Al-Baqarah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "253-286"
+                },
+                {
+                    "chapter_id": 3,
+                    "serial_number": "3",
+                    "arabic_name": "آل عمران",
+                    "translated_name": "Ali 'Imran",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-92"
+                }
+            ]
+        },
+        {
+            "juz_number": "4",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 3,
+                    "serial_number": "3",
+                    "arabic_name": "آل عمران",
+                    "translated_name": "Ali 'Imran",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "93-200"
+                },
+                {
+                    "chapter_id": 4,
+                    "serial_number": "4",
+                    "arabic_name": "النساء",
+                    "translated_name": "An-Nisa",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-23"
+                }
+            ]
+        },
+        {
+            "juz_number": "5",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 4,
+                    "serial_number": "4",
+                    "arabic_name": "النساء",
+                    "translated_name": "An-Nisa",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "24-147"
+                }
+            ]
+        },
+        {
+            "juz_number": "6",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 4,
+                    "serial_number": "4",
+                    "arabic_name": "النساء",
+                    "translated_name": "An-Nisa",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "148-176"
+                },
+                {
+                    "chapter_id": 5,
+                    "serial_number": "5",
+                    "arabic_name": "المائدة",
+                    "translated_name": "Al-Ma'idah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-81"
+                }
+            ]
+        },
+        {
+            "juz_number": "7",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 5,
+                    "serial_number": "5",
+                    "arabic_name": "المائدة",
+                    "translated_name": "Al-Ma'idah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "82-120"
+                },
+                {
+                    "chapter_id": 6,
+                    "serial_number": "6",
+                    "arabic_name": "الأنعام",
+                    "translated_name": "Al-An'am",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-110"
+                }
+            ]
+        },
+        {
+            "juz_number": "8",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 6,
+                    "serial_number": "6",
+                    "arabic_name": "الأنعام",
+                    "translated_name": "Al-An'am",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "111-165"
+                },
+                {
+                    "chapter_id": 7,
+                    "serial_number": "7",
+                    "arabic_name": "الأعراف",
+                    "translated_name": "Al-A'raf",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-87"
+                }
+            ]
+        },
+        {
+            "juz_number": "9",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 7,
+                    "serial_number": "7",
+                    "arabic_name": "الأعراف",
+                    "translated_name": "Al-A'raf",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "88-206"
+                },
+                {
+                    "chapter_id": 8,
+                    "serial_number": "8",
+                    "arabic_name": "الأنفال",
+                    "translated_name": "Al-Anfal",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-40"
+                }
+            ]
+        },
+        {
+            "juz_number": "10",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 8,
+                    "serial_number": "8",
+                    "arabic_name": "الأنفال",
+                    "translated_name": "Al-Anfal",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "41-75"
+                },
+                {
+                    "chapter_id": 9,
+                    "serial_number": "9",
+                    "arabic_name": "التوبة",
+                    "translated_name": "At-Tawbah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-92"
+                }
+            ]
+        },
+        {
+            "juz_number": "11",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 9,
+                    "serial_number": "9",
+                    "arabic_name": "التوبة",
+                    "translated_name": "At-Tawbah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "93-129"
+                },
+                {
+                    "chapter_id": 10,
+                    "serial_number": "10",
+                    "arabic_name": "يونس",
+                    "translated_name": "Yunus",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-109"
+                },
+                {
+                    "chapter_id": 11,
+                    "serial_number": "11",
+                    "arabic_name": "هود",
+                    "translated_name": "Hud",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-5"
+                }
+            ]
+        },
+        {
+            "juz_number": "12",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 11,
+                    "serial_number": "11",
+                    "arabic_name": "هود",
+                    "translated_name": "Hud",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "6-123"
+                },
+                {
+                    "chapter_id": 12,
+                    "serial_number": "12",
+                    "arabic_name": "يوسف",
+                    "translated_name": "Yusuf",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-52"
+                }
+            ]
+        },
+        {
+            "juz_number": "13",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 12,
+                    "serial_number": "12",
+                    "arabic_name": "يوسف",
+                    "translated_name": "Yusuf",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "53-111"
+                },
+                {
+                    "chapter_id": 13,
+                    "serial_number": "13",
+                    "arabic_name": "الرعد",
+                    "translated_name": "Ar-Ra'd",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-43"
+                },
+                {
+                    "chapter_id": 14,
+                    "serial_number": "14",
+                    "arabic_name": "ابراهيم",
+                    "translated_name": "Ibrahim",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-52"
+                }
+            ]
+        },
+        {
+            "juz_number": "14",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 15,
+                    "serial_number": "15",
+                    "arabic_name": "الحجر",
+                    "translated_name": "Al-Hijr",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-99"
+                },
+                {
+                    "chapter_id": 16,
+                    "serial_number": "16",
+                    "arabic_name": "النحل",
+                    "translated_name": "An-Nahl",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-128"
+                }
+            ]
+        },
+        {
+            "juz_number": "15",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 17,
+                    "serial_number": "17",
+                    "arabic_name": "الإسراء",
+                    "translated_name": "Al-Isra",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-111"
+                },
+                {
+                    "chapter_id": 18,
+                    "serial_number": "18",
+                    "arabic_name": "الكهف",
+                    "translated_name": "Al-Kahf",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-74"
+                }
+            ]
+        },
+        {
+            "juz_number": "16",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 18,
+                    "serial_number": "18",
+                    "arabic_name": "الكهف",
+                    "translated_name": "Al-Kahf",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "75-110"
+                },
+                {
+                    "chapter_id": 19,
+                    "serial_number": "19",
+                    "arabic_name": "مريم",
+                    "translated_name": "Maryam",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-98"
+                },
+                {
+                    "chapter_id": 20,
+                    "serial_number": "20",
+                    "arabic_name": "طه",
+                    "translated_name": "Taha",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-135"
+                }
+            ]
+        },
+        {
+            "juz_number": "17",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 21,
+                    "serial_number": "21",
+                    "arabic_name": "الأنبياء",
+                    "translated_name": "Al-Anbya",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-112"
+                },
+                {
+                    "chapter_id": 22,
+                    "serial_number": "22",
+                    "arabic_name": "الحج",
+                    "translated_name": "Al-Hajj",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-78"
+                }
+            ]
+        },
+        {
+            "juz_number": "18",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 23,
+                    "serial_number": "23",
+                    "arabic_name": "المؤمنون",
+                    "translated_name": "Al-Mu'minun",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-118"
+                },
+                {
+                    "chapter_id": 24,
+                    "serial_number": "24",
+                    "arabic_name": "النور",
+                    "translated_name": "An-Nur",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-64"
+                },
+                {
+                    "chapter_id": 25,
+                    "serial_number": "25",
+                    "arabic_name": "الفرقان",
+                    "translated_name": "Al-Furqan",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-20"
+                }
+            ]
+        },
+        {
+            "juz_number": "19",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 25,
+                    "serial_number": "25",
+                    "arabic_name": "الفرقان",
+                    "translated_name": "Al-Furqan",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "21-77"
+                },
+                {
+                    "chapter_id": 26,
+                    "serial_number": "26",
+                    "arabic_name": "الشعراء",
+                    "translated_name": "Ash-Shu'ara",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-227"
+                },
+                {
+                    "chapter_id": 27,
+                    "serial_number": "27",
+                    "arabic_name": "النمل",
+                    "translated_name": "An-Naml",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-55"
+                }
+            ]
+        },
+        {
+            "juz_number": "20",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 27,
+                    "serial_number": "27",
+                    "arabic_name": "النمل",
+                    "translated_name": "An-Naml",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "56-93"
+                },
+                {
+                    "chapter_id": 28,
+                    "serial_number": "28",
+                    "arabic_name": "القصص",
+                    "translated_name": "Al-Qasas",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-88"
+                },
+                {
+                    "chapter_id": 29,
+                    "serial_number": "29",
+                    "arabic_name": "العنكبوت",
+                    "translated_name": "Al-'Ankabut",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-45"
+                }
+            ]
+        },
+        {
+            "juz_number": "21",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 29,
+                    "serial_number": "29",
+                    "arabic_name": "العنكبوت",
+                    "translated_name": "Al-'Ankabut",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "46-69"
+                },
+                {
+                    "chapter_id": 30,
+                    "serial_number": "30",
+                    "arabic_name": "الروم",
+                    "translated_name": "Ar-Rum",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-60"
+                },
+                {
+                    "chapter_id": 31,
+                    "serial_number": "31",
+                    "arabic_name": "لقمان",
+                    "translated_name": "Luqman",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-34"
+                },
+                {
+                    "chapter_id": 32,
+                    "serial_number": "32",
+                    "arabic_name": "السجدة",
+                    "translated_name": "As-Sajdah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-30"
+                },
+                {
+                    "chapter_id": 33,
+                    "serial_number": "33",
+                    "arabic_name": "الأحزاب",
+                    "translated_name": "Al-Ahzab",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-30"
+                }
+            ]
+        },
+        {
+            "juz_number": "22",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 33,
+                    "serial_number": "33",
+                    "arabic_name": "الأحزاب",
+                    "translated_name": "Al-Ahzab",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "31-73"
+                },
+                {
+                    "chapter_id": 34,
+                    "serial_number": "34",
+                    "arabic_name": "سبإ",
+                    "translated_name": "Saba",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-54"
+                },
+                {
+                    "chapter_id": 35,
+                    "serial_number": "35",
+                    "arabic_name": "فاطر",
+                    "translated_name": "Fatir",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-45"
+                },
+                {
+                    "chapter_id": 36,
+                    "serial_number": "36",
+                    "arabic_name": "يس",
+                    "translated_name": "Ya-Sin",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-27"
+                }
+            ]
+        },
+        {
+            "juz_number": "23",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 36,
+                    "serial_number": "36",
+                    "arabic_name": "يس",
+                    "translated_name": "Ya-Sin",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "28-83"
+                },
+                {
+                    "chapter_id": 37,
+                    "serial_number": "37",
+                    "arabic_name": "الصافات",
+                    "translated_name": "As-Saffat",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-182"
+                },
+                {
+                    "chapter_id": 38,
+                    "serial_number": "38",
+                    "arabic_name": "ص",
+                    "translated_name": "Sad",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-88"
+                },
+                {
+                    "chapter_id": 39,
+                    "serial_number": "39",
+                    "arabic_name": "الزمر",
+                    "translated_name": "Az-Zumar",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-31"
+                }
+            ]
+        },
+        {
+            "juz_number": "24",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 39,
+                    "serial_number": "39",
+                    "arabic_name": "الزمر",
+                    "translated_name": "Az-Zumar",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "32-75"
+                },
+                {
+                    "chapter_id": 40,
+                    "serial_number": "40",
+                    "arabic_name": "غافر",
+                    "translated_name": "Ghafir",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-85"
+                },
+                {
+                    "chapter_id": 41,
+                    "serial_number": "41",
+                    "arabic_name": "فصلت",
+                    "translated_name": "Fussilat",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-46"
+                }
+            ]
+        },
+        {
+            "juz_number": "25",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 41,
+                    "serial_number": "41",
+                    "arabic_name": "فصلت",
+                    "translated_name": "Fussilat",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "47-54"
+                },
+                {
+                    "chapter_id": 42,
+                    "serial_number": "42",
+                    "arabic_name": "الشورى",
+                    "translated_name": "Ash-Shuraa",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-53"
+                },
+                {
+                    "chapter_id": 43,
+                    "serial_number": "43",
+                    "arabic_name": "الزخرف",
+                    "translated_name": "Az-Zukhruf",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-89"
+                },
+                {
+                    "chapter_id": 44,
+                    "serial_number": "44",
+                    "arabic_name": "الدخان",
+                    "translated_name": "Ad-Dukhan",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-59"
+                },
+                {
+                    "chapter_id": 45,
+                    "serial_number": "45",
+                    "arabic_name": "الجاثية",
+                    "translated_name": "Al-Jathiyah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-37"
+                }
+            ]
+        },
+        {
+            "juz_number": "26",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 46,
+                    "serial_number": "46",
+                    "arabic_name": "الأحقاف",
+                    "translated_name": "Al-Ahqaf",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-35"
+                },
+                {
+                    "chapter_id": 47,
+                    "serial_number": "47",
+                    "arabic_name": "محمد",
+                    "translated_name": "Muhammad",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-38"
+                },
+                {
+                    "chapter_id": 48,
+                    "serial_number": "48",
+                    "arabic_name": "الفتح",
+                    "translated_name": "Al-Fath",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-29"
+                },
+                {
+                    "chapter_id": 49,
+                    "serial_number": "49",
+                    "arabic_name": "الحجرات",
+                    "translated_name": "Al-Hujurat",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-18"
+                },
+                {
+                    "chapter_id": 50,
+                    "serial_number": "50",
+                    "arabic_name": "ق",
+                    "translated_name": "Qaf",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-45"
+                },
+                {
+                    "chapter_id": 51,
+                    "serial_number": "51",
+                    "arabic_name": "الذاريات",
+                    "translated_name": "Adh-Dhariyat",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-30"
+                }
+            ]
+        },
+        {
+            "juz_number": "27",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 51,
+                    "serial_number": "51",
+                    "arabic_name": "الذاريات",
+                    "translated_name": "Adh-Dhariyat",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "31-60"
+                },
+                {
+                    "chapter_id": 52,
+                    "serial_number": "52",
+                    "arabic_name": "الطور",
+                    "translated_name": "At-Tur",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-49"
+                },
+                {
+                    "chapter_id": 53,
+                    "serial_number": "53",
+                    "arabic_name": "النجم",
+                    "translated_name": "An-Najm",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-62"
+                },
+                {
+                    "chapter_id": 54,
+                    "serial_number": "54",
+                    "arabic_name": "القمر",
+                    "translated_name": "Al-Qamar",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-55"
+                },
+                {
+                    "chapter_id": 55,
+                    "serial_number": "55",
+                    "arabic_name": "الرحمن",
+                    "translated_name": "Ar-Rahman",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-78"
+                },
+                {
+                    "chapter_id": 56,
+                    "serial_number": "56",
+                    "arabic_name": "الواقعة",
+                    "translated_name": "Al-Waqi'ah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-96"
+                },
+                {
+                    "chapter_id": 57,
+                    "serial_number": "57",
+                    "arabic_name": "الحديد",
+                    "translated_name": "Al-Hadid",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-29"
+                }
+            ]
+        },
+        {
+            "juz_number": "28",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 58,
+                    "serial_number": "58",
+                    "arabic_name": "المجادلة",
+                    "translated_name": "Al-Mujadila",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-22"
+                },
+                {
+                    "chapter_id": 59,
+                    "serial_number": "59",
+                    "arabic_name": "الحشر",
+                    "translated_name": "Al-Hashr",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-24"
+                },
+                {
+                    "chapter_id": 60,
+                    "serial_number": "60",
+                    "arabic_name": "الممتحنة",
+                    "translated_name": "Al-Mumtahanah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-13"
+                },
+                {
+                    "chapter_id": 61,
+                    "serial_number": "61",
+                    "arabic_name": "الصف",
+                    "translated_name": "As-Saf",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-14"
+                },
+                {
+                    "chapter_id": 62,
+                    "serial_number": "62",
+                    "arabic_name": "الجمعة",
+                    "translated_name": "Al-Jumu'ah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-11"
+                },
+                {
+                    "chapter_id": 63,
+                    "serial_number": "63",
+                    "arabic_name": "المنافقون",
+                    "translated_name": "Al-Munafiqun",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-11"
+                },
+                {
+                    "chapter_id": 64,
+                    "serial_number": "64",
+                    "arabic_name": "التغابن",
+                    "translated_name": "At-Taghabun",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-18"
+                },
+                {
+                    "chapter_id": 65,
+                    "serial_number": "65",
+                    "arabic_name": "الطلاق",
+                    "translated_name": "At-Talaq",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-12"
+                },
+                {
+                    "chapter_id": 66,
+                    "serial_number": "66",
+                    "arabic_name": "التحريم",
+                    "translated_name": "At-Tahrim",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-12"
+                }
+            ]
+        },
+        {
+            "juz_number": "29",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 67,
+                    "serial_number": "67",
+                    "arabic_name": "الملك",
+                    "translated_name": "Al-Mulk",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-30"
+                },
+                {
+                    "chapter_id": 68,
+                    "serial_number": "68",
+                    "arabic_name": "القلم",
+                    "translated_name": "Al-Qalam",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-52"
+                },
+                {
+                    "chapter_id": 69,
+                    "serial_number": "69",
+                    "arabic_name": "الحاقة",
+                    "translated_name": "Al-Haqqah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-52"
+                },
+                {
+                    "chapter_id": 70,
+                    "serial_number": "70",
+                    "arabic_name": "المعارج",
+                    "translated_name": "Al-Ma'arij",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-44"
+                },
+                {
+                    "chapter_id": 71,
+                    "serial_number": "71",
+                    "arabic_name": "نوح",
+                    "translated_name": "Nuh",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-28"
+                },
+                {
+                    "chapter_id": 72,
+                    "serial_number": "72",
+                    "arabic_name": "الجن",
+                    "translated_name": "Al-Jinn",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-28"
+                },
+                {
+                    "chapter_id": 73,
+                    "serial_number": "73",
+                    "arabic_name": "المزمل",
+                    "translated_name": "Al-Muzzammil",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-20"
+                },
+                {
+                    "chapter_id": 74,
+                    "serial_number": "74",
+                    "arabic_name": "المدثر",
+                    "translated_name": "Al-Muddaththir",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-56"
+                },
+                {
+                    "chapter_id": 75,
+                    "serial_number": "75",
+                    "arabic_name": "القيامة",
+                    "translated_name": "Al-Qiyamah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-40"
+                },
+                {
+                    "chapter_id": 76,
+                    "serial_number": "76",
+                    "arabic_name": "الانسان",
+                    "translated_name": "Al-Insan",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-31"
+                },
+                {
+                    "chapter_id": 77,
+                    "serial_number": "77",
+                    "arabic_name": "المرسلات",
+                    "translated_name": "Al-Mursalat",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-50"
+                }
+            ]
+        },
+        {
+            "juz_number": "30",
+            "juz_translate_name": "Juz",
+            "chapter_list": [
+                {
+                    "chapter_id": 78,
+                    "serial_number": "78",
+                    "arabic_name": "النبإ",
+                    "translated_name": "An-Naba",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-40"
+                },
+                {
+                    "chapter_id": 79,
+                    "serial_number": "79",
+                    "arabic_name": "النازعات",
+                    "translated_name": "An-Nazi'at",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-46"
+                },
+                {
+                    "chapter_id": 80,
+                    "serial_number": "80",
+                    "arabic_name": "عبس",
+                    "translated_name": "'Abasa",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-42"
+                },
+                {
+                    "chapter_id": 81,
+                    "serial_number": "81",
+                    "arabic_name": "التكوير",
+                    "translated_name": "At-Takwir",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-29"
+                },
+                {
+                    "chapter_id": 82,
+                    "serial_number": "82",
+                    "arabic_name": "الإنفطار",
+                    "translated_name": "Al-Infitar",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-19"
+                },
+                {
+                    "chapter_id": 83,
+                    "serial_number": "83",
+                    "arabic_name": "المطففين",
+                    "translated_name": "Al-Mutaffifin",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-36"
+                },
+                {
+                    "chapter_id": 84,
+                    "serial_number": "84",
+                    "arabic_name": "الإنشقاق",
+                    "translated_name": "Al-Inshiqaq",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-25"
+                },
+                {
+                    "chapter_id": 85,
+                    "serial_number": "85",
+                    "arabic_name": "البروج",
+                    "translated_name": "Al-Buruj",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-22"
+                },
+                {
+                    "chapter_id": 86,
+                    "serial_number": "86",
+                    "arabic_name": "الطارق",
+                    "translated_name": "At-Tariq",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-17"
+                },
+                {
+                    "chapter_id": 87,
+                    "serial_number": "87",
+                    "arabic_name": "الأعلى",
+                    "translated_name": "Al-A'la",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-19"
+                },
+                {
+                    "chapter_id": 88,
+                    "serial_number": "88",
+                    "arabic_name": "الغاشية",
+                    "translated_name": "Al-Ghashiyah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-26"
+                },
+                {
+                    "chapter_id": 89,
+                    "serial_number": "89",
+                    "arabic_name": "الفجر",
+                    "translated_name": "Al-Fajr",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-30"
+                },
+                {
+                    "chapter_id": 90,
+                    "serial_number": "90",
+                    "arabic_name": "البلد",
+                    "translated_name": "Al-Balad",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-20"
+                },
+                {
+                    "chapter_id": 91,
+                    "serial_number": "91",
+                    "arabic_name": "الشمس",
+                    "translated_name": "Ash-Shams",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-15"
+                },
+                {
+                    "chapter_id": 92,
+                    "serial_number": "92",
+                    "arabic_name": "الليل",
+                    "translated_name": "Al-Layl",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-21"
+                },
+                {
+                    "chapter_id": 93,
+                    "serial_number": "93",
+                    "arabic_name": "الضحى",
+                    "translated_name": "Ad-Duhaa",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-11"
+                },
+                {
+                    "chapter_id": 94,
+                    "serial_number": "94",
+                    "arabic_name": "الشرح",
+                    "translated_name": "Ash-Sharh",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-8"
+                },
+                {
+                    "chapter_id": 95,
+                    "serial_number": "95",
+                    "arabic_name": "التين",
+                    "translated_name": "At-Tin",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-8"
+                },
+                {
+                    "chapter_id": 96,
+                    "serial_number": "96",
+                    "arabic_name": "العلق",
+                    "translated_name": "Al-'Alaq",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-19"
+                },
+                {
+                    "chapter_id": 97,
+                    "serial_number": "97",
+                    "arabic_name": "القدر",
+                    "translated_name": "Al-Qadr",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-5"
+                },
+                {
+                    "chapter_id": 98,
+                    "serial_number": "98",
+                    "arabic_name": "البينة",
+                    "translated_name": "Al-Bayyinah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-8"
+                },
+                {
+                    "chapter_id": 99,
+                    "serial_number": "99",
+                    "arabic_name": "الزلزلة",
+                    "translated_name": "Az-Zalzalah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-8"
+                },
+                {
+                    "chapter_id": 100,
+                    "serial_number": "100",
+                    "arabic_name": "العاديات",
+                    "translated_name": "Al-'Adiyat",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-11"
+                },
+                {
+                    "chapter_id": 101,
+                    "serial_number": "101",
+                    "arabic_name": "القارعة",
+                    "translated_name": "Al-Qari'ah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-11"
+                },
+                {
+                    "chapter_id": 102,
+                    "serial_number": "102",
+                    "arabic_name": "التكاثر",
+                    "translated_name": "At-Takathur",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-8"
+                },
+                {
+                    "chapter_id": 103,
+                    "serial_number": "103",
+                    "arabic_name": "العصر",
+                    "translated_name": "Al-'Asr",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-3"
+                },
+                {
+                    "chapter_id": 104,
+                    "serial_number": "104",
+                    "arabic_name": "الهمزة",
+                    "translated_name": "Al-Humazah",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-9"
+                },
+                {
+                    "chapter_id": 105,
+                    "serial_number": "105",
+                    "arabic_name": "الفيل",
+                    "translated_name": "Al-Fil",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-5"
+                },
+                {
+                    "chapter_id": 106,
+                    "serial_number": "106",
+                    "arabic_name": "قريش",
+                    "translated_name": "Quraysh",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-4"
+                },
+                {
+                    "chapter_id": 107,
+                    "serial_number": "107",
+                    "arabic_name": "الماعون",
+                    "translated_name": "Al-Ma'un",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-7"
+                },
+                {
+                    "chapter_id": 108,
+                    "serial_number": "108",
+                    "arabic_name": "الكوثر",
+                    "translated_name": "Al-Kawthar",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-3"
+                },
+                {
+                    "chapter_id": 109,
+                    "serial_number": "109",
+                    "arabic_name": "الكافرون",
+                    "translated_name": "Al-Kafirun",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-6"
+                },
+                {
+                    "chapter_id": 110,
+                    "serial_number": "110",
+                    "arabic_name": "النصر",
+                    "translated_name": "An-Nasr",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-3"
+                },
+                {
+                    "chapter_id": 111,
+                    "serial_number": "111",
+                    "arabic_name": "المسد",
+                    "translated_name": "Al-Masad",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-5"
+                },
+                {
+                    "chapter_id": 112,
+                    "serial_number": "112",
+                    "arabic_name": "الإخلاص",
+                    "translated_name": "Al-Ikhlas",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-4"
+                },
+                {
+                    "chapter_id": 113,
+                    "serial_number": "113",
+                    "arabic_name": "الفلق",
+                    "translated_name": "Al-Falaq",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-5"
+                },
+                {
+                    "chapter_id": 114,
+                    "serial_number": "114",
+                    "arabic_name": "الناس",
+                    "translated_name": "An-Nas",
+                    "verses_translate_name": "Verses",
+                    "verse_number": "1-6"
+                }
+            ]
+        }
+    ]
+}

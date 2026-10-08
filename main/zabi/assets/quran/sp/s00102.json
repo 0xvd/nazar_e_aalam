@@ -1,0 +1,89 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 102,
+            "serial_number": "102",
+            "arabic_name": "التكاثر",
+            "translated_name": "At-Takathur",
+            "verses_translate_name": "versos",
+            "verses_count": "8"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 600,
+                "page_number": "600",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6169,
+                        "chapter_id": 102,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "أَلْهَىٰكُمُ ٱلتَّكَاثُرُ",
+                        "translated_name": "La rivalidad sin sentido por obtener mayores bienes materiales os mantendrá distraídos"
+                    },
+                    {
+                        "id": 6170,
+                        "chapter_id": 102,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "حَتَّىٰ زُرْتُمُ ٱلْمَقَابِرَ",
+                        "translated_name": "hasta que os llegue el momento de visitar las tumbas."
+                    },
+                    {
+                        "id": 6171,
+                        "chapter_id": 102,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "كَلَّا سَوْفَ تَعْلَمُونَ",
+                        "translated_name": "¡Pero no! ¡Pronto sabréis!"
+                    },
+                    {
+                        "id": 6172,
+                        "chapter_id": 102,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ",
+                        "translated_name": "Otra vez ¡No! ¡Pronto sabréis!"
+                    },
+                    {
+                        "id": 6173,
+                        "chapter_id": 102,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "كَلَّا لَوْ تَعْلَمُونَ عِلْمَ ٱلْيَقِينِ",
+                        "translated_name": "¡Pero no! ¡Si supieseis con certeza,"
+                    },
+                    {
+                        "id": 6174,
+                        "chapter_id": 102,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "لَتَرَوُنَّ ٱلْجَحِيمَ",
+                        "translated_name": "os juro que veríais el Fuego!"
+                    },
+                    {
+                        "id": 6175,
+                        "chapter_id": 102,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "ثُمَّ لَتَرَوُنَّهَا عَيْنَ ٱلْيَقِينِ",
+                        "translated_name": "Luego, os juro que lo veréis con certeza absoluta."
+                    },
+                    {
+                        "id": 6176,
+                        "chapter_id": 102,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "ثُمَّ لَتُسْـَٔلُنَّ يَوْمَئِذٍ عَنِ ٱلنَّعِيمِ",
+                        "translated_name": "Luego, os juro que, ese día, seréis preguntados por las bendiciones."
+                    }
+                ],
+                "page_arabic_ayah": "أَلْهَىٰكُمُ ٱلتَّكَاثُرُ (١)  حَتَّىٰ زُرْتُمُ ٱلْمَقَابِرَ (٢)  كَلَّا سَوْفَ تَعْلَمُونَ (٣)  ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ (٤)  كَلَّا لَوْ تَعْلَمُونَ عِلْمَ ٱلْيَقِينِ (٥)  لَتَرَوُنَّ ٱلْجَحِيمَ (٦)  ثُمَّ لَتَرَوُنَّهَا عَيْنَ ٱلْيَقِينِ (٧)  ثُمَّ لَتُسْـَٔلُنَّ يَوْمَئِذٍ عَنِ ٱلنَّعِيمِ (٨)",
+                "is_read": false
+            }
+        ]
+    }
+}

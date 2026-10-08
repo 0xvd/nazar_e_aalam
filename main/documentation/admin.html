@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/feature.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scss/style.css">
+    <link rel="shortcut icon" href="assets/image/favicon.ico">
+    <title>Zabi | Documentation</title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-aside" data-bs-offset="100" tabindex="0">
+<header class="doc-topbar">
+    <div class="d-flex align-items-center justify-content-between topbar-content">
+        <div>
+            <a href="index.html" class="d-block d-lg-none">
+                <img width="150" height="80" src="assets/image/zabi-logo-black.svg" class="img-fluid"
+                     alt="logo">
+            </a>
+        </div>
+        <div>
+            <a href="#" class="btn me-2 d-inline-block d-lg-none btn-toggle-sidenav">
+                <i class="feather-menu"></i>
+            </a>
+        </div>
+    </div>
+</header>
+<aside class="doc-sidebar">
+    <div class="navbar-primary">
+        <a href="index.html" class="d-inline-block">
+            <img width="150" height="80" src="assets/image/zabi-logo-black.svg" class="img-fluid"
+                 alt="logo">
+        </a>
+    </div>
+    <nav id="navbar-aside" class="navbar flex-column align-items-stretch">
+        <nav class="nav nav-pills flex-column navbar-aside">
+            <a class="nav-link" href="./index.html">Installer (Mobile App)</a>
+        </nav>
+    </nav>
+
+
+    <nav id="navbar-aside" class="navbar flex-column align-items-stretch">
+        <nav class="nav nav-pills flex-column navbar-aside">
+            <a class="nav-link" href="./installer.html">Installer (Web)</a>
+        </nav>
+    </nav>
+
+    <nav id="navbar-aside" class="navbar flex-column align-items-stretch">
+        <nav class="nav nav-pills flex-column navbar-aside">
+            <a class="nav-link active" href="./admin.html">Admin Panel Introduction</a>
+            <nav class="nav nav-pills flex-column submenu-nav">
+                <a class="nav-link" href="#dashboard">Dashboard</a>
+                <a class="nav-link" href="#prayer-times">Prayer Times</a>
+                <a class="nav-link" href="#audio-quran">Audio Quran</a>
+                <a class="nav-link" href="#dua">Dua</a>
+                <a class="nav-link" href="#dhikr">Dhikr</a>
+                <a class="nav-link" href="#sifat_name">Sifat Name</a>
+                <a class="nav-link" href="#haram_code">Haram Code</a>
+                <a class="nav-link" href="#roles">Roles</a>
+                <a class="nav-link" href="#users">Users</a>
+                <a class="nav-link" href="#settings">Settings</a>
+            </nav>
+        </nav>
+    </nav>
+
+</aside>
+<main>
+    <div class="doc-content-wrapper">
+        <section id="dashboard" class="section-padding">
+            <h1 class="doc-title mb-3">Dashboard</h1>
+
+            <ul class="mb-5">
+                <li>In first view you need to setup <b>Quran, Dua , Dhikr Arabic Name , Haram Code</b>.To make this
+                    happen please click on the red button and wait.I will take sometime.If you don't setup this you will
+                    not able to view these on <b>Mobile Apps</b>.
+                </li>
+                <li>View every application status on the dashboard to stay informed
+                    and up-to-date. You can also see the profile section, Country
+                    Analysis and Operating System Analysis also from the dashboard.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/dashboard_1.png" style="height: 320px" alt=""><br><br>
+                <img src="./assets/image/web/dashboard_2.png" style="height: 320px" alt="">
+            </div>
+        </section>
+
+        <section id="prayer-times" class="section-padding">
+            <h1 class="doc-title mb-3">Prayer Times</h1>
+
+            <ul class="mb-5">
+                <li>
+                    You can add prayer times and see the year-round prayer
+                    times on monthly wise.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/prayer_add.png" style="height: 320px" alt=""><br><br><br>
+            </div>
+
+            <ul class="mb-5">
+                <li>
+                    You can view prayer time month wise for current year from here.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/prayer_list.png" style="height: 320px" alt="">
+            </div>
+        </section>
+
+        <section id="audio-quran" class="section-padding">
+            <h1 class="doc-title mb-3">Audio Quran</h1>
+
+            <ul class="mb-5">
+                <li>
+                    From here you can manage the reciters available for Quran
+                    audio playback in the app. You can add, sort, edit and remove
+                    reciters.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/audio_reciter_list.png" style="height: 320px" alt=""><br><br>
+            </div>
+
+            <ul class="mb-5">
+                <li>
+                    Use <b>Bulk Audio Import</b> to upload every Surah recitation
+                    for a reciter in one go. Select the reciter, then drag & drop a
+                    single ZIP file containing the Surah MP3s (named <b>1.mp3</b>
+                    through <b>114.mp3</b>). Turn on <b>Replace existing audio</b>
+                    if you want the import to overwrite Surahs that reciter
+                    already has; leave it off to skip ones that already exist.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/bulk_audio_import.png" style="height: 320px" alt=""><br><br>
+            </div>
+        </section>
+
+        <section id="dua" class="section-padding">
+            <h1 class="doc-title mb-3">Dua</h1>
+
+            <ul class="mb-5">
+                <li>
+                    From here you can see dua list besides can add, sort, edit
+                    and remove dua very easily.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/dua_list.png" style="height: 320px" alt=""><br><br>
+            </div>
+        </section>
+
+        <section id="dhikr" class="section-padding">
+            <h1 class="doc-title mb-3">Dhikr</h1>
+            <ul class="mb-5">
+                <li>
+                    You can view dhikr list as well as can add, sort, edit and
+                    remove dhikr very easily from here.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/dhikr_list.png" style="height: 320px" alt=""><br><br>
+            </div>
+        </section>
+
+
+        <section id="sifat_name" class="section-padding">
+            <h1 class="doc-title mb-3">Sifat Name</h1>
+
+            <ul class="mb-5">
+                <li>
+                    From this section you can view the entire list of Allah’s Sifat
+                    names, meanings and the benefits of those names. You’re
+                    simply able to add and remove any name of Allah of your
+                    choice.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/sifat_list.png" style="height: 320px" alt=""><br><br>
+            </div>
+        </section>
+
+        <section id="haram_code" class="section-padding">
+            <h1 class="doc-title mb-3">Haram Code</h1>
+
+            <ul class="mb-5">
+                <li>
+                    In this section you’ll find the latest & updated haram code of
+                    various products from around the world. You can add more
+                    haram codes also.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/haram_list.png" style="height: 320px" alt=""><br><br>
+            </div>
+        </section>
+
+        <section id="roles" class="section-padding">
+            <h1 class="doc-title mb-3">Roles</h1>
+
+            <ul class="mb-5">
+                <li>
+                    In this section you can set the role of various persons. Like the
+                    role of managers and the other admin persons.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/add_role.png" style="height: 320px" alt=""><br><br>
+                <img src="./assets/image/web/role_list.png" style="height: 320px" alt=""><br><br>
+            </div>
+        </section>
+
+        <section id="users" class="section-padding">
+            <h1 class="doc-title mb-3">Users</h1>
+
+            <ul class="mb-5">
+                <li>
+                    Here you can add role wise user for your system.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/invite_user.png" style="height: 320px" alt=""><br><br>
+            </div>
+            <ul class="mb-5">
+                <li>
+                    Here you get the entire user list and their email addresses as
+                    well as their roles. You can invite new users also.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/user_list.png" style="height: 320px" alt=""><br><br>
+            </div>
+        </section>
+
+        <section id="settings" class="section-padding">
+            <h1 class="doc-title mb-3">Settings</h1>
+
+            <ul class="mb-5">
+                <li>
+                    You can consider this section as a control panel. From here
+                    you can view the current state and make changes the
+                    information of your business very quickly.
+                </li>
+                <li>You can change <b>Apps banner</b> by changing App Banner</li>
+                <li>You can <b>Haram & Zakat </b> information from here for the app</li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/general_settings.png" style="height: 320px" alt=""><br><br><br>
+            </div>
+            <ul class="mb-5">
+                <li>
+                    You can setup email credentials from here.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/email_setup.png" style="height: 320px" alt=""><br><br>
+            </div>
+            <ul class="mb-5 mt-3">
+                <li>
+                    You can setup update applications privacy policy , support policy , terms and condition from here.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/support.png" style="height: 320px" alt=""><br><br>
+            </div>
+            <ul class="mb-5 mt-3">
+                <li>
+                    From the <b>Home Screen</b> tab you can choose which home
+                    screen layout the mobile app shows to users &mdash; either the
+                    <b>Modern Dashboard</b> or the <b>Classic List</b> design.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/home_screen_settings.png" style="height: 320px" alt=""><br><br>
+            </div>
+        </section>
+
+    </div>
+
+</main>
+
+<div class="doc-sidebar-overlay"></div>
+
+<!-- Scripts -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+
+</html>

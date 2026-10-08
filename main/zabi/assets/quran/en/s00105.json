@@ -1,0 +1,67 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 105,
+            "serial_number": "105",
+            "arabic_name": "الفيل",
+            "translated_name": "Al-Fil",
+            "verses_translate_name": "Verses",
+            "verses_count": "5"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 601,
+                "page_number": "601",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6189,
+                        "chapter_id": 105,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَـٰبِ ٱلْفِيلِ",
+                        "translated_name": "HAVE YOU NOT seen how your Lord dealt with the people of the elephants?"
+                    },
+                    {
+                        "id": 6190,
+                        "chapter_id": 105,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "أَلَمْ يَجْعَلْ كَيْدَهُمْ فِى تَضْلِيلٍ",
+                        "translated_name": "Did He not make their plan go wrong,"
+                    },
+                    {
+                        "id": 6191,
+                        "chapter_id": 105,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ",
+                        "translated_name": "And sent hordes of chargers flying against them,"
+                    },
+                    {
+                        "id": 6192,
+                        "chapter_id": 105,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ",
+                        "translated_name": "(While) you were pelting them with stones of porphyritic lava,"
+                    },
+                    {
+                        "id": 6193,
+                        "chapter_id": 105,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍۭ",
+                        "translated_name": "And turned them into pastured fields of corn?"
+                    }
+                ],
+                "page_arabic_ayah": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَـٰبِ ٱلْفِيلِ (١)  أَلَمْ يَجْعَلْ كَيْدَهُمْ فِى تَضْلِيلٍ (٢)  وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ (٣)  تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ (٤)  فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍۭ (٥)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

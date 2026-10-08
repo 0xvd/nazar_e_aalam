@@ -1,0 +1,75 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 114,
+            "serial_number": "114",
+            "arabic_name": "الناس",
+            "translated_name": "An-Nas",
+            "verses_translate_name": "Verses",
+            "verses_count": "6"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 604,
+                "page_number": "604",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6231,
+                        "chapter_id": 114,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+                        "translated_name": "SAY: \"I SEEK refuge with the Lord of men,"
+                    },
+                    {
+                        "id": 6232,
+                        "chapter_id": 114,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "مَلِكِ ٱلنَّاسِ",
+                        "translated_name": "The King of men,"
+                    },
+                    {
+                        "id": 6233,
+                        "chapter_id": 114,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "إِلَـٰهِ ٱلنَّاسِ",
+                        "translated_name": "The God of men,"
+                    },
+                    {
+                        "id": 6234,
+                        "chapter_id": 114,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ",
+                        "translated_name": "From the evil of him who breathes temptations into the minds of men,"
+                    },
+                    {
+                        "id": 6235,
+                        "chapter_id": 114,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ",
+                        "translated_name": "Who suggests evil thoughts to the hearts of men --"
+                    },
+                    {
+                        "id": 6236,
+                        "chapter_id": 114,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ",
+                        "translated_name": "From among the jinns and men."
+                    }
+                ],
+                "page_arabic_ayah": "قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ (١)  مَلِكِ ٱلنَّاسِ (٢)  إِلَـٰهِ ٱلنَّاسِ (٣)  مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ (٤)  ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ (٥)  مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ (٦)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

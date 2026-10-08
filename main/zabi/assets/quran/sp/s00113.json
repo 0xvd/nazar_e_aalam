@@ -1,0 +1,65 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 113,
+            "serial_number": "113",
+            "arabic_name": "الفلق",
+            "translated_name": "Al-Falaq",
+            "verses_translate_name": "versos",
+            "verses_count": "5"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 604,
+                "page_number": "604",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6226,
+                        "chapter_id": 113,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ",
+                        "translated_name": "Di: «Me refugio en el Señor del alba"
+                    },
+                    {
+                        "id": 6227,
+                        "chapter_id": 113,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "مِن شَرِّ مَا خَلَقَ",
+                        "translated_name": "del mal de lo que Él ha creado"
+                    },
+                    {
+                        "id": 6228,
+                        "chapter_id": 113,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+                        "translated_name": "y del mal de la oscuridad de la noche cuando se extiende"
+                    },
+                    {
+                        "id": 6229,
+                        "chapter_id": 113,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "وَمِن شَرِّ ٱلنَّفَّـٰثَـٰتِ فِى ٱلْعُقَدِ",
+                        "translated_name": "y del mal de las sopladoras de nudos"
+                    },
+                    {
+                        "id": 6230,
+                        "chapter_id": 113,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+                        "translated_name": "y del mal del envidioso cuando envidia.»"
+                    }
+                ],
+                "page_arabic_ayah": "قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ (١)  مِن شَرِّ مَا خَلَقَ (٢)  وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ (٣)  وَمِن شَرِّ ٱلنَّفَّـٰثَـٰتِ فِى ٱلْعُقَدِ (٤)  وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ (٥)",
+                "is_read": false
+            }
+        ]
+    }
+}

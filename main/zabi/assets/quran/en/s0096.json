@@ -1,0 +1,179 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 96,
+            "serial_number": "96",
+            "arabic_name": "العلق",
+            "translated_name": "Al-'Alaq",
+            "verses_translate_name": "Verses",
+            "verses_count": "19"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 597,
+                "page_number": "597",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6107,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ",
+                        "translated_name": "READ IN THE name of your Lord who created,"
+                    },
+                    {
+                        "id": 6108,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "خَلَقَ ٱلْإِنسَـٰنَ مِنْ عَلَقٍ",
+                        "translated_name": "Created man from an embryo;"
+                    },
+                    {
+                        "id": 6109,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ",
+                        "translated_name": "Read, for your Lord is most beneficent,"
+                    },
+                    {
+                        "id": 6110,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "ٱلَّذِى عَلَّمَ بِٱلْقَلَمِ",
+                        "translated_name": "Who taught by the pen,"
+                    },
+                    {
+                        "id": 6111,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "عَلَّمَ ٱلْإِنسَـٰنَ مَا لَمْ يَعْلَمْ",
+                        "translated_name": "Taught man what he did not know."
+                    },
+                    {
+                        "id": 6112,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "كَلَّآ إِنَّ ٱلْإِنسَـٰنَ لَيَطْغَىٰٓ",
+                        "translated_name": "And yet, but yet man is rebellious,"
+                    },
+                    {
+                        "id": 6113,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "أَن رَّءَاهُ ٱسْتَغْنَىٰٓ",
+                        "translated_name": "For he thinks he is sufficient in himself."
+                    },
+                    {
+                        "id": 6114,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "إِنَّ إِلَىٰ رَبِّكَ ٱلرُّجْعَىٰٓ",
+                        "translated_name": "Surely your returning is to your Lord."
+                    },
+                    {
+                        "id": 6115,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "أَرَءَيْتَ ٱلَّذِى يَنْهَىٰ",
+                        "translated_name": "Have you seen him who restrains"
+                    },
+                    {
+                        "id": 6116,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "عَبْدًا إِذَا صَلَّىٰٓ",
+                        "translated_name": "A votary when he turns to his devotions?"
+                    },
+                    {
+                        "id": 6117,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "أَرَءَيْتَ إِن كَانَ عَلَى ٱلْهُدَىٰٓ",
+                        "translated_name": "Have you thought, if he had been on guidance"
+                    },
+                    {
+                        "id": 6118,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "أَوْ أَمَرَ بِٱلتَّقْوَىٰٓ",
+                        "translated_name": "Or had enjoined piety, (it would have been better)?"
+                    },
+                    {
+                        "id": 6119,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "أَرَءَيْتَ إِن كَذَّبَ وَتَوَلَّىٰٓ",
+                        "translated_name": "Have you thought that if he denies and turns away,"
+                    },
+                    {
+                        "id": 6120,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "أَلَمْ يَعْلَم بِأَنَّ ٱللَّهَ يَرَىٰ",
+                        "translated_name": "Does he not know that God sees?"
+                    },
+                    {
+                        "id": 6121,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "كَلَّا لَئِن لَّمْ يَنتَهِ لَنَسْفَعًۢا بِٱلنَّاصِيَةِ",
+                        "translated_name": "And yet indeed if he does not desist We shall drag him by the forelock,"
+                    },
+                    {
+                        "id": 6122,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "نَاصِيَةٍ كَـٰذِبَةٍ خَاطِئَةٍ",
+                        "translated_name": "By the lying, the sinful forelock."
+                    },
+                    {
+                        "id": 6123,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "فَلْيَدْعُ نَادِيَهُۥ",
+                        "translated_name": "So let him call his associates,"
+                    },
+                    {
+                        "id": 6124,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "سَنَدْعُ ٱلزَّبَانِيَةَ",
+                        "translated_name": "We shall call the guards of Hell."
+                    },
+                    {
+                        "id": 6125,
+                        "chapter_id": 96,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "كَلَّا لَا تُطِعْهُ وَٱسْجُدْ وَٱقْتَرِب ۩",
+                        "translated_name": "Beware! Do not obey him, but bow in adoration and draw near (to your Lord)."
+                    }
+                ],
+                "page_arabic_ayah": "ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ (١)  خَلَقَ ٱلْإِنسَـٰنَ مِنْ عَلَقٍ (٢)  ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ (٣)  ٱلَّذِى عَلَّمَ بِٱلْقَلَمِ (٤)  عَلَّمَ ٱلْإِنسَـٰنَ مَا لَمْ يَعْلَمْ (٥)  كَلَّآ إِنَّ ٱلْإِنسَـٰنَ لَيَطْغَىٰٓ (٦)  أَن رَّءَاهُ ٱسْتَغْنَىٰٓ (٧)  إِنَّ إِلَىٰ رَبِّكَ ٱلرُّجْعَىٰٓ (٨)  أَرَءَيْتَ ٱلَّذِى يَنْهَىٰ (٩)  عَبْدًا إِذَا صَلَّىٰٓ (١٠)  أَرَءَيْتَ إِن كَانَ عَلَى ٱلْهُدَىٰٓ (١١)  أَوْ أَمَرَ بِٱلتَّقْوَىٰٓ (١٢)  أَرَءَيْتَ إِن كَذَّبَ وَتَوَلَّىٰٓ (١٣)  أَلَمْ يَعْلَم بِأَنَّ ٱللَّهَ يَرَىٰ (١٤)  كَلَّا لَئِن لَّمْ يَنتَهِ لَنَسْفَعًۢا بِٱلنَّاصِيَةِ (١٥)  نَاصِيَةٍ كَـٰذِبَةٍ خَاطِئَةٍ (١٦)  فَلْيَدْعُ نَادِيَهُۥ (١٧)  سَنَدْعُ ٱلزَّبَانِيَةَ (١٨)  كَلَّا لَا تُطِعْهُ وَٱسْجُدْ وَٱقْتَرِب ۩ (١٩)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

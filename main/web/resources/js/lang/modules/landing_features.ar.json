@@ -1,0 +1,20 @@
+{
+    "landing_features": {
+        "title": "شبكة الميزات",
+        "subtitle": "إدارة بطاقات الميزات المعروضة في صفحتك الرئيسية",
+        "preview_page": "معاينة الصفحة",
+        "card_label": "الميزة {n}",
+        "save_all": "حفظ الكل",
+        "error_saving": "حدث خطأ أثناء الحفظ",
+        "form": {
+            "icon_label": "الأيقونة",
+            "title_label": "العنوان",
+            "title_placeholder": "أدخل عنوان الميزة",
+            "description_label": "الوصف",
+            "description_placeholder": "أدخل وصف الميزة",
+            "bullets_label": "النقاط",
+            "one_per_line": "نقطة واحدة في كل سطر",
+            "bullets_placeholder": "أدخل النقاط، نقطة واحدة في كل سطر"
+        }
+    }
+}

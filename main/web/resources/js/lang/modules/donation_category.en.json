@@ -1,0 +1,9 @@
+{
+    "donation_category": {
+        "title": "Category List",
+        "singular": "Category",
+        "form": {
+            "name_placeholder": "Enter name"
+        }
+    }
+}

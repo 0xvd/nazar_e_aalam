@@ -1,0 +1,65 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 105,
+            "serial_number": "105",
+            "arabic_name": "الفيل",
+            "translated_name": "Al-Fil",
+            "verses_translate_name": "versos",
+            "verses_count": "5"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 601,
+                "page_number": "601",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6189,
+                        "chapter_id": 105,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَـٰبِ ٱلْفِيلِ",
+                        "translated_name": "¿No has visto lo que hizo tu Señor con la gente del elefante?"
+                    },
+                    {
+                        "id": 6190,
+                        "chapter_id": 105,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "أَلَمْ يَجْعَلْ كَيْدَهُمْ فِى تَضْلِيلٍ",
+                        "translated_name": "¿No hizo que fracasasen sus planes"
+                    },
+                    {
+                        "id": 6191,
+                        "chapter_id": 105,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ",
+                        "translated_name": "y envió sobre ellos pájaros en bandadas sucesivas"
+                    },
+                    {
+                        "id": 6192,
+                        "chapter_id": 105,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ",
+                        "translated_name": "que les lanzaron piedras de barro,"
+                    },
+                    {
+                        "id": 6193,
+                        "chapter_id": 105,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍۭ",
+                        "translated_name": "que les dejaron como heno masticado?"
+                    }
+                ],
+                "page_arabic_ayah": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَـٰبِ ٱلْفِيلِ (١)  أَلَمْ يَجْعَلْ كَيْدَهُمْ فِى تَضْلِيلٍ (٢)  وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ (٣)  تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ (٤)  فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍۭ (٥)",
+                "is_read": false
+            }
+        ]
+    }
+}

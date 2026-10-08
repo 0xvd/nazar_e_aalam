@@ -1,0 +1,28 @@
+{
+    "landing_hero": {
+        "title": "Hero Section",
+        "subtitle": "Manage the hero section of your landing page",
+        "preview_page": "Preview Page",
+        "error_saving": "Error saving",
+        "section": {
+            "app_identity": "App Identity",
+            "headline": "Headline",
+            "download_links": "Download Links"
+        },
+        "form": {
+            "app_name_label": "App Name",
+            "app_name_placeholder": "Enter app name",
+            "badge_text_label": "Badge Text",
+            "badge_text_placeholder": "Enter badge text",
+            "hero_title_label": "Hero Title",
+            "hero_title_placeholder": "Enter hero title",
+            "hero_subtitle_label": "Hero Subtitle",
+            "hero_subtitle_placeholder": "Enter hero subtitle",
+            "highlighted_in_gold": "highlighted in gold",
+            "hero_description_label": "Hero Description",
+            "hero_description_placeholder": "Enter hero description",
+            "app_store_url_label": "App Store URL",
+            "play_store_url_label": "Play Store URL"
+        }
+    }
+}

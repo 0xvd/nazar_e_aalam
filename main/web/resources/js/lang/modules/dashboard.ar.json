@@ -1,0 +1,64 @@
+{
+    "dashboard": {
+        "welcome": {
+            "greeting": "مرحبًا بعودتك",
+            "managing_pre": "تتم إدارة",
+            "managing_post": "اليوم",
+            "fallback_pre": "مرحبًا بك في",
+            "fallback_post": "لوحة التحكم",
+            "panel_active": "اللوحة نشطة"
+        },
+        "alerts": {
+            "quran_setup_required": "إعداد القرآن مطلوب",
+            "quran_setup_text": "يرجى إكمال إعداد سور القرآن للمتابعة.",
+            "finish_setup": "إكمال الإعداد",
+            "transliteration_pending": "النقل الصوتي معلّق",
+            "transliteration_text": "قم بإعداد النقل الصوتي لسور القرآن.",
+            "complete": "إكمال"
+        },
+        "sections": {
+            "islamic_content_overview": "نظرة عامة على المحتوى الإسلامي",
+            "operations_finance": "العمليات والمالية",
+            "analytics": "التحليلات"
+        },
+        "stats": {
+            "max": "من {count}",
+            "total_surah": "إجمالي السور",
+            "total_dua": "إجمالي الأدعية",
+            "total_dhikr": "إجمالي الأذكار",
+            "allah_names": "أسماء الله",
+            "haram_codes": "رموز الحرام",
+            "total_users": "إجمالي المستخدمين",
+            "donations": "التبرعات",
+            "payment_methods": "طرق الدفع"
+        },
+        "charts": {
+            "country_title": "توزيع المستخدمين حسب الدولة",
+            "country_subtitle": "أماكن وجود مستخدمي تطبيقك",
+            "platform_title": "توزيع المنصات",
+            "platform_subtitle": "مستخدمو iOS مقابل Android"
+        },
+        "chat": {
+            "status_ready": "مساعد إسلامي · جاهز",
+            "status_error": "خطأ في المفتاح — تحقق من الإعدادات",
+            "status_connecting": "جارٍ الاتصال…",
+            "clear_conversation": "مسح المحادثة",
+            "close": "إغلاق",
+            "error_banner_pre": "تعذّر تحميل مفتاح Groq API من",
+            "error_banner_post": "تحقق من {key} في الإعدادات.",
+            "welcome_title": "السلام عليكم!",
+            "welcome_subtitle": "أنا نور، مساعدك الإسلامي الذكي. اسألني أي شيء عن القرآن أو الأدعية أو الأذكار أو لوحة التحكم.",
+            "suggestions": {
+                "fatiha": "ما هو موضوع سورة الفاتحة؟",
+                "add_dua": "كيف أضيف دعاءً جديدًا؟",
+                "names_of_allah": "اشرح أسماء الله الحسنى التسعة والتسعين",
+                "prayer_times": "كيف أدير مواقيت الصلاة؟",
+                "morning_dhikr": "أفضل ذكر للصباح؟",
+                "donations": "كيف أقوم بإعداد التبرعات؟"
+            },
+            "placeholder_ready": "اسأل عن القرآن أو الأدعية أو اللوحة…",
+            "placeholder_waiting": "في انتظار مفتاح API…",
+            "powered_by": "مدعوم من Groq · llama-3.3-70b-versatile"
+        }
+    }
+}

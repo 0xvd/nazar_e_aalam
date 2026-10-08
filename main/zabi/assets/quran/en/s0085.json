@@ -1,0 +1,203 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 85,
+            "serial_number": "85",
+            "arabic_name": "البروج",
+            "translated_name": "Al-Buruj",
+            "verses_translate_name": "Verses",
+            "verses_count": "22"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 590,
+                "page_number": "590",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5910,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "وَٱلسَّمَآءِ ذَاتِ ٱلْبُرُوجِ",
+                        "translated_name": "I CALL TO witness the sky (bespangled) with the signs of the Zodiac,"
+                    },
+                    {
+                        "id": 5911,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "وَٱلْيَوْمِ ٱلْمَوْعُودِ",
+                        "translated_name": "And the promised day,"
+                    },
+                    {
+                        "id": 5912,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "وَشَاهِدٍ وَمَشْهُودٍ",
+                        "translated_name": "And the witness and the witnessed,"
+                    },
+                    {
+                        "id": 5913,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "قُتِلَ أَصْحَـٰبُ ٱلْأُخْدُودِ",
+                        "translated_name": "That accursed are the men of the trench"
+                    },
+                    {
+                        "id": 5914,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "ٱلنَّارِ ذَاتِ ٱلْوَقُودِ",
+                        "translated_name": "Full of fire fed by faggots,"
+                    },
+                    {
+                        "id": 5915,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "إِذْ هُمْ عَلَيْهَا قُعُودٌ",
+                        "translated_name": "As they sat around it"
+                    },
+                    {
+                        "id": 5916,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "وَهُمْ عَلَىٰ مَا يَفْعَلُونَ بِٱلْمُؤْمِنِينَ شُهُودٌ",
+                        "translated_name": "Witnessing what they had done to the believers!"
+                    },
+                    {
+                        "id": 5917,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "وَمَا نَقَمُوا۟ مِنْهُمْ إِلَّآ أَن يُؤْمِنُوا۟ بِٱللَّهِ ٱلْعَزِيزِ ٱلْحَمِيدِ",
+                        "translated_name": "They had no other reason for hating them except that they believed in God the mighty, worthy of praise,"
+                    },
+                    {
+                        "id": 5918,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "ٱلَّذِى لَهُۥ مُلْكُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَٱللَّهُ عَلَىٰ كُلِّ شَىْءٍ شَهِيدٌ",
+                        "translated_name": "Whose kingdom spreads over the heavens and the earth. God is witness over everything."
+                    },
+                    {
+                        "id": 5919,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "إِنَّ ٱلَّذِينَ فَتَنُوا۟ ٱلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ ثُمَّ لَمْ يَتُوبُوا۟ فَلَهُمْ عَذَابُ جَهَنَّمَ وَلَهُمْ عَذَابُ ٱلْحَرِيقِ",
+                        "translated_name": "Surely for those who persecute believers, men and women, and do not repent afterwards, is the punishment of Hell, and the punishment of burning."
+                    },
+                    {
+                        "id": 5920,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ جَنَّـٰتٌ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ۚ ذَٰلِكَ ٱلْفَوْزُ ٱلْكَبِيرُ",
+                        "translated_name": "Surely for those who believe and do the right are gardens with rivers running by. That is the greatest success."
+                    },
+                    {
+                        "id": 5921,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "إِنَّ بَطْشَ رَبِّكَ لَشَدِيدٌ",
+                        "translated_name": "The grip of your Lord is severe indeed!"
+                    },
+                    {
+                        "id": 5922,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "إِنَّهُۥ هُوَ يُبْدِئُ وَيُعِيدُ",
+                        "translated_name": "It is verily He who initiates and repeats."
+                    },
+                    {
+                        "id": 5923,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "وَهُوَ ٱلْغَفُورُ ٱلْوَدُودُ",
+                        "translated_name": "He is the forgiving and the loving,"
+                    },
+                    {
+                        "id": 5924,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "ذُو ٱلْعَرْشِ ٱلْمَجِيدُ",
+                        "translated_name": "The Lord of the glorious Throne,"
+                    },
+                    {
+                        "id": 5925,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "فَعَّالٌ لِّمَا يُرِيدُ",
+                        "translated_name": "Who does as He pleases."
+                    },
+                    {
+                        "id": 5926,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "هَلْ أَتَىٰكَ حَدِيثُ ٱلْجُنُودِ",
+                        "translated_name": "Has the story of the hordes"
+                    },
+                    {
+                        "id": 5927,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "فِرْعَوْنَ وَثَمُودَ",
+                        "translated_name": "Of Pharaoh and Thamud come to you?"
+                    },
+                    {
+                        "id": 5928,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "بَلِ ٱلَّذِينَ كَفَرُوا۟ فِى تَكْذِيبٍ",
+                        "translated_name": "Yet the infidels persist in denial."
+                    },
+                    {
+                        "id": 5929,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "20",
+                        "arabic_name": "وَٱللَّهُ مِن وَرَآئِهِم مُّحِيطٌۢ",
+                        "translated_name": "But God surrounds them from all sides."
+                    },
+                    {
+                        "id": 5930,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "21",
+                        "arabic_name": "بَلْ هُوَ قُرْءَانٌ مَّجِيدٌ",
+                        "translated_name": "This is indeed the glorious Qur'an"
+                    },
+                    {
+                        "id": 5931,
+                        "chapter_id": 85,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "22",
+                        "arabic_name": "فِى لَوْحٍ مَّحْفُوظٍۭ",
+                        "translated_name": "(Preserved) on the guarded tablet."
+                    }
+                ],
+                "page_arabic_ayah": "وَٱلسَّمَآءِ ذَاتِ ٱلْبُرُوجِ (١)  وَٱلْيَوْمِ ٱلْمَوْعُودِ (٢)  وَشَاهِدٍ وَمَشْهُودٍ (٣)  قُتِلَ أَصْحَـٰبُ ٱلْأُخْدُودِ (٤)  ٱلنَّارِ ذَاتِ ٱلْوَقُودِ (٥)  إِذْ هُمْ عَلَيْهَا قُعُودٌ (٦)  وَهُمْ عَلَىٰ مَا يَفْعَلُونَ بِٱلْمُؤْمِنِينَ شُهُودٌ (٧)  وَمَا نَقَمُوا۟ مِنْهُمْ إِلَّآ أَن يُؤْمِنُوا۟ بِٱللَّهِ ٱلْعَزِيزِ ٱلْحَمِيدِ (٨)  ٱلَّذِى لَهُۥ مُلْكُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَٱللَّهُ عَلَىٰ كُلِّ شَىْءٍ شَهِيدٌ (٩)  إِنَّ ٱلَّذِينَ فَتَنُوا۟ ٱلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ ثُمَّ لَمْ يَتُوبُوا۟ فَلَهُمْ عَذَابُ جَهَنَّمَ وَلَهُمْ عَذَابُ ٱلْحَرِيقِ (١٠)  إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ جَنَّـٰتٌ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ۚ ذَٰلِكَ ٱلْفَوْزُ ٱلْكَبِيرُ (١١)  إِنَّ بَطْشَ رَبِّكَ لَشَدِيدٌ (١٢)  إِنَّهُۥ هُوَ يُبْدِئُ وَيُعِيدُ (١٣)  وَهُوَ ٱلْغَفُورُ ٱلْوَدُودُ (١٤)  ذُو ٱلْعَرْشِ ٱلْمَجِيدُ (١٥)  فَعَّالٌ لِّمَا يُرِيدُ (١٦)  هَلْ أَتَىٰكَ حَدِيثُ ٱلْجُنُودِ (١٧)  فِرْعَوْنَ وَثَمُودَ (١٨)  بَلِ ٱلَّذِينَ كَفَرُوا۟ فِى تَكْذِيبٍ (١٩)  وَٱللَّهُ مِن وَرَآئِهِم مُّحِيطٌۢ (٢٠)  بَلْ هُوَ قُرْءَانٌ مَّجِيدٌ (٢١)  فِى لَوْحٍ مَّحْفُوظٍۭ (٢٢)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

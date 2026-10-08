@@ -1,0 +1,53 @@
+{
+    "landing_sections": {
+        "title": "محتوى الأقسام",
+        "subtitle": "إدارة محتوى نص كل قسم من صفحتك الرئيسية",
+        "preview_page": "معاينة الصفحة",
+        "error_saving": "حدث خطأ أثناء الحفظ",
+        "section": {
+            "quran": "القرآن",
+            "prayer": "الصلاة",
+            "ai": "الذكاء الاصطناعي",
+            "dhikr": "الذكر",
+            "donation": "التبرع",
+            "ai_chat": "عرض المحادثة الذكية",
+            "name_gen": "مولّد الأسماء الإسلامية",
+            "tech": "المواصفات التقنية"
+        },
+        "form": {
+            "title_label": "العنوان",
+            "title_highlight_label": "العنوان المميز",
+            "green_colored_part": "الجزء الملون بالأخضر",
+            "gold_colored_part": "الجزء الملون بالذهبي",
+            "description_label": "الوصف",
+            "section_title_label": "عنوان القسم",
+            "quran_title_placeholder": "أدخل عنوان قسم القرآن",
+            "quran_title_highlight_placeholder": "أدخل الجزء المميز",
+            "quran_offline_note_label": "ملاحظة العمل بدون اتصال",
+            "quran_offline_note_placeholder": "أدخل ملاحظة تجربة العمل بدون اتصال",
+            "prayer_title_placeholder": "أدخل عنوان قسم الصلاة",
+            "prayer_title_highlight_placeholder": "أدخل الجزء المميز",
+            "ai_title_placeholder": "أدخل عنوان قسم الذكاء الاصطناعي",
+            "ai_chat_card_label": "بطاقة المحادثة الإسلامية الذكية",
+            "ai_name_card_label": "بطاقة مولّد الأسماء الإسلامية",
+            "dhikr_title_placeholder": "أدخل عنوان قسم الذكر",
+            "donation_title_placeholder": "أدخل عنوان قسم التبرع",
+            "donation_description_placeholder": "أدخل وصف قسم التبرع",
+            "donation_verse_arabic_label": "الآية القرآنية (عربي)",
+            "donation_verse_translation_label": "ترجمة الآية القرآنية",
+            "donation_why_label": "عناصر \"لماذا التبرع\"",
+            "donation_accepted_label_label": "نص \"وسائل الدفع المقبولة\"",
+            "donation_gateways_label": "بوابات الدفع المقبولة",
+            "ai_chat_badge_label": "نص الشارة",
+            "ai_chat_title_line1_label": "السطر الأول من العنوان",
+            "ai_chat_title_line2_label": "السطر الثاني من العنوان",
+            "ai_chat_features_label": "نقاط الميزات",
+            "ai_chat_try_label_label": "نص \"جرّب أن تسأل\"",
+            "ai_chat_suggestions_label": "اقتراحات الأسئلة السريعة",
+            "suggestion_label_label": "نص الاقتراح",
+            "suggestion_question_label": "السؤال المُرسل إلى الذكاء الاصطناعي",
+            "tech_subtitle_label": "العنوان الفرعي",
+            "tech_specs_label": "بطاقات المواصفات"
+        }
+    }
+}

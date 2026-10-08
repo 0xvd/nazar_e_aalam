@@ -1,0 +1,46 @@
+// Override Bootstrap Variables
+$primary  : #0E4DA4;
+$secondary: #3366FF;
+$info     : #046DFF;
+$success  : #14781E;
+$warning  : #FA541C;
+$danger   : #FF4842;
+$brand    : #00AAF0;
+$highlight : #af7450;
+
+
+$theme-colors: (
+  'primary'  :  $primary,
+  'secondary':  $secondary,
+  'success'  :  $success,
+  'info'     :  $info,
+  'warning'  :  $warning,
+  'danger'   :  $danger
+);
+
+
+$topbar-height: 80px;
+$sidebar-width: 265px;
+$border-radius: 8px;
+
+:root {
+  --white: #fff;
+  --muted-color: #a1a5b7;
+  --base-color: #fbfcff;
+  --sidebar-bg: #fff;
+  --card-shadow: 0px 0px 20px 0px rgba(76, 87, 125, 0.02);
+  --sidebar-shadow: 0 0 28px 0 rgba(82, 63, 105, 0.025);
+  --font-color: #4d4d4d;
+  --border-color: #e5e5e5;
+}
+
+[theme='dark'] {
+  --white: #1e1e2d;
+  --muted-color: #a1a5b7;
+  --base-color: #151521;
+  --sidebar-bg: #1e1e2d;
+  --card-shadow: none;
+  --sidebar-shadow: none;
+  --font-color: #cdcdde;
+  --border-color: #e5e5e5;
+}

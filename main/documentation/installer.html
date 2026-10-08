@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/feature.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/scss/style.css">
+    <link rel="shortcut icon" href="assets/image/favicon.ico">
+    <title>Zabi | Documentation</title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-aside" data-bs-offset="100" tabindex="0">
+<header class="doc-topbar">
+    <div class="d-flex align-items-center justify-content-between topbar-content">
+        <div>
+            <a href="index.html" class="d-block d-lg-none">
+                <img width="150" height="80" src="assets/image/zabi-logo-black.svg" class="img-fluid"
+                     alt="logo">
+            </a>
+        </div>
+        <div>
+            <a href="#" class="btn me-2 d-inline-block d-lg-none btn-toggle-sidenav">
+                <i class="feather-menu"></i>
+            </a>
+        </div>
+    </div>
+</header>
+<aside class="doc-sidebar">
+    <div class="navbar-primary">
+        <a href="index.html" class="d-inline-block">
+            <img width="150" height="80" src="assets/image/zabi-logo-black.svg" class="img-fluid"
+                 alt="logo">
+        </a>
+    </div>
+    <nav id="navbar-aside" class="navbar flex-column align-items-stretch">
+        <nav class="nav nav-pills flex-column navbar-aside">
+            <a class="nav-link" href="./index.html">Installer (Mobile App)</a>
+        </nav>
+    </nav>
+
+
+    <nav id="navbar-aside" class="navbar flex-column align-items-stretch">
+        <nav class="nav nav-pills flex-column navbar-aside">
+            <a class="nav-link active" href="./installer.html">Installer (Web)</a>
+            <nav class="nav nav-pills flex-column submenu-nav">
+                <a class="nav-link" href="#cpanel-database">cPanel Database Setup</a>
+                <a class="nav-link" href="#cron-job-setup">Cron Job Setup</a>
+                <a class="nav-link" href="#prerequisites">Server requirements</a>
+                <a class="nav-link" href="#purchase-code">Purchase code</a>
+                <a class="nav-link" href="#database-configuration">Database Configuration</a>
+                <a class="nav-link" href="#user-information">Admin User Information</a>
+                <a class="nav-link" href="#company-information">Company Information</a>
+                <a class="nav-link" href="#email-setup">Email Setup</a>
+            </nav>
+        </nav>
+    </nav>
+    <nav id="navbar-aside" class="navbar flex-column align-items-stretch">
+        <nav class="nav nav-pills flex-column navbar-aside">
+            <a class="nav-link" href="./admin.html">Admin Panel Introduction</a>
+        </nav>
+    </nav>
+</aside>
+<main>
+
+    <div class="doc-content-wrapper">
+        <section id="cpanel-database" class="section-padding">
+            <h1 class="doc-title mb-3">cPanel Database Setup</h1>
+            <p>Before running the installer, create a MySQL database and user in cPanel. Follow each step below.</p>
+
+            <h4><b>Step 1 — Create a Database</b></h4>
+            <p>Enter a name for your new database and click <b>Create Database</b>.</p>
+            <div>
+                <img src="./assets/image/web/installer/cpanel/create_db.png" class="img-fluid" alt="Create database"><br><br>
+            </div>
+
+            <h4><b>Step 2 — Create a Database User</b></h4>
+            <p>Scroll down to the <b>MySQL Users</b> section, enter a username and a strong password, then click <b>Create User</b>.</p>
+            <div>
+                <img src="./assets/image/web/installer/cpanel/create_user.png" class="img-fluid" alt="Create database user"><br><br>
+            </div>
+
+            <h4><b>Step 3 — Add User to Database</b></h4>
+            <p>In the <b>Add User To Database</b> section, select the user and the database you just created, then click <b>Add</b>.</p>
+            <div>
+                <img src="./assets/image/web/installer/cpanel/add_uers_to_db.png" class="img-fluid" alt="Add user to database"><br><br>
+            </div>
+
+            <h4><b>Step 4 — Set Database Permissions</b></h4>
+            <p>Grant <b>ALL PRIVILEGES</b> to the user on the selected database, then click <b>Make Changes</b>.</p>
+            <div>
+                <img src="./assets/image/web/installer/cpanel/db_permissions.png" class="img-fluid" alt="Database permissions"><br><br>
+            </div>
+
+            <h4><b>Step 5 — Confirm Database Selection</b></h4>
+            <p>Verify the database and user are correctly linked under the <b>Current Databases</b> table.</p>
+            <div>
+                <img src="./assets/image/web/installer/cpanel/select_db.png" class="img-fluid" alt="Select database"><br><br>
+            </div>
+        </section>
+
+        <section id="cron-job-setup" class="section-padding">
+            <h1 class="doc-title mb-3">Cron Job Setup</h1>
+            <p>
+                <b>Zabi</b> uses Laravel's queue system to process background jobs (such as the
+                <b>Bulk Audio Import</b>). Shared hosting doesn't keep a worker process running, so a
+                cron job is used to run the queue worker periodically. Set this up in cPanel under
+                <b>Advanced &gt; Cron Jobs</b>.
+            </p>
+
+            <h4><b>Step 1 — Add the Queue Worker Cron Job</b></h4>
+            <p>
+                Under <b>Common Settings</b>, choose <b>Every Minute (* * * * *)</b>, enter
+                the command below in the <b>Command</b> field — replacing the path with your own cPanel
+                username and domain — then click <b>Add New Cron Job</b>.
+            </p>
+            <p>
+                <code>/usr/local/bin/php /home/&lt;cpanel_username&gt;/&lt;yourdomain.com&gt;/artisan queue:work --stop-when-empty &gt;&gt; /dev/null 2&gt;&amp;1</code>
+            </p>
+
+            <h4><b>Step 2 — (Optional) Retry Failed Jobs</b></h4>
+            <p>
+                To automatically retry any failed queue jobs, add a second cron job on a longer
+                interval, for example once daily:
+            </p>
+            <p>
+                <code>/usr/local/bin/php /home/&lt;cpanel_username&gt;/&lt;yourdomain.com&gt;/artisan queue:retry all &gt;&gt; /dev/null 2&gt;&amp;1</code>
+            </p>
+
+            <ul class="mb-5">
+                <li>
+                    Once added, both jobs appear in the <b>Current Cron Jobs</b> table below the form,
+                    where you can edit or delete them at any time.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/installer/cpanel/cronjob.png" class="img-fluid" alt="cPanel cron job setup"><br><br>
+            </div>
+        </section>
+
+        <section id="prerequisites" class="section-padding">
+            <h1 class="doc-title mb-3">Requirements</h1>
+            <p>
+                <b>Zabi</b> Web is built using PHP 8.2 with Laravel 10 Framework, VUE 3, MySQL
+            </p>
+            <h4><b>Minimum Server Requirements</b></h4>
+            <p><b>PHP Version</b></p>
+            <p><b>Zabi</b> Web requires minimum required PHP version: >=8.2</p>
+            <p><b>MySQL</b></p>
+            <p>
+                <b>Zabi</b> Web requires minimum required MySQL version: >=5.7
+                <br>
+                Recommended MySQL version: >=5.7.
+                <br>
+                MariaDB Version >= 10.2+
+            </p>
+            <p><b>PHP Extensions</b></p>
+            <ul>
+                <li>Ctype PHP Extension </li>
+                <li>cURL PHP Extension </li>
+                <li>bcMath PHP Extension </li>
+                <li>JSON PHP Extension </li>
+                <li>DOM PHP Extension </li>
+                <li>Fileinfo PHP Extension </li>
+                <li>Filter PHP Extension </li>
+                <li>Mbstring PHP Extension </li>
+                <li>OpenSSL PHP Extension</li>
+                <li>Iconv PHP Extension </li>
+                <li>PDO PHP Extension</li>
+                <li>Pdo_mysql Extension</li>
+                <li>Session PHP Extension</li>
+                <li>Tokenizer PHP Extension</li>
+                <li>XML PHP Extension</li>
+                <li>Zip PHP Extension</li>
+            </ul>
+            <p><b>Our recommended shared web hosting provider is HostGator, Namecheap, DreamHost, Directadmin, Siteground, Plesk etc.</b></p>
+            <p><b>PHP Memory Limit</b></p>
+            <p>
+                max_execution_time = 6000
+                <br>
+                max_input_time = 3000
+                <br>
+                memory_limit = 128M
+                <br>
+                post_max_size = 128MB
+                <br>
+                upload_max_filesize = 128MB
+            </p>
+            <p><b>PHP Functions</b></p>
+            <p><b>Symlink must be required to generate a storage folder</b></p>
+            <p>If symlink() is disabled on your hosted server, you will not be able to change any files, images on the application.</p>
+            <p><b>Recommended PHP Functions</b></p>
+            <p>The PHP functions below are recommended but not required.</p>
+            <p>proc_opens</p>
+            <p>proc_close</p>
+            <p><b>File Permissions</b></p>
+            <ul>
+                <li>All folder permissions: 755</li>
+                <li>All file permissions: 644 </li>
+                <li>.env file permissions: 640 </li>
+            </ul>
+          <h4><b>Installation</b></h4>
+            <div>
+                <img src="./assets/image/web/installer/1.png" style="height: 600px;width: 700px" alt=""><br><br>
+            </div>
+        </section>
+        <section id="purchase-code" class="section-padding">
+            <h1 class="doc-title mb-3">Purchase Code</h1>
+            <ul class="mb-5">
+                <li>
+                    Please verify the correctness of your CodeCanyon purchase code before entering it here.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/installer/2.png" alt=""><br><br>
+            </div>
+        </section>
+        <section id="database-configuration" class="section-padding">
+            <h1 class="doc-title mb-3">Database Configuration</h1>
+            <ul class="mb-5">
+                <li>
+                    Validate the accuracy of the database port, host name, database name, user name, and password to guarantee precise settings.
+                </li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/installer/3.png"  style="width: 700px" alt=""><br><br>
+            </div>
+        </section>
+        <section id="user-information" class="section-padding">
+            <h1 class="doc-title mb-3">User Information</h1>
+            <ul class="mb-5">
+                <li>
+                    Kindly provide accurate user information in the capacity of an administrative user, where you will receive an email from the system to establish a password, along with specifying the first name and last name.</li>
+            </ul>
+            <div>
+                <img src="./assets/image/web/installer/4.png" alt=""><br><br>
+            </div>
+        </section>
+        <section id="company-information" class="section-padding">
+            <h1 class="doc-title mb-3">Company Information</h1>
+            <ul class="mb-5">
+                <li>
+                    Kindly provide here your company information here.
+            </ul>
+            <div>
+                <img src="./assets/image/web/installer/5.png" alt=""><br><br>
+            </div>
+        </section>
+        <section id="email-setup" class="section-padding">
+            <h1 class="doc-title mb-3">Email Configuration Setup</h1>
+            <ul class="mb-5">
+                <li>
+                    Kindly provide here your email configuration here and setup for email receiving / sending email.
+            </ul>
+            <div>
+                <img src="./assets/image/web/installer/6.png" alt=""><br>
+            </div>
+        </section>
+    </div>
+
+</main>
+
+<div class="doc-sidebar-overlay"></div>
+
+<!-- Scripts -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+
+</html>

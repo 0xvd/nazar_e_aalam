@@ -1,0 +1,676 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 55,
+            "serial_number": "55",
+            "arabic_name": "الرحمن",
+            "translated_name": "Ar-Rahman",
+            "verses_translate_name": "versos",
+            "verses_count": "78"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 531,
+                "page_number": "531",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 4902,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "ٱلرَّحْمَـٰنُ",
+                        "translated_name": "El Clementísimo"
+                    },
+                    {
+                        "id": 4903,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "عَلَّمَ ٱلْقُرْءَانَ",
+                        "translated_name": "ha enseñado el Corán,"
+                    },
+                    {
+                        "id": 4904,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "خَلَقَ ٱلْإِنسَـٰنَ",
+                        "translated_name": "ha creado al ser humano,"
+                    },
+                    {
+                        "id": 4905,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "عَلَّمَهُ ٱلْبَيَانَ",
+                        "translated_name": "le ha enseñado a hablar."
+                    },
+                    {
+                        "id": 4906,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "ٱلشَّمْسُ وَٱلْقَمَرُ بِحُسْبَانٍ",
+                        "translated_name": "El Sol y la Luna se mueven con precisión"
+                    },
+                    {
+                        "id": 4907,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "وَٱلنَّجْمُ وَٱلشَّجَرُ يَسْجُدَانِ",
+                        "translated_name": "y la hierba y el árbol se prosternan ante Él."
+                    },
+                    {
+                        "id": 4908,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "وَٱلسَّمَآءَ رَفَعَهَا وَوَضَعَ ٱلْمِيزَانَ",
+                        "translated_name": "Él ha elevado el cielo y ha establecido la balanza"
+                    },
+                    {
+                        "id": 4909,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "أَلَّا تَطْغَوْا۟ فِى ٱلْمِيزَانِ",
+                        "translated_name": "para que no engañéis al pesar."
+                    },
+                    {
+                        "id": 4910,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "وَأَقِيمُوا۟ ٱلْوَزْنَ بِٱلْقِسْطِ وَلَا تُخْسِرُوا۟ ٱلْمِيزَانَ",
+                        "translated_name": "¡Dad el peso justo y no deis de menos al pesar!"
+                    },
+                    {
+                        "id": 4911,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "وَٱلْأَرْضَ وَضَعَهَا لِلْأَنَامِ",
+                        "translated_name": "Y ha puesto la Tierra al servicio de los seres humanos."
+                    },
+                    {
+                        "id": 4912,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "فِيهَا فَـٰكِهَةٌ وَٱلنَّخْلُ ذَاتُ ٱلْأَكْمَامِ",
+                        "translated_name": "En ella hay frutas y palmeras datileras,"
+                    },
+                    {
+                        "id": 4913,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "وَٱلْحَبُّ ذُو ٱلْعَصْفِ وَٱلرَّيْحَانُ",
+                        "translated_name": "grano con vaina y arrayán."
+                    },
+                    {
+                        "id": 4914,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4915,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "خَلَقَ ٱلْإِنسَـٰنَ مِن صَلْصَـٰلٍ كَٱلْفَخَّارِ",
+                        "translated_name": "Él ha creado al ser humano de barro seco como la cerámica"
+                    },
+                    {
+                        "id": 4916,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "وَخَلَقَ ٱلْجَآنَّ مِن مَّارِجٍ مِّن نَّارٍ",
+                        "translated_name": "y ha creado a los genios de fuego puro, sin humo."
+                    },
+                    {
+                        "id": 4917,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "16",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    }
+                ],
+                "page_arabic_ayah": "ٱلرَّحْمَـٰنُ (١)  عَلَّمَ ٱلْقُرْءَانَ (٢)  خَلَقَ ٱلْإِنسَـٰنَ (٣)  عَلَّمَهُ ٱلْبَيَانَ (٤)  ٱلشَّمْسُ وَٱلْقَمَرُ بِحُسْبَانٍ (٥)  وَٱلنَّجْمُ وَٱلشَّجَرُ يَسْجُدَانِ (٦)  وَٱلسَّمَآءَ رَفَعَهَا وَوَضَعَ ٱلْمِيزَانَ (٧)  أَلَّا تَطْغَوْا۟ فِى ٱلْمِيزَانِ (٨)  وَأَقِيمُوا۟ ٱلْوَزْنَ بِٱلْقِسْطِ وَلَا تُخْسِرُوا۟ ٱلْمِيزَانَ (٩)  وَٱلْأَرْضَ وَضَعَهَا لِلْأَنَامِ (١٠)  فِيهَا فَـٰكِهَةٌ وَٱلنَّخْلُ ذَاتُ ٱلْأَكْمَامِ (١١)  وَٱلْحَبُّ ذُو ٱلْعَصْفِ وَٱلرَّيْحَانُ (١٢)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (١٣)  خَلَقَ ٱلْإِنسَـٰنَ مِن صَلْصَـٰلٍ كَٱلْفَخَّارِ (١٤)  وَخَلَقَ ٱلْجَآنَّ مِن مَّارِجٍ مِّن نَّارٍ (١٥)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (١٦)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 532,
+                "page_number": "532",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 4918,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "17",
+                        "arabic_name": "رَبُّ ٱلْمَشْرِقَيْنِ وَرَبُّ ٱلْمَغْرِبَيْنِ",
+                        "translated_name": "El Señor de los dos Orientes y el Señor de los dos Occidentes."
+                    },
+                    {
+                        "id": 4919,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "18",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4920,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "19",
+                        "arabic_name": "مَرَجَ ٱلْبَحْرَيْنِ يَلْتَقِيَانِ",
+                        "translated_name": "Él ha hecho fluir los dos mares que se juntan."
+                    },
+                    {
+                        "id": 4921,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "20",
+                        "arabic_name": "بَيْنَهُمَا بَرْزَخٌ لَّا يَبْغِيَانِ",
+                        "translated_name": "Entre ellos hay una barrera que no traspasan."
+                    },
+                    {
+                        "id": 4922,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "21",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4923,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "22",
+                        "arabic_name": "يَخْرُجُ مِنْهُمَا ٱللُّؤْلُؤُ وَٱلْمَرْجَانُ",
+                        "translated_name": "De ambos salen la perla y el coral."
+                    },
+                    {
+                        "id": 4924,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "23",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4925,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "24",
+                        "arabic_name": "وَلَهُ ٱلْجَوَارِ ٱلْمُنشَـَٔاتُ فِى ٱلْبَحْرِ كَٱلْأَعْلَـٰمِ",
+                        "translated_name": "A Él pertenecen las naves que hay en el mar como montañas."
+                    },
+                    {
+                        "id": 4926,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "25",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4927,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "26",
+                        "arabic_name": "كُلُّ مَنْ عَلَيْهَا فَانٍ",
+                        "translated_name": "Todo el que está en ella perecerá"
+                    },
+                    {
+                        "id": 4928,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "27",
+                        "arabic_name": "وَيَبْقَىٰ وَجْهُ رَبِّكَ ذُو ٱلْجَلَـٰلِ وَٱلْإِكْرَامِ",
+                        "translated_name": "y sólo permanecerá el rostro de tu Señor, Dueño y Señor de la Majestad y la Generosidad."
+                    },
+                    {
+                        "id": 4929,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "28",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4930,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "29",
+                        "arabic_name": "يَسْـَٔلُهُۥ مَن فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ كُلَّ يَوْمٍ هُوَ فِى شَأْنٍ",
+                        "translated_name": "A Él imploran quienes están en los cielos y la Tierra y Él cada día está ocupado en una nueva actividad."
+                    },
+                    {
+                        "id": 4931,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "30",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4932,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "31",
+                        "arabic_name": "سَنَفْرُغُ لَكُمْ أَيُّهَ ٱلثَّقَلَانِ",
+                        "translated_name": "Pronto nos ocuparemos de vosotros ¡Oh, los dos pesos!"
+                    },
+                    {
+                        "id": 4933,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "32",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4934,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "33",
+                        "arabic_name": "يَـٰمَعْشَرَ ٱلْجِنِّ وَٱلْإِنسِ إِنِ ٱسْتَطَعْتُمْ أَن تَنفُذُوا۟ مِنْ أَقْطَارِ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ فَٱنفُذُوا۟ ۚ لَا تَنفُذُونَ إِلَّا بِسُلْطَـٰنٍ",
+                        "translated_name": "¡Oh, asamblea de genios y humanos! Si podéis atravesar los confines de los cielos y la Tierra ¡Atravesadlos! No los atravesaréis sin una autoridad."
+                    },
+                    {
+                        "id": 4935,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "34",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4936,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "35",
+                        "arabic_name": "يُرْسَلُ عَلَيْكُمَا شُوَاظٌ مِّن نَّارٍ وَنُحَاسٌ فَلَا تَنتَصِرَانِ",
+                        "translated_name": "Se lanzará sobre vosotros dos una llamarada de fuego verde y humo del color del bronce y no podréis auxiliaros unos a otros."
+                    },
+                    {
+                        "id": 4937,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "36",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4938,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "37",
+                        "arabic_name": "فَإِذَا ٱنشَقَّتِ ٱلسَّمَآءُ فَكَانَتْ وَرْدَةً كَٱلدِّهَانِ",
+                        "translated_name": "Así pues, cuando se rasgue el cielo y sea como una piel de color rojo encendido"
+                    },
+                    {
+                        "id": 4939,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "38",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4940,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "39",
+                        "arabic_name": "فَيَوْمَئِذٍ لَّا يُسْـَٔلُ عَن ذَنۢبِهِۦٓ إِنسٌ وَلَا جَآنٌّ",
+                        "translated_name": "Ese día, ni los genios ni los humanos serán preguntados por sus pecados"
+                    },
+                    {
+                        "id": 4941,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "40",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    }
+                ],
+                "page_arabic_ayah": "رَبُّ ٱلْمَشْرِقَيْنِ وَرَبُّ ٱلْمَغْرِبَيْنِ (١٧)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (١٨)  مَرَجَ ٱلْبَحْرَيْنِ يَلْتَقِيَانِ (١٩)  بَيْنَهُمَا بَرْزَخٌ لَّا يَبْغِيَانِ (٢٠)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٢١)  يَخْرُجُ مِنْهُمَا ٱللُّؤْلُؤُ وَٱلْمَرْجَانُ (٢٢)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٢٣)  وَلَهُ ٱلْجَوَارِ ٱلْمُنشَـَٔاتُ فِى ٱلْبَحْرِ كَٱلْأَعْلَـٰمِ (٢٤)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٢٥)  كُلُّ مَنْ عَلَيْهَا فَانٍ (٢٦)  وَيَبْقَىٰ وَجْهُ رَبِّكَ ذُو ٱلْجَلَـٰلِ وَٱلْإِكْرَامِ (٢٧)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٢٨)  يَسْـَٔلُهُۥ مَن فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ كُلَّ يَوْمٍ هُوَ فِى شَأْنٍ (٢٩)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٣٠)  سَنَفْرُغُ لَكُمْ أَيُّهَ ٱلثَّقَلَانِ (٣١)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٣٢)  يَـٰمَعْشَرَ ٱلْجِنِّ وَٱلْإِنسِ إِنِ ٱسْتَطَعْتُمْ أَن تَنفُذُوا۟ مِنْ أَقْطَارِ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ فَٱنفُذُوا۟ ۚ لَا تَنفُذُونَ إِلَّا بِسُلْطَـٰنٍ (٣٣)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٣٤)  يُرْسَلُ عَلَيْكُمَا شُوَاظٌ مِّن نَّارٍ وَنُحَاسٌ فَلَا تَنتَصِرَانِ (٣٥)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٣٦)  فَإِذَا ٱنشَقَّتِ ٱلسَّمَآءُ فَكَانَتْ وَرْدَةً كَٱلدِّهَانِ (٣٧)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٣٨)  فَيَوْمَئِذٍ لَّا يُسْـَٔلُ عَن ذَنۢبِهِۦٓ إِنسٌ وَلَا جَآنٌّ (٣٩)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٤٠)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 533,
+                "page_number": "533",
+                "page_key": 2,
+                "page_verses": [
+                    {
+                        "id": 4942,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "41",
+                        "arabic_name": "يُعْرَفُ ٱلْمُجْرِمُونَ بِسِيمَـٰهُمْ فَيُؤْخَذُ بِٱلنَّوَٰصِى وَٱلْأَقْدَامِ",
+                        "translated_name": "Los malhechores serán reconocidos por sus rasgos y serán atrapados por los flequillos y los pies."
+                    },
+                    {
+                        "id": 4943,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "42",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4944,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "43",
+                        "arabic_name": "هَـٰذِهِۦ جَهَنَّمُ ٱلَّتِى يُكَذِّبُ بِهَا ٱلْمُجْرِمُونَ",
+                        "translated_name": "¡Ese es el Infierno que negaban los malhechores!"
+                    },
+                    {
+                        "id": 4945,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "44",
+                        "arabic_name": "يَطُوفُونَ بَيْنَهَا وَبَيْنَ حَمِيمٍ ءَانٍ",
+                        "translated_name": "Circularán entre él y un agua hirviente."
+                    },
+                    {
+                        "id": 4946,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "45",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4947,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "46",
+                        "arabic_name": "وَلِمَنْ خَافَ مَقَامَ رَبِّهِۦ جَنَّتَانِ",
+                        "translated_name": "Y para quien temió comparecer ante su Señor habrá dos Jardines"
+                    },
+                    {
+                        "id": 4948,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "47",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4949,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "48",
+                        "arabic_name": "ذَوَاتَآ أَفْنَانٍ",
+                        "translated_name": "Con frutas variadas."
+                    },
+                    {
+                        "id": 4950,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "49",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4951,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "50",
+                        "arabic_name": "فِيهِمَا عَيْنَانِ تَجْرِيَانِ",
+                        "translated_name": "En ambos habrá dos fuentes manando."
+                    },
+                    {
+                        "id": 4952,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "51",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4953,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "52",
+                        "arabic_name": "فِيهِمَا مِن كُلِّ فَـٰكِهَةٍ زَوْجَانِ",
+                        "translated_name": "En ambos habrá dos clases de cada fruta."
+                    },
+                    {
+                        "id": 4954,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "53",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4955,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "54",
+                        "arabic_name": "مُتَّكِـِٔينَ عَلَىٰ فُرُشٍۭ بَطَآئِنُهَا مِنْ إِسْتَبْرَقٍ ۚ وَجَنَى ٱلْجَنَّتَيْنِ دَانٍ",
+                        "translated_name": "Estarán reclinados en cojines tejidos de seda y la fruta madura de ambos Jardines estará al alcance de la mano."
+                    },
+                    {
+                        "id": 4956,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "55",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4957,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "56",
+                        "arabic_name": "فِيهِنَّ قَـٰصِرَٰتُ ٱلطَّرْفِ لَمْ يَطْمِثْهُنَّ إِنسٌ قَبْلَهُمْ وَلَا جَآنٌّ",
+                        "translated_name": "En ellos estarán las de mirada recatada, a las que ningún humano o genio habrá tocado antes de ellos,"
+                    },
+                    {
+                        "id": 4958,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "57",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4959,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "58",
+                        "arabic_name": "كَأَنَّهُنَّ ٱلْيَاقُوتُ وَٱلْمَرْجَانُ",
+                        "translated_name": "como si ellas fuesen rubíes y corales."
+                    },
+                    {
+                        "id": 4960,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "59",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4961,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "60",
+                        "arabic_name": "هَلْ جَزَآءُ ٱلْإِحْسَـٰنِ إِلَّا ٱلْإِحْسَـٰنُ",
+                        "translated_name": "¿Acaso la recompensa de hacer el bien es otra que el bien mismo?"
+                    },
+                    {
+                        "id": 4962,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "61",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4963,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "62",
+                        "arabic_name": "وَمِن دُونِهِمَا جَنَّتَانِ",
+                        "translated_name": "Y, aparte de esos dos, habrá otros dos Jardines"
+                    },
+                    {
+                        "id": 4964,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "63",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4965,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "64",
+                        "arabic_name": "مُدْهَآمَّتَانِ",
+                        "translated_name": "de color verde intenso."
+                    },
+                    {
+                        "id": 4966,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "65",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4967,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "66",
+                        "arabic_name": "فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ",
+                        "translated_name": "En ambos, [habrá] dos fuentes manando con fuerza."
+                    },
+                    {
+                        "id": 4968,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "67",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    }
+                ],
+                "page_arabic_ayah": "يُعْرَفُ ٱلْمُجْرِمُونَ بِسِيمَـٰهُمْ فَيُؤْخَذُ بِٱلنَّوَٰصِى وَٱلْأَقْدَامِ (٤١)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٤٢)  هَـٰذِهِۦ جَهَنَّمُ ٱلَّتِى يُكَذِّبُ بِهَا ٱلْمُجْرِمُونَ (٤٣)  يَطُوفُونَ بَيْنَهَا وَبَيْنَ حَمِيمٍ ءَانٍ (٤٤)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٤٥)  وَلِمَنْ خَافَ مَقَامَ رَبِّهِۦ جَنَّتَانِ (٤٦)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٤٧)  ذَوَاتَآ أَفْنَانٍ (٤٨)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٤٩)  فِيهِمَا عَيْنَانِ تَجْرِيَانِ (٥٠)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٥١)  فِيهِمَا مِن كُلِّ فَـٰكِهَةٍ زَوْجَانِ (٥٢)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٥٣)  مُتَّكِـِٔينَ عَلَىٰ فُرُشٍۭ بَطَآئِنُهَا مِنْ إِسْتَبْرَقٍ ۚ وَجَنَى ٱلْجَنَّتَيْنِ دَانٍ (٥٤)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٥٥)  فِيهِنَّ قَـٰصِرَٰتُ ٱلطَّرْفِ لَمْ يَطْمِثْهُنَّ إِنسٌ قَبْلَهُمْ وَلَا جَآنٌّ (٥٦)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٥٧)  كَأَنَّهُنَّ ٱلْيَاقُوتُ وَٱلْمَرْجَانُ (٥٨)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٥٩)  هَلْ جَزَآءُ ٱلْإِحْسَـٰنِ إِلَّا ٱلْإِحْسَـٰنُ (٦٠)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٦١)  وَمِن دُونِهِمَا جَنَّتَانِ (٦٢)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٦٣)  مُدْهَآمَّتَانِ (٦٤)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٦٥)  فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ (٦٦)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٦٧)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 534,
+                "page_number": "534",
+                "page_key": 3,
+                "page_verses": [
+                    {
+                        "id": 4969,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "68",
+                        "arabic_name": "فِيهِمَا فَـٰكِهَةٌ وَنَخْلٌ وَرُمَّانٌ",
+                        "translated_name": "En ambos, frutales y palmeras datileras y granados."
+                    },
+                    {
+                        "id": 4970,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "69",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4971,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "70",
+                        "arabic_name": "فِيهِنَّ خَيْرَٰتٌ حِسَانٌ",
+                        "translated_name": "En ellos, doncellas buenas y hermosas."
+                    },
+                    {
+                        "id": 4972,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "71",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4973,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "72",
+                        "arabic_name": "حُورٌ مَّقْصُورَٰتٌ فِى ٱلْخِيَامِ",
+                        "translated_name": "Huríes de grandes ojos en pabellones protegidos,"
+                    },
+                    {
+                        "id": 4974,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "73",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4975,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "74",
+                        "arabic_name": "لَمْ يَطْمِثْهُنَّ إِنسٌ قَبْلَهُمْ وَلَا جَآنٌّ",
+                        "translated_name": "a las que ningún humano o genio habrá tocado antes de ellos."
+                    },
+                    {
+                        "id": 4976,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "75",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4977,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "76",
+                        "arabic_name": "مُتَّكِـِٔينَ عَلَىٰ رَفْرَفٍ خُضْرٍ وَعَبْقَرِىٍّ حِسَانٍ",
+                        "translated_name": "Reclinados sobre cojines verdes y hermosas alfombras."
+                    },
+                    {
+                        "id": 4978,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "77",
+                        "arabic_name": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+                        "translated_name": "¿Cuál, pues, de las bendiciones de vuestro Señor negaréis?"
+                    },
+                    {
+                        "id": 4979,
+                        "chapter_id": 55,
+                        "verses_translate_name": "versos",
+                        "verses_number": "78",
+                        "arabic_name": "تَبَـٰرَكَ ٱسْمُ رَبِّكَ ذِى ٱلْجَلَـٰلِ وَٱلْإِكْرَامِ",
+                        "translated_name": "¡Bendito sea el nombre de tu Señor, Dueño y Señor de la Majestad y la Generosidad!"
+                    }
+                ],
+                "page_arabic_ayah": "فِيهِمَا فَـٰكِهَةٌ وَنَخْلٌ وَرُمَّانٌ (٦٨)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٦٩)  فِيهِنَّ خَيْرَٰتٌ حِسَانٌ (٧٠)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٧١)  حُورٌ مَّقْصُورَٰتٌ فِى ٱلْخِيَامِ (٧٢)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٧٣)  لَمْ يَطْمِثْهُنَّ إِنسٌ قَبْلَهُمْ وَلَا جَآنٌّ (٧٤)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٧٥)  مُتَّكِـِٔينَ عَلَىٰ رَفْرَفٍ خُضْرٍ وَعَبْقَرِىٍّ حِسَانٍ (٧٦)  فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ (٧٧)  تَبَـٰرَكَ ٱسْمُ رَبِّكَ ذِى ٱلْجَلَـٰلِ وَٱلْإِكْرَامِ (٧٨)",
+                "is_read": false
+            }
+        ]
+    }
+}

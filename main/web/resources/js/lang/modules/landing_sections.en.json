@@ -1,0 +1,53 @@
+{
+    "landing_sections": {
+        "title": "Section Content",
+        "subtitle": "Manage the text content of each landing page section",
+        "preview_page": "Preview Page",
+        "error_saving": "Error saving",
+        "section": {
+            "quran": "Quran",
+            "prayer": "Prayer",
+            "ai": "AI",
+            "dhikr": "Dhikr",
+            "donation": "Donation",
+            "ai_chat": "AI Chat Demo",
+            "name_gen": "Islamic Name Generator",
+            "tech": "Tech Specs"
+        },
+        "form": {
+            "title_label": "Title",
+            "title_highlight_label": "Title Highlight",
+            "green_colored_part": "green colored part",
+            "gold_colored_part": "gold colored part",
+            "description_label": "Description",
+            "section_title_label": "Section Title",
+            "quran_title_placeholder": "Enter Quran section title",
+            "quran_title_highlight_placeholder": "Enter highlighted part",
+            "quran_offline_note_label": "Offline Note",
+            "quran_offline_note_placeholder": "Enter offline experience note",
+            "prayer_title_placeholder": "Enter prayer section title",
+            "prayer_title_highlight_placeholder": "Enter highlighted part",
+            "ai_title_placeholder": "Enter AI section title",
+            "ai_chat_card_label": "AI Islamic Chat Card",
+            "ai_name_card_label": "Islamic Name Generator Card",
+            "dhikr_title_placeholder": "Enter Dhikr section title",
+            "donation_title_placeholder": "Enter donation section title",
+            "donation_description_placeholder": "Enter donation section description",
+            "donation_verse_arabic_label": "Quran Verse (Arabic)",
+            "donation_verse_translation_label": "Quran Verse Translation",
+            "donation_why_label": "Why Donate Items",
+            "donation_accepted_label_label": "\"Accepted Via\" Label",
+            "donation_gateways_label": "Accepted Gateways",
+            "ai_chat_badge_label": "Badge Text",
+            "ai_chat_title_line1_label": "Title Line 1",
+            "ai_chat_title_line2_label": "Title Line 2",
+            "ai_chat_features_label": "Feature Bullets",
+            "ai_chat_try_label_label": "\"Try Asking\" Label",
+            "ai_chat_suggestions_label": "Quick Question Suggestions",
+            "suggestion_label_label": "Chip Label",
+            "suggestion_question_label": "Question Sent to AI",
+            "tech_subtitle_label": "Subtitle",
+            "tech_specs_label": "Spec Cards"
+        }
+    }
+}

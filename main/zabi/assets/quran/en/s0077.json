@@ -1,0 +1,436 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 77,
+            "serial_number": "77",
+            "arabic_name": "المرسلات",
+            "translated_name": "Al-Mursalat",
+            "verses_translate_name": "Verses",
+            "verses_count": "50"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 580,
+                "page_number": "580",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5623,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "وَٱلْمُرْسَلَـٰتِ عُرْفًا",
+                        "translated_name": "I CALL TO WITNESS those who are sent consecutively,"
+                    },
+                    {
+                        "id": 5624,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "فَٱلْعَـٰصِفَـٰتِ عَصْفًا",
+                        "translated_name": "And those that strike violently,"
+                    },
+                    {
+                        "id": 5625,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "وَٱلنَّـٰشِرَٰتِ نَشْرًا",
+                        "translated_name": "And those that revive by quickening,"
+                    },
+                    {
+                        "id": 5626,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "فَٱلْفَـٰرِقَـٰتِ فَرْقًا",
+                        "translated_name": "And those that distinguish distinctly,"
+                    },
+                    {
+                        "id": 5627,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "فَٱلْمُلْقِيَـٰتِ ذِكْرًا",
+                        "translated_name": "And those that bring down the Reminder"
+                    },
+                    {
+                        "id": 5628,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "عُذْرًا أَوْ نُذْرًا",
+                        "translated_name": "To end all argument or to warn."
+                    },
+                    {
+                        "id": 5629,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "إِنَّمَا تُوعَدُونَ لَوَٰقِعٌ",
+                        "translated_name": "What is promised will surely come to pass."
+                    },
+                    {
+                        "id": 5630,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "فَإِذَا ٱلنُّجُومُ طُمِسَتْ",
+                        "translated_name": "When the stars are obliterated,"
+                    },
+                    {
+                        "id": 5631,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "وَإِذَا ٱلسَّمَآءُ فُرِجَتْ",
+                        "translated_name": "The heavens split asunder,"
+                    },
+                    {
+                        "id": 5632,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "وَإِذَا ٱلْجِبَالُ نُسِفَتْ",
+                        "translated_name": "The mountains reduced to dust and blown away,"
+                    },
+                    {
+                        "id": 5633,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "وَإِذَا ٱلرُّسُلُ أُقِّتَتْ",
+                        "translated_name": "And when the time comes for raising the little girls (buried alive) --"
+                    },
+                    {
+                        "id": 5634,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "لِأَىِّ يَوْمٍ أُجِّلَتْ",
+                        "translated_name": "For what day is that time fixed?"
+                    },
+                    {
+                        "id": 5635,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "لِيَوْمِ ٱلْفَصْلِ",
+                        "translated_name": "The Day of Judgement."
+                    },
+                    {
+                        "id": 5636,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "وَمَآ أَدْرَىٰكَ مَا يَوْمُ ٱلْفَصْلِ",
+                        "translated_name": "How will you comprehend what the Day of Judgement is?"
+                    },
+                    {
+                        "id": 5637,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "Alas the woe that day for those who deny!"
+                    },
+                    {
+                        "id": 5638,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "أَلَمْ نُهْلِكِ ٱلْأَوَّلِينَ",
+                        "translated_name": "Have We not destroyed the earlier generations?"
+                    },
+                    {
+                        "id": 5639,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "ثُمَّ نُتْبِعُهُمُ ٱلْـَٔاخِرِينَ",
+                        "translated_name": "So shall We make the later ones to follow them."
+                    },
+                    {
+                        "id": 5640,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "كَذَٰلِكَ نَفْعَلُ بِٱلْمُجْرِمِينَ",
+                        "translated_name": "That is what We shall do to those who are guilty of crime."
+                    },
+                    {
+                        "id": 5641,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "Alas the woe that day for those who deny!"
+                    }
+                ],
+                "page_arabic_ayah": "وَٱلْمُرْسَلَـٰتِ عُرْفًا (١)  فَٱلْعَـٰصِفَـٰتِ عَصْفًا (٢)  وَٱلنَّـٰشِرَٰتِ نَشْرًا (٣)  فَٱلْفَـٰرِقَـٰتِ فَرْقًا (٤)  فَٱلْمُلْقِيَـٰتِ ذِكْرًا (٥)  عُذْرًا أَوْ نُذْرًا (٦)  إِنَّمَا تُوعَدُونَ لَوَٰقِعٌ (٧)  فَإِذَا ٱلنُّجُومُ طُمِسَتْ (٨)  وَإِذَا ٱلسَّمَآءُ فُرِجَتْ (٩)  وَإِذَا ٱلْجِبَالُ نُسِفَتْ (١٠)  وَإِذَا ٱلرُّسُلُ أُقِّتَتْ (١١)  لِأَىِّ يَوْمٍ أُجِّلَتْ (١٢)  لِيَوْمِ ٱلْفَصْلِ (١٣)  وَمَآ أَدْرَىٰكَ مَا يَوْمُ ٱلْفَصْلِ (١٤)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (١٥)  أَلَمْ نُهْلِكِ ٱلْأَوَّلِينَ (١٦)  ثُمَّ نُتْبِعُهُمُ ٱلْـَٔاخِرِينَ (١٧)  كَذَٰلِكَ نَفْعَلُ بِٱلْمُجْرِمِينَ (١٨)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (١٩)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 581,
+                "page_number": "581",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 5642,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "20",
+                        "arabic_name": "أَلَمْ نَخْلُقكُّم مِّن مَّآءٍ مَّهِينٍ",
+                        "translated_name": "Did We not create you from contemptible water?"
+                    },
+                    {
+                        "id": 5643,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "21",
+                        "arabic_name": "فَجَعَلْنَـٰهُ فِى قَرَارٍ مَّكِينٍ",
+                        "translated_name": "Then We lodged you in a secure place (the womb)"
+                    },
+                    {
+                        "id": 5644,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "22",
+                        "arabic_name": "إِلَىٰ قَدَرٍ مَّعْلُومٍ",
+                        "translated_name": "For a certain appointed time,"
+                    },
+                    {
+                        "id": 5645,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "23",
+                        "arabic_name": "فَقَدَرْنَا فَنِعْمَ ٱلْقَـٰدِرُونَ",
+                        "translated_name": "Then We facilitated (your birth). How well do We calculate!"
+                    },
+                    {
+                        "id": 5646,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "24",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "Alas the woe that day for those who deny!"
+                    },
+                    {
+                        "id": 5647,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "25",
+                        "arabic_name": "أَلَمْ نَجْعَلِ ٱلْأَرْضَ كِفَاتًا",
+                        "translated_name": "Have We not made the earth a repository"
+                    },
+                    {
+                        "id": 5648,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "26",
+                        "arabic_name": "أَحْيَآءً وَأَمْوَٰتًا",
+                        "translated_name": "For the living and the dead,"
+                    },
+                    {
+                        "id": 5649,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "27",
+                        "arabic_name": "وَجَعَلْنَا فِيهَا رَوَٰسِىَ شَـٰمِخَـٰتٍ وَأَسْقَيْنَـٰكُم مَّآءً فُرَاتًا",
+                        "translated_name": "And placed in it lofty and broad stablisers, and gave you sweet water to drink?"
+                    },
+                    {
+                        "id": 5650,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "28",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "Alas the woe that day for those who deny!"
+                    },
+                    {
+                        "id": 5651,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "29",
+                        "arabic_name": "ٱنطَلِقُوٓا۟ إِلَىٰ مَا كُنتُم بِهِۦ تُكَذِّبُونَ",
+                        "translated_name": "\"Go to what you used to deny;"
+                    },
+                    {
+                        "id": 5652,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "30",
+                        "arabic_name": "ٱنطَلِقُوٓا۟ إِلَىٰ ظِلٍّ ذِى ثَلَـٰثِ شُعَبٍ",
+                        "translated_name": "Go to the shadow with three ramifications,"
+                    },
+                    {
+                        "id": 5653,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "31",
+                        "arabic_name": "لَّا ظَلِيلٍ وَلَا يُغْنِى مِنَ ٱللَّهَبِ",
+                        "translated_name": "Neither shady nor protecting against the blazing Fire."
+                    },
+                    {
+                        "id": 5654,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "32",
+                        "arabic_name": "إِنَّهَا تَرْمِى بِشَرَرٍ كَٱلْقَصْرِ",
+                        "translated_name": "It will throw out sparks as logs of wood"
+                    },
+                    {
+                        "id": 5655,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "33",
+                        "arabic_name": "كَأَنَّهُۥ جِمَـٰلَتٌ صُفْرٌ",
+                        "translated_name": "So like golden camels.\""
+                    },
+                    {
+                        "id": 5656,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "34",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "Alas the woe that day for those who deny!"
+                    },
+                    {
+                        "id": 5657,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "35",
+                        "arabic_name": "هَـٰذَا يَوْمُ لَا يَنطِقُونَ",
+                        "translated_name": "They will not be able to speak that day,"
+                    },
+                    {
+                        "id": 5658,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "36",
+                        "arabic_name": "وَلَا يُؤْذَنُ لَهُمْ فَيَعْتَذِرُونَ",
+                        "translated_name": "Nor given leave to make excuses."
+                    },
+                    {
+                        "id": 5659,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "37",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "Alas the woe that day for those who deny!"
+                    },
+                    {
+                        "id": 5660,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "38",
+                        "arabic_name": "هَـٰذَا يَوْمُ ٱلْفَصْلِ ۖ جَمَعْنَـٰكُمْ وَٱلْأَوَّلِينَ",
+                        "translated_name": "That will be the Day of Reckoning. Gathered will be (you) and the earlier (generations)."
+                    },
+                    {
+                        "id": 5661,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "39",
+                        "arabic_name": "فَإِن كَانَ لَكُمْ كَيْدٌ فَكِيدُونِ",
+                        "translated_name": "So if you have any plot to devise against Me, then devise it."
+                    },
+                    {
+                        "id": 5662,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "40",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "Alas the woe that day for those who deny!"
+                    },
+                    {
+                        "id": 5663,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "41",
+                        "arabic_name": "إِنَّ ٱلْمُتَّقِينَ فِى ظِلَـٰلٍ وَعُيُونٍ",
+                        "translated_name": "Those who take heed for themselves and fear God, will be amidst shade and springs of water,"
+                    },
+                    {
+                        "id": 5664,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "42",
+                        "arabic_name": "وَفَوَٰكِهَ مِمَّا يَشْتَهُونَ",
+                        "translated_name": "And such fruits as they desire."
+                    },
+                    {
+                        "id": 5665,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "43",
+                        "arabic_name": "كُلُوا۟ وَٱشْرَبُوا۟ هَنِيٓـًٔۢا بِمَا كُنتُمْ تَعْمَلُونَ",
+                        "translated_name": "\"Eat and drink with relish as reward for what you had done.\""
+                    },
+                    {
+                        "id": 5666,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "44",
+                        "arabic_name": "إِنَّا كَذَٰلِكَ نَجْزِى ٱلْمُحْسِنِينَ",
+                        "translated_name": "That is how We reward the good."
+                    },
+                    {
+                        "id": 5667,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "45",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "Alas the woe that day for those who deny!"
+                    },
+                    {
+                        "id": 5668,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "46",
+                        "arabic_name": "كُلُوا۟ وَتَمَتَّعُوا۟ قَلِيلًا إِنَّكُم مُّجْرِمُونَ",
+                        "translated_name": "Eat and enjoy for a while: You are certainly sinners."
+                    },
+                    {
+                        "id": 5669,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "47",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "Alas the woe that day for those who deny!"
+                    },
+                    {
+                        "id": 5670,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "48",
+                        "arabic_name": "وَإِذَا قِيلَ لَهُمُ ٱرْكَعُوا۟ لَا يَرْكَعُونَ",
+                        "translated_name": "When it is said to them: \"Bow in homage,\" they do not bow."
+                    },
+                    {
+                        "id": 5671,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "49",
+                        "arabic_name": "وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ",
+                        "translated_name": "Alas the woe that day for those who deny!"
+                    },
+                    {
+                        "id": 5672,
+                        "chapter_id": 77,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "50",
+                        "arabic_name": "فَبِأَىِّ حَدِيثٍۭ بَعْدَهُۥ يُؤْمِنُونَ",
+                        "translated_name": "In what other lore after this will they then believe?"
+                    }
+                ],
+                "page_arabic_ayah": "أَلَمْ نَخْلُقكُّم مِّن مَّآءٍ مَّهِينٍ (٢٠)  فَجَعَلْنَـٰهُ فِى قَرَارٍ مَّكِينٍ (٢١)  إِلَىٰ قَدَرٍ مَّعْلُومٍ (٢٢)  فَقَدَرْنَا فَنِعْمَ ٱلْقَـٰدِرُونَ (٢٣)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٢٤)  أَلَمْ نَجْعَلِ ٱلْأَرْضَ كِفَاتًا (٢٥)  أَحْيَآءً وَأَمْوَٰتًا (٢٦)  وَجَعَلْنَا فِيهَا رَوَٰسِىَ شَـٰمِخَـٰتٍ وَأَسْقَيْنَـٰكُم مَّآءً فُرَاتًا (٢٧)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٢٨)  ٱنطَلِقُوٓا۟ إِلَىٰ مَا كُنتُم بِهِۦ تُكَذِّبُونَ (٢٩)  ٱنطَلِقُوٓا۟ إِلَىٰ ظِلٍّ ذِى ثَلَـٰثِ شُعَبٍ (٣٠)  لَّا ظَلِيلٍ وَلَا يُغْنِى مِنَ ٱللَّهَبِ (٣١)  إِنَّهَا تَرْمِى بِشَرَرٍ كَٱلْقَصْرِ (٣٢)  كَأَنَّهُۥ جِمَـٰلَتٌ صُفْرٌ (٣٣)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٣٤)  هَـٰذَا يَوْمُ لَا يَنطِقُونَ (٣٥)  وَلَا يُؤْذَنُ لَهُمْ فَيَعْتَذِرُونَ (٣٦)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٣٧)  هَـٰذَا يَوْمُ ٱلْفَصْلِ ۖ جَمَعْنَـٰكُمْ وَٱلْأَوَّلِينَ (٣٨)  فَإِن كَانَ لَكُمْ كَيْدٌ فَكِيدُونِ (٣٩)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٤٠)  إِنَّ ٱلْمُتَّقِينَ فِى ظِلَـٰلٍ وَعُيُونٍ (٤١)  وَفَوَٰكِهَ مِمَّا يَشْتَهُونَ (٤٢)  كُلُوا۟ وَٱشْرَبُوا۟ هَنِيٓـًٔۢا بِمَا كُنتُمْ تَعْمَلُونَ (٤٣)  إِنَّا كَذَٰلِكَ نَجْزِى ٱلْمُحْسِنِينَ (٤٤)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٤٥)  كُلُوا۟ وَتَمَتَّعُوا۟ قَلِيلًا إِنَّكُم مُّجْرِمُونَ (٤٦)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٤٧)  وَإِذَا قِيلَ لَهُمُ ٱرْكَعُوا۟ لَا يَرْكَعُونَ (٤٨)  وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ (٤٩)  فَبِأَىِّ حَدِيثٍۭ بَعْدَهُۥ يُؤْمِنُونَ (٥٠)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

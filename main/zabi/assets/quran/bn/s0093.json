@@ -1,0 +1,113 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 93,
+            "serial_number": "৯৩",
+            "arabic_name": "الضحى",
+            "translated_name": "আদ্ব-দ্বোহা",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "১১"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 596,
+                "page_number": "596",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6080,
+                        "chapter_id": 93,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "وَٱلضُّحَىٰ",
+                        "translated_name": "ভাবো পূর্বাহ্নের সূর্যকিরণের কথা;"
+                    },
+                    {
+                        "id": 6081,
+                        "chapter_id": 93,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "وَٱلَّيْلِ إِذَا سَجَىٰ",
+                        "translated_name": "আর রাত্রির কথা যখন তা অন্ধকার ছড়িয়ে দেয়।"
+                    },
+                    {
+                        "id": 6082,
+                        "chapter_id": 93,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+                        "translated_name": "তোমার প্রভু তোমাকে পরিত্যাগ করেন নি, এবং তিনি অসন্তষ্টও নন।"
+                    },
+                    {
+                        "id": 6083,
+                        "chapter_id": 93,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "4",
+                        "arabic_name": "وَلَلْـَٔاخِرَةُ خَيْرٌ لَّكَ مِنَ ٱلْأُولَىٰ",
+                        "translated_name": "আর আলবৎ পরকাল তোমার জন্য হবে প্রাথমিককালের চেয়ে ভালো।"
+                    },
+                    {
+                        "id": 6084,
+                        "chapter_id": 93,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "5",
+                        "arabic_name": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰٓ",
+                        "translated_name": "আর শীঘ্রই তো তোমার প্রভু তোমাকে দান করবেন, ফলে তুমি সন্তষ্ট হবে।"
+                    },
+                    {
+                        "id": 6085,
+                        "chapter_id": 93,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "6",
+                        "arabic_name": "أَلَمْ يَجِدْكَ يَتِيمًا فَـَٔاوَىٰ",
+                        "translated_name": "তিনি কি তোমাকে এতীম অবস্থায় পান নি, তখন তিনি আশ্রয় দেন?"
+                    },
+                    {
+                        "id": 6086,
+                        "chapter_id": 93,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "7",
+                        "arabic_name": "وَوَجَدَكَ ضَآلًّا فَهَدَىٰ",
+                        "translated_name": "আর তিনি তোমাকে পান দিশাহারা, কাজেই তিনি পথনির্দেশ দেন।"
+                    },
+                    {
+                        "id": 6087,
+                        "chapter_id": 93,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "8",
+                        "arabic_name": "وَوَجَدَكَ عَآئِلًا فَأَغْنَىٰ",
+                        "translated_name": "আর তিনি তোমাকে পান নিঃস্ব অবস্থায়, সেজন্য তিনি সমৃদ্ধ করেন।"
+                    },
+                    {
+                        "id": 6088,
+                        "chapter_id": 93,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "9",
+                        "arabic_name": "فَأَمَّا ٱلْيَتِيمَ فَلَا تَقْهَرْ",
+                        "translated_name": "সুতরাং এতীমের ক্ষেত্রে -- তুমি তবে রূঢ় হয়ো না।"
+                    },
+                    {
+                        "id": 6089,
+                        "chapter_id": 93,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "10",
+                        "arabic_name": "وَأَمَّا ٱلسَّآئِلَ فَلَا تَنْهَرْ",
+                        "translated_name": "আর সাহায্যপ্রার্থীর ক্ষেত্রে -- তুমি তবে হাঁকিয়ে দিয়ো না।"
+                    },
+                    {
+                        "id": 6090,
+                        "chapter_id": 93,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "11",
+                        "arabic_name": "وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ",
+                        "translated_name": "আর তোমার প্রভুর অনুগ্রহের ক্ষেত্রে -- তুমি তবে ঘোষণা করতে থাকো।"
+                    }
+                ],
+                "page_arabic_ayah": "وَٱلضُّحَىٰ (١)  وَٱلَّيْلِ إِذَا سَجَىٰ (٢)  مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ (٣)  وَلَلْـَٔاخِرَةُ خَيْرٌ لَّكَ مِنَ ٱلْأُولَىٰ (٤)  وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰٓ (٥)  أَلَمْ يَجِدْكَ يَتِيمًا فَـَٔاوَىٰ (٦)  وَوَجَدَكَ ضَآلًّا فَهَدَىٰ (٧)  وَوَجَدَكَ عَآئِلًا فَأَغْنَىٰ (٨)  فَأَمَّا ٱلْيَتِيمَ فَلَا تَقْهَرْ (٩)  وَأَمَّا ٱلسَّآئِلَ فَلَا تَنْهَرْ (١٠)  وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ (١١)",
+                "is_read": false
+            }
+        ]
+    }
+}

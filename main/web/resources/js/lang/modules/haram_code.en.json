@@ -1,0 +1,18 @@
+{
+    "haram_code": {
+        "title": "Haram Code List",
+        "singular": "Haram Code",
+        "table": {
+            "code": "Code",
+            "description": "Description",
+            "status_info": "Status Info"
+        },
+        "form": {
+            "name_placeholder": "Enter name",
+            "code_label": "Code",
+            "code_placeholder": "Enter code",
+            "description_label": "Description",
+            "status_info_label": "Status info"
+        }
+    }
+}

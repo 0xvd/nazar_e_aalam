@@ -1,0 +1,49 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 110,
+            "serial_number": "১১০",
+            "arabic_name": "النصر",
+            "translated_name": "নছর",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "৩"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 603,
+                "page_number": "603",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6214,
+                        "chapter_id": 110,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ",
+                        "translated_name": "যখন আল্লাহ্‌র সাহায্য ও বিজয় আসছে,"
+                    },
+                    {
+                        "id": 6215,
+                        "chapter_id": 110,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "وَرَأَيْتَ ٱلنَّاسَ يَدْخُلُونَ فِى دِينِ ٱللَّهِ أَفْوَاجًا",
+                        "translated_name": "আর লোকেদের দলে-দলে আল্লাহ্‌র ধর্মে প্রবেশ করতে দেখতে পাচ্ছ,"
+                    },
+                    {
+                        "id": 6216,
+                        "chapter_id": 110,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَٱسْتَغْفِرْهُ ۚ إِنَّهُۥ كَانَ تَوَّابًۢا",
+                        "translated_name": "তখন তোমার প্রভুর প্রশংসায় জপতপ করো ও তাঁর পরিত্রাণ খোঁজো। নিঃসন্দেহ তিনি বারবার প্রত্যাবর্তনকারী।"
+                    }
+                ],
+                "page_arabic_ayah": "إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ (١)  وَرَأَيْتَ ٱلنَّاسَ يَدْخُلُونَ فِى دِينِ ٱللَّهِ أَفْوَاجًا (٢)  فَسَبِّحْ بِحَمْدِ رَبِّكَ وَٱسْتَغْفِرْهُ ۚ إِنَّهُۥ كَانَ تَوَّابًۢا (٣)",
+                "is_read": false
+            }
+        ]
+    }
+}

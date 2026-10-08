@@ -1,0 +1,57 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 112,
+            "serial_number": "112",
+            "arabic_name": "الإخلاص",
+            "translated_name": "Al-Ikhlas",
+            "verses_translate_name": "versos",
+            "verses_count": "4"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 604,
+                "page_number": "604",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6222,
+                        "chapter_id": 112,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+                        "translated_name": "Di: «Él es Dios, uno."
+                    },
+                    {
+                        "id": 6223,
+                        "chapter_id": 112,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "ٱللَّهُ ٱلصَّمَدُ",
+                        "translated_name": "Dios, eterno."
+                    },
+                    {
+                        "id": 6224,
+                        "chapter_id": 112,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+                        "translated_name": "No ha engendrado ni ha sido engendrado"
+                    },
+                    {
+                        "id": 6225,
+                        "chapter_id": 112,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+                        "translated_name": "y no hay otro semejante a Él.»"
+                    }
+                ],
+                "page_arabic_ayah": "قُلْ هُوَ ٱللَّهُ أَحَدٌ (١)  ٱللَّهُ ٱلصَّمَدُ (٢)  لَمْ يَلِدْ وَلَمْ يُولَدْ (٣)  وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ (٤)",
+                "is_read": false
+            }
+        ]
+    }
+}

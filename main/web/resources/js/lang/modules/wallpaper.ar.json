@@ -1,0 +1,25 @@
+{
+    "wallpaper": {
+        "title": "الخلفيات",
+        "singular": "الخلفية",
+        "lede": "تصفح ومعاينة وإدارة الصور المعروضة في المعرض.",
+        "add": "إضافة خلفية",
+        "search_placeholder": "البحث بالاسم…",
+        "empty_title": "لا توجد خلفيات حتى الآن",
+        "empty_search_copy": "لا توجد نتائج مطابقة لهذا البحث. جرّب مصطلحًا آخر.",
+        "empty_copy": "أضف أول خلفية للبدء.",
+        "view": "عرض",
+        "edit": "تعديل",
+        "delete": "حذف",
+        "modal": {
+            "name_label": "الاسم",
+            "name_placeholder": "أدخل الاسم",
+            "category_label": "التصنيف",
+            "category_placeholder": "اختر التصنيف",
+            "image_label": "رفع الصورة"
+        },
+        "view_modal": {
+            "title": "عرض الخلفية"
+        }
+    }
+}

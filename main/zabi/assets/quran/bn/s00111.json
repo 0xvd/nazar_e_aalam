@@ -1,0 +1,65 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 111,
+            "serial_number": "১১১",
+            "arabic_name": "المسد",
+            "translated_name": "লাহাব",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "৫"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 603,
+                "page_number": "603",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6217,
+                        "chapter_id": 111,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "تَبَّتْ يَدَآ أَبِى لَهَبٍ وَتَبَّ",
+                        "translated_name": "ধ্বংস হোক আবু লহবের উভয় হাত, আর সে-ও ধ্বংস হোক!"
+                    },
+                    {
+                        "id": 6218,
+                        "chapter_id": 111,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "مَآ أَغْنَىٰ عَنْهُ مَالُهُۥ وَمَا كَسَبَ",
+                        "translated_name": "তার ধন-সম্পদ ও যা সে অর্জন করেছে তা তার কোনো কাজে আসবে না।"
+                    },
+                    {
+                        "id": 6219,
+                        "chapter_id": 111,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ",
+                        "translated_name": "তাকে অচিরেই ঠেলে দেওয়া হবে লেলিহান আগুনে --"
+                    },
+                    {
+                        "id": 6220,
+                        "chapter_id": 111,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "4",
+                        "arabic_name": "وَٱمْرَأَتُهُۥ حَمَّالَةَ ٱلْحَطَبِ",
+                        "translated_name": "আর তার স্ত্রীকেও, -- ইন্ধন বহনকারিণী --"
+                    },
+                    {
+                        "id": 6221,
+                        "chapter_id": 111,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "5",
+                        "arabic_name": "فِى جِيدِهَا حَبْلٌ مِّن مَّسَدٍۭ",
+                        "translated_name": "তার গলায় থাকবে কড়াপাকের খেজুরের আঁশের রশি।"
+                    }
+                ],
+                "page_arabic_ayah": "تَبَّتْ يَدَآ أَبِى لَهَبٍ وَتَبَّ (١)  مَآ أَغْنَىٰ عَنْهُ مَالُهُۥ وَمَا كَسَبَ (٢)  سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ (٣)  وَٱمْرَأَتُهُۥ حَمَّالَةَ ٱلْحَطَبِ (٤)  فِى جِيدِهَا حَبْلٌ مِّن مَّسَدٍۭ (٥)",
+                "is_read": false
+            }
+        ]
+    }
+}

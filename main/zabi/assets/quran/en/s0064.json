@@ -1,0 +1,180 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 64,
+            "serial_number": "64",
+            "arabic_name": "التغابن",
+            "translated_name": "At-Taghabun",
+            "verses_translate_name": "Verses",
+            "verses_count": "18"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 556,
+                "page_number": "556",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5200,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "يُسَبِّحُ لِلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۖ لَهُ ٱلْمُلْكُ وَلَهُ ٱلْحَمْدُ ۖ وَهُوَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ",
+                        "translated_name": "ALL THAT THERE is in the heavens and the earth sings the praises of God. His the sovereignty and His is the praise, and He has power over everything."
+                    },
+                    {
+                        "id": 5201,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "هُوَ ٱلَّذِى خَلَقَكُمْ فَمِنكُمْ كَافِرٌ وَمِنكُم مُّؤْمِنٌ ۚ وَٱللَّهُ بِمَا تَعْمَلُونَ بَصِيرٌ",
+                        "translated_name": "It is He who created you, though one of you is an infidel and one of you a believer; yet God perceives what you do."
+                    },
+                    {
+                        "id": 5202,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "خَلَقَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ بِٱلْحَقِّ وَصَوَّرَكُمْ فَأَحْسَنَ صُوَرَكُمْ ۖ وَإِلَيْهِ ٱلْمَصِيرُ",
+                        "translated_name": "He created the heavens and the earth with deliberation, and gave you form, and shaped you well; and to Him is your returning."
+                    },
+                    {
+                        "id": 5203,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "يَعْلَمُ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَيَعْلَمُ مَا تُسِرُّونَ وَمَا تُعْلِنُونَ ۚ وَٱللَّهُ عَلِيمٌۢ بِذَاتِ ٱلصُّدُورِ",
+                        "translated_name": "He knows what is in the heavens and the earth, and knows what you hide and what you disclose; God knows what is in the hearts."
+                    },
+                    {
+                        "id": 5204,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "أَلَمْ يَأْتِكُمْ نَبَؤُا۟ ٱلَّذِينَ كَفَرُوا۟ مِن قَبْلُ فَذَاقُوا۟ وَبَالَ أَمْرِهِمْ وَلَهُمْ عَذَابٌ أَلِيمٌ",
+                        "translated_name": "Has not the account of those who disbelieved before come to you, who tasted the torment of their action, and for whom is grievous punishment?"
+                    },
+                    {
+                        "id": 5205,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "ذَٰلِكَ بِأَنَّهُۥ كَانَت تَّأْتِيهِمْ رُسُلُهُم بِٱلْبَيِّنَـٰتِ فَقَالُوٓا۟ أَبَشَرٌ يَهْدُونَنَا فَكَفَرُوا۟ وَتَوَلَّوا۟ ۚ وَّٱسْتَغْنَى ٱللَّهُ ۚ وَٱللَّهُ غَنِىٌّ حَمِيدٌ",
+                        "translated_name": "This was so because their apostles came to them with clear proofs, but they said: \"What. Can a mortal show us the way?\" And they denied and turned away; but God was unconcerned. God is all-sufficient, worthy of praise."
+                    },
+                    {
+                        "id": 5206,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "زَعَمَ ٱلَّذِينَ كَفَرُوٓا۟ أَن لَّن يُبْعَثُوا۟ ۚ قُلْ بَلَىٰ وَرَبِّى لَتُبْعَثُنَّ ثُمَّ لَتُنَبَّؤُنَّ بِمَا عَمِلْتُمْ ۚ وَذَٰلِكَ عَلَى ٱللَّهِ يَسِيرٌ",
+                        "translated_name": "The unbelievers claim that they will not be raised again. Tell them: \"Why not? By my Lord, you will certainly be raised again, and then informed of what you had done. That is how the law of God works inevitably.\""
+                    },
+                    {
+                        "id": 5207,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "فَـَٔامِنُوا۟ بِٱللَّهِ وَرَسُولِهِۦ وَٱلنُّورِ ٱلَّذِىٓ أَنزَلْنَا ۚ وَٱللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌ",
+                        "translated_name": "So believe in God, His Apostle and the Light We have sent down. God is well aware of what you do."
+                    },
+                    {
+                        "id": 5208,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "يَوْمَ يَجْمَعُكُمْ لِيَوْمِ ٱلْجَمْعِ ۖ ذَٰلِكَ يَوْمُ ٱلتَّغَابُنِ ۗ وَمَن يُؤْمِنۢ بِٱللَّهِ وَيَعْمَلْ صَـٰلِحًا يُكَفِّرْ عَنْهُ سَيِّـَٔاتِهِۦ وَيُدْخِلْهُ جَنَّـٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَآ أَبَدًا ۚ ذَٰلِكَ ٱلْفَوْزُ ٱلْعَظِيمُ",
+                        "translated_name": "The day He will gather you together on the Day of Gathering, will be the day of Judgement. He who believed and did the right, will have his evil deeds expunged by God and admitted to gardens with rivers flowing by, and abide there perpetually. This will be the great achievement of success."
+                    }
+                ],
+                "page_arabic_ayah": "يُسَبِّحُ لِلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۖ لَهُ ٱلْمُلْكُ وَلَهُ ٱلْحَمْدُ ۖ وَهُوَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ (١)  هُوَ ٱلَّذِى خَلَقَكُمْ فَمِنكُمْ كَافِرٌ وَمِنكُم مُّؤْمِنٌ ۚ وَٱللَّهُ بِمَا تَعْمَلُونَ بَصِيرٌ (٢)  خَلَقَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ بِٱلْحَقِّ وَصَوَّرَكُمْ فَأَحْسَنَ صُوَرَكُمْ ۖ وَإِلَيْهِ ٱلْمَصِيرُ (٣)  يَعْلَمُ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَيَعْلَمُ مَا تُسِرُّونَ وَمَا تُعْلِنُونَ ۚ وَٱللَّهُ عَلِيمٌۢ بِذَاتِ ٱلصُّدُورِ (٤)  أَلَمْ يَأْتِكُمْ نَبَؤُا۟ ٱلَّذِينَ كَفَرُوا۟ مِن قَبْلُ فَذَاقُوا۟ وَبَالَ أَمْرِهِمْ وَلَهُمْ عَذَابٌ أَلِيمٌ (٥)  ذَٰلِكَ بِأَنَّهُۥ كَانَت تَّأْتِيهِمْ رُسُلُهُم بِٱلْبَيِّنَـٰتِ فَقَالُوٓا۟ أَبَشَرٌ يَهْدُونَنَا فَكَفَرُوا۟ وَتَوَلَّوا۟ ۚ وَّٱسْتَغْنَى ٱللَّهُ ۚ وَٱللَّهُ غَنِىٌّ حَمِيدٌ (٦)  زَعَمَ ٱلَّذِينَ كَفَرُوٓا۟ أَن لَّن يُبْعَثُوا۟ ۚ قُلْ بَلَىٰ وَرَبِّى لَتُبْعَثُنَّ ثُمَّ لَتُنَبَّؤُنَّ بِمَا عَمِلْتُمْ ۚ وَذَٰلِكَ عَلَى ٱللَّهِ يَسِيرٌ (٧)  فَـَٔامِنُوا۟ بِٱللَّهِ وَرَسُولِهِۦ وَٱلنُّورِ ٱلَّذِىٓ أَنزَلْنَا ۚ وَٱللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌ (٨)  يَوْمَ يَجْمَعُكُمْ لِيَوْمِ ٱلْجَمْعِ ۖ ذَٰلِكَ يَوْمُ ٱلتَّغَابُنِ ۗ وَمَن يُؤْمِنۢ بِٱللَّهِ وَيَعْمَلْ صَـٰلِحًا يُكَفِّرْ عَنْهُ سَيِّـَٔاتِهِۦ وَيُدْخِلْهُ جَنَّـٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ خَـٰلِدِينَ فِيهَآ أَبَدًا ۚ ذَٰلِكَ ٱلْفَوْزُ ٱلْعَظِيمُ (٩)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 557,
+                "page_number": "557",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 5209,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "وَٱلَّذِينَ كَفَرُوا۟ وَكَذَّبُوا۟ بِـَٔايَـٰتِنَآ أُو۟لَـٰٓئِكَ أَصْحَـٰبُ ٱلنَّارِ خَـٰلِدِينَ فِيهَا ۖ وَبِئْسَ ٱلْمَصِيرُ",
+                        "translated_name": "Those who did not believe and denied Our revelations will be inmates of Hell, where they will abide for ever, and how evil a journey's end!"
+                    },
+                    {
+                        "id": 5210,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "مَآ أَصَابَ مِن مُّصِيبَةٍ إِلَّا بِإِذْنِ ٱللَّهِ ۗ وَمَن يُؤْمِنۢ بِٱللَّهِ يَهْدِ قَلْبَهُۥ ۚ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌ",
+                        "translated_name": "No calamity befalls unless God dispenses. He guides the heart of whosoever believes in God; and God has knowledge of everything."
+                    },
+                    {
+                        "id": 5211,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "وَأَطِيعُوا۟ ٱللَّهَ وَأَطِيعُوا۟ ٱلرَّسُولَ ۚ فَإِن تَوَلَّيْتُمْ فَإِنَّمَا عَلَىٰ رَسُولِنَا ٱلْبَلَـٰغُ ٱلْمُبِينُ",
+                        "translated_name": "Obey God and obey His Apostle. If you turn away, the duty of the Apostle is to convey the message clearly."
+                    },
+                    {
+                        "id": 5212,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ۚ وَعَلَى ٱللَّهِ فَلْيَتَوَكَّلِ ٱلْمُؤْمِنُونَ",
+                        "translated_name": "God: There is no god but He; and in God should believers place their trust."
+                    },
+                    {
+                        "id": 5213,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِنَّ مِنْ أَزْوَٰجِكُمْ وَأَوْلَـٰدِكُمْ عَدُوًّا لَّكُمْ فَٱحْذَرُوهُمْ ۚ وَإِن تَعْفُوا۟ وَتَصْفَحُوا۟ وَتَغْفِرُوا۟ فَإِنَّ ٱللَّهَ غَفُورٌ رَّحِيمٌ",
+                        "translated_name": "O believers, some of your spouses and children are your enemies, so beware of them! Yet if you forbear, overlook, and forgive, God is indeed forgiving and kind."
+                    },
+                    {
+                        "id": 5214,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "إِنَّمَآ أَمْوَٰلُكُمْ وَأَوْلَـٰدُكُمْ فِتْنَةٌ ۚ وَٱللَّهُ عِندَهُۥٓ أَجْرٌ عَظِيمٌ",
+                        "translated_name": "Your wealth and children are surely meant as trial for you: But with God is the great reward."
+                    },
+                    {
+                        "id": 5215,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "فَٱتَّقُوا۟ ٱللَّهَ مَا ٱسْتَطَعْتُمْ وَٱسْمَعُوا۟ وَأَطِيعُوا۟ وَأَنفِقُوا۟ خَيْرًا لِّأَنفُسِكُمْ ۗ وَمَن يُوقَ شُحَّ نَفْسِهِۦ فَأُو۟لَـٰٓئِكَ هُمُ ٱلْمُفْلِحُونَ",
+                        "translated_name": "So fear God as much as you can, and listen and obey, and spend in charity for your own good. He who is saved from his own avarice will be successful."
+                    },
+                    {
+                        "id": 5216,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "إِن تُقْرِضُوا۟ ٱللَّهَ قَرْضًا حَسَنًا يُضَـٰعِفْهُ لَكُمْ وَيَغْفِرْ لَكُمْ ۚ وَٱللَّهُ شَكُورٌ حَلِيمٌ",
+                        "translated_name": "If you lend a goodly loan to God, He will double it for you, and forgive you. God knows the worth of good deeds and is clement,"
+                    },
+                    {
+                        "id": 5217,
+                        "chapter_id": 64,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "عَـٰلِمُ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+                        "translated_name": "The knower of the unknown and the known, all-mighty and all-wise."
+                    }
+                ],
+                "page_arabic_ayah": "وَٱلَّذِينَ كَفَرُوا۟ وَكَذَّبُوا۟ بِـَٔايَـٰتِنَآ أُو۟لَـٰٓئِكَ أَصْحَـٰبُ ٱلنَّارِ خَـٰلِدِينَ فِيهَا ۖ وَبِئْسَ ٱلْمَصِيرُ (١٠)  مَآ أَصَابَ مِن مُّصِيبَةٍ إِلَّا بِإِذْنِ ٱللَّهِ ۗ وَمَن يُؤْمِنۢ بِٱللَّهِ يَهْدِ قَلْبَهُۥ ۚ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌ (١١)  وَأَطِيعُوا۟ ٱللَّهَ وَأَطِيعُوا۟ ٱلرَّسُولَ ۚ فَإِن تَوَلَّيْتُمْ فَإِنَّمَا عَلَىٰ رَسُولِنَا ٱلْبَلَـٰغُ ٱلْمُبِينُ (١٢)  ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ۚ وَعَلَى ٱللَّهِ فَلْيَتَوَكَّلِ ٱلْمُؤْمِنُونَ (١٣)  يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِنَّ مِنْ أَزْوَٰجِكُمْ وَأَوْلَـٰدِكُمْ عَدُوًّا لَّكُمْ فَٱحْذَرُوهُمْ ۚ وَإِن تَعْفُوا۟ وَتَصْفَحُوا۟ وَتَغْفِرُوا۟ فَإِنَّ ٱللَّهَ غَفُورٌ رَّحِيمٌ (١٤)  إِنَّمَآ أَمْوَٰلُكُمْ وَأَوْلَـٰدُكُمْ فِتْنَةٌ ۚ وَٱللَّهُ عِندَهُۥٓ أَجْرٌ عَظِيمٌ (١٥)  فَٱتَّقُوا۟ ٱللَّهَ مَا ٱسْتَطَعْتُمْ وَٱسْمَعُوا۟ وَأَطِيعُوا۟ وَأَنفِقُوا۟ خَيْرًا لِّأَنفُسِكُمْ ۗ وَمَن يُوقَ شُحَّ نَفْسِهِۦ فَأُو۟لَـٰٓئِكَ هُمُ ٱلْمُفْلِحُونَ (١٦)  إِن تُقْرِضُوا۟ ٱللَّهَ قَرْضًا حَسَنًا يُضَـٰعِفْهُ لَكُمْ وَيَغْفِرْ لَكُمْ ۚ وَٱللَّهُ شَكُورٌ حَلِيمٌ (١٧)  عَـٰلِمُ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ ٱلْعَزِيزُ ٱلْحَكِيمُ (١٨)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

@@ -1,0 +1,65 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 97,
+            "serial_number": "97",
+            "arabic_name": "القدر",
+            "translated_name": "Al-Qadr",
+            "verses_translate_name": "versos",
+            "verses_count": "5"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 598,
+                "page_number": "598",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6126,
+                        "chapter_id": 97,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "بِّسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ إِنَّآ أَنزَلْنَـٰهُ فِى لَيْلَةِ ٱلْقَدْرِ",
+                        "translated_name": "En verdad, lo hemos hecho descender en la Noche del Decreto."
+                    },
+                    {
+                        "id": 6127,
+                        "chapter_id": 97,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "وَمَآ أَدْرَىٰكَ مَا لَيْلَةُ ٱلْقَدْرِ",
+                        "translated_name": "¿Y qué te hará entender lo que es la Noche del Decreto?"
+                    },
+                    {
+                        "id": 6128,
+                        "chapter_id": 97,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "لَيْلَةُ ٱلْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ",
+                        "translated_name": "La Noche del Decreto es mejor que mil meses."
+                    },
+                    {
+                        "id": 6129,
+                        "chapter_id": 97,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "تَنَزَّلُ ٱلْمَلَـٰٓئِكَةُ وَٱلرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ",
+                        "translated_name": "Descienden en ella los ángeles y el Espíritu con el permiso de tu Señor sobre todos los asuntos."
+                    },
+                    {
+                        "id": 6130,
+                        "chapter_id": 97,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "سَلَـٰمٌ هِىَ حَتَّىٰ مَطْلَعِ ٱلْفَجْرِ",
+                        "translated_name": "Hay paz en ella hasta la llegada del amanecer."
+                    }
+                ],
+                "page_arabic_ayah": "بِّسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ إِنَّآ أَنزَلْنَـٰهُ فِى لَيْلَةِ ٱلْقَدْرِ (١)  وَمَآ أَدْرَىٰكَ مَا لَيْلَةُ ٱلْقَدْرِ (٢)  لَيْلَةُ ٱلْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ (٣)  تَنَزَّلُ ٱلْمَلَـٰٓئِكَةُ وَٱلرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ (٤)  سَلَـٰمٌ هِىَ حَتَّىٰ مَطْلَعِ ٱلْفَجْرِ (٥)",
+                "is_read": false
+            }
+        ]
+    }
+}

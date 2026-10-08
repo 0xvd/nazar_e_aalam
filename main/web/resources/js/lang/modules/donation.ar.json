@@ -1,0 +1,40 @@
+{
+    "donation": {
+        "title": "معاملات التبرعات",
+        "subtitle": "تتبع وإدارة جميع التبرعات الواردة",
+        "export_csv": "تصدير CSV",
+        "stats": {
+            "total_donations": "إجمالي التبرعات",
+            "all_time_records": "جميع السجلات",
+            "total_collected": "إجمالي المحصّل",
+            "from_completed_only": "من المكتملة فقط",
+            "completed": "مكتمل",
+            "successfully_processed": "تمت معالجته بنجاح",
+            "pending": "معلّق",
+            "awaiting_confirmation": "في انتظار التأكيد"
+        },
+        "status": {
+            "all": "الكل",
+            "completed": "مكتمل",
+            "pending": "معلّق",
+            "cancelled": "ملغى"
+        },
+        "all_gateways": "جميع بوابات الدفع",
+        "per_page": "{count} / صفحة",
+        "search_placeholder": "البحث عن المتبرع، التصنيف…",
+        "table": {
+            "donor": "المتبرع",
+            "category": "التصنيف",
+            "gateway": "بوابة الدفع",
+            "amount": "المبلغ",
+            "date": "التاريخ"
+        },
+        "empty": {
+            "title": "لم يتم العثور على تبرعات",
+            "try_adjusting_search": "حاول تعديل مصطلح البحث.",
+            "no_status_donations": "لا توجد تبرعات {status} حتى الآن.",
+            "will_appear_here": "ستظهر التبرعات هنا بعد استلامها."
+        },
+        "showing_range": "عرض {from}–{to} من {total} تبرع"
+    }
+}

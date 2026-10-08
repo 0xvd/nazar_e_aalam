@@ -1,0 +1,293 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 76,
+            "serial_number": "76",
+            "arabic_name": "الانسان",
+            "translated_name": "Al-Insan",
+            "verses_translate_name": "Verses",
+            "verses_count": "31"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 578,
+                "page_number": "578",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5592,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "هَلْ أَتَىٰ عَلَى ٱلْإِنسَـٰنِ حِينٌ مِّنَ ٱلدَّهْرِ لَمْ يَكُن شَيْـًٔا مَّذْكُورًا",
+                        "translated_name": "WAS THERE NOT a time in the life of man when he was not even a mentionable thing?"
+                    },
+                    {
+                        "id": 5593,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "إِنَّا خَلَقْنَا ٱلْإِنسَـٰنَ مِن نُّطْفَةٍ أَمْشَاجٍ نَّبْتَلِيهِ فَجَعَلْنَـٰهُ سَمِيعًۢا بَصِيرًا",
+                        "translated_name": "Verily We created man from a sperm yoked (to the ovum) to bring out his real substance, then gave him hearing and sight."
+                    },
+                    {
+                        "id": 5594,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "إِنَّا هَدَيْنَـٰهُ ٱلسَّبِيلَ إِمَّا شَاكِرًا وَإِمَّا كَفُورًا",
+                        "translated_name": "We surely showed him the way that he may either be grateful or deny."
+                    },
+                    {
+                        "id": 5595,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "إِنَّآ أَعْتَدْنَا لِلْكَـٰفِرِينَ سَلَـٰسِلَا۟ وَأَغْلَـٰلًا وَسَعِيرًا",
+                        "translated_name": "We have prepared for unbelievers chains and collars and a blazing fire."
+                    },
+                    {
+                        "id": 5596,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "إِنَّ ٱلْأَبْرَارَ يَشْرَبُونَ مِن كَأْسٍ كَانَ مِزَاجُهَا كَافُورًا",
+                        "translated_name": "Surely the devotees will drink cups flavoured with palm blossoms"
+                    }
+                ],
+                "page_arabic_ayah": "هَلْ أَتَىٰ عَلَى ٱلْإِنسَـٰنِ حِينٌ مِّنَ ٱلدَّهْرِ لَمْ يَكُن شَيْـًٔا مَّذْكُورًا (١)  إِنَّا خَلَقْنَا ٱلْإِنسَـٰنَ مِن نُّطْفَةٍ أَمْشَاجٍ نَّبْتَلِيهِ فَجَعَلْنَـٰهُ سَمِيعًۢا بَصِيرًا (٢)  إِنَّا هَدَيْنَـٰهُ ٱلسَّبِيلَ إِمَّا شَاكِرًا وَإِمَّا كَفُورًا (٣)  إِنَّآ أَعْتَدْنَا لِلْكَـٰفِرِينَ سَلَـٰسِلَا۟ وَأَغْلَـٰلًا وَسَعِيرًا (٤)  إِنَّ ٱلْأَبْرَارَ يَشْرَبُونَ مِن كَأْسٍ كَانَ مِزَاجُهَا كَافُورًا (٥)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 579,
+                "page_number": "579",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 5597,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "عَيْنًا يَشْرَبُ بِهَا عِبَادُ ٱللَّهِ يُفَجِّرُونَهَا تَفْجِيرًا",
+                        "translated_name": "From a spring of which the votaries of God will drink and make it flow in abundance."
+                    },
+                    {
+                        "id": 5598,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "يُوفُونَ بِٱلنَّذْرِ وَيَخَافُونَ يَوْمًا كَانَ شَرُّهُۥ مُسْتَطِيرًا",
+                        "translated_name": "Those who fulfil their vows and fear the Day whose evil shall be diffused far and wide,"
+                    },
+                    {
+                        "id": 5599,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "وَيُطْعِمُونَ ٱلطَّعَامَ عَلَىٰ حُبِّهِۦ مِسْكِينًا وَيَتِيمًا وَأَسِيرًا",
+                        "translated_name": "And feed the needy for the love of Him, and the orphans and the captives,"
+                    },
+                    {
+                        "id": 5600,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "إِنَّمَا نُطْعِمُكُمْ لِوَجْهِ ٱللَّهِ لَا نُرِيدُ مِنكُمْ جَزَآءً وَلَا شُكُورًا",
+                        "translated_name": "(Saying): \"We feed you for the sake of God, desiring neither recompense nor thanks."
+                    },
+                    {
+                        "id": 5601,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "إِنَّا نَخَافُ مِن رَّبِّنَا يَوْمًا عَبُوسًا قَمْطَرِيرًا",
+                        "translated_name": "We fear the dismal day calamitous from our Lord.\""
+                    },
+                    {
+                        "id": 5602,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "فَوَقَىٰهُمُ ٱللَّهُ شَرَّ ذَٰلِكَ ٱلْيَوْمِ وَلَقَّىٰهُمْ نَضْرَةً وَسُرُورًا",
+                        "translated_name": "So God will protect them from the evil of that day, and grant them happiness and joy,"
+                    },
+                    {
+                        "id": 5603,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "وَجَزَىٰهُم بِمَا صَبَرُوا۟ جَنَّةً وَحَرِيرًا",
+                        "translated_name": "And reward them for their perseverence Paradise and silken robes,"
+                    },
+                    {
+                        "id": 5604,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "مُّتَّكِـِٔينَ فِيهَا عَلَى ٱلْأَرَآئِكِ ۖ لَا يَرَوْنَ فِيهَا شَمْسًا وَلَا زَمْهَرِيرًا",
+                        "translated_name": "Where they will recline on couches feeling neither heat of the sun nor intense cold."
+                    },
+                    {
+                        "id": 5605,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "وَدَانِيَةً عَلَيْهِمْ ظِلَـٰلُهَا وَذُلِّلَتْ قُطُوفُهَا تَذْلِيلًا",
+                        "translated_name": "The shadows will bend over them, and low will hang the clusters of grapes."
+                    },
+                    {
+                        "id": 5606,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "وَيُطَافُ عَلَيْهِم بِـَٔانِيَةٍ مِّن فِضَّةٍ وَأَكْوَابٍ كَانَتْ قَوَارِيرَا۠",
+                        "translated_name": "Passed round will be silver flagons and goblets made of glass,"
+                    },
+                    {
+                        "id": 5607,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "قَوَارِيرَا۟ مِن فِضَّةٍ قَدَّرُوهَا تَقْدِيرًا",
+                        "translated_name": "And crystal clear bottles of silver, of which they will determine the measure themselves."
+                    },
+                    {
+                        "id": 5608,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "وَيُسْقَوْنَ فِيهَا كَأْسًا كَانَ مِزَاجُهَا زَنجَبِيلًا",
+                        "translated_name": "There will they drink a cup flavoured with ginger"
+                    },
+                    {
+                        "id": 5609,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "عَيْنًا فِيهَا تُسَمَّىٰ سَلْسَبِيلًا",
+                        "translated_name": "From a spring by the name of Ever-flowing-Salsabil."
+                    },
+                    {
+                        "id": 5610,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "۞ وَيَطُوفُ عَلَيْهِمْ وِلْدَٰنٌ مُّخَلَّدُونَ إِذَا رَأَيْتَهُمْ حَسِبْتَهُمْ لُؤْلُؤًا مَّنثُورًا",
+                        "translated_name": "And boys of everlasting youth will go about attending them. Looking at them you would think that they were pearls dispersed."
+                    },
+                    {
+                        "id": 5611,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "20",
+                        "arabic_name": "وَإِذَا رَأَيْتَ ثَمَّ رَأَيْتَ نَعِيمًا وَمُلْكًا كَبِيرًا",
+                        "translated_name": "When you look around, you will see delights and great dominion."
+                    },
+                    {
+                        "id": 5612,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "21",
+                        "arabic_name": "عَـٰلِيَهُمْ ثِيَابُ سُندُسٍ خُضْرٌ وَإِسْتَبْرَقٌ ۖ وَحُلُّوٓا۟ أَسَاوِرَ مِن فِضَّةٍ وَسَقَىٰهُمْ رَبُّهُمْ شَرَابًا طَهُورًا",
+                        "translated_name": "On their bodies will be garments of the finest green silk and brocade, and they will be adorned with bracelets of silver; and their Lord will give them a purest draught to drink."
+                    },
+                    {
+                        "id": 5613,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "22",
+                        "arabic_name": "إِنَّ هَـٰذَا كَانَ لَكُمْ جَزَآءً وَكَانَ سَعْيُكُم مَّشْكُورًا",
+                        "translated_name": "\"This in truth is your recompense, and acceptance of your endeavours.\""
+                    },
+                    {
+                        "id": 5614,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "23",
+                        "arabic_name": "إِنَّا نَحْنُ نَزَّلْنَا عَلَيْكَ ٱلْقُرْءَانَ تَنزِيلًا",
+                        "translated_name": "We have revealed the Qur'an to you gradually;"
+                    },
+                    {
+                        "id": 5615,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "24",
+                        "arabic_name": "فَٱصْبِرْ لِحُكْمِ رَبِّكَ وَلَا تُطِعْ مِنْهُمْ ءَاثِمًا أَوْ كَفُورًا",
+                        "translated_name": "So wait for your Lord's command, and do not follow any sinner or disbeliever among them."
+                    },
+                    {
+                        "id": 5616,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "25",
+                        "arabic_name": "وَٱذْكُرِ ٱسْمَ رَبِّكَ بُكْرَةً وَأَصِيلًا",
+                        "translated_name": "Meditate upon the name of your Lord morning and evening;"
+                    }
+                ],
+                "page_arabic_ayah": "عَيْنًا يَشْرَبُ بِهَا عِبَادُ ٱللَّهِ يُفَجِّرُونَهَا تَفْجِيرًا (٦)  يُوفُونَ بِٱلنَّذْرِ وَيَخَافُونَ يَوْمًا كَانَ شَرُّهُۥ مُسْتَطِيرًا (٧)  وَيُطْعِمُونَ ٱلطَّعَامَ عَلَىٰ حُبِّهِۦ مِسْكِينًا وَيَتِيمًا وَأَسِيرًا (٨)  إِنَّمَا نُطْعِمُكُمْ لِوَجْهِ ٱللَّهِ لَا نُرِيدُ مِنكُمْ جَزَآءً وَلَا شُكُورًا (٩)  إِنَّا نَخَافُ مِن رَّبِّنَا يَوْمًا عَبُوسًا قَمْطَرِيرًا (١٠)  فَوَقَىٰهُمُ ٱللَّهُ شَرَّ ذَٰلِكَ ٱلْيَوْمِ وَلَقَّىٰهُمْ نَضْرَةً وَسُرُورًا (١١)  وَجَزَىٰهُم بِمَا صَبَرُوا۟ جَنَّةً وَحَرِيرًا (١٢)  مُّتَّكِـِٔينَ فِيهَا عَلَى ٱلْأَرَآئِكِ ۖ لَا يَرَوْنَ فِيهَا شَمْسًا وَلَا زَمْهَرِيرًا (١٣)  وَدَانِيَةً عَلَيْهِمْ ظِلَـٰلُهَا وَذُلِّلَتْ قُطُوفُهَا تَذْلِيلًا (١٤)  وَيُطَافُ عَلَيْهِم بِـَٔانِيَةٍ مِّن فِضَّةٍ وَأَكْوَابٍ كَانَتْ قَوَارِيرَا۠ (١٥)  قَوَارِيرَا۟ مِن فِضَّةٍ قَدَّرُوهَا تَقْدِيرًا (١٦)  وَيُسْقَوْنَ فِيهَا كَأْسًا كَانَ مِزَاجُهَا زَنجَبِيلًا (١٧)  عَيْنًا فِيهَا تُسَمَّىٰ سَلْسَبِيلًا (١٨)  ۞ وَيَطُوفُ عَلَيْهِمْ وِلْدَٰنٌ مُّخَلَّدُونَ إِذَا رَأَيْتَهُمْ حَسِبْتَهُمْ لُؤْلُؤًا مَّنثُورًا (١٩)  وَإِذَا رَأَيْتَ ثَمَّ رَأَيْتَ نَعِيمًا وَمُلْكًا كَبِيرًا (٢٠)  عَـٰلِيَهُمْ ثِيَابُ سُندُسٍ خُضْرٌ وَإِسْتَبْرَقٌ ۖ وَحُلُّوٓا۟ أَسَاوِرَ مِن فِضَّةٍ وَسَقَىٰهُمْ رَبُّهُمْ شَرَابًا طَهُورًا (٢١)  إِنَّ هَـٰذَا كَانَ لَكُمْ جَزَآءً وَكَانَ سَعْيُكُم مَّشْكُورًا (٢٢)  إِنَّا نَحْنُ نَزَّلْنَا عَلَيْكَ ٱلْقُرْءَانَ تَنزِيلًا (٢٣)  فَٱصْبِرْ لِحُكْمِ رَبِّكَ وَلَا تُطِعْ مِنْهُمْ ءَاثِمًا أَوْ كَفُورًا (٢٤)  وَٱذْكُرِ ٱسْمَ رَبِّكَ بُكْرَةً وَأَصِيلًا (٢٥)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 580,
+                "page_number": "580",
+                "page_key": 2,
+                "page_verses": [
+                    {
+                        "id": 5617,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "26",
+                        "arabic_name": "وَمِنَ ٱلَّيْلِ فَٱسْجُدْ لَهُۥ وَسَبِّحْهُ لَيْلًا طَوِيلًا",
+                        "translated_name": "And bow in homage part of the night, and glorify Him far into the night."
+                    },
+                    {
+                        "id": 5618,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "27",
+                        "arabic_name": "إِنَّ هَـٰٓؤُلَآءِ يُحِبُّونَ ٱلْعَاجِلَةَ وَيَذَرُونَ وَرَآءَهُمْ يَوْمًا ثَقِيلًا",
+                        "translated_name": "Surely men love what hastes away and forget the grievous day (ahead)."
+                    },
+                    {
+                        "id": 5619,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "28",
+                        "arabic_name": "نَّحْنُ خَلَقْنَـٰهُمْ وَشَدَدْنَآ أَسْرَهُمْ ۖ وَإِذَا شِئْنَا بَدَّلْنَآ أَمْثَـٰلَهُمْ تَبْدِيلًا",
+                        "translated_name": "We created them and fixed their bones and joints; and We could replace them when We like with others like them."
+                    },
+                    {
+                        "id": 5620,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "29",
+                        "arabic_name": "إِنَّ هَـٰذِهِۦ تَذْكِرَةٌ ۖ فَمَن شَآءَ ٱتَّخَذَ إِلَىٰ رَبِّهِۦ سَبِيلًا",
+                        "translated_name": "This surely is a reminder: Therefore whosoever desires may take the way to his Lord."
+                    },
+                    {
+                        "id": 5621,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "30",
+                        "arabic_name": "وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ ۚ إِنَّ ٱللَّهَ كَانَ عَلِيمًا حَكِيمًا",
+                        "translated_name": "But you will not desire except as God wills. Verily He is all-knowing and all-wise."
+                    },
+                    {
+                        "id": 5622,
+                        "chapter_id": 76,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "31",
+                        "arabic_name": "يُدْخِلُ مَن يَشَآءُ فِى رَحْمَتِهِۦ ۚ وَٱلظَّـٰلِمِينَ أَعَدَّ لَهُمْ عَذَابًا أَلِيمًۢا",
+                        "translated_name": "He admits whosoever He will to His benevolence. But for the evil-doers He has prepared a painful punishment."
+                    }
+                ],
+                "page_arabic_ayah": "وَمِنَ ٱلَّيْلِ فَٱسْجُدْ لَهُۥ وَسَبِّحْهُ لَيْلًا طَوِيلًا (٢٦)  إِنَّ هَـٰٓؤُلَآءِ يُحِبُّونَ ٱلْعَاجِلَةَ وَيَذَرُونَ وَرَآءَهُمْ يَوْمًا ثَقِيلًا (٢٧)  نَّحْنُ خَلَقْنَـٰهُمْ وَشَدَدْنَآ أَسْرَهُمْ ۖ وَإِذَا شِئْنَا بَدَّلْنَآ أَمْثَـٰلَهُمْ تَبْدِيلًا (٢٨)  إِنَّ هَـٰذِهِۦ تَذْكِرَةٌ ۖ فَمَن شَآءَ ٱتَّخَذَ إِلَىٰ رَبِّهِۦ سَبِيلًا (٢٩)  وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ ۚ إِنَّ ٱللَّهَ كَانَ عَلِيمًا حَكِيمًا (٣٠)  يُدْخِلُ مَن يَشَآءُ فِى رَحْمَتِهِۦ ۚ وَٱلظَّـٰلِمِينَ أَعَدَّ لَهُمْ عَذَابًا أَلِيمًۢا (٣١)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

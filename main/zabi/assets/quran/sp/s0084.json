@@ -1,0 +1,225 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 84,
+            "serial_number": "84",
+            "arabic_name": "الإنشقاق",
+            "translated_name": "Al-Inshiqaq",
+            "verses_translate_name": "versos",
+            "verses_count": "25"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 589,
+                "page_number": "589",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5885,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "إِذَا ٱلسَّمَآءُ ٱنشَقَّتْ",
+                        "translated_name": "Cuando el cielo se rompa"
+                    },
+                    {
+                        "id": 5886,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ",
+                        "translated_name": "y escuche la orden de su Señor, como debe ser,"
+                    },
+                    {
+                        "id": 5887,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "وَإِذَا ٱلْأَرْضُ مُدَّتْ",
+                        "translated_name": "y cuando la Tierra sea allanada y extendida"
+                    },
+                    {
+                        "id": 5888,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "وَأَلْقَتْ مَا فِيهَا وَتَخَلَّتْ",
+                        "translated_name": "y arroje cuanto en ella hay y quede vacía"
+                    },
+                    {
+                        "id": 5889,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ",
+                        "translated_name": "y escuche la orden de su Señor, como debe ser…"
+                    },
+                    {
+                        "id": 5890,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًا فَمُلَـٰقِيهِ",
+                        "translated_name": "Oh, humano! En verdad, te esfuerzas afanosamente hacia tu Señor y te encontrarás con Él."
+                    },
+                    {
+                        "id": 5891,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "فَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ بِيَمِينِهِۦ",
+                        "translated_name": "Así pues, a quien le sea entregada su escritura en su mano derecha"
+                    },
+                    {
+                        "id": 5892,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "فَسَوْفَ يُحَاسَبُ حِسَابًا يَسِيرًا",
+                        "translated_name": "pronto será juzgado con benevolencia"
+                    },
+                    {
+                        "id": 5893,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "وَيَنقَلِبُ إِلَىٰٓ أَهْلِهِۦ مَسْرُورًا",
+                        "translated_name": "y regresará feliz a su gente."
+                    },
+                    {
+                        "id": 5894,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "وَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ وَرَآءَ ظَهْرِهِۦ",
+                        "translated_name": "Pero a quien le sea entregada su escritura por detrás de su espalda,"
+                    },
+                    {
+                        "id": 5895,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "فَسَوْفَ يَدْعُوا۟ ثُبُورًا",
+                        "translated_name": "pronto suplicará [diciendo]: «¡Estoy perdido!»"
+                    },
+                    {
+                        "id": 5896,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "وَيَصْلَىٰ سَعِيرًا",
+                        "translated_name": "y entrará y arderá en el Fuego llameante."
+                    },
+                    {
+                        "id": 5897,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "إِنَّهُۥ كَانَ فِىٓ أَهْلِهِۦ مَسْرُورًا",
+                        "translated_name": "¡En verdad, estaba contento entre su gente!"
+                    },
+                    {
+                        "id": 5898,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "إِنَّهُۥ ظَنَّ أَن لَّن يَحُورَ",
+                        "translated_name": "¡En verdad, creía que no regresaría jamás!"
+                    },
+                    {
+                        "id": 5899,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "15",
+                        "arabic_name": "بَلَىٰٓ إِنَّ رَبَّهُۥ كَانَ بِهِۦ بَصِيرًا",
+                        "translated_name": "¡Sí! ¡En verdad, su Señor le observaba!"
+                    },
+                    {
+                        "id": 5900,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "16",
+                        "arabic_name": "فَلَآ أُقْسِمُ بِٱلشَّفَقِ",
+                        "translated_name": "Juro por el rojo del crepúsculo"
+                    },
+                    {
+                        "id": 5901,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "17",
+                        "arabic_name": "وَٱلَّيْلِ وَمَا وَسَقَ",
+                        "translated_name": "y por la noche y lo que reúne"
+                    },
+                    {
+                        "id": 5902,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "18",
+                        "arabic_name": "وَٱلْقَمَرِ إِذَا ٱتَّسَقَ",
+                        "translated_name": "y por la Luna cuando está llena,"
+                    },
+                    {
+                        "id": 5903,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "19",
+                        "arabic_name": "لَتَرْكَبُنَّ طَبَقًا عَن طَبَقٍ",
+                        "translated_name": "que os transformaréis gradualmente."
+                    },
+                    {
+                        "id": 5904,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "20",
+                        "arabic_name": "فَمَا لَهُمْ لَا يُؤْمِنُونَ",
+                        "translated_name": "Así pues, ¿Qué les sucede que no creen"
+                    },
+                    {
+                        "id": 5905,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "21",
+                        "arabic_name": "وَإِذَا قُرِئَ عَلَيْهِمُ ٱلْقُرْءَانُ لَا يَسْجُدُونَ ۩",
+                        "translated_name": "y que, cuando se les recita el Corán no se prosternan?"
+                    },
+                    {
+                        "id": 5906,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "22",
+                        "arabic_name": "بَلِ ٱلَّذِينَ كَفَرُوا۟ يُكَذِّبُونَ",
+                        "translated_name": "Pero los que no creen lo desmienten."
+                    },
+                    {
+                        "id": 5907,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "23",
+                        "arabic_name": "وَٱللَّهُ أَعْلَمُ بِمَا يُوعُونَ",
+                        "translated_name": "Y Dios es quien mejor conoce lo que ocultan."
+                    },
+                    {
+                        "id": 5908,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "24",
+                        "arabic_name": "فَبَشِّرْهُم بِعَذَابٍ أَلِيمٍ",
+                        "translated_name": "Así pues, infórmales de un castigo doloroso,"
+                    },
+                    {
+                        "id": 5909,
+                        "chapter_id": 84,
+                        "verses_translate_name": "versos",
+                        "verses_number": "25",
+                        "arabic_name": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍۭ",
+                        "translated_name": "excepto a aquellos que creen y realizan buenas acciones. Para ellos hay una recompensa inacabable."
+                    }
+                ],
+                "page_arabic_ayah": "إِذَا ٱلسَّمَآءُ ٱنشَقَّتْ (١)  وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ (٢)  وَإِذَا ٱلْأَرْضُ مُدَّتْ (٣)  وَأَلْقَتْ مَا فِيهَا وَتَخَلَّتْ (٤)  وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ (٥)  يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًا فَمُلَـٰقِيهِ (٦)  فَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ بِيَمِينِهِۦ (٧)  فَسَوْفَ يُحَاسَبُ حِسَابًا يَسِيرًا (٨)  وَيَنقَلِبُ إِلَىٰٓ أَهْلِهِۦ مَسْرُورًا (٩)  وَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ وَرَآءَ ظَهْرِهِۦ (١٠)  فَسَوْفَ يَدْعُوا۟ ثُبُورًا (١١)  وَيَصْلَىٰ سَعِيرًا (١٢)  إِنَّهُۥ كَانَ فِىٓ أَهْلِهِۦ مَسْرُورًا (١٣)  إِنَّهُۥ ظَنَّ أَن لَّن يَحُورَ (١٤)  بَلَىٰٓ إِنَّ رَبَّهُۥ كَانَ بِهِۦ بَصِيرًا (١٥)  فَلَآ أُقْسِمُ بِٱلشَّفَقِ (١٦)  وَٱلَّيْلِ وَمَا وَسَقَ (١٧)  وَٱلْقَمَرِ إِذَا ٱتَّسَقَ (١٨)  لَتَرْكَبُنَّ طَبَقًا عَن طَبَقٍ (١٩)  فَمَا لَهُمْ لَا يُؤْمِنُونَ (٢٠)  وَإِذَا قُرِئَ عَلَيْهِمُ ٱلْقُرْءَانُ لَا يَسْجُدُونَ ۩ (٢١)  بَلِ ٱلَّذِينَ كَفَرُوا۟ يُكَذِّبُونَ (٢٢)  وَٱللَّهُ أَعْلَمُ بِمَا يُوعُونَ (٢٣)  فَبَشِّرْهُم بِعَذَابٍ أَلِيمٍ (٢٤)  إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍۭ (٢٥)",
+                "is_read": false
+            }
+        ]
+    }
+}

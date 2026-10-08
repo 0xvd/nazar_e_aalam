@@ -1,0 +1,23 @@
+{
+    "landing_footer": {
+        "title": "التذييل",
+        "subtitle": "إدارة نص العلامة التجارية في تذييل صفحتك الرئيسية",
+        "preview_page": "معاينة الصفحة",
+        "error_saving": "حدث خطأ أثناء الحفظ",
+        "section": {
+            "brand": "العلامة التجارية",
+            "footer_preview": "معاينة التذييل"
+        },
+        "form": {
+            "app_name_label": "اسم التطبيق",
+            "app_name_hint": "يظهر في التذييل",
+            "app_name_placeholder": "أدخل اسم التطبيق",
+            "footer_description_label": "وصف التذييل",
+            "footer_description_placeholder": "أدخل وصف التذييل"
+        },
+        "preview": {
+            "default_description": "رفيقك الإسلامي الشامل.",
+            "copyright_suffix": "· جميع الحقوق محفوظة."
+        }
+    }
+}

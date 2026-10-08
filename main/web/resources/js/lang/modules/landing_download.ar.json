@@ -1,0 +1,28 @@
+{
+    "landing_download": {
+        "title": "دعوة التحميل",
+        "subtitle": "إدارة قسم الدعوة لاتخاذ إجراء الذي يروّج لتحميل التطبيق",
+        "preview_page": "معاينة الصفحة",
+        "error_saving": "حدث خطأ أثناء الحفظ",
+        "section": {
+            "headline": "العنوان الرئيسي",
+            "links": "الروابط"
+        },
+        "form": {
+            "title_label": "العنوان",
+            "title_placeholder": "أدخل العنوان",
+            "title_highlight_label": "العنوان المميز",
+            "gold_colored": "ملون بالذهبي",
+            "title_highlight_placeholder": "أدخل الجزء المميز",
+            "description_label": "الوصف",
+            "description_placeholder": "أدخل الوصف",
+            "app_store_url_label": "رابط App Store",
+            "play_store_url_label": "رابط Play Store",
+            "codecanyon_url_label": "رابط CodeCanyon",
+            "codecanyon_prompt_text_label": "نص دعوة CodeCanyon",
+            "codecanyon_link_text_label": "نص رابط CodeCanyon",
+            "show_codecanyon_link_label": "إظهار سطر CodeCanyon",
+            "show_codecanyon_link_desc": "عرض سطر \"هل ترغب في إعادة البيع أو التخصيص؟\" أسفل أزرار التحميل"
+        }
+    }
+}

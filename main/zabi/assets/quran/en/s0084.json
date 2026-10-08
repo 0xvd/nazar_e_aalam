@@ -1,0 +1,227 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 84,
+            "serial_number": "84",
+            "arabic_name": "الإنشقاق",
+            "translated_name": "Al-Inshiqaq",
+            "verses_translate_name": "Verses",
+            "verses_count": "25"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 589,
+                "page_number": "589",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5885,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "إِذَا ٱلسَّمَآءُ ٱنشَقَّتْ",
+                        "translated_name": "WHEN THE SKY is cleft asunder,"
+                    },
+                    {
+                        "id": 5886,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ",
+                        "translated_name": "And hearkens to its Lord and is dutiful,"
+                    },
+                    {
+                        "id": 5887,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "وَإِذَا ٱلْأَرْضُ مُدَّتْ",
+                        "translated_name": "When the earth is stretched out taut"
+                    },
+                    {
+                        "id": 5888,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "وَأَلْقَتْ مَا فِيهَا وَتَخَلَّتْ",
+                        "translated_name": "And throws out whatever it contains and is empty,"
+                    },
+                    {
+                        "id": 5889,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ",
+                        "translated_name": "And hearkens to its Lord and is dutiful,"
+                    },
+                    {
+                        "id": 5890,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًا فَمُلَـٰقِيهِ",
+                        "translated_name": "O man, you have to strive and go on striving towards your Lord, then will you meet Him."
+                    },
+                    {
+                        "id": 5891,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "فَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ بِيَمِينِهِۦ",
+                        "translated_name": "And he who is given his ledger in his right hand"
+                    },
+                    {
+                        "id": 5892,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "فَسَوْفَ يُحَاسَبُ حِسَابًا يَسِيرًا",
+                        "translated_name": "Will have an easy reckoning,"
+                    },
+                    {
+                        "id": 5893,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "وَيَنقَلِبُ إِلَىٰٓ أَهْلِهِۦ مَسْرُورًا",
+                        "translated_name": "And will return to his people full of joy."
+                    },
+                    {
+                        "id": 5894,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "وَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ وَرَآءَ ظَهْرِهِۦ",
+                        "translated_name": "But he who is given his ledger from behind his back"
+                    },
+                    {
+                        "id": 5895,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "فَسَوْفَ يَدْعُوا۟ ثُبُورًا",
+                        "translated_name": "Will pray for death,"
+                    },
+                    {
+                        "id": 5896,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "وَيَصْلَىٰ سَعِيرًا",
+                        "translated_name": "But will be roasted in the fire."
+                    },
+                    {
+                        "id": 5897,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "إِنَّهُۥ كَانَ فِىٓ أَهْلِهِۦ مَسْرُورًا",
+                        "translated_name": "He lived rejoicing among his people,"
+                    },
+                    {
+                        "id": 5898,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "إِنَّهُۥ ظَنَّ أَن لَّن يَحُورَ",
+                        "translated_name": "Never thinking he will return."
+                    },
+                    {
+                        "id": 5899,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "بَلَىٰٓ إِنَّ رَبَّهُۥ كَانَ بِهِۦ بَصِيرًا",
+                        "translated_name": "Why not? His Lord was always watching him."
+                    },
+                    {
+                        "id": 5900,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "فَلَآ أُقْسِمُ بِٱلشَّفَقِ",
+                        "translated_name": "So indeed I call to witness the evening twilight,"
+                    },
+                    {
+                        "id": 5901,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "وَٱلَّيْلِ وَمَا وَسَقَ",
+                        "translated_name": "And the night and all it gathers,"
+                    },
+                    {
+                        "id": 5902,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "وَٱلْقَمَرِ إِذَا ٱتَّسَقَ",
+                        "translated_name": "And the moon when at the full,"
+                    },
+                    {
+                        "id": 5903,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "لَتَرْكَبُنَّ طَبَقًا عَن طَبَقٍ",
+                        "translated_name": "That you will climb from stage to stage."
+                    },
+                    {
+                        "id": 5904,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "20",
+                        "arabic_name": "فَمَا لَهُمْ لَا يُؤْمِنُونَ",
+                        "translated_name": "So, wherefore do they not believe?"
+                    },
+                    {
+                        "id": 5905,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "21",
+                        "arabic_name": "وَإِذَا قُرِئَ عَلَيْهِمُ ٱلْقُرْءَانُ لَا يَسْجُدُونَ ۩",
+                        "translated_name": "And when the Qur'an is recited to them do not bow in adoration?"
+                    },
+                    {
+                        "id": 5906,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "22",
+                        "arabic_name": "بَلِ ٱلَّذِينَ كَفَرُوا۟ يُكَذِّبُونَ",
+                        "translated_name": "In fact the unbelievers disavow."
+                    },
+                    {
+                        "id": 5907,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "23",
+                        "arabic_name": "وَٱللَّهُ أَعْلَمُ بِمَا يُوعُونَ",
+                        "translated_name": "But God knows what they harbour in their breasts."
+                    },
+                    {
+                        "id": 5908,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "24",
+                        "arabic_name": "فَبَشِّرْهُم بِعَذَابٍ أَلِيمٍ",
+                        "translated_name": "So give them news of painful punishment,"
+                    },
+                    {
+                        "id": 5909,
+                        "chapter_id": 84,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "25",
+                        "arabic_name": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍۭ",
+                        "translated_name": "Except those who believe and do the right: For them there is reward unending."
+                    }
+                ],
+                "page_arabic_ayah": "إِذَا ٱلسَّمَآءُ ٱنشَقَّتْ (١)  وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ (٢)  وَإِذَا ٱلْأَرْضُ مُدَّتْ (٣)  وَأَلْقَتْ مَا فِيهَا وَتَخَلَّتْ (٤)  وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ (٥)  يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًا فَمُلَـٰقِيهِ (٦)  فَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ بِيَمِينِهِۦ (٧)  فَسَوْفَ يُحَاسَبُ حِسَابًا يَسِيرًا (٨)  وَيَنقَلِبُ إِلَىٰٓ أَهْلِهِۦ مَسْرُورًا (٩)  وَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ وَرَآءَ ظَهْرِهِۦ (١٠)  فَسَوْفَ يَدْعُوا۟ ثُبُورًا (١١)  وَيَصْلَىٰ سَعِيرًا (١٢)  إِنَّهُۥ كَانَ فِىٓ أَهْلِهِۦ مَسْرُورًا (١٣)  إِنَّهُۥ ظَنَّ أَن لَّن يَحُورَ (١٤)  بَلَىٰٓ إِنَّ رَبَّهُۥ كَانَ بِهِۦ بَصِيرًا (١٥)  فَلَآ أُقْسِمُ بِٱلشَّفَقِ (١٦)  وَٱلَّيْلِ وَمَا وَسَقَ (١٧)  وَٱلْقَمَرِ إِذَا ٱتَّسَقَ (١٨)  لَتَرْكَبُنَّ طَبَقًا عَن طَبَقٍ (١٩)  فَمَا لَهُمْ لَا يُؤْمِنُونَ (٢٠)  وَإِذَا قُرِئَ عَلَيْهِمُ ٱلْقُرْءَانُ لَا يَسْجُدُونَ ۩ (٢١)  بَلِ ٱلَّذِينَ كَفَرُوا۟ يُكَذِّبُونَ (٢٢)  وَٱللَّهُ أَعْلَمُ بِمَا يُوعُونَ (٢٣)  فَبَشِّرْهُم بِعَذَابٍ أَلِيمٍ (٢٤)  إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍۭ (٢٥)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

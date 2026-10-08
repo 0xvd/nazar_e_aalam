@@ -1,0 +1,24 @@
+{
+    "user": {
+        "title": "User List",
+        "singular": "User",
+        "invite_user": "Invite User",
+        "table": {
+            "image": "Image",
+            "first_name": "First Name",
+            "last_name": "Last Name",
+            "email": "Email",
+            "role": "Role"
+        },
+        "form": {
+            "first_name_label": "First Name",
+            "first_name_placeholder": "Enter First Name",
+            "last_name_label": "Last Name",
+            "last_name_placeholder": "Enter Last Name",
+            "email_label": "Email",
+            "email_placeholder": "Enter email",
+            "role_label": "Role",
+            "role_placeholder": "Select Role"
+        }
+    }
+}

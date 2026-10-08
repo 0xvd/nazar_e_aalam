@@ -1,0 +1,259 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 81,
+            "serial_number": "81",
+            "arabic_name": "التكوير",
+            "translated_name": "At-Takwir",
+            "verses_translate_name": "Verses",
+            "verses_count": "29"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 586,
+                "page_number": "586",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5801,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "إِذَا ٱلشَّمْسُ كُوِّرَتْ",
+                        "translated_name": "WHEN THE SUN is folded up,"
+                    },
+                    {
+                        "id": 5802,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "وَإِذَا ٱلنُّجُومُ ٱنكَدَرَتْ",
+                        "translated_name": "The stars turn dim and scatter,"
+                    },
+                    {
+                        "id": 5803,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "وَإِذَا ٱلْجِبَالُ سُيِّرَتْ",
+                        "translated_name": "The mountains made to move,"
+                    },
+                    {
+                        "id": 5804,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "وَإِذَا ٱلْعِشَارُ عُطِّلَتْ",
+                        "translated_name": "The ten-month pregnant female camels are abandoned,"
+                    },
+                    {
+                        "id": 5805,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "وَإِذَا ٱلْوُحُوشُ حُشِرَتْ",
+                        "translated_name": "The wild beasts stampede on the run,"
+                    },
+                    {
+                        "id": 5806,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "وَإِذَا ٱلْبِحَارُ سُجِّرَتْ",
+                        "translated_name": "When the oceans surge and swell,"
+                    },
+                    {
+                        "id": 5807,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "وَإِذَا ٱلنُّفُوسُ زُوِّجَتْ",
+                        "translated_name": "When souls are reunited (with the bodies)"
+                    },
+                    {
+                        "id": 5808,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "وَإِذَا ٱلْمَوْءُۥدَةُ سُئِلَتْ",
+                        "translated_name": "And the little girl buried alive is asked"
+                    },
+                    {
+                        "id": 5809,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "بِأَىِّ ذَنۢبٍ قُتِلَتْ",
+                        "translated_name": "For what crime she was put to death;"
+                    },
+                    {
+                        "id": 5810,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "وَإِذَا ٱلصُّحُفُ نُشِرَتْ",
+                        "translated_name": "When the ledgers are laid open,"
+                    },
+                    {
+                        "id": 5811,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "وَإِذَا ٱلسَّمَآءُ كُشِطَتْ",
+                        "translated_name": "The curtain drawn back from the skies,"
+                    },
+                    {
+                        "id": 5812,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "وَإِذَا ٱلْجَحِيمُ سُعِّرَتْ",
+                        "translated_name": "When Hell is set ablaze,"
+                    },
+                    {
+                        "id": 5813,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "وَإِذَا ٱلْجَنَّةُ أُزْلِفَتْ",
+                        "translated_name": "And Paradise brought near,"
+                    },
+                    {
+                        "id": 5814,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "عَلِمَتْ نَفْسٌ مَّآ أَحْضَرَتْ",
+                        "translated_name": "(Then) every soul will know what it had prepared (for itself)."
+                    },
+                    {
+                        "id": 5815,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "فَلَآ أُقْسِمُ بِٱلْخُنَّسِ",
+                        "translated_name": "So, I call the receding stars to witness,"
+                    },
+                    {
+                        "id": 5816,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "ٱلْجَوَارِ ٱلْكُنَّسِ",
+                        "translated_name": "The planets withdrawing into themselves,"
+                    },
+                    {
+                        "id": 5817,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "وَٱلَّيْلِ إِذَا عَسْعَسَ",
+                        "translated_name": "The closing night,"
+                    },
+                    {
+                        "id": 5818,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "وَٱلصُّبْحِ إِذَا تَنَفَّسَ",
+                        "translated_name": "The rising dawn,"
+                    },
+                    {
+                        "id": 5819,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "إِنَّهُۥ لَقَوْلُ رَسُولٍ كَرِيمٍ",
+                        "translated_name": "That this is indeed the word of an honoured Messenger,"
+                    },
+                    {
+                        "id": 5820,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "20",
+                        "arabic_name": "ذِى قُوَّةٍ عِندَ ذِى ٱلْعَرْشِ مَكِينٍ",
+                        "translated_name": "Full of power, well-established (in position) with the Lord and Master of the Throne,"
+                    },
+                    {
+                        "id": 5821,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "21",
+                        "arabic_name": "مُّطَاعٍ ثَمَّ أَمِينٍ",
+                        "translated_name": "Obeyed and worthy there of trust."
+                    },
+                    {
+                        "id": 5822,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "22",
+                        "arabic_name": "وَمَا صَاحِبُكُم بِمَجْنُونٍ",
+                        "translated_name": "Your companion is not mad."
+                    },
+                    {
+                        "id": 5823,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "23",
+                        "arabic_name": "وَلَقَدْ رَءَاهُ بِٱلْأُفُقِ ٱلْمُبِينِ",
+                        "translated_name": "He had surely seen Him on the clear horizon."
+                    },
+                    {
+                        "id": 5824,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "24",
+                        "arabic_name": "وَمَا هُوَ عَلَى ٱلْغَيْبِ بِضَنِينٍ",
+                        "translated_name": "He is not chary of making public what is unknown."
+                    },
+                    {
+                        "id": 5825,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "25",
+                        "arabic_name": "وَمَا هُوَ بِقَوْلِ شَيْطَـٰنٍ رَّجِيمٍ",
+                        "translated_name": "This is not the utterance of an accursed devil."
+                    },
+                    {
+                        "id": 5826,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "26",
+                        "arabic_name": "فَأَيْنَ تَذْهَبُونَ",
+                        "translated_name": "So whither do you stray?"
+                    },
+                    {
+                        "id": 5827,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "27",
+                        "arabic_name": "إِنْ هُوَ إِلَّا ذِكْرٌ لِّلْعَـٰلَمِينَ",
+                        "translated_name": "This is a reminder for all the peoples of the world,"
+                    },
+                    {
+                        "id": 5828,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "28",
+                        "arabic_name": "لِمَن شَآءَ مِنكُمْ أَن يَسْتَقِيمَ",
+                        "translated_name": "For those of you who desire to walk the path that is straight,"
+                    },
+                    {
+                        "id": 5829,
+                        "chapter_id": 81,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "29",
+                        "arabic_name": "وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ رَبُّ ٱلْعَـٰلَمِينَ",
+                        "translated_name": "Though you cannot desire except as God will, the Lord of all the worlds."
+                    }
+                ],
+                "page_arabic_ayah": "إِذَا ٱلشَّمْسُ كُوِّرَتْ (١)  وَإِذَا ٱلنُّجُومُ ٱنكَدَرَتْ (٢)  وَإِذَا ٱلْجِبَالُ سُيِّرَتْ (٣)  وَإِذَا ٱلْعِشَارُ عُطِّلَتْ (٤)  وَإِذَا ٱلْوُحُوشُ حُشِرَتْ (٥)  وَإِذَا ٱلْبِحَارُ سُجِّرَتْ (٦)  وَإِذَا ٱلنُّفُوسُ زُوِّجَتْ (٧)  وَإِذَا ٱلْمَوْءُۥدَةُ سُئِلَتْ (٨)  بِأَىِّ ذَنۢبٍ قُتِلَتْ (٩)  وَإِذَا ٱلصُّحُفُ نُشِرَتْ (١٠)  وَإِذَا ٱلسَّمَآءُ كُشِطَتْ (١١)  وَإِذَا ٱلْجَحِيمُ سُعِّرَتْ (١٢)  وَإِذَا ٱلْجَنَّةُ أُزْلِفَتْ (١٣)  عَلِمَتْ نَفْسٌ مَّآ أَحْضَرَتْ (١٤)  فَلَآ أُقْسِمُ بِٱلْخُنَّسِ (١٥)  ٱلْجَوَارِ ٱلْكُنَّسِ (١٦)  وَٱلَّيْلِ إِذَا عَسْعَسَ (١٧)  وَٱلصُّبْحِ إِذَا تَنَفَّسَ (١٨)  إِنَّهُۥ لَقَوْلُ رَسُولٍ كَرِيمٍ (١٩)  ذِى قُوَّةٍ عِندَ ذِى ٱلْعَرْشِ مَكِينٍ (٢٠)  مُّطَاعٍ ثَمَّ أَمِينٍ (٢١)  وَمَا صَاحِبُكُم بِمَجْنُونٍ (٢٢)  وَلَقَدْ رَءَاهُ بِٱلْأُفُقِ ٱلْمُبِينِ (٢٣)  وَمَا هُوَ عَلَى ٱلْغَيْبِ بِضَنِينٍ (٢٤)  وَمَا هُوَ بِقَوْلِ شَيْطَـٰنٍ رَّجِيمٍ (٢٥)  فَأَيْنَ تَذْهَبُونَ (٢٦)  إِنْ هُوَ إِلَّا ذِكْرٌ لِّلْعَـٰلَمِينَ (٢٧)  لِمَن شَآءَ مِنكُمْ أَن يَسْتَقِيمَ (٢٨)  وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ رَبُّ ٱلْعَـٰلَمِينَ (٢٩)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

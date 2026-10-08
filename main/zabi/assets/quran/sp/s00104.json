@@ -1,0 +1,97 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 104,
+            "serial_number": "104",
+            "arabic_name": "الهمزة",
+            "translated_name": "Al-Humazah",
+            "verses_translate_name": "versos",
+            "verses_count": "9"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 601,
+                "page_number": "601",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6180,
+                        "chapter_id": 104,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ",
+                        "translated_name": "¡Ay de todo difamador murmurador"
+                    },
+                    {
+                        "id": 6181,
+                        "chapter_id": 104,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "ٱلَّذِى جَمَعَ مَالًا وَعَدَّدَهُۥ",
+                        "translated_name": "que acumula riqueza y la recuenta!"
+                    },
+                    {
+                        "id": 6182,
+                        "chapter_id": 104,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ",
+                        "translated_name": "Cree que su riqueza le eternizará."
+                    },
+                    {
+                        "id": 6183,
+                        "chapter_id": 104,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "كَلَّا ۖ لَيُنۢبَذَنَّ فِى ٱلْحُطَمَةِ",
+                        "translated_name": "¡Pero no! Juro que será arrojado al Hutama."
+                    },
+                    {
+                        "id": 6184,
+                        "chapter_id": 104,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ",
+                        "translated_name": "¿Y qué te hará entender los que es el Hutama?"
+                    },
+                    {
+                        "id": 6185,
+                        "chapter_id": 104,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "نَارُ ٱللَّهِ ٱلْمُوقَدَةُ",
+                        "translated_name": "Es el fuego abrasador de Dios,"
+                    },
+                    {
+                        "id": 6186,
+                        "chapter_id": 104,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "ٱلَّتِى تَطَّلِعُ عَلَى ٱلْأَفْـِٔدَةِ",
+                        "translated_name": "que llega hasta el fondo del alma."
+                    },
+                    {
+                        "id": 6187,
+                        "chapter_id": 104,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ",
+                        "translated_name": "En verdad, se cerrará sobre ellos"
+                    },
+                    {
+                        "id": 6188,
+                        "chapter_id": 104,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "فِى عَمَدٍ مُّمَدَّدَةٍۭ",
+                        "translated_name": "en columnas alargadas."
+                    }
+                ],
+                "page_arabic_ayah": "وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ (١)  ٱلَّذِى جَمَعَ مَالًا وَعَدَّدَهُۥ (٢)  يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ (٣)  كَلَّا ۖ لَيُنۢبَذَنَّ فِى ٱلْحُطَمَةِ (٤)  وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ (٥)  نَارُ ٱللَّهِ ٱلْمُوقَدَةُ (٦)  ٱلَّتِى تَطَّلِعُ عَلَى ٱلْأَفْـِٔدَةِ (٧)  إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ (٨)  فِى عَمَدٍ مُّمَدَّدَةٍۭ (٩)",
+                "is_read": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 105,
+            "serial_number": "১০৫",
+            "arabic_name": "الفيل",
+            "translated_name": "ফীল",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "৫"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 601,
+                "page_number": "601",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6189,
+                        "chapter_id": 105,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَـٰبِ ٱلْفِيلِ",
+                        "translated_name": "তুমি কি দেখো নি তোমার প্রভু কেমন করেছিলেন হস্তি-বাহিনীর প্রতি?"
+                    },
+                    {
+                        "id": 6190,
+                        "chapter_id": 105,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "أَلَمْ يَجْعَلْ كَيْدَهُمْ فِى تَضْلِيلٍ",
+                        "translated_name": "তাদের চক্রান্ত তিনি কি ব্যর্থতায় পর্যবসিত করেন নি?"
+                    },
+                    {
+                        "id": 6191,
+                        "chapter_id": 105,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ",
+                        "translated_name": "আর তাদের উপরে তিনি পাঠালেন ঝাঁকে ঝাঁকে পাখীর দল,"
+                    },
+                    {
+                        "id": 6192,
+                        "chapter_id": 105,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "4",
+                        "arabic_name": "تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ",
+                        "translated_name": "যারা তাদের আছড়ে ছিল শক্ত-কঠিন পাথরের গায়ে;"
+                    },
+                    {
+                        "id": 6193,
+                        "chapter_id": 105,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "5",
+                        "arabic_name": "فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍۭ",
+                        "translated_name": "ফলে তিনি তাদের বানিয়ে দিলেন খেয়ে ফেলা খড়ের মতো।"
+                    }
+                ],
+                "page_arabic_ayah": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَـٰبِ ٱلْفِيلِ (١)  أَلَمْ يَجْعَلْ كَيْدَهُمْ فِى تَضْلِيلٍ (٢)  وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ (٣)  تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ (٤)  فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍۭ (٥)",
+                "is_read": false
+            }
+        ]
+    }
+}

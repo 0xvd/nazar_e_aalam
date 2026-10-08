@@ -1,0 +1,13 @@
+{
+    "wallpaper_category": {
+        "title": "Wallpaper Category List",
+        "singular": "Category",
+        "add": "Add Category",
+        "search_placeholder": "🔍 Search categories...",
+        "total_wallpaper": "Total Wallpaper : ({count})",
+        "form": {
+            "name_label": "Name",
+            "name_placeholder": "Enter name"
+        }
+    }
+}

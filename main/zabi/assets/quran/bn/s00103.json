@@ -1,0 +1,49 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 103,
+            "serial_number": "১০৩",
+            "arabic_name": "العصر",
+            "translated_name": "আছর",
+            "verses_translate_name": "আয়াত",
+            "verses_count": "৩"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 601,
+                "page_number": "601",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6177,
+                        "chapter_id": 103,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "1",
+                        "arabic_name": "وَٱلْعَصْرِ",
+                        "translated_name": "ভাবো বিকালবেলার কথা।"
+                    },
+                    {
+                        "id": 6178,
+                        "chapter_id": 103,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "2",
+                        "arabic_name": "إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ",
+                        "translated_name": "নিঃসন্দেহ মানুষ আলবৎ লোকসানে পড়েছে, --"
+                    },
+                    {
+                        "id": 6179,
+                        "chapter_id": 103,
+                        "verses_translate_name": "আয়াত",
+                        "verses_number": "3",
+                        "arabic_name": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
+                        "translated_name": "তারা ব্যতীত যারা ঈমান এনেছে ও সৎকাজ করছে, আর পরস্পরকে সত্য অবলন্বনের জন্য মন্ত্রণা দিচ্ছে, এবং পরস্পরকে অধ্যবসায় অবলন্বনের পরামর্শ দিচ্ছে।"
+                    }
+                ],
+                "page_arabic_ayah": "وَٱلْعَصْرِ (١)  إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ (٢)  إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ (٣)",
+                "is_read": false
+            }
+        ]
+    }
+}

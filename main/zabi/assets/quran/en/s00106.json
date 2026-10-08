@@ -1,0 +1,59 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 106,
+            "serial_number": "106",
+            "arabic_name": "قريش",
+            "translated_name": "Quraysh",
+            "verses_translate_name": "Verses",
+            "verses_count": "4"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 602,
+                "page_number": "602",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6194,
+                        "chapter_id": 106,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "لِإِيلَـٰفِ قُرَيْشٍ",
+                        "translated_name": "SINCE THE QURAISH have been united,"
+                    },
+                    {
+                        "id": 6195,
+                        "chapter_id": 106,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "إِۦلَـٰفِهِمْ رِحْلَةَ ٱلشِّتَآءِ وَٱلصَّيْفِ",
+                        "translated_name": "United to fit out caravans winter and summer,"
+                    },
+                    {
+                        "id": 6196,
+                        "chapter_id": 106,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "فَلْيَعْبُدُوا۟ رَبَّ هَـٰذَا ٱلْبَيْتِ",
+                        "translated_name": "Let them worship the Lord of this House,"
+                    },
+                    {
+                        "id": 6197,
+                        "chapter_id": 106,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "ٱلَّذِىٓ أَطْعَمَهُم مِّن جُوعٍ وَءَامَنَهُم مِّنْ خَوْفٍۭ",
+                        "translated_name": "Who provided them against destitution and gave them security against fear."
+                    }
+                ],
+                "page_arabic_ayah": "لِإِيلَـٰفِ قُرَيْشٍ (١)  إِۦلَـٰفِهِمْ رِحْلَةَ ٱلشِّتَآءِ وَٱلصَّيْفِ (٢)  فَلْيَعْبُدُوا۟ رَبَّ هَـٰذَا ٱلْبَيْتِ (٣)  ٱلَّذِىٓ أَطْعَمَهُم مِّن جُوعٍ وَءَامَنَهُم مِّنْ خَوْفٍۭ (٤)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

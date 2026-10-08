@@ -1,0 +1,22 @@
+{
+    "landing_stats": {
+        "title": "الإحصائيات والشعارات",
+        "subtitle": "إدارة شعارات الثقة المعروضة في صفحتك الرئيسية",
+        "preview_page": "معاينة الصفحة",
+        "live_preview": "معاينة مباشرة",
+        "error_saving": "حدث خطأ أثناء الحفظ",
+        "section": {
+            "trust_badges": "شعارات الثقة"
+        },
+        "form": {
+            "rating_label": "التقييم",
+            "downloads_count_label": "عدد التحميلات",
+            "languages_count_label": "عدد اللغات"
+        },
+        "preview": {
+            "rating": "تقييم",
+            "downloads": "تحميل",
+            "languages": "لغة"
+        }
+    }
+}

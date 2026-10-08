@@ -1,0 +1,141 @@
+{
+    "setting": {
+        "index": {
+            "organization": {
+                "title": "Organization",
+                "company_name_label": "Company Name",
+                "company_name_placeholder": "Enter company name",
+                "address_label": "Address",
+                "address_placeholder": "Enter address",
+                "zakat_nisab_label": "Zakat Nisab",
+                "zakat_nisab_placeholder": "Enter Zakat Nisab amount",
+                "currency_symbol_label": "Currency Symbol",
+                "ramadan_schedule_label": "Ramadan Schedule",
+                "ramadan_schedule_desc": "Enable Ramadan-specific schedule features",
+                "show_donation_banner_label": "Show Donation Banner",
+                "show_donation_banner_desc": "Display the donation banner in the app",
+                "show_donation_icon_label": "Show Donation Icon",
+                "show_donation_icon_desc": "Display the donation icon in the app"
+            },
+            "media": {
+                "title": "Media Assets",
+                "upload": "Upload",
+                "company_logo": "Company Logo",
+                "company_icon": "Company Icon",
+                "app_banner": "App Banner",
+                "donation_banner": "Donation Banner"
+            },
+            "appearance": {
+                "title": "Appearance",
+                "description": "Choose the color theme applied to the mobile app, admin panel and landing page",
+                "customize_label": "Customize colors",
+                "customize_desc": "Override the selected preset with your own colors",
+                "mode_label": "Mode",
+                "mode_light": "Light",
+                "mode_dark": "Dark",
+                "reset_to_preset": "Reset to preset colors",
+                "color_primary": "Primary",
+                "color_secondary": "Secondary",
+                "color_accent": "Accent",
+                "color_background": "Background",
+                "color_surface": "Surface",
+                "color_text_primary": "Text (primary)",
+                "color_text_secondary": "Text (secondary)",
+                "color_error": "Error"
+            },
+            "integrations": {
+                "title": "Integrations",
+                "google_map_key_label": "Google Maps Key",
+                "google_map_key_placeholder": "Enter Google Maps API key",
+                "ai_secret_key_label": "AI Secret Key",
+                "get_api_key_groq": "Get API key from Groq",
+                "ai_secret_key_placeholder": "Enter AI secret key",
+                "play_store_url_label": "Play Store URL",
+                "app_store_url_label": "App Store URL"
+            },
+            "descriptions": {
+                "title": "Descriptions",
+                "zakat_description_label": "Zakat Description",
+                "zakat_description_placeholder": "Enter Zakat description",
+                "haram_description_label": "Haram Description",
+                "haram_description_placeholder": "Enter Haram description"
+            },
+            "save_changes": "Save Changes"
+        },
+        "email": {
+            "sender_identity": {
+                "title": "Sender Identity",
+                "provider_label": "Provider",
+                "from_name_label": "From Name",
+                "from_name_placeholder": "Enter sender name",
+                "from_email_label": "From Email",
+                "from_email_placeholder": "Enter sender email"
+            },
+            "smtp_server": {
+                "title": "SMTP Server",
+                "smtp_host_label": "SMTP Host",
+                "smtp_port_label": "SMTP Port",
+                "encryption_type_label": "Encryption Type"
+            },
+            "credentials": {
+                "title": "Credentials",
+                "smtp_username_label": "SMTP Username",
+                "smtp_username_placeholder": "Enter SMTP username",
+                "smtp_password_label": "SMTP Password",
+                "smtp_password_placeholder": "Enter SMTP password"
+            },
+            "save_changes": "Save Changes"
+        },
+        "home_layout": {
+            "title": "Home Screen Layout",
+            "description": "Choose which home screen design the mobile app displays to users",
+            "save_changes": "Save Changes"
+        },
+        "privacy_support": {
+            "save_changes": "Save Changes",
+            "sections": {
+                "privacy_policy": {
+                    "title": "Privacy Policy",
+                    "desc": "Manage the privacy policy shown to your users"
+                },
+                "support": {
+                    "title": "Support",
+                    "desc": "Manage the support information shown to your users"
+                },
+                "terms_and_conditions": {
+                    "title": "Terms & Conditions",
+                    "desc": "Manage the terms and conditions shown to your users"
+                }
+            }
+        },
+        "landing": {
+            "save_changes": "Save Changes",
+            "hero": {
+                "title": "Hero Section",
+                "app_name_label": "App Name",
+                "badge_text_label": "Badge Text",
+                "hero_title_label": "Hero Title",
+                "hero_subtitle_label": "Hero Subtitle",
+                "hero_description_label": "Hero Description",
+                "hero_description_placeholder": "Enter hero description"
+            },
+            "stats": {
+                "title": "Stats & Badges",
+                "rating_label": "App Rating",
+                "downloads_count_label": "Downloads Count",
+                "languages_count_label": "Languages Count"
+            },
+            "links": {
+                "title": "Download Links",
+                "app_store_url_label": "App Store URL",
+                "play_store_url_label": "Play Store URL",
+                "codecanyon_url_label": "CodeCanyon URL"
+            },
+            "footer": {
+                "title": "Footer",
+                "description_label": "Footer Description",
+                "description_placeholder": "Enter footer description..."
+            }
+        }
+    }
+}

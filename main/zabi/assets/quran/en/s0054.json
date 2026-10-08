@@ -1,0 +1,494 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 54,
+            "serial_number": "54",
+            "arabic_name": "القمر",
+            "translated_name": "Al-Qamar",
+            "verses_translate_name": "Verses",
+            "verses_count": "55"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 528,
+                "page_number": "528",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 4847,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "ٱقْتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلْقَمَرُ",
+                        "translated_name": "THE HOUR HAS come and split is the moon."
+                    },
+                    {
+                        "id": 4848,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "وَإِن يَرَوْا۟ ءَايَةً يُعْرِضُوا۟ وَيَقُولُوا۟ سِحْرٌ مُّسْتَمِرٌّ",
+                        "translated_name": "But if they see a sign they turn away, and say: \"This is the same old lie continuing,\""
+                    },
+                    {
+                        "id": 4849,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "وَكَذَّبُوا۟ وَٱتَّبَعُوٓا۟ أَهْوَآءَهُمْ ۚ وَكُلُّ أَمْرٍ مُّسْتَقِرٌّ",
+                        "translated_name": "And deny, and follow their own vain desires; but every matter is determined at its time."
+                    },
+                    {
+                        "id": 4850,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "وَلَقَدْ جَآءَهُم مِّنَ ٱلْأَنۢبَآءِ مَا فِيهِ مُزْدَجَرٌ",
+                        "translated_name": "Messages deterring them from evil had come to them,"
+                    },
+                    {
+                        "id": 4851,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "حِكْمَةٌۢ بَـٰلِغَةٌ ۖ فَمَا تُغْنِ ٱلنُّذُرُ",
+                        "translated_name": "Containing consummate wisdom; yet warnings were of no avail."
+                    },
+                    {
+                        "id": 4852,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "فَتَوَلَّ عَنْهُمْ ۘ يَوْمَ يَدْعُ ٱلدَّاعِ إِلَىٰ شَىْءٍ نُّكُرٍ",
+                        "translated_name": "So turn away from them. When on the Day the crier calls to the painful business,"
+                    }
+                ],
+                "page_arabic_ayah": "ٱقْتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلْقَمَرُ (١)  وَإِن يَرَوْا۟ ءَايَةً يُعْرِضُوا۟ وَيَقُولُوا۟ سِحْرٌ مُّسْتَمِرٌّ (٢)  وَكَذَّبُوا۟ وَٱتَّبَعُوٓا۟ أَهْوَآءَهُمْ ۚ وَكُلُّ أَمْرٍ مُّسْتَقِرٌّ (٣)  وَلَقَدْ جَآءَهُم مِّنَ ٱلْأَنۢبَآءِ مَا فِيهِ مُزْدَجَرٌ (٤)  حِكْمَةٌۢ بَـٰلِغَةٌ ۖ فَمَا تُغْنِ ٱلنُّذُرُ (٥)  فَتَوَلَّ عَنْهُمْ ۘ يَوْمَ يَدْعُ ٱلدَّاعِ إِلَىٰ شَىْءٍ نُّكُرٍ (٦)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 529,
+                "page_number": "529",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 4853,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "خُشَّعًا أَبْصَـٰرُهُمْ يَخْرُجُونَ مِنَ ٱلْأَجْدَاثِ كَأَنَّهُمْ جَرَادٌ مُّنتَشِرٌ",
+                        "translated_name": "They will come out of the graves with downcast eyes like an expanding swarm of locusts."
+                    },
+                    {
+                        "id": 4854,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "مُّهْطِعِينَ إِلَى ٱلدَّاعِ ۖ يَقُولُ ٱلْكَـٰفِرُونَ هَـٰذَا يَوْمٌ عَسِرٌ",
+                        "translated_name": "They will hasten forward to the caller, gazes fixed. And the unbelievers will say: \"This is the day of untold woe.\""
+                    },
+                    {
+                        "id": 4855,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "۞ كَذَّبَتْ قَبْلَهُمْ قَوْمُ نُوحٍ فَكَذَّبُوا۟ عَبْدَنَا وَقَالُوا۟ مَجْنُونٌ وَٱزْدُجِرَ",
+                        "translated_name": "The people of Noah had denied before them, and had called Our votary a liar, and said: \"He is possessed,\" and repulsed him."
+                    },
+                    {
+                        "id": 4856,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "فَدَعَا رَبَّهُۥٓ أَنِّى مَغْلُوبٌ فَٱنتَصِرْ",
+                        "translated_name": "So he prayed to his Lord: \"I am helpless, deliver me.\""
+                    },
+                    {
+                        "id": 4857,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "فَفَتَحْنَآ أَبْوَٰبَ ٱلسَّمَآءِ بِمَآءٍ مُّنْهَمِرٍ",
+                        "translated_name": "And We opened up the flood gates of the sky with water pouring down in torrents,"
+                    },
+                    {
+                        "id": 4858,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "وَفَجَّرْنَا ٱلْأَرْضَ عُيُونًا فَٱلْتَقَى ٱلْمَآءُ عَلَىٰٓ أَمْرٍ قَدْ قُدِرَ",
+                        "translated_name": "And We opened up the springs of the earth; and the waters met for a decreed end."
+                    },
+                    {
+                        "id": 4859,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "وَحَمَلْنَـٰهُ عَلَىٰ ذَاتِ أَلْوَٰحٍ وَدُسُرٍ",
+                        "translated_name": "But We bore him on a (vessel made) of planks and oakum,"
+                    },
+                    {
+                        "id": 4860,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "تَجْرِى بِأَعْيُنِنَا جَزَآءً لِّمَن كَانَ كُفِرَ",
+                        "translated_name": "Which sailed right under Our eyes: A recompense for him who had been denied."
+                    },
+                    {
+                        "id": 4861,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "وَلَقَد تَّرَكْنَـٰهَآ ءَايَةً فَهَلْ مِن مُّدَّكِرٍ",
+                        "translated_name": "And We left it as a sign. Is there anyone who will be warned?"
+                    },
+                    {
+                        "id": 4862,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ",
+                        "translated_name": "How was then My punishment and My commination!"
+                    },
+                    {
+                        "id": 4863,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ",
+                        "translated_name": "Easy have We made the Qur'an to understand: So is there any one who will be warned?"
+                    },
+                    {
+                        "id": 4864,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "كَذَّبَتْ عَادٌ فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ",
+                        "translated_name": "The 'Ad had also disavowed. How was then My punishment and My commination!"
+                    },
+                    {
+                        "id": 4865,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "إِنَّآ أَرْسَلْنَا عَلَيْهِمْ رِيحًا صَرْصَرًا فِى يَوْمِ نَحْسٍ مُّسْتَمِرٍّ",
+                        "translated_name": "We let loose against them a violent roaring wind on a day of ill omen, continuous,"
+                    },
+                    {
+                        "id": 4866,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "20",
+                        "arabic_name": "تَنزِعُ ٱلنَّاسَ كَأَنَّهُمْ أَعْجَازُ نَخْلٍ مُّنقَعِرٍ",
+                        "translated_name": "Which snatched away men as though they were palm trees pulled out by the roots."
+                    },
+                    {
+                        "id": 4867,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "21",
+                        "arabic_name": "فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ",
+                        "translated_name": "How was then My punishment and My commination!"
+                    },
+                    {
+                        "id": 4868,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "22",
+                        "arabic_name": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ",
+                        "translated_name": "Easy have We made the Qur'an to understand: So is there any one who will pay heed?"
+                    },
+                    {
+                        "id": 4869,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "23",
+                        "arabic_name": "كَذَّبَتْ ثَمُودُ بِٱلنُّذُرِ",
+                        "translated_name": "The Thamud rejected the warnings,"
+                    },
+                    {
+                        "id": 4870,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "24",
+                        "arabic_name": "فَقَالُوٓا۟ أَبَشَرًا مِّنَّا وَٰحِدًا نَّتَّبِعُهُۥٓ إِنَّآ إِذًا لَّفِى ضَلَـٰلٍ وَسُعُرٍ",
+                        "translated_name": "And said: \"Should we follow only one man among us? In that case we shall he in error and insane."
+                    },
+                    {
+                        "id": 4871,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "25",
+                        "arabic_name": "أَءُلْقِىَ ٱلذِّكْرُ عَلَيْهِ مِنۢ بَيْنِنَا بَلْ هُوَ كَذَّابٌ أَشِرٌ",
+                        "translated_name": "Was he the one of all of us to have been given the exposition? He is surely an impudent liar.\""
+                    },
+                    {
+                        "id": 4872,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "26",
+                        "arabic_name": "سَيَعْلَمُونَ غَدًا مَّنِ ٱلْكَذَّابُ ٱلْأَشِرُ",
+                        "translated_name": "\"Tomorrow they will know who is the impudent liar!"
+                    },
+                    {
+                        "id": 4873,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "27",
+                        "arabic_name": "إِنَّا مُرْسِلُوا۟ ٱلنَّاقَةِ فِتْنَةً لَّهُمْ فَٱرْتَقِبْهُمْ وَٱصْطَبِرْ",
+                        "translated_name": "We shall send the she-camel to try them. So watch them, and be constant."
+                    }
+                ],
+                "page_arabic_ayah": "خُشَّعًا أَبْصَـٰرُهُمْ يَخْرُجُونَ مِنَ ٱلْأَجْدَاثِ كَأَنَّهُمْ جَرَادٌ مُّنتَشِرٌ (٧)  مُّهْطِعِينَ إِلَى ٱلدَّاعِ ۖ يَقُولُ ٱلْكَـٰفِرُونَ هَـٰذَا يَوْمٌ عَسِرٌ (٨)  ۞ كَذَّبَتْ قَبْلَهُمْ قَوْمُ نُوحٍ فَكَذَّبُوا۟ عَبْدَنَا وَقَالُوا۟ مَجْنُونٌ وَٱزْدُجِرَ (٩)  فَدَعَا رَبَّهُۥٓ أَنِّى مَغْلُوبٌ فَٱنتَصِرْ (١٠)  فَفَتَحْنَآ أَبْوَٰبَ ٱلسَّمَآءِ بِمَآءٍ مُّنْهَمِرٍ (١١)  وَفَجَّرْنَا ٱلْأَرْضَ عُيُونًا فَٱلْتَقَى ٱلْمَآءُ عَلَىٰٓ أَمْرٍ قَدْ قُدِرَ (١٢)  وَحَمَلْنَـٰهُ عَلَىٰ ذَاتِ أَلْوَٰحٍ وَدُسُرٍ (١٣)  تَجْرِى بِأَعْيُنِنَا جَزَآءً لِّمَن كَانَ كُفِرَ (١٤)  وَلَقَد تَّرَكْنَـٰهَآ ءَايَةً فَهَلْ مِن مُّدَّكِرٍ (١٥)  فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ (١٦)  وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ (١٧)  كَذَّبَتْ عَادٌ فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ (١٨)  إِنَّآ أَرْسَلْنَا عَلَيْهِمْ رِيحًا صَرْصَرًا فِى يَوْمِ نَحْسٍ مُّسْتَمِرٍّ (١٩)  تَنزِعُ ٱلنَّاسَ كَأَنَّهُمْ أَعْجَازُ نَخْلٍ مُّنقَعِرٍ (٢٠)  فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ (٢١)  وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ (٢٢)  كَذَّبَتْ ثَمُودُ بِٱلنُّذُرِ (٢٣)  فَقَالُوٓا۟ أَبَشَرًا مِّنَّا وَٰحِدًا نَّتَّبِعُهُۥٓ إِنَّآ إِذًا لَّفِى ضَلَـٰلٍ وَسُعُرٍ (٢٤)  أَءُلْقِىَ ٱلذِّكْرُ عَلَيْهِ مِنۢ بَيْنِنَا بَلْ هُوَ كَذَّابٌ أَشِرٌ (٢٥)  سَيَعْلَمُونَ غَدًا مَّنِ ٱلْكَذَّابُ ٱلْأَشِرُ (٢٦)  إِنَّا مُرْسِلُوا۟ ٱلنَّاقَةِ فِتْنَةً لَّهُمْ فَٱرْتَقِبْهُمْ وَٱصْطَبِرْ (٢٧)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 530,
+                "page_number": "530",
+                "page_key": 2,
+                "page_verses": [
+                    {
+                        "id": 4874,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "28",
+                        "arabic_name": "وَنَبِّئْهُمْ أَنَّ ٱلْمَآءَ قِسْمَةٌۢ بَيْنَهُمْ ۖ كُلُّ شِرْبٍ مُّحْتَضَرٌ",
+                        "translated_name": "Tell them that the water is to be apportioned between them (and her); and every turn of drinking will be fixed (for each).\""
+                    },
+                    {
+                        "id": 4875,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "29",
+                        "arabic_name": "فَنَادَوْا۟ صَاحِبَهُمْ فَتَعَاطَىٰ فَعَقَرَ",
+                        "translated_name": "But they called their commander, who seized and hamstrung her."
+                    },
+                    {
+                        "id": 4876,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "30",
+                        "arabic_name": "فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ",
+                        "translated_name": "How was then My punishment of which they had been warned?"
+                    },
+                    {
+                        "id": 4877,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "31",
+                        "arabic_name": "إِنَّآ أَرْسَلْنَا عَلَيْهِمْ صَيْحَةً وَٰحِدَةً فَكَانُوا۟ كَهَشِيمِ ٱلْمُحْتَظِرِ",
+                        "translated_name": "We sent a single blast against them, and they were reduced to husks of a decayed fence."
+                    },
+                    {
+                        "id": 4878,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "32",
+                        "arabic_name": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ",
+                        "translated_name": "Easy have We made the Qur'an to understand: So is there any one who will be warned?"
+                    },
+                    {
+                        "id": 4879,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "33",
+                        "arabic_name": "كَذَّبَتْ قَوْمُ لُوطٍۭ بِٱلنُّذُرِ",
+                        "translated_name": "The people of Lot rejected the warnings."
+                    },
+                    {
+                        "id": 4880,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "34",
+                        "arabic_name": "إِنَّآ أَرْسَلْنَا عَلَيْهِمْ حَاصِبًا إِلَّآ ءَالَ لُوطٍ ۖ نَّجَّيْنَـٰهُم بِسَحَرٍ",
+                        "translated_name": "We sent a stone-hurtling storm against them, except the family of Lot whom We saved in the early hours of the morning"
+                    },
+                    {
+                        "id": 4881,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "35",
+                        "arabic_name": "نِّعْمَةً مِّنْ عِندِنَا ۚ كَذَٰلِكَ نَجْزِى مَن شَكَرَ",
+                        "translated_name": "As a favour from Us. That is how We reward the grateful."
+                    },
+                    {
+                        "id": 4882,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "36",
+                        "arabic_name": "وَلَقَدْ أَنذَرَهُم بَطْشَتَنَا فَتَمَارَوْا۟ بِٱلنُّذُرِ",
+                        "translated_name": "He had warned them of Our might, but they passed over the warnings."
+                    },
+                    {
+                        "id": 4883,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "37",
+                        "arabic_name": "وَلَقَدْ رَٰوَدُوهُ عَن ضَيْفِهِۦ فَطَمَسْنَآ أَعْيُنَهُمْ فَذُوقُوا۟ عَذَابِى وَنُذُرِ",
+                        "translated_name": "They lusted after his guests, so We put out their eyes (and said): \"Taste My punishment and My commination.\""
+                    },
+                    {
+                        "id": 4884,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "38",
+                        "arabic_name": "وَلَقَدْ صَبَّحَهُم بُكْرَةً عَذَابٌ مُّسْتَقِرٌّ",
+                        "translated_name": "And early in the morning the decreed punishment came upon them."
+                    },
+                    {
+                        "id": 4885,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "39",
+                        "arabic_name": "فَذُوقُوا۟ عَذَابِى وَنُذُرِ",
+                        "translated_name": "So now taste My punishment and My commination!"
+                    },
+                    {
+                        "id": 4886,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "40",
+                        "arabic_name": "وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ",
+                        "translated_name": "Easy have We made the Qur'an to understand: So is there any one who will be warned?"
+                    },
+                    {
+                        "id": 4887,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "41",
+                        "arabic_name": "وَلَقَدْ جَآءَ ءَالَ فِرْعَوْنَ ٱلنُّذُرُ",
+                        "translated_name": "The warnings came to the people of Pharaoh."
+                    },
+                    {
+                        "id": 4888,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "42",
+                        "arabic_name": "كَذَّبُوا۟ بِـَٔايَـٰتِنَا كُلِّهَا فَأَخَذْنَـٰهُمْ أَخْذَ عَزِيزٍ مُّقْتَدِرٍ",
+                        "translated_name": "They rejected each one of Our signs. So We seized them with the grip of one mighty and powerful."
+                    },
+                    {
+                        "id": 4889,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "43",
+                        "arabic_name": "أَكُفَّارُكُمْ خَيْرٌ مِّنْ أُو۟لَـٰٓئِكُمْ أَمْ لَكُم بَرَآءَةٌ فِى ٱلزُّبُرِ",
+                        "translated_name": "Are the unbelievers among you any better than they? Or is there immunity for you in the Scriptures?"
+                    },
+                    {
+                        "id": 4890,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "44",
+                        "arabic_name": "أَمْ يَقُولُونَ نَحْنُ جَمِيعٌ مُّنتَصِرٌ",
+                        "translated_name": "Or do they say: \"We are a well-accoutred army?\""
+                    },
+                    {
+                        "id": 4891,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "45",
+                        "arabic_name": "سَيُهْزَمُ ٱلْجَمْعُ وَيُوَلُّونَ ٱلدُّبُرَ",
+                        "translated_name": "The army will be routed and put to flight."
+                    },
+                    {
+                        "id": 4892,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "46",
+                        "arabic_name": "بَلِ ٱلسَّاعَةُ مَوْعِدُهُمْ وَٱلسَّاعَةُ أَدْهَىٰ وَأَمَرُّ",
+                        "translated_name": "Surely the Hour will be the moment of their promise, and that moment will be calamitous and distressing."
+                    },
+                    {
+                        "id": 4893,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "47",
+                        "arabic_name": "إِنَّ ٱلْمُجْرِمِينَ فِى ضَلَـٰلٍ وَسُعُرٍ",
+                        "translated_name": "Surely the sinners are misguided and insane."
+                    },
+                    {
+                        "id": 4894,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "48",
+                        "arabic_name": "يَوْمَ يُسْحَبُونَ فِى ٱلنَّارِ عَلَىٰ وُجُوهِهِمْ ذُوقُوا۟ مَسَّ سَقَرَ",
+                        "translated_name": "On that Day they will be dragged into the fire faces foremost, (and told:) \"Taste the feel of Hell.\""
+                    },
+                    {
+                        "id": 4895,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "49",
+                        "arabic_name": "إِنَّا كُلَّ شَىْءٍ خَلَقْنَـٰهُ بِقَدَرٍ",
+                        "translated_name": "We have indeed created all things by measure;"
+                    }
+                ],
+                "page_arabic_ayah": "وَنَبِّئْهُمْ أَنَّ ٱلْمَآءَ قِسْمَةٌۢ بَيْنَهُمْ ۖ كُلُّ شِرْبٍ مُّحْتَضَرٌ (٢٨)  فَنَادَوْا۟ صَاحِبَهُمْ فَتَعَاطَىٰ فَعَقَرَ (٢٩)  فَكَيْفَ كَانَ عَذَابِى وَنُذُرِ (٣٠)  إِنَّآ أَرْسَلْنَا عَلَيْهِمْ صَيْحَةً وَٰحِدَةً فَكَانُوا۟ كَهَشِيمِ ٱلْمُحْتَظِرِ (٣١)  وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ (٣٢)  كَذَّبَتْ قَوْمُ لُوطٍۭ بِٱلنُّذُرِ (٣٣)  إِنَّآ أَرْسَلْنَا عَلَيْهِمْ حَاصِبًا إِلَّآ ءَالَ لُوطٍ ۖ نَّجَّيْنَـٰهُم بِسَحَرٍ (٣٤)  نِّعْمَةً مِّنْ عِندِنَا ۚ كَذَٰلِكَ نَجْزِى مَن شَكَرَ (٣٥)  وَلَقَدْ أَنذَرَهُم بَطْشَتَنَا فَتَمَارَوْا۟ بِٱلنُّذُرِ (٣٦)  وَلَقَدْ رَٰوَدُوهُ عَن ضَيْفِهِۦ فَطَمَسْنَآ أَعْيُنَهُمْ فَذُوقُوا۟ عَذَابِى وَنُذُرِ (٣٧)  وَلَقَدْ صَبَّحَهُم بُكْرَةً عَذَابٌ مُّسْتَقِرٌّ (٣٨)  فَذُوقُوا۟ عَذَابِى وَنُذُرِ (٣٩)  وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ (٤٠)  وَلَقَدْ جَآءَ ءَالَ فِرْعَوْنَ ٱلنُّذُرُ (٤١)  كَذَّبُوا۟ بِـَٔايَـٰتِنَا كُلِّهَا فَأَخَذْنَـٰهُمْ أَخْذَ عَزِيزٍ مُّقْتَدِرٍ (٤٢)  أَكُفَّارُكُمْ خَيْرٌ مِّنْ أُو۟لَـٰٓئِكُمْ أَمْ لَكُم بَرَآءَةٌ فِى ٱلزُّبُرِ (٤٣)  أَمْ يَقُولُونَ نَحْنُ جَمِيعٌ مُّنتَصِرٌ (٤٤)  سَيُهْزَمُ ٱلْجَمْعُ وَيُوَلُّونَ ٱلدُّبُرَ (٤٥)  بَلِ ٱلسَّاعَةُ مَوْعِدُهُمْ وَٱلسَّاعَةُ أَدْهَىٰ وَأَمَرُّ (٤٦)  إِنَّ ٱلْمُجْرِمِينَ فِى ضَلَـٰلٍ وَسُعُرٍ (٤٧)  يَوْمَ يُسْحَبُونَ فِى ٱلنَّارِ عَلَىٰ وُجُوهِهِمْ ذُوقُوا۟ مَسَّ سَقَرَ (٤٨)  إِنَّا كُلَّ شَىْءٍ خَلَقْنَـٰهُ بِقَدَرٍ (٤٩)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 531,
+                "page_number": "531",
+                "page_key": 3,
+                "page_verses": [
+                    {
+                        "id": 4896,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "50",
+                        "arabic_name": "وَمَآ أَمْرُنَآ إِلَّا وَٰحِدَةٌ كَلَمْحٍۭ بِٱلْبَصَرِ",
+                        "translated_name": "And Our command is but one (word) swift as the winking of an eye."
+                    },
+                    {
+                        "id": 4897,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "51",
+                        "arabic_name": "وَلَقَدْ أَهْلَكْنَآ أَشْيَاعَكُمْ فَهَلْ مِن مُّدَّكِرٍ",
+                        "translated_name": "We have destroyed the likes of you in the past: So is there any one who will be warned?"
+                    },
+                    {
+                        "id": 4898,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "52",
+                        "arabic_name": "وَكُلُّ شَىْءٍ فَعَلُوهُ فِى ٱلزُّبُرِ",
+                        "translated_name": "All things they do are (recorded) in the books;"
+                    },
+                    {
+                        "id": 4899,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "53",
+                        "arabic_name": "وَكُلُّ صَغِيرٍ وَكَبِيرٍ مُّسْتَطَرٌ",
+                        "translated_name": "All things small or great have been written down."
+                    },
+                    {
+                        "id": 4900,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "54",
+                        "arabic_name": "إِنَّ ٱلْمُتَّقِينَ فِى جَنَّـٰتٍ وَنَهَرٍ",
+                        "translated_name": "Surely those who fear God and follow the straight path will be amidst gardens and light,"
+                    },
+                    {
+                        "id": 4901,
+                        "chapter_id": 54,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "55",
+                        "arabic_name": "فِى مَقْعَدِ صِدْقٍ عِندَ مَلِيكٍ مُّقْتَدِرٍۭ",
+                        "translated_name": "At the still centre in the proximity of the King all-powerful."
+                    }
+                ],
+                "page_arabic_ayah": "وَمَآ أَمْرُنَآ إِلَّا وَٰحِدَةٌ كَلَمْحٍۭ بِٱلْبَصَرِ (٥٠)  وَلَقَدْ أَهْلَكْنَآ أَشْيَاعَكُمْ فَهَلْ مِن مُّدَّكِرٍ (٥١)  وَكُلُّ شَىْءٍ فَعَلُوهُ فِى ٱلزُّبُرِ (٥٢)  وَكُلُّ صَغِيرٍ وَكَبِيرٍ مُّسْتَطَرٌ (٥٣)  إِنَّ ٱلْمُتَّقِينَ فِى جَنَّـٰتٍ وَنَهَرٍ (٥٤)  فِى مَقْعَدِ صِدْقٍ عِندَ مَلِيكٍ مُّقْتَدِرٍۭ (٥٥)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

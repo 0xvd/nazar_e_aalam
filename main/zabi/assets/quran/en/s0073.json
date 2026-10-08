@@ -1,0 +1,196 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 73,
+            "serial_number": "73",
+            "arabic_name": "المزمل",
+            "translated_name": "Al-Muzzammil",
+            "verses_translate_name": "Verses",
+            "verses_count": "20"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 574,
+                "page_number": "574",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5476,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "يَـٰٓأَيُّهَا ٱلْمُزَّمِّلُ",
+                        "translated_name": "O YOU ENWRAPPED in the cloak (of Prophethood),"
+                    },
+                    {
+                        "id": 5477,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "قُمِ ٱلَّيْلَ إِلَّا قَلِيلًا",
+                        "translated_name": "Keep watch all the night except some,"
+                    },
+                    {
+                        "id": 5478,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "نِّصْفَهُۥٓ أَوِ ٱنقُصْ مِنْهُ قَلِيلًا",
+                        "translated_name": "A half of it or a little less"
+                    },
+                    {
+                        "id": 5479,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "أَوْ زِدْ عَلَيْهِ وَرَتِّلِ ٱلْقُرْءَانَ تَرْتِيلًا",
+                        "translated_name": "Or a little more, and recite the Qur'an slowly and distinctly."
+                    },
+                    {
+                        "id": 5480,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "إِنَّا سَنُلْقِى عَلَيْكَ قَوْلًا ثَقِيلًا",
+                        "translated_name": "We shall soon entrust to you a message heavy (with solemnity)."
+                    },
+                    {
+                        "id": 5481,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "إِنَّ نَاشِئَةَ ٱلَّيْلِ هِىَ أَشَدُّ وَطْـًٔا وَأَقْوَمُ قِيلًا",
+                        "translated_name": "Surely in the watches of the night the soul is most receptive and words more telling."
+                    },
+                    {
+                        "id": 5482,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "إِنَّ لَكَ فِى ٱلنَّهَارِ سَبْحًا طَوِيلًا",
+                        "translated_name": "Indeed during the day you have a long schedule of occupations."
+                    },
+                    {
+                        "id": 5483,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "وَٱذْكُرِ ٱسْمَ رَبِّكَ وَتَبَتَّلْ إِلَيْهِ تَبْتِيلًا",
+                        "translated_name": "But recite the name of your Lord withdrawing yourself from everything, devoting yourself exclusively to Him."
+                    },
+                    {
+                        "id": 5484,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "رَّبُّ ٱلْمَشْرِقِ وَٱلْمَغْرِبِ لَآ إِلَـٰهَ إِلَّا هُوَ فَٱتَّخِذْهُ وَكِيلًا",
+                        "translated_name": "He is the Lord of the East and the West. There is no god but He. So take Him alone as your protector."
+                    },
+                    {
+                        "id": 5485,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "وَٱصْبِرْ عَلَىٰ مَا يَقُولُونَ وَٱهْجُرْهُمْ هَجْرًا جَمِيلًا",
+                        "translated_name": "Bear with patience what they say, and gracefully come away from them."
+                    },
+                    {
+                        "id": 5486,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "وَذَرْنِى وَٱلْمُكَذِّبِينَ أُو۟لِى ٱلنَّعْمَةِ وَمَهِّلْهُمْ قَلِيلًا",
+                        "translated_name": "Leave those to Me who deny, the lovers of ease and comfort; and bear with them for a while."
+                    },
+                    {
+                        "id": 5487,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "إِنَّ لَدَيْنَآ أَنكَالًا وَجَحِيمًا",
+                        "translated_name": "Verily We shall have fetters with Us, and a roaring furnace,"
+                    },
+                    {
+                        "id": 5488,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "وَطَعَامًا ذَا غُصَّةٍ وَعَذَابًا أَلِيمًا",
+                        "translated_name": "And food that will stick in the throat, and painful torment"
+                    },
+                    {
+                        "id": 5489,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "يَوْمَ تَرْجُفُ ٱلْأَرْضُ وَٱلْجِبَالُ وَكَانَتِ ٱلْجِبَالُ كَثِيبًا مَّهِيلًا",
+                        "translated_name": "On the day the earth and mountains will rock violently, and the mountains turn to a heap of poured-out sand."
+                    },
+                    {
+                        "id": 5490,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "إِنَّآ أَرْسَلْنَآ إِلَيْكُمْ رَسُولًا شَـٰهِدًا عَلَيْكُمْ كَمَآ أَرْسَلْنَآ إِلَىٰ فِرْعَوْنَ رَسُولًا",
+                        "translated_name": "We have sent an Apostle to you as a witness against you, as We had sent an apostle to the Pharaoh."
+                    },
+                    {
+                        "id": 5491,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "فَعَصَىٰ فِرْعَوْنُ ٱلرَّسُولَ فَأَخَذْنَـٰهُ أَخْذًا وَبِيلًا",
+                        "translated_name": "But the Pharaoh disobeyed the apostle; so We seized him with a grievous punishment."
+                    },
+                    {
+                        "id": 5492,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "فَكَيْفَ تَتَّقُونَ إِن كَفَرْتُمْ يَوْمًا يَجْعَلُ ٱلْوِلْدَٰنَ شِيبًا",
+                        "translated_name": "How then, if you disbelieve, will you preserve yourselves on the day which will even turn the children hoary?"
+                    },
+                    {
+                        "id": 5493,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "ٱلسَّمَآءُ مُنفَطِرٌۢ بِهِۦ ۚ كَانَ وَعْدُهُۥ مَفْعُولًا",
+                        "translated_name": "The heavens itself will be rent asunder (on that day). His promise is bound to be fulfilled."
+                    },
+                    {
+                        "id": 5494,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "إِنَّ هَـٰذِهِۦ تَذْكِرَةٌ ۖ فَمَن شَآءَ ٱتَّخَذَ إِلَىٰ رَبِّهِۦ سَبِيلًا",
+                        "translated_name": "Verily this is a reminder. So let him who desires take the way to his Lord."
+                    }
+                ],
+                "page_arabic_ayah": "يَـٰٓأَيُّهَا ٱلْمُزَّمِّلُ (١)  قُمِ ٱلَّيْلَ إِلَّا قَلِيلًا (٢)  نِّصْفَهُۥٓ أَوِ ٱنقُصْ مِنْهُ قَلِيلًا (٣)  أَوْ زِدْ عَلَيْهِ وَرَتِّلِ ٱلْقُرْءَانَ تَرْتِيلًا (٤)  إِنَّا سَنُلْقِى عَلَيْكَ قَوْلًا ثَقِيلًا (٥)  إِنَّ نَاشِئَةَ ٱلَّيْلِ هِىَ أَشَدُّ وَطْـًٔا وَأَقْوَمُ قِيلًا (٦)  إِنَّ لَكَ فِى ٱلنَّهَارِ سَبْحًا طَوِيلًا (٧)  وَٱذْكُرِ ٱسْمَ رَبِّكَ وَتَبَتَّلْ إِلَيْهِ تَبْتِيلًا (٨)  رَّبُّ ٱلْمَشْرِقِ وَٱلْمَغْرِبِ لَآ إِلَـٰهَ إِلَّا هُوَ فَٱتَّخِذْهُ وَكِيلًا (٩)  وَٱصْبِرْ عَلَىٰ مَا يَقُولُونَ وَٱهْجُرْهُمْ هَجْرًا جَمِيلًا (١٠)  وَذَرْنِى وَٱلْمُكَذِّبِينَ أُو۟لِى ٱلنَّعْمَةِ وَمَهِّلْهُمْ قَلِيلًا (١١)  إِنَّ لَدَيْنَآ أَنكَالًا وَجَحِيمًا (١٢)  وَطَعَامًا ذَا غُصَّةٍ وَعَذَابًا أَلِيمًا (١٣)  يَوْمَ تَرْجُفُ ٱلْأَرْضُ وَٱلْجِبَالُ وَكَانَتِ ٱلْجِبَالُ كَثِيبًا مَّهِيلًا (١٤)  إِنَّآ أَرْسَلْنَآ إِلَيْكُمْ رَسُولًا شَـٰهِدًا عَلَيْكُمْ كَمَآ أَرْسَلْنَآ إِلَىٰ فِرْعَوْنَ رَسُولًا (١٥)  فَعَصَىٰ فِرْعَوْنُ ٱلرَّسُولَ فَأَخَذْنَـٰهُ أَخْذًا وَبِيلًا (١٦)  فَكَيْفَ تَتَّقُونَ إِن كَفَرْتُمْ يَوْمًا يَجْعَلُ ٱلْوِلْدَٰنَ شِيبًا (١٧)  ٱلسَّمَآءُ مُنفَطِرٌۢ بِهِۦ ۚ كَانَ وَعْدُهُۥ مَفْعُولًا (١٨)  إِنَّ هَـٰذِهِۦ تَذْكِرَةٌ ۖ فَمَن شَآءَ ٱتَّخَذَ إِلَىٰ رَبِّهِۦ سَبِيلًا (١٩)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 575,
+                "page_number": "575",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 5495,
+                        "chapter_id": 73,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "20",
+                        "arabic_name": "۞ إِنَّ رَبَّكَ يَعْلَمُ أَنَّكَ تَقُومُ أَدْنَىٰ مِن ثُلُثَىِ ٱلَّيْلِ وَنِصْفَهُۥ وَثُلُثَهُۥ وَطَآئِفَةٌ مِّنَ ٱلَّذِينَ مَعَكَ ۚ وَٱللَّهُ يُقَدِّرُ ٱلَّيْلَ وَٱلنَّهَارَ ۚ عَلِمَ أَن لَّن تُحْصُوهُ فَتَابَ عَلَيْكُمْ ۖ فَٱقْرَءُوا۟ مَا تَيَسَّرَ مِنَ ٱلْقُرْءَانِ ۚ عَلِمَ أَن سَيَكُونُ مِنكُم مَّرْضَىٰ ۙ وَءَاخَرُونَ يَضْرِبُونَ فِى ٱلْأَرْضِ يَبْتَغُونَ مِن فَضْلِ ٱللَّهِ ۙ وَءَاخَرُونَ يُقَـٰتِلُونَ فِى سَبِيلِ ٱللَّهِ ۖ فَٱقْرَءُوا۟ مَا تَيَسَّرَ مِنْهُ ۚ وَأَقِيمُوا۟ ٱلصَّلَوٰةَ وَءَاتُوا۟ ٱلزَّكَوٰةَ وَأَقْرِضُوا۟ ٱللَّهَ قَرْضًا حَسَنًا ۚ وَمَا تُقَدِّمُوا۟ لِأَنفُسِكُم مِّنْ خَيْرٍ تَجِدُوهُ عِندَ ٱللَّهِ هُوَ خَيْرًا وَأَعْظَمَ أَجْرًا ۚ وَٱسْتَغْفِرُوا۟ ٱللَّهَ ۖ إِنَّ ٱللَّهَ غَفُورٌ رَّحِيمٌۢ",
+                        "translated_name": "Your Lord surely knows that you are occupied with your devotions for nearly two-thirds of the night, or half the night, or one-third of it, as do many others with you. Yet God prescribes the measure of night and day. He knows you cannot calculate it, and so turns to you in benevolence. So recite as much of the Qur'an as you can easily. He knows some among you will be sick, and some will be travelling over the earth in search of the bounty of God, and some fighting in the way of God. So read as much from it as you can easily, and be firm in devotion, pay the zakat, and lend a goodly loan to God. And what you send for yourself of the good, you will find it with God better and greater in reward. So ask for God's forgiveness. Indeed God is forgiving and kind."
+                    }
+                ],
+                "page_arabic_ayah": "۞ إِنَّ رَبَّكَ يَعْلَمُ أَنَّكَ تَقُومُ أَدْنَىٰ مِن ثُلُثَىِ ٱلَّيْلِ وَنِصْفَهُۥ وَثُلُثَهُۥ وَطَآئِفَةٌ مِّنَ ٱلَّذِينَ مَعَكَ ۚ وَٱللَّهُ يُقَدِّرُ ٱلَّيْلَ وَٱلنَّهَارَ ۚ عَلِمَ أَن لَّن تُحْصُوهُ فَتَابَ عَلَيْكُمْ ۖ فَٱقْرَءُوا۟ مَا تَيَسَّرَ مِنَ ٱلْقُرْءَانِ ۚ عَلِمَ أَن سَيَكُونُ مِنكُم مَّرْضَىٰ ۙ وَءَاخَرُونَ يَضْرِبُونَ فِى ٱلْأَرْضِ يَبْتَغُونَ مِن فَضْلِ ٱللَّهِ ۙ وَءَاخَرُونَ يُقَـٰتِلُونَ فِى سَبِيلِ ٱللَّهِ ۖ فَٱقْرَءُوا۟ مَا تَيَسَّرَ مِنْهُ ۚ وَأَقِيمُوا۟ ٱلصَّلَوٰةَ وَءَاتُوا۟ ٱلزَّكَوٰةَ وَأَقْرِضُوا۟ ٱللَّهَ قَرْضًا حَسَنًا ۚ وَمَا تُقَدِّمُوا۟ لِأَنفُسِكُم مِّنْ خَيْرٍ تَجِدُوهُ عِندَ ٱللَّهِ هُوَ خَيْرًا وَأَعْظَمَ أَجْرًا ۚ وَٱسْتَغْفِرُوا۟ ٱللَّهَ ۖ إِنَّ ٱللَّهَ غَفُورٌ رَّحِيمٌۢ (٢٠)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

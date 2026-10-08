@@ -1,0 +1,91 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 94,
+            "serial_number": "94",
+            "arabic_name": "الشرح",
+            "translated_name": "Ash-Sharh",
+            "verses_translate_name": "Verses",
+            "verses_count": "8"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 596,
+                "page_number": "596",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 6091,
+                        "chapter_id": 94,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
+                        "translated_name": "HAVE WE NOT opened up your breast"
+                    },
+                    {
+                        "id": 6092,
+                        "chapter_id": 94,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "وَوَضَعْنَا عَنكَ وِزْرَكَ",
+                        "translated_name": "And removed your burden"
+                    },
+                    {
+                        "id": 6093,
+                        "chapter_id": 94,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "ٱلَّذِىٓ أَنقَضَ ظَهْرَكَ",
+                        "translated_name": "Which had left you devoid of hope,"
+                    },
+                    {
+                        "id": 6094,
+                        "chapter_id": 94,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+                        "translated_name": "And exalted your fame?"
+                    },
+                    {
+                        "id": 6095,
+                        "chapter_id": 94,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+                        "translated_name": "Surely with hardship there is ease."
+                    },
+                    {
+                        "id": 6096,
+                        "chapter_id": 94,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+                        "translated_name": "With hardship indeed there is ease."
+                    },
+                    {
+                        "id": 6097,
+                        "chapter_id": 94,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "فَإِذَا فَرَغْتَ فَٱنصَبْ",
+                        "translated_name": "So when you are free work diligently,"
+                    },
+                    {
+                        "id": 6098,
+                        "chapter_id": 94,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "وَإِلَىٰ رَبِّكَ فَٱرْغَب",
+                        "translated_name": "And turn to your Lord with all your love."
+                    }
+                ],
+                "page_arabic_ayah": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ (١)  وَوَضَعْنَا عَنكَ وِزْرَكَ (٢)  ٱلَّذِىٓ أَنقَضَ ظَهْرَكَ (٣)  وَرَفَعْنَا لَكَ ذِكْرَكَ (٤)  فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا (٥)  إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا (٦)  فَإِذَا فَرَغْتَ فَٱنصَبْ (٧)  وَإِلَىٰ رَبِّكَ فَٱرْغَب (٨)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

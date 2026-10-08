@@ -1,0 +1,1177 @@
+[
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 16,
+            "serial_number": "16",
+            "arabic_name": "النحل",
+            "translated_name": "An-Nahl",
+            "verses_translate_name": "Verses",
+            "verses_count": "128"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 267,
+                "page_number": "267",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 1902,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "1",
+                        "arabic_name": "أَتَىٰٓ أَمْرُ ٱللَّهِ فَلَا تَسْتَعْجِلُوهُ ۚ سُبْحَـٰنَهُۥ وَتَعَـٰلَىٰ عَمَّا يُشْرِكُونَ",
+                        "translated_name": "THE DECREE of GOD will surely come; so do not try to hasten it: Too glorious and high is He for what they associate with Him."
+                    },
+                    {
+                        "id": 1903,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "2",
+                        "arabic_name": "يُنَزِّلُ ٱلْمَلَـٰٓئِكَةَ بِٱلرُّوحِ مِنْ أَمْرِهِۦ عَلَىٰ مَن يَشَآءُ مِنْ عِبَادِهِۦٓ أَنْ أَنذِرُوٓا۟ أَنَّهُۥ لَآ إِلَـٰهَ إِلَّآ أَنَا۠ فَٱتَّقُونِ",
+                        "translated_name": "He sends the angels with revelation by His command, to any of His creatures as He please, (saying): \"Warn that there is no god but I, so fear Me.\""
+                    },
+                    {
+                        "id": 1904,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "3",
+                        "arabic_name": "خَلَقَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ بِٱلْحَقِّ ۚ تَعَـٰلَىٰ عَمَّا يُشْرِكُونَ",
+                        "translated_name": "He created the heavens and the earth with reason. Too glorious and high is He for what they associate with Him."
+                    },
+                    {
+                        "id": 1905,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "4",
+                        "arabic_name": "خَلَقَ ٱلْإِنسَـٰنَ مِن نُّطْفَةٍ فَإِذَا هُوَ خَصِيمٌ مُّبِينٌ",
+                        "translated_name": "Man He created from a drop of semen; and still he becomes an open contender."
+                    },
+                    {
+                        "id": 1906,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "5",
+                        "arabic_name": "وَٱلْأَنْعَـٰمَ خَلَقَهَا ۗ لَكُمْ فِيهَا دِفْءٌ وَمَنَـٰفِعُ وَمِنْهَا تَأْكُلُونَ",
+                        "translated_name": "He created the cattle from whom you get warm clothing and (other) advantages, and some you eat."
+                    },
+                    {
+                        "id": 1907,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "6",
+                        "arabic_name": "وَلَكُمْ فِيهَا جَمَالٌ حِينَ تُرِيحُونَ وَحِينَ تَسْرَحُونَ",
+                        "translated_name": "There is life and cheer for you as you drive them home in the evening, and lead them out in the morning to graze."
+                    }
+                ],
+                "page_arabic_ayah": "أَتَىٰٓ أَمْرُ ٱللَّهِ فَلَا تَسْتَعْجِلُوهُ ۚ سُبْحَـٰنَهُۥ وَتَعَـٰلَىٰ عَمَّا يُشْرِكُونَ (١)  يُنَزِّلُ ٱلْمَلَـٰٓئِكَةَ بِٱلرُّوحِ مِنْ أَمْرِهِۦ عَلَىٰ مَن يَشَآءُ مِنْ عِبَادِهِۦٓ أَنْ أَنذِرُوٓا۟ أَنَّهُۥ لَآ إِلَـٰهَ إِلَّآ أَنَا۠ فَٱتَّقُونِ (٢)  خَلَقَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ بِٱلْحَقِّ ۚ تَعَـٰلَىٰ عَمَّا يُشْرِكُونَ (٣)  خَلَقَ ٱلْإِنسَـٰنَ مِن نُّطْفَةٍ فَإِذَا هُوَ خَصِيمٌ مُّبِينٌ (٤)  وَٱلْأَنْعَـٰمَ خَلَقَهَا ۗ لَكُمْ فِيهَا دِفْءٌ وَمَنَـٰفِعُ وَمِنْهَا تَأْكُلُونَ (٥)  وَلَكُمْ فِيهَا جَمَالٌ حِينَ تُرِيحُونَ وَحِينَ تَسْرَحُونَ (٦)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 268,
+                "page_number": "268",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 1908,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "7",
+                        "arabic_name": "وَتَحْمِلُ أَثْقَالَكُمْ إِلَىٰ بَلَدٍ لَّمْ تَكُونُوا۟ بَـٰلِغِيهِ إِلَّا بِشِقِّ ٱلْأَنفُسِ ۚ إِنَّ رَبَّكُمْ لَرَءُوفٌ رَّحِيمٌ",
+                        "translated_name": "They carry your burdens to lands so distant you could not have reached without much hardship. Indeed your Lord is compassionate and kind."
+                    },
+                    {
+                        "id": 1909,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "8",
+                        "arabic_name": "وَٱلْخَيْلَ وَٱلْبِغَالَ وَٱلْحَمِيرَ لِتَرْكَبُوهَا وَزِينَةً ۚ وَيَخْلُقُ مَا لَا تَعْلَمُونَ",
+                        "translated_name": "He created horses, mules and donkeys for riding and for splendour. He created other things too which you do not know."
+                    },
+                    {
+                        "id": 1910,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "9",
+                        "arabic_name": "وَعَلَى ٱللَّهِ قَصْدُ ٱلسَّبِيلِ وَمِنْهَا جَآئِرٌ ۚ وَلَوْ شَآءَ لَهَدَىٰكُمْ أَجْمَعِينَ",
+                        "translated_name": "To God leads the right path, though some deviate. If He willed He could guide you all to the right way."
+                    },
+                    {
+                        "id": 1911,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "10",
+                        "arabic_name": "هُوَ ٱلَّذِىٓ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً ۖ لَّكُم مِّنْهُ شَرَابٌ وَمِنْهُ شَجَرٌ فِيهِ تُسِيمُونَ",
+                        "translated_name": "It is He who sends down water from the sky of which you drink, and which nourishes the plants you feed your cattle,"
+                    },
+                    {
+                        "id": 1912,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "11",
+                        "arabic_name": "يُنۢبِتُ لَكُم بِهِ ٱلزَّرْعَ وَٱلزَّيْتُونَ وَٱلنَّخِيلَ وَٱلْأَعْنَـٰبَ وَمِن كُلِّ ٱلثَّمَرَٰتِ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَتَفَكَّرُونَ",
+                        "translated_name": "With which He makes crops grow, and olives, dates and grapes and fruits of every kind for you. In this is a sign for those who think."
+                    },
+                    {
+                        "id": 1913,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "12",
+                        "arabic_name": "وَسَخَّرَ لَكُمُ ٱلَّيْلَ وَٱلنَّهَارَ وَٱلشَّمْسَ وَٱلْقَمَرَ ۖ وَٱلنُّجُومُ مُسَخَّرَٰتٌۢ بِأَمْرِهِۦٓ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّقَوْمٍ يَعْقِلُونَ",
+                        "translated_name": "He harnessed the day and night for you, as also the sun, the moon and the stars, by His command. In this are signs for men who understand."
+                    },
+                    {
+                        "id": 1914,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "13",
+                        "arabic_name": "وَمَا ذَرَأَ لَكُمْ فِى ٱلْأَرْضِ مُخْتَلِفًا أَلْوَٰنُهُۥٓ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَذَّكَّرُونَ",
+                        "translated_name": "And other things of different shades has He produced on the earth for you. In this are signs for those who reflect."
+                    },
+                    {
+                        "id": 1915,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "14",
+                        "arabic_name": "وَهُوَ ٱلَّذِى سَخَّرَ ٱلْبَحْرَ لِتَأْكُلُوا۟ مِنْهُ لَحْمًا طَرِيًّا وَتَسْتَخْرِجُوا۟ مِنْهُ حِلْيَةً تَلْبَسُونَهَا وَتَرَى ٱلْفُلْكَ مَوَاخِرَ فِيهِ وَلِتَبْتَغُوا۟ مِن فَضْلِهِۦ وَلَعَلَّكُمْ تَشْكُرُونَ",
+                        "translated_name": "It is He who has subdued the sea that you may eat fresh meat from it, and obtain ornaments to wear. You see the ships plough through it that you may seek of His bounties and, perhaps, be grateful."
+                    }
+                ],
+                "page_arabic_ayah": "وَتَحْمِلُ أَثْقَالَكُمْ إِلَىٰ بَلَدٍ لَّمْ تَكُونُوا۟ بَـٰلِغِيهِ إِلَّا بِشِقِّ ٱلْأَنفُسِ ۚ إِنَّ رَبَّكُمْ لَرَءُوفٌ رَّحِيمٌ (٧)  وَٱلْخَيْلَ وَٱلْبِغَالَ وَٱلْحَمِيرَ لِتَرْكَبُوهَا وَزِينَةً ۚ وَيَخْلُقُ مَا لَا تَعْلَمُونَ (٨)  وَعَلَى ٱللَّهِ قَصْدُ ٱلسَّبِيلِ وَمِنْهَا جَآئِرٌ ۚ وَلَوْ شَآءَ لَهَدَىٰكُمْ أَجْمَعِينَ (٩)  هُوَ ٱلَّذِىٓ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً ۖ لَّكُم مِّنْهُ شَرَابٌ وَمِنْهُ شَجَرٌ فِيهِ تُسِيمُونَ (١٠)  يُنۢبِتُ لَكُم بِهِ ٱلزَّرْعَ وَٱلزَّيْتُونَ وَٱلنَّخِيلَ وَٱلْأَعْنَـٰبَ وَمِن كُلِّ ٱلثَّمَرَٰتِ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَتَفَكَّرُونَ (١١)  وَسَخَّرَ لَكُمُ ٱلَّيْلَ وَٱلنَّهَارَ وَٱلشَّمْسَ وَٱلْقَمَرَ ۖ وَٱلنُّجُومُ مُسَخَّرَٰتٌۢ بِأَمْرِهِۦٓ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّقَوْمٍ يَعْقِلُونَ (١٢)  وَمَا ذَرَأَ لَكُمْ فِى ٱلْأَرْضِ مُخْتَلِفًا أَلْوَٰنُهُۥٓ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَذَّكَّرُونَ (١٣)  وَهُوَ ٱلَّذِى سَخَّرَ ٱلْبَحْرَ لِتَأْكُلُوا۟ مِنْهُ لَحْمًا طَرِيًّا وَتَسْتَخْرِجُوا۟ مِنْهُ حِلْيَةً تَلْبَسُونَهَا وَتَرَى ٱلْفُلْكَ مَوَاخِرَ فِيهِ وَلِتَبْتَغُوا۟ مِن فَضْلِهِۦ وَلَعَلَّكُمْ تَشْكُرُونَ (١٤)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 269,
+                "page_number": "269",
+                "page_key": 2,
+                "page_verses": [
+                    {
+                        "id": 1916,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "15",
+                        "arabic_name": "وَأَلْقَىٰ فِى ٱلْأَرْضِ رَوَٰسِىَ أَن تَمِيدَ بِكُمْ وَأَنْهَـٰرًا وَسُبُلًا لَّعَلَّكُمْ تَهْتَدُونَ",
+                        "translated_name": "He placed stablisers in the earth so that while it revolves you live undisturbed, and rivers and tracks so that you may find your way;"
+                    },
+                    {
+                        "id": 1917,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "16",
+                        "arabic_name": "وَعَلَـٰمَـٰتٍ ۚ وَبِٱلنَّجْمِ هُمْ يَهْتَدُونَ",
+                        "translated_name": "As well as many other signs, as by the stars (you) find direction."
+                    },
+                    {
+                        "id": 1918,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "17",
+                        "arabic_name": "أَفَمَن يَخْلُقُ كَمَن لَّا يَخْلُقُ ۗ أَفَلَا تَذَكَّرُونَ",
+                        "translated_name": "So, could one who creates be like one who cannot? Will you not then contemplate?"
+                    },
+                    {
+                        "id": 1919,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "18",
+                        "arabic_name": "وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَآ ۗ إِنَّ ٱللَّهَ لَغَفُورٌ رَّحِيمٌ",
+                        "translated_name": "If you count the favours of God you will not be able to calculate. Assuredly God is forgiving and kind."
+                    },
+                    {
+                        "id": 1920,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "19",
+                        "arabic_name": "وَٱللَّهُ يَعْلَمُ مَا تُسِرُّونَ وَمَا تُعْلِنُونَ",
+                        "translated_name": "God knows what you hide and disclose."
+                    },
+                    {
+                        "id": 1921,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "20",
+                        "arabic_name": "وَٱلَّذِينَ يَدْعُونَ مِن دُونِ ٱللَّهِ لَا يَخْلُقُونَ شَيْـًٔا وَهُمْ يُخْلَقُونَ",
+                        "translated_name": ", As for those they call besides God, they cannot create a thing, and have themselves been created."
+                    },
+                    {
+                        "id": 1922,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "21",
+                        "arabic_name": "أَمْوَٰتٌ غَيْرُ أَحْيَآءٍ ۖ وَمَا يَشْعُرُونَ أَيَّانَ يُبْعَثُونَ",
+                        "translated_name": "Dead, without life they are, and do not know when they will be raised."
+                    },
+                    {
+                        "id": 1923,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "22",
+                        "arabic_name": "إِلَـٰهُكُمْ إِلَـٰهٌ وَٰحِدٌ ۚ فَٱلَّذِينَ لَا يُؤْمِنُونَ بِٱلْـَٔاخِرَةِ قُلُوبُهُم مُّنكِرَةٌ وَهُم مُّسْتَكْبِرُونَ",
+                        "translated_name": "Your God is one God. But the hearts of those who believe not in the life to come are filled with denial, and they are puffed up with pride."
+                    },
+                    {
+                        "id": 1924,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "23",
+                        "arabic_name": "لَا جَرَمَ أَنَّ ٱللَّهَ يَعْلَمُ مَا يُسِرُّونَ وَمَا يُعْلِنُونَ ۚ إِنَّهُۥ لَا يُحِبُّ ٱلْمُسْتَكْبِرِينَ",
+                        "translated_name": "Surely God knows what they hide and what they disclose. He certainly does not love the proud."
+                    },
+                    {
+                        "id": 1925,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "24",
+                        "arabic_name": "وَإِذَا قِيلَ لَهُم مَّاذَآ أَنزَلَ رَبُّكُمْ ۙ قَالُوٓا۟ أَسَـٰطِيرُ ٱلْأَوَّلِينَ",
+                        "translated_name": "For when they are asked: \"What has your Lord sent down?\" they say: \"Tales of long ago.\""
+                    },
+                    {
+                        "id": 1926,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "25",
+                        "arabic_name": "لِيَحْمِلُوٓا۟ أَوْزَارَهُمْ كَامِلَةً يَوْمَ ٱلْقِيَـٰمَةِ ۙ وَمِنْ أَوْزَارِ ٱلَّذِينَ يُضِلُّونَهُم بِغَيْرِ عِلْمٍ ۗ أَلَا سَآءَ مَا يَزِرُونَ",
+                        "translated_name": "On the Day of Resurrection they will carry their own burden and some of the load of those they have led astray without any knowledge. Oh, how evil a burden they will carry!"
+                    },
+                    {
+                        "id": 1927,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "26",
+                        "arabic_name": "قَدْ مَكَرَ ٱلَّذِينَ مِن قَبْلِهِمْ فَأَتَى ٱللَّهُ بُنْيَـٰنَهُم مِّنَ ٱلْقَوَاعِدِ فَخَرَّ عَلَيْهِمُ ٱلسَّقْفُ مِن فَوْقِهِمْ وَأَتَىٰهُمُ ٱلْعَذَابُ مِنْ حَيْثُ لَا يَشْعُرُونَ",
+                        "translated_name": "Those who have gone before them had also conspired; then God uprooted their structure from its foundation; the roof fell over them from above, and punishment came upon them from somewhere they did not suspect."
+                    }
+                ],
+                "page_arabic_ayah": "وَأَلْقَىٰ فِى ٱلْأَرْضِ رَوَٰسِىَ أَن تَمِيدَ بِكُمْ وَأَنْهَـٰرًا وَسُبُلًا لَّعَلَّكُمْ تَهْتَدُونَ (١٥)  وَعَلَـٰمَـٰتٍ ۚ وَبِٱلنَّجْمِ هُمْ يَهْتَدُونَ (١٦)  أَفَمَن يَخْلُقُ كَمَن لَّا يَخْلُقُ ۗ أَفَلَا تَذَكَّرُونَ (١٧)  وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَآ ۗ إِنَّ ٱللَّهَ لَغَفُورٌ رَّحِيمٌ (١٨)  وَٱللَّهُ يَعْلَمُ مَا تُسِرُّونَ وَمَا تُعْلِنُونَ (١٩)  وَٱلَّذِينَ يَدْعُونَ مِن دُونِ ٱللَّهِ لَا يَخْلُقُونَ شَيْـًٔا وَهُمْ يُخْلَقُونَ (٢٠)  أَمْوَٰتٌ غَيْرُ أَحْيَآءٍ ۖ وَمَا يَشْعُرُونَ أَيَّانَ يُبْعَثُونَ (٢١)  إِلَـٰهُكُمْ إِلَـٰهٌ وَٰحِدٌ ۚ فَٱلَّذِينَ لَا يُؤْمِنُونَ بِٱلْـَٔاخِرَةِ قُلُوبُهُم مُّنكِرَةٌ وَهُم مُّسْتَكْبِرُونَ (٢٢)  لَا جَرَمَ أَنَّ ٱللَّهَ يَعْلَمُ مَا يُسِرُّونَ وَمَا يُعْلِنُونَ ۚ إِنَّهُۥ لَا يُحِبُّ ٱلْمُسْتَكْبِرِينَ (٢٣)  وَإِذَا قِيلَ لَهُم مَّاذَآ أَنزَلَ رَبُّكُمْ ۙ قَالُوٓا۟ أَسَـٰطِيرُ ٱلْأَوَّلِينَ (٢٤)  لِيَحْمِلُوٓا۟ أَوْزَارَهُمْ كَامِلَةً يَوْمَ ٱلْقِيَـٰمَةِ ۙ وَمِنْ أَوْزَارِ ٱلَّذِينَ يُضِلُّونَهُم بِغَيْرِ عِلْمٍ ۗ أَلَا سَآءَ مَا يَزِرُونَ (٢٥)  قَدْ مَكَرَ ٱلَّذِينَ مِن قَبْلِهِمْ فَأَتَى ٱللَّهُ بُنْيَـٰنَهُم مِّنَ ٱلْقَوَاعِدِ فَخَرَّ عَلَيْهِمُ ٱلسَّقْفُ مِن فَوْقِهِمْ وَأَتَىٰهُمُ ٱلْعَذَابُ مِنْ حَيْثُ لَا يَشْعُرُونَ (٢٦)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 270,
+                "page_number": "270",
+                "page_key": 3,
+                "page_verses": [
+                    {
+                        "id": 1928,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "27",
+                        "arabic_name": "ثُمَّ يَوْمَ ٱلْقِيَـٰمَةِ يُخْزِيهِمْ وَيَقُولُ أَيْنَ شُرَكَآءِىَ ٱلَّذِينَ كُنتُمْ تُشَـٰٓقُّونَ فِيهِمْ ۚ قَالَ ٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ إِنَّ ٱلْخِزْىَ ٱلْيَوْمَ وَٱلسُّوٓءَ عَلَى ٱلْكَـٰفِرِينَ",
+                        "translated_name": "On the Day of Resurrection He will disgrace them and ask: \"Where are My compeers for whom you contended?\" Those endowed with knowledge will say: \"Shame and evil surely are for unbelievers today.\""
+                    },
+                    {
+                        "id": 1929,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "28",
+                        "arabic_name": "ٱلَّذِينَ تَتَوَفَّىٰهُمُ ٱلْمَلَـٰٓئِكَةُ ظَالِمِىٓ أَنفُسِهِمْ ۖ فَأَلْقَوُا۟ ٱلسَّلَمَ مَا كُنَّا نَعْمَلُ مِن سُوٓءٍۭ ۚ بَلَىٰٓ إِنَّ ٱللَّهَ عَلِيمٌۢ بِمَا كُنتُمْ تَعْمَلُونَ",
+                        "translated_name": "They whose souls are drawn out by the angels while they are sinning, shall offer submission: \"We did no evil.\" But God knows well what you did."
+                    },
+                    {
+                        "id": 1930,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "29",
+                        "arabic_name": "فَٱدْخُلُوٓا۟ أَبْوَٰبَ جَهَنَّمَ خَـٰلِدِينَ فِيهَا ۖ فَلَبِئْسَ مَثْوَى ٱلْمُتَكَبِّرِينَ",
+                        "translated_name": "So enter the gates of Hell, and dwell there for ever. How dreadful a dwelling for the haughty!"
+                    },
+                    {
+                        "id": 1931,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "30",
+                        "arabic_name": "۞ وَقِيلَ لِلَّذِينَ ٱتَّقَوْا۟ مَاذَآ أَنزَلَ رَبُّكُمْ ۚ قَالُوا۟ خَيْرًا ۗ لِّلَّذِينَ أَحْسَنُوا۟ فِى هَـٰذِهِ ٱلدُّنْيَا حَسَنَةٌ ۚ وَلَدَارُ ٱلْـَٔاخِرَةِ خَيْرٌ ۚ وَلَنِعْمَ دَارُ ٱلْمُتَّقِينَ",
+                        "translated_name": "When those who took heed for themselves would be asked: \"What did your Lord send down?\" They will answer: \"The best.\" For those who do good there is good in the world, but certainly the abode of the next is better. How excellent the home of the virtuous!"
+                    },
+                    {
+                        "id": 1932,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "31",
+                        "arabic_name": "جَنَّـٰتُ عَدْنٍ يَدْخُلُونَهَا تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ۖ لَهُمْ فِيهَا مَا يَشَآءُونَ ۚ كَذَٰلِكَ يَجْزِى ٱللَّهُ ٱلْمُتَّقِينَ",
+                        "translated_name": "They will enter perennial gardens with streams of water and all they wish. Thus will the pious and devout be rewarded."
+                    },
+                    {
+                        "id": 1933,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "32",
+                        "arabic_name": "ٱلَّذِينَ تَتَوَفَّىٰهُمُ ٱلْمَلَـٰٓئِكَةُ طَيِّبِينَ ۙ يَقُولُونَ سَلَـٰمٌ عَلَيْكُمُ ٱدْخُلُوا۟ ٱلْجَنَّةَ بِمَا كُنتُمْ تَعْمَلُونَ",
+                        "translated_name": "When the angels receive the souls of those who are blameless they will say: \"Peace on you. Enter Paradise as recompense for what you did.\""
+                    },
+                    {
+                        "id": 1934,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "33",
+                        "arabic_name": "هَلْ يَنظُرُونَ إِلَّآ أَن تَأْتِيَهُمُ ٱلْمَلَـٰٓئِكَةُ أَوْ يَأْتِىَ أَمْرُ رَبِّكَ ۚ كَذَٰلِكَ فَعَلَ ٱلَّذِينَ مِن قَبْلِهِمْ ۚ وَمَا ظَلَمَهُمُ ٱللَّهُ وَلَـٰكِن كَانُوٓا۟ أَنفُسَهُمْ يَظْلِمُونَ",
+                        "translated_name": "What! Do the (unbelievers) expect that the angels should descend, or the sentence of your Lord come to pass? So had the people done before them; yet God did not wrong them, they wronged themselves."
+                    },
+                    {
+                        "id": 1935,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "34",
+                        "arabic_name": "فَأَصَابَهُمْ سَيِّـَٔاتُ مَا عَمِلُوا۟ وَحَاقَ بِهِم مَّا كَانُوا۟ بِهِۦ يَسْتَهْزِءُونَ",
+                        "translated_name": "The evil they perpetrated overtook them, and what they mocked has turned upon them."
+                    }
+                ],
+                "page_arabic_ayah": "ثُمَّ يَوْمَ ٱلْقِيَـٰمَةِ يُخْزِيهِمْ وَيَقُولُ أَيْنَ شُرَكَآءِىَ ٱلَّذِينَ كُنتُمْ تُشَـٰٓقُّونَ فِيهِمْ ۚ قَالَ ٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ إِنَّ ٱلْخِزْىَ ٱلْيَوْمَ وَٱلسُّوٓءَ عَلَى ٱلْكَـٰفِرِينَ (٢٧)  ٱلَّذِينَ تَتَوَفَّىٰهُمُ ٱلْمَلَـٰٓئِكَةُ ظَالِمِىٓ أَنفُسِهِمْ ۖ فَأَلْقَوُا۟ ٱلسَّلَمَ مَا كُنَّا نَعْمَلُ مِن سُوٓءٍۭ ۚ بَلَىٰٓ إِنَّ ٱللَّهَ عَلِيمٌۢ بِمَا كُنتُمْ تَعْمَلُونَ (٢٨)  فَٱدْخُلُوٓا۟ أَبْوَٰبَ جَهَنَّمَ خَـٰلِدِينَ فِيهَا ۖ فَلَبِئْسَ مَثْوَى ٱلْمُتَكَبِّرِينَ (٢٩)  ۞ وَقِيلَ لِلَّذِينَ ٱتَّقَوْا۟ مَاذَآ أَنزَلَ رَبُّكُمْ ۚ قَالُوا۟ خَيْرًا ۗ لِّلَّذِينَ أَحْسَنُوا۟ فِى هَـٰذِهِ ٱلدُّنْيَا حَسَنَةٌ ۚ وَلَدَارُ ٱلْـَٔاخِرَةِ خَيْرٌ ۚ وَلَنِعْمَ دَارُ ٱلْمُتَّقِينَ (٣٠)  جَنَّـٰتُ عَدْنٍ يَدْخُلُونَهَا تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ۖ لَهُمْ فِيهَا مَا يَشَآءُونَ ۚ كَذَٰلِكَ يَجْزِى ٱللَّهُ ٱلْمُتَّقِينَ (٣١)  ٱلَّذِينَ تَتَوَفَّىٰهُمُ ٱلْمَلَـٰٓئِكَةُ طَيِّبِينَ ۙ يَقُولُونَ سَلَـٰمٌ عَلَيْكُمُ ٱدْخُلُوا۟ ٱلْجَنَّةَ بِمَا كُنتُمْ تَعْمَلُونَ (٣٢)  هَلْ يَنظُرُونَ إِلَّآ أَن تَأْتِيَهُمُ ٱلْمَلَـٰٓئِكَةُ أَوْ يَأْتِىَ أَمْرُ رَبِّكَ ۚ كَذَٰلِكَ فَعَلَ ٱلَّذِينَ مِن قَبْلِهِمْ ۚ وَمَا ظَلَمَهُمُ ٱللَّهُ وَلَـٰكِن كَانُوٓا۟ أَنفُسَهُمْ يَظْلِمُونَ (٣٣)  فَأَصَابَهُمْ سَيِّـَٔاتُ مَا عَمِلُوا۟ وَحَاقَ بِهِم مَّا كَانُوا۟ بِهِۦ يَسْتَهْزِءُونَ (٣٤)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 271,
+                "page_number": "271",
+                "page_key": 4,
+                "page_verses": [
+                    {
+                        "id": 1936,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "35",
+                        "arabic_name": "وَقَالَ ٱلَّذِينَ أَشْرَكُوا۟ لَوْ شَآءَ ٱللَّهُ مَا عَبَدْنَا مِن دُونِهِۦ مِن شَىْءٍ نَّحْنُ وَلَآ ءَابَآؤُنَا وَلَا حَرَّمْنَا مِن دُونِهِۦ مِن شَىْءٍ ۚ كَذَٰلِكَ فَعَلَ ٱلَّذِينَ مِن قَبْلِهِمْ ۚ فَهَلْ عَلَى ٱلرُّسُلِ إِلَّا ٱلْبَلَـٰغُ ٱلْمُبِينُ",
+                        "translated_name": "The idolaters say: \"If God had willed we would not have worshipped anything apart from Him, nor would our fathers have done, nor would we have forbidden any thing without His (leave).\" So had the people done before them. Therefore it is binding on the prophets to convey the message in clearest terms."
+                    },
+                    {
+                        "id": 1937,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "36",
+                        "arabic_name": "وَلَقَدْ بَعَثْنَا فِى كُلِّ أُمَّةٍ رَّسُولًا أَنِ ٱعْبُدُوا۟ ٱللَّهَ وَٱجْتَنِبُوا۟ ٱلطَّـٰغُوتَ ۖ فَمِنْهُم مَّنْ هَدَى ٱللَّهُ وَمِنْهُم مَّنْ حَقَّتْ عَلَيْهِ ٱلضَّلَـٰلَةُ ۚ فَسِيرُوا۟ فِى ٱلْأَرْضِ فَٱنظُرُوا۟ كَيْفَ كَانَ عَـٰقِبَةُ ٱلْمُكَذِّبِينَ",
+                        "translated_name": "To every community We have sent an apostle. (saying:) \"Worship God, and keep away from all other deities.\" Thus some of them were guided by God, and ruin was justified on some. Travel over the earth and see what befell those who accused (the apostles) of lies."
+                    },
+                    {
+                        "id": 1938,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "37",
+                        "arabic_name": "إِن تَحْرِصْ عَلَىٰ هُدَىٰهُمْ فَإِنَّ ٱللَّهَ لَا يَهْدِى مَن يُضِلُّ ۖ وَمَا لَهُم مِّن نَّـٰصِرِينَ",
+                        "translated_name": "Even if you are eager to guide them, God does not surely guide those who have gone astray: They will have no one to help them."
+                    },
+                    {
+                        "id": 1939,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "38",
+                        "arabic_name": "وَأَقْسَمُوا۟ بِٱللَّهِ جَهْدَ أَيْمَـٰنِهِمْ ۙ لَا يَبْعَثُ ٱللَّهُ مَن يَمُوتُ ۚ بَلَىٰ وَعْدًا عَلَيْهِ حَقًّا وَلَـٰكِنَّ أَكْثَرَ ٱلنَّاسِ لَا يَعْلَمُونَ",
+                        "translated_name": "They swear emphatically in the name of God that God will not raise the dead. On the contrary, it is a promise incumbent on Him, though most men do not understand,"
+                    },
+                    {
+                        "id": 1940,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "39",
+                        "arabic_name": "لِيُبَيِّنَ لَهُمُ ٱلَّذِى يَخْتَلِفُونَ فِيهِ وَلِيَعْلَمَ ٱلَّذِينَ كَفَرُوٓا۟ أَنَّهُمْ كَانُوا۟ كَـٰذِبِينَ",
+                        "translated_name": "For (they fear) He might make what they differed about plain to them, and that the infidels may realise that they were liars."
+                    },
+                    {
+                        "id": 1941,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "40",
+                        "arabic_name": "إِنَّمَا قَوْلُنَا لِشَىْءٍ إِذَآ أَرَدْنَـٰهُ أَن نَّقُولَ لَهُۥ كُن فَيَكُونُ",
+                        "translated_name": "Yet when We will a thing We have only to say: \"Be\", and it is."
+                    },
+                    {
+                        "id": 1942,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "41",
+                        "arabic_name": "وَٱلَّذِينَ هَاجَرُوا۟ فِى ٱللَّهِ مِنۢ بَعْدِ مَا ظُلِمُوا۟ لَنُبَوِّئَنَّهُمْ فِى ٱلدُّنْيَا حَسَنَةً ۖ وَلَأَجْرُ ٱلْـَٔاخِرَةِ أَكْبَرُ ۚ لَوْ كَانُوا۟ يَعْلَمُونَ",
+                        "translated_name": "Those who left their homes in the cause of God after having been oppressed, will be given by Us a better place in the world, and if they knew, the guerdon of the next would be greater"
+                    },
+                    {
+                        "id": 1943,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "42",
+                        "arabic_name": "ٱلَّذِينَ صَبَرُوا۟ وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ",
+                        "translated_name": "(For) those who persevere and place their trust in their Lord."
+                    }
+                ],
+                "page_arabic_ayah": "وَقَالَ ٱلَّذِينَ أَشْرَكُوا۟ لَوْ شَآءَ ٱللَّهُ مَا عَبَدْنَا مِن دُونِهِۦ مِن شَىْءٍ نَّحْنُ وَلَآ ءَابَآؤُنَا وَلَا حَرَّمْنَا مِن دُونِهِۦ مِن شَىْءٍ ۚ كَذَٰلِكَ فَعَلَ ٱلَّذِينَ مِن قَبْلِهِمْ ۚ فَهَلْ عَلَى ٱلرُّسُلِ إِلَّا ٱلْبَلَـٰغُ ٱلْمُبِينُ (٣٥)  وَلَقَدْ بَعَثْنَا فِى كُلِّ أُمَّةٍ رَّسُولًا أَنِ ٱعْبُدُوا۟ ٱللَّهَ وَٱجْتَنِبُوا۟ ٱلطَّـٰغُوتَ ۖ فَمِنْهُم مَّنْ هَدَى ٱللَّهُ وَمِنْهُم مَّنْ حَقَّتْ عَلَيْهِ ٱلضَّلَـٰلَةُ ۚ فَسِيرُوا۟ فِى ٱلْأَرْضِ فَٱنظُرُوا۟ كَيْفَ كَانَ عَـٰقِبَةُ ٱلْمُكَذِّبِينَ (٣٦)  إِن تَحْرِصْ عَلَىٰ هُدَىٰهُمْ فَإِنَّ ٱللَّهَ لَا يَهْدِى مَن يُضِلُّ ۖ وَمَا لَهُم مِّن نَّـٰصِرِينَ (٣٧)  وَأَقْسَمُوا۟ بِٱللَّهِ جَهْدَ أَيْمَـٰنِهِمْ ۙ لَا يَبْعَثُ ٱللَّهُ مَن يَمُوتُ ۚ بَلَىٰ وَعْدًا عَلَيْهِ حَقًّا وَلَـٰكِنَّ أَكْثَرَ ٱلنَّاسِ لَا يَعْلَمُونَ (٣٨)  لِيُبَيِّنَ لَهُمُ ٱلَّذِى يَخْتَلِفُونَ فِيهِ وَلِيَعْلَمَ ٱلَّذِينَ كَفَرُوٓا۟ أَنَّهُمْ كَانُوا۟ كَـٰذِبِينَ (٣٩)  إِنَّمَا قَوْلُنَا لِشَىْءٍ إِذَآ أَرَدْنَـٰهُ أَن نَّقُولَ لَهُۥ كُن فَيَكُونُ (٤٠)  وَٱلَّذِينَ هَاجَرُوا۟ فِى ٱللَّهِ مِنۢ بَعْدِ مَا ظُلِمُوا۟ لَنُبَوِّئَنَّهُمْ فِى ٱلدُّنْيَا حَسَنَةً ۖ وَلَأَجْرُ ٱلْـَٔاخِرَةِ أَكْبَرُ ۚ لَوْ كَانُوا۟ يَعْلَمُونَ (٤١)  ٱلَّذِينَ صَبَرُوا۟ وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ (٤٢)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 272,
+                "page_number": "272",
+                "page_key": 5,
+                "page_verses": [
+                    {
+                        "id": 1944,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "43",
+                        "arabic_name": "وَمَآ أَرْسَلْنَا مِن قَبْلِكَ إِلَّا رِجَالًا نُّوحِىٓ إِلَيْهِمْ ۚ فَسْـَٔلُوٓا۟ أَهْلَ ٱلذِّكْرِ إِن كُنتُمْ لَا تَعْلَمُونَ",
+                        "translated_name": "We sent before you none (as apostles) but men, to whom We sent revelations. In case you are unaware, enquire of those who are keepers of the Oracles of God."
+                    },
+                    {
+                        "id": 1945,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "44",
+                        "arabic_name": "بِٱلْبَيِّنَـٰتِ وَٱلزُّبُرِ ۗ وَأَنزَلْنَآ إِلَيْكَ ٱلذِّكْرَ لِتُبَيِّنَ لِلنَّاسِ مَا نُزِّلَ إِلَيْهِمْ وَلَعَلَّهُمْ يَتَفَكَّرُونَ",
+                        "translated_name": "We had Sent them with miracles and Books; and We have sent to you this Reminder so that you may explain distinctly to men what was sent down to them: They may haply reflect."
+                    },
+                    {
+                        "id": 1946,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "45",
+                        "arabic_name": "أَفَأَمِنَ ٱلَّذِينَ مَكَرُوا۟ ٱلسَّيِّـَٔاتِ أَن يَخْسِفَ ٱللَّهُ بِهِمُ ٱلْأَرْضَ أَوْ يَأْتِيَهُمُ ٱلْعَذَابُ مِنْ حَيْثُ لَا يَشْعُرُونَ",
+                        "translated_name": "Have the plotters of mischief become unafraid that God will not split the earth to swallow them, or that punishment will not fall upon them from somewhere they do not (even) suspect?"
+                    },
+                    {
+                        "id": 1947,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "46",
+                        "arabic_name": "أَوْ يَأْخُذَهُمْ فِى تَقَلُّبِهِمْ فَمَا هُم بِمُعْجِزِينَ",
+                        "translated_name": "Or that He will not seize them as they move about, and they will not be able to elude (His grasp);"
+                    },
+                    {
+                        "id": 1948,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "47",
+                        "arabic_name": "أَوْ يَأْخُذَهُمْ عَلَىٰ تَخَوُّفٍ فَإِنَّ رَبَّكُمْ لَرَءُوفٌ رَّحِيمٌ",
+                        "translated_name": "Or He may seize them by diminishing their portion. Yet your Lord is compassionate and kind."
+                    },
+                    {
+                        "id": 1949,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "48",
+                        "arabic_name": "أَوَلَمْ يَرَوْا۟ إِلَىٰ مَا خَلَقَ ٱللَّهُ مِن شَىْءٍ يَتَفَيَّؤُا۟ ظِلَـٰلُهُۥ عَنِ ٱلْيَمِينِ وَٱلشَّمَآئِلِ سُجَّدًا لِّلَّهِ وَهُمْ دَٰخِرُونَ",
+                        "translated_name": "Do they not see the shadows of all things God has created incline to the right and the left, bowing in obeisance to God?"
+                    },
+                    {
+                        "id": 1950,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "49",
+                        "arabic_name": "وَلِلَّهِ يَسْجُدُ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ مِن دَآبَّةٍ وَٱلْمَلَـٰٓئِكَةُ وَهُمْ لَا يَسْتَكْبِرُونَ",
+                        "translated_name": "All things that move on the earth and in the heavens, and the angels, bow in homage to God, and do not behave with pride."
+                    },
+                    {
+                        "id": 1951,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "50",
+                        "arabic_name": "يَخَافُونَ رَبَّهُم مِّن فَوْقِهِمْ وَيَفْعَلُونَ مَا يُؤْمَرُونَ ۩",
+                        "translated_name": "They have fear of God for His power over them, and act as commanded."
+                    },
+                    {
+                        "id": 1952,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "51",
+                        "arabic_name": "۞ وَقَالَ ٱللَّهُ لَا تَتَّخِذُوٓا۟ إِلَـٰهَيْنِ ٱثْنَيْنِ ۖ إِنَّمَا هُوَ إِلَـٰهٌ وَٰحِدٌ ۖ فَإِيَّـٰىَ فَٱرْهَبُونِ",
+                        "translated_name": "God says: \"Do not take to two gods, for there is only one God. So fear Me.\""
+                    },
+                    {
+                        "id": 1953,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "52",
+                        "arabic_name": "وَلَهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَلَهُ ٱلدِّينُ وَاصِبًا ۚ أَفَغَيْرَ ٱللَّهِ تَتَّقُونَ",
+                        "translated_name": "Whatsoever is in the heavens and the earth belongs to Him, and His the judgement for ever. So will you fear any other than God?"
+                    },
+                    {
+                        "id": 1954,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "53",
+                        "arabic_name": "وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ ٱللَّهِ ۖ ثُمَّ إِذَا مَسَّكُمُ ٱلضُّرُّ فَإِلَيْهِ تَجْـَٔرُونَ",
+                        "translated_name": "Whatsoever the blessings you enjoy are surely from God, and when in trouble you turn to Him in supplication."
+                    },
+                    {
+                        "id": 1955,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "54",
+                        "arabic_name": "ثُمَّ إِذَا كَشَفَ ٱلضُّرَّ عَنكُمْ إِذَا فَرِيقٌ مِّنكُم بِرَبِّهِمْ يُشْرِكُونَ",
+                        "translated_name": "Yet when He has delivered you from affliction, some of you ascribe companions to your Lord"
+                    }
+                ],
+                "page_arabic_ayah": "وَمَآ أَرْسَلْنَا مِن قَبْلِكَ إِلَّا رِجَالًا نُّوحِىٓ إِلَيْهِمْ ۚ فَسْـَٔلُوٓا۟ أَهْلَ ٱلذِّكْرِ إِن كُنتُمْ لَا تَعْلَمُونَ (٤٣)  بِٱلْبَيِّنَـٰتِ وَٱلزُّبُرِ ۗ وَأَنزَلْنَآ إِلَيْكَ ٱلذِّكْرَ لِتُبَيِّنَ لِلنَّاسِ مَا نُزِّلَ إِلَيْهِمْ وَلَعَلَّهُمْ يَتَفَكَّرُونَ (٤٤)  أَفَأَمِنَ ٱلَّذِينَ مَكَرُوا۟ ٱلسَّيِّـَٔاتِ أَن يَخْسِفَ ٱللَّهُ بِهِمُ ٱلْأَرْضَ أَوْ يَأْتِيَهُمُ ٱلْعَذَابُ مِنْ حَيْثُ لَا يَشْعُرُونَ (٤٥)  أَوْ يَأْخُذَهُمْ فِى تَقَلُّبِهِمْ فَمَا هُم بِمُعْجِزِينَ (٤٦)  أَوْ يَأْخُذَهُمْ عَلَىٰ تَخَوُّفٍ فَإِنَّ رَبَّكُمْ لَرَءُوفٌ رَّحِيمٌ (٤٧)  أَوَلَمْ يَرَوْا۟ إِلَىٰ مَا خَلَقَ ٱللَّهُ مِن شَىْءٍ يَتَفَيَّؤُا۟ ظِلَـٰلُهُۥ عَنِ ٱلْيَمِينِ وَٱلشَّمَآئِلِ سُجَّدًا لِّلَّهِ وَهُمْ دَٰخِرُونَ (٤٨)  وَلِلَّهِ يَسْجُدُ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ مِن دَآبَّةٍ وَٱلْمَلَـٰٓئِكَةُ وَهُمْ لَا يَسْتَكْبِرُونَ (٤٩)  يَخَافُونَ رَبَّهُم مِّن فَوْقِهِمْ وَيَفْعَلُونَ مَا يُؤْمَرُونَ ۩ (٥٠)  ۞ وَقَالَ ٱللَّهُ لَا تَتَّخِذُوٓا۟ إِلَـٰهَيْنِ ٱثْنَيْنِ ۖ إِنَّمَا هُوَ إِلَـٰهٌ وَٰحِدٌ ۖ فَإِيَّـٰىَ فَٱرْهَبُونِ (٥١)  وَلَهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَلَهُ ٱلدِّينُ وَاصِبًا ۚ أَفَغَيْرَ ٱللَّهِ تَتَّقُونَ (٥٢)  وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ ٱللَّهِ ۖ ثُمَّ إِذَا مَسَّكُمُ ٱلضُّرُّ فَإِلَيْهِ تَجْـَٔرُونَ (٥٣)  ثُمَّ إِذَا كَشَفَ ٱلضُّرَّ عَنكُمْ إِذَا فَرِيقٌ مِّنكُم بِرَبِّهِمْ يُشْرِكُونَ (٥٤)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 273,
+                "page_number": "273",
+                "page_key": 6,
+                "page_verses": [
+                    {
+                        "id": 1956,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "55",
+                        "arabic_name": "لِيَكْفُرُوا۟ بِمَآ ءَاتَيْنَـٰهُمْ ۚ فَتَمَتَّعُوا۟ ۖ فَسَوْفَ تَعْلَمُونَ",
+                        "translated_name": "So as to deny what We have bestowed on them. Well, enjoy yourselves, you will come to know soon."
+                    },
+                    {
+                        "id": 1957,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "56",
+                        "arabic_name": "وَيَجْعَلُونَ لِمَا لَا يَعْلَمُونَ نَصِيبًا مِّمَّا رَزَقْنَـٰهُمْ ۗ تَٱللَّهِ لَتُسْـَٔلُنَّ عَمَّا كُنتُمْ تَفْتَرُونَ",
+                        "translated_name": "They set aside a portion of the food We have given them for those they do not know. By God, you will surely have to answer for all you contrive!"
+                    },
+                    {
+                        "id": 1958,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "57",
+                        "arabic_name": "وَيَجْعَلُونَ لِلَّهِ ٱلْبَنَـٰتِ سُبْحَـٰنَهُۥ ۙ وَلَهُم مَّا يَشْتَهُونَ",
+                        "translated_name": "They attribute daughters to God, the glorious, but for themselves whatsoever they please."
+                    },
+                    {
+                        "id": 1959,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "58",
+                        "arabic_name": "وَإِذَا بُشِّرَ أَحَدُهُم بِٱلْأُنثَىٰ ظَلَّ وَجْهُهُۥ مُسْوَدًّا وَهُوَ كَظِيمٌ",
+                        "translated_name": "Yet when news of the birth of a daughter reaches one of them, his face is darkened, and he is overwhelmed with silent grief,"
+                    },
+                    {
+                        "id": 1960,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "59",
+                        "arabic_name": "يَتَوَٰرَىٰ مِنَ ٱلْقَوْمِ مِن سُوٓءِ مَا بُشِّرَ بِهِۦٓ ۚ أَيُمْسِكُهُۥ عَلَىٰ هُونٍ أَمْ يَدُسُّهُۥ فِى ٱلتُّرَابِ ۗ أَلَا سَآءَ مَا يَحْكُمُونَ",
+                        "translated_name": "And hides from people for shame at the news, (at a loss) whether he should keep her with shame, or bury her in the ground. How bad is the judgement that they make!"
+                    },
+                    {
+                        "id": 1961,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "60",
+                        "arabic_name": "لِلَّذِينَ لَا يُؤْمِنُونَ بِٱلْـَٔاخِرَةِ مَثَلُ ٱلسَّوْءِ ۖ وَلِلَّهِ ٱلْمَثَلُ ٱلْأَعْلَىٰ ۚ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+                        "translated_name": "The semblance of those who believe not in the life to come is that of the meanest; but the semblance of God is the most sublime, for He is all-mighty and all-wise."
+                    },
+                    {
+                        "id": 1962,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "61",
+                        "arabic_name": "وَلَوْ يُؤَاخِذُ ٱللَّهُ ٱلنَّاسَ بِظُلْمِهِم مَّا تَرَكَ عَلَيْهَا مِن دَآبَّةٍ وَلَـٰكِن يُؤَخِّرُهُمْ إِلَىٰٓ أَجَلٍ مُّسَمًّى ۖ فَإِذَا جَآءَ أَجَلُهُمْ لَا يَسْتَـْٔخِرُونَ سَاعَةً ۖ وَلَا يَسْتَقْدِمُونَ",
+                        "translated_name": "If God were to punish men for their inequity He would not leave a single moving thing on earth. Yet He gives them latitude for a time ordained. When that time is come, there will not be a moment's delay nor a moment's haste."
+                    },
+                    {
+                        "id": 1963,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "62",
+                        "arabic_name": "وَيَجْعَلُونَ لِلَّهِ مَا يَكْرَهُونَ وَتَصِفُ أَلْسِنَتُهُمُ ٱلْكَذِبَ أَنَّ لَهُمُ ٱلْحُسْنَىٰ ۖ لَا جَرَمَ أَنَّ لَهُمُ ٱلنَّارَ وَأَنَّهُم مُّفْرَطُونَ",
+                        "translated_name": "Yet they attribute to God what they find detestable; and their tongues assert the lie that for them is only good. On the contrary, there is Fire for them, and they will be thrown into it."
+                    },
+                    {
+                        "id": 1964,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "63",
+                        "arabic_name": "تَٱللَّهِ لَقَدْ أَرْسَلْنَآ إِلَىٰٓ أُمَمٍ مِّن قَبْلِكَ فَزَيَّنَ لَهُمُ ٱلشَّيْطَـٰنُ أَعْمَـٰلَهُمْ فَهُوَ وَلِيُّهُمُ ٱلْيَوْمَ وَلَهُمْ عَذَابٌ أَلِيمٌ",
+                        "translated_name": "By God, We sent apostles to many a people before you, but Satan made their acts seem attractive to them, and he is their friend this day, and a painful torment awaits them."
+                    },
+                    {
+                        "id": 1965,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "64",
+                        "arabic_name": "وَمَآ أَنزَلْنَا عَلَيْكَ ٱلْكِتَـٰبَ إِلَّا لِتُبَيِّنَ لَهُمُ ٱلَّذِى ٱخْتَلَفُوا۟ فِيهِ ۙ وَهُدًى وَرَحْمَةً لِّقَوْمٍ يُؤْمِنُونَ",
+                        "translated_name": "We have sent down this Book to you that you may explain to them what it is that they are differing about, and as guidance and a grace for those who believe."
+                    }
+                ],
+                "page_arabic_ayah": "لِيَكْفُرُوا۟ بِمَآ ءَاتَيْنَـٰهُمْ ۚ فَتَمَتَّعُوا۟ ۖ فَسَوْفَ تَعْلَمُونَ (٥٥)  وَيَجْعَلُونَ لِمَا لَا يَعْلَمُونَ نَصِيبًا مِّمَّا رَزَقْنَـٰهُمْ ۗ تَٱللَّهِ لَتُسْـَٔلُنَّ عَمَّا كُنتُمْ تَفْتَرُونَ (٥٦)  وَيَجْعَلُونَ لِلَّهِ ٱلْبَنَـٰتِ سُبْحَـٰنَهُۥ ۙ وَلَهُم مَّا يَشْتَهُونَ (٥٧)  وَإِذَا بُشِّرَ أَحَدُهُم بِٱلْأُنثَىٰ ظَلَّ وَجْهُهُۥ مُسْوَدًّا وَهُوَ كَظِيمٌ (٥٨)  يَتَوَٰرَىٰ مِنَ ٱلْقَوْمِ مِن سُوٓءِ مَا بُشِّرَ بِهِۦٓ ۚ أَيُمْسِكُهُۥ عَلَىٰ هُونٍ أَمْ يَدُسُّهُۥ فِى ٱلتُّرَابِ ۗ أَلَا سَآءَ مَا يَحْكُمُونَ (٥٩)  لِلَّذِينَ لَا يُؤْمِنُونَ بِٱلْـَٔاخِرَةِ مَثَلُ ٱلسَّوْءِ ۖ وَلِلَّهِ ٱلْمَثَلُ ٱلْأَعْلَىٰ ۚ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ (٦٠)  وَلَوْ يُؤَاخِذُ ٱللَّهُ ٱلنَّاسَ بِظُلْمِهِم مَّا تَرَكَ عَلَيْهَا مِن دَآبَّةٍ وَلَـٰكِن يُؤَخِّرُهُمْ إِلَىٰٓ أَجَلٍ مُّسَمًّى ۖ فَإِذَا جَآءَ أَجَلُهُمْ لَا يَسْتَـْٔخِرُونَ سَاعَةً ۖ وَلَا يَسْتَقْدِمُونَ (٦١)  وَيَجْعَلُونَ لِلَّهِ مَا يَكْرَهُونَ وَتَصِفُ أَلْسِنَتُهُمُ ٱلْكَذِبَ أَنَّ لَهُمُ ٱلْحُسْنَىٰ ۖ لَا جَرَمَ أَنَّ لَهُمُ ٱلنَّارَ وَأَنَّهُم مُّفْرَطُونَ (٦٢)  تَٱللَّهِ لَقَدْ أَرْسَلْنَآ إِلَىٰٓ أُمَمٍ مِّن قَبْلِكَ فَزَيَّنَ لَهُمُ ٱلشَّيْطَـٰنُ أَعْمَـٰلَهُمْ فَهُوَ وَلِيُّهُمُ ٱلْيَوْمَ وَلَهُمْ عَذَابٌ أَلِيمٌ (٦٣)  وَمَآ أَنزَلْنَا عَلَيْكَ ٱلْكِتَـٰبَ إِلَّا لِتُبَيِّنَ لَهُمُ ٱلَّذِى ٱخْتَلَفُوا۟ فِيهِ ۙ وَهُدًى وَرَحْمَةً لِّقَوْمٍ يُؤْمِنُونَ (٦٤)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 274,
+                "page_number": "274",
+                "page_key": 7,
+                "page_verses": [
+                    {
+                        "id": 1966,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "65",
+                        "arabic_name": "وَٱللَّهُ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً فَأَحْيَا بِهِ ٱلْأَرْضَ بَعْدَ مَوْتِهَآ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَسْمَعُونَ",
+                        "translated_name": "God sends down water from the skies and quickens the dead earth to a new birth. Here is a sign for those who listen."
+                    },
+                    {
+                        "id": 1967,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "66",
+                        "arabic_name": "وَإِنَّ لَكُمْ فِى ٱلْأَنْعَـٰمِ لَعِبْرَةً ۖ نُّسْقِيكُم مِّمَّا فِى بُطُونِهِۦ مِنۢ بَيْنِ فَرْثٍ وَدَمٍ لَّبَنًا خَالِصًا سَآئِغًا لِّلشَّـٰرِبِينَ",
+                        "translated_name": "And surely in cattle there is a lesson for you: We give you a drink from the extract of food in their bellies and blood-purest milk so delicious to drink;"
+                    },
+                    {
+                        "id": 1968,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "67",
+                        "arabic_name": "وَمِن ثَمَرَٰتِ ٱلنَّخِيلِ وَٱلْأَعْنَـٰبِ تَتَّخِذُونَ مِنْهُ سَكَرًا وَرِزْقًا حَسَنًا ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَعْقِلُونَ",
+                        "translated_name": "And in fruits of the date-palm and the vine, from which you obtain inebriating drinks and excellent food. In this indeed are signs for those who understand."
+                    },
+                    {
+                        "id": 1969,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "68",
+                        "arabic_name": "وَأَوْحَىٰ رَبُّكَ إِلَى ٱلنَّحْلِ أَنِ ٱتَّخِذِى مِنَ ٱلْجِبَالِ بُيُوتًا وَمِنَ ٱلشَّجَرِ وَمِمَّا يَعْرِشُونَ",
+                        "translated_name": "Your Lord predisposed the bees to make their hives in mountains, trees and trellices,"
+                    },
+                    {
+                        "id": 1970,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "69",
+                        "arabic_name": "ثُمَّ كُلِى مِن كُلِّ ٱلثَّمَرَٰتِ فَٱسْلُكِى سُبُلَ رَبِّكِ ذُلُلًا ۚ يَخْرُجُ مِنۢ بُطُونِهَا شَرَابٌ مُّخْتَلِفٌ أَلْوَٰنُهُۥ فِيهِ شِفَآءٌ لِّلنَّاسِ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَتَفَكَّرُونَ",
+                        "translated_name": "And suck from all fruits and flit about the unrestricted paths of their Lord. A drink of various hues comes out of their bellies which contains medicine for men. In this is a sign for those who reflect."
+                    },
+                    {
+                        "id": 1971,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "70",
+                        "arabic_name": "وَٱللَّهُ خَلَقَكُمْ ثُمَّ يَتَوَفَّىٰكُمْ ۚ وَمِنكُم مَّن يُرَدُّ إِلَىٰٓ أَرْذَلِ ٱلْعُمُرِ لِكَىْ لَا يَعْلَمَ بَعْدَ عِلْمٍ شَيْـًٔا ۚ إِنَّ ٱللَّهَ عَلِيمٌ قَدِيرٌ",
+                        "translated_name": "It is God who creates you, then makes you die; and some reach the age of dotage when they forget what they had known before. God is indeed all-knowing and all-powerful."
+                    },
+                    {
+                        "id": 1972,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "71",
+                        "arabic_name": "وَٱللَّهُ فَضَّلَ بَعْضَكُمْ عَلَىٰ بَعْضٍ فِى ٱلرِّزْقِ ۚ فَمَا ٱلَّذِينَ فُضِّلُوا۟ بِرَآدِّى رِزْقِهِمْ عَلَىٰ مَا مَلَكَتْ أَيْمَـٰنُهُمْ فَهُمْ فِيهِ سَوَآءٌ ۚ أَفَبِنِعْمَةِ ٱللَّهِ يَجْحَدُونَ",
+                        "translated_name": "God has favoured some of you over others in the means of subsistence. But those who have been favoured with more do not give of their means to their dependents so that they may become equal with them. Do they then deny God's beneficence?"
+                    },
+                    {
+                        "id": 1973,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "72",
+                        "arabic_name": "وَٱللَّهُ جَعَلَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا وَجَعَلَ لَكُم مِّنْ أَزْوَٰجِكُم بَنِينَ وَحَفَدَةً وَرَزَقَكُم مِّنَ ٱلطَّيِّبَـٰتِ ۚ أَفَبِٱلْبَـٰطِلِ يُؤْمِنُونَ وَبِنِعْمَتِ ٱللَّهِ هُمْ يَكْفُرُونَ",
+                        "translated_name": "God has provided mates for you of your own kind, and has bestowed on you sons and daughters from your mates, and has given you good things for food. Will they even then believe in the false and deny God's grace?"
+                    }
+                ],
+                "page_arabic_ayah": "وَٱللَّهُ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً فَأَحْيَا بِهِ ٱلْأَرْضَ بَعْدَ مَوْتِهَآ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَسْمَعُونَ (٦٥)  وَإِنَّ لَكُمْ فِى ٱلْأَنْعَـٰمِ لَعِبْرَةً ۖ نُّسْقِيكُم مِّمَّا فِى بُطُونِهِۦ مِنۢ بَيْنِ فَرْثٍ وَدَمٍ لَّبَنًا خَالِصًا سَآئِغًا لِّلشَّـٰرِبِينَ (٦٦)  وَمِن ثَمَرَٰتِ ٱلنَّخِيلِ وَٱلْأَعْنَـٰبِ تَتَّخِذُونَ مِنْهُ سَكَرًا وَرِزْقًا حَسَنًا ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَعْقِلُونَ (٦٧)  وَأَوْحَىٰ رَبُّكَ إِلَى ٱلنَّحْلِ أَنِ ٱتَّخِذِى مِنَ ٱلْجِبَالِ بُيُوتًا وَمِنَ ٱلشَّجَرِ وَمِمَّا يَعْرِشُونَ (٦٨)  ثُمَّ كُلِى مِن كُلِّ ٱلثَّمَرَٰتِ فَٱسْلُكِى سُبُلَ رَبِّكِ ذُلُلًا ۚ يَخْرُجُ مِنۢ بُطُونِهَا شَرَابٌ مُّخْتَلِفٌ أَلْوَٰنُهُۥ فِيهِ شِفَآءٌ لِّلنَّاسِ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَتَفَكَّرُونَ (٦٩)  وَٱللَّهُ خَلَقَكُمْ ثُمَّ يَتَوَفَّىٰكُمْ ۚ وَمِنكُم مَّن يُرَدُّ إِلَىٰٓ أَرْذَلِ ٱلْعُمُرِ لِكَىْ لَا يَعْلَمَ بَعْدَ عِلْمٍ شَيْـًٔا ۚ إِنَّ ٱللَّهَ عَلِيمٌ قَدِيرٌ (٧٠)  وَٱللَّهُ فَضَّلَ بَعْضَكُمْ عَلَىٰ بَعْضٍ فِى ٱلرِّزْقِ ۚ فَمَا ٱلَّذِينَ فُضِّلُوا۟ بِرَآدِّى رِزْقِهِمْ عَلَىٰ مَا مَلَكَتْ أَيْمَـٰنُهُمْ فَهُمْ فِيهِ سَوَآءٌ ۚ أَفَبِنِعْمَةِ ٱللَّهِ يَجْحَدُونَ (٧١)  وَٱللَّهُ جَعَلَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا وَجَعَلَ لَكُم مِّنْ أَزْوَٰجِكُم بَنِينَ وَحَفَدَةً وَرَزَقَكُم مِّنَ ٱلطَّيِّبَـٰتِ ۚ أَفَبِٱلْبَـٰطِلِ يُؤْمِنُونَ وَبِنِعْمَتِ ٱللَّهِ هُمْ يَكْفُرُونَ (٧٢)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 275,
+                "page_number": "275",
+                "page_key": 8,
+                "page_verses": [
+                    {
+                        "id": 1974,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "73",
+                        "arabic_name": "وَيَعْبُدُونَ مِن دُونِ ٱللَّهِ مَا لَا يَمْلِكُ لَهُمْ رِزْقًا مِّنَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ شَيْـًٔا وَلَا يَسْتَطِيعُونَ",
+                        "translated_name": "Yet they worship those apart from God who cannot provide for them any sustenance from the heavens or the earth, nor will they have power to do so."
+                    },
+                    {
+                        "id": 1975,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "74",
+                        "arabic_name": "فَلَا تَضْرِبُوا۟ لِلَّهِ ٱلْأَمْثَالَ ۚ إِنَّ ٱللَّهَ يَعْلَمُ وَأَنتُمْ لَا تَعْلَمُونَ",
+                        "translated_name": "So do not invent similitudes for God. Indeed God knows, and you do not know."
+                    },
+                    {
+                        "id": 1976,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "75",
+                        "arabic_name": "۞ ضَرَبَ ٱللَّهُ مَثَلًا عَبْدًا مَّمْلُوكًا لَّا يَقْدِرُ عَلَىٰ شَىْءٍ وَمَن رَّزَقْنَـٰهُ مِنَّا رِزْقًا حَسَنًا فَهُوَ يُنفِقُ مِنْهُ سِرًّا وَجَهْرًا ۖ هَلْ يَسْتَوُۥنَ ۚ ٱلْحَمْدُ لِلَّهِ ۚ بَلْ أَكْثَرُهُمْ لَا يَعْلَمُونَ",
+                        "translated_name": "God presents the example of a man who is a hired servant with no power over anything, and another on whom We have bestowed a handsome fortune, who spends from it in private and in public: Can they be equal? Praised be God! But most men do not understand."
+                    },
+                    {
+                        "id": 1977,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "76",
+                        "arabic_name": "وَضَرَبَ ٱللَّهُ مَثَلًا رَّجُلَيْنِ أَحَدُهُمَآ أَبْكَمُ لَا يَقْدِرُ عَلَىٰ شَىْءٍ وَهُوَ كَلٌّ عَلَىٰ مَوْلَىٰهُ أَيْنَمَا يُوَجِّههُّ لَا يَأْتِ بِخَيْرٍ ۖ هَلْ يَسْتَوِى هُوَ وَمَن يَأْمُرُ بِٱلْعَدْلِ ۙ وَهُوَ عَلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ",
+                        "translated_name": "God presents another example of two men, one dumb and unable to do a thing and is a burden on his master. Wherever he is sent he returns without any good (result). Could he be equal to one who enjoins what is just, and follows the right path?"
+                    },
+                    {
+                        "id": 1978,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "77",
+                        "arabic_name": "وَلِلَّهِ غَيْبُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَمَآ أَمْرُ ٱلسَّاعَةِ إِلَّا كَلَمْحِ ٱلْبَصَرِ أَوْ هُوَ أَقْرَبُ ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ",
+                        "translated_name": "To God belong the secrets of the heavens and the earth, and the Hour of Doom is a matter of the winking of an eye, even less, for God has certainly power over all things."
+                    },
+                    {
+                        "id": 1979,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "78",
+                        "arabic_name": "وَٱللَّهُ أَخْرَجَكُم مِّنۢ بُطُونِ أُمَّهَـٰتِكُمْ لَا تَعْلَمُونَ شَيْـًٔا وَجَعَلَ لَكُمُ ٱلسَّمْعَ وَٱلْأَبْصَـٰرَ وَٱلْأَفْـِٔدَةَ ۙ لَعَلَّكُمْ تَشْكُرُونَ",
+                        "translated_name": "God produced you from your mothers' wombs knowing nothing, but gave you ears and eyes and hearts so that you may be grateful."
+                    },
+                    {
+                        "id": 1980,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "79",
+                        "arabic_name": "أَلَمْ يَرَوْا۟ إِلَى ٱلطَّيْرِ مُسَخَّرَٰتٍ فِى جَوِّ ٱلسَّمَآءِ مَا يُمْسِكُهُنَّ إِلَّا ٱللَّهُ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّقَوْمٍ يُؤْمِنُونَ",
+                        "translated_name": "Do you not see the birds held high between the heavens and the earth? Nothing holds them (aloft) but God. There are verily signs in this for those who believe."
+                    }
+                ],
+                "page_arabic_ayah": "وَيَعْبُدُونَ مِن دُونِ ٱللَّهِ مَا لَا يَمْلِكُ لَهُمْ رِزْقًا مِّنَ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ شَيْـًٔا وَلَا يَسْتَطِيعُونَ (٧٣)  فَلَا تَضْرِبُوا۟ لِلَّهِ ٱلْأَمْثَالَ ۚ إِنَّ ٱللَّهَ يَعْلَمُ وَأَنتُمْ لَا تَعْلَمُونَ (٧٤)  ۞ ضَرَبَ ٱللَّهُ مَثَلًا عَبْدًا مَّمْلُوكًا لَّا يَقْدِرُ عَلَىٰ شَىْءٍ وَمَن رَّزَقْنَـٰهُ مِنَّا رِزْقًا حَسَنًا فَهُوَ يُنفِقُ مِنْهُ سِرًّا وَجَهْرًا ۖ هَلْ يَسْتَوُۥنَ ۚ ٱلْحَمْدُ لِلَّهِ ۚ بَلْ أَكْثَرُهُمْ لَا يَعْلَمُونَ (٧٥)  وَضَرَبَ ٱللَّهُ مَثَلًا رَّجُلَيْنِ أَحَدُهُمَآ أَبْكَمُ لَا يَقْدِرُ عَلَىٰ شَىْءٍ وَهُوَ كَلٌّ عَلَىٰ مَوْلَىٰهُ أَيْنَمَا يُوَجِّههُّ لَا يَأْتِ بِخَيْرٍ ۖ هَلْ يَسْتَوِى هُوَ وَمَن يَأْمُرُ بِٱلْعَدْلِ ۙ وَهُوَ عَلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ (٧٦)  وَلِلَّهِ غَيْبُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَمَآ أَمْرُ ٱلسَّاعَةِ إِلَّا كَلَمْحِ ٱلْبَصَرِ أَوْ هُوَ أَقْرَبُ ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ (٧٧)  وَٱللَّهُ أَخْرَجَكُم مِّنۢ بُطُونِ أُمَّهَـٰتِكُمْ لَا تَعْلَمُونَ شَيْـًٔا وَجَعَلَ لَكُمُ ٱلسَّمْعَ وَٱلْأَبْصَـٰرَ وَٱلْأَفْـِٔدَةَ ۙ لَعَلَّكُمْ تَشْكُرُونَ (٧٨)  أَلَمْ يَرَوْا۟ إِلَى ٱلطَّيْرِ مُسَخَّرَٰتٍ فِى جَوِّ ٱلسَّمَآءِ مَا يُمْسِكُهُنَّ إِلَّا ٱللَّهُ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّقَوْمٍ يُؤْمِنُونَ (٧٩)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 276,
+                "page_number": "276",
+                "page_key": 9,
+                "page_verses": [
+                    {
+                        "id": 1981,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "80",
+                        "arabic_name": "وَٱللَّهُ جَعَلَ لَكُم مِّنۢ بُيُوتِكُمْ سَكَنًا وَجَعَلَ لَكُم مِّن جُلُودِ ٱلْأَنْعَـٰمِ بُيُوتًا تَسْتَخِفُّونَهَا يَوْمَ ظَعْنِكُمْ وَيَوْمَ إِقَامَتِكُمْ ۙ وَمِنْ أَصْوَافِهَا وَأَوْبَارِهَا وَأَشْعَارِهَآ أَثَـٰثًا وَمَتَـٰعًا إِلَىٰ حِينٍ",
+                        "translated_name": "God has given you homes to live in, and tents (made) from the hides of cattle convenient for days of travelling and halting; and from their wool and fur and hair you make domestic articles and goods that last a certain time."
+                    },
+                    {
+                        "id": 1982,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "81",
+                        "arabic_name": "وَٱللَّهُ جَعَلَ لَكُم مِّمَّا خَلَقَ ظِلَـٰلًا وَجَعَلَ لَكُم مِّنَ ٱلْجِبَالِ أَكْنَـٰنًا وَجَعَلَ لَكُمْ سَرَٰبِيلَ تَقِيكُمُ ٱلْحَرَّ وَسَرَٰبِيلَ تَقِيكُم بَأْسَكُمْ ۚ كَذَٰلِكَ يُتِمُّ نِعْمَتَهُۥ عَلَيْكُمْ لَعَلَّكُمْ تُسْلِمُونَ",
+                        "translated_name": "God has given you of things created, shade, and places of shelter in the mountains, and clothes for protection against the heat, and coats (of mail) for defence during war. He thus bestows His favours on you so that you may be grateful to Him."
+                    },
+                    {
+                        "id": 1983,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "82",
+                        "arabic_name": "فَإِن تَوَلَّوْا۟ فَإِنَّمَا عَلَيْكَ ٱلْبَلَـٰغُ ٱلْمُبِينُ",
+                        "translated_name": "If they still turn away, your duty is to warn them in clear terms."
+                    },
+                    {
+                        "id": 1984,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "83",
+                        "arabic_name": "يَعْرِفُونَ نِعْمَتَ ٱللَّهِ ثُمَّ يُنكِرُونَهَا وَأَكْثَرُهُمُ ٱلْكَـٰفِرُونَ",
+                        "translated_name": "They do know the favours of God, and yet they deny them, for most of them are not grateful."
+                    },
+                    {
+                        "id": 1985,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "84",
+                        "arabic_name": "وَيَوْمَ نَبْعَثُ مِن كُلِّ أُمَّةٍ شَهِيدًا ثُمَّ لَا يُؤْذَنُ لِلَّذِينَ كَفَرُوا۟ وَلَا هُمْ يُسْتَعْتَبُونَ",
+                        "translated_name": "The day We shall call a witness from every people, the unbelievers will not be allowed to make excuses."
+                    },
+                    {
+                        "id": 1986,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "85",
+                        "arabic_name": "وَإِذَا رَءَا ٱلَّذِينَ ظَلَمُوا۟ ٱلْعَذَابَ فَلَا يُخَفَّفُ عَنْهُمْ وَلَا هُمْ يُنظَرُونَ",
+                        "translated_name": "And when the wicked shall face the torment it will not be decreased, nor will they be reprieved."
+                    },
+                    {
+                        "id": 1987,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "86",
+                        "arabic_name": "وَإِذَا رَءَا ٱلَّذِينَ أَشْرَكُوا۟ شُرَكَآءَهُمْ قَالُوا۟ رَبَّنَا هَـٰٓؤُلَآءِ شُرَكَآؤُنَا ٱلَّذِينَ كُنَّا نَدْعُوا۟ مِن دُونِكَ ۖ فَأَلْقَوْا۟ إِلَيْهِمُ ٱلْقَوْلَ إِنَّكُمْ لَكَـٰذِبُونَ",
+                        "translated_name": "When the idolaters see their partners they will call out: \"O our Lord, these are the partners we invoked instead of You;\" but they will retort: \"You are liars.\""
+                    },
+                    {
+                        "id": 1988,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "87",
+                        "arabic_name": "وَأَلْقَوْا۟ إِلَى ٱللَّهِ يَوْمَئِذٍ ٱلسَّلَمَ ۖ وَضَلَّ عَنْهُم مَّا كَانُوا۟ يَفْتَرُونَ",
+                        "translated_name": "They will offer submission to God that Day, and the lies they fabricated will not be of the least avail."
+                    }
+                ],
+                "page_arabic_ayah": "وَٱللَّهُ جَعَلَ لَكُم مِّنۢ بُيُوتِكُمْ سَكَنًا وَجَعَلَ لَكُم مِّن جُلُودِ ٱلْأَنْعَـٰمِ بُيُوتًا تَسْتَخِفُّونَهَا يَوْمَ ظَعْنِكُمْ وَيَوْمَ إِقَامَتِكُمْ ۙ وَمِنْ أَصْوَافِهَا وَأَوْبَارِهَا وَأَشْعَارِهَآ أَثَـٰثًا وَمَتَـٰعًا إِلَىٰ حِينٍ (٨٠)  وَٱللَّهُ جَعَلَ لَكُم مِّمَّا خَلَقَ ظِلَـٰلًا وَجَعَلَ لَكُم مِّنَ ٱلْجِبَالِ أَكْنَـٰنًا وَجَعَلَ لَكُمْ سَرَٰبِيلَ تَقِيكُمُ ٱلْحَرَّ وَسَرَٰبِيلَ تَقِيكُم بَأْسَكُمْ ۚ كَذَٰلِكَ يُتِمُّ نِعْمَتَهُۥ عَلَيْكُمْ لَعَلَّكُمْ تُسْلِمُونَ (٨١)  فَإِن تَوَلَّوْا۟ فَإِنَّمَا عَلَيْكَ ٱلْبَلَـٰغُ ٱلْمُبِينُ (٨٢)  يَعْرِفُونَ نِعْمَتَ ٱللَّهِ ثُمَّ يُنكِرُونَهَا وَأَكْثَرُهُمُ ٱلْكَـٰفِرُونَ (٨٣)  وَيَوْمَ نَبْعَثُ مِن كُلِّ أُمَّةٍ شَهِيدًا ثُمَّ لَا يُؤْذَنُ لِلَّذِينَ كَفَرُوا۟ وَلَا هُمْ يُسْتَعْتَبُونَ (٨٤)  وَإِذَا رَءَا ٱلَّذِينَ ظَلَمُوا۟ ٱلْعَذَابَ فَلَا يُخَفَّفُ عَنْهُمْ وَلَا هُمْ يُنظَرُونَ (٨٥)  وَإِذَا رَءَا ٱلَّذِينَ أَشْرَكُوا۟ شُرَكَآءَهُمْ قَالُوا۟ رَبَّنَا هَـٰٓؤُلَآءِ شُرَكَآؤُنَا ٱلَّذِينَ كُنَّا نَدْعُوا۟ مِن دُونِكَ ۖ فَأَلْقَوْا۟ إِلَيْهِمُ ٱلْقَوْلَ إِنَّكُمْ لَكَـٰذِبُونَ (٨٦)  وَأَلْقَوْا۟ إِلَى ٱللَّهِ يَوْمَئِذٍ ٱلسَّلَمَ ۖ وَضَلَّ عَنْهُم مَّا كَانُوا۟ يَفْتَرُونَ (٨٧)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 277,
+                "page_number": "277",
+                "page_key": 10,
+                "page_verses": [
+                    {
+                        "id": 1989,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "88",
+                        "arabic_name": "ٱلَّذِينَ كَفَرُوا۟ وَصَدُّوا۟ عَن سَبِيلِ ٱللَّهِ زِدْنَـٰهُمْ عَذَابًا فَوْقَ ٱلْعَذَابِ بِمَا كَانُوا۟ يُفْسِدُونَ",
+                        "translated_name": "For those who deny the truth and obstruct (others) from the way of God, We shall add torment to torment as they were perpetrating corruption."
+                    },
+                    {
+                        "id": 1990,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "89",
+                        "arabic_name": "وَيَوْمَ نَبْعَثُ فِى كُلِّ أُمَّةٍ شَهِيدًا عَلَيْهِم مِّنْ أَنفُسِهِمْ ۖ وَجِئْنَا بِكَ شَهِيدًا عَلَىٰ هَـٰٓؤُلَآءِ ۚ وَنَزَّلْنَا عَلَيْكَ ٱلْكِتَـٰبَ تِبْيَـٰنًا لِّكُلِّ شَىْءٍ وَهُدًى وَرَحْمَةً وَبُشْرَىٰ لِلْمُسْلِمِينَ",
+                        "translated_name": "Remind them of the Day when We shall call from every people a witness against them, and make you a witness over them, for We have revealed to you the Book as an exposition of everything, and as guidance and grace and happy tidings for those who submit."
+                    },
+                    {
+                        "id": 1991,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "90",
+                        "arabic_name": "۞ إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَـٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ ۚ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ",
+                        "translated_name": "Verily God has enjoined justice, the doing of good, and the giving of gifts to your relatives; and forbidden indecency, impropriety and oppression. He warns you so that you may remember."
+                    },
+                    {
+                        "id": 1992,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "91",
+                        "arabic_name": "وَأَوْفُوا۟ بِعَهْدِ ٱللَّهِ إِذَا عَـٰهَدتُّمْ وَلَا تَنقُضُوا۟ ٱلْأَيْمَـٰنَ بَعْدَ تَوْكِيدِهَا وَقَدْ جَعَلْتُمُ ٱللَّهَ عَلَيْكُمْ كَفِيلًا ۚ إِنَّ ٱللَّهَ يَعْلَمُ مَا تَفْعَلُونَ",
+                        "translated_name": "Fulfil your covenant with God, having made the covenant, and do not break your oaths once you have sworn them, as you have made God a witness over you. Indeed God knows what you do."
+                    },
+                    {
+                        "id": 1993,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "92",
+                        "arabic_name": "وَلَا تَكُونُوا۟ كَٱلَّتِى نَقَضَتْ غَزْلَهَا مِنۢ بَعْدِ قُوَّةٍ أَنكَـٰثًا تَتَّخِذُونَ أَيْمَـٰنَكُمْ دَخَلًۢا بَيْنَكُمْ أَن تَكُونَ أُمَّةٌ هِىَ أَرْبَىٰ مِنْ أُمَّةٍ ۚ إِنَّمَا يَبْلُوكُمُ ٱللَّهُ بِهِۦ ۚ وَلَيُبَيِّنَنَّ لَكُمْ يَوْمَ ٱلْقِيَـٰمَةِ مَا كُنتُمْ فِيهِ تَخْتَلِفُونَ",
+                        "translated_name": "And do not be like her who untwists her yarn having spun it into durable thread. Do not use your oaths deceitfully because one party has ascendency over you. God surely tries you in this way: He will make it clear to you on the Day of Resurrection what you were differing about."
+                    },
+                    {
+                        "id": 1994,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "93",
+                        "arabic_name": "وَلَوْ شَآءَ ٱللَّهُ لَجَعَلَكُمْ أُمَّةً وَٰحِدَةً وَلَـٰكِن يُضِلُّ مَن يَشَآءُ وَيَهْدِى مَن يَشَآءُ ۚ وَلَتُسْـَٔلُنَّ عَمَّا كُنتُمْ تَعْمَلُونَ",
+                        "translated_name": "If God had pleased He would surely have made you a single community of belief; but He leads whosoever He wills astray, and guides whosoever He please. But you will surely be questioned about what you used to do."
+                    }
+                ],
+                "page_arabic_ayah": "ٱلَّذِينَ كَفَرُوا۟ وَصَدُّوا۟ عَن سَبِيلِ ٱللَّهِ زِدْنَـٰهُمْ عَذَابًا فَوْقَ ٱلْعَذَابِ بِمَا كَانُوا۟ يُفْسِدُونَ (٨٨)  وَيَوْمَ نَبْعَثُ فِى كُلِّ أُمَّةٍ شَهِيدًا عَلَيْهِم مِّنْ أَنفُسِهِمْ ۖ وَجِئْنَا بِكَ شَهِيدًا عَلَىٰ هَـٰٓؤُلَآءِ ۚ وَنَزَّلْنَا عَلَيْكَ ٱلْكِتَـٰبَ تِبْيَـٰنًا لِّكُلِّ شَىْءٍ وَهُدًى وَرَحْمَةً وَبُشْرَىٰ لِلْمُسْلِمِينَ (٨٩)  ۞ إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَـٰنِ وَإِيتَآئِ ذِى ٱلْقُرْبَىٰ وَيَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ وَٱلْبَغْىِ ۚ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ (٩٠)  وَأَوْفُوا۟ بِعَهْدِ ٱللَّهِ إِذَا عَـٰهَدتُّمْ وَلَا تَنقُضُوا۟ ٱلْأَيْمَـٰنَ بَعْدَ تَوْكِيدِهَا وَقَدْ جَعَلْتُمُ ٱللَّهَ عَلَيْكُمْ كَفِيلًا ۚ إِنَّ ٱللَّهَ يَعْلَمُ مَا تَفْعَلُونَ (٩١)  وَلَا تَكُونُوا۟ كَٱلَّتِى نَقَضَتْ غَزْلَهَا مِنۢ بَعْدِ قُوَّةٍ أَنكَـٰثًا تَتَّخِذُونَ أَيْمَـٰنَكُمْ دَخَلًۢا بَيْنَكُمْ أَن تَكُونَ أُمَّةٌ هِىَ أَرْبَىٰ مِنْ أُمَّةٍ ۚ إِنَّمَا يَبْلُوكُمُ ٱللَّهُ بِهِۦ ۚ وَلَيُبَيِّنَنَّ لَكُمْ يَوْمَ ٱلْقِيَـٰمَةِ مَا كُنتُمْ فِيهِ تَخْتَلِفُونَ (٩٢)  وَلَوْ شَآءَ ٱللَّهُ لَجَعَلَكُمْ أُمَّةً وَٰحِدَةً وَلَـٰكِن يُضِلُّ مَن يَشَآءُ وَيَهْدِى مَن يَشَآءُ ۚ وَلَتُسْـَٔلُنَّ عَمَّا كُنتُمْ تَعْمَلُونَ (٩٣)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 278,
+                "page_number": "278",
+                "page_key": 11,
+                "page_verses": [
+                    {
+                        "id": 1995,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "94",
+                        "arabic_name": "وَلَا تَتَّخِذُوٓا۟ أَيْمَـٰنَكُمْ دَخَلًۢا بَيْنَكُمْ فَتَزِلَّ قَدَمٌۢ بَعْدَ ثُبُوتِهَا وَتَذُوقُوا۟ ٱلسُّوٓءَ بِمَا صَدَدتُّمْ عَن سَبِيلِ ٱللَّهِ ۖ وَلَكُمْ عَذَابٌ عَظِيمٌ",
+                        "translated_name": "So do not make your oaths a means of deceiving one another, lest your foot should slip after having found its hold, and you taste of evil for having hindered (others) from the way of God, and suffer a grievous punishment."
+                    },
+                    {
+                        "id": 1996,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "95",
+                        "arabic_name": "وَلَا تَشْتَرُوا۟ بِعَهْدِ ٱللَّهِ ثَمَنًا قَلِيلًا ۚ إِنَّمَا عِندَ ٱللَّهِ هُوَ خَيْرٌ لَّكُمْ إِن كُنتُمْ تَعْلَمُونَ",
+                        "translated_name": "And do not trade God's covenant for a paltry price. Remember, what is with God is better for you, if only you knew!"
+                    },
+                    {
+                        "id": 1997,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "96",
+                        "arabic_name": "مَا عِندَكُمْ يَنفَدُ ۖ وَمَا عِندَ ٱللَّهِ بَاقٍ ۗ وَلَنَجْزِيَنَّ ٱلَّذِينَ صَبَرُوٓا۟ أَجْرَهُم بِأَحْسَنِ مَا كَانُوا۟ يَعْمَلُونَ",
+                        "translated_name": "For what you possess will pass, but what is with God will abide. We shall certainly award those who persevere a recompense in keeping with their deeds."
+                    },
+                    {
+                        "id": 1998,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "97",
+                        "arabic_name": "مَنْ عَمِلَ صَـٰلِحًا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌ فَلَنُحْيِيَنَّهُۥ حَيَوٰةً طَيِّبَةً ۖ وَلَنَجْزِيَنَّهُمْ أَجْرَهُم بِأَحْسَنِ مَا كَانُوا۟ يَعْمَلُونَ",
+                        "translated_name": "We shall invest whosoever works for good, whether man or woman, with a pleasant life, and reward them in accordance with the best of what they have done."
+                    },
+                    {
+                        "id": 1999,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "98",
+                        "arabic_name": "فَإِذَا قَرَأْتَ ٱلْقُرْءَانَ فَٱسْتَعِذْ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ",
+                        "translated_name": "So, when you recite the Qur'an seek refuge in God from Satan the execrable."
+                    },
+                    {
+                        "id": 2000,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "99",
+                        "arabic_name": "إِنَّهُۥ لَيْسَ لَهُۥ سُلْطَـٰنٌ عَلَى ٱلَّذِينَ ءَامَنُوا۟ وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ",
+                        "translated_name": "He does not have power over those who believe and place their trust in their Lord."
+                    },
+                    {
+                        "id": 2001,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "100",
+                        "arabic_name": "إِنَّمَا سُلْطَـٰنُهُۥ عَلَى ٱلَّذِينَ يَتَوَلَّوْنَهُۥ وَٱلَّذِينَ هُم بِهِۦ مُشْرِكُونَ",
+                        "translated_name": "His power is only over those who take him as their patron, and those who ascribe equals (to God)."
+                    },
+                    {
+                        "id": 2002,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "101",
+                        "arabic_name": "وَإِذَا بَدَّلْنَآ ءَايَةً مَّكَانَ ءَايَةٍ ۙ وَٱللَّهُ أَعْلَمُ بِمَا يُنَزِّلُ قَالُوٓا۟ إِنَّمَآ أَنتَ مُفْتَرٍۭ ۚ بَلْ أَكْثَرُهُمْ لَا يَعْلَمُونَ",
+                        "translated_name": "When We replace a message with another -- and God knows best what He reveals -- they say: \"You have made it up;\" yet most of them do not know."
+                    },
+                    {
+                        "id": 2003,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "102",
+                        "arabic_name": "قُلْ نَزَّلَهُۥ رُوحُ ٱلْقُدُسِ مِن رَّبِّكَ بِٱلْحَقِّ لِيُثَبِّتَ ٱلَّذِينَ ءَامَنُوا۟ وَهُدًى وَبُشْرَىٰ لِلْمُسْلِمِينَ",
+                        "translated_name": "You say: \"It has been sent by divine grace from your Lord with truth to strengthen those who believe, and as guidance and good news for those who have submitted (to God).\""
+                    }
+                ],
+                "page_arabic_ayah": "وَلَا تَتَّخِذُوٓا۟ أَيْمَـٰنَكُمْ دَخَلًۢا بَيْنَكُمْ فَتَزِلَّ قَدَمٌۢ بَعْدَ ثُبُوتِهَا وَتَذُوقُوا۟ ٱلسُّوٓءَ بِمَا صَدَدتُّمْ عَن سَبِيلِ ٱللَّهِ ۖ وَلَكُمْ عَذَابٌ عَظِيمٌ (٩٤)  وَلَا تَشْتَرُوا۟ بِعَهْدِ ٱللَّهِ ثَمَنًا قَلِيلًا ۚ إِنَّمَا عِندَ ٱللَّهِ هُوَ خَيْرٌ لَّكُمْ إِن كُنتُمْ تَعْلَمُونَ (٩٥)  مَا عِندَكُمْ يَنفَدُ ۖ وَمَا عِندَ ٱللَّهِ بَاقٍ ۗ وَلَنَجْزِيَنَّ ٱلَّذِينَ صَبَرُوٓا۟ أَجْرَهُم بِأَحْسَنِ مَا كَانُوا۟ يَعْمَلُونَ (٩٦)  مَنْ عَمِلَ صَـٰلِحًا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌ فَلَنُحْيِيَنَّهُۥ حَيَوٰةً طَيِّبَةً ۖ وَلَنَجْزِيَنَّهُمْ أَجْرَهُم بِأَحْسَنِ مَا كَانُوا۟ يَعْمَلُونَ (٩٧)  فَإِذَا قَرَأْتَ ٱلْقُرْءَانَ فَٱسْتَعِذْ بِٱللَّهِ مِنَ ٱلشَّيْطَـٰنِ ٱلرَّجِيمِ (٩٨)  إِنَّهُۥ لَيْسَ لَهُۥ سُلْطَـٰنٌ عَلَى ٱلَّذِينَ ءَامَنُوا۟ وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ (٩٩)  إِنَّمَا سُلْطَـٰنُهُۥ عَلَى ٱلَّذِينَ يَتَوَلَّوْنَهُۥ وَٱلَّذِينَ هُم بِهِۦ مُشْرِكُونَ (١٠٠)  وَإِذَا بَدَّلْنَآ ءَايَةً مَّكَانَ ءَايَةٍ ۙ وَٱللَّهُ أَعْلَمُ بِمَا يُنَزِّلُ قَالُوٓا۟ إِنَّمَآ أَنتَ مُفْتَرٍۭ ۚ بَلْ أَكْثَرُهُمْ لَا يَعْلَمُونَ (١٠١)  قُلْ نَزَّلَهُۥ رُوحُ ٱلْقُدُسِ مِن رَّبِّكَ بِٱلْحَقِّ لِيُثَبِّتَ ٱلَّذِينَ ءَامَنُوا۟ وَهُدًى وَبُشْرَىٰ لِلْمُسْلِمِينَ (١٠٢)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 279,
+                "page_number": "279",
+                "page_key": 12,
+                "page_verses": [
+                    {
+                        "id": 2004,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "103",
+                        "arabic_name": "وَلَقَدْ نَعْلَمُ أَنَّهُمْ يَقُولُونَ إِنَّمَا يُعَلِّمُهُۥ بَشَرٌ ۗ لِّسَانُ ٱلَّذِى يُلْحِدُونَ إِلَيْهِ أَعْجَمِىٌّ وَهَـٰذَا لِسَانٌ عَرَبِىٌّ مُّبِينٌ",
+                        "translated_name": "Yet We know what they say: \"It is only a man who instructs him.\" The speech of the man they imply is obscure while this is clear Arabic."
+                    },
+                    {
+                        "id": 2005,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "104",
+                        "arabic_name": "إِنَّ ٱلَّذِينَ لَا يُؤْمِنُونَ بِـَٔايَـٰتِ ٱللَّهِ لَا يَهْدِيهِمُ ٱللَّهُ وَلَهُمْ عَذَابٌ أَلِيمٌ",
+                        "translated_name": "Those who do not believe in the words of God are verily not guided by God. For them is severe punishment."
+                    },
+                    {
+                        "id": 2006,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "105",
+                        "arabic_name": "إِنَّمَا يَفْتَرِى ٱلْكَذِبَ ٱلَّذِينَ لَا يُؤْمِنُونَ بِـَٔايَـٰتِ ٱللَّهِ ۖ وَأُو۟لَـٰٓئِكَ هُمُ ٱلْكَـٰذِبُونَ",
+                        "translated_name": "They alone invent lies who do not believe in the words of God, and they are liars."
+                    },
+                    {
+                        "id": 2007,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "106",
+                        "arabic_name": "مَن كَفَرَ بِٱللَّهِ مِنۢ بَعْدِ إِيمَـٰنِهِۦٓ إِلَّا مَنْ أُكْرِهَ وَقَلْبُهُۥ مُطْمَئِنٌّۢ بِٱلْإِيمَـٰنِ وَلَـٰكِن مَّن شَرَحَ بِٱلْكُفْرِ صَدْرًا فَعَلَيْهِمْ غَضَبٌ مِّنَ ٱللَّهِ وَلَهُمْ عَذَابٌ عَظِيمٌ",
+                        "translated_name": "Whosoever denies having once believed -- unless he is forced to do so while his heart enjoys the peace of faith -- and opens his mind to disbelief will suffer the wrath of God. Their punishment will be great,"
+                    },
+                    {
+                        "id": 2008,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "107",
+                        "arabic_name": "ذَٰلِكَ بِأَنَّهُمُ ٱسْتَحَبُّوا۟ ٱلْحَيَوٰةَ ٱلدُّنْيَا عَلَى ٱلْـَٔاخِرَةِ وَأَنَّ ٱللَّهَ لَا يَهْدِى ٱلْقَوْمَ ٱلْكَـٰفِرِينَ",
+                        "translated_name": "For they loved the life of this world more than the life to come; and God does not guide those who do not believe."
+                    },
+                    {
+                        "id": 2009,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "108",
+                        "arabic_name": "أُو۟لَـٰٓئِكَ ٱلَّذِينَ طَبَعَ ٱللَّهُ عَلَىٰ قُلُوبِهِمْ وَسَمْعِهِمْ وَأَبْصَـٰرِهِمْ ۖ وَأُو۟لَـٰٓئِكَ هُمُ ٱلْغَـٰفِلُونَ",
+                        "translated_name": "They are the ones whose hearts and ears and eyes have been sealed by God; and these are the heedless."
+                    },
+                    {
+                        "id": 2010,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "109",
+                        "arabic_name": "لَا جَرَمَ أَنَّهُمْ فِى ٱلْـَٔاخِرَةِ هُمُ ٱلْخَـٰسِرُونَ",
+                        "translated_name": "They will surely be losers in the life to come,"
+                    },
+                    {
+                        "id": 2011,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "110",
+                        "arabic_name": "ثُمَّ إِنَّ رَبَّكَ لِلَّذِينَ هَاجَرُوا۟ مِنۢ بَعْدِ مَا فُتِنُوا۟ ثُمَّ جَـٰهَدُوا۟ وَصَبَرُوٓا۟ إِنَّ رَبَّكَ مِنۢ بَعْدِهَا لَغَفُورٌ رَّحِيمٌ",
+                        "translated_name": "But (to) those who were victimised and left their homes and then fought and endured patiently, your Lord will surely be forgiving and kind."
+                    }
+                ],
+                "page_arabic_ayah": "وَلَقَدْ نَعْلَمُ أَنَّهُمْ يَقُولُونَ إِنَّمَا يُعَلِّمُهُۥ بَشَرٌ ۗ لِّسَانُ ٱلَّذِى يُلْحِدُونَ إِلَيْهِ أَعْجَمِىٌّ وَهَـٰذَا لِسَانٌ عَرَبِىٌّ مُّبِينٌ (١٠٣)  إِنَّ ٱلَّذِينَ لَا يُؤْمِنُونَ بِـَٔايَـٰتِ ٱللَّهِ لَا يَهْدِيهِمُ ٱللَّهُ وَلَهُمْ عَذَابٌ أَلِيمٌ (١٠٤)  إِنَّمَا يَفْتَرِى ٱلْكَذِبَ ٱلَّذِينَ لَا يُؤْمِنُونَ بِـَٔايَـٰتِ ٱللَّهِ ۖ وَأُو۟لَـٰٓئِكَ هُمُ ٱلْكَـٰذِبُونَ (١٠٥)  مَن كَفَرَ بِٱللَّهِ مِنۢ بَعْدِ إِيمَـٰنِهِۦٓ إِلَّا مَنْ أُكْرِهَ وَقَلْبُهُۥ مُطْمَئِنٌّۢ بِٱلْإِيمَـٰنِ وَلَـٰكِن مَّن شَرَحَ بِٱلْكُفْرِ صَدْرًا فَعَلَيْهِمْ غَضَبٌ مِّنَ ٱللَّهِ وَلَهُمْ عَذَابٌ عَظِيمٌ (١٠٦)  ذَٰلِكَ بِأَنَّهُمُ ٱسْتَحَبُّوا۟ ٱلْحَيَوٰةَ ٱلدُّنْيَا عَلَى ٱلْـَٔاخِرَةِ وَأَنَّ ٱللَّهَ لَا يَهْدِى ٱلْقَوْمَ ٱلْكَـٰفِرِينَ (١٠٧)  أُو۟لَـٰٓئِكَ ٱلَّذِينَ طَبَعَ ٱللَّهُ عَلَىٰ قُلُوبِهِمْ وَسَمْعِهِمْ وَأَبْصَـٰرِهِمْ ۖ وَأُو۟لَـٰٓئِكَ هُمُ ٱلْغَـٰفِلُونَ (١٠٨)  لَا جَرَمَ أَنَّهُمْ فِى ٱلْـَٔاخِرَةِ هُمُ ٱلْخَـٰسِرُونَ (١٠٩)  ثُمَّ إِنَّ رَبَّكَ لِلَّذِينَ هَاجَرُوا۟ مِنۢ بَعْدِ مَا فُتِنُوا۟ ثُمَّ جَـٰهَدُوا۟ وَصَبَرُوٓا۟ إِنَّ رَبَّكَ مِنۢ بَعْدِهَا لَغَفُورٌ رَّحِيمٌ (١١٠)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 280,
+                "page_number": "280",
+                "page_key": 13,
+                "page_verses": [
+                    {
+                        "id": 2012,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "111",
+                        "arabic_name": "۞ يَوْمَ تَأْتِى كُلُّ نَفْسٍ تُجَـٰدِلُ عَن نَّفْسِهَا وَتُوَفَّىٰ كُلُّ نَفْسٍ مَّا عَمِلَتْ وَهُمْ لَا يُظْلَمُونَ",
+                        "translated_name": "On the day when every soul will come pleading for itself, and every soul will be recompensed for what it had done, no one will be wronged."
+                    },
+                    {
+                        "id": 2013,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "112",
+                        "arabic_name": "وَضَرَبَ ٱللَّهُ مَثَلًا قَرْيَةً كَانَتْ ءَامِنَةً مُّطْمَئِنَّةً يَأْتِيهَا رِزْقُهَا رَغَدًا مِّن كُلِّ مَكَانٍ فَكَفَرَتْ بِأَنْعُمِ ٱللَّهِ فَأَذَٰقَهَا ٱللَّهُ لِبَاسَ ٱلْجُوعِ وَٱلْخَوْفِ بِمَا كَانُوا۟ يَصْنَعُونَ",
+                        "translated_name": "God presents the example of a town which enjoyed peace and security, its provisions coming from everywhere in abundance, but it denied the favours of God; so God acquainted it with intimate hunger and fear (as punishment) for what they had done."
+                    },
+                    {
+                        "id": 2014,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "113",
+                        "arabic_name": "وَلَقَدْ جَآءَهُمْ رَسُولٌ مِّنْهُمْ فَكَذَّبُوهُ فَأَخَذَهُمُ ٱلْعَذَابُ وَهُمْ ظَـٰلِمُونَ",
+                        "translated_name": "An apostle came to them who was one of them, but they called him a liar. Then they were seized by torment for they were sinners."
+                    },
+                    {
+                        "id": 2015,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "114",
+                        "arabic_name": "فَكُلُوا۟ مِمَّا رَزَقَكُمُ ٱللَّهُ حَلَـٰلًا طَيِّبًا وَٱشْكُرُوا۟ نِعْمَتَ ٱللَّهِ إِن كُنتُمْ إِيَّاهُ تَعْبُدُونَ",
+                        "translated_name": "Eat the good and lawful of things that God has given you, and be grateful for the bounty of God, if you really worship Him."
+                    },
+                    {
+                        "id": 2016,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "115",
+                        "arabic_name": "إِنَّمَا حَرَّمَ عَلَيْكُمُ ٱلْمَيْتَةَ وَٱلدَّمَ وَلَحْمَ ٱلْخِنزِيرِ وَمَآ أُهِلَّ لِغَيْرِ ٱللَّهِ بِهِۦ ۖ فَمَنِ ٱضْطُرَّ غَيْرَ بَاغٍ وَلَا عَادٍ فَإِنَّ ٱللَّهَ غَفُورٌ رَّحِيمٌ",
+                        "translated_name": "He has forbidden carrion and blood and the flesh of the swine, and what has been killed in the name of any other but God; but if one is driven by necessity (to eat it) without craving or reverting to it, then God is forgiving and kind."
+                    },
+                    {
+                        "id": 2017,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "116",
+                        "arabic_name": "وَلَا تَقُولُوا۟ لِمَا تَصِفُ أَلْسِنَتُكُمُ ٱلْكَذِبَ هَـٰذَا حَلَـٰلٌ وَهَـٰذَا حَرَامٌ لِّتَفْتَرُوا۟ عَلَى ٱللَّهِ ٱلْكَذِبَ ۚ إِنَّ ٱلَّذِينَ يَفْتَرُونَ عَلَى ٱللَّهِ ٱلْكَذِبَ لَا يُفْلِحُونَ",
+                        "translated_name": "Do not utter the lies your tongues make up: \"This is lawful, and this is forbidden,\" in order to impute lies to God; for they who impute lies to God will not find fulfilment."
+                    },
+                    {
+                        "id": 2018,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "117",
+                        "arabic_name": "مَتَـٰعٌ قَلِيلٌ وَلَهُمْ عَذَابٌ أَلِيمٌ",
+                        "translated_name": "For them there is some enjoyment, but the punishment is painful."
+                    },
+                    {
+                        "id": 2019,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "118",
+                        "arabic_name": "وَعَلَى ٱلَّذِينَ هَادُوا۟ حَرَّمْنَا مَا قَصَصْنَا عَلَيْكَ مِن قَبْلُ ۖ وَمَا ظَلَمْنَـٰهُمْ وَلَـٰكِن كَانُوٓا۟ أَنفُسَهُمْ يَظْلِمُونَ",
+                        "translated_name": "We have already told you what We have forbidden the Jews. We did not wrong them, they wronged themselves."
+                    }
+                ],
+                "page_arabic_ayah": "۞ يَوْمَ تَأْتِى كُلُّ نَفْسٍ تُجَـٰدِلُ عَن نَّفْسِهَا وَتُوَفَّىٰ كُلُّ نَفْسٍ مَّا عَمِلَتْ وَهُمْ لَا يُظْلَمُونَ (١١١)  وَضَرَبَ ٱللَّهُ مَثَلًا قَرْيَةً كَانَتْ ءَامِنَةً مُّطْمَئِنَّةً يَأْتِيهَا رِزْقُهَا رَغَدًا مِّن كُلِّ مَكَانٍ فَكَفَرَتْ بِأَنْعُمِ ٱللَّهِ فَأَذَٰقَهَا ٱللَّهُ لِبَاسَ ٱلْجُوعِ وَٱلْخَوْفِ بِمَا كَانُوا۟ يَصْنَعُونَ (١١٢)  وَلَقَدْ جَآءَهُمْ رَسُولٌ مِّنْهُمْ فَكَذَّبُوهُ فَأَخَذَهُمُ ٱلْعَذَابُ وَهُمْ ظَـٰلِمُونَ (١١٣)  فَكُلُوا۟ مِمَّا رَزَقَكُمُ ٱللَّهُ حَلَـٰلًا طَيِّبًا وَٱشْكُرُوا۟ نِعْمَتَ ٱللَّهِ إِن كُنتُمْ إِيَّاهُ تَعْبُدُونَ (١١٤)  إِنَّمَا حَرَّمَ عَلَيْكُمُ ٱلْمَيْتَةَ وَٱلدَّمَ وَلَحْمَ ٱلْخِنزِيرِ وَمَآ أُهِلَّ لِغَيْرِ ٱللَّهِ بِهِۦ ۖ فَمَنِ ٱضْطُرَّ غَيْرَ بَاغٍ وَلَا عَادٍ فَإِنَّ ٱللَّهَ غَفُورٌ رَّحِيمٌ (١١٥)  وَلَا تَقُولُوا۟ لِمَا تَصِفُ أَلْسِنَتُكُمُ ٱلْكَذِبَ هَـٰذَا حَلَـٰلٌ وَهَـٰذَا حَرَامٌ لِّتَفْتَرُوا۟ عَلَى ٱللَّهِ ٱلْكَذِبَ ۚ إِنَّ ٱلَّذِينَ يَفْتَرُونَ عَلَى ٱللَّهِ ٱلْكَذِبَ لَا يُفْلِحُونَ (١١٦)  مَتَـٰعٌ قَلِيلٌ وَلَهُمْ عَذَابٌ أَلِيمٌ (١١٧)  وَعَلَى ٱلَّذِينَ هَادُوا۟ حَرَّمْنَا مَا قَصَصْنَا عَلَيْكَ مِن قَبْلُ ۖ وَمَا ظَلَمْنَـٰهُمْ وَلَـٰكِن كَانُوٓا۟ أَنفُسَهُمْ يَظْلِمُونَ (١١٨)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 281,
+                "page_number": "281",
+                "page_key": 14,
+                "page_verses": [
+                    {
+                        "id": 2020,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "119",
+                        "arabic_name": "ثُمَّ إِنَّ رَبَّكَ لِلَّذِينَ عَمِلُوا۟ ٱلسُّوٓءَ بِجَهَـٰلَةٍ ثُمَّ تَابُوا۟ مِنۢ بَعْدِ ذَٰلِكَ وَأَصْلَحُوٓا۟ إِنَّ رَبَّكَ مِنۢ بَعْدِهَا لَغَفُورٌ رَّحِيمٌ",
+                        "translated_name": "To those who do wrong out of ignorance, then repent and correct themselves, your Lord is indeed forgiving and kind."
+                    },
+                    {
+                        "id": 2021,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "120",
+                        "arabic_name": "إِنَّ إِبْرَٰهِيمَ كَانَ أُمَّةً قَانِتًا لِّلَّهِ حَنِيفًا وَلَمْ يَكُ مِنَ ٱلْمُشْرِكِينَ",
+                        "translated_name": "Abraham was certainly a model of faith, obedient to God and upright, and not one of idolaters,"
+                    },
+                    {
+                        "id": 2022,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "121",
+                        "arabic_name": "شَاكِرًا لِّأَنْعُمِهِ ۚ ٱجْتَبَىٰهُ وَهَدَىٰهُ إِلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ",
+                        "translated_name": "Grateful to Him for His favours; so He chose him and guided him to the path that is straight,"
+                    },
+                    {
+                        "id": 2023,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "122",
+                        "arabic_name": "وَءَاتَيْنَـٰهُ فِى ٱلدُّنْيَا حَسَنَةً ۖ وَإِنَّهُۥ فِى ٱلْـَٔاخِرَةِ لَمِنَ ٱلصَّـٰلِحِينَ",
+                        "translated_name": "And gave him what is good in the world, and in the Hereafter he will be among the righteous and the good."
+                    },
+                    {
+                        "id": 2024,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "123",
+                        "arabic_name": "ثُمَّ أَوْحَيْنَآ إِلَيْكَ أَنِ ٱتَّبِعْ مِلَّةَ إِبْرَٰهِيمَ حَنِيفًا ۖ وَمَا كَانَ مِنَ ٱلْمُشْرِكِينَ",
+                        "translated_name": "So We commanded you to follow the way of Abraham the upright who was not of idolaters."
+                    },
+                    {
+                        "id": 2025,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "124",
+                        "arabic_name": "إِنَّمَا جُعِلَ ٱلسَّبْتُ عَلَى ٱلَّذِينَ ٱخْتَلَفُوا۟ فِيهِ ۚ وَإِنَّ رَبَّكَ لَيَحْكُمُ بَيْنَهُمْ يَوْمَ ٱلْقِيَـٰمَةِ فِيمَا كَانُوا۟ فِيهِ يَخْتَلِفُونَ",
+                        "translated_name": "As for the Sabbath, it was imposed on those who had differed about it; and your Lord will tell them on the Day of Resurrection what it was they had differed about."
+                    },
+                    {
+                        "id": 2026,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "125",
+                        "arabic_name": "ٱدْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِٱلْحِكْمَةِ وَٱلْمَوْعِظَةِ ٱلْحَسَنَةِ ۖ وَجَـٰدِلْهُم بِٱلَّتِى هِىَ أَحْسَنُ ۚ إِنَّ رَبَّكَ هُوَ أَعْلَمُ بِمَن ضَلَّ عَن سَبِيلِهِۦ ۖ وَهُوَ أَعْلَمُ بِٱلْمُهْتَدِينَ",
+                        "translated_name": "Call them to the path of your Lord with wisdom and words of good advice; and reason with them in the best way possible. Your Lord surely knows who strays from His path, and He knows those who are guided the right way."
+                    },
+                    {
+                        "id": 2027,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "126",
+                        "arabic_name": "وَإِنْ عَاقَبْتُمْ فَعَاقِبُوا۟ بِمِثْلِ مَا عُوقِبْتُم بِهِۦ ۖ وَلَئِن صَبَرْتُمْ لَهُوَ خَيْرٌ لِّلصَّـٰبِرِينَ",
+                        "translated_name": "If you have to retaliate, do so to the extent you have been injured; but if you forbear it is best for those who bear with fortitude."
+                    },
+                    {
+                        "id": 2028,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "127",
+                        "arabic_name": "وَٱصْبِرْ وَمَا صَبْرُكَ إِلَّا بِٱللَّهِ ۚ وَلَا تَحْزَنْ عَلَيْهِمْ وَلَا تَكُ فِى ضَيْقٍ مِّمَّا يَمْكُرُونَ",
+                        "translated_name": "Endure with patience, for your endurance is not without the help of God. Do not grieve for them, and do not be distressed by their plots."
+                    },
+                    {
+                        "id": 2029,
+                        "chapter_id": 16,
+                        "verses_translate_name": "Verses",
+                        "verses_number": "128",
+                        "arabic_name": "إِنَّ ٱللَّهَ مَعَ ٱلَّذِينَ ٱتَّقَوا۟ وَّٱلَّذِينَ هُم مُّحْسِنُونَ",
+                        "translated_name": "God is verily with those who are pious and devout, and those who are doers of good."
+                    }
+                ],
+                "page_arabic_ayah": "ثُمَّ إِنَّ رَبَّكَ لِلَّذِينَ عَمِلُوا۟ ٱلسُّوٓءَ بِجَهَـٰلَةٍ ثُمَّ تَابُوا۟ مِنۢ بَعْدِ ذَٰلِكَ وَأَصْلَحُوٓا۟ إِنَّ رَبَّكَ مِنۢ بَعْدِهَا لَغَفُورٌ رَّحِيمٌ (١١٩)  إِنَّ إِبْرَٰهِيمَ كَانَ أُمَّةً قَانِتًا لِّلَّهِ حَنِيفًا وَلَمْ يَكُ مِنَ ٱلْمُشْرِكِينَ (١٢٠)  شَاكِرًا لِّأَنْعُمِهِ ۚ ٱجْتَبَىٰهُ وَهَدَىٰهُ إِلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ (١٢١)  وَءَاتَيْنَـٰهُ فِى ٱلدُّنْيَا حَسَنَةً ۖ وَإِنَّهُۥ فِى ٱلْـَٔاخِرَةِ لَمِنَ ٱلصَّـٰلِحِينَ (١٢٢)  ثُمَّ أَوْحَيْنَآ إِلَيْكَ أَنِ ٱتَّبِعْ مِلَّةَ إِبْرَٰهِيمَ حَنِيفًا ۖ وَمَا كَانَ مِنَ ٱلْمُشْرِكِينَ (١٢٣)  إِنَّمَا جُعِلَ ٱلسَّبْتُ عَلَى ٱلَّذِينَ ٱخْتَلَفُوا۟ فِيهِ ۚ وَإِنَّ رَبَّكَ لَيَحْكُمُ بَيْنَهُمْ يَوْمَ ٱلْقِيَـٰمَةِ فِيمَا كَانُوا۟ فِيهِ يَخْتَلِفُونَ (١٢٤)  ٱدْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِٱلْحِكْمَةِ وَٱلْمَوْعِظَةِ ٱلْحَسَنَةِ ۖ وَجَـٰدِلْهُم بِٱلَّتِى هِىَ أَحْسَنُ ۚ إِنَّ رَبَّكَ هُوَ أَعْلَمُ بِمَن ضَلَّ عَن سَبِيلِهِۦ ۖ وَهُوَ أَعْلَمُ بِٱلْمُهْتَدِينَ (١٢٥)  وَإِنْ عَاقَبْتُمْ فَعَاقِبُوا۟ بِمِثْلِ مَا عُوقِبْتُم بِهِۦ ۖ وَلَئِن صَبَرْتُمْ لَهُوَ خَيْرٌ لِّلصَّـٰبِرِينَ (١٢٦)  وَٱصْبِرْ وَمَا صَبْرُكَ إِلَّا بِٱللَّهِ ۚ وَلَا تَحْزَنْ عَلَيْهِمْ وَلَا تَكُ فِى ضَيْقٍ مِّمَّا يَمْكُرُونَ (١٢٧)  إِنَّ ٱللَّهَ مَعَ ٱلَّذِينَ ٱتَّقَوا۟ وَّٱلَّذِينَ هُم مُّحْسِنُونَ (١٢٨)",
+                "is_read": false
+            }
+        ]
+    }
+}
+]

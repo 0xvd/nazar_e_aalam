@@ -1,0 +1,146 @@
+{
+    "status": true,
+    "message": "Data fetched successfully",
+    "data": {
+        "chapter": {
+            "id": 61,
+            "serial_number": "61",
+            "arabic_name": "الصف",
+            "translated_name": "As-Saf",
+            "verses_translate_name": "versos",
+            "verses_count": "14"
+        },
+        "chapter_info": [
+            {
+                "eng_page_number": 551,
+                "page_number": "551",
+                "page_key": 0,
+                "page_verses": [
+                    {
+                        "id": 5164,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "1",
+                        "arabic_name": "سَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۖ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+                        "translated_name": "Glorifica a Dios lo que hay en los cielos y lo que hay en la Tierra y Él es el Todopoderoso, el Sabio."
+                    },
+                    {
+                        "id": 5165,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "2",
+                        "arabic_name": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لِمَ تَقُولُونَ مَا لَا تَفْعَلُونَ",
+                        "translated_name": "¡Oh, creyentes! ¿Por qué decís lo que no hacéis?"
+                    },
+                    {
+                        "id": 5166,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "3",
+                        "arabic_name": "كَبُرَ مَقْتًا عِندَ ٱللَّهِ أَن تَقُولُوا۟ مَا لَا تَفْعَلُونَ",
+                        "translated_name": "¡Dios aborrece mucho que digáis lo que no hacéis!"
+                    },
+                    {
+                        "id": 5167,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "4",
+                        "arabic_name": "إِنَّ ٱللَّهَ يُحِبُّ ٱلَّذِينَ يُقَـٰتِلُونَ فِى سَبِيلِهِۦ صَفًّا كَأَنَّهُم بُنْيَـٰنٌ مَّرْصُوصٌ",
+                        "translated_name": "En verdad, Dios ama a quienes combaten por Su causa en filas apretadas, como un firme edificio."
+                    },
+                    {
+                        "id": 5168,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "5",
+                        "arabic_name": "وَإِذْ قَالَ مُوسَىٰ لِقَوْمِهِۦ يَـٰقَوْمِ لِمَ تُؤْذُونَنِى وَقَد تَّعْلَمُونَ أَنِّى رَسُولُ ٱللَّهِ إِلَيْكُمْ ۖ فَلَمَّا زَاغُوٓا۟ أَزَاغَ ٱللَّهُ قُلُوبَهُمْ ۚ وَٱللَّهُ لَا يَهْدِى ٱلْقَوْمَ ٱلْفَـٰسِقِينَ",
+                        "translated_name": "Y [recuerda] cuando Moisés dijo a su pueblo: «¡Oh, pueblo mío! ¿Por qué me molestáis cuando sabéis con certeza que yo soy el Mensajero de Dios enviado a vosotros?» Cuando se desviaron, Dios desvió de sus corazones. Y Dios no guía a la gente trasgresora."
+                    }
+                ],
+                "page_arabic_ayah": "سَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۖ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ (١)  يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لِمَ تَقُولُونَ مَا لَا تَفْعَلُونَ (٢)  كَبُرَ مَقْتًا عِندَ ٱللَّهِ أَن تَقُولُوا۟ مَا لَا تَفْعَلُونَ (٣)  إِنَّ ٱللَّهَ يُحِبُّ ٱلَّذِينَ يُقَـٰتِلُونَ فِى سَبِيلِهِۦ صَفًّا كَأَنَّهُم بُنْيَـٰنٌ مَّرْصُوصٌ (٤)  وَإِذْ قَالَ مُوسَىٰ لِقَوْمِهِۦ يَـٰقَوْمِ لِمَ تُؤْذُونَنِى وَقَد تَّعْلَمُونَ أَنِّى رَسُولُ ٱللَّهِ إِلَيْكُمْ ۖ فَلَمَّا زَاغُوٓا۟ أَزَاغَ ٱللَّهُ قُلُوبَهُمْ ۚ وَٱللَّهُ لَا يَهْدِى ٱلْقَوْمَ ٱلْفَـٰسِقِينَ (٥)",
+                "is_read": false
+            },
+            {
+                "eng_page_number": 552,
+                "page_number": "552",
+                "page_key": 1,
+                "page_verses": [
+                    {
+                        "id": 5169,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "6",
+                        "arabic_name": "وَإِذْ قَالَ عِيسَى ٱبْنُ مَرْيَمَ يَـٰبَنِىٓ إِسْرَٰٓءِيلَ إِنِّى رَسُولُ ٱللَّهِ إِلَيْكُم مُّصَدِّقًا لِّمَا بَيْنَ يَدَىَّ مِنَ ٱلتَّوْرَىٰةِ وَمُبَشِّرًۢا بِرَسُولٍ يَأْتِى مِنۢ بَعْدِى ٱسْمُهُۥٓ أَحْمَدُ ۖ فَلَمَّا جَآءَهُم بِٱلْبَيِّنَـٰتِ قَالُوا۟ هَـٰذَا سِحْرٌ مُّبِينٌ",
+                        "translated_name": "Y [recuerda] cuando Jesús hijo de María dijo: «¡Oh, Hijos de Israel! En verdad, soy el Mensajero de Dios enviado a vosotros para confirmar la Torá anterior a mí y para anunciar a un Mensajero que vendrá tras de mí. Su nombre es Ahmad.» Y cuando vino a ellos con las pruebas claras, dijeron: «¡Esto es magia evidente!»"
+                    },
+                    {
+                        "id": 5170,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "7",
+                        "arabic_name": "وَمَنْ أَظْلَمُ مِمَّنِ ٱفْتَرَىٰ عَلَى ٱللَّهِ ٱلْكَذِبَ وَهُوَ يُدْعَىٰٓ إِلَى ٱلْإِسْلَـٰمِ ۚ وَٱللَّهُ لَا يَهْدِى ٱلْقَوْمَ ٱلظَّـٰلِمِينَ",
+                        "translated_name": "Y ¿Quién es más opresor que quien inventa mentiras sobre Dios cuando ha sido llamado al Islam? ¡Y Dios no guía a la gente opresora!"
+                    },
+                    {
+                        "id": 5171,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "8",
+                        "arabic_name": "يُرِيدُونَ لِيُطْفِـُٔوا۟ نُورَ ٱللَّهِ بِأَفْوَٰهِهِمْ وَٱللَّهُ مُتِمُّ نُورِهِۦ وَلَوْ كَرِهَ ٱلْكَـٰفِرُونَ",
+                        "translated_name": "Quisieran apagar la luz de Dios con un soplido de sus bocas, pero Dios completa Su luz aunque moleste a los que no creen."
+                    },
+                    {
+                        "id": 5172,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "9",
+                        "arabic_name": "هُوَ ٱلَّذِىٓ أَرْسَلَ رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ ٱلْحَقِّ لِيُظْهِرَهُۥ عَلَى ٱلدِّينِ كُلِّهِۦ وَلَوْ كَرِهَ ٱلْمُشْرِكُونَ",
+                        "translated_name": "Él es Quien ha enviado a Su Mensajero con la guía y con la religión de la Verdad, para hacer que prevalezca sobre todas las creencias, aunque ello moleste a los idólatras."
+                    },
+                    {
+                        "id": 5173,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "10",
+                        "arabic_name": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ هَلْ أَدُلُّكُمْ عَلَىٰ تِجَـٰرَةٍ تُنجِيكُم مِّنْ عَذَابٍ أَلِيمٍ",
+                        "translated_name": "¡Oh, creyentes! ¿Queréis que os indique un negocio que os salve de un castigo doloroso?:"
+                    },
+                    {
+                        "id": 5174,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "11",
+                        "arabic_name": "تُؤْمِنُونَ بِٱللَّهِ وَرَسُولِهِۦ وَتُجَـٰهِدُونَ فِى سَبِيلِ ٱللَّهِ بِأَمْوَٰلِكُمْ وَأَنفُسِكُمْ ۚ ذَٰلِكُمْ خَيْرٌ لَّكُمْ إِن كُنتُمْ تَعْلَمُونَ",
+                        "translated_name": "¡Tener fe en Dios y en Su Mensajero y combatir por la causa de Dios con vuestros bienes y vuestras almas! ¡Eso es mejor para vosotros! ¡Si supieseis…!"
+                    },
+                    {
+                        "id": 5175,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "12",
+                        "arabic_name": "يَغْفِرْ لَكُمْ ذُنُوبَكُمْ وَيُدْخِلْكُمْ جَنَّـٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ وَمَسَـٰكِنَ طَيِّبَةً فِى جَنَّـٰتِ عَدْنٍ ۚ ذَٰلِكَ ٱلْفَوْزُ ٱلْعَظِيمُ",
+                        "translated_name": "Os perdonará vuestros pecados y os introducirá en Jardines de cuyas profundidades brotan los ríos y en buenas mansiones en los Jardines del Edén. ¡Ese es el triunfo inmenso!"
+                    },
+                    {
+                        "id": 5176,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "13",
+                        "arabic_name": "وَأُخْرَىٰ تُحِبُّونَهَا ۖ نَصْرٌ مِّنَ ٱللَّهِ وَفَتْحٌ قَرِيبٌ ۗ وَبَشِّرِ ٱلْمُؤْمِنِينَ",
+                        "translated_name": "Y otra [merced] que amaréis: «Un auxilio procedente de Dios y una victoria próxima.» ¡Informa de la buena nueva a los creyentes!"
+                    },
+                    {
+                        "id": 5177,
+                        "chapter_id": 61,
+                        "verses_translate_name": "versos",
+                        "verses_number": "14",
+                        "arabic_name": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوٓا۟ أَنصَارَ ٱللَّهِ كَمَا قَالَ عِيسَى ٱبْنُ مَرْيَمَ لِلْحَوَارِيِّـۧنَ مَنْ أَنصَارِىٓ إِلَى ٱللَّهِ ۖ قَالَ ٱلْحَوَارِيُّونَ نَحْنُ أَنصَارُ ٱللَّهِ ۖ فَـَٔامَنَت طَّآئِفَةٌ مِّنۢ بَنِىٓ إِسْرَٰٓءِيلَ وَكَفَرَت طَّآئِفَةٌ ۖ فَأَيَّدْنَا ٱلَّذِينَ ءَامَنُوا۟ عَلَىٰ عَدُوِّهِمْ فَأَصْبَحُوا۟ ظَـٰهِرِينَ",
+                        "translated_name": "¡Oh, creyentes! ¡Sed los auxiliares de Dios! como los apóstoles cuando dijo Jesús hijo de María: «¿Quién me auxiliará hacia Dios?» Los apóstoles dijeron: «¡Nosotros seremos los auxiliares de Dios!» Así pues, un grupo de los Hijos de Israel creyó y otro grupo no creyó. Nosotros apoyamos a los que tuvieron fe sobre sus enemigos y se convirtieron en los vencedores."
+                    }
+                ],
+                "page_arabic_ayah": "وَإِذْ قَالَ عِيسَى ٱبْنُ مَرْيَمَ يَـٰبَنِىٓ إِسْرَٰٓءِيلَ إِنِّى رَسُولُ ٱللَّهِ إِلَيْكُم مُّصَدِّقًا لِّمَا بَيْنَ يَدَىَّ مِنَ ٱلتَّوْرَىٰةِ وَمُبَشِّرًۢا بِرَسُولٍ يَأْتِى مِنۢ بَعْدِى ٱسْمُهُۥٓ أَحْمَدُ ۖ فَلَمَّا جَآءَهُم بِٱلْبَيِّنَـٰتِ قَالُوا۟ هَـٰذَا سِحْرٌ مُّبِينٌ (٦)  وَمَنْ أَظْلَمُ مِمَّنِ ٱفْتَرَىٰ عَلَى ٱللَّهِ ٱلْكَذِبَ وَهُوَ يُدْعَىٰٓ إِلَى ٱلْإِسْلَـٰمِ ۚ وَٱللَّهُ لَا يَهْدِى ٱلْقَوْمَ ٱلظَّـٰلِمِينَ (٧)  يُرِيدُونَ لِيُطْفِـُٔوا۟ نُورَ ٱللَّهِ بِأَفْوَٰهِهِمْ وَٱللَّهُ مُتِمُّ نُورِهِۦ وَلَوْ كَرِهَ ٱلْكَـٰفِرُونَ (٨)  هُوَ ٱلَّذِىٓ أَرْسَلَ رَسُولَهُۥ بِٱلْهُدَىٰ وَدِينِ ٱلْحَقِّ لِيُظْهِرَهُۥ عَلَى ٱلدِّينِ كُلِّهِۦ وَلَوْ كَرِهَ ٱلْمُشْرِكُونَ (٩)  يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ هَلْ أَدُلُّكُمْ عَلَىٰ تِجَـٰرَةٍ تُنجِيكُم مِّنْ عَذَابٍ أَلِيمٍ (١٠)  تُؤْمِنُونَ بِٱللَّهِ وَرَسُولِهِۦ وَتُجَـٰهِدُونَ فِى سَبِيلِ ٱللَّهِ بِأَمْوَٰلِكُمْ وَأَنفُسِكُمْ ۚ ذَٰلِكُمْ خَيْرٌ لَّكُمْ إِن كُنتُمْ تَعْلَمُونَ (١١)  يَغْفِرْ لَكُمْ ذُنُوبَكُمْ وَيُدْخِلْكُمْ جَنَّـٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ وَمَسَـٰكِنَ طَيِّبَةً فِى جَنَّـٰتِ عَدْنٍ ۚ ذَٰلِكَ ٱلْفَوْزُ ٱلْعَظِيمُ (١٢)  وَأُخْرَىٰ تُحِبُّونَهَا ۖ نَصْرٌ مِّنَ ٱللَّهِ وَفَتْحٌ قَرِيبٌ ۗ وَبَشِّرِ ٱلْمُؤْمِنِينَ (١٣)  يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوٓا۟ أَنصَارَ ٱللَّهِ كَمَا قَالَ عِيسَى ٱبْنُ مَرْيَمَ لِلْحَوَارِيِّـۧنَ مَنْ أَنصَارِىٓ إِلَى ٱللَّهِ ۖ قَالَ ٱلْحَوَارِيُّونَ نَحْنُ أَنصَارُ ٱللَّهِ ۖ فَـَٔامَنَت طَّآئِفَةٌ مِّنۢ بَنِىٓ إِسْرَٰٓءِيلَ وَكَفَرَت طَّآئِفَةٌ ۖ فَأَيَّدْنَا ٱلَّذِينَ ءَامَنُوا۟ عَلَىٰ عَدُوِّهِمْ فَأَصْبَحُوا۟ ظَـٰهِرِينَ (١٤)",
+                "is_read": false
+            }
+        ]
+    }
+}

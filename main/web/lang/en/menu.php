@@ -1,0 +1,38 @@
+<?php
+
+return [
+
+    'dashboard' => 'Dashboard',
+    'administrator' => 'Administrator',
+    'roles' => 'Roles',
+    'users' => 'Users',
+    'prayer_times' => 'Prayer Times',
+    'add_prayer_time' => 'Add Prayer Time',
+    'prayer_times_list' => 'Prayer Times',
+    'import_prayer_times' => 'Import Prayer Times',
+    'audio_quran' => 'Audio Quran',
+    'reciter_list' => 'Reciter List',
+    'bulk_audio_import' => 'Bulk Audio Import',
+    'dua' => 'Dua',
+    'dhikr' => 'Dhikr',
+    'wallpaper' => 'Wallpaper',
+    'wallpaper_category' => 'Category',
+    'wallpaper_list' => 'Wallpaper',
+    'sifat_name' => 'Sifat Name',
+    'haram_code' => 'Haram Code',
+    'donation' => 'Donation',
+    'donation_category' => 'Category',
+    'donation_list' => 'Donation List',
+    'payment_methods' => 'Payment Methods',
+    'landing_page' => 'Landing Page',
+    'hero_section' => 'Hero Section',
+    'stats_badges' => 'Stats & Badges',
+    'features_grid' => 'Features Grid',
+    'section_content' => 'Section Content',
+    'download_cta' => 'Download CTA',
+    'footer' => 'Footer',
+    'seo' => 'SEO',
+    'blog' => 'Blog',
+    'settings' => 'Settings',
+
+];

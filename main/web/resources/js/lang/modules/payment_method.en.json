@@ -1,0 +1,26 @@
+{
+    "payment_method": {
+        "title": "Payment Method List",
+        "singular": "Payment Method",
+        "add": "Add Payment Method",
+        "table": {
+            "icon": "Icon"
+        },
+        "form": {
+            "payment_method_label": "Payment Method",
+            "choose_one": "Choose One",
+            "payment_mode_label": "Payment Mode",
+            "sandbox": "Sandbox",
+            "live": "Live",
+            "name_placeholder": "Enter name",
+            "api_key_label": "Api Key",
+            "api_key_placeholder": "Enter api key",
+            "api_secret_label": "Api Secret",
+            "api_secret_placeholder": "Enter api secret",
+            "store_id_label": "Store ID",
+            "store_id_placeholder": "Enter store ID",
+            "store_password_label": "Store Password",
+            "store_password_placeholder": "Enter store password"
+        }
+    }
+}

@@ -1,0 +1,141 @@
+{
+    "setting": {
+        "index": {
+            "organization": {
+                "title": "المؤسسة",
+                "company_name_label": "اسم الشركة",
+                "company_name_placeholder": "أدخل اسم الشركة",
+                "address_label": "العنوان",
+                "address_placeholder": "أدخل العنوان",
+                "zakat_nisab_label": "نصاب الزكاة",
+                "zakat_nisab_placeholder": "أدخل قيمة نصاب الزكاة",
+                "currency_symbol_label": "رمز العملة",
+                "ramadan_schedule_label": "جدول رمضان",
+                "ramadan_schedule_desc": "تفعيل ميزات الجدول الخاصة برمضان",
+                "show_donation_banner_label": "إظهار شعار التبرع",
+                "show_donation_banner_desc": "عرض شعار التبرع في التطبيق",
+                "show_donation_icon_label": "إظهار أيقونة التبرع",
+                "show_donation_icon_desc": "عرض أيقونة التبرع في التطبيق"
+            },
+            "media": {
+                "title": "الوسائط",
+                "upload": "رفع",
+                "company_logo": "شعار الشركة",
+                "company_icon": "أيقونة الشركة",
+                "app_banner": "بانر التطبيق",
+                "donation_banner": "بانر التبرع"
+            },
+            "appearance": {
+                "title": "المظهر",
+                "description": "اختر نظام الألوان المطبق على تطبيق الجوال ولوحة التحكم والصفحة الرئيسية",
+                "customize_label": "تخصيص الألوان",
+                "customize_desc": "تجاوز الإعداد المحدد بألوانك الخاصة",
+                "mode_label": "الوضع",
+                "mode_light": "فاتح",
+                "mode_dark": "داكن",
+                "reset_to_preset": "إعادة تعيين ألوان الإعداد",
+                "color_primary": "أساسي",
+                "color_secondary": "ثانوي",
+                "color_accent": "مميز",
+                "color_background": "الخلفية",
+                "color_surface": "السطح",
+                "color_text_primary": "النص (أساسي)",
+                "color_text_secondary": "النص (ثانوي)",
+                "color_error": "خطأ"
+            },
+            "integrations": {
+                "title": "التكاملات",
+                "google_map_key_label": "مفتاح خرائط جوجل",
+                "google_map_key_placeholder": "أدخل مفتاح Google Maps API",
+                "ai_secret_key_label": "مفتاح الذكاء الاصطناعي السري",
+                "get_api_key_groq": "الحصول على مفتاح API من Groq",
+                "ai_secret_key_placeholder": "أدخل مفتاح الذكاء الاصطناعي السري",
+                "play_store_url_label": "رابط Play Store",
+                "app_store_url_label": "رابط App Store"
+            },
+            "descriptions": {
+                "title": "الأوصاف",
+                "zakat_description_label": "وصف الزكاة",
+                "zakat_description_placeholder": "أدخل وصف الزكاة",
+                "haram_description_label": "وصف الحرام",
+                "haram_description_placeholder": "أدخل وصف الحرام"
+            },
+            "save_changes": "حفظ التغييرات"
+        },
+        "email": {
+            "sender_identity": {
+                "title": "هوية المُرسل",
+                "provider_label": "المزود",
+                "from_name_label": "اسم المُرسل",
+                "from_name_placeholder": "أدخل اسم المرسل",
+                "from_email_label": "بريد المُرسل",
+                "from_email_placeholder": "أدخل بريد المرسل"
+            },
+            "smtp_server": {
+                "title": "خادم SMTP",
+                "smtp_host_label": "مضيف SMTP",
+                "smtp_port_label": "منفذ SMTP",
+                "encryption_type_label": "نوع التشفير"
+            },
+            "credentials": {
+                "title": "بيانات الاعتماد",
+                "smtp_username_label": "اسم مستخدم SMTP",
+                "smtp_username_placeholder": "أدخل اسم مستخدم SMTP",
+                "smtp_password_label": "كلمة مرور SMTP",
+                "smtp_password_placeholder": "أدخل كلمة مرور SMTP"
+            },
+            "save_changes": "حفظ التغييرات"
+        },
+        "home_layout": {
+            "title": "تخطيط الشاشة الرئيسية",
+            "description": "اختر تصميم الشاشة الرئيسية الذي يعرضه تطبيق الجوال للمستخدمين",
+            "save_changes": "حفظ التغييرات"
+        },
+        "privacy_support": {
+            "save_changes": "حفظ التغييرات",
+            "sections": {
+                "privacy_policy": {
+                    "title": "سياسة الخصوصية",
+                    "desc": "إدارة سياسة الخصوصية المعروضة للمستخدمين"
+                },
+                "support": {
+                    "title": "الدعم",
+                    "desc": "إدارة معلومات الدعم المعروضة للمستخدمين"
+                },
+                "terms_and_conditions": {
+                    "title": "الشروط والأحكام",
+                    "desc": "إدارة الشروط والأحكام المعروضة للمستخدمين"
+                }
+            }
+        },
+        "landing": {
+            "save_changes": "حفظ التغييرات",
+            "hero": {
+                "title": "القسم الرئيسي",
+                "app_name_label": "اسم التطبيق",
+                "badge_text_label": "نص الشعار",
+                "hero_title_label": "العنوان الرئيسي",
+                "hero_subtitle_label": "العنوان الفرعي",
+                "hero_description_label": "الوصف",
+                "hero_description_placeholder": "أدخل الوصف"
+            },
+            "stats": {
+                "title": "الإحصائيات والشعارات",
+                "rating_label": "تقييم التطبيق",
+                "downloads_count_label": "عدد التحميلات",
+                "languages_count_label": "عدد اللغات"
+            },
+            "links": {
+                "title": "روابط التحميل",
+                "app_store_url_label": "رابط App Store",
+                "play_store_url_label": "رابط Play Store",
+                "codecanyon_url_label": "رابط CodeCanyon"
+            },
+            "footer": {
+                "title": "التذييل",
+                "description_label": "وصف التذييل",
+                "description_placeholder": "أدخل وصف التذييل..."
+            }
+        }
+    }
+}
