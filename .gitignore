@@ -33,3 +33,9 @@ real_app_decoded/
 # scraping artifacts
 devtools/scrape_state.json
 devtools/all_prayers.json
+
+.venv
+__pycache__
+*.pyc
+
+*.apk
