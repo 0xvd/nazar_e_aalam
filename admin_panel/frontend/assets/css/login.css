@@ -1,0 +1,96 @@
+/* Login page only */
+#login {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  padding: 28px 16px;
+}
+.lbrand {
+  text-align: center;
+  max-width: 440px;
+  animation: rise 0.8s backwards;
+}
+.logo-big {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 14px;
+  color: var(--oi);
+  margin-bottom: 14px;
+  box-shadow:
+    0 0 0 8px rgba(255, 255, 255, 0.4),
+    0 0 0 18px rgba(255, 255, 255, 0.2),
+    0 18px 40px -8px rgba(200, 80, 0, 0.5);
+  animation: bob 4s ease-in-out infinite;
+}
+@keyframes bob {
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.lbrand .ar {
+  font-size: 26px;
+  color: var(--oi);
+}
+.lbrand h1 {
+  font-size: 38px;
+  margin: 4px 0 8px;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.lbrand p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--mut);
+  max-width: 350px;
+  margin: auto;
+}
+.lform {
+  width: min(420px, 100%);
+}
+.lc {
+  padding: 32px;
+  width: 100%;
+  border: 1.5px solid transparent;
+  border-radius: 26px;
+  background:
+    linear-gradient(rgb(255 250 244/0.93), rgb(255 250 244/0.93)) padding-box,
+    conic-gradient(
+        from var(--a),
+        rgba(255, 255, 255, 0.5),
+        var(--or),
+        rgba(255, 255, 255, 0.5) 45%
+      )
+      border-box;
+  animation:
+    rise 0.8s 0.15s backwards,
+    rot 5s linear infinite;
+  box-shadow: 0 30px 80px -20px rgba(180, 70, 0, 0.45);
+}
+@keyframes rot {
+  to {
+    --a: 360deg;
+  }
+}
+.lc h2 {
+  font-size: 26px;
+}
+.note {
+  margin: 18px 0 0;
+  font-size: 12px;
+  text-align: center;
+}
+@media (max-width: 560px) {
+  .lbrand h1 {
+    font-size: 30px;
+  }
+  .lc {
+    padding: 24px;
+  }
+}

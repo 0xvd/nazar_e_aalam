@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find Mosques Near Me — Free & Open Source</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  :root {
+    --bg: #0f172a; --panel: #111827; --card: #1f2937;
+    --text: #e5e7eb; --muted: #9ca3af; --accent: #22c55e; --accent2: #38bdf8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); height: 100vh; display: flex; overflow: hidden;
+  }
+  #panel {
+    width: 380px; min-width: 320px; background: var(--panel);
+    display: flex; flex-direction: column; border-right: 1px solid #1f2937;
+  }
+  #panel header { padding: 16px; border-bottom: 1px solid #1f2937; }
+  h1 { font-size: 17px; margin: 0 0 4px; }
+  .sub { font-size: 12px; color: var(--muted); }
+  .controls { padding: 12px 16px; display: flex; flex-direction: column; gap: 10px; }
+  button {
+    background: var(--accent); color: #06210f; border: 0; border-radius: 8px;
+    padding: 10px 12px; font-weight: 600; font-size: 14px; cursor: pointer;
+  }
+  button:hover { filter: brightness(1.08); }
+  button.secondary { background: #374151; color: var(--text); }
+  button:disabled { opacity: .5; cursor: not-allowed; }
+  .row { display: flex; gap: 8px; }
+  .row > * { flex: 1; min-width: 0; }
+  label { font-size: 11px; color: var(--muted); display: block; margin-bottom: 3px; }
+  input[type=text], input[type=number] {
+    width: 100%; background: #0b1220; color: var(--text); border: 1px solid #374151;
+    border-radius: 6px; padding: 8px; font-size: 13px; font-family: ui-monospace, monospace;
+  }
+  #coords {
+    font-family: ui-monospace, monospace; font-size: 12px; color: var(--accent2);
+    word-break: break-all; background: #0b1220; padding: 8px; border-radius: 6px;
+    border: 1px solid #1f2937;
+  }
+  #status { font-size: 12px; padding: 0 16px; color: var(--muted); min-height: 18px; }
+  #status.error { color: #f87171; }
+  #results { flex: 1; overflow-y: auto; padding: 8px 12px 20px; }
+  .mosque {
+    background: var(--card); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px;
+    border-left: 3px solid var(--accent); cursor: pointer;
+  }
+  .mosque:hover { background: #273244; }
+  .mosque .name { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+  .mosque .meta { font-size: 11.5px; color: var(--muted); line-height: 1.45; }
+  .mosque .dist { color: var(--accent2); font-weight: 600; }
+  #map { flex: 1; }
+  .empty { color: var(--muted); font-size: 13px; text-align: center; padding: 20px; }
+  @media (max-width: 760px) {
+    body { flex-direction: column; }
+    #panel { width: 100%; height: 55%; border-right: 0; border-bottom: 1px solid #1f2937; }
+    #map { height: 45%; }
+  }
+</style>
+</head>
+<body>
+
+<div id="panel">
+  <header>
+    <h1>🕌 Find Mosques Near Me</h1>
+    <div class="sub">Free · OpenStreetMap · Overpass API · No key, no billing</div>
+  </header>
+
+  <div class="controls">
+    <button id="locateBtn">📍 Use my GPS location</button>
+
+    <div id="coords">Lat, Lon: —</div>
+
+    <div class="row">
+      <div>
+        <label for="lat">Latitude</label>
+        <input type="text" id="lat" placeholder="22.6939">
+      </div>
+      <div>
+        <label for="lon">Longitude</label>
+        <input type="text" id="lon" placeholder="72.8616">
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="radius">Radius (m)</label>
+        <input type="number" id="radius" value="2000" min="100" max="50000" step="100">
+      </div>
+      <div style="display:flex; align-items:flex-end;">
+        <button id="searchBtn" class="secondary" style="width:100%">Search here</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="status"></div>
+  <div id="results"><div class="empty">Tap “Use my GPS location” to begin.</div></div>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(() => {
+  "use strict";
+
+  const OVERPASS_ENDPOINTS = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.private.coffee/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+  ];
+
+  const $ = (id) => document.getElementById(id);
+  const statusEl = $("status");
+  const resultsEl = $("results");
+  const coordsEl = $("coords");
+
+  let map, hereMarker, accuracyCircle, resultLayer;
+  let current = null; // {lat, lon, accuracy}
+
+  // ---------- Map setup ----------
+  function initMap() {
+    map = L.map("map", { zoomControl: true }).setView([22.6939, 72.8616], 12);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+    resultLayer = L.layerGroup().addTo(map);
+  }
+
+  // ---------- Helpers ----------
+  const toRad = (d) => (d * Math.PI) / 180;
+
+  function haversine(lat1, lon1, lat2, lon2) {
+    const R = 6371000;
+    const dLat = toRad(lat2 - lat1);
+    const dLon = toRad(lon2 - lon1);
+    const a =
+      Math.sin(dLat / 2) ** 2 +
+      Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(a));
+  }
+
+  function fmtDist(m) {
+    return m < 1000 ? `${Math.round(m)} m` : `${(m / 1000).toFixed(2)} km`;
+  }
+
+  function esc(s) {
+    return String(s ?? "").replace(/[&<>"']/g, (c) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])
+    );
+  }
+
+  function setStatus(msg, isError = false) {
+    statusEl.textContent = msg;
+    statusEl.classList.toggle("error", isError);
+  }
+
+  function updateCoordsDisplay(lat, lon, acc) {
+    coordsEl.textContent =
+      `Lat, Lon: ${lat.toFixed(6)}, ${lon.toFixed(6)}` +
+      (acc != null ? `  (±${Math.round(acc)} m)` : "");
+    $("lat").value = lat.toFixed(6);
+    $("lon").value = lon.toFixed(6);
+  }
+
+  // ---------- Geolocation ----------
+  function getLocation() {
+    if (!navigator.geolocation) {
+      setStatus("Geolocation is not supported by this browser. Enter coordinates manually.", true);
+      return;
+    }
+    if (!window.isSecureContext) {
+      setStatus("Geolocation requires HTTPS or localhost. Serve this file via `python -m http.server`.", true);
+      return;
+    }
+
+    $("locateBtn").disabled = true;
+    setStatus("Requesting GPS location…");
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        $("locateBtn").disabled = false;
+        const { latitude, longitude, accuracy } = pos.coords;
+        onLocation(latitude, longitude, accuracy);
+      },
+      (err) => {
+        $("locateBtn").disabled = false;
+        const messages = {
+          1: "Permission denied. Allow location access, or type coordinates manually.",
+          2: "Position unavailable. Try outdoors or enter coordinates manually.",
+          3: "Timed out. Try again or enter coordinates manually.",
+        };
+        setStatus(messages[err.code] || err.message, true);
+      },
+      { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 }
+    );
+  }
+
+  function onLocation(lat, lon, accuracy) {
+    current = { lat, lon, accuracy };
+    updateCoordsDisplay(lat, lon, accuracy);
+    setStatus("Got location. Searching for mosques…");
+
+    map.setView([lat, lon], 15);
+
+    if (hereMarker) hereMarker.remove();
+    if (accuracyCircle) accuracyCircle.remove();
+
+    if (accuracy != null) {
+      accuracyCircle = L.circle([lat, lon], {
+        radius: accuracy,
+        color: "#38bdf8",
+        fillColor: "#38bdf8",
+        fillOpacity: 0.12,
+        weight: 1,
+      }).addTo(map);
+    }
+
+    hereMarker = L.marker([lat, lon]).addTo(map).bindPopup("You are here");
+
+    searchMosques(lat, lon, Number($("radius").value) || 2000);
+  }
+
+  // ---------- Overpass ----------
+  function buildQuery(lat, lon, radius) {
+    return `[out:json][timeout:25];
+(
+  node["amenity"="place_of_worship"]["religion"="muslim"](around:${radius},${lat},${lon});
+  way["amenity"="place_of_worship"]["religion"="muslim"](around:${radius},${lat},${lon});
+  relation["amenity"="place_of_worship"]["religion"="muslim"](around:${radius},${lat},${lon});
+  node["building"="mosque"](around:${radius},${lat},${lon});
+  way["building"="mosque"](around:${radius},${lat},${lon});
+  node["amenity"="mosque"](around:${radius},${lat},${lon});
+  way["amenity"="mosque"](around:${radius},${lat},${lon});
+);
+out center tags;`;
+  }
+
+  async function queryOverpass(query) {
+    let lastErr;
+    for (const url of OVERPASS_ENDPOINTS) {
+      try {
+        const res = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: "data=" + encodeURIComponent(query),
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status} from ${url}`);
+        return await res.json();
+      } catch (e) {
+        lastErr = e;
+      }
+    }
+    throw lastErr || new Error("All Overpass endpoints failed");
+  }
+
+  function getCoords(el) {
+    if (el.type === "node") return { lat: el.lat, lon: el.lon };
+    if (el.center) return { lat: el.center.lat, lon: el.center.lon };
+    return null;
+  }
+
+  function pickName(tags) {
+    return (
+      tags.name ||
+      tags["name:en"] ||
+      tags["name:hi"] ||
+      tags["name:gu"] ||
+      tags["name:ur"] ||
+      "Unnamed mosque"
+    );
+  }
+
+  function pickAddress(tags) {
+    const parts = [
+      tags["addr:housenumber"],
+      tags["addr:street"],
+      tags["addr:suburb"] || tags["addr:neighbourhood"],
+      tags["addr:city"] || tags["addr:town"] || tags["addr:village"],
+      tags["addr:postcode"],
+    ].filter(Boolean);
+    return parts.length ? parts.join(", ") : (tags["addr:full"] || "");
+  }
+
+  async function searchMosques(lat, lon, radius) {
+    const searchBtn = $("searchBtn");
+    searchBtn.disabled = true;
+    setStatus(`Searching within ${radius} m…`);
+    resultLayer.clearLayers();
+    resultsEl.innerHTML = "";
+
+    try {
+      const data = await queryOverpass(buildQuery(lat, lon, radius));
+      const elements = data.elements || [];
+
+      const mosques = elements
+        .map((el) => {
+          const c = getCoords(el);
+          if (!c) return null;
+          const tags = el.tags || {};
+          return {
+            id: `${el.type}/${el.id}`,
+            lat: c.lat,
+            lon: c.lon,
+            name: pickName(tags),
+            address: pickAddress(tags),
+            tags,
+            distance: haversine(lat, lon, c.lat, c.lon),
+          };
+        })
+        .filter(Boolean)
+        .sort((a, b) => a.distance - b.distance);
+
+      // Deduplicate by rounded coords + name (ways and nodes often overlap)
+      const seen = new Set();
+      const unique = mosques.filter((m) => {
+        const key = `${m.name}|${m.lat.toFixed(5)}|${m.lon.toFixed(5)}`;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+
+      renderResults(unique, lat, lon, radius);
+    } catch (err) {
+      setStatus("Search failed: " + err.message + ". Try again in a few seconds.", true);
+    } finally {
+      searchBtn.disabled = false;
+    }
+  }
+
+  function renderResults(mosques, lat, lon, radius) {
+    if (!mosques.length) {
+      resultsEl.innerHTML =
+        `<div class="empty">No mosques found within ${radius} m.<br>` +
+        `Try a larger radius, or note that OSM coverage varies by area.</div>`;
+      setStatus(`0 mosques found within ${radius} m.`);
+      return;
+    }
+
+    setStatus(`Found ${mosques.length} mosque${mosques.length > 1 ? "s" : ""} within ${radius} m.`);
+
+    const bounds = [[lat, lon]];
+
+    mosques.forEach((m) => {
+      bounds.push([m.lat, m.lon]);
+
+      const marker = L.marker([m.lat, m.lon]).addTo(resultLayer);
+      const gmaps = `https://www.google.com/maps/search/?api=1&query=${m.lat},${m.lon}`;
+      const osm = `https://www.openstreetmap.org/?mlat=${m.lat}&mlon=${m.lon}#map=19/${m.lat}/${m.lon}`;
+
+      marker.bindPopup(
+        `<strong>${esc(m.name)}</strong><br>` +
+        `<span style="font-size:12px;color:#555">${fmtDist(m.distance)} away</span><br>` +
+        (m.address ? `<span style="font-size:12px">${esc(m.address)}</span><br>` : "") +
+        `<a href="${gmaps}" target="_blank" rel="noopener">Google Maps</a> · ` +
+        `<a href="${osm}" target="_blank" rel="noopener">OSM</a>`
+      );
+
+      const card = document.createElement("div");
+      card.className = "mosque";
+      card.innerHTML =
+        `<div class="name">${esc(m.name)}</div>` +
+        `<div class="meta">` +
+          `<span class="dist">${fmtDist(m.distance)}</span>` +
+          (m.address ? ` · ${esc(m.address)}` : "") +
+          `<br>${m.lat.toFixed(6)}, ${m.lon.toFixed(6)}` +
+        `</div>`;
+
+      card.addEventListener("click", () => {
+        map.setView([m.lat, m.lon], 18);
+        marker.openPopup();
+      });
+
+      resultsEl.appendChild(card);
+    });
+
+    if (bounds.length > 1) {
+      map.fitBounds(bounds, { padding: [40, 40], maxZoom: 17 });
+    }
+  }
+
+  // ---------- Manual search ----------
+  function manualSearch() {
+    const lat = parseFloat($("lat").value);
+    const lon = parseFloat($("lon").value);
+    const radius = Number($("radius").value) || 2000;
+
+    if (!Number.isFinite(lat) || !Number.isFinite(lon) || Math.abs(lat) > 90 || Math.abs(lon) > 180) {
+      setStatus("Invalid coordinates. Use decimal degrees, e.g. 22.6939, 72.8616", true);
+      return;
+    }
+
+    onLocation(lat, lon, null);
+  }
+
+  // ---------- Wire up ----------
+  initMap();
+  $("locateBtn").addEventListener("click", getLocation);
+  $("searchBtn").addEventListener("click", manualSearch);
+  $("radius").addEventListener("keydown", (e) => { if (e.key === "Enter") manualSearch(); });
+  $("lat").addEventListener("keydown", (e) => { if (e.key === "Enter") manualSearch(); });
+  $("lon").addEventListener("keydown", (e) => { if (e.key === "Enter") manualSearch(); });
+
+  if (!window.isSecureContext) {
+    setStatus("⚠️ Not a secure context. Geolocation will fail — serve via localhost or HTTPS.", true);
+  }
+})();
+</script>
+</body>
+</html>
