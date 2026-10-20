@@ -1,0 +1,34 @@
+[Service]
+Type=notify
+User=oxvd
+Group=oxvd
+WorkingDirectory=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend
+Environment="PATH=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+EnvironmentFile=-/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/.env
+
+# ---- Run migrations BEFORE starting the app (single process, no race) ----
+ExecStartPre=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/.venv/bin/alembic upgrade head
+
+ExecStart=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/.venv/bin/gunicorn \
+    main:app -c gunicorn.conf.py
+ExecReload=/bin/kill -s HUP $MAINPID
+KillMode=mixed
+TimeoutStopSec=30
+PrivateTmp=true
+Restart=on-failure
+RestartSec=5s
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=nazar-e-alam
+
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/logs
+ReadWritePaths=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/backups
+ReadWritePaths=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/downloads
+ReadWritePaths=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/sync_state.json
+
+[Install]
+WantedBy=multi-user.target

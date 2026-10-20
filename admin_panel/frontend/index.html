@@ -15,14 +15,6 @@
     <link rel="stylesheet" href="assets/css/fonts.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-    <!-- Send signed-out visitors to the login page before anything renders -->
-    <script>
-      try {
-        if (!sessionStorage.getItem("u")) location.replace("login/login.html");
-      } catch (e) {
-        location.replace("login/login.html");
-      }
-    </script>
   </head>
   <body>
     <div class="bgfx" aria-hidden="true">
@@ -100,6 +92,7 @@
         This admin panel needs JavaScript enabled.
       </p></noscript
     >
+    <script src="assets/js/api.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>
