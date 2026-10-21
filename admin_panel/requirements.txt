@@ -1,4 +1,3 @@
-git+https://github.com/0xvd/dlp_utils
 requests==2.32.2
 fastapi[standard]==0.148.0
 uvicorn==0.54.0
@@ -6,12 +5,12 @@ sqlalchemy==2.0.36
 PyMySQL==1.1.1
 python-dotenv==1.0.1
 passlib[bcrypt]==1.7.4
-python-jose[cryptography]==3.3.0
-alembic==1.13.3
+bcrypt==4.2.1
 pyjwt==2.15.1
+alembic==1.13.3
 boto3==1.35.90
 hijridate==2.3.0
 beautifulsoup4==4.12.3
-alembic==1.13.3gunicorn==23.0.0
+gunicorn==23.0.0
 uvicorn-worker==0.3.0
-python-multipart==0.0.9
+python-multipart==0.0.20

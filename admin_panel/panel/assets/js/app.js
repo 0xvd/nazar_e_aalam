@@ -274,6 +274,8 @@ const state = {
   previewAudio: null,
   previewSlug: null,
   roles: null,
+  reciterSlug: null, // ← new: when set, Reciters page shows detail
+  surahPlayer: null, // ← new: { slug, surah, host, ayahList, index, audio }
 };
 
 async function ensureRoles() {
@@ -417,6 +419,10 @@ async function go(page) {
     clearInterval(state.tick);
     state.tick = null;
   }
+  if (page !== "Reciters") {
+    state.reciterSlug = null;
+  }
+
   stopAudio();
 
   $("#pt").textContent = page;
@@ -435,6 +441,7 @@ async function go(page) {
   try {
     const html = await PAGE_RENDERERS[page]();
     container.innerHTML = html;
+    enhanceAllSelects(container);        // ← ADD THIS LINE
     [...container.children].forEach((e, i) => e.style.setProperty("--i", i));
     if (page === "Dashboard") startDashboard();
   } catch (e) {
@@ -680,7 +687,7 @@ async function dashboardPage() {
             </svg>
             <div class="ar">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
             <h2>${esc(greet)}, ${esc(cap(name))} 👋</h2>
-            <p>${hijriLine ? esc(hijriLine) + " · " : ""}Connected to <b>${esc(api.config?.env || "API")}</b></p>
+            <p>${hijriLine ? esc(hijriLine) + " · " : ""}</p>
             <div class="hrow"><span>${ic("clock")}${esc(today)}</span></div>
             <div class="qa">
                 <button type="button" data-act="go" data-p="Duas" data-then="add">${ic("plus")}Add dua</button>
@@ -1475,6 +1482,7 @@ function openWallForm(existing) {
 // Reciters — proper page with audio preview
 // ============================================================================
 function stopAudio() {
+  // Stop legacy preview audio (in case any reference remains)
   if (state.previewAudio) {
     try {
       state.previewAudio.pause();
@@ -1482,13 +1490,28 @@ function stopAudio() {
     state.previewAudio = null;
   }
   state.previewSlug = null;
-  $$('[data-act="reciter-play"]').forEach((btn) => {
-    btn.innerHTML = ic("play");
-    btn.title = "Play";
+
+  // Stop surah playback
+  stopSurahAudio();
+  resetSurahButtons();
+}
+
+function resetSurahButtons() {
+  $$('[data-act="reciter-play-surah"]').forEach((b) => {
+    b.innerHTML = ic("play");
+    b.title = "Play";
   });
 }
 
+// ============================================================================
+// Reciters — list + detail (surah playback)
+// ============================================================================
 async function recitersPage() {
+  // If a reciter is selected, show the detail view
+  if (state.reciterSlug) {
+    return reciterDetailPage(state.reciterSlug);
+  }
+
   const r = await apiCall(api.get("/reciters?limit=500"), {
     errorPrefix: "Load reciters",
   });
@@ -1497,7 +1520,7 @@ async function recitersPage() {
   const head = `
         <div class="eh">
             <div class="ic">${ic("head")}</div>
-            <div><h3>Reciters</h3><p>Quran audio &mdash; per-ayah playback from R2</p></div>
+            <div><h3>Reciters</h3><p>Quran audio &mdash; click a reciter to browse surahs</p></div>
             <button type="button" class="b2" data-act="crud-add" data-key="Reciters">${ic("plus")}Add reciter</button>
         </div>`;
 
@@ -1508,30 +1531,27 @@ async function recitersPage() {
   }
 
   const rows = items
-    .map((x) => {
-      const isPlaying = state.previewSlug === x.slug;
-      const playIcon = isPlaying ? ic("pause") : ic("play");
-      const playTitle = isPlaying ? "Pause" : "Preview Al-Fatihah";
-      return `
-            <tr data-slug="${esc(x.slug)}" data-id="${x.id}">
-                <td>${esc(x.position ?? "—")}</td>
-                <td>${esc(x.name)}</td>
-                <td class="wrap">${esc(x.slug)}</td>
-                <td>${esc(x.bitrate || "—")}</td>
-                <td>${esc(x.total_ayahs ?? "—")}</td>
-                <td>
-                    <span class="act-b">
-                        <button type="button" title="${esc(playTitle)}"
-                                data-act="reciter-play" data-slug="${esc(x.slug)}">${playIcon}</button>
-                        <button type="button" title="Edit"
-                                data-act="crud-edit" data-key="Reciters" data-id="${x.id}">${ic("edit")}</button>
-                        <button type="button" class="d" title="Delete"
-                                data-act="crud-del" data-key="Reciters" data-id="${x.id}"
-                                data-label="${esc(x.name)}">${ic("trash")}</button>
-                    </span>
-                </td>
-            </tr>`;
-    })
+    .map(
+      (x) => `
+        <tr data-slug="${esc(x.slug)}" data-id="${x.id}">
+            <td>${esc(x.position ?? "—")}</td>
+            <td>${esc(x.name)}</td>
+            <td class="wrap">${esc(x.slug)}</td>
+            <td>${esc(x.bitrate || "—")}</td>
+            <td>${esc(x.total_ayahs ?? "—")}</td>
+            <td>
+                <span class="act-b">
+                    <button type="button" title="View surahs"
+                            data-act="reciter-view" data-slug="${esc(x.slug)}">${ic("book")}</button>
+                    <button type="button" title="Edit"
+                            data-act="crud-edit" data-key="Reciters" data-id="${x.id}">${ic("edit")}</button>
+                    <button type="button" class="d" title="Delete"
+                            data-act="crud-del" data-key="Reciters" data-id="${x.id}"
+                            data-label="${esc(x.name)}">${ic("trash")}</button>
+                </span>
+            </td>
+        </tr>`,
+    )
     .join("");
 
   return `<div class="card glass s12">${head}
@@ -1544,8 +1564,247 @@ async function recitersPage() {
             </tr></thead>
             <tbody>${rows}</tbody>
         </table></div>
-        <div class="foot">${items.length} total &middot; click ▶ to preview Al-Fatihah ayah 1</div>
+        <div class="foot">${items.length} total</div>
     </div>`;
+}
+
+async function reciterDetailPage(slug) {
+  let data;
+  try {
+    data = await api.get(`/reciters/${encodeURIComponent(slug)}/surahs`);
+  } catch (e) {
+    return `<div class="card glass s12">
+        <div class="empty">
+            <p>Could not load surahs: ${esc(e.message || "request failed")}</p>
+            <button type="button" class="b3" data-act="reciter-back" style="margin-top:14px">← Back to reciters</button>
+        </div>
+    </div>`;
+  }
+
+  const reciter = data.reciter || {};
+  const surahs = data.surahs || [];
+
+  const rows = surahs
+    .map(
+      (s) => `
+        <tr>
+            <td style="font-weight:700">${s.number}</td>
+            <td class="rtl">${esc(s.arabic_name || `Surah ${s.number}`)}</td>
+            <td>${s.verses_count}</td>
+            <td>
+                <span class="act-b">
+                    <button type="button" title="Play surah"
+                            data-act="reciter-play-surah"
+                            data-slug="${esc(slug)}"
+                            data-n="${s.number}">${ic("play")}</button>
+                </span>
+            </td>
+        </tr>`,
+    )
+    .join("");
+
+  const subtitle = [
+    reciter.bitrate ? `${reciter.bitrate} kbps` : null,
+    `${surahs.length} surahs`,
+    reciter.total_ayahs
+      ? `${reciter.total_ayahs.toLocaleString()} ayahs`
+      : null,
+  ]
+    .filter(Boolean)
+    .join(" · ");
+
+  return `<div class="card glass s12">
+        <div class="eh">
+            <button type="button" class="b3" data-act="reciter-back" aria-label="Back to reciters">← Back</button>
+            <div class="ic">${ic("head")}</div>
+            <div style="flex:1">
+                <h3>${esc(reciter.name || slug)}</h3>
+                <p>${esc(subtitle)}</p>
+            </div>
+        </div>
+
+        <div class="tb">
+            <div class="fld">
+                ${ic("search")}
+                <input type="search" placeholder="Search surah…" data-filter>
+            </div>
+        </div>
+
+        <div class="tw"><table>
+            <thead><tr>
+                <th>#</th><th>Surah</th><th>Verses</th><th>Play</th>
+            </tr></thead>
+            <tbody>${rows}</tbody>
+        </table></div>
+
+        <div class="foot">${surahs.length} surahs · click ▶ to play sequentially</div>
+    </div>`;
+}
+
+// ============================================================================
+// Gapless surah playback via Web Audio API
+// ============================================================================
+
+let _audioCtx = null;
+function getAudioCtx() {
+  if (!_audioCtx) {
+    _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  return _audioCtx;
+}
+
+function buildAyahUrl(sp, i) {
+  return `${sp.host}/${sp.ayahList[i]}`;
+}
+
+async function fetchAyahBuffer(sp, i) {
+  const url = buildAyahUrl(sp, i);
+  const resp = await fetch(url, { mode: "cors" });
+  if (!resp.ok) throw new Error(`HTTP ${resp.status} for ayah ${i + 1}`);
+  const arr = await resp.arrayBuffer();
+  return getAudioCtx().decodeAudioData(arr);
+}
+
+function resetPlayBtn(btn) {
+  if (!btn) return;
+  btn.innerHTML = ic("play");
+  btn.title = "Play";
+}
+
+function stopSurahAudio() {
+  const sp = state.surahPlayer;
+  if (!sp) return;
+  sp.cancelled = true;
+  if (sp.sources) {
+    for (const s of sp.sources) {
+      try {
+        s.stop();
+      } catch {}
+    }
+  }
+  state.surahPlayer = null;
+}
+
+async function playReciterSurah(slug, surahNum, btn) {
+  // Same surah → pause / resume via AudioContext
+  if (
+    state.surahPlayer &&
+    state.surahPlayer.slug === slug &&
+    state.surahPlayer.surah === surahNum
+  ) {
+    const sp = state.surahPlayer;
+    const ctx = sp.ctx;
+    if (ctx.state === "running") {
+      await ctx.suspend();
+      btn.innerHTML = ic("play");
+      btn.title = "Resume";
+    } else {
+      await ctx.resume();
+      btn.innerHTML = ic("pause");
+      btn.title = "Pause";
+    }
+    return;
+  }
+
+  // Different surah → stop old, start new
+  stopSurahAudio();
+  resetSurahButtons();
+
+  btn.innerHTML = "…";
+  btn.disabled = true;
+
+  try {
+    const r = await api.get(
+      `/reciters/${encodeURIComponent(slug)}/surah/${surahNum}`,
+    );
+    if (!r.ayah_list || !r.ayah_list.length) {
+      toast("No audio for this surah", true);
+      btn.innerHTML = ic("play");
+      btn.disabled = false;
+      return;
+    }
+
+    const ctx = getAudioCtx();
+    await ctx.resume(); // must be from user gesture
+
+    state.surahPlayer = {
+      slug,
+      surah: surahNum,
+      host: r.host.replace(/\/$/, ""),
+      ayahList: r.ayah_list,
+      index: 0,
+      ctx,
+      sources: [],
+      nextStartTime: ctx.currentTime + 0.08,
+      btn,
+      cancelled: false,
+    };
+    btn.disabled = false;
+    btn.innerHTML = ic("pause");
+    btn.title = "Loading…";
+
+    // Fire-and-forget: loads ayahs sequentially, schedules each one
+    // to start exactly when the previous one ends.
+    scheduleSurah(state.surahPlayer);
+  } catch (e) {
+    toast(e.message || "Play failed", true);
+    btn.innerHTML = ic("play");
+    btn.disabled = false;
+  }
+}
+
+async function scheduleSurah(sp) {
+  const ctx = sp.ctx;
+
+  for (let i = 0; i < sp.ayahList.length; i++) {
+    if (state.surahPlayer !== sp || sp.cancelled) return;
+
+    let buffer;
+    try {
+      buffer = await fetchAyahBuffer(sp, i);
+    } catch (e) {
+      if (state.surahPlayer === sp) {
+        toast(`Ayah ${i + 1} failed: ${e.message}`, true);
+      }
+      return;
+    }
+    if (state.surahPlayer !== sp || sp.cancelled) return;
+
+    const source = ctx.createBufferSource();
+    source.buffer = buffer;
+    source.connect(ctx.destination);
+
+    // Schedule at exactly `nextStartTime`. If we've fallen behind the
+    // playback clock (slow network), snap forward so we don't stack up
+    // ayahs that would all fire at once.
+    const startAt = Math.max(sp.nextStartTime, ctx.currentTime + 0.02);
+    source.start(startAt);
+    sp.nextStartTime = startAt + buffer.duration;
+    sp.sources.push(source);
+
+    // UI: update button title when this ayah actually starts playing
+    const startDelayMs = Math.max(0, (startAt - ctx.currentTime) * 1000);
+    setTimeout(() => {
+      if (state.surahPlayer !== sp) return;
+      sp.index = i;
+      if (sp.btn) {
+        sp.btn.title = `Playing ayah ${i + 1} of ${sp.ayahList.length}`;
+      }
+    }, startDelayMs);
+
+    // Last ayah → reset button when it finishes
+    if (i === sp.ayahList.length - 1) {
+      const endDelayMs = Math.max(
+        0,
+        (sp.nextStartTime - ctx.currentTime) * 1000,
+      );
+      setTimeout(() => {
+        if (state.surahPlayer !== sp) return;
+        state.surahPlayer = null;
+        resetPlayBtn(sp.btn);
+      }, endDelayMs);
+    }
+  }
 }
 
 async function playReciter(slug, btn) {
@@ -1634,14 +1893,33 @@ async function prayerTimesPage() {
             <div><h3>Prayer Times</h3><p>${esc(defaultCity)} &middot; ${year}</p></div>
             <button type="button" class="b2" data-act="prayer-seed">${ic("plus")}Generate year</button>
         </div>
-        <div class="tb">
-            <select class="in" data-change="prayer-city">
-                ${cities.map((c) => `<option value="${esc(c.key)}"${c.key === defaultCity ? " selected" : ""}>${esc(c.name)}</option>`).join("")}
-            </select>
-            <select class="in" data-change="prayer-year">
-                ${[year - 1, year, year + 1].map((y) => `<option value="${y}"${y === year ? " selected" : ""}>${y}</option>`).join("")}
-            </select>
-        </div>
+        <div class="tb" style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end">
+          <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:180px;max-width:280px">
+              <label for="pt-city" style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)">City</label>
+              <select class="in sel" id="pt-city" data-change="prayer-city">
+                  ${cities.map((c) => `<option value="${esc(c.key)}"${c.key === defaultCity ? " selected" : ""}>${esc(c.name)}</option>`).join("")}
+              </select>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;min-width:140px">
+              <label for="pt-year" style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)">Year</label>
+              <select class="in sel" id="pt-year" data-change="prayer-year">
+                  ${(() => {
+                    const ys = [];
+                    for (let y = 2000; y <= 2030; y++) ys.push(y);
+                    if (!ys.includes(year)) {
+                      ys.push(year);
+                      ys.sort((a, b) => a - b);
+                    }
+                    return ys
+                      .map(
+                        (y) =>
+                          `<option value="${y}"${y === year ? " selected" : ""}>${y}</option>`,
+                      )
+                      .join("");
+                  })()}
+              </select>
+          </div>
+      </div>
         <div class="months" role="tablist">
             ${Array.from(
               { length: 12 },
@@ -2457,8 +2735,18 @@ document.addEventListener("click", async (e) => {
       case "role-create-open":
         roleCreateModal();
         break;
-      case "reciter-play":
-        await playReciter(el.dataset.slug, el);
+      case "reciter-view":
+        state.reciterSlug = el.dataset.slug;
+        await go("Reciters");
+        break;
+      case "reciter-back":
+        state.reciterSlug = null;
+        stopSurahAudio();
+        resetSurahButtons();
+        await go("Reciters");
+        break;
+      case "reciter-play-surah":
+        await playReciterSurah(el.dataset.slug, parseInt(el.dataset.n, 10), el);
         break;
       case "prayer-edit":
         await prayerEdit(parseInt(el.dataset.id, 10));
@@ -2778,6 +3066,104 @@ document.addEventListener("keydown", (e) => {
 });
 
 // ============================================================================
+// Custom select — replaces the native popup with a styled one
+// ============================================================================
+function enhanceSelect(sel) {
+  if (sel.dataset.enhanced === "1") return;
+  sel.dataset.enhanced = "1";
+
+  const wrap = document.createElement("div");
+  wrap.className = "csel";
+  if (sel.style.maxWidth) wrap.style.maxWidth = sel.style.maxWidth;
+  if (sel.style.minWidth) wrap.style.minWidth = sel.style.minWidth;
+
+  sel.parentNode.insertBefore(wrap, sel);
+  wrap.appendChild(sel);
+  sel.style.display = "none";
+
+  const trigger = document.createElement("button");
+  trigger.type = "button";
+  trigger.className = "csel-trigger";
+  trigger.setAttribute("aria-haspopup", "listbox");
+  trigger.setAttribute("aria-expanded", "false");
+  if (sel.style.height) trigger.style.height = sel.style.height;
+  if (sel.style.fontSize) trigger.style.fontSize = sel.style.fontSize;
+  wrap.appendChild(trigger);
+
+  const popup = document.createElement("div");
+  popup.className = "csel-pop";
+  popup.setAttribute("role", "listbox");
+  wrap.appendChild(popup);
+
+  const render = () => {
+    const cur = sel.options[sel.selectedIndex];
+    trigger.innerHTML = `
+      <span class="csel-val">${esc(cur ? cur.text : "")}</span>
+      <svg class="csel-chev" viewBox="0 0 24 24" aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>`;
+    popup.innerHTML = [...sel.options]
+      .map(
+        (o) =>
+          `<button type="button" class="csel-opt${o.selected ? " on" : ""}" data-v="${esc(o.value)}">${esc(o.text)}</button>`,
+      )
+      .join("");
+  };
+
+  const close = () => {
+    wrap.classList.remove("open");
+    trigger.setAttribute("aria-expanded", "false");
+  };
+
+  const open = () => {
+    // Only one open at a time
+    $$(".csel.open").forEach((w) => {
+      if (w === wrap) return;
+      w.classList.remove("open");
+      w.querySelector(".csel-trigger")?.setAttribute("aria-expanded", "false");
+    });
+    wrap.classList.add("open");
+    trigger.setAttribute("aria-expanded", "true");
+    popup.querySelector(".csel-opt.on")?.scrollIntoView({ block: "nearest" });
+  };
+
+  trigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    wrap.classList.contains("open") ? close() : open();
+  });
+
+  popup.addEventListener("click", (e) => {
+    const btn = e.target.closest(".csel-opt");
+    if (!btn) return;
+    if (sel.value !== btn.dataset.v) {
+      sel.value = btn.dataset.v;
+      // Fire the same change event the original <select> would have
+      sel.dispatchEvent(new Event("change", { bubbles: true }));
+    }
+    render();
+    close();
+  });
+
+  // <label for="id"> → focus the trigger instead of the hidden select
+  const lbl = document.querySelector(`label[for="${sel.id}"]`);
+  if (lbl) lbl.addEventListener("click", () => trigger.focus());
+
+  render();
+}
+
+function enhanceAllSelects(root = document) {
+  $$("select.in", root).forEach(enhanceSelect);
+}
+
+// Click anywhere outside → close all
+document.addEventListener("click", () => {
+  $$(".csel.open").forEach((w) => {
+    w.classList.remove("open");
+    w.querySelector(".csel-trigger")?.setAttribute("aria-expanded", "false");
+  });
+});
+
+// ============================================================================
 // Init
 // ============================================================================
 async function init() {
@@ -2796,15 +3182,6 @@ async function init() {
   applyBrand();
   applyUserHeader();
   renderNav();
-
-  // Sidebar status
-  $("aside").insertAdjacentHTML(
-    "beforeend",
-    `<div class="sys"><span class="pulse"></span><div>
-            <b>Connected</b>
-            <small>${esc(api.config?.env || "")} · v${esc(api.config?.app_version || "")}</small>
-        </div></div>`,
-  );
 
   const hash = decodeURIComponent(location.hash.slice(1));
   await go(NAV.some(([n]) => n === hash) ? hash : "Dashboard");

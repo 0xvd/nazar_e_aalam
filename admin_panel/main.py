@@ -214,7 +214,7 @@ if not ENV.is_production():
     from fastapi.staticfiles import StaticFiles
     from fastapi.responses import RedirectResponse
 
-    _FRONTEND = Path(__file__).resolve().parent.parent / "frontend"
+    _FRONTEND = Path(__file__).resolve().parent / "panel"
     if _FRONTEND.exists():
         app.mount(
             "/panel",
