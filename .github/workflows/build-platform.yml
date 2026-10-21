@@ -14,7 +14,7 @@ on:
       ANDROID_KEY_PASSWORD:        { required: false }
 
 env:
-  FLUTTER_VERSION: '3.24.0'
+  FLUTTER_VERSION: '3.47.7'
   APP_DIR: 'application'
 
 jobs:
