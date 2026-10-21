@@ -25,20 +25,46 @@ jobs:
         working-directory: ${{ env.APP_DIR }}
     steps:
       - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
 
+      # ── FIX: Free disk space before the NDK and CMake are downloaded ──
+      - name: Free disk space (Android)
+        if: inputs.target == 'android'
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /usr/local/lib/android/sdk/ndk
+          sudo rm -rf /usr/local/lib/android/sdk/emulator
+          sudo rm -rf /usr/local/lib/android/sdk/system-images
+          sudo apt-get clean
+          df -h
+
       - name: Set up Java 17 (Android)
         if: inputs.target == 'android'
-        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v4
         with:
           distribution: 'zulu'
           java-version: '17'
+          cache: 'gradle'                # ← built-in Gradle cache
+
+      # ── FIX: Explicit Gradle cache (belt-and-braces) ──
+      - name: Cache Gradle
+        if: inputs.target == 'android'
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+            ~/.android/build-cache
+          key: ${{ runner.os }}-gradle-${{ hashFiles('application/**/*.gradle*', 'application/**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
 
       - name: Set up Flutter
-        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: 'stable'
@@ -54,6 +80,11 @@ jobs:
 
       - name: flutter pub get
         run: flutter pub get
+
+      # ── FIX: Clean any stale transforms directory before building ──
+      - name: Clean stale Gradle transforms
+        if: inputs.target == 'android'
+        run: rm -rf ~/.gradle/caches/*/transforms
 
       - name: Install CocoaPods deps (iOS)
         if: inputs.target == 'ios'
@@ -98,7 +129,7 @@ jobs:
 
       - name: Upload Android artifact
         if: inputs.target == 'android'
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v4
         with:
           name: android-build
           path: ${{ github.workspace }}/android-build.zip
@@ -107,7 +138,7 @@ jobs:
 
       - name: Upload iOS artifact
         if: inputs.target == 'ios'
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v4
         with:
           name: ios-build
           path: ${{ github.workspace }}/ios-appstore.zip
