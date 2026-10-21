@@ -1,0 +1,146 @@
+name: Build Single Platform
+
+on:
+  workflow_call:
+    inputs:
+      target:        { required: true, type: string }
+      os:            { required: true, type: string }
+      build_cmd:     { required: true, type: string }
+      artifact_path: { required: true, type: string }
+    secrets:
+      ANDROID_KEYSTORE_BASE64:     { required: false }
+      ANDROID_KEYSTORE_PASSWORD:   { required: false }
+      ANDROID_KEY_ALIAS:           { required: false }
+      ANDROID_KEY_PASSWORD:        { required: false }
+
+env:
+  FLUTTER_VERSION: '3.24.0'
+  APP_DIR: 'application'
+
+jobs:
+  build:
+    runs-on: ${{ inputs.os }}
+    defaults:
+      run:
+        working-directory: ${{ env.APP_DIR }}
+    steps:
+      # ---------------------------------------------------------------
+      # Checkout — pinned: actions/checkout v4
+      # ---------------------------------------------------------------
+      - name: Checkout (latest commit, incl. version bump)
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      # ---------------------------------------------------------------
+      # Java for Android builds only
+      # ---------------------------------------------------------------
+      - name: Set up Java 17 (Android)
+        if: inputs.target == 'android'
+        uses: actions/setup-java@b36c23c0d99857920817732cf52c8d29d1c2c4f3 # v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      # ---------------------------------------------------------------
+      # Flutter SDK (cache: true also caches pub + artifact caches)
+      # ---------------------------------------------------------------
+      - name: Set up Flutter
+        uses: subosito/flutter-action@44ac965b96f18d999802d4b807e3256d5a3f9fa1 # v2.16.0
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: 'stable'
+          cache: true
+
+      # ---------------------------------------------------------------
+      # System packages required by flutter build linux / macos
+      # ---------------------------------------------------------------
+      - name: Install Linux build deps
+        if: inputs.os == 'ubuntu-latest'
+        working-directory: ${{ github.workspace }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang cmake ninja-build pkg-config \
+            libgtk-3-dev liblzma-dev libstdc++-12-dev
+
+      # ---------------------------------------------------------------
+      # CRITICAL ORDER FIX: pub get MUST run before pod install,
+      # because pod install consumes .flutter-plugins-dependencies
+      # ---------------------------------------------------------------
+      - name: flutter pub get
+        run: flutter pub get
+
+      - name: Install CocoaPods deps (iOS)
+        if: inputs.target == 'ios'
+        working-directory: ${{ env.APP_DIR }}/ios
+        run: pod install --repo-update
+
+      # ---------------------------------------------------------------
+      # Inject release keystore for signed Play Store AAB
+      # ---------------------------------------------------------------
+      - name: Configure Android signing
+        if: inputs.target == 'android'
+        working-directory: ${{ env.APP_DIR }}/android
+        env:
+          KEYSTORE_BASE64:   ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS:         ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD:      ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          if [ -z "${KEYSTORE_BASE64:-}" ]; then
+            echo "::warning::No Android keystore secrets set — release will be UNSIGNED."
+            exit 0
+          fi
+          echo "$KEYSTORE_BASE64" | base64 --decode > upload-keystore.jks
+          cat > key.properties <<EOF
+          storeFile=upload-keystore.jks
+          storePassword=$KEYSTORE_PASSWORD
+          keyAlias=$KEY_ALIAS
+          keyPassword=$KEY_PASSWORD
+          EOF
+          echo "key.properties written:"
+          sed 's/=.*/=***/' key.properties   # mask secrets in logs
+
+      # ---------------------------------------------------------------
+      # Actual build
+      # ---------------------------------------------------------------
+      - name: Build
+        run: ${{ inputs.build_cmd }}
+
+      # ---------------------------------------------------------------
+      # Zip the AAB for convenient Play Console upload
+      # ---------------------------------------------------------------
+      - name: Zip Play Store AAB (Android)
+        if: inputs.target == 'android'
+        run: |
+          cd build/app/outputs/bundle/release/
+          zip -r "$GITHUB_WORKSPACE/playstore-aab.zip" app-release.aab
+          ls -lh "$GITHUB_WORKSPACE/playstore-aab.zip"
+
+      # ---------------------------------------------------------------
+      # Android artifacts (strict — fail loudly if AAB is missing)
+      # ---------------------------------------------------------------
+      - name: Upload Android artifacts
+        if: inputs.target == 'android'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: android-build
+          path: |
+            ${{ env.APP_DIR }}/build/app/outputs/bundle/release/app-release.aab
+            ${{ env.APP_DIR }}/build/app/outputs/apk/release/*.apk
+            ${{ github.workspace }}/playstore-aab.zip
+          if-no-files-found: error
+          retention-days: 14
+
+      # ---------------------------------------------------------------
+      # Other platforms
+      # ---------------------------------------------------------------
+      - name: Upload ${{ inputs.target }} artifacts
+        if: inputs.target != 'android'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: ${{ inputs.target }}-build
+          path: ${{ env.APP_DIR }}/${{ inputs.artifact_path }}
+          if-no-files-found: error
+          retention-days: 14

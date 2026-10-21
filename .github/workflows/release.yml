@@ -1,0 +1,176 @@
+name: Manual Release (All Platforms)
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Skip version bump & push (dry run)'
+        type: boolean
+        default: false
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+
+env:
+  FLUTTER_VERSION: '3.24.0'
+  APP_DIR: 'application'
+
+jobs:
+  # ------------------------------------------------------------------
+  # 1. Bump version (only on first attempt, not during dry run)
+  # ------------------------------------------------------------------
+  bump-version:
+    name: Bump Version
+    runs-on: ubuntu-latest
+    if: ${{ !inputs.dry_run && github.run_attempt == 1 }}
+    outputs:
+      new_version:  ${{ steps.bump.outputs.new_version }}
+      version_name: ${{ steps.bump.outputs.version_name }}
+      build_number: ${{ steps.bump.outputs.build_number }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run version bump
+        id: bump
+        run: |
+          bash .github/scripts/bump_version.sh
+          echo "new_version=$NEW_VERSION"   >> "$GITHUB_OUTPUT"
+          echo "version_name=$VERSION_NAME" >> "$GITHUB_OUTPUT"
+          echo "build_number=$BUILD_NUMBER" >> "$GITHUB_OUTPUT"
+        env:
+          PUBSPEC_PATH: ${{ env.APP_DIR }}/pubspec.yaml
+
+      - name: Commit & push version bump
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${{ env.APP_DIR }}/pubspec.yaml"
+          if git diff --cached --quiet; then
+            echo "No version change to commit."
+            exit 0
+          fi
+          git commit -m "chore(release): bump version to ${{ steps.bump.outputs.new_version }} [skip ci]"
+          git push
+
+  # ------------------------------------------------------------------
+  # 2. Build all platforms (overrides inherited skip for dry_run)
+  # ------------------------------------------------------------------
+  build-android:
+    needs: bump-version
+    if: ${{ always() && !cancelled() && (success() || needs.bump-version.result == 'skipped') }}
+    uses: ./.github/workflows/build-platform.yml
+    with:
+      target: 'android'
+      os:     'ubuntu-latest'
+      build_cmd:     'flutter build appbundle --release'
+      artifact_path: 'build/app/outputs/bundle/release/app-release.aab'
+    secrets: inherit
+
+  build-ios:
+    needs: bump-version
+    if: ${{ always() && !cancelled() && (success() || needs.bump-version.result == 'skipped') }}
+    uses: ./.github/workflows/build-platform.yml
+    with:
+      target: 'ios'
+      os:     'macos-latest'
+      build_cmd:     'flutter build ios --release --no-codesign'
+      artifact_path: 'build/ios/iphoneos/Runner.app'
+    secrets: inherit
+
+  build-web:
+    needs: bump-version
+    if: ${{ always() && !cancelled() && (success() || needs.bump-version.result == 'skipped') }}
+    uses: ./.github/workflows/build-platform.yml
+    with:
+      target: 'web'
+      os:     'ubuntu-latest'
+      build_cmd:     'flutter build web --release'
+      artifact_path: 'build/web'
+    secrets: inherit
+
+  build-windows:
+    needs: bump-version
+    if: ${{ always() && !cancelled() && (success() || needs.bump-version.result == 'skipped') }}
+    uses: ./.github/workflows/build-platform.yml
+    with:
+      target: 'windows'
+      os:     'windows-latest'
+      build_cmd:     'flutter build windows --release'
+      artifact_path: 'build/windows/x64/runner/Release/'
+    secrets: inherit
+
+  build-macos:
+    needs: bump-version
+    if: ${{ always() && !cancelled() && (success() || needs.bump-version.result == 'skipped') }}
+    uses: ./.github/workflows/build-platform.yml
+    with:
+      target: 'macos'
+      os:     'macos-latest'
+      build_cmd:     'flutter build macos --release'
+      artifact_path: 'build/macos/Build/Products/Release/Runner.app'
+    secrets: inherit
+
+  build-linux:
+    needs: bump-version
+    if: ${{ always() && !cancelled() && (success() || needs.bump-version.result == 'skipped') }}
+    uses: ./.github/workflows/build-platform.yml
+    with:
+      target: 'linux'
+      os:     'ubuntu-latest'
+      build_cmd:     'flutter build linux --release'
+      artifact_path: 'build/linux/x64/release/bundle/'
+    secrets: inherit
+
+  # ------------------------------------------------------------------
+  # 3. Publish GitHub Release
+  # ------------------------------------------------------------------
+  publish-release:
+    name: Publish GitHub Release
+    needs:
+      - bump-version
+      - build-android
+      - build-ios
+      - build-web
+      - build-windows
+      - build-macos
+      - build-linux
+    if: ${{ always() && !cancelled() && !inputs.dry_run && needs.bump-version.result == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all build artifacts
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          path: artifacts
+          merge-multiple: false
+
+      - name: Inventory (sanity check)
+        run: |
+          echo "=== Artifacts ===" && find artifacts -type f -exec ls -lh {} \;
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b # v2.5.0
+        with:
+          tag_name: v${{ needs.bump-version.outputs.version_name }}-b${{ needs.bump-version.outputs.build_number }}
+          name: Release ${{ needs.bump-version.outputs.new_version }}
+          generate_release_notes: true
+          make_latest: true
+          files: |
+            artifacts/android-build/**/*.aab
+            artifacts/android-build/**/*.apk
+            artifacts/android-build/**/*.zip
+            artifacts/ios-build/**/*
+            artifacts/web-build/**/*
+            artifacts/windows-build/**/*
+            artifacts/macos-build/**/*
+            artifacts/linux-build/**/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
