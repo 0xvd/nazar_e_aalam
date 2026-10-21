@@ -1,4 +1,4 @@
-name: Manual Release (All Platforms)
+name: Manual Release (Android + iOS)
 
 on:
   workflow_dispatch:
@@ -21,9 +21,6 @@ env:
   APP_DIR: 'application'
 
 jobs:
-  # ------------------------------------------------------------------
-  # 1. Bump version (only on first attempt, not during dry run)
-  # ------------------------------------------------------------------
   bump-version:
     name: Bump Version
     runs-on: ubuntu-latest
@@ -33,7 +30,7 @@ jobs:
       version_name: ${{ steps.bump.outputs.version_name }}
       build_number: ${{ steps.bump.outputs.build_number }}
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
@@ -61,9 +58,6 @@ jobs:
           git commit -m "chore(release): bump version to ${{ steps.bump.outputs.new_version }} [skip ci]"
           git push
 
-  # ------------------------------------------------------------------
-  # 2. Build all platforms (overrides inherited skip for dry_run)
-  # ------------------------------------------------------------------
   build-android:
     needs: bump-version
     if: ${{ always() && !cancelled() && (success() || needs.bump-version.result == 'skipped') }}
@@ -71,8 +65,8 @@ jobs:
     with:
       target: 'android'
       os:     'ubuntu-latest'
-      build_cmd:     'flutter build appbundle --release'
-      artifact_path: 'build/app/outputs/bundle/release/app-release.aab'
+      build_cmd:     'flutter build apk --release --split-per-abi && flutter build apk --release && flutter build appbundle --release'
+      artifact_path: 'build/app/outputs'
     secrets: inherit
 
   build-ios:
@@ -82,95 +76,37 @@ jobs:
     with:
       target: 'ios'
       os:     'macos-latest'
-      build_cmd:     'flutter build ios --release --no-codesign'
-      artifact_path: 'build/ios/iphoneos/Runner.app'
+      build_cmd:     'flutter build ipa --release --export-method app-store'
+      artifact_path: 'build/ios/ipa'
     secrets: inherit
 
-  build-web:
-    needs: bump-version
-    if: ${{ always() && !cancelled() && (success() || needs.bump-version.result == 'skipped') }}
-    uses: ./.github/workflows/build-platform.yml
-    with:
-      target: 'web'
-      os:     'ubuntu-latest'
-      build_cmd:     'flutter build web --release'
-      artifact_path: 'build/web'
-    secrets: inherit
-
-  build-windows:
-    needs: bump-version
-    if: ${{ always() && !cancelled() && (success() || needs.bump-version.result == 'skipped') }}
-    uses: ./.github/workflows/build-platform.yml
-    with:
-      target: 'windows'
-      os:     'windows-latest'
-      build_cmd:     'flutter build windows --release'
-      artifact_path: 'build/windows/x64/runner/Release/'
-    secrets: inherit
-
-  build-macos:
-    needs: bump-version
-    if: ${{ always() && !cancelled() && (success() || needs.bump-version.result == 'skipped') }}
-    uses: ./.github/workflows/build-platform.yml
-    with:
-      target: 'macos'
-      os:     'macos-latest'
-      build_cmd:     'flutter build macos --release'
-      artifact_path: 'build/macos/Build/Products/Release/Runner.app'
-    secrets: inherit
-
-  build-linux:
-    needs: bump-version
-    if: ${{ always() && !cancelled() && (success() || needs.bump-version.result == 'skipped') }}
-    uses: ./.github/workflows/build-platform.yml
-    with:
-      target: 'linux'
-      os:     'ubuntu-latest'
-      build_cmd:     'flutter build linux --release'
-      artifact_path: 'build/linux/x64/release/bundle/'
-    secrets: inherit
-
-  # ------------------------------------------------------------------
-  # 3. Publish GitHub Release
-  # ------------------------------------------------------------------
   publish-release:
     name: Publish GitHub Release
     needs:
       - bump-version
       - build-android
       - build-ios
-      - build-web
-      - build-windows
-      - build-macos
-      - build-linux
     if: ${{ always() && !cancelled() && !inputs.dry_run && needs.bump-version.result == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Download all build artifacts
-        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
         with:
           path: artifacts
           merge-multiple: false
 
-      - name: Inventory (sanity check)
-        run: |
-          echo "=== Artifacts ===" && find artifacts -type f -exec ls -lh {} \;
+      - name: Inventory
+        run: find artifacts -type f -exec ls -lh {} \;
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
+        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64
         with:
           tag_name: v${{ needs.bump-version.outputs.version_name }}-b${{ needs.bump-version.outputs.build_number }}
           name: Release ${{ needs.bump-version.outputs.new_version }}
           generate_release_notes: true
           make_latest: true
           files: |
-            artifacts/android-build/**/*.aab
-            artifacts/android-build/**/*.apk
             artifacts/android-build/**/*.zip
-            artifacts/ios-build/**/*
-            artifacts/web-build/**/*
-            artifacts/windows-build/**/*
-            artifacts/macos-build/**/*
-            artifacts/linux-build/**/*
+            artifacts/ios-build/**/*.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

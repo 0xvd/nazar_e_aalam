@@ -1,0 +1,4 @@
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/nazar_e_aalam_logo.png"   # must be a real PNG, 1024×1024

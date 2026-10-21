@@ -24,38 +24,26 @@ jobs:
       run:
         working-directory: ${{ env.APP_DIR }}
     steps:
-      # ---------------------------------------------------------------
-      # Checkout — pinned: actions/checkout v4
-      # ---------------------------------------------------------------
-      - name: Checkout (latest commit, incl. version bump)
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
 
-      # ---------------------------------------------------------------
-      # Java for Android builds only
-      # ---------------------------------------------------------------
       - name: Set up Java 17 (Android)
         if: inputs.target == 'android'
-        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad
         with:
           distribution: 'zulu'
           java-version: '17'
 
-      # ---------------------------------------------------------------
-      # Flutter SDK (cache: true also caches pub + artifact caches)
-      # ---------------------------------------------------------------
       - name: Set up Flutter
-        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: 'stable'
           cache: true
 
-      # ---------------------------------------------------------------
-      # System packages required by flutter build linux / macos
-      # ---------------------------------------------------------------
       - name: Install Linux build deps
         if: inputs.os == 'ubuntu-latest'
         working-directory: ${{ github.workspace }}
@@ -64,10 +52,6 @@ jobs:
           sudo apt-get install -y clang cmake ninja-build pkg-config \
             libgtk-3-dev liblzma-dev libstdc++-12-dev
 
-      # ---------------------------------------------------------------
-      # CRITICAL ORDER FIX: pub get MUST run before pod install,
-      # because pod install consumes .flutter-plugins-dependencies
-      # ---------------------------------------------------------------
       - name: flutter pub get
         run: flutter pub get
 
@@ -76,9 +60,6 @@ jobs:
         working-directory: ${{ env.APP_DIR }}/ios
         run: pod install --repo-update
 
-      # ---------------------------------------------------------------
-      # Inject release keystore for signed Play Store AAB
-      # ---------------------------------------------------------------
       - name: Configure Android signing
         if: inputs.target == 'android'
         working-directory: ${{ env.APP_DIR }}/android
@@ -99,48 +80,36 @@ jobs:
           keyAlias=$KEY_ALIAS
           keyPassword=$KEY_PASSWORD
           EOF
-          echo "key.properties written:"
-          sed 's/=.*/=***/' key.properties   # mask secrets in logs
 
-      # ---------------------------------------------------------------
-      # Actual build
-      # ---------------------------------------------------------------
       - name: Build
         run: ${{ inputs.build_cmd }}
 
-      # ---------------------------------------------------------------
-      # Zip the AAB for convenient Play Console upload
-      # ---------------------------------------------------------------
-      - name: Zip Play Store AAB (Android)
+      - name: Zip Android artifacts
         if: inputs.target == 'android'
         run: |
-          cd build/app/outputs/bundle/release/
-          zip -r "$GITHUB_WORKSPACE/playstore-aab.zip" app-release.aab
-          ls -lh "$GITHUB_WORKSPACE/playstore-aab.zip"
+          cd build/app/outputs
+          zip -r "$GITHUB_WORKSPACE/android-build.zip" .
 
-      # ---------------------------------------------------------------
-      # Android artifacts (strict — fail loudly if AAB is missing)
-      # ---------------------------------------------------------------
-      - name: Upload Android artifacts
+      - name: Zip iOS artifacts
+        if: inputs.target == 'ios'
+        run: |
+          cd build/ios
+          zip -r "$GITHUB_WORKSPACE/ios-appstore.zip" ipa
+
+      - name: Upload Android artifact
         if: inputs.target == 'android'
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: android-build
-          path: |
-            ${{ env.APP_DIR }}/build/app/outputs/bundle/release/app-release.aab
-            ${{ env.APP_DIR }}/build/app/outputs/apk/release/*.apk
-            ${{ github.workspace }}/playstore-aab.zip
+          path: ${{ github.workspace }}/android-build.zip
           if-no-files-found: error
           retention-days: 14
 
-      # ---------------------------------------------------------------
-      # Other platforms
-      # ---------------------------------------------------------------
-      - name: Upload ${{ inputs.target }} artifacts
-        if: inputs.target != 'android'
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+      - name: Upload iOS artifact
+        if: inputs.target == 'ios'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: ${{ inputs.target }}-build
-          path: ${{ env.APP_DIR }}/${{ inputs.artifact_path }}
+          name: ios-build
+          path: ${{ github.workspace }}/ios-appstore.zip
           if-no-files-found: error
           retention-days: 14

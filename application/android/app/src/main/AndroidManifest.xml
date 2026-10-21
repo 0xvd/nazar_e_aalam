@@ -28,7 +28,7 @@
     <application
         android:name="${applicationName}"
         android:label="Nazar E Aalam"
-        android:icon="@mipmap/launcher_icon">
+        android:icon="@mipmap/ic_launcher">
 
         <!-- FileProvider for sharing images etc. -->
         <provider
