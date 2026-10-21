@@ -22,22 +22,25 @@ def _api_base(request: Request) -> str:
     """
     Canonical API base URL.
 
-    - Production: use APP_URL (canonical domain) if set.
-    - Dev / staging: derive from the incoming request, so the panel always
-      talks to the same host it was loaded from. Prevents
-      `127.0.0.1` vs `localhost` CORS mismatches.
+    Dev  (uvicorn serves /panel at :8000, routes at root)   → "" (relative)
+    Prod (nginx serves /panel/, proxies /api/* → uvicorn)  → "/api"
+
+    Returning "" in dev makes CONFIG.api_base + "/wallpapers" resolve to
+    "/wallpapers" — FastAPI routes it directly. Returning "/api" in prod
+    makes CONFIG.api_base + "/wallpapers" resolve to "/api/wallpapers" —
+    nginx strips /api and proxies to FastAPI's /wallpapers. Same endpoint
+    in both environments, from the panel's point of view.
     """
     if ENV.is_production():
-        app_url = (ENV.APP_URL or "").strip()
-        if app_url.startswith(("http://", "https://")):
-            return app_url.rstrip("/")
+        # Behind nginx (or any proxy that routes /api/* to this app).
+        # A bare path is strictly better than an absolute URL here:
+        #  - no host, so no 127.0.0.1 vs localhost vs admin.yourdomain.com drift
+        #  - no CORS (same-origin by construction)
+        #  - no mixed-content on HTTPS
+        return "/api"
 
-    # Non-prod OR prod with no APP_URL → use request host
-    proto = request.headers.get("x-forwarded-proto", request.url.scheme)
-    host = request.headers.get("x-forwarded-host") or request.headers.get("host")
-    if host:
-        return f"{proto}://{host}".rstrip("/")
-
+    # Dev: relative to the panel's own origin. uvicorn serves /panel/ and
+    # the API routes on the same port, so root paths just work.
     return ""
 
 

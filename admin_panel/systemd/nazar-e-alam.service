@@ -1,15 +1,21 @@
+[Unit]
+Description=Nazar-e-Aalam API
+After=network-online.target mysql.service
+Wants=network-online.target
+Requires=mysql.service
+
 [Service]
 Type=notify
 User=oxvd
 Group=oxvd
-WorkingDirectory=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend
-Environment="PATH=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/.venv/bin:/usr/local/bin:/usr/bin:/bin"
-EnvironmentFile=-/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/.env
+WorkingDirectory=/home/oxvd/mydata/nazar_e_alam/admin_panel
+Environment="PATH=/home/oxvd/mydata/nazar_e_alam/admin_panel/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+EnvironmentFile=-/home/oxvd/mydata/nazar_e_alam/admin_panel/.env
 
-# ---- Run migrations BEFORE starting the app (single process, no race) ----
-ExecStartPre=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/.venv/bin/alembic upgrade head
+# Migrations run synchronously before the app starts
+ExecStartPre=/home/oxvd/mydata/nazar_e_alam/admin_panel/.venv/bin/alembic upgrade head
 
-ExecStart=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/.venv/bin/gunicorn \
+ExecStart=/home/oxvd/mydata/nazar_e_alam/admin_panel/.venv/bin/gunicorn \
     main:app -c gunicorn.conf.py
 ExecReload=/bin/kill -s HUP $MAINPID
 KillMode=mixed
@@ -25,10 +31,10 @@ SyslogIdentifier=nazar-e-alam
 NoNewPrivileges=true
 ProtectSystem=strict
 ProtectHome=read-only
-ReadWritePaths=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/logs
-ReadWritePaths=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/backups
-ReadWritePaths=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/downloads
-ReadWritePaths=/home/oxvd/mydata/nazar_e_alam/admin_panel/backend/sync_state.json
+ReadWritePaths=/home/oxvd/mydata/nazar_e_alam/admin_panel/logs
+ReadWritePaths=/home/oxvd/mydata/nazar_e_alam/admin_panel/backups
+ReadWritePaths=/home/oxvd/mydata/nazar_e_alam/admin_panel/downloads
+ReadWritePaths=/home/oxvd/mydata/nazar_e_alam/admin_panel/sync_state.json
 
 [Install]
 WantedBy=multi-user.target
