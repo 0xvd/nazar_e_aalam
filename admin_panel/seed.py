@@ -10,23 +10,37 @@ from config import ENV
 from database import db
 from repositories.user_repository import UserRepository
 from security.passwords import hash_password
+from sqlalchemy.exc import IntegrityError
 
 
 def seed_initial_admin() -> None:
-    """Create the initial super admin from ENV.INITIAL_ADMIN_* if missing."""
+    """Create the initial super admin from ENV.INITIAL_ADMIN_* if missing.
+
+    Idempotent and race-safe: if multiple gunicorn workers run this
+    simultaneously, exactly one INSERT wins and the rest are no-ops.
+    """
     with db.session() as session:
         repo = UserRepository(session)
+
+        # Fast path — already seeded
         if repo.get_by_email(ENV.INITIAL_ADMIN_EMAIL) is not None:
             return
-        repo.create_user(
-            email=ENV.INITIAL_ADMIN_EMAIL,
-            password_hash=hash_password(ENV.INITIAL_ADMIN_PASSWORD),
-            first_name=ENV.INITIAL_ADMIN_FIRST_NAME,
-            last_name=ENV.INITIAL_ADMIN_LAST_NAME,
-            is_admin=True,
-        )
-        print(f"[seed] Created initial admin: {ENV.INITIAL_ADMIN_EMAIL}")
-    
+
+        try:
+            repo.create_user(
+                email=ENV.INITIAL_ADMIN_EMAIL,
+                password_hash=hash_password(ENV.INITIAL_ADMIN_PASSWORD),
+                first_name=ENV.INITIAL_ADMIN_FIRST_NAME,
+                last_name=ENV.INITIAL_ADMIN_LAST_NAME,
+                is_admin=True,
+            )
+            print(f"[seed] Created initial admin: {ENV.INITIAL_ADMIN_EMAIL}")
+        except IntegrityError:
+            # Another worker beat us between the check and the insert.
+            # That's a success, not an error — the admin exists.
+            session.rollback()
+            print(f"[seed] Initial admin already exists, skipped")
+
 def seed_default_roles() -> None:
     """Create default admin roles if missing."""
     from database import db

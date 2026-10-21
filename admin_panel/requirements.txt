@@ -12,5 +12,5 @@ boto3==1.35.90
 hijridate==2.3.0
 beautifulsoup4==4.12.3
 gunicorn==23.0.0
-uvicorn-worker==0.3.0
+uvicorn-worker>=0.4.0
 python-multipart==0.0.20
