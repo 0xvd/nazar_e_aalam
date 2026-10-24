@@ -71,7 +71,6 @@ class AiAssistantController extends GetxController {
       messages.add(ChatMessage(text: answer, isUser: false));
       await saveChat();
     } catch (e) {
-      print(e.toString());
       messages.add(
         ChatMessage(
           text: "Error: Unable to get answer. Please try again.",

@@ -56,13 +56,8 @@ class OfflineQuranController extends GetxController {
       );
 
       //folder path
-      String folderPath = selectedTranslatorId == '2'
-          ? 'assets/quran/bn/s00'
-          : selectedTranslatorId == '3'
-          ? 'assets/quran/sp/s00'
-          : selectedTranslatorId == '4'
-          ? 'assets/quran/ar/s00'
-          : 'assets/quran/en/s00';
+      // Only English is supported offline; other languages handled by API
+      String folderPath = 'assets/quran/en/s00';
       update();
 
       // Load local JSON file

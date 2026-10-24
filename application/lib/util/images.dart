@@ -77,7 +77,7 @@ class Images {
   static const String Quran_Frame = '${image_path}Quran_Frame.png';
   static const String Nav_quran = '${image_path}nav_quran.png';
   static const String Banner_Image = '${image_path}banner_image.png';
-  static const String NewBanner_Image = '${image_path}new_banner_image.png';
+  static const String NewBanner_Image = '${image_path}mandala.png';
   static const String Light_APP_LOGO = '${image_path}icon.png';
   static const String Dark_APP_LOGO = '${image_path}dark_icon.png';
   static const String Compass = '${image_path}Compass_Frame.png';

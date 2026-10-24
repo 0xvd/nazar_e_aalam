@@ -11,7 +11,7 @@ import 'package:nazar_e_alam/controller/audio_player_controller.dart';
 import 'package:nazar_e_alam/controller/bookmark_controller.dart';
 import 'package:nazar_e_alam/controller/category_controller.dart';
 import 'package:nazar_e_alam/controller/dhikr_controller.dart';
-import 'package:nazar_e_alam/controller/donation_controller.dart';
+// import 'package:nazar_e_alam/controller/donation_controller.dart';
 import 'package:nazar_e_alam/controller/dua_controller.dart';
 import 'package:nazar_e_alam/controller/hadith_controller.dart';
 import 'package:nazar_e_alam/controller/home_layout_controller.dart';
@@ -91,7 +91,7 @@ Future<Map<String, Map<String, String>>> init() async {
   );
   Get.lazyPut(() => DhikrController(dhikrRepo: Get.find()));
   Get.lazyPut(() => DuaController(duaRepo: Get.find()));
-  Get.lazyPut(() => DonationController(donationRepo: Get.find()));
+  // Get.lazyPut(() => DonationController(donationRepo: Get.find()));
   Get.lazyPut(() => QuranController(quranRepo: Get.find()));
   Get.lazyPut(() => PrayerTimeController(apiClient: Get.find()), fenix: true);
   Get.lazyPut(() => NotiSoundController());

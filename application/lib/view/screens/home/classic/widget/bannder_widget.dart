@@ -170,25 +170,25 @@ class BannerWidget extends StatelessWidget {
                       ),  
                       FadeInImage(
                         placeholderFilterQuality: FilterQuality.none,
-                        image:
-                            settingsController.mosqueSettingsApiData == null ||
-                                settingsController
-                                        .mosqueSettingsApiData!
-                                        .data ==
-                                    null ||
-                                settingsController
-                                        .mosqueSettingsApiData!
-                                        .data!
-                                        .appLogo ==
-                                    null
-                            ? const AssetImage(Images.Banner_Image)
-                            : NetworkImage(
-                                settingsController
-                                    .mosqueSettingsApiData!
-                                    .data!
-                                    .appLogo
-                                    .toString(),
-                              ),
+                        image: const AssetImage(Images.NewBanner_Image),
+                            // settingsController.mosqueSettingsApiData == null ||
+                            //     settingsController
+                            //             .mosqueSettingsApiData!
+                            //             .data ==
+                            //         null ||
+                            //     settingsController
+                            //             .mosqueSettingsApiData!
+                            //             .data!
+                            //             .appLogo ==
+                            //         null
+                            // ? const AssetImage(Images.Banner_Image)
+                            // : NetworkImage(
+                            //     settingsController
+                            //         .mosqueSettingsApiData!
+                            //         .data!
+                            //         .appLogo
+                            //         .toString(),
+                            //   ),
                         placeholder: Get.isDarkMode
                             ? const AssetImage(Images.Dark_primary)
                             : const AssetImage(Images.Light_primary),

@@ -19,8 +19,8 @@ import 'package:nazar_e_alam/view/screens/haram_ingredients_food/haram_ingredien
 import 'package:nazar_e_alam/view/screens/home/home_screen.dart';
 import 'package:nazar_e_alam/view/screens/name_generator/islamic_name_generator_screen.dart';
 import 'package:nazar_e_alam/view/screens/nearby_mosque/nearby_mosque_screen.dart';
-import 'package:nazar_e_alam/view/screens/payment/donation_type_screen.dart';
-import 'package:nazar_e_alam/view/screens/payment/payment_type_screen.dart';
+// import 'package:nazar_e_alam/view/screens/payment/donation_type_screen.dart';
+// import 'package:nazar_e_alam/view/screens/payment/payment_type_screen.dart';
 import 'package:nazar_e_alam/view/screens/prayer_adjustment/prayer_adjustment_screen.dart';
 import 'package:nazar_e_alam/view/screens/quran/sura_detaile_screen.dart';
 import 'package:nazar_e_alam/view/screens/quran/sura_list_screen.dart';
@@ -32,7 +32,7 @@ import 'package:nazar_e_alam/view/screens/wallpapers/wallpaper_screen.dart';
 import 'package:nazar_e_alam/view/screens/zakat/zakat_calculator.dart';
 import 'package:nazar_e_alam/view/screens/zakat/zakat_detaile.dart';
 
-import '../view/screens/payment/donated_list.dart';
+// import '../view/screens/payment/donated_list.dart';
 
 class RouteHelper {
   static String initial = "/";
@@ -225,24 +225,24 @@ class RouteHelper {
       page: () => const SettingsScreen(appBackButton: true),
       transition: Transition.cupertinoDialog,
     ),
-    GetPage(
-      name: userDonatedList,
-      page: () => UserDonateScreen(
-        appBackButton: true,
-        value: Get.parameters['value'] ?? '1',
-      ),
-      transition: Transition.cupertinoDialog,
-    ),
-    GetPage(
-      name: donationTypeList,
-      page: () => const DonationTypeScreen(appBackButton: true),
-      transition: Transition.cupertinoDialog,
-    ),
-    GetPage(
-      name: paymentType,
-      page: () => PaymentTypeScreen(appBackButton: true),
-      transition: Transition.cupertinoDialog,
-    ),
+    // GetPage(
+    //   name: userDonatedList,
+    //   page: () => UserDonateScreen(
+    //     appBackButton: true,
+    //     value: Get.parameters['value'] ?? '1',
+    //   ),
+    //   transition: Transition.cupertinoDialog,
+    // ),
+    // GetPage(
+    //   name: donationTypeList,
+    //   page: () => const DonationTypeScreen(appBackButton: true),
+    //   transition: Transition.cupertinoDialog,
+    // ),
+    // GetPage(
+    //   name: paymentType,
+    //   page: () => PaymentTypeScreen(appBackButton: true),
+    //   transition: Transition.cupertinoDialog,
+    // ),
     GetPage(
       name: recters,
       page: () => ReciterScreen(appBackButton: true),
