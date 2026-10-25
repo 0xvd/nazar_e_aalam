@@ -19,6 +19,14 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     // _checkNotificationPermission();
+
+    // Run these once when the splash screen is initialized.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+
+      Get.find<PrayerTimeController>().getLocation();
+      Get.find<SplashController>().navigator();
+    });
   }
 
   // Future<void> _checkNotificationPermission() async {
@@ -33,8 +41,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Get.find<PrayerTimeController>().getLocation();
-    Get.find<SplashController>().navigator();
+    // Get.find<PrayerTimeController>().getLocation();
+    // Get.find<SplashController>().navigator();
     return Scaffold(
       body: Center(
         child: Column(
