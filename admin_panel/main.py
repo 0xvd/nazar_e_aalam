@@ -251,9 +251,10 @@ app.add_middleware(_ErrorShield)
 # ---- API Routers -----------------------------------------------------------
 
 # All API endpoints are served under /api.
+app.include_router(panel_config_router)
+
 api_router = APIRouter(prefix="/api")
 
-api_router.include_router(panel_config_router)
 api_router.include_router(auth_router)
 api_router.include_router(me_router)
 api_router.include_router(dua_router)
