@@ -6,7 +6,7 @@ import threading
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, APIRouter,Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
@@ -248,27 +248,36 @@ app.add_middleware(_ErrorShield)
 
 # ---- API Routers -----------------------------------------------------------
 
-app.include_router(panel_config_router)
-app.include_router(auth_router)
-app.include_router(me_router)
-app.include_router(dua_router)
-app.include_router(dhikr_router)
-app.include_router(wallpaper_router)
-app.include_router(sifat_name_router)
-app.include_router(haram_code_router)
-app.include_router(translator_router)
-app.include_router(chapter_router)
-app.include_router(reciter_router)
-app.include_router(chapter_verses_router)
-app.include_router(chapter_verses_full_router)
-app.include_router(verse_translation_router)
-app.include_router(administrator_router)
-app.include_router(setting_router)
-app.include_router(prayer_time_router)
-app.include_router(hijri_router)
-app.include_router(admin_backup_router)
-app.include_router(role_router)
-app.include_router(search_router)
+# ---- API Routers -----------------------------------------------------------
+
+# All API endpoints are served under /api.
+api_router = APIRouter(prefix="/api")
+
+api_router.include_router(panel_config_router)
+api_router.include_router(auth_router)
+api_router.include_router(me_router)
+api_router.include_router(dua_router)
+api_router.include_router(dhikr_router)
+api_router.include_router(wallpaper_router)
+api_router.include_router(sifat_name_router)
+api_router.include_router(haram_code_router)
+api_router.include_router(translator_router)
+api_router.include_router(chapter_router)
+api_router.include_router(reciter_router)
+api_router.include_router(chapter_verses_router)
+api_router.include_router(chapter_verses_full_router)
+api_router.include_router(verse_translation_router)
+api_router.include_router(administrator_router)
+api_router.include_router(setting_router)
+api_router.include_router(prayer_time_router)
+api_router.include_router(hijri_router)
+api_router.include_router(admin_backup_router)
+api_router.include_router(role_router)
+api_router.include_router(search_router)
+
+# Register all API routes.
+app.include_router(api_router)
+
 
 
 # ---- Dev-only /debug router ------------------------------------------------
