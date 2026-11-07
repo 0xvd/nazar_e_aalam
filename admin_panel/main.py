@@ -27,6 +27,7 @@ from routes import (
     mosque_router,
     dhikr_router,
     admin_devices_router,
+    c_dhikr_router,
     admin_dhikr_router,
     dhikr_router,
     dua_router,
@@ -284,7 +285,7 @@ app.include_router(search_router)
 app.include_router(sync_router)
 app.include_router(mosque_router)
 app.include_router(admin_devices_router)
-app.include_router(dhikr_router)
+app.include_router(c_dhikr_router)
 app.include_router(admin_dhikr_router)
 
 if ENV.is_debug():

@@ -7,7 +7,6 @@ from routes.chapter_detail import (
     crud_router as chapter_verses_router,
 )
 from routes.prayer_time import router as prayer_time_router   # ← new
-from routes.dhikr import router as dhikr_router
 from routes.dua import router as dua_router
 from routes.haram_code import router as haram_code_router
 from routes.reciter import router as reciter_router
@@ -25,6 +24,7 @@ from routes.search import router as search_router
 from routes.sync import router as sync_router
 from routes.mosque import router as mosque_router
 from routes.admin_devices import router as admin_devices_router
+from routes.campaign_dhikr import router as c_dhikr_router
 from routes.dhikr import router as dhikr_router
 from routes.admin_dhikr import router as admin_dhikr_router
 
@@ -37,6 +37,7 @@ __all__ = [
     "sync_router",
     "chapter_verses_router",
     "dhikr_router",
+    "c_dhikr_router",
     "admin_devices_router",
     "dua_router",
     "haram_code_router",

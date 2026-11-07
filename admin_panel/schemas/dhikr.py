@@ -10,7 +10,31 @@ from pydantic import BaseModel, ConfigDict, Field
 CampaignStatus = Literal["upcoming", "active", "past"]
 
 
-# ---- Admin: campaign CRUD ----
+class DhikrBase(BaseModel):
+    position: int | None = None
+    en_short_name: str | None = None
+    en_full_name: str | None = None
+    ar_short_name: str | None = None
+    ar_full_name: str | None = None
+
+
+class DhikrCreate(DhikrBase):
+    pass
+
+
+class DhikrUpdate(BaseModel):
+    position: int | None = None
+    en_short_name: str | None = None
+    en_full_name: str | None = None
+    ar_short_name: str | None = None
+    ar_full_name: str | None = None
+
+
+class DhikrRead(DhikrBase):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: int
+
 
 class CampaignCreate(BaseModel):
     title: str = Field(min_length=1, max_length=255)
