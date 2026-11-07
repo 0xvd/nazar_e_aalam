@@ -57,10 +57,18 @@ class _Tee(io.TextIOBase):
         self._cb = checkpoint_cb
         self._buf = ""
         self._last_ckpt = 0.0
+        self._closed = False    # ← NEW
 
     def write(self, s: str) -> int:  # type: ignore[override]
-        self._fh.write(s)
-        self._fh.flush()
+        if self._closed or self._fh.closed:    # ← guard
+            return len(s)
+        try:
+            self._fh.write(s)
+            self._fh.flush()
+        except ValueError:
+            # file closed underneath us — swallow, don't crash
+            self._closed = True
+            return len(s)
         self._buf += s
         while "\n" in self._buf:
             line, self._buf = self._buf.split("\n", 1)
@@ -68,13 +76,24 @@ class _Tee(io.TextIOBase):
         return len(s)
 
     def flush(self) -> None:  # type: ignore[override]
-        self._fh.flush()
+        if self._closed or self._fh.closed:    # ← guard
+            return
+        try:
+            self._fh.flush()
+        except ValueError:
+            self._closed = True
+
+    def close(self) -> None:    # ← NEW: mark closed explicitly
+        self._closed = True
+        try:
+            self._fh.flush()
+        except Exception:
+            pass
 
     def _maybe_checkpoint(self, line: str) -> None:
         m = _PROGRESS_RE.search(line)
         if not m:
             return
-        # Rate-limit writes — once every 2s is plenty.
         now = time.monotonic()
         if now - self._last_ckpt < 2.0:
             return
@@ -87,7 +106,6 @@ class _Tee(io.TextIOBase):
             failed=int(m["failed"]),
             bytes_done=_parse_bytes(m["bytes"], m["unit"]),
         )
-
 
 # --------------------------------------------------------------------------- #
 #  Public entrypoint (called from a thread by routes/sync.py)
