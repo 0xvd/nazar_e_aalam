@@ -11,7 +11,7 @@ from routes.chapter_detail import (
 from routes.chapter_detail import (
     crud_router as chapter_verses_router,
 )
-from routes.dhikr import router as dhikr_router
+from routes.prayer_time import router as prayer_time_router
 from routes.dua import router as dua_router
 from routes.haram_code import router as haram_code_router
 from routes.hijri import router as hijri_router
@@ -40,6 +40,8 @@ __all__ = [
     "chapter_verses_full_router",
     "chapter_verses_router",
     "dhikr_router",
+    "c_dhikr_router",
+    "admin_devices_router",
     "dua_router",
     "haram_code_router",
     "hijri_router",

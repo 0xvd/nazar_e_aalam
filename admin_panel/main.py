@@ -17,6 +17,7 @@ from logging_config import setup_logging
 from routes import (
     admin_backup_router,
     admin_devices_router,
+    c_dhikr_router,
     admin_dhikr_router,
     administrator_router,
     auth_router,

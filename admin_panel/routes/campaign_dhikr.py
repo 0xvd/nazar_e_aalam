@@ -23,7 +23,6 @@ router = APIRouter(prefix="/dhikr", tags=["dhikr"])
 def _utcnow_naive() -> datetime:
     return datetime.now(UTC).replace(tzinfo=None)
 
-
 def _client_ip(request: Request) -> str:
     xff = request.headers.get("x-forwarded-for")
     if xff:
@@ -79,7 +78,6 @@ def submit_dhikr(
     user: User = Depends(get_current_user),
     session: Session = Depends(db.get_db),
 ) -> DhikrSubmitResponse:
-
     if ENV.RATE_LIMIT_ENABLED:
         allowed, _ = rate_limiter.hit(
             f"dhikr-submit:{_client_ip(request)}",
@@ -122,7 +120,6 @@ def submit_dhikr(
                 f"(opens {campaign.starts_on}, closes {campaign.ends_on})."
             ),
         )
-
     sub = DhikrSubmission(
         campaign_id=campaign.id,
         user_id=user.id,
