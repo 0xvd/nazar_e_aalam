@@ -60,18 +60,25 @@ class _Tee(io.TextIOBase):
         self._closed = False    # ← NEW
 
     def write(self, s: str) -> int:  # type: ignore[override]
-        if self._closed or self._fh.closed:    # ← guard
+        if self._closed or self._fh.closed:
             return len(s)
         try:
             self._fh.write(s)
             self._fh.flush()
         except ValueError:
-            # file closed underneath us — swallow, don't crash
             self._closed = True
             return len(s)
+
         self._buf += s
-        while "\n" in self._buf:
-            line, self._buf = self._buf.split("\n", 1)
+        # sync_quran emits progress with \r (TTY) or \n (pipe).
+        # Split on either so checkpoints fire in both modes.
+        while True:
+            m = re.search(r"[\r\n]", self._buf)
+            if not m:
+                break
+            pos = m.start()
+            line = self._buf[:pos]
+            self._buf = self._buf[pos + 1:]
             self._maybe_checkpoint(line)
         return len(s)
 
@@ -161,6 +168,7 @@ def run(job_id: int) -> None:
             tee = _Tee(fh, job_id, _checkpoint)
             with redirect_stdout(tee), redirect_stderr(tee):
                 try:
+                    _sq._IS_TTY = False          # deterministic \n output
                     _sq.cmd_sync(targets, verbose=False, dry_run=False)
                 except _StopRequested:
                     print("\n[runner] stopped on request.", flush=True)
@@ -209,6 +217,7 @@ def _announce(log_path: Path, job_id: int, targets: list[str]) -> None:
             f"[runner] targets: {targets or '(all)'}\n\n"
         )
 
+_CHECKPOINT_ERRORS_LOGGED: set[int] = set()
 
 def _save_progress(job_id: int, **kw) -> None:
     try:
@@ -219,8 +228,15 @@ def _save_progress(job_id: int, **kw) -> None:
             for k, v in kw.items():
                 if hasattr(job, k):
                     setattr(job, k, v)
-    except Exception:  # noqa: BLE001
-        pass  # never let a checkpoint write kill the run
+    except Exception as exc:  # noqa: BLE001
+        # Log ONCE per job so we don't spam, but never silently swallow.
+        if job_id not in _CHECKPOINT_ERRORS_LOGGED:
+            _CHECKPOINT_ERRORS_LOGGED.add(job_id)
+            print(
+                f"[runner] checkpoint FAILED for job {job_id}: "
+                f"{type(exc).__name__}: {exc}",
+                flush=True,
+            )
 
 
 class _StopRequested(Exception):
