@@ -1,4 +1,3 @@
-"""Alembic migration environment — wired to our app's Base and ENV."""
 from __future__ import annotations
 
 import sys
@@ -8,7 +7,7 @@ from pathlib import Path
 from alembic import context
 from sqlalchemy import engine_from_config, pool
 
-# Make the project root importable
+
 _ROOT = Path(__file__).resolve().parent.parent
 if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
@@ -17,17 +16,17 @@ from config import ENV  # noqa: E402
 from database.database import Base  # noqa: E402
 from database import models  # noqa: E402,F401  — registers every model
 
-# Alembic Config object
+
 config = context.config
 
-# Inject the real DB URL
+
 config.set_main_option("sqlalchemy.url", ENV.DATABASE_URL)
 
-# Logging
+
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-# The metadata Alembic autogenerates from
+
 target_metadata = Base.metadata
 
 

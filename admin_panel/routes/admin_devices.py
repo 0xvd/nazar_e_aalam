@@ -1,9 +1,6 @@
-"""
-Admin endpoints for viewing and revoking device registrations.
-"""
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
@@ -17,7 +14,7 @@ router = APIRouter(prefix="/administrators", tags=["admin-devices"])
 
 
 def _utcnow_naive() -> datetime:
-    return datetime.now(timezone.utc).replace(tzinfo=None)
+    return datetime.now(UTC).replace(tzinfo=None)
 
 
 @router.get("/{user_id}/devices", response_model=list[DeviceOut])
@@ -35,7 +32,9 @@ def list_user_devices(
     return [DeviceOut.model_validate(r) for r in rows]
 
 
-@router.post("/{user_id}/devices/{device_uuid}/revoke", status_code=status.HTTP_204_NO_CONTENT)
+@router.post(
+    "/{user_id}/devices/{device_uuid}/revoke", status_code=status.HTTP_204_NO_CONTENT
+)
 def revoke_device(
     user_id: int,
     device_uuid: str,

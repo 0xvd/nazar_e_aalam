@@ -1,4 +1,3 @@
-"""Schemas for Dhikr campaigns + submissions."""
 from __future__ import annotations
 
 from datetime import date, datetime
@@ -6,11 +5,34 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-
 CampaignStatus = Literal["upcoming", "active", "past"]
 
 
-# ---- Admin: campaign CRUD ----
+class DhikrBase(BaseModel):
+    position: int | None = None
+    en_short_name: str | None = None
+    en_full_name: str | None = None
+    ar_short_name: str | None = None
+    ar_full_name: str | None = None
+
+
+class DhikrCreate(DhikrBase):
+    pass
+
+
+class DhikrUpdate(BaseModel):
+    position: int | None = None
+    en_short_name: str | None = None
+    en_full_name: str | None = None
+    ar_short_name: str | None = None
+    ar_full_name: str | None = None
+
+
+class DhikrRead(DhikrBase):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: int
+
 
 class CampaignCreate(BaseModel):
     title: str = Field(min_length=1, max_length=255)
@@ -41,11 +63,10 @@ class CampaignOut(BaseModel):
     created_at: datetime
 
 
-# ---- Public: config API for the app ----
-
 class PublicCampaign(BaseModel):
     """What the mobile app sees — no internal flags."""
-    model_config = ConfigDict(from_attributes=True)   # ← ADD THIS
+
+    model_config = ConfigDict(from_attributes=True)
 
     id: int
     title: str
@@ -63,13 +84,12 @@ class DhikrConfig(BaseModel):
     `upcoming` is the next scheduled campaign (for pre-caching).
     `is_open` tells the app whether submissions will be accepted.
     """
+
     is_open: bool
     active: PublicCampaign | None = None
     upcoming: PublicCampaign | None = None
     server_time: datetime
 
-
-# ---- Public: submission ----
 
 class DhikrSubmitRequest(BaseModel):
     campaign_id: int
@@ -84,8 +104,6 @@ class DhikrSubmitResponse(BaseModel):
     count: int
     created_at: datetime
 
-
-# ---- Admin: submission listing ----
 
 class SubmissionOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)

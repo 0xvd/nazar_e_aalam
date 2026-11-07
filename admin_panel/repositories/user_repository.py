@@ -1,7 +1,6 @@
-"""User-specific data access."""
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from database.database import BaseRepository
 from database.models import User
@@ -30,8 +29,6 @@ class UserRepository(BaseRepository[User]):
             last_name=last_name,
             is_admin=is_admin,
             email_verified_at=(
-                datetime.now(timezone.utc).replace(tzinfo=None)
-                if email_verified
-                else None
+                datetime.now(UTC).replace(tzinfo=None) if email_verified else None
             ),
         )

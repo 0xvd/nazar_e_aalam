@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-"""
-Populate the `chapters` table from data/chapters.json.
-
-Idempotent: existing rows are updated to match the JSON, missing rows are
-inserted with the exact surah number as primary key. Safe to run repeatedly.
-"""
 from __future__ import annotations
 
 import json
@@ -36,10 +29,7 @@ def run() -> None:
 
     inserted = updated = 0
     with db.session() as session:
-        existing = {
-            c.id: c
-            for c in session.execute(select(Chapter)).scalars().all()
-        }
+        existing = {c.id: c for c in session.execute(select(Chapter)).scalars().all()}
 
         for row in chapters_data:
             num = int(row["number"])

@@ -1,36 +1,15 @@
-"""
-Central database module.
-
-Exposes:
-  - `Base`            → SQLAlchemy declarative base for every ORM model
-  - `Database`        → engine, session factory, helpers, schema bootstrap
-  - `BaseRepository`  → generic CRUD repository (extend per model)
-  - `db`              → singleton `Database` instance (import this everywhere)
-  - `get_db` / `init_db` → thin wrappers kept for FastAPI dependency and bootstrap
-
-Design notes:
-  * One `Database` instance per process; do not instantiate more.
-  * Every helper that mutates data requires an explicit `Session` argument —
-    sessions are never created implicitly, so transactions stay visible.
-  * `BaseRepository` never commits. Call `.save()` (or `db.commit(session)`)
-    once when the whole unit of work is ready.
-"""
 from __future__ import annotations
-
 
 from collections.abc import Generator
 from contextlib import contextmanager
-from typing import Any, Generic, Type, TypeVar
+from typing import Any, Generic, TypeVar
 
-from sqlalchemy import create_engine, func, select, asc, create_engine, desc, or_
+from sqlalchemy import asc, create_engine, desc, func, or_, select
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
 from sqlalchemy.sql import Executable
-from config import ENV
 
-# --------------------------------------------------------------------------- #
-#  Declarative base
-# --------------------------------------------------------------------------- #
+from config import ENV
 
 
 class Base(DeclarativeBase):
@@ -38,11 +17,6 @@ class Base(DeclarativeBase):
 
 
 M = TypeVar("M", bound=Base)
-
-
-# --------------------------------------------------------------------------- #
-#  Database manager
-# --------------------------------------------------------------------------- #
 
 
 class Database:
@@ -63,11 +37,7 @@ class Database:
         pool_recycle: int = 3600,
     ) -> None:
         self.url = url or ENV.DATABASE_URL
-        self.echo = (
-            echo
-            if echo is not None
-            else ENV.SQL_ECHO
-        )
+        self.echo = echo if echo is not None else ENV.SQL_ECHO
 
         self.engine: Engine = create_engine(
             self.url,
@@ -82,11 +52,9 @@ class Database:
             bind=self.engine,
             autocommit=False,
             autoflush=False,
-            expire_on_commit=False,  # keep objects usable after commit
+            expire_on_commit=False,
             class_=Session,
         )
-
-    # ---- session lifecycle ------------------------------------------------
 
     def get_session(self) -> Session:
         """Create a new session — the caller owns closing it."""
@@ -116,10 +84,8 @@ class Database:
         finally:
             s.close()
 
-    # ---- schema bootstrap -------------------------------------------------
-
     def create_all(self) -> None:
-        # Import for registration side-effect only
+
         from database import models  # noqa: F401
 
         Base.metadata.create_all(bind=self.engine)
@@ -128,8 +94,6 @@ class Database:
         from database import models  # noqa: F401
 
         Base.metadata.drop_all(bind=self.engine)
-
-    # ---- query helpers (require an existing session) ----------------------
 
     @staticmethod
     def execute(session: Session, stmt: Executable) -> Any:
@@ -156,13 +120,7 @@ class Database:
         session.rollback()
 
 
-# Process-wide singleton — import `db` from this module everywhere.
 db = Database()
-
-
-# --------------------------------------------------------------------------- #
-#  Generic CRUD repository
-# --------------------------------------------------------------------------- #
 
 
 class BaseRepository(Generic[M]):
@@ -178,12 +136,10 @@ class BaseRepository(Generic[M]):
         repo.save()        # single commit
     """
 
-    model: Type[M]
+    model: type[M]
 
     def __init__(self, session: Session) -> None:
         self.session = session
-
-    # ---- reads -----------------------------------------------------------
 
     def get(self, id_: int) -> M | None:
         return self.session.get(self.model, id_)
@@ -207,8 +163,6 @@ class BaseRepository(Generic[M]):
         stmt = select(func.count()).select_from(self.model)
         return self.session.execute(stmt).scalar_one()
 
-    # ---- writes (no commit — call .save()) -------------------------------
-
     def create(self, **kwargs: Any) -> M:
         obj = self.model(**kwargs)
         self.session.add(obj)
@@ -231,8 +185,6 @@ class BaseRepository(Generic[M]):
         self.session.delete(obj)
         self.session.flush()
         return True
-
-    # ---- transaction control ---------------------------------------------
 
     def save(self) -> None:
         self.session.commit()
@@ -279,12 +231,13 @@ class BaseRepository(Generic[M]):
         if order_by and hasattr(self.model, order_by):
             col = getattr(self.model, order_by)
             base = base.order_by(desc(col) if order_dir.lower() == "desc" else asc(col))
-        base = base.order_by(asc(getattr(self.model, "id")))
+        base = base.order_by(asc(self.model.id))
 
         items = list(
             self.session.execute(base.offset(skip).limit(limit)).scalars().all()
         )
         return items, total
+
 
 def get_db() -> Generator[Session, None, None]:
     """FastAPI dependency alias — `Depends(get_db)` or `Depends(db.get_db)`."""

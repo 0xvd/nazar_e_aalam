@@ -1,12 +1,3 @@
-"""
-Prayer times — CRUD + filter + year-seed + city catalogue.
-
-Filter: GET /prayer-times?city=nadiad&from=2026-10-01&to=2026-10-31
-One:    GET /prayer-times/{id}
-Edit:   PATCH /prayer-times/{id}        (admin) — for Friday jummah override
-Seed:   POST /prayer-times/seed         (admin) — fills a full year per city
-Cities: GET /prayer-times/cities        — from tools/cities.py
-"""
 from __future__ import annotations
 
 from datetime import date
@@ -32,20 +23,19 @@ from tools.seed_prayer_times import seed_city
 router = APIRouter(prefix="/prayer-times", tags=["prayer-times"])
 
 
-# ---- GET /prayer-times/cities ----------------------------------------------
-
 @router.get("/cities", response_model=list[CityInfo])
 def list_cities():
     return [
         CityInfo(
-            key=k, name=v["name"],
-            latitude=v["lat"], longitude=v["lon"], timezone=v["tz"],
+            key=k,
+            name=v["name"],
+            latitude=v["lat"],
+            longitude=v["lon"],
+            timezone=v["tz"],
         )
         for k, v in cities.CITIES.items()
     ]
 
-
-# ---- GET /prayer-times -----------------------------------------------------
 
 @router.get("", response_model=Page[PrayerTimeRead])
 def list_prayer_times(
@@ -64,19 +54,21 @@ def list_prayer_times(
     if to:
         base = base.where(PrayerTime.date <= to)
 
-    total = session.execute(select(func.count()).select_from(base.subquery())).scalar_one()
+    total = session.execute(
+        select(func.count()).select_from(base.subquery())
+    ).scalar_one()
     rows = list(
-        session.execute(
-            base.order_by(PrayerTime.date).offset(skip).limit(limit)
-        ).scalars().all()
+        session.execute(base.order_by(PrayerTime.date).offset(skip).limit(limit))
+        .scalars()
+        .all()
     )
     return Page[PrayerTimeRead].build(
         [PrayerTimeRead.model_validate(r) for r in rows],
-        total=total, skip=skip, limit=limit,
+        total=total,
+        skip=skip,
+        limit=limit,
     )
 
-
-# ---- GET /prayer-times/{id} ------------------------------------------------
 
 @router.get("/{item_id}", response_model=PrayerTimeRead)
 def get_prayer_time(item_id: int, session: Session = Depends(db.get_db)):
@@ -85,8 +77,6 @@ def get_prayer_time(item_id: int, session: Session = Depends(db.get_db)):
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Not found")
     return row
 
-
-# ---- PATCH /prayer-times/{id} (admin) --------------------------------------
 
 @router.patch("/{item_id}", response_model=PrayerTimeRead)
 def update_prayer_time(
@@ -109,8 +99,6 @@ def update_prayer_time(
     return row
 
 
-# ---- POST /prayer-times/seed (admin) ---------------------------------------
-
 @router.post("/seed", response_model=SeedResult)
 def seed_prayer_times(
     body: SeedRequest,
@@ -122,11 +110,11 @@ def seed_prayer_times(
             status.HTTP_400_BAD_REQUEST,
             f"Unknown city '{body.city}'. See GET /prayer-times/cities for the catalogue.",
         )
-    result = seed_city(session, body.city.lower().strip(), body.year, replace=body.replace)
+    result = seed_city(
+        session, body.city.lower().strip(), body.year, replace=body.replace
+    )
     return SeedResult(**result)
 
-
-# ---- DELETE /prayer-times/{id} (admin) -------------------------------------
 
 @router.delete("/{item_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_prayer_time(

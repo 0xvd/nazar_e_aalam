@@ -1,4 +1,3 @@
-"""Composite response for GET /chapters/{n}/verses-full."""
 from __future__ import annotations
 
 from pydantic import BaseModel

@@ -1,4 +1,3 @@
-"""Composite schemas for the Quran-audio endpoints."""
 from __future__ import annotations
 
 from pydantic import BaseModel

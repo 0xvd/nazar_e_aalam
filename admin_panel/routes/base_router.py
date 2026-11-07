@@ -1,23 +1,3 @@
-"""
-Generic CRUD router factory — supports nested resources.
-
-    router = make_crud_router(
-        model=ChapterDetail,
-        prefix="/chapters/{chapter_id}/verses",
-        tag="chapter-verses",
-        create_schema=ChapterDetailCreate,
-        update_schema=ChapterDetailUpdate,
-        read_schema=ChapterDetailRead,
-        order_by="verse_number",
-        extra_filters={"chapter_id": "chapter_id"},
-    )
-
-`extra_filters` maps URL path parameter names → DB column names. On list,
-create, get, update, delete, the parent FK is enforced automatically.
-"""
-# NOTE: DO NOT add `from __future__ import annotations` here.
-from typing import Type
-
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, status
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
@@ -29,12 +9,12 @@ from schemas.common import Page
 
 def make_crud_router(
     *,
-    model: Type[Base],
+    model: type[Base],
     prefix: str,
     tag: str,
-    create_schema: Type[BaseModel],
-    update_schema: Type[BaseModel],
-    read_schema: Type[BaseModel],
+    create_schema: type[BaseModel],
+    update_schema: type[BaseModel],
+    read_schema: type[BaseModel],
     order_by: str = "id",
     search_fields: tuple[str, ...] = (),
     extra_filters: dict[str, str] | None = None,
@@ -72,8 +52,6 @@ def make_crud_router(
             if getattr(obj, db_col) != val:
                 raise HTTPException(status.HTTP_404_NOT_FOUND, "Not found")
 
-    # ---- list ----------------------------------------------------------
-
     @router.get("", response_model=PageOut)
     def list_items(
         request: Request,
@@ -100,8 +78,6 @@ def make_crud_router(
             limit=limit,
         )
 
-    # ---- get one -------------------------------------------------------
-
     @router.get("/{item_id}", response_model=read_schema)
     def get_item(
         item_id: int,
@@ -113,8 +89,6 @@ def make_crud_router(
             raise HTTPException(status.HTTP_404_NOT_FOUND, "Not found")
         _ensure_parent(obj, _parent(request))
         return obj
-
-    # ---- create --------------------------------------------------------
 
     @router.post("", response_model=read_schema, status_code=status.HTTP_201_CREATED)
     def create_item(
@@ -129,8 +103,6 @@ def make_crud_router(
         repo.save()
         repo.session.refresh(obj)
         return obj
-
-    # ---- update --------------------------------------------------------
 
     @router.patch("/{item_id}", response_model=read_schema)
     def update_item(
@@ -152,8 +124,6 @@ def make_crud_router(
         repo.save()
         repo.session.refresh(obj)
         return obj
-
-    # ---- delete --------------------------------------------------------
 
     @router.delete("/{item_id}", status_code=status.HTTP_204_NO_CONTENT)
     def delete_item(

@@ -1,7 +1,6 @@
-"""Admin endpoints for Dhikr campaigns + submissions."""
 from __future__ import annotations
 
-from datetime import date, datetime, timezone
+from datetime import UTC, datetime
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy import func
@@ -24,12 +23,8 @@ router = APIRouter(prefix="/admin/dhikr", tags=["admin-dhikr"])
 
 
 def _utcnow_naive() -> datetime:
-    return datetime.now(timezone.utc).replace(tzinfo=None)
+    return datetime.now(UTC).replace(tzinfo=None)
 
-
-# --------------------------------------------------------------------------- #
-#  Campaign CRUD
-# --------------------------------------------------------------------------- #
 
 @router.get("/campaigns", response_model=list[CampaignOut])
 def list_campaigns(
@@ -40,17 +35,23 @@ def list_campaigns(
     return [CampaignOut.model_validate(r) for r in rows]
 
 
-@router.post("/campaigns", response_model=CampaignOut, status_code=status.HTTP_201_CREATED)
+@router.post(
+    "/campaigns", response_model=CampaignOut, status_code=status.HTTP_201_CREATED
+)
 def create_campaign(
     body: CampaignCreate,
     admin: User = Depends(require_admin),
     session: Session = Depends(db.get_db),
 ):
     if body.ends_on < body.starts_on:
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "ends_on must be >= starts_on")
+        raise HTTPException(
+            status.HTTP_422_UNPROCESSABLE_ENTITY, "ends_on must be >= starts_on"
+        )
 
     if session.query(DhikrCampaign).filter_by(slug=body.slug).first():
-        raise HTTPException(status.HTTP_409_CONFLICT, f"slug '{body.slug}' already exists")
+        raise HTTPException(
+            status.HTTP_409_CONFLICT, f"slug '{body.slug}' already exists"
+        )
 
     c = DhikrCampaign(
         title=body.title,
@@ -79,8 +80,14 @@ def update_campaign(
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Campaign not found")
 
     data = body.model_dump(exclude_unset=True)
-    if "starts_on" in data and "ends_on" in data and data["ends_on"] < data["starts_on"]:
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "ends_on must be >= starts_on")
+    if (
+        "starts_on" in data
+        and "ends_on" in data
+        and data["ends_on"] < data["starts_on"]
+    ):
+        raise HTTPException(
+            status.HTTP_422_UNPROCESSABLE_ENTITY, "ends_on must be >= starts_on"
+        )
 
     for k, v in data.items():
         setattr(c, k, v)
@@ -100,9 +107,7 @@ def delete_campaign(
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Campaign not found")
 
     submission_count = (
-        session.query(DhikrSubmission)
-        .filter_by(campaign_id=campaign_id)
-        .count()
+        session.query(DhikrSubmission).filter_by(campaign_id=campaign_id).count()
     )
     if submission_count > 0:
         raise HTTPException(
@@ -122,6 +127,7 @@ def delete_campaign(
     session.delete(c)
     session.commit()
 
+
 @router.post("/campaigns/{campaign_id}/toggle", response_model=CampaignOut)
 def toggle_campaign(
     campaign_id: int,
@@ -136,10 +142,6 @@ def toggle_campaign(
     session.refresh(c)
     return CampaignOut.model_validate(c)
 
-
-# --------------------------------------------------------------------------- #
-#  Submissions
-# --------------------------------------------------------------------------- #
 
 @router.get("/campaigns/{campaign_id}/submissions", response_model=SubmissionListOut)
 def list_submissions(
@@ -158,10 +160,7 @@ def list_submissions(
         q = q.filter_by(status=status_filter)
 
     total = q.count()
-    rows = (
-        q.order_by(DhikrSubmission.created_at.desc())
-        .offset(skip).limit(limit).all()
-    )
+    rows = q.order_by(DhikrSubmission.created_at.desc()).offset(skip).limit(limit).all()
     return SubmissionListOut(
         total=total,
         items=[SubmissionOut.model_validate(r) for r in rows],
@@ -180,8 +179,11 @@ def campaign_stats(
 
     base = session.query(DhikrSubmission).filter_by(campaign_id=campaign_id)
     total = base.count()
-    total_dhikrs = session.query(func.coalesce(func.sum(DhikrSubmission.count), 0)) \
-        .filter(DhikrSubmission.campaign_id == campaign_id).scalar()
+    total_dhikrs = (
+        session.query(func.coalesce(func.sum(DhikrSubmission.count), 0))
+        .filter(DhikrSubmission.campaign_id == campaign_id)
+        .scalar()
+    )
 
     pending = base.filter_by(status="pending").count()
     handled = base.filter_by(status="handled").count()

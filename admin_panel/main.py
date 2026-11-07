@@ -1,12 +1,10 @@
-
-"""FastAPI entrypoint."""
 from __future__ import annotations
 
 import threading
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI, APIRouter,Request
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
@@ -17,41 +15,39 @@ from config import ENV
 from database import init_db
 from logging_config import setup_logging
 from routes import (
-    administrator_router,
     admin_backup_router,
-    auth_router,
-    chapter_router,
-    panel_config_router,
-    chapter_verses_full_router,
-    chapter_verses_router,
-    mosque_router,
-    dhikr_router,
     admin_devices_router,
     admin_dhikr_router,
+    administrator_router,
+    auth_router,
+    c_dhikr_router,
+    chapter_router,
+    chapter_verses_full_router,
+    chapter_verses_router,
     dhikr_router,
     dua_router,
     haram_code_router,
     hijri_router,
-    sync_router,
+    me_router,
+    mosque_router,
+    panel_config_router,
     prayer_time_router,
     reciter_router,
+    role_router,
+    search_router,
     setting_router,
     sifat_name_router,
+    sync_router,
     translator_router,
     verse_translation_router,
     wallpaper_router,
-    me_router,
-    role_router,
-    search_router,
 )
-from seed import seed_initial_admin, seed_default_roles
+from seed import seed_default_roles, seed_initial_admin
 from tools.seed_chapters import run as seed_chapters
 
 logger = setup_logging()
 log = logger
 
-
-# ---- Startup ---------------------------------------------------------------
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -63,20 +59,16 @@ async def lifespan(app: FastAPI):
     )
 
     if ENV.is_production():
-        # Production: schema must be migrated (systemd ExecStartPre).
-        # Fail loudly if migrations are missing.
         assert_up_to_date()
         log.info(f"[db] {current_revision()}")
 
     else:
-        # Development/testing: bootstrap a fresh DB, warn if behind.
         inspector = inspect(__import__("database").db.engine)
 
         if not inspector.has_table("users"):
             log.info("[db] fresh database — creating schema via create_all")
             init_db()
 
-            # Stamp Alembic to head so future revisions start from a known point.
             from alembic import command
             from tools.migrate import _config
 
@@ -90,12 +82,12 @@ async def lifespan(app: FastAPI):
                 f"→ run `alembic upgrade head`"
             )
 
-    # Seed initial data.
     seed_initial_admin()
     seed_default_roles()
 
     try:
         from tools.seed_reciters import run as seed_reciters
+
         seed_reciters()
     except SystemExit as e:
         log.warning(f"[seed] reciters skipped: {e}")
@@ -104,23 +96,24 @@ async def lifespan(app: FastAPI):
 
     seed_chapters()
 
-    # Recover any sync job that was mid-run when this process died.
     try:
         from tools.ayah_sync_runner import recover_orphans
+
         n = recover_orphans()
         if n:
             log.warning(f"[sync] marked {n} orphaned job(s) as interrupted")
     except Exception as e:  # noqa: BLE001
         log.warning(f"[sync] orphan recovery failed: {e}")
 
-    # Background schedulers.
     if ENV.CHAND_SCHEDULER_ENABLED:
         from tools import chand
+
         chand.start()
         log.info("[chand] scheduler started")
 
     if ENV.BACKUP_AUTO_ENABLED:
         from tools import backup_scheduler
+
         backup_scheduler.start()
         log.info(
             f"[backup-scheduler] daily at "
@@ -137,17 +130,11 @@ async def lifespan(app: FastAPI):
         ).start()
 
     if ENV.is_debug():
-        log.info(
-            f"STARTUP: env={ENV.APP_ENV} debug={ENV.APP_DEBUG}"
-        )
-        log.info(
-            f"  docs={ENV.show_docs()} sql_echo={ENV.SQL_ECHO}"
-        )
+        log.info(f"STARTUP: env={ENV.APP_ENV} debug={ENV.APP_DEBUG}")
+        log.info(f"  docs={ENV.show_docs()} sql_echo={ENV.SQL_ECHO}")
 
     yield
 
-
-# ---- FastAPI construction --------------------------------------------------
 
 _fastapi_kwargs: dict = {
     "title": ENV.APP_NAME,
@@ -157,23 +144,25 @@ _fastapi_kwargs: dict = {
 }
 
 if ENV.show_docs():
-    _fastapi_kwargs.update({
-        "docs_url": "/docs",
-        "redoc_url": "/redoc",
-        "openapi_url": "/openapi.json",
-        "swagger_ui_oauth2_redirect_url": "/docs/oauth2-redirect",
-    })
+    _fastapi_kwargs.update(
+        {
+            "docs_url": "/docs",
+            "redoc_url": "/redoc",
+            "openapi_url": "/openapi.json",
+            "swagger_ui_oauth2_redirect_url": "/docs/oauth2-redirect",
+        }
+    )
 else:
-    _fastapi_kwargs.update({
-        "docs_url": None,
-        "redoc_url": None,
-        "openapi_url": None,
-    })
+    _fastapi_kwargs.update(
+        {
+            "docs_url": None,
+            "redoc_url": None,
+            "openapi_url": None,
+        }
+    )
 
 app = FastAPI(**_fastapi_kwargs)
 
-
-# ---- Middleware ------------------------------------------------------------
 
 app.add_middleware(
     CORSMiddleware,
@@ -259,7 +248,7 @@ class _ErrorShield(BaseHTTPMiddleware):
 
 app.add_middleware(_ErrorShield)
 
-# All API endpoints are served under /api.
+
 app.include_router(panel_config_router)
 app.include_router(auth_router)
 app.include_router(me_router)
@@ -284,7 +273,7 @@ app.include_router(search_router)
 app.include_router(sync_router)
 app.include_router(mosque_router)
 app.include_router(admin_devices_router)
-app.include_router(dhikr_router)
+app.include_router(c_dhikr_router)
 app.include_router(admin_dhikr_router)
 
 if ENV.is_debug():
@@ -307,8 +296,6 @@ if _FRONTEND.is_dir():
     def _root():
         return RedirectResponse("/panel/index.html")
 
-
-# ---- Health check ----------------------------------------------------------
 
 @app.get("/health")
 def health() -> dict:

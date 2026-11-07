@@ -1,4 +1,3 @@
-"""Administrator (admin user) request / response schemas."""
 from __future__ import annotations
 
 from datetime import datetime
@@ -11,7 +10,7 @@ class AdministratorCreate(BaseModel):
     password: str = Field(..., min_length=6, max_length=128)
     first_name: str | None = Field(None, max_length=255)
     last_name: str | None = Field(None, max_length=255)
-    role_ids: list[int] = Field(default_factory=list)   # ← new
+    role_ids: list[int] = Field(default_factory=list)
 
 
 class AdministratorUpdate(BaseModel):
@@ -20,7 +19,7 @@ class AdministratorUpdate(BaseModel):
     first_name: str | None = Field(None, max_length=255)
     last_name: str | None = Field(None, max_length=255)
     is_admin: bool | None = None
-    role_ids: list[int] | None = None                    # ← new
+    role_ids: list[int] | None = None
 
 
 class AdministratorRead(BaseModel):
@@ -33,7 +32,7 @@ class AdministratorRead(BaseModel):
     email_verified_at: datetime | None = None
     created_at: datetime
     updated_at: datetime
-    roles: list["RoleBrief"] = []                        # ← new
+    roles: list[RoleBrief] = []
 
 
 class RoleBrief(BaseModel):

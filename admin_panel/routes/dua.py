@@ -1,4 +1,3 @@
-"""Dua endpoints."""
 from database.models import Dua
 from routes.base_router import make_crud_router
 from schemas.dua import DuaCreate, DuaRead, DuaUpdate

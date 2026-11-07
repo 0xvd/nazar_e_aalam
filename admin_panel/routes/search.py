@@ -1,4 +1,3 @@
-"""Global search across duas, dhikrs, wallpapers, reciters, translators, admins."""
 from __future__ import annotations
 
 from fastapi import APIRouter, Depends, Query
@@ -26,49 +25,77 @@ def search(
     like = f"%{q.strip()}%"
     results: list[SearchHit] = []
 
-    # Duas
     for d in session.execute(
-        select(Dua).where(
-            or_(Dua.en_short_name.ilike(like), Dua.ar_short_name.ilike(like), Dua.en_full_name.ilike(like))
-        ).limit(4)
+        select(Dua)
+        .where(
+            or_(
+                Dua.en_short_name.ilike(like),
+                Dua.ar_short_name.ilike(like),
+                Dua.en_full_name.ilike(like),
+            )
+        )
+        .limit(4)
     ).scalars():
-        results.append(_hit("dua", d.id, d.en_short_name or d.ar_short_name or f"Dua #{d.id}", None, "Duas"))
+        results.append(
+            _hit(
+                "dua",
+                d.id,
+                d.en_short_name or d.ar_short_name or f"Dua #{d.id}",
+                None,
+                "Duas",
+            )
+        )
 
-    # Dhikrs
     for d in session.execute(
-        select(Dhikr).where(
-            or_(Dhikr.en_short_name.ilike(like), Dhikr.ar_short_name.ilike(like), Dhikr.en_full_name.ilike(like))
-        ).limit(4)
+        select(Dhikr)
+        .where(
+            or_(
+                Dhikr.en_short_name.ilike(like),
+                Dhikr.ar_short_name.ilike(like),
+                Dhikr.en_full_name.ilike(like),
+            )
+        )
+        .limit(4)
     ).scalars():
-        results.append(_hit("dhikr", d.id, d.en_short_name or d.ar_short_name or f"Dhikr #{d.id}", None, "Dhikrs"))
+        results.append(
+            _hit(
+                "dhikr",
+                d.id,
+                d.en_short_name or d.ar_short_name or f"Dhikr #{d.id}",
+                None,
+                "Dhikrs",
+            )
+        )
 
-    # Wallpapers
     for w in session.execute(
         select(Wallpaper).where(Wallpaper.name.ilike(like)).limit(4)
     ).scalars():
         results.append(_hit("wallpaper", w.id, w.name, None, "Wallpapers"))
 
-    # Reciters
     for r in session.execute(
-        select(Reciter).where(
-            or_(Reciter.name.ilike(like), Reciter.slug.ilike(like))
-        ).limit(4)
+        select(Reciter)
+        .where(or_(Reciter.name.ilike(like), Reciter.slug.ilike(like)))
+        .limit(4)
     ).scalars():
         results.append(_hit("reciter", r.id, r.name, r.slug, "Reciters"))
 
-    # Translators
     for t in session.execute(
-        select(Translator).where(
-            or_(Translator.full_name.ilike(like), Translator.short_name.ilike(like))
-        ).limit(3)
+        select(Translator)
+        .where(or_(Translator.full_name.ilike(like), Translator.short_name.ilike(like)))
+        .limit(3)
     ).scalars():
         results.append(_hit("translator", t.id, t.full_name, t.language, "Translators"))
 
-    # Administrators
     for u in session.execute(
-        select(User).where(
-            or_(User.email.ilike(like), User.first_name.ilike(like), User.last_name.ilike(like))
-        ).limit(3)
+        select(User)
+        .where(
+            or_(
+                User.email.ilike(like),
+                User.first_name.ilike(like),
+                User.last_name.ilike(like),
+            )
+        )
+        .limit(3)
     ).scalars():
         name = f"{u.first_name or ''} {u.last_name or ''}".strip() or u.email
         results.append(_hit("admin", u.id, name, u.email, "Administrators"))

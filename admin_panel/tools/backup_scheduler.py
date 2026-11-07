@@ -1,13 +1,3 @@
-"""
-In-app backup scheduler.
-
-Runs `scripts/backup.sh` once per day at BACKUP_AUTO_HOUR:BACKUP_AUTO_MINUTE.
-Tracks last/next run in memory. Exposes state for the /admin/backup/status
-endpoint.
-
-Does NOT replace cron — if both are configured, a nightly cron + an in-app
-scheduler will each run a backup. Use one or the other.
-"""
 from __future__ import annotations
 
 import subprocess
@@ -19,23 +9,18 @@ from zoneinfo import ZoneInfo
 
 from config import ENV
 
-
 _ROOT = Path(__file__).resolve().parent.parent
 _SCRIPT = _ROOT / "scripts" / "backup.sh"
 _TZ = ZoneInfo("Asia/Kolkata")
 
 _state: dict = {
     "running": False,
-    "last_run_at": None,       # ISO string
-    "last_run_status": None,   # "success" | "failed"
+    "last_run_at": None,
+    "last_run_status": None,
     "last_run_output": None,
 }
 _lock = threading.Lock()
 
-
-# --------------------------------------------------------------------------- #
-#  Run one backup
-# --------------------------------------------------------------------------- #
 
 def run_backup_now(label: str = "auto") -> tuple[bool, str]:
     """Run backup.sh synchronously. Returns (success, combined output)."""
@@ -55,14 +40,10 @@ def run_backup_now(label: str = "auto") -> tuple[bool, str]:
     with _lock:
         _state["last_run_at"] = datetime.now(_TZ).isoformat()
         _state["last_run_status"] = "success" if success else "failed"
-        _state["last_run_output"] = output[-2000:]  # truncate
+        _state["last_run_output"] = output[-2000:]
 
     return success, output
 
-
-# --------------------------------------------------------------------------- #
-#  Next-run computation
-# --------------------------------------------------------------------------- #
 
 def next_run_time() -> datetime:
     now = datetime.now(_TZ)
@@ -91,10 +72,6 @@ def get_state() -> dict:
         }
 
 
-# --------------------------------------------------------------------------- #
-#  Scheduler loop
-# --------------------------------------------------------------------------- #
-
 def _loop() -> None:
     with _lock:
         _state["running"] = True
@@ -109,20 +86,20 @@ def _loop() -> None:
             next_at = next_run_time()
             sleep_s = (next_at - datetime.now(_TZ)).total_seconds()
             if sleep_s > 0:
-                # Sleep in chunks so a config change could be picked up
-                # (only between runs — once we're sleeping we commit to this time)
                 time.sleep(min(sleep_s, 60))
                 if sleep_s > 60:
                     continue
 
-            print(f"[backup-scheduler] running backup at {datetime.now(_TZ)}", flush=True)
+            print(
+                f"[backup-scheduler] running backup at {datetime.now(_TZ)}", flush=True
+            )
             ok, out = run_backup_now(label="auto")
             print(
                 f"[backup-scheduler] {'✓' if ok else '✗'} "
                 f"{out.splitlines()[-1] if out else ''}",
                 flush=True,
             )
-            # Small buffer to avoid firing twice in the same minute
+
             time.sleep(90)
         except Exception as e:  # noqa: BLE001
             print(f"[backup-scheduler] cycle error: {e}", flush=True)

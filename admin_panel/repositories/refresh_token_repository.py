@@ -1,20 +1,14 @@
-"""
-Refresh-token persistence.
-
-Raw refresh tokens are never stored — only their SHA-256 hash. Each login /
-refresh creates a new row; logout or rotation marks the row revoked.
-"""
 from __future__ import annotations
 
 import hashlib
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from database.database import BaseRepository
 from database.models import RefreshToken
 
 
 def _utcnow_naive() -> datetime:
-    return datetime.now(timezone.utc).replace(tzinfo=None)
+    return datetime.now(UTC).replace(tzinfo=None)
 
 
 class RefreshTokenRepository(BaseRepository[RefreshToken]):

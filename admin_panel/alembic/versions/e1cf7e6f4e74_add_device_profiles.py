@@ -1,8 +1,3 @@
-"""add device_profiles table
-
-Revision ID: e1cf7e6f4e73
-Revises: <current_head>
-"""
 from __future__ import annotations
 
 from alembic import op

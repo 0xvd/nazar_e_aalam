@@ -1,0 +1,7 @@
+# one pattern per line, '#' starts a comment
+# supports: exact dir names, path substrings, or glob patterns
+
+*.pyi
+alembic/
+logs/
+.venv/

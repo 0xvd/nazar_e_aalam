@@ -42,3 +42,13 @@ __pycache__
 
 debug_.*
 debug.*
+
+audit-report
+
+logs/
+*.log
+gunicorn.pid
+downloads/
+
+.env
+backups/

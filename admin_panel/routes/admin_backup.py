@@ -1,13 +1,6 @@
-"""
-Admin-only backup endpoints.
-
-Wraps scripts/backup.sh and scripts/verify_restore.py behind HTTP so the
-admin panel can trigger, list, restore, and verify backups.
-"""
 from __future__ import annotations
 
 import subprocess
-import threading
 from datetime import datetime
 from pathlib import Path
 
@@ -37,10 +30,6 @@ _BACKUP_DIR = _ROOT / "backups"
 _BACKUP_SCRIPT = _SCRIPTS / "backup.sh"
 _VERIFY_SCRIPT = _SCRIPTS / "verify_restore.py"
 
-
-# --------------------------------------------------------------------------- #
-#  Helpers
-# --------------------------------------------------------------------------- #
 
 def _r2_client():
     return boto3.client(
@@ -101,10 +90,6 @@ def _merge(local: dict, r2: dict) -> list[BackupInfo]:
     return sorted(merged.values(), key=lambda b: b.created_at, reverse=True)
 
 
-# --------------------------------------------------------------------------- #
-#  POST /admin/backup — run now
-# --------------------------------------------------------------------------- #
-
 @router.post("", response_model=BackupTriggerResponse)
 def trigger_backup_now(_: User = Depends(require_admin)) -> BackupTriggerResponse:
     if not _BACKUP_SCRIPT.exists():
@@ -140,19 +125,11 @@ def trigger_backup_now(_: User = Depends(require_admin)) -> BackupTriggerRespons
     )
 
 
-# --------------------------------------------------------------------------- #
-#  GET /admin/backup — list
-# --------------------------------------------------------------------------- #
-
 @router.get("", response_model=BackupListResponse)
 def list_backups(_: User = Depends(require_admin)) -> BackupListResponse:
     merged = _merge(_list_local(), _list_r2())
     return BackupListResponse(count=len(merged), backups=merged[:50])
 
-
-# --------------------------------------------------------------------------- #
-#  POST /admin/backup/restore
-# --------------------------------------------------------------------------- #
 
 @router.post("/restore", response_model=RestoreResponse)
 def restore_backup(
@@ -170,7 +147,6 @@ def restore_backup(
     local_file = _BACKUP_DIR / body.filename
     source = body.source
 
-    # Resolve source
     if source == "auto":
         source = "local" if local_file.exists() else "r2"
     if source == "local" and not local_file.exists():
@@ -179,7 +155,6 @@ def restore_backup(
             f"{body.filename} not found locally",
         )
 
-    # Fetch from R2 if needed
     if source == "r2":
         try:
             client = _r2_client()
@@ -193,7 +168,6 @@ def restore_backup(
                 f"Failed to fetch from R2: {e}",
             ) from e
 
-    # Run restore script with auto-confirm
     restore_script = _SCRIPTS / "restore.sh"
     if not restore_script.exists():
         raise HTTPException(
@@ -224,10 +198,6 @@ def restore_backup(
     )
 
 
-# --------------------------------------------------------------------------- #
-#  POST /admin/backup/verify
-# --------------------------------------------------------------------------- #
-
 @router.post("/verify", response_model=VerifyResponse)
 def verify_backup(_: User = Depends(require_admin)) -> VerifyResponse:
     if not _VERIFY_SCRIPT.exists():
@@ -248,10 +218,6 @@ def verify_backup(_: User = Depends(require_admin)) -> VerifyResponse:
         output=output[-2000:],
     )
 
-
-# --------------------------------------------------------------------------- #
-#  GET /admin/backup/status
-# --------------------------------------------------------------------------- #
 
 @router.get("/status", response_model=BackupStatusResponse)
 def backup_status(_: User = Depends(require_admin)) -> BackupStatusResponse:

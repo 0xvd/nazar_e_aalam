@@ -1,4 +1,3 @@
-"""Panel bootstrap config — everything the admin panel needs at startup."""
 from __future__ import annotations
 
 from pydantic import BaseModel
@@ -7,36 +6,29 @@ from pydantic import BaseModel
 class MaintenanceConfig(BaseModel):
     enabled: bool
     message: str | None = None
-    until: str | None = None   # ISO datetime, optional ETA
+    until: str | None = None
 
 
 class PanelConfigResponse(BaseModel):
-    # Schema version — bump on breaking change; frontend can check
     schema_version: int = 1
 
-    # ---- Identity ----
     app_name: str
     app_version: str
-    env: str                      # "development" | "staging" | "production" | "testing"
+    env: str
     is_production: bool
     is_debug: bool
 
-    # ---- Endpoints ----
-    api_base: str                 # no trailing slash; e.g. "https://api.example.com"
-    cdn_base: str | None          # R2 public base for images; null if unset
+    api_base: str
+    cdn_base: str | None
 
-    # ---- Feature flags ----
     docs_enabled: bool
-    features: dict[str, bool]     # {"backup": true, "chand": true, "quran_sync": false}
+    features: dict[str, bool]
 
-    # ---- Sub-endpoint paths (relative to api_base) ----
-    auth: dict[str, str]          # {"login": "/auth/login", ...}
+    auth: dict[str, str]
 
-    # ---- Defaults the panel should adopt ----
-    pagination: dict[str, int]    # {"default_limit": 50, "max_limit": 500}
-    defaults: dict[str, str]      # {"token_key": "nea_token", "timezone": "Asia/Kolkata", ...}
+    pagination: dict[str, int]
+    defaults: dict[str, str]
 
-    # ---- State ----
     maintenance: MaintenanceConfig
-    server_time: str              # ISO timestamp with tz
+    server_time: str
     server_timezone: str

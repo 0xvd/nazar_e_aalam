@@ -1,15 +1,3 @@
-#!/usr/bin/env python3
-"""
-Seed prayer_times for a full year, per city.
-
-Usage:
-    python -m tools.seed_prayer_times                     # all cities, current year
-    python -m tools.seed_prayer_times nadiad              # one city
-    python -m tools.seed_prayer_times --year 2027         # all, specific year
-    python -m tools.seed_prayer_times nadiad --year 2027 --replace
-
-Idempotent: existing (city, date) rows are skipped unless --replace is passed.
-"""
 from __future__ import annotations
 
 import sys
@@ -40,7 +28,9 @@ def _days_in_year(year: int) -> list[date]:
 def seed_city(session, city_key: str, year: int, replace: bool = False) -> dict:
     info = cities.get(city_key)
     if info is None:
-        raise SystemExit(f"Unknown city: {city_key}. Known: {', '.join(cities.all_keys())}")
+        raise SystemExit(
+            f"Unknown city: {city_key}. Known: {', '.join(cities.all_keys())}"
+        )
 
     days = _days_in_year(year)
     start, end = days[0], days[-1]
@@ -52,7 +42,9 @@ def seed_city(session, city_key: str, year: int, replace: bool = False) -> dict:
                 PrayerTime.date >= start,
                 PrayerTime.date <= end,
             )
-        ).scalars().all()
+        )
+        .scalars()
+        .all()
     )
 
     inserted = skipped = 0
@@ -76,7 +68,7 @@ def seed_city(session, city_key: str, year: int, replace: bool = False) -> dict:
             imsak=t["imsak"],
             fajr_start=t["fajr"],
             sunrise=t["sunrise"],
-            zuhr_start=t["dhuhr"],       # Friday jummah override is applied later via PATCH
+            zuhr_start=t["dhuhr"],
             asr_start=t["asr"],
             sunset=t["sunset"],
             maghrib_start=t["maghrib"],
@@ -100,7 +92,9 @@ def run(city_keys: list[str], year: int, replace: bool = False) -> None:
             r = seed_city(session, key, year, replace=replace)
             grand_i += r["inserted"]
             grand_s += r["skipped"]
-            print(f"  [{i:>2}/{len(keys)}] {key:<14} inserted {r['inserted']:>3}, skipped {r['skipped']:>3}")
+            print(
+                f"  [{i:>2}/{len(keys)}] {key:<14} inserted {r['inserted']:>3}, skipped {r['skipped']:>3}"
+            )
     print(f"\n✓ Done. Total inserted {grand_i}, skipped {grand_s}.")
 
 
@@ -113,10 +107,14 @@ def main() -> None:
     while i < len(args):
         a = args[i]
         if a == "--year":
-            year = int(args[i + 1]); i += 2; continue
+            year = int(args[i + 1])
+            i += 2
+            continue
         if a in ("--replace", "--all"):
-            i += 1; continue
-        keys.append(a); i += 1
+            i += 1
+            continue
+        keys.append(a)
+        i += 1
     if year is None:
         year = date.today().year
     run(keys, year, replace=replace)

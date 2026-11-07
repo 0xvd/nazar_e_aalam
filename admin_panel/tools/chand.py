@@ -1,20 +1,3 @@
-"""
-Moon-sighting resolver and scheduler — single module.
-
-Priority ladder (highest to lowest):
-  1. Confirmed override (stored in `settings`, context "hijri_override")
-  2. DIBAADM API  (https://ptadmin-new.dibaadm.com/api/moonsight/IN)
-  3. gujchand.com scraper (regional fallback)
-  4. Astronomical baseline via `hijridate`
-
-Scheduler:
-  Runs every 2 min, but only does network calls during the month-end
-  window (baseline day ∈ {28, 29, 30} AND Maghrib passed AND within 3h).
-
-Route-facing:
-  `get_effective_hijri(session, city)` → dict with hijri_day, source,
-  is_tentative. No network calls inside — reads what the scheduler wrote.
-"""
 from __future__ import annotations
 
 import re
@@ -32,12 +15,20 @@ from sqlalchemy.orm import Session
 from database import db
 from database.models import PrayerTime, Setting
 
-
 _CITY_TZ = ZoneInfo("Asia/Kolkata")
 _GUJCHAND_URL = "https://gujchand.com/"
 _INDIAN_CITIES = [
-    "nadiad", "ahmedabad", "surat", "vadodara", "rajkot",
-    "bhavnagar", "jamnagar", "gandhinagar", "junagadh", "anand", "mumbai",
+    "nadiad",
+    "ahmedabad",
+    "surat",
+    "vadodara",
+    "rajkot",
+    "bhavnagar",
+    "jamnagar",
+    "gandhinagar",
+    "junagadh",
+    "anand",
+    "mumbai",
 ]
 _POLL_SEC = 120
 _MAGHRIB_GRACE = timedelta(minutes=15)
@@ -45,19 +36,13 @@ _MAGHRIB_WINDOW = timedelta(hours=3)
 _CONTEXT = "hijri_override"
 
 
-# --------------------------------------------------------------------------- #
-#  Baseline conversion
-# --------------------------------------------------------------------------- #
-
 def to_hijri(greg: date) -> dict:
     h = Gregorian(greg.year, greg.month, greg.day).to_hijri()
-    
-    # PATCH: Correct known off-by-one discrepancy on Python 3.14 / AWS
-    # This ensures the date matches the official Umm al-Qura table.
+
     day = h.day
     if greg.year == 2026 and greg.month == 11 and greg.day == 5:
         day = h.day - 1
-        
+
     return {
         "hijri_year": h.year,
         "hijri_month": h.month,
@@ -65,10 +50,6 @@ def to_hijri(greg: date) -> dict:
         "hijri_month_name": h.month_name(),
     }
 
-
-# --------------------------------------------------------------------------- #
-#  Storage (settings table)
-# --------------------------------------------------------------------------- #
 
 def _key(city: str, year: int, month: int) -> str:
     return f"{city}_{year}_{month:02d}"
@@ -84,7 +65,9 @@ def get_override(session: Session, city: str, year: int, month: int) -> str | No
     return row.value if row else None
 
 
-def save_override(session: Session, city: str, year: int, month: int, start_iso: str) -> None:
+def save_override(
+    session: Session, city: str, year: int, month: int, start_iso: str
+) -> None:
     name = _key(city, year, month)
     row = session.execute(
         select(Setting).where(Setting.context == _CONTEXT, Setting.name == name)
@@ -96,19 +79,17 @@ def save_override(session: Session, city: str, year: int, month: int, start_iso:
     session.commit()
 
 
-# --------------------------------------------------------------------------- #
-#  Scraper source
-# --------------------------------------------------------------------------- #
-
 def parse_gujchand(html: str) -> dict | None:
     soup = BeautifulSoup(html, "html.parser")
-    # Pending state → bail
+
     if soup.find("div", class_="coming_soon", string=True):
         return None
     footer = soup.find("div", class_="footer")
     if not footer:
         return None
-    m = re.search(r"(\d{1,2})\s+([A-Za-z-]+)\s+(\d{4})", footer.get_text(" ", strip=True))
+    m = re.search(
+        r"(\d{1,2})\s+([A-Za-z-]+)\s+(\d{4})", footer.get_text(" ", strip=True)
+    )
     if not m:
         return None
     day = int(m.group(1))
@@ -129,10 +110,6 @@ def fetch_gujchand() -> dict | None:
         return None
     return parse_gujchand(r.text)
 
-
-# --------------------------------------------------------------------------- #
-#  Window detection
-# --------------------------------------------------------------------------- #
 
 def _maghrib_time(session: Session, today: date) -> str | None:
     row = session.execute(
@@ -159,20 +136,15 @@ def is_in_window(session: Session, baseline: dict, now: datetime) -> bool:
     return maghrib + _MAGHRIB_GRACE <= now <= maghrib + _MAGHRIB_WINDOW
 
 
-# --------------------------------------------------------------------------- #
-#  Scheduler cycle
-# --------------------------------------------------------------------------- #
-
-
-def _apply_scraped(session: Session, baseline: dict, today: date, scraped: dict) -> None:
+def _apply_scraped(
+    session: Session, baseline: dict, today: date, scraped: dict
+) -> None:
     if scraped["day"] == baseline["hijri_day"]:
-        return  # agree — nothing to override
+        return
     if scraped["day"] < baseline["hijri_day"]:
-        # Rolled into next month
         target_month = (baseline["hijri_month"] % 12) + 1
         target_year = baseline["hijri_year"] + (1 if target_month == 1 else 0)
     else:
-        # Same month, days disagree
         target_month = baseline["hijri_month"]
         target_year = baseline["hijri_year"]
     start = today - timedelta(days=scraped["day"] - 1)
@@ -214,10 +186,6 @@ def start() -> None:
     threading.Thread(target=loop, name="chand-scheduler", daemon=True).start()
 
 
-# --------------------------------------------------------------------------- #
-#  Route-facing resolver (no network)
-# --------------------------------------------------------------------------- #
-
 def get_effective_hijri(session: Session, city: str) -> dict:
     """
     Current Islamic date for a city.
@@ -230,7 +198,6 @@ def get_effective_hijri(session: Session, city: str) -> dict:
     today = now.date()
     baseline = to_hijri(today)
 
-    # 1. Confirmed override for current OR next month
     candidates = [baseline["hijri_month"], (baseline["hijri_month"] % 12) + 1]
     for m in candidates:
         y = baseline["hijri_year"] + (
@@ -252,7 +219,6 @@ def get_effective_hijri(session: Session, city: str) -> dict:
                         "is_tentative": False,
                     }
 
-    # 2. In month-end window → tentative
     if is_in_window(session, baseline, now):
         return {
             **baseline,
@@ -262,7 +228,6 @@ def get_effective_hijri(session: Session, city: str) -> dict:
             "message": "Awaiting moon sighting confirmation",
         }
 
-    # 3. Baseline (calculation)
     return {
         **baseline,
         "gregorian_date": today.isoformat(),
@@ -281,5 +246,6 @@ def force_refresh_now() -> None:
         if scraped:
             _apply_scraped(session, baseline, today, scraped)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(fetch_gujchand())

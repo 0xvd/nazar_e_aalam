@@ -1,19 +1,3 @@
-#!/usr/bin/env python3
-"""
-Download Quran audio from EveryAyah and upload it to Cloudflare R2.
-
-Per-ayah only — 6,236 MP3 files per reciter. Idempotent, resumable,
-and enforces both a global and per-reciter storage cap.
-
-Usage:
-    python -m tools.sync_quran                     # sync all reciters
-    python -m tools.sync_quran mishary-rashid-alafasy
-    python -m tools.sync_quran --status            # no network, show progress
-    python -m tools.sync_quran --check             # validate env + budget
-    python -m tools.sync_quran --test              # R2 permissions diagnostic
-    python -m tools.sync_quran --dry-run           # show plan, no download/upload
-    python -m tools.sync_quran -v                  # verbose: per-file output
-"""
 from __future__ import annotations
 
 import shutil
@@ -21,14 +5,12 @@ import sys
 from collections import deque
 from pathlib import Path
 
-# Allow `python tools/sync_quran.py` from anywhere
 _ROOT = Path(__file__).resolve().parent.parent
 if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 
 import json
 import time
-from typing import Any
 
 import boto3
 import requests
@@ -38,10 +20,6 @@ from botocore.exceptions import (
 )
 
 from config import ENV
-
-# --------------------------------------------------------------------------- #
-#  Reciter registry
-# --------------------------------------------------------------------------- #
 
 RECITERS: dict[str, dict] = {
     "mishary-rashid-alafasy": {
@@ -83,13 +61,120 @@ RECITERS: dict[str, dict] = {
 }
 
 AYAH_COUNTS = [
-    7, 286, 200, 176, 120, 165, 206, 75, 129, 109, 123, 111, 43, 52, 99, 128,
-    111, 110, 98, 135, 112, 78, 118, 64, 77, 227, 93, 88, 69, 60, 34, 30, 73,
-    54, 45, 83, 182, 88, 75, 85, 54, 53, 89, 59, 37, 35, 38, 29, 18, 45, 60,
-    49, 62, 55, 78, 96, 29, 22, 24, 13, 14, 11, 11, 18, 12, 12, 30, 52, 52,
-    44, 28, 28, 20, 56, 40, 31, 50, 40, 46, 42, 29, 19, 36, 25, 22, 17, 19,
-    26, 30, 20, 15, 21, 11, 8, 8, 19, 5, 8, 8, 11, 11, 8, 3, 9, 5, 4, 7, 3,
-    6, 3, 5, 4, 5, 6,
+    7,
+    286,
+    200,
+    176,
+    120,
+    165,
+    206,
+    75,
+    129,
+    109,
+    123,
+    111,
+    43,
+    52,
+    99,
+    128,
+    111,
+    110,
+    98,
+    135,
+    112,
+    78,
+    118,
+    64,
+    77,
+    227,
+    93,
+    88,
+    69,
+    60,
+    34,
+    30,
+    73,
+    54,
+    45,
+    83,
+    182,
+    88,
+    75,
+    85,
+    54,
+    53,
+    89,
+    59,
+    37,
+    35,
+    38,
+    29,
+    18,
+    45,
+    60,
+    49,
+    62,
+    55,
+    78,
+    96,
+    29,
+    22,
+    24,
+    13,
+    14,
+    11,
+    11,
+    18,
+    12,
+    12,
+    30,
+    52,
+    52,
+    44,
+    28,
+    28,
+    20,
+    56,
+    40,
+    31,
+    50,
+    40,
+    46,
+    42,
+    29,
+    19,
+    36,
+    25,
+    22,
+    17,
+    19,
+    26,
+    30,
+    20,
+    15,
+    21,
+    11,
+    8,
+    8,
+    19,
+    5,
+    8,
+    8,
+    11,
+    11,
+    8,
+    3,
+    9,
+    5,
+    4,
+    7,
+    3,
+    6,
+    3,
+    5,
+    4,
+    5,
+    6,
 ]
 assert sum(AYAH_COUNTS) == 6236
 
@@ -101,9 +186,6 @@ STATE_FILE = _ROOT / "sync_state.json"
 _global_cap = int(ENV.QURAN_MAX_GB * 1024**3)
 _per_reciter_cap = int(ENV.QURAN_MAX_PER_RECITER_GB * 1024**3)
 
-# --------------------------------------------------------------------------- #
-#  Small formatters
-# --------------------------------------------------------------------------- #
 
 def _fmt_bytes(n: float) -> str:
     if n < 1024:
@@ -129,15 +211,16 @@ def _banner(title: str) -> None:
     print(f"\n{bar}\n {title}\n{bar}")
 
 
-# --------------------------------------------------------------------------- #
-#  R2 helpers
-# --------------------------------------------------------------------------- #
-
 def _r2():
     missing = [
-        k for k in (
-            "R2_ACCOUNT_ID", "R2_ACCESS_KEY_ID", "R2_SECRET_ACCESS_KEY", "R2_BUCKET",
-        ) if not getattr(ENV, k)
+        k
+        for k in (
+            "R2_ACCOUNT_ID",
+            "R2_ACCESS_KEY_ID",
+            "R2_SECRET_ACCESS_KEY",
+            "R2_BUCKET",
+        )
+        if not getattr(ENV, k)
     ]
     if missing:
         raise SystemExit(
@@ -166,9 +249,7 @@ def r2_list(client, prefix: str) -> dict[str, int]:
 def r2_upload(client, key: str, path: Path, reciter_bytes: int) -> None:
     size = path.stat().st_size
     if reciter_bytes + size > _per_reciter_cap:
-        raise _CapReached(
-            f"Per-reciter cap ({_fmt_bytes(_per_reciter_cap)}) reached"
-        )
+        raise _CapReached(f"Per-reciter cap ({_fmt_bytes(_per_reciter_cap)}) reached")
     global _uploaded_bytes
     if _uploaded_bytes + size > _global_cap:
         raise _CapReached(f"Global cap ({_fmt_bytes(_global_cap)}) reached")
@@ -201,16 +282,12 @@ def r2_upload(client, key: str, path: Path, reciter_bytes: int) -> None:
                 ) from e
             if attempt == 2:
                 raise
-            time.sleep(2 ** attempt)
+            time.sleep(2**attempt)
 
 
 class _CapReached(Exception):
     """Raised when the storage cap is hit — handled per-reciter."""
 
-
-# --------------------------------------------------------------------------- #
-#  HTTP download
-# --------------------------------------------------------------------------- #
 
 SESSION = requests.Session()
 SESSION.headers["User-Agent"] = "nazar-e-alam-sync/1.0"
@@ -236,13 +313,9 @@ def download(url: str, dest: Path) -> bool:
             if attempt == 2:
                 print(f"    ✗ {url} → {e}")
                 return False
-            time.sleep(2 ** attempt)
+            time.sleep(2**attempt)
     return False
 
-
-# --------------------------------------------------------------------------- #
-#  State
-# --------------------------------------------------------------------------- #
 
 def _load_state() -> dict:
     if STATE_FILE.exists():
@@ -254,15 +327,8 @@ def _save_state(state: dict) -> None:
     STATE_FILE.write_text(json.dumps(state, indent=2, ensure_ascii=False))
 
 
-# --------------------------------------------------------------------------- #
-#  Sync one reciter
-# --------------------------------------------------------------------------- #
+_uploaded_bytes = 0
 
-_uploaded_bytes = 0  # reset per process, global cap counter
-
-# --------------------------------------------------------------------------- #
-#  Smooth progress renderer (\r in-place, sliding-window rate)
-# --------------------------------------------------------------------------- #
 
 _IS_TTY = sys.stdout.isatty()
 _TERM_W = shutil.get_terminal_size((120, 24)).columns
@@ -310,11 +376,9 @@ def _render_progress(
         f"{current_file}"
     )
     if _IS_TTY:
-        # Pad to terminal width → clears any leftover characters from prior frame
-        padded = line.ljust(_TERM_W - 1)[:_TERM_W - 1]
+        padded = line.ljust(_TERM_W - 1)[: _TERM_W - 1]
         print(f"\r{padded}", end="\n" if final else "", flush=True)
     else:
-        # Non-TTY (piped / logged): plain newline every 100 files or at end
         if final or processed % 100 == 0:
             print(line, flush=True)
 
@@ -326,7 +390,7 @@ def sync_reciter(client, key: str, info: dict, *, verbose: bool, dry_run: bool) 
     total = sum(AYAH_COUNTS)
 
     print(f"\n→ {info['name']}  ({slug})  est. {info['est_mb']} MB")
-    print(f"  Scanning R2 for existing files…", end=" ", flush=True)
+    print("  Scanning R2 for existing files…", end=" ", flush=True)
     try:
         existing = r2_list(client, prefix)
     except (ClientError, BotoCoreError) as e:
@@ -342,10 +406,14 @@ def sync_reciter(client, key: str, info: dict, *, verbose: bool, dry_run: bool) 
 
     if dry_run:
         return {
-            "name": info["name"], "everyayah_slug": slug,
+            "name": info["name"],
+            "everyayah_slug": slug,
             "bitrate": info["bitrate"],
-            "bytes": 0, "uploaded": 0, "skipped": len(existing),
-            "failed": 0, "dry_run": True,
+            "bytes": 0,
+            "uploaded": 0,
+            "skipped": len(existing),
+            "failed": 0,
+            "dry_run": True,
             "completed_at": None,
         }
 
@@ -356,7 +424,7 @@ def sync_reciter(client, key: str, info: dict, *, verbose: bool, dry_run: bool) 
     reciter_bytes = 0
     failures: list[tuple[int, int, str]] = []
     current_file = ""
-    recent: deque[tuple[float, int]] = deque(maxlen=30)  # (ts, size) per upload
+    recent: deque[tuple[float, int]] = deque(maxlen=30)
     last_render = 0.0
     last_render_processed = -1
     upload_started: float | None = None
@@ -384,10 +452,14 @@ def sync_reciter(client, key: str, info: dict, *, verbose: bool, dry_run: bool) 
                     return
         fps, bps = _current_rates()
         _render_progress(
-            processed=processed, total=total,
-            uploaded=uploaded, skipped=skipped, failed=failed,
+            processed=processed,
+            total=total,
+            uploaded=uploaded,
+            skipped=skipped,
+            failed=failed,
             bytes_done=reciter_bytes,
-            rate_fps=fps, rate_bps=bps,
+            rate_fps=fps,
+            rate_bps=bps,
             current_file=current_file,
             final=force_final,
         )
@@ -438,16 +510,22 @@ def sync_reciter(client, key: str, info: dict, *, verbose: bool, dry_run: bool) 
         _print_reciter_summary(info, uploaded, skipped, failed, reciter_bytes, elapsed)
         print(f"  ⚠ {cap}. Stopping this reciter. Rerun to resume.")
         return {
-            "name": info["name"], "everyayah_slug": slug, "bitrate": info["bitrate"],
-            "bytes": reciter_bytes, "uploaded": uploaded, "skipped": skipped,
-            "failed": failed, "failures": failures, "interrupted": True,
+            "name": info["name"],
+            "everyayah_slug": slug,
+            "bitrate": info["bitrate"],
+            "bytes": reciter_bytes,
+            "uploaded": uploaded,
+            "skipped": skipped,
+            "failed": failed,
+            "failures": failures,
+            "interrupted": True,
             "completed_at": None,
         }
     except KeyboardInterrupt:
         _maybe_render(force_final=True)
         elapsed = time.time() - started
         _print_reciter_summary(info, uploaded, skipped, failed, reciter_bytes, elapsed)
-        print(f"  ⚠ Ctrl-C — progress saved. Rerun to resume.")
+        print("  ⚠ Ctrl-C — progress saved. Rerun to resume.")
         raise
 
     elapsed = time.time() - started
@@ -460,15 +538,29 @@ def sync_reciter(client, key: str, info: dict, *, verbose: bool, dry_run: bool) 
             print(f"    … and {len(failures) - 10} more")
 
     return {
-        "name": info["name"], "everyayah_slug": slug, "bitrate": info["bitrate"],
-        "bytes": reciter_bytes, "uploaded": uploaded, "skipped": skipped,
-        "failed": failed, "failures": failures,
+        "name": info["name"],
+        "everyayah_slug": slug,
+        "bitrate": info["bitrate"],
+        "bytes": reciter_bytes,
+        "uploaded": uploaded,
+        "skipped": skipped,
+        "failed": failed,
+        "failures": failures,
         "completed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
     }
 
 
-def _print_progress(uploaded, skipped, failed, reciter_bytes,
-                    processed, total, started, now, current_file) -> None:
+def _print_progress(
+    uploaded,
+    skipped,
+    failed,
+    reciter_bytes,
+    processed,
+    total,
+    started,
+    now,
+    current_file,
+) -> None:
     elapsed = now - started
     rate = processed / elapsed if elapsed else 0
     remaining = max(0, total - processed)
@@ -494,10 +586,6 @@ def _print_reciter_summary(info, uploaded, skipped, failed, bytes_, elapsed) -> 
     )
 
 
-# --------------------------------------------------------------------------- #
-#  Commands
-# --------------------------------------------------------------------------- #
-
 def cmd_status() -> None:
     state = _load_state()
     _banner("Sync status")
@@ -522,10 +610,15 @@ def cmd_status() -> None:
 def cmd_check() -> None:
     _banner("Config check")
     missing = [
-        k for k in (
-            "R2_ACCOUNT_ID", "R2_ACCESS_KEY_ID", "R2_SECRET_ACCESS_KEY",
-            "R2_BUCKET", "R2_PUBLIC_BASE_URL",
-        ) if not getattr(ENV, k)
+        k
+        for k in (
+            "R2_ACCOUNT_ID",
+            "R2_ACCESS_KEY_ID",
+            "R2_SECRET_ACCESS_KEY",
+            "R2_BUCKET",
+            "R2_PUBLIC_BASE_URL",
+        )
+        if not getattr(ENV, k)
     ]
     if missing:
         print(f"✗ Missing env: {', '.join(missing)}")
@@ -533,9 +626,10 @@ def cmd_check() -> None:
         print("✓ All R2 env vars present")
         print(f"  bucket:            {ENV.R2_BUCKET}")
         print(f"  public base url:   {ENV.R2_PUBLIC_BASE_URL}")
-        print(f"  s3 endpoint:       https://{ENV.R2_ACCOUNT_ID}.r2.cloudflarestorage.com")
+        print(
+            f"  s3 endpoint:       https://{ENV.R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+        )
 
-    # Sanity: public URL must NOT be the S3 endpoint
     if ENV.R2_PUBLIC_BASE_URL and "r2.cloudflarestorage.com" in ENV.R2_PUBLIC_BASE_URL:
         print(
             "\n⚠ R2_PUBLIC_BASE_URL points at the S3 API endpoint — audio streaming will fail.\n"
@@ -545,15 +639,14 @@ def cmd_check() -> None:
         )
 
     total_mb = sum(r["est_mb"] for r in RECITERS.values())
-    print(f"\nBudget:")
+    print("\nBudget:")
     print(f"  global cap:        {ENV.QURAN_MAX_GB:.1f} GB")
     print(f"  per-reciter cap:   {ENV.QURAN_MAX_PER_RECITER_GB:.1f} GB")
     print(f"  estimated total:   {total_mb / 1024:.2f} GB")
     print(f"  reciters:          {len(RECITERS)}")
     for info in RECITERS.values():
         print(
-            f"    {info['name']:<28} {info['everyayah_slug']:<40} "
-            f"~{info['est_mb']} MB"
+            f"    {info['name']:<28} {info['everyayah_slug']:<40} ~{info['est_mb']} MB"
         )
 
 
@@ -565,7 +658,6 @@ def cmd_test() -> None:
     except SystemExit:
         return
 
-    # 1. List
     try:
         client.list_objects_v2(Bucket=ENV.R2_BUCKET, MaxKeys=1)
         print("✓ ListBucket")
@@ -575,13 +667,14 @@ def cmd_test() -> None:
         print("  → Check token has 'Object Read & Write' on this bucket")
         return
 
-    # 2. Upload small test file
     test_key = "_sync_test.txt"
     test_body = b"hello r2"
     try:
         client.put_object(
-            Bucket=ENV.R2_BUCKET, Key=test_key,
-            Body=test_body, ContentType="text/plain",
+            Bucket=ENV.R2_BUCKET,
+            Key=test_key,
+            Body=test_body,
+            ContentType="text/plain",
         )
         print("✓ PutObject")
     except ClientError as e:
@@ -590,7 +683,6 @@ def cmd_test() -> None:
         print("  → R2 API token needs 'Object Read & Write' permission")
         return
 
-    # 3. Read back
     try:
         resp = client.get_object(Bucket=ENV.R2_BUCKET, Key=test_key)
         body = resp["Body"].read()
@@ -599,7 +691,6 @@ def cmd_test() -> None:
     except (ClientError, AssertionError) as e:
         print(f"✗ GetObject: {e}")
 
-    # 4. Public URL (while file still exists)
     if ENV.R2_PUBLIC_BASE_URL:
         url = f"{ENV.R2_PUBLIC_BASE_URL.rstrip('/')}/{test_key}"
         try:
@@ -612,7 +703,6 @@ def cmd_test() -> None:
         except requests.RequestException as e:
             print(f"✗ Public URL unreachable: {e}")
 
-    # 5. Delete (always free, not billed)
     try:
         client.delete_object(Bucket=ENV.R2_BUCKET, Key=test_key)
         print("✓ DeleteObject")
@@ -636,9 +726,9 @@ def cmd_sync(only: list[str], *, verbose: bool, dry_run: bool) -> None:
     print(f"  Per-reciter cap:  {ENV.QURAN_MAX_PER_RECITER_GB:.1f} GB")
     print(f"  Reciters:         {len(only) if only else len(RECITERS)}")
     if dry_run:
-        print(f"  Mode:             DRY RUN (no network)")
+        print("  Mode:             DRY RUN (no network)")
     elif verbose:
-        print(f"  Mode:             VERBOSE")
+        print("  Mode:             VERBOSE")
 
     state = _load_state()
     targets = only or list(RECITERS)
@@ -699,6 +789,7 @@ def main() -> None:
     only = [a for a in args if not a.startswith("-")]
     cmd_sync(only, verbose=verbose, dry_run=dry_run)
 
+
 def run_all() -> None:
     """
     Entry point for main.py's lifespan thread.
@@ -714,6 +805,7 @@ def run_all() -> None:
         pass
     except Exception as e:  # noqa: BLE001
         print(f"[quran-sync] failed: {e}", flush=True)
+
 
 if __name__ == "__main__":
     main()

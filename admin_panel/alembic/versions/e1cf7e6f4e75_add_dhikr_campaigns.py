@@ -1,8 +1,3 @@
-"""add dhikr_campaigns + dhikr_submissions
-
-Revision ID: e1cf7e6f4e75
-Revises: e1cf7e6f4e74
-"""
 from __future__ import annotations
 
 from alembic import op

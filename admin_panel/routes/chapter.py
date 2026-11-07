@@ -1,4 +1,3 @@
-"""Chapter (surah) endpoints."""
 from database.models import Chapter
 from routes.base_router import make_crud_router
 from schemas.chapter import ChapterCreate, ChapterRead, ChapterUpdate

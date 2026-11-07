@@ -1,4 +1,3 @@
-"""Auth dependencies for FastAPI routes."""
 from __future__ import annotations
 
 from fastapi import Depends, HTTPException, status
@@ -27,9 +26,7 @@ def get_current_user(
     if credentials is None:
         raise _CREDENTIALS_EXC
     try:
-        payload = decode_token(
-            credentials.credentials, expected_type=TokenType.ACCESS
-        )
+        payload = decode_token(credentials.credentials, expected_type=TokenType.ACCESS)
     except TokenError as exc:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,

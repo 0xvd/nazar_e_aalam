@@ -1,4 +1,3 @@
-"""Translator endpoints."""
 from database.models import Translator
 from routes.base_router import make_crud_router
 from schemas.translator import (

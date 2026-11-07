@@ -1,9 +1,3 @@
-"""
-Hijri date endpoints.
-
-GET  /hijri/now?city=nadiad   → current Islamic date
-POST /hijri/refresh           → force one immediate scrape (admin)
-"""
 from __future__ import annotations
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
@@ -37,5 +31,6 @@ def get_hijri_now(
 def trigger_refresh(_=Depends(require_admin)):
     """Force an immediate scrape (bypasses the schedule window). Admin-only."""
     import threading
+
     threading.Thread(target=force_refresh_now, daemon=True).start()
     return {"status": "scheduled"}

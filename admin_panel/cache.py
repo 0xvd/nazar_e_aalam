@@ -1,34 +1,12 @@
-"""
-Cache layer — in-memory (default) or Redis-backed.
-
-Usage:
-    from cache import cache
-
-    cache.set("key", {"a": 1}, ttl=60)
-    cache.get("key")                       # {"a": 1}
-    cache.get_or_set("k", lambda: 42, ttl=30)
-    cache.incr("counter")                  # 1
-    cache.delete("key")
-
-Rate limiting:
-    from cache import rate_limiter
-
-    allowed, remaining = rate_limiter.hit(f"login:{ip}", limit=5, window=60)
-"""
 from __future__ import annotations
 
-import pickle
 import threading
 import time
 from abc import ABC, abstractmethod
-from typing import Any, Callable
+from collections.abc import Callable
+from typing import Any
 
 from config import ENV
-
-
-# --------------------------------------------------------------------------- #
-#  Backends
-# --------------------------------------------------------------------------- #
 
 
 class CacheBackend(ABC):
@@ -68,8 +46,6 @@ class MemoryCache(CacheBackend):
         self._store: dict[str, tuple[Any, float | None]] = {}
         self._lock = threading.RLock()
 
-    # ---- helpers -------------------------------------------------------
-
     @staticmethod
     def _is_expired(expires_at: float | None) -> bool:
         return expires_at is not None and expires_at <= time.time()
@@ -78,8 +54,6 @@ class MemoryCache(CacheBackend):
         entry = self._store.get(key)
         if entry and self._is_expired(entry[1]):
             del self._store[key]
-
-    # ---- contract ------------------------------------------------------
 
     def get(self, key: str) -> Any | None:
         with self._lock:
@@ -117,70 +91,10 @@ class MemoryCache(CacheBackend):
             self._purge_if_expired(key)
             entry = self._store.get(key)
             if not entry:
-                return -2  # key does not exist
+                return -2
             if entry[1] is None:
-                return -1  # key exists, no expiry
+                return -1
             return max(0, int(entry[1] - time.time()))
-
-
-class RedisCache(CacheBackend):
-    """
-    Redis-backed cache. Requires `pip install redis`.
-
-    Values are pickled — any Python object can be stored.
-    """
-
-    def __init__(self, url: str) -> None:
-        try:
-            import redis
-        except ImportError as exc:  # pragma: no cover
-            raise RuntimeError(
-                "CACHE_BACKEND=redis requires the `redis` package. "
-                "Install with `pip install redis`."
-            ) from exc
-        self._client = redis.Redis.from_url(url)
-
-    @staticmethod
-    def _dumps(value: Any) -> bytes:
-        return pickle.dumps(value, protocol=pickle.HIGHEST_PROTOCOL)
-
-    @staticmethod
-    def _loads(data: bytes | None) -> Any:
-        return pickle.loads(data) if data is not None else None
-
-    def get(self, key: str) -> Any | None:
-        return self._loads(self._client.get(key))
-
-    def set(self, key: str, value: Any, ttl: int | None = None) -> None:
-        data = self._dumps(value)
-        if ttl is not None and ttl > 0:
-            self._client.setex(key, ttl, data)
-        else:
-            self._client.set(key, data)
-
-    def delete(self, key: str) -> bool:
-        return bool(self._client.delete(key))
-
-    def exists(self, key: str) -> bool:
-        return bool(self._client.exists(key))
-
-    def clear(self) -> None:
-        self._client.flushdb()
-
-    def delete_prefix(self, prefix: str) -> int:
-        count = 0
-        for key in self._client.scan_iter(match=f"{prefix}*"):
-            self._client.delete(key)
-            count += 1
-        return count
-
-    def ttl(self, key: str) -> int:
-        return int(self._client.ttl(key))
-
-
-# --------------------------------------------------------------------------- #
-#  Facade
-# --------------------------------------------------------------------------- #
 
 
 class Cache:
@@ -188,8 +102,6 @@ class Cache:
 
     def __init__(self, backend: CacheBackend) -> None:
         self._backend = backend
-
-    # ---- basic operations ---------------------------------------------
 
     def get(self, key: str, default: Any = None) -> Any:
         value = self._backend.get(key)
@@ -232,9 +144,7 @@ class Cache:
         else:
             new_value = int(current) + amount
             remaining = self._backend.ttl(key)
-            self._backend.set(
-                key, new_value, remaining if remaining > 0 else None
-            )
+            self._backend.set(key, new_value, remaining if remaining > 0 else None)
         return new_value
 
     def get_or_set(
@@ -249,11 +159,6 @@ class Cache:
         value = factory()
         self.set(key, value, ttl)
         return value
-
-
-# --------------------------------------------------------------------------- #
-#  Rate limiter
-# --------------------------------------------------------------------------- #
 
 
 class RateLimiter:
@@ -288,15 +193,7 @@ class RateLimiter:
         self._cache.delete(f"rl:{key}")
 
 
-# --------------------------------------------------------------------------- #
-#  Singletons
-# --------------------------------------------------------------------------- #
-
-
 def _build_backend() -> CacheBackend:
-    backend = (ENV.CACHE_BACKEND or "memory").lower().strip()
-    if backend == "redis":
-        return RedisCache(ENV.REDIS_URL)
     return MemoryCache()
 
 
@@ -308,7 +205,6 @@ __all__ = [
     "Cache",
     "CacheBackend",
     "MemoryCache",
-    "RedisCache",
     "RateLimiter",
     "cache",
     "rate_limiter",

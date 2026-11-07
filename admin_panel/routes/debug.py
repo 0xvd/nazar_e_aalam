@@ -1,6 +1,3 @@
-"""
-Dev-only introspection endpoints. Not registered in staging/production.
-"""
 from __future__ import annotations
 
 from fastapi import APIRouter, Depends
@@ -25,6 +22,7 @@ def dump_env(_: User = Depends(require_admin)) -> dict:
 def list_routes(_: User = Depends(require_admin)) -> dict:
     """All registered routes — useful when you're not sure if a router loaded."""
     from main import app
+
     out = []
     for r in app.routes:
         if hasattr(r, "methods"):
@@ -40,12 +38,25 @@ def db_snapshot(
 ) -> dict:
     """Row counts across the schema — quick sanity after seeding/importing."""
     tables = [
-        "users", "refresh_tokens", "roles", "permissions",
-        "duas", "dhikrs", "wallpapers", "sifat_names", "haram_codes",
-        "translators", "chapters", "chapter_translations",
-        "chapter_details", "verse_translations",
-        "settings", "prayer_times",
-        "reciters", "reciter_suras", "bulk_sura_imports",
+        "users",
+        "refresh_tokens",
+        "roles",
+        "permissions",
+        "duas",
+        "dhikrs",
+        "wallpapers",
+        "sifat_names",
+        "haram_codes",
+        "translators",
+        "chapters",
+        "chapter_translations",
+        "chapter_details",
+        "verse_translations",
+        "settings",
+        "prayer_times",
+        "reciters",
+        "reciter_suras",
+        "bulk_sura_imports",
     ]
     counts: dict[str, int | str] = {}
     for t in tables:

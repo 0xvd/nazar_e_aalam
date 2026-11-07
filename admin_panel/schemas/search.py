@@ -1,5 +1,5 @@
-"""Global search schemas."""
 from __future__ import annotations
+
 from pydantic import BaseModel
 
 
@@ -8,7 +8,7 @@ class SearchHit(BaseModel):
     id: int
     title: str
     subtitle: str | None = None
-    page: str  # nav page to jump to
+    page: str
 
 
 class SearchResponse(BaseModel):

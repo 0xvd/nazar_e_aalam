@@ -1,4 +1,3 @@
-"""bcrypt password hashing — thin wrapper around the `bcrypt` package."""
 from __future__ import annotations
 
 import bcrypt

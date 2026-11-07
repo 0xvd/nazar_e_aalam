@@ -1,4 +1,3 @@
-"""Security primitives: password hashing + JWT."""
 from security._jwt import (
     TokenError,
     TokenType,

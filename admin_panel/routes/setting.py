@@ -1,16 +1,3 @@
-"""
-Setting endpoints — key-value config store keyed by (name, context).
-
-Not standard CRUD: keys are strings, not numeric IDs. All writes are
-idempotent upserts (PUT), matching Laravel's settings behaviour.
-
-Design:
-  - `context` defaults to "app" (the admin panel's only context today).
-  - `value` is always `str | None`. The frontend serialises structured
-    data to JSON strings if needed.
-  - Route order matters: `/bulk` and `/map` are declared before `/{name}`
-    so they don't get captured as setting names.
-"""
 from __future__ import annotations
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
@@ -59,10 +46,6 @@ def _find(session: Session, name: str, context: str) -> Setting | None:
     ).scalar_one_or_none()
 
 
-# --------------------------------------------------------------------------- #
-#  GET /settings — list all settings for a context
-# --------------------------------------------------------------------------- #
-
 @router.get("", response_model=SettingListResponse)
 def list_settings(
     context: str = Query(_CONTEXT_DEFAULT, max_length=_CONTEXT_MAX),
@@ -72,7 +55,9 @@ def list_settings(
     rows = list(
         session.execute(
             select(Setting).where(Setting.context == ctx).order_by(Setting.name)
-        ).scalars().all()
+        )
+        .scalars()
+        .all()
     )
     return SettingListResponse(
         context=ctx,
@@ -81,10 +66,6 @@ def list_settings(
     )
 
 
-# --------------------------------------------------------------------------- #
-#  GET /settings/map — flat name→value map for the frontend
-# --------------------------------------------------------------------------- #
-
 @router.get("/map", response_model=SettingMapResponse)
 def get_settings_map(
     context: str = Query(_CONTEXT_DEFAULT, max_length=_CONTEXT_MAX),
@@ -92,9 +73,7 @@ def get_settings_map(
 ):
     ctx = _ctx(context)
     rows = list(
-        session.execute(
-            select(Setting).where(Setting.context == ctx)
-        ).scalars().all()
+        session.execute(select(Setting).where(Setting.context == ctx)).scalars().all()
     )
     return SettingMapResponse(
         context=ctx,
@@ -102,10 +81,6 @@ def get_settings_map(
         values={r.name: r.value for r in rows},
     )
 
-
-# --------------------------------------------------------------------------- #
-#  PUT /settings/bulk — upsert many settings at once (admin)
-# --------------------------------------------------------------------------- #
 
 @router.put("/bulk", response_model=SettingBulkResult)
 def bulk_upsert_settings(
@@ -143,10 +118,6 @@ def bulk_upsert_settings(
     )
 
 
-# --------------------------------------------------------------------------- #
-#  GET /settings/{name} — fetch one setting
-# --------------------------------------------------------------------------- #
-
 @router.get("/{name}", response_model=SettingRead)
 def get_setting(
     name: str,
@@ -161,10 +132,6 @@ def get_setting(
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Setting not found")
     return row
 
-
-# --------------------------------------------------------------------------- #
-#  PUT /settings/{name} — upsert one (200 if updated, 201 if created)
-# --------------------------------------------------------------------------- #
 
 @router.put("/{name}", response_model=SettingRead)
 def upsert_setting(
@@ -193,10 +160,6 @@ def upsert_setting(
     response.status_code = status.HTTP_201_CREATED
     return row
 
-
-# --------------------------------------------------------------------------- #
-#  DELETE /settings/{name}
-# --------------------------------------------------------------------------- #
 
 @router.delete("/{name}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_setting(

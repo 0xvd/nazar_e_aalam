@@ -1,11 +1,9 @@
-"""Schemas for the admin sync API."""
 from __future__ import annotations
 
 from datetime import datetime
 from typing import Literal
 
 from pydantic import BaseModel, Field
-
 
 Status = Literal[
     "queued", "running", "stopping", "stopped", "done", "failed", "interrupted"

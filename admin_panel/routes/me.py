@@ -1,10 +1,3 @@
-"""
-Current-user endpoints.
-
-GET  /me           → self profile + avatar URL
-PATCH /me          → update name, email, password (current_password required to change password)
-POST /me/avatar    → upload avatar image to R2, save URL in settings (context=user:{id})
-"""
 from __future__ import annotations
 
 import io
@@ -97,15 +90,15 @@ def update_me(
 ):
     data = body.model_dump(exclude_unset=True)
 
-    # Password change requires current_password
     if data.get("new_password"):
         if not data.get("current_password") or not verify_password(
             data["current_password"], user.password or ""
         ):
-            raise HTTPException(status.HTTP_400_BAD_REQUEST, "Current password is incorrect")
+            raise HTTPException(
+                status.HTTP_400_BAD_REQUEST, "Current password is incorrect"
+            )
         user.password = hash_password(data["new_password"])
 
-    # Email uniqueness (case-insensitive, excluding self)
     if data.get("email"):
         new_email = data["email"].lower().strip()
         dup = session.execute(
@@ -178,6 +171,7 @@ def clear_avatar(
     _write_avatar(session, user.id, None)
     return _serialize(session, user)
 
+
 @router.post("/password", status_code=status.HTTP_204_NO_CONTENT)
 def change_password(
     body: PasswordChange,
@@ -185,9 +179,12 @@ def change_password(
     user: User = Depends(get_current_user),
 ) -> None:
     if not verify_password(body.current_password, user.password or ""):
-        raise HTTPException(status.HTTP_400_BAD_REQUEST, "Current password is incorrect")
+        raise HTTPException(
+            status.HTTP_400_BAD_REQUEST, "Current password is incorrect"
+        )
     if body.current_password == body.new_password:
-        raise HTTPException(status.HTTP_400_BAD_REQUEST, "New password must differ from current")
+        raise HTTPException(
+            status.HTTP_400_BAD_REQUEST, "New password must differ from current"
+        )
     user.password = hash_password(body.new_password)
     session.commit()
-

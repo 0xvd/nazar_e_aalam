@@ -1,13 +1,3 @@
-#!/usr/bin/env python3
-"""
-Register the 5 reciters in the database. Idempotent — safe to run repeatedly.
-
-Reads RECITERS and AYAH_COUNTS from tools.sync_quran, and uses ENV to build
-each reciter's base_ayah_url pointing at your R2 public domain.
-
-Usage:
-    python tools/seed_reciters.py
-"""
 from __future__ import annotations
 
 from sqlalchemy import inspect, select
@@ -24,7 +14,7 @@ def _verify_schema() -> None:
     """Fail early with a clear message if the `reciters` table is out of date."""
     inspector = inspect(db.engine)
     if not inspector.has_table("reciters"):
-        return  # init_db() hasn't run yet — caller will handle
+        return
     cols = {c["name"] for c in inspector.get_columns("reciters")}
     missing = REQUIRED_COLUMNS - cols
     if missing:
@@ -56,13 +46,9 @@ def run() -> None:
                 select(Reciter).where(Reciter.slug == slug)
             ).scalar_one_or_none()
 
-            base_url = (
-                f"{ENV.R2_PUBLIC_BASE_URL.rstrip('/')}"
-                f"/reciters/{slug}/ayahs/"
-            )
+            base_url = f"{ENV.R2_PUBLIC_BASE_URL.rstrip('/')}/reciters/{slug}/ayahs/"
 
             if existing:
-                # Keep URL fresh in case R2_PUBLIC_BASE_URL changed
                 existing.base_ayah_url = base_url
                 existing.position = position
                 print(f"[seed] Updated: {info['name']}")

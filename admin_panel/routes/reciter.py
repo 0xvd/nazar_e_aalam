@@ -1,15 +1,3 @@
-"""
-Reciter endpoints.
-
-CRUD via the generic factory — GET/POST/PATCH/DELETE /reciters.
-
-Plus two audio endpoints designed for the Flutter app:
-
-  GET /reciters/{slug}/surah/{surah}   → host + ayah_list for one surah
-  GET /reciters/{slug}/surahs          → host + all 114 surahs (no ayahs)
-
-Flutter builds play URLs as:  f"{host}/{ayah_list[i]}"
-"""
 from __future__ import annotations
 
 from fastapi import Depends, HTTPException, Response, status
@@ -25,14 +13,10 @@ from schemas.surah_audio import (
     ReciterMini,
     SurahAudioResponse,
     SurahMeta,
-    SurahSummary,
     SurahsListResponse,
+    SurahSummary,
 )
 from tools.sync_quran import AYAH_COUNTS
-
-# --------------------------------------------------------------------------- #
-#  Standard CRUD
-# --------------------------------------------------------------------------- #
 
 router = make_crud_router(
     model=Reciter,
@@ -46,18 +30,12 @@ router = make_crud_router(
 )
 
 
-# --------------------------------------------------------------------------- #
-#  Helpers
-# --------------------------------------------------------------------------- #
-
 def _require_reciter(session: Session, slug: str) -> Reciter:
     rec = session.execute(
         select(Reciter).where(Reciter.slug == slug)
     ).scalar_one_or_none()
     if rec is None:
-        raise HTTPException(
-            status.HTTP_404_NOT_FOUND, f"Reciter '{slug}' not found"
-        )
+        raise HTTPException(status.HTTP_404_NOT_FOUND, f"Reciter '{slug}' not found")
     return rec
 
 
@@ -97,10 +75,6 @@ def _host() -> str:
     return host
 
 
-# --------------------------------------------------------------------------- #
-#  GET /reciters/{slug}/surah/{surah}
-# --------------------------------------------------------------------------- #
-
 @router.get(
     "/{slug}/surah/{surah}",
     response_model=SurahAudioResponse,
@@ -118,12 +92,8 @@ def get_surah_audio(
 
     count = AYAH_COUNTS[surah - 1]
     prefix = f"reciters/{rec.slug}/ayahs/"
-    ayah_list = [
-        f"{prefix}{surah:03d}{ayah:03d}.mp3"
-        for ayah in range(1, count + 1)
-    ]
+    ayah_list = [f"{prefix}{surah:03d}{ayah:03d}.mp3" for ayah in range(1, count + 1)]
 
-    # Content is effectively static → safe to cache at CDN / client for 1 day.
     response.headers["Cache-Control"] = "public, max-age=86400"
 
     return SurahAudioResponse(
@@ -141,10 +111,6 @@ def get_surah_audio(
     )
 
 
-# --------------------------------------------------------------------------- #
-#  GET /reciters/{slug}/surahs
-# --------------------------------------------------------------------------- #
-
 @router.get(
     "/{slug}/surahs",
     response_model=SurahsListResponse,
@@ -157,10 +123,7 @@ def list_surahs_for_reciter(
 ) -> SurahsListResponse:
     rec = _require_reciter(session, slug)
 
-    chapters_by_id = {
-        c.id: c
-        for c in session.execute(select(Chapter)).scalars().all()
-    }
+    chapters_by_id = {c.id: c for c in session.execute(select(Chapter)).scalars().all()}
 
     surahs = [
         SurahSummary(
@@ -170,8 +133,7 @@ def list_surahs_for_reciter(
             ),
             verses_count=AYAH_COUNTS[n - 1],
             revelation_place=(
-                chapters_by_id[n].revelation_place
-                if n in chapters_by_id else None
+                chapters_by_id[n].revelation_place if n in chapters_by_id else None
             ),
         )
         for n in range(1, 115)

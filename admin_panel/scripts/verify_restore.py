@@ -1,16 +1,10 @@
-#!/usr/bin/env python3
-"""
-Verify that the latest R2 backup restores cleanly and matches live row counts.
-
-Usage:  python scripts/verify_restore.py
-"""
 from __future__ import annotations
 
 import gzip
-import tempfile
 import os
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -29,7 +23,6 @@ def die(msg: str, code: int = 1) -> None:
     sys.exit(code)
 
 
-# ---- Parse DATABASE_URL ---------------------------------------------------
 raw = os.environ.get("DATABASE_URL", "")
 if not raw:
     die("DATABASE_URL not set in .env")
@@ -69,12 +62,12 @@ def mysql(sql: str, db: str | None = None, gz_file=None):
     return subprocess.run(
         cmd,
         env=env,
-        stdin=gz_file,     # pass the binary file handle directly
+        stdin=gz_file,
         capture_output=True,
-        text=False,        # binary stdout/stderr
+        text=False,
     )
 
-# ---- Download latest backup from R2 ---------------------------------------
+
 print("→ Fetching latest backup from R2…")
 for key in (
     "R2_ACCOUNT_ID",
@@ -92,13 +85,8 @@ client = boto3.client(
     aws_secret_access_key=os.environ["R2_BACKUP_ACCESS_KEY"],
     region_name="auto",
 )
-resp = client.list_objects_v2(
-    Bucket=os.environ["R2_BACKUP_BUCKET"], Prefix="backups/"
-)
-objs = [
-    o for o in resp.get("Contents", [])
-    if o["Key"].endswith(".sql.gz")     # ← only DB dumps, skip log tarballs
-]
+resp = client.list_objects_v2(Bucket=os.environ["R2_BACKUP_BUCKET"], Prefix="backups/")
+objs = [o for o in resp.get("Contents", []) if o["Key"].endswith(".sql.gz")]
 if not objs:
     die("No .sql.gz backups found in R2 — run ./scripts/backup.sh first")
 
@@ -108,7 +96,7 @@ client.download_file(os.environ["R2_BACKUP_BUCKET"], latest["Key"], str(local))
 size_mb = local.stat().st_size / 1024**2
 print(f"✓ Downloaded {local.name} ({size_mb:.2f} MB)")
 
-# ---- Create throwaway DB and restore --------------------------------------
+
 print(f"\n→ Creating {TEST_DB}…")
 r = mysql(f"DROP DATABASE IF EXISTS {TEST_DB}; CREATE DATABASE {TEST_DB};")
 if r.returncode != 0:
@@ -131,12 +119,16 @@ finally:
 
 print("✓ Restore succeeded")
 
-# ---- Compare row counts ---------------------------------------------------
+
 def count_rows(db: str, table: str) -> str:
     r = mysql(f"SELECT COUNT(*) FROM {table};", db=db)
     if r.returncode != 0:
         return "ERR"
-    lines = [ln for ln in r.stdout.strip().splitlines() if ln and not ln.isdigit() or ln.isdigit()]
+    lines = [
+        ln
+        for ln in r.stdout.strip().splitlines()
+        if ln and not ln.isdigit() or ln.isdigit()
+    ]
     for ln in reversed(lines):
         if ln.strip().isdigit():
             return ln.strip()
@@ -153,7 +145,7 @@ for t in TABLES:
     all_match = all_match and match
     print(f"{t:<15} {live:>10} {test:>10}  {'✓' if match else '✗':>6}")
 
-# ---- Cleanup --------------------------------------------------------------
+
 print(f"\n→ Dropping {TEST_DB}…")
 mysql(f"DROP DATABASE {TEST_DB};")
 local.unlink(missing_ok=True)

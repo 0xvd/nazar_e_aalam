@@ -1,16 +1,11 @@
-"""
-One-shot seed helpers.
-
-Called from main.py's lifespan on startup. Idempotent — safe to run on every
-boot; does nothing if the initial admin already exists.
-"""
 from __future__ import annotations
+
+from sqlalchemy.exc import IntegrityError
 
 from config import ENV
 from database import db
 from repositories.user_repository import UserRepository
 from security.passwords import hash_password
-from sqlalchemy.exc import IntegrityError
 
 
 def seed_initial_admin() -> None:
@@ -22,7 +17,6 @@ def seed_initial_admin() -> None:
     with db.session() as session:
         repo = UserRepository(session)
 
-        # Fast path — already seeded
         if repo.get_by_email(ENV.INITIAL_ADMIN_EMAIL) is not None:
             return
 
@@ -36,22 +30,28 @@ def seed_initial_admin() -> None:
             )
             print(f"[seed] Created initial admin: {ENV.INITIAL_ADMIN_EMAIL}")
         except IntegrityError:
-            # Another worker beat us between the check and the insert.
-            # That's a success, not an error — the admin exists.
             session.rollback()
-            print(f"[seed] Initial admin already exists, skipped")
+            print("[seed] Initial admin already exists, skipped")
+
 
 def seed_default_roles() -> None:
     """Create default admin roles if missing."""
     from database import db
     from database.models import Role
+
     defaults = [
-        {"name": "Super Admin", "alias": "super-admin", "is_admin": True, "is_default": False},
-        {"name": "Admin",       "alias": "admin",       "is_admin": True, "is_default": True},
-        {"name": "Editor",      "alias": "editor",      "is_admin": True, "is_default": False},
+        {
+            "name": "Super Admin",
+            "alias": "super-admin",
+            "is_admin": True,
+            "is_default": False,
+        },
+        {"name": "Admin", "alias": "admin", "is_admin": True, "is_default": True},
+        {"name": "Editor", "alias": "editor", "is_admin": True, "is_default": False},
     ]
     with db.session() as session:
         from sqlalchemy import select
+
         for d in defaults:
             already = session.execute(
                 select(Role).where(Role.alias == d["alias"])

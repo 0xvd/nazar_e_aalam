@@ -1,4 +1,3 @@
-"""Haram code endpoints."""
 from database.models import HaramCode
 from routes.base_router import make_crud_router
 from schemas.haram_code import HaramCodeCreate, HaramCodeRead, HaramCodeUpdate

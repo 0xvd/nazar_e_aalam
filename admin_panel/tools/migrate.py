@@ -1,13 +1,3 @@
-"""
-Alembic runtime helpers.
-
-- `current_revision()` / `head_revision()` — read via alembic API
-- `is_up_to_date()` — True if DB matches the latest migration
-- `assert_up_to_date()` — raises if not (called from prod lifespan)
-
-Does NOT run `upgrade` — that happens via systemd ExecStartPre before the
-app starts. Running it inside 4 gunicorn workers would race.
-"""
 from __future__ import annotations
 
 from pathlib import Path

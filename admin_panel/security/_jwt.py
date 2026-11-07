@@ -1,16 +1,7 @@
-"""
-JWT helpers — access and refresh tokens.
-
-Both are JWT-signed. The refresh token is also tracked in the DB
-(`refresh_tokens` table) so it can be revoked on logout or rotation.
-
-Note: this module is named `_jwt.py` (not `jwt.py`) to avoid shadowing the
-top-level `jwt` (PyJWT) package.
-"""
 from __future__ import annotations
 
 import secrets
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from typing import Any
 
 import jwt
@@ -28,7 +19,7 @@ class TokenError(Exception):
 
 
 def _now() -> datetime:
-    return datetime.now(timezone.utc)
+    return datetime.now(UTC)
 
 
 def _encode(payload: dict[str, Any], ttl: timedelta, token_type: str) -> str:
@@ -43,10 +34,12 @@ def _encode(payload: dict[str, Any], ttl: timedelta, token_type: str) -> str:
     return jwt.encode(data, ENV.JWT_SIGNING_KEY, algorithm=ENV.JWT_ALGORITHM)
 
 
-def create_access_token(subject: int, extra: dict[str, Any] | None = None, *, ttl: timedelta | None = None) -> str:
+def create_access_token(
+    subject: int, extra: dict[str, Any] | None = None, *, ttl: timedelta | None = None
+) -> str:
     payload = {
         "sub": str(subject),
-        "jti": secrets.token_urlsafe(16),   # ← unique per token
+        "jti": secrets.token_urlsafe(16),
         **(extra or {}),
     }
     return _encode(

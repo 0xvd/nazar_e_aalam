@@ -1,9 +1,3 @@
-"""
-Self-contained prayer time calculator — no external APIs, no third-party libs.
-Karachi method (Fajr 18°, Isha 18°), Hanafi Asr (shadow = 2).
-
-Verified against AlAdhan API: 2026-10-20 Ahmedabad → matches within 1-2 min.
-"""
 from __future__ import annotations
 
 import math
@@ -20,7 +14,9 @@ def _julian_day(y: int, m: int, d: int) -> float:
         m += 12
     a = y // 100
     b = 2 - a + a // 4
-    return math.floor(365.25 * (y + 4716)) + math.floor(30.6001 * (m + 1)) + d + b - 1524.5
+    return (
+        math.floor(365.25 * (y + 4716)) + math.floor(30.6001 * (m + 1)) + d + b - 1524.5
+    )
 
 
 def _sun_position(jd: float) -> tuple[float, float]:
@@ -29,7 +25,11 @@ def _sun_position(jd: float) -> tuple[float, float]:
     q = (280.459 + 0.98564736 * dd) % 360
     L = (q + 1.915 * math.sin(g * DEG2RAD) + 0.020 * math.sin(2 * g * DEG2RAD)) % 360
     e = 23.439 - 0.00000036 * dd
-    RA = (math.atan2(math.cos(e * DEG2RAD) * math.sin(L * DEG2RAD), math.cos(L * DEG2RAD)) * RAD2DEG / 15) % 24
+    RA = (
+        math.atan2(math.cos(e * DEG2RAD) * math.sin(L * DEG2RAD), math.cos(L * DEG2RAD))
+        * RAD2DEG
+        / 15
+    ) % 24
     decl = math.asin(math.sin(e * DEG2RAD) * math.sin(L * DEG2RAD)) * RAD2DEG
     eqt_hours = (q / 15 - RA) % 24
     if eqt_hours > 12:
@@ -37,7 +37,9 @@ def _sun_position(jd: float) -> tuple[float, float]:
     return decl, eqt_hours
 
 
-def _hour_angle_offset_hours(angle_below_horizon_deg: float, decl_deg: float, lat_deg: float) -> float | None:
+def _hour_angle_offset_hours(
+    angle_below_horizon_deg: float, decl_deg: float, lat_deg: float
+) -> float | None:
     cos_h = (
         math.sin(-angle_below_horizon_deg * DEG2RAD)
         - math.sin(decl_deg * DEG2RAD) * math.sin(lat_deg * DEG2RAD)
@@ -81,7 +83,9 @@ def calculate(
     jd = _julian_day(d.year, d.month, d.day) + 0.5
     decl, eqt_h = _sun_position(jd)
     tz = ZoneInfo(timezone_str)
-    tz_offset_h = datetime(d.year, d.month, d.day, tzinfo=tz).utcoffset().total_seconds() / 3600
+    tz_offset_h = (
+        datetime(d.year, d.month, d.day, tzinfo=tz).utcoffset().total_seconds() / 3600
+    )
     dhuhr = 12 + tz_offset_h - longitude / 15 - eqt_h
 
     off_sunrise = _hour_angle_offset_hours(sunrise_angle, decl, latitude)

@@ -1,4 +1,3 @@
-"""Wallpaper endpoints — CRUD + file upload."""
 from __future__ import annotations
 
 import io
@@ -6,7 +5,7 @@ import uuid
 
 import boto3
 from botocore.exceptions import BotoCoreError, ClientError
-from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile, status
+from fastapi import Depends, File, Form, HTTPException, UploadFile, status
 from sqlalchemy.orm import Session
 
 from config import ENV
@@ -28,7 +27,7 @@ router = make_crud_router(
 )
 
 _ALLOWED = {"image/jpeg", "image/png", "image/webp"}
-_MAX_BYTES = 10 * 1024 * 1024   # 10 MB
+_MAX_BYTES = 10 * 1024 * 1024
 _EXT = {"image/jpeg": "jpg", "image/png": "png", "image/webp": "webp"}
 
 
@@ -42,7 +41,9 @@ def _r2():
     )
 
 
-@router.post("/upload", response_model=WallpaperRead, status_code=status.HTTP_201_CREATED)
+@router.post(
+    "/upload", response_model=WallpaperRead, status_code=status.HTTP_201_CREATED
+)
 async def upload_wallpaper(
     file: UploadFile = File(...),
     name: str = Form(...),
@@ -93,6 +94,7 @@ async def upload_wallpaper(
     session.commit()
     session.refresh(w)
     return w
+
 
 @router.post("/upload-image", status_code=status.HTTP_200_OK)
 async def upload_wallpaper_image(

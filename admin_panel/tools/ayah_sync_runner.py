@@ -1,31 +1,8 @@
-"""
-Background runner for `tools.sync_quran`.
-
-Spawned as a daemon thread by routes/sync.py. Owns its own DB sessions so it
-never shares a request-scoped Session (important for multi-worker Gunicorn).
-
-Design:
-  * One background thread ("flush-N") writes counters to DB every 2 s AND
-    reads `stop_requested`. This is the ONLY thread that talks to the DB
-    after the job starts — no DB session churn from the download loop.
-  * One background thread ("hb-N") writes a heartbeat line to the log file
-    every 10 s, so the admin panel's log tail shows activity even when
-    `sync_quran` is silent between its once-per-100-file progress lines.
-  * `_download_checked` only mutates an in-memory counters dict under a lock.
-  * `sync_quran` is untouched. Its internal `_progress_hook` isn't present,
-    so we count ayahs in the download wrapper. Skipped ayahs (already in R2)
-    don't call `download()`, so we can't count those — but the heartbeat
-    thread reads `sync_quran`'s current state via a small mutation of its
-    public-facing state. To keep the code honest, we count what we can and
-    accept that `skipped` may lag by up to one reciter's worth of skipped
-    files. Total, uploaded, failed, and current_file are always accurate.
-"""
 from __future__ import annotations
 
 import io
 import sys
 import threading
-import time
 import traceback
 from contextlib import redirect_stderr, redirect_stdout
 from datetime import datetime
@@ -36,7 +13,6 @@ from sqlalchemy import select
 from database import db
 from database.models import SyncJob
 from tools import sync_quran as _sq
-
 
 _ROOT = Path(__file__).resolve().parent.parent
 _LOG_DIR = _ROOT / "logs" / "sync"
@@ -90,7 +66,6 @@ def run(job_id: int) -> None:
 
     _announce(log_path, job_id, targets)
 
-    # ---- In-memory counters ----
     counters = {
         "processed": 0,
         "total": grand_total,
@@ -108,13 +83,11 @@ def run(job_id: int) -> None:
 
     def _append_log(line: str) -> None:
         try:
-            with log_lock:
-                with log_path.open("a", encoding="utf-8") as fh:
-                    fh.write(line + "\n")
+            with log_lock, log_path.open("a", encoding="utf-8") as fh:
+                fh.write(line + "\n")
         except Exception:
             pass
 
-    # ---- DB flush (every 2 s) + stop check ----
     def _flush_and_check() -> bool:
         try:
             with counters_lock:
@@ -138,7 +111,6 @@ def run(job_id: int) -> None:
             if _flush_and_check():
                 stop_flag.set()
 
-    # ---- Log heartbeat (every 10 s) ----
     def _heartbeat_loop() -> None:
         while not stop_flush.is_set():
             stop_flush.wait(10.0)
@@ -146,10 +118,7 @@ def run(job_id: int) -> None:
                 break
             with counters_lock:
                 snap = dict(counters)
-            pct = (
-                (snap["processed"] / snap["total"] * 100)
-                if snap["total"] else 0.0
-            )
+            pct = (snap["processed"] / snap["total"] * 100) if snap["total"] else 0.0
             cur = snap["current_file"] or "—"
             rec = current_reciter["name"] or "—"
             _append_log(
@@ -158,16 +127,11 @@ def run(job_id: int) -> None:
                 f"✗{snap['failed']}  {snap['bytes_done']} bytes  cur={cur}"
             )
 
-    threading.Thread(
-        target=_flush_loop, name=f"flush-{job_id}", daemon=True
-    ).start()
-    threading.Thread(
-        target=_heartbeat_loop, name=f"hb-{job_id}", daemon=True
-    ).start()
+    threading.Thread(target=_flush_loop, name=f"flush-{job_id}", daemon=True).start()
+    threading.Thread(target=_heartbeat_loop, name=f"hb-{job_id}", daemon=True).start()
 
-    # ---- Download wrapper ----
     orig_download = _sq.download
-    base_processed = {"n": 0}   # number of ayahs before the current reciter
+    base_processed = {"n": 0}
 
     def _download_checked(url, dest):
         if stop_flag.is_set():
@@ -190,27 +154,15 @@ def run(job_id: int) -> None:
                     pass
         return ok
 
-    # ---- Intercept sync_reciter to know when we switch reciters ----
-    # This keeps `current_reciter` and `total` aligned with the current phase.
     orig_sync_reciter = _sq.sync_reciter
 
     def _sync_reciter_checked(client, key, info, *, verbose, dry_run):
         current_reciter["name"] = info.get("name", key)
 
-        # Reset per-reciter "processed" anchor — processed currently counts
-        # downloads within this reciter. The flush thread updates `total`
-        # in aggregate. Since skip files aren't downloaded, `processed`
-        # will under-report while skipping — the heartbeat line shows
-        # what's actually been counted.
-        result = orig_sync_reciter(
-            client, key, info, verbose=verbose, dry_run=dry_run
-        )
+        result = orig_sync_reciter(client, key, info, verbose=verbose, dry_run=dry_run)
 
-        # After the reciter finishes, fold its final counters into the
-        # aggregate so the DB shows completion for the whole reciter.
         with counters_lock:
             counters["uploaded"] = counters.get("uploaded", 0)
-            # (counters already include everything the download wrapper saw)
 
         return result
 
@@ -251,7 +203,6 @@ def run(job_id: int) -> None:
         stop_flush.set()
         _flush_and_check()
 
-    # ---- Finalise ----
     with db.session() as s:
         job = s.get(SyncJob, job_id)
         if job is None:
@@ -280,16 +231,15 @@ class _StopRequested(Exception):
     pass
 
 
-# --------------------------------------------------------------------------- #
-#  Startup recovery (called from main.py lifespan)
-# --------------------------------------------------------------------------- #
-
-
 def recover_orphans() -> int:
     with db.session() as s:
-        stuck = s.execute(
-            select(SyncJob).where(SyncJob.status.in_(("running", "stopping")))
-        ).scalars().all()
+        stuck = (
+            s.execute(
+                select(SyncJob).where(SyncJob.status.in_(("running", "stopping")))
+            )
+            .scalars()
+            .all()
+        )
         for j in stuck:
             j.status = "interrupted"
             j.finished_at = datetime.utcnow()

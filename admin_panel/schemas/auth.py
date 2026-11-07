@@ -1,9 +1,10 @@
-"""Pydantic request / response models for auth endpoints."""
 from __future__ import annotations
 
-from typing import Literal
-from pydantic import BaseModel, ConfigDict, EmailStr, Field
 from datetime import datetime
+from typing import Literal
+
+from pydantic import BaseModel, ConfigDict, EmailStr, Field
+
 
 class LoginRequest(BaseModel):
     email: EmailStr
@@ -18,14 +19,14 @@ class TokenPair(BaseModel):
     access_token: str
     refresh_token: str
     token_type: str = "bearer"
-    expires_in: int  # access-token lifetime in seconds
+    expires_in: int
 
 
 class UserOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     id: int
-    email: str | None = None       # ← was EmailStr; make it plain str | None
+    email: str | None = None
     first_name: str | None = None
     last_name: str | None = None
     is_admin: bool

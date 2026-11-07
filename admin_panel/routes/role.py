@@ -1,4 +1,3 @@
-"""Role + permission endpoints for administrator management."""
 from __future__ import annotations
 
 from fastapi import APIRouter, Depends, HTTPException, status
@@ -28,9 +27,12 @@ def create_role(
     session: Session = Depends(db.get_db),
     _: User = Depends(require_admin),
 ):
-    if body.alias and session.execute(
-        select(Role).where(Role.alias == body.alias)
-    ).scalar_one_or_none():
+    if (
+        body.alias
+        and session.execute(
+            select(Role).where(Role.alias == body.alias)
+        ).scalar_one_or_none()
+    ):
         raise HTTPException(status.HTTP_409_CONFLICT, "Alias already in use")
     role = Role(
         name=body.name.strip(),
@@ -77,7 +79,7 @@ def delete_role(
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Role not found")
     if role.is_default:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "Cannot delete default role")
-    # Detach from users
+
     for u in role.users:
         u.roles.remove(role)
     session.delete(role)
@@ -89,5 +91,11 @@ def list_permissions(
     session: Session = Depends(db.get_db),
     _: User = Depends(require_admin),
 ):
-    rows = session.execute(select(Permission).order_by(Permission.group_name, Permission.name)).scalars().all()
+    rows = (
+        session.execute(
+            select(Permission).order_by(Permission.group_name, Permission.name)
+        )
+        .scalars()
+        .all()
+    )
     return [PermissionRead.model_validate(p) for p in rows]

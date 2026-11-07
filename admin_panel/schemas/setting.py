@@ -1,4 +1,3 @@
-"""Setting request / response schemas."""
 from __future__ import annotations
 
 from datetime import datetime
@@ -21,11 +20,13 @@ class SettingRead(BaseModel):
 
 class SettingUpsert(BaseModel):
     """PUT body for one setting. Value stored as-is, may be null."""
+
     value: str | None = None
 
 
 class SettingMapResponse(BaseModel):
     """Flat name→value map, ready for frontend consumption."""
+
     context: str
     count: int
     values: dict[str, str | None]
@@ -39,6 +40,7 @@ class SettingListResponse(BaseModel):
 
 class SettingBulkUpsert(BaseModel):
     """PUT /settings/bulk body — upsert many settings at once."""
+
     values: dict[str, str | None]
 
 

@@ -1,7 +1,9 @@
-from fastapi import APIRouter, Query
-from config import ENV
-import requests
 from urllib.parse import quote
+
+import requests
+from fastapi import APIRouter, Query
+
+from config import ENV
 
 router = APIRouter(prefix="/mosques", tags=["mosques"])
 
@@ -67,7 +69,6 @@ def nearby(
     """
     attempts: list[dict] = []
 
-    # ---- 1. Google (primary) ----
     if ENV.GOOGLE_MAPS_API_KEY:
         try:
             resp = requests.get(
@@ -87,21 +88,28 @@ def nearby(
                 results = [_format_google(p) for p in data.get("results", [])]
                 return {"source": "google", "count": len(results), "mosques": results}
 
-            # Any other status is a "soft failure" → record & continue
-            attempts.append({
-                "source": "google",
-                "status": status,
-                "error": data.get("error_message", status or "unknown"),
-            })
-            print(f"[mosque-api] google: {status} — {data.get('error_message', '')}", flush=True)
+            attempts.append(
+                {
+                    "source": "google",
+                    "status": status,
+                    "error": data.get("error_message", status or "unknown"),
+                }
+            )
+            print(
+                f"[mosque-api] google: {status} — {data.get('error_message', '')}",
+                flush=True,
+            )
 
         except requests.RequestException as e:
-            attempts.append({"source": "google", "status": "network", "error": str(e)[:200]})
+            attempts.append(
+                {"source": "google", "status": "network", "error": str(e)[:200]}
+            )
             print(f"[mosque-api] google network error: {e}", flush=True)
     else:
-        attempts.append({"source": "google", "status": "skipped", "error": "no API key configured"})
+        attempts.append(
+            {"source": "google", "status": "skipped", "error": "no API key configured"}
+        )
 
-    # ---- 2. time.now (fallback) ----
     try:
         radius_km = max(1, radius_m // 1000)
         resp = requests.get(
@@ -113,22 +121,25 @@ def nearby(
         data = resp.json()
 
         if not isinstance(data, list):
-            attempts.append({
-                "source": "time.now",
-                "status": "invalid_response",
-                "error": f"expected list, got {type(data).__name__}",
-            })
+            attempts.append(
+                {
+                    "source": "time.now",
+                    "status": "invalid_response",
+                    "error": f"expected list, got {type(data).__name__}",
+                }
+            )
         else:
             results = [_format_timenow(m) for m in data]
             return {"source": "time.now", "count": len(results), "mosques": results}
 
     except requests.RequestException as e:
-        attempts.append({"source": "time.now", "status": "network", "error": str(e)[:200]})
+        attempts.append(
+            {"source": "time.now", "status": "network", "error": str(e)[:200]}
+        )
         print(f"[mosque-api] time.now network error: {e}", flush=True)
 
     print(f"[mosque-api] all sources failed, returning empty: {attempts}", flush=True)
 
-    # Build a user-friendly message based on why
     google_attempt = next((a for a in attempts if a["source"] == "google"), None)
     timenow_attempt = next((a for a in attempts if a["source"] == "time.now"), None)
 

@@ -1,4 +1,3 @@
-"""Backup admin schemas."""
 from __future__ import annotations
 
 from pydantic import BaseModel, Field
@@ -8,8 +7,8 @@ class BackupInfo(BaseModel):
     filename: str
     size_bytes: int
     size_mb: float
-    created_at: str          # ISO timestamp
-    source: str              # "local" | "r2" | "both"
+    created_at: str
+    source: str
 
 
 class BackupListResponse(BaseModel):
@@ -48,7 +47,7 @@ class BackupStatusResponse(BaseModel):
     last_run_at: str | None
     last_run_status: str | None
     next_run_at: str | None
-    scheduled_time: str          # "03:00"
+    scheduled_time: str
     total_local_backups: int
     total_r2_backups: int
     oldest_local_backup: str | None

@@ -1,15 +1,3 @@
-"""
-Chapter verse endpoints.
-
-Nested CRUD:
-    /chapters/{chapter_id}/verses              GET (list, paginated), POST
-    /chapters/{chapter_id}/verses/{item_id}    GET, PATCH, DELETE
-
-Composite (Flutter-facing):
-    /chapters/{chapter_id}/verses-full         GET — chapter + all verses
-                                               + inline translations
-                                               ?translator_id=N to filter
-"""
 from __future__ import annotations
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
@@ -28,8 +16,6 @@ from schemas.chapter_detail import (
 from schemas.chapter_verses import ChapterVersesResponse, VerseWithTranslations
 from schemas.verse_translation import VerseTranslationRead
 
-# ---- Nested CRUD -----------------------------------------------------
-
 crud_router = make_crud_router(
     model=ChapterDetail,
     prefix="/chapters/{chapter_id}/verses",
@@ -42,7 +28,6 @@ crud_router = make_crud_router(
     extra_filters={"chapter_id": "chapter_id"},
 )
 
-# ---- Composite view --------------------------------------------------
 
 composite_router = APIRouter(prefix="/chapters", tags=["chapter-verses"])
 

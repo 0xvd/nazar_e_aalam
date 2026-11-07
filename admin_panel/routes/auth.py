@@ -1,14 +1,6 @@
-"""
-Authentication endpoints.
-
-  POST /auth/login     → email + password → access + refresh tokens
-  POST /auth/refresh   → refresh token    → new access + refresh (rotation)
-  POST /auth/logout    → refresh token    → revoke
-  GET  /auth/me        → access token     → current user
-"""
 from __future__ import annotations
 
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
@@ -17,16 +9,16 @@ from sqlalchemy.orm import Session
 from cache import rate_limiter
 from config import ENV
 from database import db
-from database.models import User, DeviceProfile
+from database.models import DeviceProfile, User
 from dependencies.auth import get_current_user
 from repositories.refresh_token_repository import RefreshTokenRepository
 from repositories.user_repository import UserRepository
 from schemas.auth import (
+    DeviceRegisterRequest,
+    DeviceRegisterResponse,
     LoginRequest,
     LoginResponse,
     RefreshRequest,
-    DeviceRegisterRequest,
-    DeviceRegisterResponse,
     TokenPair,
     UserOut,
 )
@@ -43,10 +35,8 @@ router = APIRouter(prefix="/auth", tags=["auth"])
 _bearer_optional = HTTPBearer(auto_error=False)
 
 
-# ---- helpers ---------------------------------------------------------------
-
 def _utcnow_naive() -> datetime:
-    return datetime.now(timezone.utc).replace(tzinfo=None)
+    return datetime.now(UTC).replace(tzinfo=None)
 
 
 def _client_ip(request: Request) -> str:
@@ -79,8 +69,6 @@ def _issue_tokens(
     )
 
 
-# ---- endpoints -------------------------------------------------------------
-
 @router.post("/login", response_model=LoginResponse)
 def login(
     body: LoginRequest,
@@ -100,8 +88,10 @@ def login(
             )
 
     user = UserRepository(session).get_by_email(body.email)
-    if user is None or not user.password or not verify_password(
-        body.password, user.password
+    if (
+        user is None
+        or not user.password
+        or not verify_password(body.password, user.password)
     ):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -140,7 +130,6 @@ def refresh(
             status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found"
         )
 
-    # Rotation: revoke the old token, issue a new pair
     rt_repo.revoke(row)
     pair = _issue_tokens(session, user, request)
     session.commit()
@@ -157,12 +146,12 @@ def logout(
     if row is not None:
         rt_repo.revoke(row)
         session.commit()
-    # If the token is already gone, return 204 anyway (idempotent logout).
 
 
 @router.get("/me", response_model=UserOut)
 def me(user: User = Depends(get_current_user)) -> UserOut:
     return UserOut.model_validate(user)
+
 
 @router.post("/device/register", response_model=DeviceRegisterResponse)
 def register_device(
@@ -197,24 +186,17 @@ def register_device(
 
     uuid = body.device_uuid.strip()
 
-    # ---- 1. Decode the token if present (but don't require it) ----
     claims = None
     if credentials is not None:
         try:
-            claims = decode_token(credentials.credentials, expected_type=TokenType.ACCESS)
-        except TokenError as e:
-            # Token present but invalid → treat as "no token" from a UX standpoint.
-            # We do NOT immediately error, because the client is allowed to re-register
-            # only if the UUID is brand new. Existing UUIDs are still blocked below.
+            claims = decode_token(
+                credentials.credentials, expected_type=TokenType.ACCESS
+            )
+        except TokenError:
             claims = None
 
-    # ---- 2. Look up the device ----
     profile = session.query(DeviceProfile).filter_by(device_uuid=uuid).one_or_none()
 
-    # ---- 2b. Token present + brand-new UUID → reject ----
-    # A caller who already has an account must not silently create a second
-    # anonymous user by presenting a fresh UUID. Reinstall (fresh UUID, no
-    # token) is still allowed.
     if profile is None and claims is not None:
         try:
             _ = int(claims["sub"])
@@ -226,19 +208,15 @@ def register_device(
                 ),
             )
         except (KeyError, ValueError):
-            # Malformed token → treat as no token (fall through)
             claims = None
 
-    # ---- 3. Revoked → 403 always ----
     if profile is not None and profile.revoked:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="This device has been deactivated. Contact support.",
         )
 
-    # ---- 4. The security guard: UUID exists but caller can't prove ownership ----
     if profile is not None:
-        # Must have a token and it must belong to the same user
         if claims is None:
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
@@ -254,29 +232,22 @@ def register_device(
                 headers={"WWW-Authenticate": "Bearer"},
             )
 
-        # Token belongs to a *different* account than the device
         if token_user_id != profile.user_id:
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
                 detail="Token does not belong to this device.",
             )
 
-        # Also verify the token was issued *for this device* (we put `dev` in claims)
         if claims.get("dev") and claims["dev"] != uuid[:12]:
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
                 detail="Token was issued for a different device.",
             )
 
-    # ---- 5. From here on, we either create or resume ----
     is_new_user = False
     guest_email = f"guest+{uuid}@device.local"
 
     if profile is None:
-        # New device. If the caller had a valid token, we still treat this as a
-        # *new* device — they can only bind a UUID to their existing account if
-        # we add an explicit "link device" endpoint later. For now, always
-        # anonymous new user.
         user = User(
             is_admin=False,
             email=guest_email,
@@ -299,7 +270,6 @@ def register_device(
     else:
         user = session.get(User, profile.user_id)
         if user is None:
-            # Orphan recovery
             user = User(
                 is_admin=False,
                 email=guest_email,
@@ -311,10 +281,14 @@ def register_device(
             is_new_user = True
 
         profile.last_seen_at = _utcnow_naive()
-        if body.platform:    profile.platform    = body.platform
-        if body.device_model: profile.device_model = body.device_model
-        if body.os_version:  profile.os_version  = body.os_version
-        if body.app_version: profile.app_version = body.app_version
+        if body.platform:
+            profile.platform = body.platform
+        if body.device_model:
+            profile.device_model = body.device_model
+        if body.os_version:
+            profile.os_version = body.os_version
+        if body.app_version:
+            profile.app_version = body.app_version
 
     ttl = timedelta(days=ENV.DEVICE_TOKEN_TTL_DAYS)
     access = create_access_token(

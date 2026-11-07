@@ -1,8 +1,3 @@
-"""
-VerseTranslation endpoints — nested under /chapters/{chapter_id}/verses/{verse_id}.
-
-Create auto-sets both `chapter_id` and `chapter_detail_id` from the URL path.
-"""
 from database.models import VerseTranslation
 from routes.base_router import make_crud_router
 from schemas.verse_translation import (

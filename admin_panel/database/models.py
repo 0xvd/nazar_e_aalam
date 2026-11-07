@@ -1,20 +1,3 @@
-"""
-SQLAlchemy 2.x ORM models — ported from the Laravel migrations.
-
-Dropped from the original schema (intentional):
-  - donations, transactions, payment_methods, categories   (donation feature)
-  - jobs, job_batches, failed_jobs                         (Laravel queue)
-  - personal_access_tokens                                 (Laravel Sanctum → JWT)
-  - reset_passwords                                        (empty table)
-  - wallpaper_categories                                   (flat wallpapers now)
-  - blog_posts                                             (not needed)
-
-Changed from the original schema:
-  - users:    dropped `invitation_token`, `remember_token`
-  - users:    added `refresh_tokens` relationship
-  - new table `refresh_tokens` — hashed, revocable, multi-device
-  - wall_papers: dropped `category_id` and the category relationship
-"""
 from __future__ import annotations
 
 import enum
@@ -28,7 +11,6 @@ from sqlalchemy import (
     Column,
     Date,
     DateTime,
-    Enum as SAEnum,
     Float,
     ForeignKey,
     Index,
@@ -38,17 +20,14 @@ from sqlalchemy import (
     Text,
     func,
 )
+from sqlalchemy import (
+    Enum as SAEnum,
+)
 from sqlalchemy.dialects.mysql import LONGTEXT
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from database.database import Base
 
-# --------------------------------------------------------------------------- #
-#  Reusable column types / mixins
-# --------------------------------------------------------------------------- #
-
-# Laravel `longText` = MySQL LONGTEXT (4 GB). Text() = 64 KB on MySQL, so we
-# upgrade it to LONGTEXT on MySQL while staying portable elsewhere.
 LongText = Text().with_variant(LONGTEXT(), "mysql")
 
 
@@ -64,11 +43,6 @@ class TimestampMixin:
         server_default=func.now(),
         onupdate=func.now(),
     )
-
-
-# --------------------------------------------------------------------------- #
-#  Python enums (mirror Laravel ENUM columns)
-# --------------------------------------------------------------------------- #
 
 
 class Gender(str, enum.Enum):
@@ -91,10 +65,6 @@ class BulkImportStatus(str, enum.Enum):
     COMPLETED = "completed"
     FAILED = "failed"
 
-
-# --------------------------------------------------------------------------- #
-#  Association (pivot) tables
-# --------------------------------------------------------------------------- #
 
 role_user = Table(
     "role_user",
@@ -132,15 +102,6 @@ permission_role = Table(
     Index("role_permission_index", "role_id", "permission_id"),
 )
 
-# NOTE: swap `mapped_column` → `Column` inside the two Table() defs above if
-# your SQLAlchemy version complains — both work in 2.0.x, `Column` is the
-# idiomatic choice for standalone association tables.
-
-
-# --------------------------------------------------------------------------- #
-#  Auth / RBAC
-# --------------------------------------------------------------------------- #
-
 
 class User(TimestampMixin, Base):
     __tablename__ = "users"
@@ -153,7 +114,7 @@ class User(TimestampMixin, Base):
     expired_at: Mapped[datetime | None] = mapped_column(DateTime)
     password: Mapped[str | None] = mapped_column(String(255))
     is_admin: Mapped[bool] = mapped_column(Boolean, default=False, server_default="0")
-    devices: Mapped[list["DeviceProfile"]] = relationship(
+    devices: Mapped[list[DeviceProfile]] = relationship(
         back_populates="user", cascade="all, delete-orphan"
     )
     profile: Mapped[Profile | None] = relationship(
@@ -180,7 +141,10 @@ class RefreshToken(Base):
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
     user_id: Mapped[int] = mapped_column(
-        BigInteger, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
+        BigInteger,
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
     )
     token_hash: Mapped[str] = mapped_column(String(64), unique=True, nullable=False)
     expires_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, index=True)
@@ -209,18 +173,19 @@ class DeviceProfile(TimestampMixin, Base):
     """
 
     __tablename__ = "device_profiles"
-    __table_args__ = (
-        Index("device_profiles_user_idx", "user_id", "revoked"),
-    )
+    __table_args__ = (Index("device_profiles_user_idx", "user_id", "revoked"),)
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
     user_id: Mapped[int] = mapped_column(
-        BigInteger, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
+        BigInteger,
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
     )
     device_uuid: Mapped[str] = mapped_column(
         String(64), unique=True, nullable=False, index=True
     )
-    platform: Mapped[str | None] = mapped_column(String(10))       # "ios" | "android"
+    platform: Mapped[str | None] = mapped_column(String(10))
     device_model: Mapped[str | None] = mapped_column(String(100))
     os_version: Mapped[str | None] = mapped_column(String(50))
     app_version: Mapped[str | None] = mapped_column(String(50))
@@ -233,7 +198,6 @@ class DeviceProfile(TimestampMixin, Base):
 
     def __repr__(self) -> str:
         return f"<DeviceProfile(user_id={self.user_id}, uuid={self.device_uuid[:8]}…, revoked={self.revoked})>"
-
 
 
 class Profile(TimestampMixin, Base):
@@ -290,11 +254,6 @@ class PasswordResetToken(Base):
     created_at: Mapped[datetime | None] = mapped_column(DateTime)
 
 
-# --------------------------------------------------------------------------- #
-#  Quran
-# --------------------------------------------------------------------------- #
-
-
 class Translator(TimestampMixin, Base):
     __tablename__ = "translators"
 
@@ -320,7 +279,9 @@ class Chapter(TimestampMixin, Base):
     verses_count: Mapped[int] = mapped_column(Integer, nullable=False)
     revelation_place: Mapped[str] = mapped_column(String(255), nullable=False)
     revelation_order: Mapped[str] = mapped_column(String(255), nullable=False)
-    bismillah_pre: Mapped[bool] = mapped_column(Boolean, default=True, server_default="1")
+    bismillah_pre: Mapped[bool] = mapped_column(
+        Boolean, default=True, server_default="1"
+    )
 
     translations: Mapped[list[ChapterTranslation]] = relationship(
         back_populates="chapter", cascade="all, delete-orphan"
@@ -339,7 +300,9 @@ class Chapter(TimestampMixin, Base):
 class ChapterTranslation(TimestampMixin, Base):
     __tablename__ = "chapter_translations"
     __table_args__ = (
-        Index("chapter_translation_index", "chapter_id", "translator_id", "translate_name"),
+        Index(
+            "chapter_translation_index", "chapter_id", "translator_id", "translate_name"
+        ),
     )
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
@@ -409,13 +372,10 @@ class VerseTranslation(TimestampMixin, Base):
     translate_name: Mapped[str] = mapped_column(Text, nullable=False)
 
     chapter: Mapped[Chapter] = relationship(back_populates="verse_translations")
-    chapter_detail: Mapped[ChapterDetail] = relationship(back_populates="verse_translations")
+    chapter_detail: Mapped[ChapterDetail] = relationship(
+        back_populates="verse_translations"
+    )
     translator: Mapped[Translator] = relationship(back_populates="verse_translations")
-
-
-# --------------------------------------------------------------------------- #
-#  Content: duas, dhikrs, sifat_names, haram_codes
-# --------------------------------------------------------------------------- #
 
 
 class Dua(TimestampMixin, Base):
@@ -462,16 +422,9 @@ class HaramCode(TimestampMixin, Base):
     status_info: Mapped[str | None] = mapped_column(Text)
 
 
-# --------------------------------------------------------------------------- #
-#  Config / misc
-# --------------------------------------------------------------------------- #
-
-
 class Setting(TimestampMixin, Base):
     __tablename__ = "settings"
-    __table_args__ = (
-        Index("settingable_index", "settingable_type", "settingable_id"),
-    )
+    __table_args__ = (Index("settingable_index", "settingable_type", "settingable_id"),)
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
     name: Mapped[str] = mapped_column(String(255), nullable=False)
@@ -497,8 +450,12 @@ class PrayerTime(TimestampMixin, Base):
     isha_start: Mapped[str | None] = mapped_column(String(255))
     sehri: Mapped[str | None] = mapped_column(String(255))
     iftar: Mapped[str | None] = mapped_column(String(255))
-    iftar_notification: Mapped[bool] = mapped_column(Boolean, default=False, server_default="0")
-    sehri_notification: Mapped[bool] = mapped_column(Boolean, default=False, server_default="0")
+    iftar_notification: Mapped[bool] = mapped_column(
+        Boolean, default=False, server_default="0"
+    )
+    sehri_notification: Mapped[bool] = mapped_column(
+        Boolean, default=False, server_default="0"
+    )
     second: Mapped[str | None] = mapped_column(String(255))
     se_notify: Mapped[str | None] = mapped_column(String(255))
 
@@ -516,20 +473,17 @@ class DeviceInfo(TimestampMixin, Base):
     count: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
 
 
-# --------------------------------------------------------------------------- #
-#  Reciters / audio
-# --------------------------------------------------------------------------- #
-
 class Reciter(TimestampMixin, Base):
     __tablename__ = "reciters"
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
-    slug: Mapped[str] = mapped_column(String(100), unique=True, nullable=False, index=True)
+    slug: Mapped[str] = mapped_column(
+        String(100), unique=True, nullable=False, index=True
+    )
     name: Mapped[str] = mapped_column(String(100), nullable=False)
     position: Mapped[int | None] = mapped_column(Integer)
     profile_picture: Mapped[str | None] = mapped_column(String(255))
 
-    # --- Quran audio metadata (per-ayah, R2-hosted) ---
     bitrate: Mapped[str | None] = mapped_column(String(20))
     total_ayahs: Mapped[int] = mapped_column(
         Integer, default=6236, server_default="6236"
@@ -575,9 +529,10 @@ class BulkSuraImport(TimestampMixin, Base):
     )
     zip_path: Mapped[str | None] = mapped_column(String(255))
     original_name: Mapped[str | None] = mapped_column(String(255))
-    replace_existing: Mapped[bool] = mapped_column(Boolean, default=False, server_default="0")
+    replace_existing: Mapped[bool] = mapped_column(
+        Boolean, default=False, server_default="0"
+    )
 
-    # See BulkImportStatus — kept as String so new states don't need migrations.
     status: Mapped[str] = mapped_column(String(20), nullable=False, default="queued")
     current_file: Mapped[str | None] = mapped_column(String(255))
 
@@ -593,11 +548,6 @@ class BulkSuraImport(TimestampMixin, Base):
     reciter: Mapped[Reciter] = relationship(back_populates="bulk_imports")
 
 
-# --------------------------------------------------------------------------- #
-#  Wallpapers (flat — no categories)
-# --------------------------------------------------------------------------- #
-
-
 class Wallpaper(TimestampMixin, Base):
     __tablename__ = "wall_papers"
 
@@ -607,10 +557,6 @@ class Wallpaper(TimestampMixin, Base):
 
     def __repr__(self) -> str:
         return f"<Wallpaper(id={self.id}, name={self.name!r})>"
-
-# --------------------------------------------------------------------------- #
-#  Sync jobs (long-running background operations)
-# --------------------------------------------------------------------------- #
 
 
 class SyncJob(TimestampMixin, Base):
@@ -626,18 +572,15 @@ class SyncJob(TimestampMixin, Base):
     """
 
     __tablename__ = "sync_jobs"
-    __table_args__ = (
-        Index("sync_jobs_status_idx", "status", "started_at"),
-    )
+    __table_args__ = (Index("sync_jobs_status_idx", "status", "started_at"),)
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
-    kind: Mapped[str] = mapped_column(String(32), nullable=False)  # "ayah"
+    kind: Mapped[str] = mapped_column(String(32), nullable=False)
     status: Mapped[str] = mapped_column(
         String(20), nullable=False, default="queued", server_default="queued"
     )
-    # queued | running | stopping | stopped | done | failed | interrupted
 
-    reciters: Mapped[Any | None] = mapped_column(JSON)  # list[str] | None = all
+    reciters: Mapped[Any | None] = mapped_column(JSON)
 
     total: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
     processed: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
@@ -664,19 +607,20 @@ class SyncJob(TimestampMixin, Base):
     def __repr__(self) -> str:
         return f"<SyncJob(id={self.id}, kind={self.kind!r}, status={self.status!r})>"
 
+
 class MosqueCache(Base):
     __tablename__ = "mosque_cache"
-    
+
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True)
-    # Round lat/lon to 3 decimals (~100m grid) to cache nearby areas
+
     lat_grid: Mapped[float] = mapped_column(Float, index=True)
     lon_grid: Mapped[float] = mapped_column(Float, index=True)
-    radius: Mapped[int] = mapped_column(Integer) # The search radius
-    
-    # Store the raw JSON response from Google as text
-    data: Mapped[str] = mapped_column(Text) 
-    
+    radius: Mapped[int] = mapped_column(Integer)
+
+    data: Mapped[str] = mapped_column(Text)
+
     created_at: Mapped[datetime] = mapped_column(DateTime, server_default=func.now())
+
 
 class DhikrCampaign(TimestampMixin, Base):
     """
@@ -695,8 +639,10 @@ class DhikrCampaign(TimestampMixin, Base):
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
     title: Mapped[str] = mapped_column(String(255), nullable=False)
     description: Mapped[str | None] = mapped_column(Text)
-    # Short slug used by the app banner (e.g. "19th-chand-1448-05")
-    slug: Mapped[str] = mapped_column(String(100), unique=True, nullable=False, index=True)
+
+    slug: Mapped[str] = mapped_column(
+        String(100), unique=True, nullable=False, index=True
+    )
 
     starts_on: Mapped[date] = mapped_column(Date, nullable=False)
     ends_on: Mapped[date] = mapped_column(Date, nullable=False)
@@ -707,7 +653,7 @@ class DhikrCampaign(TimestampMixin, Base):
         BigInteger, ForeignKey("users.id", ondelete="SET NULL")
     )
 
-    submissions: Mapped[list["DhikrSubmission"]] = relationship(
+    submissions: Mapped[list[DhikrSubmission]] = relationship(
         back_populates="campaign", cascade="all, delete-orphan"
     )
 
@@ -726,20 +672,23 @@ class DhikrSubmission(TimestampMixin, Base):
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
     campaign_id: Mapped[int] = mapped_column(
-        BigInteger, ForeignKey("dhikr_campaigns.id", ondelete="CASCADE"),
-        nullable=False, index=True,
+        BigInteger,
+        ForeignKey("dhikr_campaigns.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
     )
     user_id: Mapped[int] = mapped_column(
-        BigInteger, ForeignKey("users.id", ondelete="CASCADE"),
-        nullable=False, index=True,
+        BigInteger,
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
     )
-    device_uuid: Mapped[str | None] = mapped_column(String(64))  # convenience for admin
+    device_uuid: Mapped[str | None] = mapped_column(String(64))
 
     full_name: Mapped[str | None] = mapped_column(String(255))
     phone: Mapped[str | None] = mapped_column(String(20))
     count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
 
-    # pending | handled | rejected
     status: Mapped[str] = mapped_column(
         String(20), nullable=False, default="pending", server_default="pending"
     )
@@ -750,7 +699,7 @@ class DhikrSubmission(TimestampMixin, Base):
     handled_at: Mapped[datetime | None] = mapped_column(DateTime)
 
     campaign: Mapped[DhikrCampaign] = relationship(back_populates="submissions")
-    user: Mapped["User"] = relationship(foreign_keys=[user_id])
+    user: Mapped[User] = relationship(foreign_keys=[user_id])
 
     def __repr__(self) -> str:
         return f"<DhikrSubmission(id={self.id}, campaign_id={self.campaign_id}, count={self.count})>"

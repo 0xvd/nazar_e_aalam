@@ -1,4 +1,3 @@
-"""Sifat name (names of Allah) endpoints."""
 from database.models import SifatName
 from routes.base_router import make_crud_router
 from schemas.sifat_name import SifatNameCreate, SifatNameRead, SifatNameUpdate

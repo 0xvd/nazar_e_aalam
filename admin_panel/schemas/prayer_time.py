@@ -1,4 +1,3 @@
-"""PrayerTime request / response schemas."""
 from __future__ import annotations
 
 from datetime import date
@@ -16,7 +15,7 @@ class PrayerTimeRead(BaseModel):
     imsak: str | None = None
     fajr_start: str | None = None
     sunrise: str | None = None
-    zuhr_start: str | None = None       # on Friday: this is the jummah time
+    zuhr_start: str | None = None
     asr_start: str | None = None
     sunset: str | None = None
     maghrib_start: str | None = None

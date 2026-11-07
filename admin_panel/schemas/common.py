@@ -1,4 +1,3 @@
-"""Shared response wrappers."""
 from __future__ import annotations
 
 from math import ceil
@@ -21,7 +20,7 @@ class Page(BaseModel, Generic[T]):
     meta: PageMeta
 
     @classmethod
-    def build(cls, items: list[T], *, total: int, skip: int, limit: int) -> "Page[T]":
+    def build(cls, items: list[T], *, total: int, skip: int, limit: int) -> Page[T]:
         return cls(
             items=items,
             meta=PageMeta(

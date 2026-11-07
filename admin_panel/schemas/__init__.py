@@ -1,4 +1,3 @@
-"""Pydantic schemas."""
 from schemas.auth import (
     LoginRequest,
     LoginResponse,
