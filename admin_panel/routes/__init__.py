@@ -28,6 +28,7 @@ from routes.sync import router as sync_router
 from routes.translator import router as translator_router
 from routes.verse_translation import router as verse_translation_router
 from routes.wallpaper import router as wallpaper_router
+from routes.dhikr import router as dhikr_router
 
 __all__ = [
     "admin_backup_router",
