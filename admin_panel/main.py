@@ -24,10 +24,15 @@ from routes import (
     panel_config_router,
     chapter_verses_full_router,
     chapter_verses_router,
+    mosque_router,
+    dhikr_router,
+    admin_devices_router,
+    admin_dhikr_router,
     dhikr_router,
     dua_router,
     haram_code_router,
     hijri_router,
+    sync_router,
     prayer_time_router,
     reciter_router,
     setting_router,
@@ -98,6 +103,15 @@ async def lifespan(app: FastAPI):
         log.warning(f"[seed] reciters failed: {e}")
 
     seed_chapters()
+
+    # Recover any sync job that was mid-run when this process died.
+    try:
+        from tools.ayah_sync_runner import recover_orphans
+        n = recover_orphans()
+        if n:
+            log.warning(f"[sync] marked {n} orphaned job(s) as interrupted")
+    except Exception as e:  # noqa: BLE001
+        log.warning(f"[sync] orphan recovery failed: {e}")
 
     # Background schedulers.
     if ENV.CHAND_SCHEDULER_ENABLED:
@@ -245,43 +259,33 @@ class _ErrorShield(BaseHTTPMiddleware):
 
 app.add_middleware(_ErrorShield)
 
-
-# ---- API Routers -----------------------------------------------------------
-
-# ---- API Routers -----------------------------------------------------------
-
 # All API endpoints are served under /api.
 app.include_router(panel_config_router)
-
-api_router = APIRouter(prefix="/api")
-
-api_router.include_router(auth_router)
-api_router.include_router(me_router)
-api_router.include_router(dua_router)
-api_router.include_router(dhikr_router)
-api_router.include_router(wallpaper_router)
-api_router.include_router(sifat_name_router)
-api_router.include_router(haram_code_router)
-api_router.include_router(translator_router)
-api_router.include_router(chapter_router)
-api_router.include_router(reciter_router)
-api_router.include_router(chapter_verses_router)
-api_router.include_router(chapter_verses_full_router)
-api_router.include_router(verse_translation_router)
-api_router.include_router(administrator_router)
-api_router.include_router(setting_router)
-api_router.include_router(prayer_time_router)
-api_router.include_router(hijri_router)
-api_router.include_router(admin_backup_router)
-api_router.include_router(role_router)
-api_router.include_router(search_router)
-
-# Register all API routes.
-app.include_router(api_router)
-
-
-
-# ---- Dev-only /debug router ------------------------------------------------
+app.include_router(auth_router)
+app.include_router(me_router)
+app.include_router(dua_router)
+app.include_router(dhikr_router)
+app.include_router(wallpaper_router)
+app.include_router(sifat_name_router)
+app.include_router(haram_code_router)
+app.include_router(translator_router)
+app.include_router(chapter_router)
+app.include_router(reciter_router)
+app.include_router(chapter_verses_router)
+app.include_router(chapter_verses_full_router)
+app.include_router(verse_translation_router)
+app.include_router(administrator_router)
+app.include_router(setting_router)
+app.include_router(prayer_time_router)
+app.include_router(hijri_router)
+app.include_router(admin_backup_router)
+app.include_router(role_router)
+app.include_router(search_router)
+app.include_router(sync_router)
+app.include_router(mosque_router)
+app.include_router(admin_devices_router)
+app.include_router(dhikr_router)
+app.include_router(admin_dhikr_router)
 
 if ENV.is_debug():
     from routes.debug import router as debug_router
@@ -289,8 +293,6 @@ if ENV.is_debug():
     app.include_router(debug_router)
     log.info("[/debug] dev-only introspection routes enabled")
 
-
-# ---- Frontend (development AND production) --------------------------------
 
 _FRONTEND = Path(__file__).resolve().parent / "panel"
 
@@ -323,3 +325,7 @@ def health() -> dict:
             "head": head_revision(),
         },
     }
+
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app='main:app', port=8000, reload=ENV.is_debug(), workers=4)

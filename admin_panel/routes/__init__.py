@@ -22,14 +22,22 @@ from routes.panel_config import router as panel_config_router
 from routes.me import router as me_router
 from routes.role import router as role_router
 from routes.search import router as search_router
+from routes.sync import router as sync_router
+from routes.mosque import router as mosque_router
+from routes.admin_devices import router as admin_devices_router
+from routes.dhikr import router as dhikr_router
+from routes.admin_dhikr import router as admin_dhikr_router
 
 __all__ = [
     "administrator_router",       # ← new
     "auth_router",
     "chapter_router",
+    "mosque_router",
     "chapter_verses_full_router",
+    "sync_router",
     "chapter_verses_router",
     "dhikr_router",
+    "admin_devices_router",
     "dua_router",
     "haram_code_router",
     "reciter_router",
@@ -45,4 +53,6 @@ __all__ = [
     "panel_config_router",
     "role_router",
     "search_router",
+    "dhikr_router",
+    "admin_dhikr_router",
 ]

@@ -11,12 +11,13 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 
 from fastapi import APIRouter, Depends, HTTPException, Request, status
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from sqlalchemy.orm import Session
 
 from cache import rate_limiter
 from config import ENV
 from database import db
-from database.models import User
+from database.models import User, DeviceProfile
 from dependencies.auth import get_current_user
 from repositories.refresh_token_repository import RefreshTokenRepository
 from repositories.user_repository import UserRepository
@@ -24,6 +25,8 @@ from schemas.auth import (
     LoginRequest,
     LoginResponse,
     RefreshRequest,
+    DeviceRegisterRequest,
+    DeviceRegisterResponse,
     TokenPair,
     UserOut,
 )
@@ -37,6 +40,7 @@ from security._jwt import (
 from security.passwords import verify_password
 
 router = APIRouter(prefix="/auth", tags=["auth"])
+_bearer_optional = HTTPBearer(auto_error=False)
 
 
 # ---- helpers ---------------------------------------------------------------
@@ -159,3 +163,170 @@ def logout(
 @router.get("/me", response_model=UserOut)
 def me(user: User = Depends(get_current_user)) -> UserOut:
     return UserOut.model_validate(user)
+
+@router.post("/device/register", response_model=DeviceRegisterResponse)
+def register_device(
+    body: DeviceRegisterRequest,
+    request: Request,
+    credentials: HTTPAuthorizationCredentials | None = Depends(_bearer_optional),
+    session: Session = Depends(db.get_db),
+) -> DeviceRegisterResponse:
+    """
+    Register (or resume) an anonymous device.
+
+    Rules:
+    - No token   + brand-new UUID      → create user, issue long-lived token
+    - No token   + UUID already exists → 401 (can't claim someone else's device)
+    - Valid token + UUID matches claim → resume, update last_seen, refresh token
+    - Valid token + UUID differs       → 403 (can't hijack another device)
+    - Any token that's revoked/expired → 401 (client must clear and try again with no token,
+                                           but that path is also blocked if UUID exists)
+    """
+
+    if ENV.RATE_LIMIT_ENABLED:
+        allowed, _ = rate_limiter.hit(
+            f"device-register:{_client_ip(request)}",
+            limit=ENV.DEVICE_REGISTER_RATE_LIMIT,
+            window=60,
+        )
+        if not allowed:
+            raise HTTPException(
+                status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+                detail="Too many device registrations. Try again in a minute.",
+            )
+
+    uuid = body.device_uuid.strip()
+
+    # ---- 1. Decode the token if present (but don't require it) ----
+    claims = None
+    if credentials is not None:
+        try:
+            claims = decode_token(credentials.credentials, expected_type=TokenType.ACCESS)
+        except TokenError as e:
+            # Token present but invalid → treat as "no token" from a UX standpoint.
+            # We do NOT immediately error, because the client is allowed to re-register
+            # only if the UUID is brand new. Existing UUIDs are still blocked below.
+            claims = None
+
+    # ---- 2. Look up the device ----
+    profile = session.query(DeviceProfile).filter_by(device_uuid=uuid).one_or_none()
+
+    # ---- 2b. Token present + brand-new UUID → reject ----
+    # A caller who already has an account must not silently create a second
+    # anonymous user by presenting a fresh UUID. Reinstall (fresh UUID, no
+    # token) is still allowed.
+    if profile is None and claims is not None:
+        try:
+            _ = int(claims["sub"])
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail=(
+                    "Token is present but this device is not registered to it. "
+                    "Clear your local token to start fresh."
+                ),
+            )
+        except (KeyError, ValueError):
+            # Malformed token → treat as no token (fall through)
+            claims = None
+
+    # ---- 3. Revoked → 403 always ----
+    if profile is not None and profile.revoked:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="This device has been deactivated. Contact support.",
+        )
+
+    # ---- 4. The security guard: UUID exists but caller can't prove ownership ----
+    if profile is not None:
+        # Must have a token and it must belong to the same user
+        if claims is None:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Device is already registered. Log in or reinstall to continue.",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+        try:
+            token_user_id = int(claims["sub"])
+        except (KeyError, ValueError):
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Malformed token.",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
+        # Token belongs to a *different* account than the device
+        if token_user_id != profile.user_id:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Token does not belong to this device.",
+            )
+
+        # Also verify the token was issued *for this device* (we put `dev` in claims)
+        if claims.get("dev") and claims["dev"] != uuid[:12]:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Token was issued for a different device.",
+            )
+
+    # ---- 5. From here on, we either create or resume ----
+    is_new_user = False
+    guest_email = f"guest+{uuid}@device.local"
+
+    if profile is None:
+        # New device. If the caller had a valid token, we still treat this as a
+        # *new* device — they can only bind a UUID to their existing account if
+        # we add an explicit "link device" endpoint later. For now, always
+        # anonymous new user.
+        user = User(
+            is_admin=False,
+            email=guest_email,
+            email_verified_at=_utcnow_naive(),
+        )
+        session.add(user)
+        session.flush()
+        is_new_user = True
+
+        profile = DeviceProfile(
+            user_id=user.id,
+            device_uuid=uuid,
+            platform=body.platform,
+            device_model=body.device_model,
+            os_version=body.os_version,
+            app_version=body.app_version,
+            last_seen_at=_utcnow_naive(),
+        )
+        session.add(profile)
+    else:
+        user = session.get(User, profile.user_id)
+        if user is None:
+            # Orphan recovery
+            user = User(
+                is_admin=False,
+                email=guest_email,
+                email_verified_at=_utcnow_naive(),
+            )
+            session.add(user)
+            session.flush()
+            profile.user_id = user.id
+            is_new_user = True
+
+        profile.last_seen_at = _utcnow_naive()
+        if body.platform:    profile.platform    = body.platform
+        if body.device_model: profile.device_model = body.device_model
+        if body.os_version:  profile.os_version  = body.os_version
+        if body.app_version: profile.app_version = body.app_version
+
+    ttl = timedelta(days=ENV.DEVICE_TOKEN_TTL_DAYS)
+    access = create_access_token(
+        subject=user.id,
+        extra={"dev": uuid[:12], "admin": user.is_admin},
+        ttl=ttl,
+    )
+    session.commit()
+
+    return DeviceRegisterResponse(
+        access_token=access,
+        expires_in=int(ttl.total_seconds()),
+        user_id=user.id,
+        is_new_user=is_new_user,
+    )

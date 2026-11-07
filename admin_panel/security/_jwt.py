@@ -43,7 +43,7 @@ def _encode(payload: dict[str, Any], ttl: timedelta, token_type: str) -> str:
     return jwt.encode(data, ENV.JWT_SIGNING_KEY, algorithm=ENV.JWT_ALGORITHM)
 
 
-def create_access_token(subject: int, extra: dict[str, Any] | None = None) -> str:
+def create_access_token(subject: int, extra: dict[str, Any] | None = None, *, ttl: timedelta | None = None) -> str:
     payload = {
         "sub": str(subject),
         "jti": secrets.token_urlsafe(16),   # ← unique per token
@@ -51,7 +51,7 @@ def create_access_token(subject: int, extra: dict[str, Any] | None = None) -> st
     }
     return _encode(
         payload,
-        timedelta(minutes=ENV.JWT_ACCESS_TTL_MINUTES),
+        ttl or timedelta(minutes=ENV.JWT_ACCESS_TTL_MINUTES),
         TokenType.ACCESS,
     )
 

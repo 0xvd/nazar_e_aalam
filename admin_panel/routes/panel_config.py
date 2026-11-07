@@ -19,30 +19,9 @@ router = APIRouter(prefix="/panel_config", tags=["panel"])
 
 
 def _api_base(request: Request) -> str:
-    """
-    Canonical API base URL.
-
-    Dev  (uvicorn serves /panel at :8000, routes at root)   → "" (relative)
-    Prod (nginx serves /panel/, proxies /api/* → uvicorn)  → "/api"
-
-    Returning "" in dev makes CONFIG.api_base + "/wallpapers" resolve to
-    "/wallpapers" — FastAPI routes it directly. Returning "/api" in prod
-    makes CONFIG.api_base + "/wallpapers" resolve to "/api/wallpapers" —
-    nginx strips /api and proxies to FastAPI's /wallpapers. Same endpoint
-    in both environments, from the panel's point of view.
-    """
     if ENV.is_production():
-        # Behind nginx (or any proxy that routes /api/* to this app).
-        # A bare path is strictly better than an absolute URL here:
-        #  - no host, so no 127.0.0.1 vs localhost vs admin.yourdomain.com drift
-        #  - no CORS (same-origin by construction)
-        #  - no mixed-content on HTTPS
-        return "/api"
-
-    # Dev: relative to the panel's own origin. uvicorn serves /panel/ and
-    # the API routes on the same port, so root paths just work.
+        return ""
     return ""
-
 
 @router.get("", response_model=PanelConfigResponse)
 def get_panel_config(request: Request, response: Response) -> PanelConfigResponse:

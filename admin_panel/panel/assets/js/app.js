@@ -259,6 +259,9 @@ const NAV = [
   ["Translators", "globe"],
   ["Uploads", "upload"],
   ["Backup", "down"],
+  ["Sync", "refresh"], // ← new
+  ["Dhikr Campaigns", "check"], // ← new
+  ["Devices", "head"], // ← new
   ["Settings", "set"],
 ];
 
@@ -437,11 +440,13 @@ async function go(page) {
   container.innerHTML = `<div class="card glass s12"><div class="empty">${ic("refresh")} Loading…</div></div>`;
   if (page === "Dashboard") startDashboard();
   if (page === "Uploads") initUploadsPage();
-
+  if (page === "Sync") {
+    _syncStartPolling();
+  }
   try {
     const html = await PAGE_RENDERERS[page]();
     container.innerHTML = html;
-    enhanceAllSelects(container);        // ← ADD THIS LINE
+    enhanceAllSelects(container); // ← ADD THIS LINE
     [...container.children].forEach((e, i) => e.style.setProperty("--i", i));
     if (page === "Dashboard") startDashboard();
   } catch (e) {
@@ -2490,6 +2495,9 @@ const PAGE_RENDERERS = {
   Uploads: uploadsPage,
   Settings: settingsPage,
   Backup: backupPage,
+  Sync: syncPage,
+  "Dhikr Campaigns": dhikrCampaignsPage,
+  Devices: devicesPage,
 };
 
 async function backupPage() {
@@ -2582,6 +2590,270 @@ async function backupPage() {
   return `<div class="card glass s12">${head}${statusCard}${listCard}${actionsCard}</div>`;
 }
 
+// ============================================================================
+// Sync — Quran audio → R2 (background job with live log tail)
+// ============================================================================
+const _syncState = {
+  jobId: null,
+  logOffset: 0,
+  statusTimer: null,
+  logTimer: null,
+  attachedStatus: null,
+};
+
+function _syncStopTimers() {
+  if (_syncState.statusTimer) {
+    clearInterval(_syncState.statusTimer);
+    _syncState.statusTimer = null;
+  }
+  if (_syncState.logTimer) {
+    clearInterval(_syncState.logTimer);
+    _syncState.logTimer = null;
+  }
+}
+
+function _syncFmtBytes(n) {
+  n = Number(n) || 0;
+  if (n < 1024) return n + " B";
+  if (n < 1024 ** 2) return (n / 1024).toFixed(0) + " KB";
+  if (n < 1024 ** 3) return (n / 1024 ** 2).toFixed(1) + " MB";
+  return (n / 1024 ** 3).toFixed(2) + " GB";
+}
+
+function _syncStatusBadge(status) {
+  const map = {
+    queued: `<span class="pill off">queued</span>`,
+    running: `<span class="pill">running</span>`,
+    stopping: `<span class="pill warn">stopping…</span>`,
+    stopped: `<span class="pill off">stopped</span>`,
+    done: `<span class="pill ok">done</span>`,
+    failed: `<span class="pill" style="background:#8f2308;color:#fff">failed</span>`,
+    interrupted: `<span class="pill warn">interrupted</span>`,
+  };
+  return map[status] || `<span class="pill off">${esc(status)}</span>`;
+}
+
+function _syncRenderStatus(job) {
+  const el = $("#sync-status-body");
+  if (!el) return;
+
+  if (!job) {
+    el.innerHTML = `<div class="empty">No job yet. Click <b>Start sync</b> to download and upload every ayah for all reciters.</div>`;
+    return;
+  }
+
+  const total = job.total || 0;
+  const done = job.processed || 0;
+  const pct = total > 0 ? Math.min(100, Math.round((done / total) * 100)) : 0;
+  const isLive = ["queued", "running", "stopping"].includes(job.status);
+
+  const progressBar = isLive
+    ? `<div style="height:10px;background:rgba(130,60,10,.12);border-radius:999px;overflow:hidden;margin:12px 0">
+         <div style="height:100%;width:${pct}%;background:var(--grad);transition:width .35s ease"></div>
+       </div>`
+    : "";
+
+  el.innerHTML = `
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <b>Job #${job.id}</b> ${_syncStatusBadge(job.status)}
+      <small style="color:var(--mut);margin-left:auto">
+        ${job.started_at ? "started " + esc(job.started_at) : ""}
+        ${job.finished_at ? " · finished " + esc(job.finished_at) : ""}
+      </small>
+    </div>
+    ${progressBar}
+    <div class="sync-meta">
+      <div><label>Progress</label><b>${done.toLocaleString()} / ${total.toLocaleString()} (${pct}%)</b></div>
+      <div><label>Uploaded</label><b>${(job.uploaded || 0).toLocaleString()}</b></div>
+      <div><label>Skipped</label><b>${(job.skipped || 0).toLocaleString()}</b></div>
+      <div><label>Failed</label><b>${(job.failed || 0).toLocaleString()}</b></div>
+      <div><label>Bytes</label><b>${_syncFmtBytes(job.bytes_done)}</b></div>
+      <div><label>Current</label><b>${esc(job.current_file || "—")}</b></div>
+      ${job.reciters ? `<div class="full"><label>Reciters</label><b>${esc((job.reciters || []).join(", ") || "(all)")}</b></div>` : ""}
+      ${job.message ? `<div class="full"><label>Message</label><b>${esc(job.message)}</b></div>` : ""}
+      ${job.error ? `<div class="full"><label>Error</label><b style="color:#8f2308">${esc(job.error)}</b></div>` : ""}
+    </div>`;
+}
+
+function _syncSetButtons(running) {
+  const s = $("#sync-btn-start");
+  const t = $("#sync-btn-stop");
+  if (s) s.disabled = !!running;
+  if (t) t.style.display = running ? "inline-flex" : "none";
+}
+
+let _syncTerminalBuffer = "";
+
+function _syncAppendLog(text) {
+  if (!text) return;
+  const pre = $("#sync-log");
+  if (!pre) return;
+
+  const atBottom = pre.scrollTop + pre.clientHeight >= pre.scrollHeight - 24;
+
+  // Append the new chunk to our master buffer
+  _syncTerminalBuffer += text;
+
+  // Parse the buffer to apply terminal rules (\n = new line, \r = reset line)
+  let lines = _syncTerminalBuffer.split("\n");
+  let parsedLines = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    let line = lines[i];
+    // If the line contains \r, only keep the text AFTER the last \r
+    if (line.includes("\r")) {
+      const parts = line.split("\r");
+      line = parts[parts.length - 1];
+    }
+    parsedLines.push(line);
+  }
+
+  // Don't render the very last empty line yet (it's waiting for text)
+  const currentText = parsedLines.join("\n");
+
+  // Only update DOM if text actually changed to save CPU
+  if (pre.textContent !== currentText) {
+    pre.textContent = currentText;
+    if (atBottom) pre.scrollTop = pre.scrollHeight;
+  }
+}
+
+async function _syncFetchStatus() {
+  try {
+    const r = await api.get("/admin/sync/ayah/status");
+    const active = r.active || null;
+    const job = active || r.last || null;
+    _syncRenderStatus(job);
+
+    if (active) {
+      _syncState.jobId = active.id;
+      _syncSetButtons(active.status !== "stopping");
+      return active;
+    }
+    _syncState.jobId = null;
+    _syncSetButtons(false);
+    return null;
+  } catch (e) {
+    return null;
+  }
+}
+
+async function _syncFetchLogs(jobId) {
+  if (!jobId) return null;
+  try {
+    const r = await api.get(
+      `/admin/sync/ayah/logs?job_id=${jobId}&offset=${_syncState.logOffset}`,
+    );
+    if (r.exists && r.chunk) {
+      _syncAppendLog(r.chunk);
+    }
+    _syncState.logOffset = r.next_offset;
+    return r;
+  } catch {
+    return null;
+  }
+}
+
+async function _syncTick() {
+  const active = await _syncFetchStatus();
+
+  // If there is a job (active or last), tail its logs.
+  let jobId = active?.id ?? _syncState.jobId;
+  if (!jobId) {
+    // Fall back to the last job's id so the log pane isn't empty on reload
+    try {
+      const r = await api.get("/admin/sync/ayah/status");
+      if (r.last) jobId = r.last.id;
+    } catch {}
+  }
+  if (jobId) await _syncFetchLogs(jobId);
+
+  if (!active) {
+    _syncStopTimers();
+  }
+}
+
+function _syncStartPolling() {
+  _syncStopTimers();
+  // Immediate one-shot so the UI is populated before the first interval fires.
+  _syncTick();
+  _syncState.statusTimer = setInterval(_syncTick, 2000);
+}
+
+async function syncPage() {
+  // Reset UI state — but DO NOT start a new job.
+  _syncStopTimers();
+  _syncState.jobId = null;
+  _syncState.logOffset = 0;
+  _syncTerminalBuffer = ""; // <-- ADD THIS
+
+  // const pre = $("#sync-log");
+  // if (pre) pre.textContent = "";
+
+  return `
+    <div class="card glass s12">
+      <div class="eh">
+        <div class="ic">${ic("refresh")}</div>
+        <div style="flex:1">
+          <h3>Sync Quran audio</h3>
+          <p>Download every ayah from EveryAyah and upload to R2. Safe to stop — it resumes from where it left off.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+          <button type="button" class="b2" id="sync-btn-start" data-act="sync-start">${ic("play")}Start sync</button>
+          <button type="button" class="b3" id="sync-btn-stop" data-act="sync-stop" style="display:none;color:var(--bad)">${ic("pause")}Stop</button>
+          <button type="button" class="b3" data-act="sync-refresh" title="Refresh status">${ic("refresh")}</button>
+        </div>
+      </div>
+
+      <div class="ch" style="margin-top:18px;margin-bottom:10px">
+        <div class="ic" style="background:rgba(130,60,10,.1)">${ic("clock")}</div>
+        <div><b>Job status</b><small>Auto-refreshes while a job is running</small></div>
+      </div>
+      <div id="sync-status-body" style="background:rgba(255,255,255,0.4);border:1px solid var(--line);border-radius:14px;padding:16px;min-height:100px">
+        <div class="empty">Loading…</div>
+      </div>
+
+      <div class="ch" style="margin-top:22px;margin-bottom:10px">
+        <div class="ic" style="background:rgba(130,60,10,.1)">${ic("book")}</div>
+        <div><b>Log</b><small>Live tail of the runner output</small></div>
+        <button type="button" class="b3" data-act="sync-scroll-bottom" style="margin-left:auto">↓ Follow</button>
+      </div>
+      <pre id="sync-log" style="
+        margin:0;padding:14px 16px;border-radius:14px;
+        background:#1b130d;color:#fde4c2;
+        font:12px/1.55 ui-monospace,Menlo,Consolas,monospace;
+        max-height:440px;overflow:auto;white-space:pre-wrap;word-break:break-word;
+        border:1px solid rgba(255,160,63,.2);
+      "></pre>
+    </div>`;
+}
+
+async function syncStartAction() {
+  try {
+    const r = await api.post("/admin/sync/ayah/start", {});
+    toast(
+      r.attached ? `Attached to job #${r.job_id}` : `Started job #${r.job_id}`,
+    );
+    _syncState.logOffset = 0;
+    _syncTerminalBuffer = ""; // <-- ADD THIS
+    const pre = $("#sync-log");
+    if (pre) pre.textContent = "";
+    _syncStartPolling();
+  } catch (e) {
+    toast(e.message || "Start failed", true);
+  }
+}
+
+async function syncStopAction() {
+  try {
+    await api.post("/admin/sync/ayah/stop", {});
+    toast("Stop requested — job will halt after the current ayah");
+    _syncStartPolling();
+  } catch (e) {
+    toast(e.message || "Stop failed", true);
+  }
+}
+
 function backupRestoreConfirm(filename) {
   confirmBox({
     title: "Restore database backup?",
@@ -2659,6 +2931,139 @@ document.addEventListener("click", async (e) => {
         if (cb) await cb();
         break;
       }
+      // Devices
+      case "device-view":
+        await showUserDevices(parseInt(el.dataset.uid, 10));
+        break;
+      case "device-revoke": {
+        const uid = parseInt(el.dataset.uid, 10);
+        const uuid = el.dataset.uuid;
+        confirmBox({
+          title: "Revoke this device?",
+          msg: "Blocked from re-registering. Existing token stays valid until it expires.",
+          ok: "Revoke",
+          onOk: async () => {
+            try {
+              await api.post(`/administrators/${uid}/devices/${uuid}/revoke`);
+              toast("Device revoked");
+              await showUserDevices(uid);
+            } catch (e) {
+              toast(e.message || "Revoke failed", true);
+            }
+          },
+        });
+        break;
+      }
+
+      // Dhikr
+      case "dhikr-tab":
+        _dhikrState.tab = el.dataset.tab;
+        await go("Dhikr Campaigns");
+        break;
+      case "dhikr-add":
+        await openCampaignForm(null);
+        break;
+      case "dhikr-edit": {
+        const all = await api.get("/admin/dhikr/campaigns");
+        const found = all.find((x) => x.id === parseInt(el.dataset.id, 10));
+        if (found) await openCampaignForm(found);
+        break;
+      }
+      case "dhikr-toggle":
+        try {
+          await api.post(`/admin/dhikr/campaigns/${el.dataset.id}/toggle`);
+          toast("Campaign toggled");
+          await go("Dhikr Campaigns");
+        } catch (e) {
+          toast(e.message, true);
+        }
+        break;
+            case "dhikr-delete": {
+        const campaignId = el.dataset.id;
+        const title = el.dataset.title;
+        confirmBox({
+          title: `Delete "${title}"?`,
+          msg: "This is permanent. If the campaign has submissions, it cannot be deleted — disable it instead.",
+          onOk: async () => {
+            try {
+              await api.del(`/admin/dhikr/campaigns/${campaignId}`);
+              toast("Campaign deleted");
+              await go("Dhikr Campaigns");
+            } catch (e) {
+              // Detect the "cannot delete, has submissions" case
+              let errDetail = null;
+              try {
+                // api.del throws Error with a string message; try to recover structure
+                // from the raw response if the api helper preserved it
+                errDetail = e.raw || null;
+              } catch {}
+
+              // Fallback: inspect the message text
+              const msg = String(e.message || "");
+
+              if (msg.includes("has") && msg.includes("submission")) {
+                // Show a follow-up modal offering "Disable instead"
+                openModal(
+                  `<div class="mh">
+                    <h3>Cannot delete this campaign</h3>
+                    <button type="button" class="x" data-act="close">${ic("x")}</button>
+                  </div>
+                  <p class="msg" style="padding:16px 22px;margin:0">
+                    ${esc(msg)}<br><br>
+                    You can still <b>disable</b> it to stop new submissions while
+                    keeping all existing records intact.
+                  </p>
+                  <div class="mfoot">
+                    <button type="button" class="b3" data-act="close">Cancel</button>
+                    <button type="button" class="btn"
+                      data-act="dhikr-disable"
+                      data-id="${campaignId}">
+                      ${ic("pause")}Disable instead
+                    </button>
+                  </div>`,
+                  true,
+                );
+              } else {
+                toast(msg || "Delete failed", true);
+              }
+            }
+          },
+        });
+        break;
+      }
+
+      case "dhikr-disable": {
+        const campaignId = el.dataset.id;
+        closeModal();
+        try {
+          // Toggle to inactive — only if currently active
+          const all = await api.get("/admin/dhikr/campaigns");
+          const found = all.find(c => c.id === parseInt(campaignId, 10));
+          if (found && found.is_active) {
+            await api.post(`/admin/dhikr/campaigns/${campaignId}/toggle`);
+          }
+          toast("Campaign disabled — submissions preserved");
+          await go("Dhikr Campaigns");
+        } catch (e) {
+          toast(e.message || "Disable failed", true);
+        }
+        break;
+      }
+      case "dhikr-handle":
+      case "dhikr-reject": {
+        const id = parseInt(el.dataset.id, 10);
+        const targetStatus = act === "dhikr-handle" ? "handled" : "rejected";
+        try {
+          await api.patch(`/admin/dhikr/submissions/${id}`, {
+            status: targetStatus,
+          });
+          toast(`Marked as ${targetStatus}`);
+          await go("Dhikr Campaigns");
+        } catch (e) {
+          toast(e.message, true);
+        }
+        break;
+      }
       case "logout":
         await api.logout();
         break;
@@ -2732,6 +3137,23 @@ document.addEventListener("click", async (e) => {
       case "backup-restore":
         backupRestoreConfirm(el.dataset.filename);
         break;
+      case "sync-start":
+        await syncStartAction();
+        break;
+      case "sync-stop":
+        await syncStopAction();
+        break;
+      case "sync-refresh":
+        _syncState.logOffset = 0;
+        const pre = $("#sync-log");
+        if (pre) pre.textContent = "";
+        _syncStartPolling();
+        break;
+      case "sync-scroll-bottom": {
+        const preEl = $("#sync-log");
+        if (preEl) preEl.scrollTop = preEl.scrollHeight;
+        break;
+      }
       case "role-create-open":
         roleCreateModal();
         break;
@@ -2813,6 +3235,16 @@ document.addEventListener("change", async (e) => {
   if (ch === "prayer-year") {
     state.prayerYear = parseInt(x.value, 10);
     await go("Prayer Times");
+  }
+  if (ch === "dhikr-campaign") {
+    _dhikrState.activeCampaignId = parseInt(x.value, 10);
+    await go("Dhikr Campaigns");
+    return;
+  }
+  if (ch === "dhikr-status") {
+    _dhikrState.statusFilter = x.value;
+    await go("Dhikr Campaigns");
+    return;
   }
 });
 
@@ -2967,6 +3399,13 @@ async function renderPaletteResults(query) {
       },
       icon: "plus",
     },
+    {
+      type: "command",
+      title: "Sync Quran audio",
+      action: () => go("Sync"),
+      icon: "refresh",
+    },
+
     {
       type: "command",
       title: "New wallpaper",
@@ -3162,6 +3601,398 @@ document.addEventListener("click", () => {
     w.querySelector(".csel-trigger")?.setAttribute("aria-expanded", "false");
   });
 });
+
+// ============================================================================
+// Devices — admin view of all registered devices
+// ============================================================================
+async function devicesPage() {
+  let users = [];
+  try {
+    const r = await api.get("/administrators?include_guests=true&limit=500");
+    users = r.items || [];
+  } catch (e) {
+    return `<div class="card glass s12">
+      <div class="empty">${esc(e.message || "Failed to load users")}</div>
+    </div>`;
+  }
+
+  const head = `
+    <div class="eh">
+      <div class="ic">${ic("head")}</div>
+      <div><h3>Devices</h3><p>${users.length} registered account${users.length === 1 ? "" : "s"} · admins + guests</p></div>
+      <button type="button" class="b3" data-act="reload">${ic("refresh")}Reload</button>
+    </div>`;
+
+  if (!users.length) {
+    return `<div class="card glass s12">${head}<div class="empty">No users registered yet.</div></div>`;
+  }
+
+  const rows = users
+    .map(
+      (u) => `
+    <tr>
+      <td>#${u.id}</td>
+      <td>${esc(u.email || "—")}</td>
+      <td>${u.is_admin ? `<span class="pill">admin</span>` : `<span class="pill off">guest</span>`}</td>
+      <td>
+        <button type="button" class="b3" data-act="device-view" data-uid="${u.id}">
+          ${ic("head")}View devices
+        </button>
+      </td>
+    </tr>
+  `,
+    )
+    .join("");
+
+  return `<div class="card glass s12">${head}
+    <div class="tb">
+      <div class="fld">${ic("search")}<input type="search" placeholder="Search…" data-filter></div>
+    </div>
+    <div class="tw"><table>
+      <thead><tr><th>ID</th><th>Email</th><th>Type</th><th></th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>
+    <div class="foot">${users.length} total</div>
+  </div>`;
+}
+
+async function showUserDevices(userId) {
+  try {
+    const devices = await api.get(`/administrators/${userId}/devices`);
+    const rows = devices
+      .map(
+        (d) => `
+      <tr>
+        <td><code style="font-size:11px">${esc((d.device_uuid || "").slice(0, 16))}…</code></td>
+        <td>${esc(d.platform || "—")}</td>
+        <td>${esc(d.device_model || "—")}</td>
+        <td>${esc(d.os_version || "—")}</td>
+        <td>${esc(d.app_version || "—")}</td>
+        <td>${d.revoked ? `<span class="pill off">revoked</span>` : `<span class="pill ok">active</span>`}</td>
+        <td>${esc(d.last_seen_at || "—")}</td>
+        <td>
+          ${
+            !d.revoked
+              ? `<button type="button" class="b3" style="color:var(--bad)"
+              data-act="device-revoke"
+              data-uid="${userId}"
+              data-uuid="${esc(d.device_uuid)}">Revoke</button>`
+              : "—"
+          }
+        </td>
+      </tr>
+    `,
+      )
+      .join("");
+
+    openModal(`
+      <div class="mh">
+        <h3>Devices for user #${userId}</h3>
+        <button type="button" class="x" data-act="close">${ic("x")}</button>
+      </div>
+      <div class="mf" style="padding:0">
+        ${
+          devices.length
+            ? `
+          <table style="width:100%;border-collapse:collapse;font-size:12px">
+            <thead><tr style="text-align:left;border-bottom:1px solid var(--line)">
+              <th style="padding:8px">UUID</th>
+              <th style="padding:8px">Platform</th>
+              <th style="padding:8px">Model</th>
+              <th style="padding:8px">OS</th>
+              <th style="padding:8px">App</th>
+              <th style="padding:8px">Status</th>
+              <th style="padding:8px">Last seen</th>
+              <th style="padding:8px"></th>
+            </tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        `
+            : `<div class="empty">No devices for this user.</div>`
+        }
+      </div>
+    `);
+  } catch (e) {
+    toast(e.message || "Failed to load devices", true);
+  }
+}
+// ============================================================================
+// Dhikr Campaigns
+// ============================================================================
+const _dhikrState = {
+  tab: "campaigns",
+  activeCampaignId: null,
+  statusFilter: "pending",
+};
+
+async function dhikrCampaignsPage() {
+  let campaigns = [];
+  try {
+    campaigns = await api.get("/admin/dhikr/campaigns");
+  } catch (e) {
+    return `<div class="card glass s12">
+      <div class="empty">${esc(e.message || "Failed to load campaigns")}</div>
+    </div>`;
+  }
+
+  // Fetch stats in parallel
+  const statsMap = {};
+  await Promise.all(
+    campaigns.map(async (c) => {
+      try {
+        statsMap[c.id] = await api.get(`/admin/dhikr/campaigns/${c.id}/stats`);
+      } catch {
+        statsMap[c.id] = null;
+      }
+    }),
+  );
+
+  const totalSubmissions = Object.values(statsMap).reduce(
+    (sum, s) => sum + (s?.total_submissions || 0),
+    0,
+  );
+  const totalDhikrs = Object.values(statsMap).reduce(
+    (sum, s) => sum + (s?.total_dhikrs || 0),
+    0,
+  );
+  const totalPending = Object.values(statsMap).reduce(
+    (sum, s) => sum + (s?.pending || 0),
+    0,
+  );
+
+  const cards = `
+    <div class="card glass s4 stat">
+      <div class="top"><div class="ic">${ic("check")}</div></div>
+      <div class="num">${totalDhikrs.toLocaleString()}</div>
+      <div class="lbl">Total Dhikrs</div>
+    </div>
+    <div class="card glass s4 stat">
+      <div class="top"><div class="ic">${ic("beads")}</div></div>
+      <div class="num">${totalSubmissions.toLocaleString()}</div>
+      <div class="lbl">Submissions</div>
+    </div>
+    <div class="card glass s4 stat">
+      <div class="top"><div class="ic">${ic("clock")}</div></div>
+      <div class="num"${totalPending > 0 ? ' style="color:var(--bad)"' : ""}>${totalPending.toLocaleString()}</div>
+      <div class="lbl">Pending Review</div>
+    </div>`;
+
+  const tabs = `
+    <div style="display:flex;gap:0;border-bottom:1px solid var(--line);margin-top:16px">
+      <button type="button" data-act="dhikr-tab" data-tab="campaigns"
+        style="flex:1;padding:14px;background:${_dhikrState.tab === "campaigns" ? "var(--grad)" : "transparent"};color:${_dhikrState.tab === "campaigns" ? "#fff" : "inherit"};border:none;cursor:pointer;font-weight:700">
+        Campaigns (${campaigns.length})
+      </button>
+      <button type="button" data-act="dhikr-tab" data-tab="submissions"
+        style="flex:1;padding:14px;background:${_dhikrState.tab === "submissions" ? "var(--grad)" : "transparent"};color:${_dhikrState.tab === "submissions" ? "#fff" : "inherit"};border:none;cursor:pointer;font-weight:700">
+        Submissions (${totalSubmissions})
+      </button>
+    </div>`;
+
+  const head = `
+    <div class="eh">
+      <div class="ic">${ic("beads")}</div>
+      <div><h3>Dhikr Campaigns</h3><p>Manage submission windows and review user submissions</p></div>
+      <button type="button" class="b2" data-act="dhikr-add">${ic("plus")}New Campaign</button>
+    </div>`;
+
+  const content =
+    _dhikrState.tab === "campaigns"
+      ? renderCampaignsList(campaigns, statsMap)
+      : await renderSubmissionsTab(campaigns);
+
+  return `<div class="card glass s12">${head}</div>${cards}<div class="card glass s12">${tabs}${content}</div>`;
+}
+
+function renderCampaignsList(campaigns, statsMap) {
+  if (!campaigns.length) {
+    return `<div class="empty" style="padding:32px">No campaigns yet. Click "New Campaign" to create one.</div>`;
+  }
+
+  const today = new Date().toISOString().slice(0, 10);
+
+  const rows = campaigns
+    .map((c) => {
+      const stats = statsMap[c.id];
+      const isToday = today >= c.starts_on && today <= c.ends_on;
+      const state = !c.is_active
+        ? `<span class="pill off">disabled</span>`
+        : isToday
+          ? `<span class="pill ok">active today</span>`
+          : `<span class="pill warn">scheduled</span>`;
+
+      return `
+      <tr>
+        <td>#${c.id}</td>
+        <td><b>${esc(c.title)}</b></td>
+        <td><code style="font-size:11px">${esc(c.slug)}</code></td>
+        <td>${esc(c.starts_on)}</td>
+        <td>${esc(c.ends_on)}</td>
+        <td>${state}</td>
+        <td>${(stats?.total_submissions || 0).toLocaleString()}</td>
+        <td>${(stats?.total_dhikrs || 0).toLocaleString()}</td>
+        <td>
+          <span class="act-b">
+            <button type="button" data-act="dhikr-toggle" data-id="${c.id}"
+              title="${c.is_active ? "Deactivate" : "Activate"}">
+              ${c.is_active ? ic("pause") : ic("play")}
+            </button>
+            <button type="button" data-act="dhikr-edit" data-id="${c.id}" title="Edit">
+              ${ic("edit")}
+            </button>
+            <button type="button" class="d" data-act="dhikr-delete" data-id="${c.id}" data-title="${esc(c.title)}">
+              ${ic("trash")}
+            </button>
+          </span>
+        </td>
+      </tr>
+    `;
+    })
+    .join("");
+
+  return `
+    <div class="tw"><table>
+      <thead><tr>
+        <th>ID</th><th>Title</th><th>Slug</th><th>Starts</th><th>Ends</th>
+        <th>Status</th><th>Submissions</th><th>Dhikrs</th><th>Actions</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>
+  `;
+}
+
+async function renderSubmissionsTab(campaigns) {
+  if (!campaigns.length) {
+    return `<div class="empty" style="padding:32px">No campaigns yet.</div>`;
+  }
+
+  const cid = _dhikrState.activeCampaignId || campaigns[0].id;
+  _dhikrState.activeCampaignId = cid;
+
+  const cidOpts = campaigns
+    .map(
+      (c) =>
+        `<option value="${c.id}"${c.id === cid ? " selected" : ""}>${esc(c.title)}</option>`,
+    )
+    .join("");
+
+  const statusOpts = [
+    ["pending", "Pending"],
+    ["handled", "Handled"],
+    ["rejected", "Rejected"],
+    ["", "All statuses"],
+  ]
+    .map(
+      ([v, l]) =>
+        `<option value="${v}"${_dhikrState.statusFilter === v ? " selected" : ""}>${l}</option>`,
+    )
+    .join("");
+
+  let data = { total: 0, items: [] };
+  try {
+    const q = _dhikrState.statusFilter
+      ? `&status_filter=${_dhikrState.statusFilter}`
+      : "";
+    data = await api.get(
+      `/admin/dhikr/campaigns/${cid}/submissions?limit=500${q}`,
+    );
+  } catch (e) {
+    return `<div class="empty" style="padding:32px">${esc(e.message)}</div>`;
+  }
+
+  const rows = (data.items || [])
+    .map((s) => {
+      const pill =
+        {
+          pending: `<span class="pill warn">pending</span>`,
+          handled: `<span class="pill ok">handled</span>`,
+          rejected: `<span class="pill off">rejected</span>`,
+        }[s.status] || esc(s.status);
+
+      return `
+      <tr>
+        <td>#${s.id}</td>
+        <td>${esc(s.full_name || "—")}</td>
+        <td>${esc(s.phone || "—")}</td>
+        <td><b>${s.count.toLocaleString()}</b></td>
+        <td>${pill}</td>
+        <td><code style="font-size:10px">${esc((s.device_uuid || "").slice(0, 10))}…</code></td>
+        <td>${esc(s.created_at || "")}</td>
+        <td>
+          ${
+            s.status === "pending"
+              ? `
+            <span class="act-b">
+              <button type="button" data-act="dhikr-handle" data-id="${s.id}" title="Mark handled" style="color:var(--ok)">${ic("check")}</button>
+              <button type="button" class="d" data-act="dhikr-reject" data-id="${s.id}" title="Reject">${ic("x")}</button>
+            </span>`
+              : "—"
+          }
+        </td>
+      </tr>
+    `;
+    })
+    .join("");
+
+  return `
+    <div class="tb" style="padding:14px 0;display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end">
+      <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:180px;max-width:280px">
+        <label style="font-size:11px;font-weight:700;text-transform:uppercase;color:var(--mut)">Campaign</label>
+        <select class="in" data-change="dhikr-campaign">${cidOpts}</select>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:140px">
+        <label style="font-size:11px;font-weight:700;text-transform:uppercase;color:var(--mut)">Filter</label>
+        <select class="in" data-change="dhikr-status">${statusOpts}</select>
+      </div>
+      <div style="margin-left:auto;font-size:12px;color:var(--mut)">
+        ${data.total.toLocaleString()} submission${data.total === 1 ? "" : "s"}
+      </div>
+    </div>
+    ${
+      data.items?.length
+        ? `
+      <div class="tw"><table>
+        <thead><tr>
+          <th>ID</th><th>Name</th><th>Phone</th><th>Count</th><th>Status</th>
+          <th>Device</th><th>Submitted</th><th>Actions</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table></div>
+    `
+        : `<div class="empty" style="padding:32px">No submissions${_dhikrState.statusFilter ? ` with status "${_dhikrState.statusFilter}"` : ""}.</div>`
+    }
+  `;
+}
+async function openCampaignForm(existing) {
+  const isEdit = !!existing;
+  formModal({
+    title: isEdit ? `Edit: ${existing.title}` : "New Dhikr Campaign",
+    fields: [
+      { k: "title", l: "Title", req: 1, full: 1, h: "e.g. 19th Chand Dhikr" },
+      { k: "slug", l: "Slug", req: 1, full: 1, h: "lowercase, hyphens only" },
+      { k: "description", l: "Description", t: "area", full: 1 },
+      { k: "starts_on", l: "Starts on", req: 1, t: "date" },
+      { k: "ends_on", l: "Ends on", req: 1, t: "date" },
+    ],
+    data: existing || {},
+    onSubmit: async (vals) => {
+      if (vals.ends_on < vals.starts_on)
+        return "End date must be on/after start";
+      try {
+        if (isEdit) {
+          await api.patch(`/admin/dhikr/campaigns/${existing.id}`, vals);
+        } else {
+          await api.post("/admin/dhikr/campaigns", vals);
+        }
+        toast(isEdit ? "Updated" : "Created");
+        await go("Dhikr Campaigns");
+        return null;
+      } catch (e) {
+        return e.message || "Save failed";
+      }
+    },
+  });
+}
 
 // ============================================================================
 // Init

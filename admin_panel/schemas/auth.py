@@ -1,8 +1,9 @@
 """Pydantic request / response models for auth endpoints."""
 from __future__ import annotations
 
+from typing import Literal
 from pydantic import BaseModel, ConfigDict, EmailStr, Field
-
+from datetime import datetime
 
 class LoginRequest(BaseModel):
     email: EmailStr
@@ -24,7 +25,7 @@ class UserOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     id: int
-    email: EmailStr
+    email: str | None = None       # ← was EmailStr; make it plain str | None
     first_name: str | None = None
     last_name: str | None = None
     is_admin: bool
@@ -32,3 +33,31 @@ class UserOut(BaseModel):
 
 class LoginResponse(TokenPair):
     user: UserOut
+
+
+class DeviceRegisterRequest(BaseModel):
+    device_uuid: str = Field(min_length=8, max_length=64)
+    platform: Literal["ios", "android"] | None = None
+    device_model: str | None = Field(default=None, max_length=100)
+    os_version: str | None = Field(default=None, max_length=50)
+    app_version: str | None = Field(default=None, max_length=50)
+
+
+class DeviceRegisterResponse(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
+    expires_in: int
+    user_id: int
+    is_new_user: bool
+
+
+class DeviceOut(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+    device_uuid: str
+    platform: str | None = None
+    device_model: str | None = None
+    os_version: str | None = None
+    app_version: str | None = None
+    revoked: bool
+    last_seen_at: datetime | None = None
+    created_at: datetime

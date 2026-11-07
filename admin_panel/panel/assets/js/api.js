@@ -43,22 +43,19 @@ window.api = (() => {
   // ---- bootstrap ---------------------------------------------------------
   async function bootstrap() {
     if (CONFIG) return CONFIG;
-    const candidates = ["/panel_config", "/api/panel_config"];
     let lastErr;
-    for (const url of candidates) {
-      try {
-        const res = await fetch(url, {
-          headers: { Accept: "application/json" },
-        });
-        if (res.ok) {
-          CONFIG = await res.json();
-          return CONFIG;
-        }
-      } catch (e) {
-        lastErr = e;
+    try {
+      const res = await fetch("/panel_config", {
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        CONFIG = await res.json();
+        return CONFIG;
       }
+    } catch (e) {
+      lastErr = e;
     }
-    throw lastErr || new Error("panel_config unreachable");
+    throw new Error("panel_config unreachable");
   }
   function ready() {
     if (!readyPromise) readyPromise = bootstrap();

@@ -189,6 +189,13 @@ class ENV:
     MAINTENANCE_MODE: bool
     MAINTENANCE_MESSAGE: str
 
+    SYNC_LOG_DIR: str
+
+    GOOGLE_MAPS_API_KEY: str
+
+    DEVICE_TOKEN_TTL_DAYS: int
+    DEVICE_REGISTER_RATE_LIMIT: int
+
     @classmethod
     def reload(cls) -> None:
         """Re-read every value from the environment."""
@@ -284,6 +291,12 @@ class ENV:
             "MAINTENANCE_MODE": get_env_bool("MAINTENANCE_MODE", False),
             "MAINTENANCE_MESSAGE": get_env("MAINTENANCE_MESSAGE", ""),
 
+            "SYNC_LOG_DIR": get_env("SYNC_LOG_DIR", "logs/sync"),
+
+            "GOOGLE_MAPS_API_KEY": get_env("GOOGLE_MAPS_API_KEY", ""),
+
+            "DEVICE_TOKEN_TTL_DAYS": get_env_int("DEVICE_TOKEN_TTL_DAYS", 3650),
+            "DEVICE_REGISTER_RATE_LIMIT": get_env_int("DEVICE_REGISTER_RATE_LIMIT", 10),
         }
         for name, value in values.items():
             setattr(cls, name, value)
