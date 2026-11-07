@@ -117,8 +117,6 @@ class _Tee(io.TextIOBase):
 # --------------------------------------------------------------------------- #
 #  Public entrypoint (called from a thread by routes/sync.py)
 # --------------------------------------------------------------------------- #
-
-
 def run(job_id: int) -> None:
     _LOG_DIR.mkdir(parents=True, exist_ok=True)
     log_path = _LOG_DIR / f"ayah_{job_id}.log"
@@ -129,7 +127,7 @@ def run(job_id: int) -> None:
         if job is None:
             return
         if job.status not in ("queued", "running"):
-            return  # someone else already ran it / it was cancelled
+            return
         job.status = "running"
         job.started_at = datetime.utcnow()
         job.log_path = str(log_path)
@@ -137,18 +135,31 @@ def run(job_id: int) -> None:
 
     _announce(log_path, job_id, targets)
 
-    # ---- run sync_quran with stdout teed to log file + checkpoint hook ---- #
-    def _checkpoint(**kw):
-        _save_progress(job_id, **kw)
+    # ---- counters we track ourselves (no parsing needed) ---- #
+    counters = {
+        "processed": 0,
+        "uploaded": 0,
+        "skipped": 0,
+        "failed": 0,
+        "bytes_done": 0,
+        "current_file": None,
+    }
+    last_checkpoint = {"at": 0.0}
+    counters_lock = threading.Lock()
+
+    def _flush_checkpoint(force: bool = False) -> None:
+        now = time.monotonic()
+        if not force and now - last_checkpoint["at"] < 2.0:
+            return
+        last_checkpoint["at"] = now
+        _save_progress(job_id, **counters)
 
     def _should_stop() -> bool:
         with db.session() as s:
             j = s.get(SyncJob, job_id)
             return bool(j and j.stop_requested)
 
-    # sync_quran has no "check stop between ayahs" hook; we wrap its inner
-    # loop by monkey-patching `download` — cheap, and it's the one call made
-    # per ayah before upload.
+    # ---- wrap download so we can count every ayah ---- #
     orig_download = _sq.download
     _stopped = threading.Event()
 
@@ -158,23 +169,34 @@ def run(job_id: int) -> None:
         if _should_stop():
             _stopped.set()
             raise _StopRequested()
-        return orig_download(url, dest)
+
+        # Derive ayah filename from dest for current_file
+        with counters_lock:
+            counters["current_file"] = Path(dest).name
+            counters["processed"] += 1
+
+        ok = orig_download(url, dest)
+        with counters_lock:
+            if not ok:
+                counters["failed"] += 1
+            _flush_checkpoint()
+        return ok
 
     _sq.download = _download_checked
     _original_argv = sys.argv
     try:
         sys.argv = ["sync_quran"] + targets
         with log_path.open("w", encoding="utf-8", buffering=1) as fh:
-            tee = _Tee(fh, job_id, _checkpoint)
+            tee = _Tee(fh, job_id, lambda **kw: None)  # tee no longer checkpoints
             with redirect_stdout(tee), redirect_stderr(tee):
                 try:
-                    _sq._IS_TTY = False          # deterministic \n output
+                    _sq._IS_TTY = False
                     _sq.cmd_sync(targets, verbose=False, dry_run=False)
                 except _StopRequested:
                     print("\n[runner] stopped on request.", flush=True)
                 except SystemExit as e:
                     print(f"\n[runner] sync_quran exited: {e}", flush=True)
-                except Exception:  # noqa: BLE001
+                except Exception:
                     traceback.print_exc()
                     raise
     except _StopRequested:
@@ -199,8 +221,6 @@ def run(job_id: int) -> None:
         if job.stop_requested:
             job.status = "stopped"
         elif job.failed:
-            # sync_quran ran but some files failed to download; treat as "done"
-            # (resume-on-rerun will retry missing keys).
             job.status = "done"
             job.message = f"{job.failed} file(s) failed — rerun to retry."
         else:
@@ -226,10 +246,9 @@ def _save_progress(job_id: int, **kw) -> None:
             if job is None:
                 return
             for k, v in kw.items():
-                if hasattr(job, k):
+                if v is not None and hasattr(job, k):
                     setattr(job, k, v)
     except Exception as exc:  # noqa: BLE001
-        # Log ONCE per job so we don't spam, but never silently swallow.
         if job_id not in _CHECKPOINT_ERRORS_LOGGED:
             _CHECKPOINT_ERRORS_LOGGED.add(job_id)
             print(
