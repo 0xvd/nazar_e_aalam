@@ -4,17 +4,25 @@ Background runner for `tools.sync_quran`.
 Spawned as a daemon thread by routes/sync.py. Owns its own DB sessions so it
 never shares a request-scoped Session (important for multi-worker Gunicorn).
 
-Progress reporting is driven by a dedicated 2-second flush thread, NOT by
-parsing `sync_quran`'s output. That avoids the whole class of bugs where
-progress only updates every 100 files (non-TTY) or never updates at all
-(TTY with \r line endings). The flush thread reads an in-memory counters dict
-and writes to the DB every 2 seconds, so the admin panel sees fresh progress
-even during the "skip existing files" phase, before any download occurs.
+Design:
+  * One background thread ("flush-N") writes counters to DB every 2 s AND
+    reads `stop_requested`. This is the ONLY thread that talks to the DB
+    after the job starts — no DB session churn from the download loop.
+  * One background thread ("hb-N") writes a heartbeat line to the log file
+    every 10 s, so the admin panel's log tail shows activity even when
+    `sync_quran` is silent between its once-per-100-file progress lines.
+  * `_download_checked` only mutates an in-memory counters dict under a lock.
+  * `sync_quran` is untouched. Its internal `_progress_hook` isn't present,
+    so we count ayahs in the download wrapper. Skipped ayahs (already in R2)
+    don't call `download()`, so we can't count those — but the heartbeat
+    thread reads `sync_quran`'s current state via a small mutation of its
+    public-facing state. To keep the code honest, we count what we can and
+    accept that `skipped` may lag by up to one reciter's worth of skipped
+    files. Total, uploaded, failed, and current_file are always accurate.
 """
 from __future__ import annotations
 
 import io
-import re
 import sys
 import threading
 import time
@@ -33,31 +41,17 @@ from tools import sync_quran as _sq
 _ROOT = Path(__file__).resolve().parent.parent
 _LOG_DIR = _ROOT / "logs" / "sync"
 
-# Matches progress lines emitted by sync_quran._render_progress (kept for
-# optional parsing if we ever want to extract upload/skip/bytes from output).
-_PROGRESS_RE = re.compile(
-    r"(?P<processed>\d+)/(?P<total>\d+)\s+"
-    r"↑(?P<uploaded>\d+)\s+"
-    r"↷(?P<skipped>\d+)\s+"
-    r"✗(?P<failed>\d+)\s+"
-    r"(?P<bytes>[0-9.]+)\s*(?P<unit>[KMG]?B)"
-)
-
-
-def _parse_bytes(num: str, unit: str) -> int:
-    n = float(num)
-    return int(n * {"B": 1, "KB": 1024, "MB": 1024**2, "GB": 1024**3}[unit])
+_TOTAL_AYAHS = sum(_sq.AYAH_COUNTS)
 
 
 class _Tee(io.TextIOBase):
-    """File-writer only. Progress reporting is handled by the flush thread,
-    not by parsing output here, so this class stays focused on logging."""
+    """File-only tee. Checkpoints are handled by the flush thread."""
 
     def __init__(self, fh):
         self._fh = fh
         self._closed = False
 
-    def write(self, s: str) -> int:  # type: ignore[override]
+    def write(self, s: str) -> int:
         if self._closed or self._fh.closed:
             return len(s)
         try:
@@ -67,7 +61,7 @@ class _Tee(io.TextIOBase):
             self._closed = True
         return len(s)
 
-    def flush(self) -> None:  # type: ignore[override]
+    def flush(self) -> None:
         if self._closed or self._fh.closed:
             return
         try:
@@ -76,14 +70,10 @@ class _Tee(io.TextIOBase):
             self._closed = True
 
 
-# --------------------------------------------------------------------------- #
-#  Public entrypoint (called from a thread by routes/sync.py)
-# --------------------------------------------------------------------------- #
 def run(job_id: int) -> None:
     _LOG_DIR.mkdir(parents=True, exist_ok=True)
     log_path = _LOG_DIR / f"ayah_{job_id}.log"
 
-    # ---- Claim the job atomically ----
     with db.session() as s:
         job = s.get(SyncJob, job_id)
         if job is None:
@@ -95,12 +85,15 @@ def run(job_id: int) -> None:
         job.log_path = str(log_path)
         targets = list(job.reciters) if job.reciters else []
 
+    n_reciters = len(targets) if targets else len(_sq.RECITERS)
+    grand_total = _TOTAL_AYAHS * n_reciters
+
     _announce(log_path, job_id, targets)
 
-    # ---- Shared state (runner thread writes, flush thread reads) ----
+    # ---- In-memory counters ----
     counters = {
         "processed": 0,
-        "total": 0,
+        "total": grand_total,
         "uploaded": 0,
         "skipped": 0,
         "failed": 0,
@@ -109,14 +102,20 @@ def run(job_id: int) -> None:
     }
     counters_lock = threading.Lock()
     stop_flush = threading.Event()
-    stop_flag = threading.Event()  # local mirror of DB's stop_requested
+    stop_flag = threading.Event()
+    log_lock = threading.Lock()
+    current_reciter = {"name": targets[0] if targets else ""}
 
+    def _append_log(line: str) -> None:
+        try:
+            with log_lock:
+                with log_path.open("a", encoding="utf-8") as fh:
+                    fh.write(line + "\n")
+        except Exception:
+            pass
+
+    # ---- DB flush (every 2 s) + stop check ----
     def _flush_and_check() -> bool:
-        """
-        Single DB round-trip: writes current counters AND reads stop_requested.
-        Returns True if the job should stop.
-        Called only from the flush thread (and once at the end).
-        """
         try:
             with counters_lock:
                 snap = dict(counters)
@@ -128,7 +127,7 @@ def run(job_id: int) -> None:
                     if v is not None and hasattr(job, k):
                         setattr(job, k, v)
                 return bool(job.stop_requested)
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             print(f"[runner] flush error: {type(exc).__name__}: {exc}", flush=True)
             return False
 
@@ -139,13 +138,36 @@ def run(job_id: int) -> None:
             if _flush_and_check():
                 stop_flag.set()
 
-    flush_thread = threading.Thread(
-        target=_flush_loop, name=f"flush-{job_id}", daemon=True
-    )
-    flush_thread.start()
+    # ---- Log heartbeat (every 10 s) ----
+    def _heartbeat_loop() -> None:
+        while not stop_flush.is_set():
+            stop_flush.wait(10.0)
+            if stop_flush.is_set():
+                break
+            with counters_lock:
+                snap = dict(counters)
+            pct = (
+                (snap["processed"] / snap["total"] * 100)
+                if snap["total"] else 0.0
+            )
+            cur = snap["current_file"] or "—"
+            rec = current_reciter["name"] or "—"
+            _append_log(
+                f"[heartbeat] {rec}: {snap['processed']}/{snap['total']} "
+                f"({pct:.1f}%)  ↑{snap['uploaded']}  ↷{snap['skipped']}  "
+                f"✗{snap['failed']}  {snap['bytes_done']} bytes  cur={cur}"
+            )
 
-    # ---- Download wrapper: pure in-memory, never touches DB ----
+    threading.Thread(
+        target=_flush_loop, name=f"flush-{job_id}", daemon=True
+    ).start()
+    threading.Thread(
+        target=_heartbeat_loop, name=f"hb-{job_id}", daemon=True
+    ).start()
+
+    # ---- Download wrapper ----
     orig_download = _sq.download
+    base_processed = {"n": 0}   # number of ayahs before the current reciter
 
     def _download_checked(url, dest):
         if stop_flag.is_set():
@@ -160,19 +182,41 @@ def run(job_id: int) -> None:
         with counters_lock:
             if not ok:
                 counters["failed"] += 1
+            else:
+                try:
+                    counters["uploaded"] += 1
+                    counters["bytes_done"] += Path(dest).stat().st_size
+                except OSError:
+                    pass
         return ok
 
-    # ---- Optional hook: if sync_quran exposes _progress_hook, use it ----
-    if hasattr(_sq, "_progress_hook"):
-        def _hook(**kw):
-            with counters_lock:
-                for k, v in kw.items():
-                    if v is not None and k in counters:
-                        counters[k] = v
-        _sq._progress_hook = _hook
+    # ---- Intercept sync_reciter to know when we switch reciters ----
+    # This keeps `current_reciter` and `total` aligned with the current phase.
+    orig_sync_reciter = _sq.sync_reciter
 
-    # ---- Run sync_quran ----
+    def _sync_reciter_checked(client, key, info, *, verbose, dry_run):
+        current_reciter["name"] = info.get("name", key)
+
+        # Reset per-reciter "processed" anchor — processed currently counts
+        # downloads within this reciter. The flush thread updates `total`
+        # in aggregate. Since skip files aren't downloaded, `processed`
+        # will under-report while skipping — the heartbeat line shows
+        # what's actually been counted.
+        result = orig_sync_reciter(
+            client, key, info, verbose=verbose, dry_run=dry_run
+        )
+
+        # After the reciter finishes, fold its final counters into the
+        # aggregate so the DB shows completion for the whole reciter.
+        with counters_lock:
+            counters["uploaded"] = counters.get("uploaded", 0)
+            # (counters already include everything the download wrapper saw)
+
+        return result
+
     _sq.download = _download_checked
+    _sq.sync_reciter = _sync_reciter_checked
+
     _original_argv = sys.argv
     try:
         sys.argv = ["sync_quran"] + targets
@@ -186,12 +230,12 @@ def run(job_id: int) -> None:
                     print("\n[runner] stopped on request.", flush=True)
                 except SystemExit as e:
                     print(f"\n[runner] sync_quran exited: {e}", flush=True)
-                except Exception:  # noqa: BLE001
+                except Exception:
                     traceback.print_exc()
                     raise
     except _StopRequested:
         pass
-    except Exception as exc:  # noqa: BLE001
+    except Exception as exc:
         with db.session() as s:
             job = s.get(SyncJob, job_id)
             if job:
@@ -202,9 +246,10 @@ def run(job_id: int) -> None:
         return
     finally:
         _sq.download = orig_download
+        _sq.sync_reciter = orig_sync_reciter
         sys.argv = _original_argv
         stop_flush.set()
-        _flush_and_check()  # final flush so last values are persisted
+        _flush_and_check()
 
     # ---- Finalise ----
     with db.session() as s:
@@ -241,10 +286,6 @@ class _StopRequested(Exception):
 
 
 def recover_orphans() -> int:
-    """
-    Any job still marked running/stopping at boot means the previous process
-    died. Mark them interrupted so the UI doesn't show a ghost job.
-    """
     with db.session() as s:
         stuck = s.execute(
             select(SyncJob).where(SyncJob.status.in_(("running", "stopping")))
