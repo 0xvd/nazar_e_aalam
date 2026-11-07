@@ -4,10 +4,12 @@ Background runner for `tools.sync_quran`.
 Spawned as a daemon thread by routes/sync.py. Owns its own DB sessions so it
 never shares a request-scoped Session (important for multi-worker Gunicorn).
 
-Checkpoint strategy: `sync_quran.sync_reciter` already deletes each file from
-local staging after upload and skips R2 keys it already has — so a job that is
-stopped and later restarted simply resumes from whatever isn't in R2 yet.
-This module just needs to persist *counters* so the UI can show progress.
+Progress reporting is driven by a dedicated 2-second flush thread, NOT by
+parsing `sync_quran`'s output. That avoids the whole class of bugs where
+progress only updates every 100 files (non-TTY) or never updates at all
+(TTY with \r line endings). The flush thread reads an in-memory counters dict
+and writes to the DB every 2 seconds, so the admin panel sees fresh progress
+even during the "skip existing files" phase, before any download occurs.
 """
 from __future__ import annotations
 
@@ -31,8 +33,8 @@ from tools import sync_quran as _sq
 _ROOT = Path(__file__).resolve().parent.parent
 _LOG_DIR = _ROOT / "logs" / "sync"
 
-# Matches the progress lines emitted by sync_quran._render_progress:
-#   "  ███░░ ...  1234/6236  ↑10  ↷50  ✗0  1.23 MB  ..."
+# Matches progress lines emitted by sync_quran._render_progress (kept for
+# optional parsing if we ever want to extract upload/skip/bytes from output).
 _PROGRESS_RE = re.compile(
     r"(?P<processed>\d+)/(?P<total>\d+)\s+"
     r"↑(?P<uploaded>\d+)\s+"
@@ -48,16 +50,12 @@ def _parse_bytes(num: str, unit: str) -> int:
 
 
 class _Tee(io.TextIOBase):
-    """File + optional secondary stream, with line buffering and
-    a hook that watches for progress lines and writes checkpoints."""
+    """File-writer only. Progress reporting is handled by the flush thread,
+    not by parsing output here, so this class stays focused on logging."""
 
-    def __init__(self, fh, job_id: int, checkpoint_cb):
+    def __init__(self, fh):
         self._fh = fh
-        self._job_id = job_id
-        self._cb = checkpoint_cb
-        self._buf = ""
-        self._last_ckpt = 0.0
-        self._closed = False    # ← NEW
+        self._closed = False
 
     def write(self, s: str) -> int:  # type: ignore[override]
         if self._closed or self._fh.closed:
@@ -67,52 +65,16 @@ class _Tee(io.TextIOBase):
             self._fh.flush()
         except ValueError:
             self._closed = True
-            return len(s)
-
-        self._buf += s
-        # sync_quran emits progress with \r (TTY) or \n (pipe).
-        # Split on either so checkpoints fire in both modes.
-        while True:
-            m = re.search(r"[\r\n]", self._buf)
-            if not m:
-                break
-            pos = m.start()
-            line = self._buf[:pos]
-            self._buf = self._buf[pos + 1:]
-            self._maybe_checkpoint(line)
         return len(s)
 
     def flush(self) -> None:  # type: ignore[override]
-        if self._closed or self._fh.closed:    # ← guard
+        if self._closed or self._fh.closed:
             return
         try:
             self._fh.flush()
         except ValueError:
             self._closed = True
 
-    def close(self) -> None:    # ← NEW: mark closed explicitly
-        self._closed = True
-        try:
-            self._fh.flush()
-        except Exception:
-            pass
-
-    def _maybe_checkpoint(self, line: str) -> None:
-        m = _PROGRESS_RE.search(line)
-        if not m:
-            return
-        now = time.monotonic()
-        if now - self._last_ckpt < 2.0:
-            return
-        self._last_ckpt = now
-        self._cb(
-            processed=int(m["processed"]),
-            total=int(m["total"]),
-            uploaded=int(m["uploaded"]),
-            skipped=int(m["skipped"]),
-            failed=int(m["failed"]),
-            bytes_done=_parse_bytes(m["bytes"], m["unit"]),
-        )
 
 # --------------------------------------------------------------------------- #
 #  Public entrypoint (called from a thread by routes/sync.py)
@@ -121,7 +83,7 @@ def run(job_id: int) -> None:
     _LOG_DIR.mkdir(parents=True, exist_ok=True)
     log_path = _LOG_DIR / f"ayah_{job_id}.log"
 
-    # Claim the job atomically.
+    # ---- Claim the job atomically ----
     with db.session() as s:
         job = s.get(SyncJob, job_id)
         if job is None:
@@ -135,59 +97,87 @@ def run(job_id: int) -> None:
 
     _announce(log_path, job_id, targets)
 
-    # ---- counters we track ourselves (no parsing needed) ---- #
+    # ---- Shared state (runner thread writes, flush thread reads) ----
     counters = {
         "processed": 0,
+        "total": 0,
         "uploaded": 0,
         "skipped": 0,
         "failed": 0,
         "bytes_done": 0,
         "current_file": None,
     }
-    last_checkpoint = {"at": 0.0}
     counters_lock = threading.Lock()
+    stop_flush = threading.Event()
+    stop_flag = threading.Event()  # local mirror of DB's stop_requested
 
-    def _flush_checkpoint(force: bool = False) -> None:
-        now = time.monotonic()
-        if not force and now - last_checkpoint["at"] < 2.0:
-            return
-        last_checkpoint["at"] = now
-        _save_progress(job_id, **counters)
+    def _flush_and_check() -> bool:
+        """
+        Single DB round-trip: writes current counters AND reads stop_requested.
+        Returns True if the job should stop.
+        Called only from the flush thread (and once at the end).
+        """
+        try:
+            with counters_lock:
+                snap = dict(counters)
+            with db.session() as s:
+                job = s.get(SyncJob, job_id)
+                if job is None:
+                    return True
+                for k, v in snap.items():
+                    if v is not None and hasattr(job, k):
+                        setattr(job, k, v)
+                return bool(job.stop_requested)
+        except Exception as exc:  # noqa: BLE001
+            print(f"[runner] flush error: {type(exc).__name__}: {exc}", flush=True)
+            return False
 
-    def _should_stop() -> bool:
-        with db.session() as s:
-            j = s.get(SyncJob, job_id)
-            return bool(j and j.stop_requested)
+    def _flush_loop() -> None:
+        print(f"[runner] flush thread started for job {job_id}", flush=True)
+        while not stop_flush.is_set():
+            stop_flush.wait(2.0)
+            if _flush_and_check():
+                stop_flag.set()
 
-    # ---- wrap download so we can count every ayah ---- #
+    flush_thread = threading.Thread(
+        target=_flush_loop, name=f"flush-{job_id}", daemon=True
+    )
+    flush_thread.start()
+
+    # ---- Download wrapper: pure in-memory, never touches DB ----
     orig_download = _sq.download
-    _stopped = threading.Event()
 
     def _download_checked(url, dest):
-        if _stopped.is_set():
-            raise _StopRequested()
-        if _should_stop():
-            _stopped.set()
+        if stop_flag.is_set():
             raise _StopRequested()
 
-        # Derive ayah filename from dest for current_file
         with counters_lock:
-            counters["current_file"] = Path(dest).name
             counters["processed"] += 1
+            counters["current_file"] = Path(dest).name
 
         ok = orig_download(url, dest)
+
         with counters_lock:
             if not ok:
                 counters["failed"] += 1
-            _flush_checkpoint()
         return ok
 
+    # ---- Optional hook: if sync_quran exposes _progress_hook, use it ----
+    if hasattr(_sq, "_progress_hook"):
+        def _hook(**kw):
+            with counters_lock:
+                for k, v in kw.items():
+                    if v is not None and k in counters:
+                        counters[k] = v
+        _sq._progress_hook = _hook
+
+    # ---- Run sync_quran ----
     _sq.download = _download_checked
     _original_argv = sys.argv
     try:
         sys.argv = ["sync_quran"] + targets
         with log_path.open("w", encoding="utf-8", buffering=1) as fh:
-            tee = _Tee(fh, job_id, lambda **kw: None)  # tee no longer checkpoints
+            tee = _Tee(fh)
             with redirect_stdout(tee), redirect_stderr(tee):
                 try:
                     _sq._IS_TTY = False
@@ -196,7 +186,7 @@ def run(job_id: int) -> None:
                     print("\n[runner] stopped on request.", flush=True)
                 except SystemExit as e:
                     print(f"\n[runner] sync_quran exited: {e}", flush=True)
-                except Exception:
+                except Exception:  # noqa: BLE001
                     traceback.print_exc()
                     raise
     except _StopRequested:
@@ -208,12 +198,15 @@ def run(job_id: int) -> None:
                 job.status = "failed"
                 job.error = f"{type(exc).__name__}: {exc}"[:2000]
                 job.finished_at = datetime.utcnow()
+        stop_flush.set()
         return
     finally:
         _sq.download = orig_download
         sys.argv = _original_argv
+        stop_flush.set()
+        _flush_and_check()  # final flush so last values are persisted
 
-    # ---- finalise ---- #
+    # ---- Finalise ----
     with db.session() as s:
         job = s.get(SyncJob, job_id)
         if job is None:
@@ -236,26 +229,6 @@ def _announce(log_path: Path, job_id: int, targets: list[str]) -> None:
             f"{datetime.utcnow().isoformat(timespec='seconds')}Z\n"
             f"[runner] targets: {targets or '(all)'}\n\n"
         )
-
-_CHECKPOINT_ERRORS_LOGGED: set[int] = set()
-
-def _save_progress(job_id: int, **kw) -> None:
-    try:
-        with db.session() as s:
-            job = s.get(SyncJob, job_id)
-            if job is None:
-                return
-            for k, v in kw.items():
-                if v is not None and hasattr(job, k):
-                    setattr(job, k, v)
-    except Exception as exc:  # noqa: BLE001
-        if job_id not in _CHECKPOINT_ERRORS_LOGGED:
-            _CHECKPOINT_ERRORS_LOGGED.add(job_id)
-            print(
-                f"[runner] checkpoint FAILED for job {job_id}: "
-                f"{type(exc).__name__}: {exc}",
-                flush=True,
-            )
 
 
 class _StopRequested(Exception):
