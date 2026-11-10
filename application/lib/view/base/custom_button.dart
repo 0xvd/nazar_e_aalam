@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../util/dimensions.dart';
 
 class CustomButton extends StatelessWidget {
   final double buttonWidth;
   final String buttonName;
   final double? fontSize;
-  final Color? disableColor;
+  final Color? disableColor; // when set, a solid colour replaces the gradient
   final Widget? buttonLoderWidget;
   final VoidCallback onPressed;
   const CustomButton({
@@ -21,25 +20,50 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final primary = Theme.of(context).primaryColor;
+    final radius = BorderRadius.circular(16);
+
     return SizedBox(
       width: buttonWidth,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          elevation: 20,
-          backgroundColor:disableColor?? Theme.of(context).primaryColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(Dimensions.PADDING_SIZE_SMALL),
-          ),
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          borderRadius: radius,
+          color: disableColor,
+          gradient: disableColor == null
+              ? LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [const Color(0xFFFF8A4C), primary],
+                )
+              : null,
+          boxShadow: [
+            BoxShadow(
+              color: (disableColor ?? primary).withValues(alpha: 0.35),
+              blurRadius: 14,
+              offset: const Offset(0, 6),
+            ),
+          ],
         ),
-        onPressed: onPressed,
-        child: Padding(
-          padding: const EdgeInsets.all(Dimensions.PADDING_SIZE_DEFAULT),
-          child: buttonLoderWidget ?? Text(
-            buttonName.tr,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: fontSize,
-              fontWeight: FontWeight.bold,
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            borderRadius: radius,
+            onTap: onPressed,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 16),
+              child: Center(
+                child: buttonLoderWidget ??
+                    Text(
+                      buttonName.tr,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: fontSize ?? 15,
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: 0.3,
+                      ),
+                    ),
+              ),
             ),
           ),
         ),

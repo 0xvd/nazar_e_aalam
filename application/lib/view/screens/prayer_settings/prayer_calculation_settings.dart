@@ -4,12 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
-import 'package:nazar_e_alam/helper/route_helper.dart';
-import 'package:nazar_e_alam/helper/salat_waqt_service.dart';
 import 'package:nazar_e_alam/util/dimensions.dart';
 import 'package:nazar_e_alam/util/images.dart';
 import 'package:nazar_e_alam/util/styles.dart';
-import 'package:nazar_e_alam/view/screens/prayer_settings/widget/custom_prayer_dropdown.dart';
 
 import 'widget/custom_city_widget.dart';
 
@@ -194,8 +191,8 @@ class PrayerTimeCalculationSettings extends StatelessWidget {
                                         ? prayerTimeController.saveAddress.value
                                               .toString()
                                         : prayerTimeController
-                                              .currentAddress
-                                              .value,
+                                            .currentAddress
+                                            .value,
                                     style: robotoMedium.copyWith(
                                       fontSize: Dimensions.FONT_SIZE_DEFAULT,
                                     ),
@@ -216,140 +213,6 @@ class PrayerTimeCalculationSettings extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
-                      if (prayerTimeController.isPrayerTimes.value == false)
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              'prayer_method_settings'.tr,
-                              style: robotoMedium.copyWith(
-                                fontSize: Dimensions.FONT_SIZE_DEFAULT,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: Dimensions.PADDING_SIZE_SMALL,
-                            ),
-                            CustomPrayerSettingDropDown(
-                              dwItems: prayerTimeController.calculationMethod,
-                              dwValue: prayerTimeController
-                                  .selectedCalculationMethod,
-                              hintText: 'choose_a_prayer_key'.tr,
-                              dropdownHeight: 500,
-                              onChange: (value) {
-                                prayerTimeController
-                                    .setSelectedCalculationMethod(value);
-                                SalatWaqtService.initializeSalatWaqt();
-                              },
-                            ),
-                            const SizedBox(
-                              height: Dimensions.PADDING_SIZE_SMALL,
-                            ),
-                            Text(
-                              'prayer_madhab_settings'.tr,
-                              style: robotoMedium.copyWith(
-                                fontSize: Dimensions.FONT_SIZE_DEFAULT,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: Dimensions.PADDING_SIZE_SMALL,
-                            ),
-                            CustomPrayerSettingDropDown(
-                              bgColor: Colors.transparent,
-                              dwItems: prayerTimeController.prayerMadhabList,
-                              dwValue:
-                                  prayerTimeController.selectedPrayerMadhab,
-                              hintText: 'choose_a_madhad_key'.tr,
-                              borderColor: Theme.of(
-                                context,
-                              ).disabledColor.withOpacity(0.5),
-                              onChange: (value) {
-                                prayerTimeController.setSelectedPrayerMadhab(
-                                  value,
-                                );
-                                SalatWaqtService.initializeSalatWaqt();
-                              },
-                            ),
-                            const SizedBox(
-                              height: Dimensions.PADDING_SIZE_SMALL,
-                            ),
-                          ],
-                        ),
-
-                      if (prayerTimeController.isPrayerTimes.value == false)
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'adjust_prayer_time'.tr,
-                              style: robotoMedium.copyWith(
-                                fontSize: Dimensions.FONT_SIZE_DEFAULT,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: Dimensions.PADDING_SIZE_SMALL,
-                            ),
-                            InkWell(
-                              borderRadius: BorderRadius.circular(
-                                Dimensions.RADIUS_DEFAULT,
-                              ),
-                              onTap: () {
-                                Get.toNamed(RouteHelper.prayerAdjustment);
-                              },
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 16,
-                                  vertical: 16,
-                                ),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(
-                                    Dimensions.RADIUS_DEFAULT,
-                                  ),
-                                  color: Theme.of(context).cardColor,
-                                  border: Border.all(
-                                    color: Theme.of(
-                                      context,
-                                    ).primaryColor.withOpacity(0.5),
-                                  ),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withOpacity(0.04),
-                                      blurRadius: 10,
-                                      offset: const Offset(0, 4),
-                                    ),
-                                  ],
-                                ),
-                                child: Row(
-                                  children: [
-                                    /// Text Section
-                                    Expanded(
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            'customize_prayer_time_offsets_for_each_prayer'
-                                                .tr,
-                                            style: robotoMedium.copyWith(),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-
-                                    /// Arrow Icon
-                                    Icon(
-                                      Icons.arrow_forward_ios_rounded,
-                                      size: 16,
-                                      color: Theme.of(context).primaryColor,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-
                       const SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
                     ],
                   ),

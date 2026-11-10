@@ -1,24 +1,18 @@
 // ignore_for_file: deprecated_member_use
 
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
 import 'package:nazar_e_alam/controller/theme_controller.dart';
 import 'package:nazar_e_alam/helper/route_helper.dart';
-import 'package:nazar_e_alam/theme/modern_light_theme.dart';
-import 'package:nazar_e_alam/util/dimensions.dart';
-import 'package:nazar_e_alam/util/images.dart';
 import 'package:nazar_e_alam/util/styles.dart';
 
+/// Modern header: brand gradient with soft circles, greeting, mosque name,
+/// location and two glass action buttons. The next-prayer card overlaps its
+/// bottom 25px (see ModernHomeScreen), hence the 44px bottom padding.
 class ModernGreetingHeader extends StatelessWidget {
   final dynamic mosqueData;
   const ModernGreetingHeader({super.key, required this.mosqueData});
-
-  static const _textDark = Color(0xFF1E2B22);
-  static const _textMuted = Color(0xFF5B6B5E);
 
   String get _greeting {
     final hour = DateTime.now().hour;
@@ -29,142 +23,154 @@ class ModernGreetingHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final prayerTimeController = Get.find<PrayerTimeController>();
+    final theme = Theme.of(context);
+    final dark = theme.brightness == Brightness.dark;
+    final primary = theme.primaryColor;
+    final prayer = Get.find<PrayerTimeController>();
+
+    final gradient = dark
+        ? const [Color(0xFF3A2414), Color(0xFF1F150E)]
+        : [primary, Color.lerp(primary, const Color(0xFFE8202A), 0.35)!];
 
     return ClipRRect(
-      borderRadius: const BorderRadius.only(
-        bottomLeft: Radius.circular(Dimensions.RADIUS_EXTRA_LARGE),
-        bottomRight: Radius.circular(Dimensions.RADIUS_EXTRA_LARGE),
-      ),
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          Positioned.fill(
-            child: Transform(
-              alignment: Alignment.center,
-              transform: Matrix4.identity()
-                ..scale(
-                  Directionality.of(context) == TextDirection.rtl ? -1.0 : 1.0,
-                  1.0,
-                ),
-              child: Image.asset(
-                Images.ModernIllustration_MosqueHeader,
-                fit: BoxFit.cover,
-                alignment: Alignment.centerRight,
-                filterQuality: FilterQuality.high,
-                gaplessPlayback: true,
-              ),
-            ),
+      borderRadius: const BorderRadius.vertical(bottom: Radius.circular(28)),
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: gradient,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: Platform.isIOS ? 60 : 40,
-              left: 20,
-              right: 20,
+        ),
+        child: Stack(
+          children: [
+            Positioned(
+              top: -50,
+              right: -30,
+              child: _Circle(size: 170, alpha: 0.10),
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            _greeting,
-                            style: robotoRegular.copyWith(
-                              fontSize: Dimensions.FONT_SIZE_DEFAULT,
-                              color: _textMuted,
+            Positioned(
+              bottom: -40,
+              left: -40,
+              child: _Circle(size: 130, alpha: 0.07),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(
+                20,
+                MediaQuery.of(context).padding.top + 14,
+                20,
+                44,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              _greeting,
+                              style: robotoRegular.copyWith(
+                                fontSize: 14,
+                                color: Colors.white.withOpacity(0.85),
+                              ),
                             ),
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            (mosqueData?.mosqueName ?? 'Zabi').toString(),
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: robotoBold.copyWith(
-                              fontSize: Dimensions.FONT_SIZE_OVER_LARGE + 4,
-                              color: _textDark,
+                            const SizedBox(height: 4),
+                            Text(
+                              (mosqueData?.mosqueName ?? 'Nazar e Aalam')
+                                  .toString(),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: robotoBold.copyWith(
+                                fontSize: 24,
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    _buildActions(context),
-                  ],
-                ),
-                const SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
-
-                Text(
-                  'may_allah_bless_you'.tr,
-                  style: robotoRegular.copyWith(
-                    fontSize: Dimensions.FONT_SIZE_SMALL,
-                    color: AppColorModern.textSecondary,
-                  ),
-                ),
-                const SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.location_on_outlined,
-                      size: 16,
-                      color: _textMuted,
-                    ),
-                    const SizedBox(width: 4),
-                    Expanded(
-                      child: Text(
-                        prayerTimeController.saveLocalStoreCity ??
-                            prayerTimeController.currentAddress.toString(),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: robotoRegular.copyWith(
-                          fontSize: Dimensions.FONT_SIZE_DEFAULT,
-                          color: _textMuted,
+                          ],
                         ),
                       ),
+                      _GlassButton(
+                        icon: dark
+                            ? Icons.light_mode_outlined
+                            : Icons.dark_mode_outlined,
+                        tooltip: 'light_or_dark_mode'.tr,
+                        onTap: () => Get.find<ThemeController>().toggleTheme(),
+                      ),
+                      const SizedBox(width: 10),
+                      _GlassButton(
+                        icon: Icons.settings_outlined,
+                        tooltip: 'settings'.tr,
+                        onTap: () => Get.toNamed(RouteHelper.settings),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    'may_allah_bless_you'.tr,
+                    style: robotoRegular.copyWith(
+                      fontSize: 12,
+                      color: Colors.white.withOpacity(0.75),
                     ),
-                  ],
-                ),
-                SizedBox(height: 35),
-              ],
+                  ),
+                  const SizedBox(height: 12),
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.location_on_outlined,
+                        size: 16,
+                        color: Colors.white,
+                      ),
+                      const SizedBox(width: 4),
+                      Expanded(
+                        child: Text(
+                          prayer.saveLocalStoreCity ??
+                              prayer.currentAddress.toString(),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: robotoMedium.copyWith(
+                            fontSize: 14,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
-    );
-  }
-
-  Widget _buildActions(BuildContext context) {
-    return Row(
-      children: [
-        _HeaderIconButton(
-          icon: Get.isDarkMode
-              ? Icons.light_mode_outlined
-              : Icons.dark_mode_outlined,
-          tooltip: 'light_or_dark_mode'.tr,
-          onTap: () => Get.find<ThemeController>().toggleTheme(),
-        ),
-        const SizedBox(width: 8),
-        _HeaderIconButton(
-          svgIcon: Images.ModernIcon_Notification,
-          tooltip: 'settings'.tr,
-          onTap: () => Get.toNamed(RouteHelper.settings),
-        ),
-      ],
     );
   }
 }
 
-class _HeaderIconButton extends StatelessWidget {
-  final String? svgIcon;
-  final IconData? icon;
+class _Circle extends StatelessWidget {
+  final double size;
+  final double alpha;
+  const _Circle({required this.size, required this.alpha});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: size,
+      height: size,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: Colors.white.withOpacity(alpha),
+      ),
+    );
+  }
+}
+
+class _GlassButton extends StatelessWidget {
+  final IconData icon;
   final String tooltip;
   final VoidCallback onTap;
-  const _HeaderIconButton({
-    this.svgIcon,
-    this.icon,
+  const _GlassButton({
+    required this.icon,
     required this.tooltip,
     required this.onTap,
   });
@@ -174,24 +180,17 @@ class _HeaderIconButton extends StatelessWidget {
     return Tooltip(
       message: tooltip,
       child: InkWell(
-        borderRadius: BorderRadius.circular(30),
+        customBorder: const CircleBorder(),
         onTap: onTap,
         child: Container(
-          padding: const EdgeInsets.all(9),
+          width: 40,
+          height: 40,
           decoration: BoxDecoration(
-            color: Colors.white,
             shape: BoxShape.circle,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.1),
-                blurRadius: 6,
-                offset: const Offset(0, 2),
-              ),
-            ],
+            color: Colors.white.withOpacity(0.18),
+            border: Border.all(color: Colors.white.withOpacity(0.35)),
           ),
-          child: svgIcon != null
-              ? SvgPicture.asset(svgIcon!, height: 18, width: 18)
-              : Icon(icon, size: 18, color: AppColorModern.emerald),
+          child: Icon(icon, size: 20, color: Colors.white),
         ),
       ),
     );

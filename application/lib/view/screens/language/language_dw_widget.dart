@@ -28,9 +28,7 @@ class LanguageDWWidget extends StatelessWidget {
               collapsedShape: const RoundedRectangleBorder(
                 side: BorderSide.none,
               ),
-              shape: const RoundedRectangleBorder(
-                side: BorderSide.none,
-              ),
+              shape: const RoundedRectangleBorder(side: BorderSide.none),
               expansionAnimationStyle: AnimationStyle(
                 duration: const Duration(milliseconds: 500),
               ),
@@ -46,9 +44,7 @@ class LanguageDWWidget extends StatelessWidget {
                         height: 25,
                         color: Theme.of(context).primaryColor,
                       ),
-                      const SizedBox(
-                        width: Dimensions.PADDING_SIZE_DEFAULT,
-                      ),
+                      const SizedBox(width: Dimensions.PADDING_SIZE_DEFAULT),
                       Text(
                         "language_settings".tr,
                         style: robotoMedium.copyWith(

@@ -1,5 +1,3 @@
-// ignore_for_file: unnecessary_import
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -26,140 +24,93 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       Get.find<HomeLayoutController>().currentLayout.value ==
       HomeLayoutController.classic;
 
+  bool get _hasBack => isBackButtonExist ?? false;
+
+  void _back(BuildContext context) =>
+      onBackPressed != null ? onBackPressed!() : Navigator.pop(context);
+
   @override
   Widget build(BuildContext context) {
-    return _isClassic
-        ? _buildClassicAppBar(context)
-        : _buildModernAppBar(context);
+    return _isClassic ? _buildClassicAppBar(context) : _buildModernAppBar(context);
   }
 
-  // ---- Classic: your original flat appbar, unchanged ----
+  // ───────────── Classic: flat, clean, saffron (card colour in dark) ─────────────
   Widget _buildClassicAppBar(BuildContext context) {
+    final theme = Theme.of(context);
+    final dark = theme.brightness == Brightness.dark;
+    final bg = dark ? theme.cardColor : theme.primaryColor;
+    final fg = dark ? const Color(0xFFFFF4E8) : Colors.white;
+    final accent = dark ? theme.primaryColor : Colors.white;
+
     return AppBar(
-      backgroundColor: Get.isDarkMode
-          ? Theme.of(context).cardColor
-          : Theme.of(context).primaryColor,          
+      backgroundColor: bg,
+      elevation: 0,
+      scrolledUnderElevation: 0,
+      systemOverlayStyle: SystemUiOverlayStyle.light,
+      iconTheme: IconThemeData(color: accent),
       title: title != null
           ? Text(
               title!.tr,
               textAlign: TextAlign.center,
-              style: robotoRegular.copyWith(
+              style: robotoMedium.copyWith(
                 fontSize: Dimensions.FONT_SIZE_LARGE,
-                color: Get.isDarkMode
-                  ? Theme.of(context).cardColor
-                  : Theme.of(context).primaryColor,          
+                fontWeight: FontWeight.w700,
+                color: fg,
               ),
             )
           : const SizedBox(),
       centerTitle: centerTitle == null ? true : false,
-      leading: isBackButtonExist!
-          ? GestureDetector(
-              child: Icon(
-                Icons.arrow_back_ios,
-                color: Get.isDarkMode
-                    ? Theme.of(context).textTheme.bodyMedium!.color
-                    : Theme.of(context).cardColor,
-              ),
-              onTap: () => onBackPressed != null
-                  ? onBackPressed!()
-                  : Navigator.pop(context),
+      leading: _hasBack
+          ? IconButton(
+              splashRadius: 22,
+              icon: Icon(Icons.arrow_back_ios_new_rounded,
+                  size: 20, color: accent),
+              onPressed: () => _back(context),
             )
           : const SizedBox(),
       actions: actions,
-      elevation: 0,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(bottom: Radius.circular(18)),
+      ),
     );
   }
 
-  // ---- Modern: glassy depth, pill back button, refined typography ----
+  // ───────────── Modern: clean glass bar, no bubbles, no ugly circles ─────────────
   Widget _buildModernAppBar(BuildContext context) {
     final theme = Theme.of(context);
-    final isDark = Get.isDarkMode;
-
-    final Color base = theme.primaryColor;
-    final Color surface = isDark
-        ? theme.cardColor
-        : theme.scaffoldBackgroundColor;
+    final dark = theme.brightness == Brightness.dark;
 
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
       scrolledUnderElevation: 0,
-      flexibleSpace: Container(
-        decoration: BoxDecoration(
-          borderRadius: const BorderRadius.only(
-            bottomLeft: Radius.circular(0),
-            bottomRight: Radius.circular(0),
-          ),
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: isDark
-                ? [
-                    base.withValues(alpha: 0.95),
-                    base.withValues(alpha: 0.65),
-                    surface,
-                  ]
-                : [base, Color.lerp(base, Colors.black, 0.18)!],
-            stops: isDark ? const [0.0, 0.55, 1.0] : const [0.0, 1.0],
-          ),
-        ),
-        child: Stack(
-          children: [
-            // subtle decorative circle for depth, clipped to the rounded shape
-            Positioned(
-              right: -30,
-              top: -30,
-              child: Container(
-                width: 120,
-                height: 120,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white.withValues(alpha: 0.06),
-                ),
-              ),
-            ),
-            Positioned(
-              left: -20,
-              bottom: -40,
-              child: Container(
-                width: 90,
-                height: 90,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white.withValues(alpha: 0.04),
-                ),
-              ),
-            ),
-            // thin accent line at the very bottom for a crisp finish
-            Positioned(
-              left: 0,
-              right: 0,
-              bottom: 0,
-              child: Container(
-                height: 3,
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(0),
-                    bottomRight: Radius.circular(0),
-                  ),
-                  gradient: LinearGradient(
-                    colors: [
-                      Colors.white.withValues(alpha: 0.0),
-                      Colors.white.withValues(alpha: 0.5),
-                      Colors.white.withValues(alpha: 0.0),
+      systemOverlayStyle: SystemUiOverlayStyle.light,
+      flexibleSpace: ClipRRect(
+        borderRadius: const BorderRadius.vertical(bottom: Radius.circular(28)),
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: dark
+                  ? [
+                      const Color(0xFF1A1A1A),
+                      const Color(0xFF2A1A12),
+                    ]
+                  : [
+                      const Color(0xFFF26B21),
+                      const Color(0xFFF58220),
                     ],
-                  ),
-                ),
-              ),
             ),
-          ],
+          ),
+          child: null,
         ),
       ),
       title: title != null
           ? Text(
               title!.tr,
               textAlign: TextAlign.center,
-              style: robotoRegular.copyWith(
+              style: robotoMedium.copyWith(
                 fontSize: Dimensions.FONT_SIZE_LARGE,
                 fontWeight: FontWeight.w700,
                 letterSpacing: 0.3,
@@ -168,26 +119,23 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             )
           : const SizedBox(),
       centerTitle: centerTitle == null ? true : false,
-      leading: isBackButtonExist!
+      leading: _hasBack
           ? Center(
               child: GestureDetector(
-                onTap: () => onBackPressed != null
-                    ? onBackPressed!()
-                    : Navigator.pop(context),
+                onTap: () => _back(context),
                 child: Container(
                   margin: const EdgeInsets.only(left: 12),
                   width: 38,
                   height: 38,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.white.withValues(alpha: 0.16),
+                    color: Colors.white.withValues(alpha: 0.18),
                     border: Border.all(
-                      color: Colors.white.withValues(alpha: 0.25),
-                      width: 1,
+                      color: Colors.white.withValues(alpha: 0.35),
                     ),
                   ),
                   child: const Icon(
-                    Icons.arrow_back_ios_new,
+                    Icons.arrow_back_ios_new_rounded,
                     size: 16,
                     color: Colors.white,
                   ),
@@ -196,19 +144,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             )
           : const SizedBox(),
       actions: actions
-          ?.map(
-            (a) => Padding(padding: const EdgeInsets.only(right: 6), child: a),
-          )
+          ?.map((a) => Padding(padding: const EdgeInsets.only(right: 6), child: a))
           .toList(),
       shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(28),
-          bottomRight: Radius.circular(28),
-        ),
+        borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),
       ),
     );
   }
 
   @override
-  Size get preferredSize => Size(1170, GetPlatform.isDesktop ? 70 : 50);
+  Size get preferredSize => Size(1170, 56);
 }

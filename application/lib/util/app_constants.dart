@@ -43,8 +43,6 @@ class AppConstants {
   static const String WALLPAPER_LIST = "/api/wallpapers";
   static const String IS_MANUAL_PRAYER_TIME = 'is_manual_prayer_time';
   //others key
-  // static const String HADITH_API_KEY =
-  //     "\$2y\$10\$IpN2jMeSLbrGxZ6zwEu3KAEr1ZmUjwQCYhRbiReqscXswndm";
 
   // Shared Key
   static const String THEME = 'theme';
@@ -54,6 +52,7 @@ class AppConstants {
   static const String HOME_LAYOUT_OVERRIDE_KEY = 'home_layout_override';
   static const String QURAN_MILESTONE_GOAL_KEY = 'quran_milestone_daily_goal';
   static const String QURAN_MILESTONE_PROGRESS_KEY = 'quran_milestone_progress';
+  static const String TodaysPrayerTimeModel = 'today_time_prayer';
 
   // Language Key
   static const String LANGUAGE_CODE = 'language_code';

@@ -20,105 +20,70 @@ ThemeData modernDark = ThemeData(
   primarySwatch: AppColorModernDark.primarySwatchValueColor,
 );
 
-/// Dark counterpart of `AppColorModern`. Same bronze/amber brand,
-/// inverted surfaces & text for night mode.
+/// Dark counterpart of `AppColorModern`. Warm black surfaces with the
+/// logo's saffron as the accent. Legacy names (emerald*, primaryGreen*)
+/// are kept so existing screens keep compiling.
 class AppColorModernDark {
-  // Brand base — bronze. Also the 500 shade below.
-  static const int primarySwatchValue = 0xFFC98232;
+  static const int primarySwatchValue = 0xFFF26B21;
 
-  static const Color primaryColor      = Color(0xFFC98232);
-  static const Color primaryColorLight = Color(0xFFE69249); // lighter accent
-  static const Color primaryColorDark  = Color(0xFFA96524);
+  static const Color primaryColor      = Color(0xFFF26B21);
+  static const Color primaryColorLight = Color(0xFFFF8A4C);
+  static const Color primaryColorDark  = Color(0xFFC9540F);
 
-  // "emerald*" — legacy names, now bronze tones
-  static const Color emerald       = Color(0xFFC98232);
-  static const Color emeraldDark   = Color(0xFFA96524);
-  static const Color emeraldLight  = Color(0xFFE69249);
-  static const Color emeraldSoftBg = Color(0xFF2A231A);
+  // legacy names
+  static const Color emerald       = Color(0xFFF26B21);
+  static const Color emeraldDark   = Color(0xFFC9540F);
+  static const Color emeraldLight  = Color(0xFFFF8A4C);
+  static const Color emeraldSoftBg = Color(0xFF2B1D13);
 
   // Surfaces
-  static const Color scaffoldBackground = Color(0xFF1E1E1E);
-  static const Color cardBackground     = Color(0xFF262626);
+  static const Color scaffoldBackground = Color(0xFF15100C);
+  static const Color cardBackground     = Color(0xFF221A14);
 
-  // "primaryGreen*" — legacy names, now bronze tones
-  static const Color primaryGreenDark  = Color(0xFFA96524);
-  static const Color primaryGreen      = Color(0xFFC98232);
-  static const Color primaryGreenLight = Color(0xFFE69249);
-  static const Color accentGreen       = Color(0xFFB8752B);
-  static const Color chipGreenBackground = Color(0xFF2A231A);
+  // legacy names
+  static const Color primaryGreenDark    = Color(0xFFC9540F);
+  static const Color primaryGreen        = Color(0xFFF26B21);
+  static const Color primaryGreenLight   = Color(0xFFFF8A4C);
+  static const Color accentGreen         = Color(0xFFF58220);
+  static const Color chipGreenBackground = Color(0xFF2B1D13);
 
   // Text
-  static const Color textPrimary      = Color(0xFFF1EFE8);
-  static const Color textSecondary    = Color(0xFFBEBEBE);
+  static const Color textPrimary      = Color(0xFFFFF4E8);
+  static const Color textSecondary    = Color(0xFFC9B8A6);
   static const Color textOnGreen      = Colors.white;
-  static const Color textOnGreenMuted = Color(0xFFF5E6D0);
+  static const Color textOnGreenMuted = Color(0xFFFFE3CC);
 
   // States
-  static const Color disabledColor = Color(0xFF6F7275);
-  static const Color hintColor     = Color(0xFFBEBEBE);
-  static const Color errorColor    = Color(0xFFE84D4F);
+  static const Color disabledColor = Color(0xFF7A6F65);
+  static const Color hintColor     = Color(0xFFC9B8A6);
+  static const Color errorColor    = Color(0xFFFF4D55);
 
-  // Tints (dark variants)
-  static const Color tintGreen = Color(0xFF2A231A);
-  static const Color tintCream = Color(0xFF2A231A);
-  static const Color tintGray  = Color(0xFF2C2C2C);
-  static const Color tintBlue  = Color(0xFF262626);
+  // Tints
+  static const Color tintGreen = Color(0xFF2B1D13);
+  static const Color tintCream = Color(0xFF2B2216);
+  static const Color tintGray  = Color(0xFF2A221B);
+  static const Color tintBlue  = Color(0xFF221A14);
 
   // Misc
-  static const Color divider            = Color(0xFF3A3A3A);
-  static const Color progressTrack      = Color(0xFF333333);
-  static const Color iconChipBackground = Color(0xFF2C2C2C);
+  static const Color divider            = Color(0xFF3A2E24);
+  static const Color progressTrack      = Color(0xFF33291F);
+  static const Color iconChipBackground = Color(0xFF2A221B);
 
-  // Proper bronze swatch (light -> dark) — same ramp as light theme
+  // Glass (new)
+  static const Color glassFill   = Color(0x33FFFFFF);
+  static const Color glassBorder = Color(0x40FFFFFF);
+
   static const MaterialColor primarySwatchValueColor =
       MaterialColor(primarySwatchValue, <int, Color>{
-    50:  Color(0xFFFBF3E7),
-    100: Color(0xFFF6E7CE),
-    200: Color(0xFFEFCF9C),
-    300: Color(0xFFE3B06A),
-    400: Color(0xFFE69249), // lighter accent
-    500: Color(0xFFC98232), // base — must match primarySwatchValue
-    600: Color(0xFFB8752B),
-    700: Color(0xFFA96524),
-    800: Color(0xFF8A511C),
-    900: Color(0xFF6B3E15),
+    50:  Color(0xFFFFF3EA),
+    100: Color(0xFFFFE0CB),
+    200: Color(0xFFFFC299),
+    300: Color(0xFFFFA066),
+    400: Color(0xFFFF8A4C),
+    500: Color(0xFFF26B21),
+    600: Color(0xFFDB5E1A),
+    700: Color(0xFFC9540F),
+    800: Color(0xFFA2430C),
+    900: Color(0xFF7A3309),
   });
 }
-
-
-// import 'package:flutter/material.dart';
-
-// ThemeData modernDark = ThemeData(
-//   useMaterial3: false,
-//   fontFamily: 'Roboto',
-//   primaryColor: const Color(0xFF4FA980),
-//   scaffoldBackgroundColor: const Color.fromARGB(255, 49, 49, 49),
-//   disabledColor: const Color(0xFF6F7275),
-//   brightness: Brightness.dark,
-//   hintColor: const Color(0xFFBEBEBE),
-//   cardColor: const Color.fromARGB(255, 38, 38, 38),
-//   colorScheme: ColorScheme.fromSeed(
-//     seedColor: const Color(0xFF4FA980),
-//     brightness: Brightness.dark,
-//     primary: const Color(0xFF4FA980),
-//     error: const Color(0xFFE84D4F),
-//   ),
-//   primarySwatch: AppColorModernDark.primarySwatchValueColor,
-// );
-
-// class AppColorModernDark {
-//   static const int primarySwatchValue = 0xFF4FA980;
-//   static const MaterialColor primarySwatchValueColor =
-//       MaterialColor(primarySwatchValue, <int, Color>{
-//         50: Color(primarySwatchValue),
-//         100: Color(primarySwatchValue),
-//         200: Color(primarySwatchValue),
-//         300: Color(primarySwatchValue),
-//         400: Color(primarySwatchValue),
-//         500: Color(primarySwatchValue),
-//         600: Color(primarySwatchValue),
-//         700: Color(primarySwatchValue),
-//         800: Color(primarySwatchValue),
-//         900: Color(primarySwatchValue),
-//       });
-// }

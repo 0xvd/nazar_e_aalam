@@ -1,51 +1,38 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 
 import '../../util/dimensions.dart';
 import '../../util/styles.dart';
 
 InputDecoration getTextInputDecoration(BuildContext context) {
+  final theme = Theme.of(context);
+  final dark = theme.brightness == Brightness.dark;
+  final primary = theme.primaryColor;
+  final error = theme.colorScheme.error;
+  final idle = dark ? const Color(0xFF3A2E24) : const Color(0xFFEADFD0);
+
+  OutlineInputBorder border(Color color, [double width = 1]) =>
+      OutlineInputBorder(
+        borderRadius: BorderRadius.circular(14),
+        borderSide: BorderSide(color: color, width: width),
+      );
+
   return InputDecoration(
+    filled: true,
+    fillColor: theme.cardColor,
+    contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
     labelStyle: robotoMedium.copyWith(
-      color: Theme.of(context).primaryColor,
+      color: primary,
       fontSize: Dimensions.FONT_SIZE_DEFAULT,
     ),
-    border: OutlineInputBorder(
-      borderSide: BorderSide(
-        color: Theme.of(context).primaryColor,
-        // width: 1,
-      ),
+    hintStyle: robotoRegular.copyWith(
+      color: theme.hintColor.withValues(alpha: 0.6),
+      fontSize: Dimensions.FONT_SIZE_DEFAULT,
     ),
-    disabledBorder: OutlineInputBorder(
-      borderSide: BorderSide(
-        color: Theme.of(context).primaryColor,
-        width: 1,
-      ),
-    ),
-    focusedErrorBorder: OutlineInputBorder(
-      borderSide: BorderSide(
-        color: Theme.of(context).colorScheme.error,
-        width: 1,
-      ),
-    ),
-    focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide(
-        color: Theme.of(context).primaryColor,
-        width: 1,
-      ),
-    ),
-    enabledBorder: OutlineInputBorder(
-      borderSide: BorderSide(
-        color: Theme.of(context).primaryColor,
-        width: 1,
-      ),
-    ),
-    errorBorder: OutlineInputBorder(
-      borderSide: BorderSide(
-        color: Theme.of(context).colorScheme.error,
-        width: 1,
-      ),
-    ),
+    border: border(idle),
+    enabledBorder: border(idle),
+    disabledBorder: border(idle),
+    focusedBorder: border(primary, 1.6),
+    errorBorder: border(error),
+    focusedErrorBorder: border(error, 1.6),
   );
 }

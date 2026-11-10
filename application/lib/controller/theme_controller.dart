@@ -12,10 +12,12 @@ class ThemeController extends GetxController implements GetxService {
   bool _darkTheme = false;
   bool get darkTheme => _darkTheme;
 
+  /// Smooth theme toggle — no `update()`, no full widget-tree rebuild.
+  /// `Get.changeThemeMode()` tells Flutter to switch themes efficiently
+  /// on low-end devices (only the MaterialApp theme layer rebuilds).
   void toggleTheme() {
     _darkTheme = !_darkTheme;
     sharedPreferences.setBool(AppConstants.THEME, _darkTheme);
     Get.changeThemeMode(_darkTheme ? ThemeMode.dark : ThemeMode.light);
-    update();
   }
 }

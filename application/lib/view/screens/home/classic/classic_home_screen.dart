@@ -1,8 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:nazar_e_alam/controller/internet_check_controller.dart';
@@ -10,24 +9,26 @@ import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
 import 'package:nazar_e_alam/controller/quran_settings_controller.dart';
 import 'package:nazar_e_alam/controller/theme_controller.dart';
 import 'package:nazar_e_alam/helper/date_converter.dart';
-import 'package:nazar_e_alam/helper/route_helper.dart';
 import 'package:nazar_e_alam/helper/time_adjustment_helper.dart';
 import 'package:nazar_e_alam/helper/translator_helper.dart';
 import 'package:nazar_e_alam/shimmer/all_shimmer_loder.dart';
-// import 'package:nazar_e_alam/theme/light_theme.dart';
 import 'package:nazar_e_alam/util/dimensions.dart';
 import 'package:nazar_e_alam/util/images.dart';
 import 'package:nazar_e_alam/util/styles.dart';
-// import 'package:nazar_e_alam/view/screens/ai_islamic_assistant/ai_islamic_assistant.dart';
+import 'package:nazar_e_alam/view/base/feature_grid.dart';
 import 'package:nazar_e_alam/view/screens/home/classic/widget/bannder_widget.dart';
-import 'package:nazar_e_alam/view/screens/home/classic/widget/feature_item_widget.dart';
 import 'package:nazar_e_alam/view/screens/home/classic/widget/today_prayer_list_item.dart';
 
-/// The original ("Classic") home screen design. This widget is purely
-/// presentational — all data bootstrapping (location, prayer times, mosque
-/// settings) is handled once by the [HomeScreen] router above it.
+/// Classic home: saffron app bar with location, banner, today's prayer
+/// grid, then every feature as grouped cards. Presentational only; data
+/// loading is done once by HomeScreen.
+///
+/// Vertical rhythm: 12 under the app bar, 16 between sections,
+/// 12 between prayer rows, 24 before the feature grid.
 class ClassicHomeScreen extends StatelessWidget {
   const ClassicHomeScreen({super.key});
+
+  static const double _rowGap = 12;
 
   @override
   Widget build(BuildContext context) {
@@ -45,87 +46,13 @@ class ClassicHomeScreen extends StatelessWidget {
             return Scaffold(
               appBar: isLoading || mosqueData == null
                   ? null
-                  : _buildAppBar(context, mosqueData, prayerTimeController),
+                  : _buildAppBar(context, prayerTimeController),
               body: SafeArea(
                 top: false,
-                child: isLoading || mosqueData == null && !hasInternet
+                child: isLoading || (mosqueData == null && !hasInternet)
                     ? const DashbordShimmerScreen()
-                    : _buildBody(context, mosqueData, prayerTimeController),
+                    : _buildBody(context, prayerTimeController),
               ),
-
-              // floatingActionButton: GestureDetector(
-              //   onTap: () {
-              //     Get.to(() => const AiIslamicAssistantScreen());
-              //   },
-              //   child: ClipRRect(
-              //     borderRadius: BorderRadius.circular(30),
-              //     child: BackdropFilter(
-              //       filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
-              //       child: Container(
-              //         padding: const EdgeInsets.symmetric(
-              //           horizontal: 5,
-              //           vertical: 8,
-              //         ),
-              //         decoration: BoxDecoration(
-              //           borderRadius: BorderRadius.circular(30),
-              //           gradient: LinearGradient(
-              //             colors: [
-              //               Theme.of(context).primaryColor.withOpacity(0.35),
-              //               Theme.of(context).primaryColor.withOpacity(0.08),
-              //             ],
-              //             begin: Alignment.topLeft,
-              //             end: Alignment.bottomRight,
-              //           ),
-              //           border: Border.all(
-              //             color: Theme.of(
-              //               context,
-              //             ).primaryColor.withOpacity(0.5),
-              //             width: 1,
-              //           ),
-              //           boxShadow: [
-              //             BoxShadow(
-              //               color: Colors.black.withOpacity(0.15),
-              //               blurRadius: 12,
-              //               offset: const Offset(0, 6),
-              //             ),
-              //           ],
-              //         ),
-              //         child: Row(
-              //           mainAxisSize: MainAxisSize.min,
-              //           children: [
-              //             Container(
-              //               padding: const EdgeInsets.symmetric(
-              //                 horizontal: 5,
-              //                 vertical: 2,
-              //               ),
-              //               decoration: BoxDecoration(
-              //                 shape: BoxShape.circle,
-              //                 color: AppColor.cardColor,
-              //               ),
-              //               child: Image.asset(
-              //                 Images.aiAssistant,
-              //                 width: 30,
-              //                 height: 30,
-              //               ),
-              //             ),
-              //             const SizedBox(width: 2),
-              //             Text(
-              //               "${"ask_ai_key".tr} ",
-              //               style: robotoRegular.copyWith(
-              //                 color: Get.isDarkMode
-              //                     ? AppColor.cardColor
-              //                     : AppColor.primaryColor,
-              //                 fontWeight: FontWeight.w600,
-              //               ),
-              //             ),
-              //           ],
-              //         ),
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              floatingActionButtonLocation:
-                  FloatingActionButtonLocation.endFloat,
             );
           },
         );
@@ -142,101 +69,67 @@ class ClassicHomeScreen extends StatelessWidget {
         settingsController.mosqueSettingsApiData == null;
   }
 
+  // ───────────── App bar ─────────────
+
   PreferredSizeWidget _buildAppBar(
     BuildContext context,
-    dynamic mosqueData,
     PrayerTimeController prayerTimeController,
   ) {
     final theme = Theme.of(context);
-    final isDark = Get.isDarkMode;
+    final dark = theme.brightness == Brightness.dark;
+    final fg = dark ? const Color(0xFFFFF4E8) : Colors.white;
+    final accent = dark ? theme.primaryColor : Colors.white;
 
     return AppBar(
-      backgroundColor: isDark ? theme.cardColor : theme.primaryColor,
-      // backgroundColor: Color(0xFFfcffe3),
+      backgroundColor: dark ? theme.cardColor : theme.primaryColor,
       elevation: 0,
+      scrolledUnderElevation: 0,
       centerTitle: false,
-      title: _buildAppBarTitle(context, mosqueData, prayerTimeController),
-      actions: _buildAppBarActions(context, mosqueData, isDark, theme),
-    );
-  }
-
-  Widget _buildAppBarTitle(
-    BuildContext context,
-    dynamic mosqueData,
-    PrayerTimeController prayerTimeController,
-  ) {
-    final theme = Theme.of(context);
-    // final isDark = Get.isDarkMode;
-
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        // Text(
-        //   mosqueData.mosqueName.toString(),
-        //   style: robotoRegular.copyWith(
-        //     fontSize: Dimensions.FONT_SIZE_OVER_LARGE + 2,
-        //     color: isDark ? null : theme.cardColor,
-        //   ),
-        // ),
-        Row(
-          children: [
-            SvgPicture.asset(
-              Images.Icon_Location,
-              height: 14,
-              fit: BoxFit.fill,
-              color: theme.hintColor,
-            ),
-            const SizedBox(width: 3),
-            Expanded(
-              child: Text(
-                prayerTimeController.saveLocalStoreCity ??
-                    prayerTimeController.currentAddress.toString(),
-                style: robotoRegular.copyWith(
-                  fontSize: Dimensions.FONT_SIZE_DEFAULT,
-                  color: theme.hintColor,
-                ),
+      systemOverlayStyle: SystemUiOverlayStyle.light,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(bottom: Radius.circular(18)),
+      ),
+      title: Row(
+        children: [
+          SvgPicture.asset(
+            Images.Icon_Location,
+            height: 16,
+            colorFilter: ColorFilter.mode(accent, BlendMode.srcIn),
+          ),
+          const SizedBox(width: 6),
+          Expanded(
+            child: Text(
+              prayerTimeController.saveLocalStoreCity ??
+                  prayerTimeController.currentAddress.toString(),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: robotoMedium.copyWith(
+                fontSize: Dimensions.FONT_SIZE_DEFAULT,
+                fontWeight: FontWeight.w600,
+                color: fg,
               ),
             ),
-          ],
+          ),
+        ],
+      ),
+      actions: [
+        IconButton(
+          tooltip: 'light_or_dark_mode'.tr,
+          icon: SvgPicture.asset(
+            dark ? Images.Icon_day_mode : Images.Icon_dark_mode,
+            height: 25,
+            colorFilter: ColorFilter.mode(accent, BlendMode.srcIn),
+          ),
+          onPressed: () => Get.find<ThemeController>().toggleTheme(),
         ),
       ],
     );
   }
 
-  List<Widget> _buildAppBarActions(
-    BuildContext context,
-    dynamic mosqueData,
-    bool isDark,
-    ThemeData theme,
-  ) {
-    return [
-      if (mosqueData.showBannerIcon == true)
-        IconButton(
-          onPressed: () => Get.toNamed(RouteHelper.donationTypeList),
-          icon: SvgPicture.asset(
-            Images.Icon_Donated,
-            height: 28,
-            fit: BoxFit.fill,
-            color: isDark ? theme.primaryColor : theme.cardColor,
-          ),
-        ),
-      IconButton(
-        tooltip: "light_or_dark_mode".tr,
-        icon: SvgPicture.asset(
-          isDark ? Images.Icon_day_mode : Images.Icon_dark_mode,
-          height: 25,
-          fit: BoxFit.fill,
-          color: isDark ? theme.primaryColor : theme.cardColor,
-        ),
-        onPressed: () => Get.find<ThemeController>().toggleTheme(),
-      ),
-    ];
-  }
+  // ───────────── Body ─────────────
 
   Widget _buildBody(
     BuildContext context,
-    dynamic mosqueData,
     PrayerTimeController prayerTimeController,
   ) {
     return SingleChildScrollView(
@@ -244,20 +137,19 @@ class ClassicHomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // Breathing room under the rounded app bar.
+          const SizedBox(height: 12),
           const BannerWidget(),
-          const SizedBox(height: Dimensions.PADDING_SIZE_EXTRA_SMALL),
-          _buildPrayerTimesSection(prayerTimeController),
-          const SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT),
-          if (mosqueData.showDonationBanner == true)
-            _buildDonationBanner(context, mosqueData),
-          _buildFeaturesGrid(context),
-          const SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT * 3),
+          const SizedBox(height: 16),
+          _buildPrayerTimesSection(),
+          const SizedBox(height: 24),
+          const FeatureGrid(modern: false, bottomPadding: 24),
         ],
       ),
     );
   }
 
-  Widget _buildPrayerTimesSection(PrayerTimeController prayerTimeController) {
+  Widget _buildPrayerTimesSection() {
     return GetBuilder<PrayerTimeController>(
       builder: (controller) {
         final is24HourFormat = controller.is24HourFormat.value;
@@ -271,7 +163,7 @@ class ClassicHomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _buildPrayerTimesHeader(controller),
-              const SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
+              const SizedBox(height: 12),
               _buildPrayerTimesGrid(prayerData, is24HourFormat),
             ],
           ),
@@ -282,19 +174,41 @@ class ClassicHomeScreen extends StatelessWidget {
 
   Widget _buildPrayerTimesHeader(PrayerTimeController controller) {
     return Obx(
-      () => Text(
-        "${"todays_Prayer_Time_in".tr} ${controller.saveAddress.value.isNotEmpty ? controller.saveAddress.value : controller.currentAddress.value}",
-        textAlign: TextAlign.left,
-        style: robotoRegular.copyWith(
-          fontSize: Dimensions.FONT_SIZE_LARGE,
-          fontWeight: FontWeight.bold,
-          color: Theme.of(Get.context!).primaryColor,
-        ),
+      () => Row(
+        children: [
+          Container(
+            width: 4,
+            height: 18,
+            decoration: BoxDecoration(
+              color: Theme.of(Get.context!).primaryColor,
+              borderRadius: BorderRadius.circular(4),
+            ),
+          ),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Text(
+              "${"todays_Prayer_Time_in".tr} ${controller.saveAddress.value.isNotEmpty ? controller.saveAddress.value : controller.currentAddress.value}",
+              style: robotoBold.copyWith(
+                fontSize: Dimensions.FONT_SIZE_LARGE,
+                color: Theme.of(Get.context!).textTheme.bodyMedium?.color,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
 
   Widget _buildPrayerTimesGrid(dynamic prayerData, bool is24HourFormat) {
+    final showRamadan = Get.find<SettingsController>()
+            .mosqueSettingsApiData
+            ?.data
+            ?.ramadanSchedule ==
+        true;
+
+    String ramadanTime(String? t) =>
+        (t == null || t == "0:00" || t == "00:00") ? "0.00" : t;
+
     return Column(
       children: [
         _buildPrayerRow(
@@ -313,7 +227,7 @@ class ClassicHomeScreen extends StatelessWidget {
             isSunrise: true,
           ),
         ),
-        const SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT),
+        const SizedBox(height: _rowGap),
         _buildPrayerRow(
           leftPrayer: _buildPrayerCard(
             icon: Images.Icon_Dhuhr,
@@ -330,7 +244,7 @@ class ClassicHomeScreen extends StatelessWidget {
             is24HourFormat: is24HourFormat,
           ),
         ),
-        const SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT),
+        const SizedBox(height: _rowGap),
         _buildPrayerRow(
           leftPrayer: _buildPrayerCard(
             icon: Images.Icon_Maghrib,
@@ -347,38 +261,25 @@ class ClassicHomeScreen extends StatelessWidget {
             is24HourFormat: is24HourFormat,
           ),
         ),
-        const SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT),
-        if (Get.find<SettingsController>()
-                .mosqueSettingsApiData
-                ?.data
-                ?.ramadanSchedule ==
-            true)
+        if (showRamadan) ...[
+          const SizedBox(height: _rowGap),
           _buildPrayerRow(
             leftPrayer: _buildPrayerCard(
               icon: Images.sehri,
               name: 'Sehri'.tr,
               prayerKey: 'sehri',
-              time:
-                  prayerData?.sehriEnd == "0:00" ||
-                      prayerData?.sehriEnd == null ||
-                      prayerData?.sehriEnd == "00:00"
-                  ? "0.00"
-                  : prayerData?.sehriEnd ?? "0.00",
+              time: ramadanTime(prayerData?.sehriEnd),
               is24HourFormat: is24HourFormat,
             ),
             rightPrayer: _buildPrayerCard(
               icon: Images.ifter,
               name: 'Iftar'.tr,
               prayerKey: 'iftar',
-              time:
-                  prayerData?.iftarStart == "0:00" ||
-                      prayerData?.iftarStart == null ||
-                      prayerData?.iftarStart == "00:00"
-                  ? "0.00"
-                  : prayerData?.iftarStart ?? "0.00",
+              time: ramadanTime(prayerData?.iftarStart),
               is24HourFormat: is24HourFormat,
             ),
           ),
+        ],
       ],
     );
   }
@@ -392,7 +293,7 @@ class ClassicHomeScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           leftPrayer,
-          const SizedBox(width: Dimensions.PADDING_SIZE_DEFAULT),
+          const SizedBox(width: _rowGap),
           rightPrayer,
         ],
       ),
@@ -410,9 +311,10 @@ class ClassicHomeScreen extends StatelessWidget {
     return GetBuilder<PrayerTimeController>(
       builder: (prayerController) {
         final isManual = prayerController.isManualPrayerTime.value;
+        final canAdjust = prayerKey != null && !isManual;
 
         // Don't apply adjustment if manual prayer times are active
-        final adjustedTime = (prayerKey != null && !isManual)
+        final adjustedTime = canAdjust
             ? TimeAdjustmentHelper().getDisplayTime(
                 prayerKey: prayerKey,
                 defaultTime: time,
@@ -430,146 +332,12 @@ class ClassicHomeScreen extends StatelessWidget {
           jamah: displayTime,
           isSunrise: isSunrise,
           sunriseStart: isSunrise ? displayTime : "00:00",
-          isAdjusted: (prayerKey != null && !isManual)
-              ? TimeAdjustmentHelper().isTimeAdjusted(prayerKey)
-              : false,
-          adjustmentText: (prayerKey != null && !isManual)
-              ? TimeAdjustmentHelper().getAdjustmentText(prayerKey)
-              : '',
+          isAdjusted:
+              canAdjust ? TimeAdjustmentHelper().isTimeAdjusted(prayerKey) : false,
+          adjustmentText:
+              canAdjust ? TimeAdjustmentHelper().getAdjustmentText(prayerKey) : '',
         );
       },
-    );
-  }
-
-  Widget _buildDonationBanner(BuildContext context, dynamic mosqueData) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: Dimensions.PADDING_SIZE_DEFAULT,
-          ),
-          child: GestureDetector(
-            onTap: () => Get.toNamed(RouteHelper.donationTypeList),
-            child: Container(
-              height: 70,
-              decoration: BoxDecoration(
-                color: Theme.of(context).cardColor,
-                borderRadius: BorderRadius.circular(Dimensions.RADIUS_DEFAULT),
-                boxShadow: [
-                  BoxShadow(
-                    color: Get.isDarkMode
-                        ? Colors.grey[850]!
-                        : Colors.grey[200]!,
-                    spreadRadius: 1,
-                    blurRadius: 5,
-                  ),
-                ],
-                image: DecorationImage(
-                  image: NetworkImage(mosqueData.donationBanner.toString()),
-                  fit: BoxFit.fitWidth,
-                  onError: (_, _) => const AssetImage(Images.Donate_Now),
-                ),
-              ),
-            ),
-          ),
-        ),
-        const SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT),
-      ],
-    );
-  }
-
-  Widget _buildFeaturesGrid(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: Dimensions.PADDING_SIZE_DEFAULT,
-      ),
-      child: Container(
-        padding: const EdgeInsets.symmetric(
-          vertical: Dimensions.PADDING_SIZE_DEFAULT,
-        ),
-        decoration: BoxDecoration(
-          color: Theme.of(context).cardColor,
-          borderRadius: BorderRadius.circular(Dimensions.RADIUS_DEFAULT),
-          boxShadow: [
-            BoxShadow(
-              color: Get.isDarkMode ? Colors.grey[850]! : Colors.grey[200]!,
-              spreadRadius: 1,
-              blurRadius: 5,
-            ),
-          ],
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: Dimensions.PADDING_SIZE_GRID_SMALL,
-          ),
-          child: GridView.count(
-            shrinkWrap: true,
-            primary: false,
-            crossAxisCount: 4,
-            mainAxisSpacing: 10,
-            crossAxisSpacing: 10,
-            addAutomaticKeepAlives: false,
-            children: _buildFeatureItems(),
-          ),
-        ),
-      ),
-    );
-  }
-
-  List<Widget> _buildFeatureItems() {
-    return [
-      _buildFeatureItem(
-        name: "audio_quran".tr,
-        iconPath: Images.Iocn_Audio,
-        route: RouteHelper.recters,
-      ),
-      _buildFeatureItem(
-        name: "hadith".tr,
-        iconPath: Images.Icon_Hadith,
-        route: RouteHelper.hadithBookName,
-      ),
-      _buildFeatureItem(
-        name: "allah_name".tr,
-        iconPath: Images.Icon_Allah_99_name,
-        route: RouteHelper.sifatName,
-      ),
-      _buildFeatureItem(
-        name: "dua".tr,
-        iconPath: Images.Icon_Dua,
-        route: RouteHelper.dua,
-      ),
-      _buildFeatureItem(
-        name: "dikir".tr,
-        iconPath: Images.Icon_Dikir,
-        route: RouteHelper.dhikr,
-      ),
-      _buildFeatureItem(
-        name: "wallpapers_key".tr,
-        iconPath: Images.wallpaper,
-        route: RouteHelper.wallpaperScreens,
-      ),
-      // _buildFeatureItem(
-      //   name: "ai_name_key".tr,
-      //   iconPath: Images.nameGenerator,
-      //   route: RouteHelper.aiNameGenerator,
-      // ),
-      _buildFeatureItem(
-        name: "alphabet_key".tr,
-        iconPath: Images.Icon_Alif,
-        route: RouteHelper.alphabetScreens,
-      ),
-    ];
-  }
-
-  Widget _buildFeatureItem({
-    required String name,
-    required String iconPath,
-    required String route,
-  }) {
-    return FeatureItemWidget(
-      itemName: name,
-      itemIconPath: iconPath,
-      onPressed: () => Get.toNamed(route),
     );
   }
 }

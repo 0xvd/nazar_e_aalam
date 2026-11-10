@@ -1,28 +1,27 @@
-// ignore_for_file: deprecated_member_use
-
-// import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nazar_e_alam/controller/internet_check_controller.dart';
 import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
 import 'package:nazar_e_alam/controller/quran_settings_controller.dart';
 import 'package:nazar_e_alam/shimmer/all_shimmer_loder.dart';
-// import 'package:nazar_e_alam/theme/light_theme.dart';
-import 'package:nazar_e_alam/theme/modern_light_theme.dart';
 import 'package:nazar_e_alam/util/dimensions.dart';
-// import 'package:nazar_e_alam/util/images.dart';
-// import 'package:nazar_e_alam/util/styles.dart';
-// import 'package:nazar_e_alam/view/screens/ai_islamic_assistant/ai_islamic_assistant.dart';
+import 'package:nazar_e_alam/view/base/feature_grid.dart';
 import 'package:nazar_e_alam/view/screens/home/modern/widget/modern_greeting_header.dart';
-import 'package:nazar_e_alam/view/screens/home/modern/widget/modern_info_cards.dart';
 import 'package:nazar_e_alam/view/screens/home/modern/widget/modern_next_prayer_card.dart';
-import 'package:nazar_e_alam/view/screens/home/modern/widget/modern_quick_actions.dart';
-import 'package:nazar_e_alam/view/screens/home/modern/widget/modern_quran_cta_banner.dart';
 import 'package:nazar_e_alam/view/screens/home/modern/widget/modern_quran_milestone_card.dart';
 
+/// Modern home: greeting header, floating next-prayer card, Quran milestone,
+/// then flat feature grid. Content scrolls behind the floating glass nav bar,
+/// so the bottom has extra padding.
 class ModernHomeScreen extends StatelessWidget {
   const ModernHomeScreen({super.key});
+
+  // How far the prayer card overlaps the header (visual only).
+  static const double _cardOverlap = 25;
+
+  // Clears the floating glass nav bar.
+  static const double _navClearance = 110;
+
   @override
   Widget build(BuildContext context) {
     final hasInternet = Get.find<InternetController>().hasInternet.value;
@@ -35,18 +34,16 @@ class ModernHomeScreen extends StatelessWidget {
               prayerTimeController,
             );
             final mosqueData = settingsController.mosqueSettingsApiData?.data;
+            final dark = Theme.of(context).brightness == Brightness.dark;
 
             return Scaffold(
               extendBodyBehindAppBar: true,
-              backgroundColor: Theme.of(context).brightness == Brightness.dark
+              backgroundColor: dark
                   ? Theme.of(context).scaffoldBackgroundColor
-                  : AppColorModern.emeraldSoftBg,
+                  : Theme.of(context).scaffoldBackgroundColor,
               body: isLoading || (mosqueData == null && !hasInternet)
                   ? const SafeArea(child: DashbordShimmerScreen())
                   : _buildBody(context, mosqueData, prayerTimeController),
-              // floatingActionButton: _buildAiFab(context),
-              floatingActionButtonLocation:
-                  FloatingActionButtonLocation.endFloat,
             );
           },
         );
@@ -75,7 +72,7 @@ class ModernHomeScreen extends StatelessWidget {
         children: [
           ModernGreetingHeader(mosqueData: mosqueData),
           Transform.translate(
-            offset: const Offset(0, -25),
+            offset: const Offset(0, -_cardOverlap),
             child: Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: Dimensions.PADDING_SIZE_DEFAULT,
@@ -86,17 +83,15 @@ class ModernHomeScreen extends StatelessWidget {
                   ModernNextPrayerCard(
                     prayerTimeController: prayerTimeController,
                   ),
-                  const SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT),
+                  const SizedBox(height: 16),
                   const ModernQuranMilestoneCard(),
-                  const SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
-                  ModernQuickActions(),
-                  const SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
-
-                  // const ModernInfoCards(),
-                  IslamicFeatureGrid(),
-                  const SizedBox(height: Dimensions.PADDING_SIZE_SMALL),
-                  const ModernQuranCtaBanner(),
-                  const SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT * 3),
+                  const SizedBox(height: 24),
+                  const FeatureGrid(
+                    modern: true,
+                    padding: EdgeInsets.zero,
+                    bottomPadding: 0,
+                  ),
+                  const SizedBox(height: _navClearance),
                 ],
               ),
             ),
@@ -105,67 +100,4 @@ class ModernHomeScreen extends StatelessWidget {
       ),
     );
   }
-
-  // Widget _buildAiFab(BuildContext context) {
-  //   return GestureDetector(
-  //     onTap: () => Get.to(() => const AiIslamicAssistantScreen()),
-  //     child: ClipRRect(
-  //       borderRadius: BorderRadius.circular(30),
-  //       child: BackdropFilter(
-  //         filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
-  //         child: Container(
-  //           padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
-  //           decoration: BoxDecoration(
-  //             borderRadius: BorderRadius.circular(30),
-  //             gradient: LinearGradient(
-  //               colors: [
-  //                 AppColorModern.emerald.withOpacity(0.35),
-  //                 AppColorModern.emerald.withOpacity(0.08),
-  //               ],
-  //               begin: Alignment.topLeft,
-  //               end: Alignment.bottomRight,
-  //             ),
-  //             border: Border.all(
-  //               color: AppColorModern.emerald.withOpacity(0.5),
-  //               width: 1,
-  //             ),
-  //             boxShadow: [
-  //               BoxShadow(
-  //                 color: Colors.black.withOpacity(0.15),
-  //                 blurRadius: 12,
-  //                 offset: const Offset(0, 6),
-  //               ),
-  //             ],
-  //           ),
-  //           child: Row(
-  //             mainAxisSize: MainAxisSize.min,
-  //             children: [
-  //               Container(
-  //                 padding: const EdgeInsets.symmetric(
-  //                   horizontal: 5,
-  //                   vertical: 2,
-  //                 ),
-  //                 decoration: const BoxDecoration(
-  //                   shape: BoxShape.circle,
-  //                   color: AppColor.cardColor,
-  //                 ),
-  //                 child: Image.asset(Images.aiAssistant, width: 30, height: 30),
-  //               ),
-  //               const SizedBox(width: 2),
-  //               Text(
-  //                 "${"ask_ai_key".tr} ",
-  //                 style: robotoRegular.copyWith(
-  //                   color: Get.isDarkMode
-  //                       ? AppColor.cardColor
-  //                       : AppColorModern.emeraldDark,
-  //                   fontWeight: FontWeight.w600,
-  //                 ),
-  //               ),
-  //             ],
-  //           ),
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
 }

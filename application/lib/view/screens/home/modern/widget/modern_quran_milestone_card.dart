@@ -5,8 +5,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:nazar_e_alam/controller/quran_milestone_controller.dart';
 import 'package:nazar_e_alam/helper/route_helper.dart';
-import 'package:nazar_e_alam/theme/modern_light_theme.dart';
-import 'package:nazar_e_alam/util/dimensions.dart';
 import 'package:nazar_e_alam/util/images.dart';
 import 'package:nazar_e_alam/util/styles.dart';
 
@@ -15,91 +13,101 @@ class ModernQuranMilestoneCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final dark = theme.brightness == Brightness.dark;
+    final primary = theme.primaryColor;
+    final textColor = theme.textTheme.bodyMedium?.color;
+    final trackColor = primary.withOpacity(dark ? 0.22 : 0.14);
+
     return GetX<QuranMilestoneController>(
       builder: (controller) {
         final read = controller.pagesReadToday.value;
         final goal = controller.dailyGoal.value;
-        final ratio = controller.progressRatio;
+        final ratio = controller.progressRatio.clamp(0.0, 1.0);
         final remaining = (goal - read).clamp(0, goal);
-        final isDarkmode = Get.isDarkMode;
 
         return GestureDetector(
           onTap: () => Get.toNamed(RouteHelper.suraList),
           child: Container(
-            padding: const EdgeInsets.all(Dimensions.PADDING_SIZE_DEFAULT),
+            padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: Theme.of(context).cardColor,
-              borderRadius: BorderRadius.circular(
-                Dimensions.RADIUS_EXTRA_LARGE,
-              ),
-              boxShadow: isDarkmode
+              color: theme.cardColor,
+              borderRadius: BorderRadius.circular(24),
+              border: Border.all(color: primary.withOpacity(0.15)),
+              boxShadow: dark
                   ? null
                   : [
                       BoxShadow(
-                        color: Get.isDarkMode
-                            ? Colors.black.withOpacity(0.25)
-                            : Colors.grey.withOpacity(0.15),
-                        blurRadius: 12,
+                        color: Colors.black.withOpacity(0.06),
+                        blurRadius: 14,
                         offset: const Offset(0, 6),
                       ),
                     ],
             ),
             child: Row(
               children: [
-                _CircularProgress(ratio: ratio, read: read, goal: goal),
-                const SizedBox(width: Dimensions.PADDING_SIZE_DEFAULT),
+                _CircularProgress(
+                  ratio: ratio,
+                  read: read,
+                  goal: goal,
+                  primary: primary,
+                  track: trackColor,
+                  textColor: textColor,
+                ),
+                const SizedBox(width: 16),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'quran_milestone_title'.tr,
-                        style: robotoBold.copyWith(),
+                        style: robotoBold.copyWith(
+                          fontSize: 16,
+                          color: textColor,
+                        ),
                       ),
-                      const SizedBox(height: 3),
+                      const SizedBox(height: 4),
                       Text(
                         'quran_milestone_subtitle'.tr,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                         style: robotoRegular.copyWith(
-                          fontSize: Dimensions.FONT_SIZE_SMALL - 2,
-                          color: Theme.of(context).hintColor,
+                          fontSize: 11,
+                          color: theme.hintColor,
                         ),
                       ),
-                      const SizedBox(height: 10),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Row(
-                          children: [
-                            Expanded(
+                      const SizedBox(height: 12),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
                               child: LinearProgressIndicator(
-                                value: ratio.clamp(0.0, 1.0),
+                                value: ratio,
                                 minHeight: 8,
-                                borderRadius: BorderRadius.circular(20),
-                                backgroundColor: isDarkmode
-                                    ? Colors.grey.withValues(alpha: 0.5)
-                                    : AppColorModern.emeraldSoftBg,
-                                valueColor: const AlwaysStoppedAnimation<Color>(
-                                  AppColorModern.emerald,
-                                ),
+                                backgroundColor: trackColor,
+                                valueColor: AlwaysStoppedAnimation(primary),
                               ),
                             ),
-                            const SizedBox(width: 8),
-                            Text(
-                              '${(ratio * 100).toStringAsFixed(0)}%',
-                              style: robotoMedium.copyWith(
-                                fontSize: Dimensions.FONT_SIZE_SMALL,
-                                color: AppColorModern.emerald,
-                              ),
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            '${(ratio * 100).toStringAsFixed(0)}%',
+                            style: robotoMedium.copyWith(
+                              fontSize: 12,
+                              color: primary,
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      const SizedBox(height: 8),
-
+                      const SizedBox(height: 12),
                       _InfoRow(
                         title: remaining == 0
                             ? 'quran_milestone_complete'.tr
                             : '$remaining ${'quran_milestone_remaining'.tr}',
                         subtitle: 'quran_milestone_subtitles'.tr,
+                        primary: primary,
+                        textColor: textColor,
                         onTap: () => Get.toNamed(RouteHelper.suraList),
                       ),
                     ],
@@ -118,84 +126,59 @@ class _CircularProgress extends StatelessWidget {
   final double ratio;
   final int read;
   final int goal;
+  final Color primary;
+  final Color track;
+  final Color? textColor;
   const _CircularProgress({
     required this.ratio,
     required this.read,
     required this.goal,
+    required this.primary,
+    required this.track,
+    required this.textColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 85,
-      height: 85,
+      width: 86,
+      height: 86,
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Container(
-            width: 110,
-            height: 110,
-            decoration: BoxDecoration(
-              color: Get.isDarkMode
-                  ? Colors.grey.withValues(alpha: 0.05)
-                  : Colors.white,
-              shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(.08),
-                  blurRadius: 18,
-                  offset: const Offset(0, 8),
-                ),
-              ],
-            ),
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                SizedBox(
-                  width: 86,
-                  height: 86,
-                  child: CircularProgressIndicator(
-                    value: ratio.clamp(0.0, 1.0),
-                    strokeWidth: 9,
-                    strokeCap: StrokeCap.round,
-                    backgroundColor: Get.isDarkMode
-                        ? Colors.white.withValues(alpha: 0.3)
-                        : AppColorModern.emeraldSoftBg,
-                    valueColor: const AlwaysStoppedAnimation(
-                      AppColorModern.emerald,
-                    ),
-                  ),
-                ),
-              ],
+          SizedBox(
+            width: 86,
+            height: 86,
+            child: CircularProgressIndicator(
+              value: ratio,
+              strokeWidth: 8,
+              strokeCap: StrokeCap.round,
+              backgroundColor: track,
+              valueColor: AlwaysStoppedAnimation(primary),
             ),
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: [
               SvgPicture.asset(
                 Images.Icon_Quran,
-                width: 24,
-                height: 24,
-                color: AppColorModern.emerald,
+                width: 22,
+                height: 22,
+                colorFilter: ColorFilter.mode(primary, BlendMode.srcIn),
               ),
+              const SizedBox(height: 2),
               Row(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
                     '$read',
-                    style: robotoBold.copyWith(
-                      fontSize: Dimensions.FONT_SIZE_LARGE + 5,
-
-                      color: Get.isDarkMode
-                          ? Colors.white
-                          : AppColorModern.textPrimary,
-                    ),
+                    style: robotoBold.copyWith(fontSize: 20, color: textColor),
                   ),
                   Text(
                     '/$goal',
                     style: robotoRegular.copyWith(
-                      fontSize: Dimensions.FONT_SIZE_EXTRA_SMALL,
+                      fontSize: 10,
                       color: Theme.of(context).hintColor,
                     ),
                   ),
@@ -212,9 +195,17 @@ class _CircularProgress extends StatelessWidget {
 class _InfoRow extends StatelessWidget {
   final String title;
   final String subtitle;
+  final Color primary;
+  final Color? textColor;
   final VoidCallback? onTap;
 
-  const _InfoRow({required this.title, required this.subtitle, this.onTap});
+  const _InfoRow({
+    required this.title,
+    required this.subtitle,
+    required this.primary,
+    required this.textColor,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -222,50 +213,35 @@ class _InfoRow extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.circular(14),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         decoration: BoxDecoration(
-          color: Get.isDarkMode
-              ? Colors.white.withValues(alpha: 0.1)
-              : AppColorModern.chipGreenBackground,
+          color: primary.withOpacity(0.10),
           borderRadius: BorderRadius.circular(14),
         ),
         child: Row(
           children: [
-            const Text('📗', style: robotoMedium),
-            const SizedBox(width: 5),
+            Icon(Icons.menu_book_rounded, size: 18, color: primary),
+            const SizedBox(width: 8),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     title,
-                    style: robotoMedium.copyWith(
-                      color: Get.isDarkMode
-                          ? Colors.white
-                          : AppColorModern.textPrimary,
-                      fontSize: Dimensions.FONT_SIZE_EXTRA_SMALL,
-                    ),
+                    style: robotoMedium.copyWith(fontSize: 11, color: textColor),
                   ),
                   const SizedBox(height: 2),
                   Text(
                     subtitle,
-                    style: robotoMedium.copyWith(
-                      color: Get.isDarkMode
-                          ? Colors.white.withValues(alpha: 0.5)
-                          : AppColorModern.textSecondary,
-                      fontSize: Dimensions.FONT_SIZE_EXTRA_SMALL,
+                    style: robotoRegular.copyWith(
+                      fontSize: 10,
+                      color: Theme.of(context).hintColor,
                     ),
                   ),
                 ],
               ),
             ),
-            Icon(
-              Icons.chevron_right,
-              color: Get.isDarkMode
-                  ? Colors.white
-                  : AppColorModern.textSecondary,
-              size: 20,
-            ),
+            Icon(Icons.chevron_right, color: primary, size: 20),
           ],
         ),
       ),
