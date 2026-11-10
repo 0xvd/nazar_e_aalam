@@ -44,5 +44,5 @@ echo "Version bumped: $CURRENT_VERSION  →  $NEW_VERSION"
 # Emit outputs for GitHub Actions (no-op outside Actions)
 emit() { if [ -n "${GITHUB_ENV:-}" ]; then echo "$1=$2" >> "$GITHUB_ENV"; fi; }
 emit NEW_VERSION  "$NEW_VERSION"
-emit VERSION_NAME "${NEW_MAJOR}.${NEW_MINOR}"   # 2-part display name for tags
+emit VERSION_NAME "${NEW_MAJOR}.${NEW_MINOR}"   # 2-part "../../scripts"display name for tags
 emit BUILD_NUMBER "$NEW_BUILD"
