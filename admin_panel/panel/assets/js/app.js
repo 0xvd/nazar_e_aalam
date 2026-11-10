@@ -92,6 +92,9 @@ const ICONS = {
     '<path d="M4 4v6h6M20 20v-6h-6"/><path d="M20 10a8 8 0 10-8 8 8 8 0 006-3"/>',
   menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
   bell: '<path d="M18 16H6l1.5-2V9a4.5 4.5 0 019 0v5L18 16z"/><path d="M10 19a2 2 0 004 0"/>',
+  mobile:
+    '<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/>',
+  roles: '<circle cx="9" cy="7" r="3"/><path d="M2 21v-2a5 5 0 0110 0v2"/><circle cx="17" cy="9" r="2.2"/><path d="M14 21v-1.5a4 4 0 017.5-1.5"/>',
 };
 
 const ic = (n) => {
@@ -249,6 +252,8 @@ function formModal({ title, fields, data = {}, okLabel = "Save", onSubmit }) {
 const NAV = [
   ["Dashboard", "dash"],
   ["Administrators", "shield"],
+  ["Roles", "roles"], // ← ADD
+  ["Invitations", "key"],
   ["Prayer Times", "clock"],
   ["Reciters", "head"],
   ["Duas", "heart"],
@@ -256,12 +261,13 @@ const NAV = [
   ["Wallpapers", "img"],
   ["Sifat Names", "star"],
   ["Haram Codes", "book"],
-  ["Translators", "globe"],
+  // ["Translators", "globe"],
   ["Uploads", "upload"],
   ["Backup", "down"],
   ["Sync", "refresh"], // ← new
   ["Dhikr Campaigns", "check"], // ← new
-  ["Devices", "head"], // ← new
+  ["Devices", "mobile"], // ← new
+  // ["Location", "globe"], // ← new
   ["Settings", "set"],
 ];
 
@@ -279,7 +285,41 @@ const state = {
   roles: null,
   reciterSlug: null, // ← new: when set, Reciters page shows detail
   surahPlayer: null, // ← new: { slug, surah, host, ayahList, index, audio }
+  detected: null, // { lat, lon, city, state, country, source, cached }
+  _detectedToastShown: false,
 };
+
+// ============================================================================
+// Permissions
+// ============================================================================
+// `api.user` is only {id,email,first_name,last_name,is_admin}. Permissions
+// live on the roles. Refresh them from GET /me (extended) or GET /roles
+// + resolve the current user's role_ids.
+async function currentPermissions() {
+  if (state._permissions) return state._permissions;
+  try {
+    // /me returns roles with permissions in our new backend
+    const me = await api.get("/me");
+    const perms = new Set();
+    (me.roles || []).forEach((r) => {
+      (r.permissions || []).forEach((p) => perms.add(p));
+    });
+    state._permissions = perms;
+  } catch {
+    state._permissions = new Set();
+  }
+  return state._permissions;
+}
+
+function can(perm) {
+  if (!state._permissions) return true; // not yet loaded → don't hide anything
+  return state._permissions.has(perm);
+}
+
+async function refreshPermissions() {
+  state._permissions = null;
+  await currentPermissions();
+}
 
 async function ensureRoles() {
   if (state.roles) return state.roles;
@@ -344,24 +384,54 @@ async function ensurePrayerCities() {
   return state.prayerCityList;
 }
 
+function permissionFor(key) {
+  return (
+    {
+      Duas: "duas",
+      Dhikrs: "dhikrs",
+      "Sifat Names": "sifat",
+      "Haram Codes": "haram-codes",
+      // Translators: "translators",
+      Administrators: "administrators",
+    }[key] || key.toLowerCase().replace(/\s+/g, "-")
+  );
+}
+
 // ============================================================================
 // Shell
 // ============================================================================
 function renderNav() {
-  $("#nav").innerHTML = NAV.map(
-    ([n, i], k) => `<a href="#${encodeURIComponent(n)}" style="--i:${k}"
+  const NAV_PERM = {
+    Dashboard: null,
+    Administrators: "administrators:read",
+    Roles: "roles:read", // ← ADD
+    Invitations: "invitations:read",
+    "Prayer Times": "prayer-times:read",
+    Reciters: "reciters:read",
+    Duas: "duas:read",
+    Dhikrs: "dhikrs:read",
+    Wallpapers: "wallpapers:read",
+    "Sifat Names": "sifat:read",
+    "Haram Codes": "haram-codes:read",
+    // Translators: "translators:read",
+    Uploads: "uploads:read",
+    Backup: "backup:read",
+    Sync: "sync:read",
+    "Dhikr Campaigns": "dhikr-campaigns:read",
+    Devices: "devices:read",
+    Settings: "settings:read",
+  };
+  $("#nav").innerHTML = NAV.filter(([n]) => {
+    const p = NAV_PERM[n];
+    return !p || can(p);
+  })
+    .map(
+      ([n, i], k) => `<a href="#${encodeURIComponent(n)}" style="--i:${k}"
             class="${n === state.page ? "act" : ""}"
             ${n === state.page ? 'aria-current="page"' : ""}
             data-act="go" data-p="${esc(n)}">${ic(i)}${esc(n)}</a>`,
-  ).join("");
-}
-
-async function refreshMe() {
-  try {
-    state.me = await api.get("/me");
-  } catch {
-    state.me = state.user;
-  }
+    )
+    .join("");
 }
 
 function applyUserHeader() {
@@ -415,6 +485,30 @@ function setMenu(on) {
   if (b) b.setAttribute("aria-expanded", String(on));
 }
 
+function pagePermission(page) {
+  return (
+    {
+      Dashboard: null,
+      Administrators: "administrators:read",
+      Invitations: "invitations:read",
+      "Prayer Times": "prayer-times:read",
+      Reciters: "reciters:read",
+      Duas: "duas:read",
+      Dhikrs: "dhikrs:read",
+      Wallpapers: "wallpapers:read",
+      "Sifat Names": "sifat:read",
+      "Haram Codes": "haram-codes:read",
+      // Translators: "translators:read",
+      Uploads: "uploads:read",
+      Backup: "backup:read",
+      Sync: "sync:read",
+      "Dhikr Campaigns": "dhikr-campaigns:read",
+      Devices: "devices:read",
+      Settings: "settings:read",
+    }[page] || null
+  );
+}
+
 async function go(page) {
   if (!NAV.some(([n]) => n === page)) page = "Dashboard";
   state.page = page;
@@ -424,6 +518,18 @@ async function go(page) {
   }
   if (page !== "Reciters") {
     state.reciterSlug = null;
+  }
+
+  const readPerm = pagePermission(page);
+  if (readPerm && !can(readPerm)) {
+    $("#page").innerHTML = `<div class="card glass s12">
+      <div class="empty" style="padding:40px 20px">
+        ${ic("lock")}
+        <b style="display:block;margin:12px 0 6px">You don't have permission to view this page.</b>
+        <small style="color:var(--mut)">Ask an administrator to grant you the <code>${esc(readPerm)}</code> permission.</small>
+      </div>
+    </div>`;
+    return;
   }
 
   stopAudio();
@@ -619,19 +725,90 @@ async function dashboardPage() {
     day: "numeric",
   });
 
-  // Hijri + prayer times + cities, in parallel
-  const [hijriRes, citiesRes, prayerRes] = await Promise.allSettled([
-    api.get("/hijri/now?city=nadiad"),
+  const canDuaWrite = can("duas:write");
+  const canReciterWrite = can("reciters:write");
+  const canWallWrite = can("wallpapers:write");
+  const quickActions =
+    canDuaWrite || canReciterWrite || canWallWrite
+      ? `<div class="qa">
+           ${canDuaWrite ? `<button type="button" data-act="go" data-p="Duas" data-then="add">${ic("plus")}Add dua</button>` : ""}
+           ${canReciterWrite ? `<button type="button" data-act="go" data-p="Reciters" data-then="add">${ic("head")}Add reciter</button>` : ""}
+           ${canWallWrite ? `<button type="button" class="g" data-act="go" data-p="Wallpapers" data-then="add">${ic("img")}Add wallpaper</button>` : ""}
+         </div>`
+      : "";
+
+  // ── Make sure city catalogue is loaded before matching ──
+  await ensurePrayerCities();
+
+  // ── Resolve the city ──
+  let resolvedCity = state.prayerCity;
+  if (resolvedCity === "__detected__") resolvedCity = null; // never treat sentinel as a city
+
+  if (!resolvedCity && state.detected && state.detected.city) {
+    const match = _matchCuratedCity(
+      state.detected.city,
+      state.detected.state,
+      state.detected.country_code,
+    );
+    if (match) resolvedCity = match.key;
+  }
+
+  // ── Three states ──
+  const hasCoords =
+    state.detected &&
+    typeof state.detected.lat === "number" &&
+    typeof state.detected.lon === "number";
+  const stateKind = resolvedCity
+    ? "curated"
+    : hasCoords
+      ? "detected"
+      : "unresolved";
+
+  // ── Fetch prayer times ──
+  let todayTimes = null;
+  if (stateKind === "curated") {
+    state.prayerCity = resolvedCity;
+    try {
+      todayTimes = await loadTodayPrayerTimes();
+    } catch {}
+  } else if (stateKind === "detected") {
+    try {
+      const r = await api.get(
+        `/prayer-times/for-location?lat=${state.detected.lat}&lon=${state.detected.lon}`,
+      );
+      const t = r.timings || {};
+      todayTimes = {
+        city: r.city_name || state.detected.city || "detected",
+        times: {
+          imsak: t.imsak,
+          fajr: t.fajr,
+          sunrise: t.sunrise,
+          zuhr: t.dhuhr,
+          asr: t.asr,
+          maghrib: t.maghrib,
+          isha: t.isha,
+        },
+        isFriday: !!r.is_friday,
+      };
+    } catch {}
+  }
+
+  // ── Hijri city — use detected city name when there's no curated match ──
+  const hijriCity =
+    resolvedCity ||
+    (state.detected && state.detected.city
+      ? state.detected.city.toLowerCase().trim()
+      : "nadiad");
+
+  const [hijriRes, citiesRes] = await Promise.allSettled([
+    api.get("/hijri/now?city=" + encodeURIComponent(hijriCity)),
     ensurePrayerCities(),
-    loadTodayPrayerTimes(),
   ]);
 
   const hijri = hijriRes.status === "fulfilled" ? hijriRes.value : null;
   const cities = citiesRes.status === "fulfilled" ? citiesRes.value : [];
-  const todayTimes = prayerRes.status === "fulfilled" ? prayerRes.value : null;
 
   state.prayerTimes = todayTimes ? todayTimes.times : null;
-  state.prayerCity = todayTimes ? todayTimes.city : cities[0]?.key || "nadiad";
 
   let hijriLine = "";
   if (hijri) {
@@ -639,7 +816,7 @@ async function dashboardPage() {
     if (hijri.is_tentative) hijriLine += " · tentative";
   }
 
-  // Stat cards — 5 cards (no Reciters, no System status)
+  // ── Stat cards ──
   const stats = [
     {
       key: "wallpapers",
@@ -668,7 +845,6 @@ async function dashboardPage() {
     },
   ];
 
-  // Fetch counts in background, fill in as they arrive
   Promise.allSettled(stats.map((s) => api.get(s.endpoint))).then((results) => {
     if (state.page !== "Dashboard") return;
     results.forEach((r, i) => {
@@ -682,7 +858,63 @@ async function dashboardPage() {
     });
   });
 
-  const npCard = renderNextPrayer(todayTimes, cities);
+  // ── Next prayer card ──
+  let npCard;
+  if (stateKind === "unresolved") {
+    npCard = `
+      <div class="card glass s4 np" style="justify-content:center;border-left:4px solid var(--bad)">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <div class="ic" style="background:rgba(143,35,8,.15);color:var(--bad)">${ic("globe")}</div>
+          <b>Location not detected</b>
+        </div>
+        <p style="margin:0 0 12px;color:var(--mut);font-size:13px">
+          We can't show prayer times without knowing your location. Allow browser location or set a city manually.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <button type="button" class="btn" data-act="dash-detect-loc">
+            ${ic("globe")}Detect my location
+          </button>
+          <button type="button" class="b3" data-act="go" data-p="Prayer Times">
+            ${ic("clock")}Pick a city manually
+          </button>
+        </div>
+      </div>`;
+  } else if (stateKind === "detected" && !todayTimes) {
+    npCard = `
+      <div class="card glass s4 np" style="justify-content:center;border-left:4px solid var(--bad)">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <div class="ic" style="background:rgba(143,35,8,.15);color:var(--bad)">${ic("clock")}</div>
+          <b>Couldn't load prayer times</b>
+        </div>
+        <p style="margin:0 0 12px;color:var(--mut);font-size:13px">
+          We detected "${esc(state.detected?.city || "your location")}" but the prayer time service didn't respond.
+        </p>
+        <button type="button" class="btn" data-act="dash-refresh-loc">
+          ${ic("refresh")}Retry
+        </button>
+      </div>`;
+  } else {
+    npCard = renderNextPrayer(
+      todayTimes,
+      cities,
+      stateKind === "detected"
+        ? [state.detected.city, state.detected.country]
+            .filter(Boolean)
+            .join(", ")
+        : null,
+    );
+  }
+
+  // Small toast so the user knows where the computed times come from
+  if (stateKind === "detected" && !state._detectedToastShown) {
+    state._detectedToastShown = true;
+    const label =
+      [state.detected.city, state.detected.country]
+        .filter(Boolean)
+        .join(", ") ||
+      `${state.detected.lat.toFixed(3)}, ${state.detected.lon.toFixed(3)}`;
+    setTimeout(() => toast(`📍 Using computed prayer times for ${label}`), 400);
+  }
 
   return `
         ${dashboardSvgDefs()}
@@ -716,9 +948,158 @@ async function dashboardPage() {
     `;
 }
 
+const LOCATION_CACHE_KEY = "nea:detected_v1";
+const LOCATION_MAX_AGE_MS = 24 * 60 * 60 * 1000; // 24 hours
+
+function _persistDetected(detected) {
+  try {
+    if (!detected) {
+      localStorage.removeItem(LOCATION_CACHE_KEY);
+      return;
+    }
+    localStorage.setItem(
+      LOCATION_CACHE_KEY,
+      JSON.stringify({
+        ...detected,
+        _cachedAt: Date.now(),
+      }),
+    );
+  } catch {}
+}
+
+function _loadPersistedDetected() {
+  try {
+    const raw = localStorage.getItem(LOCATION_CACHE_KEY);
+    if (!raw) return null;
+    const d = JSON.parse(raw);
+    // Expire after LOCATION_MAX_AGE_MS
+    if (!d._cachedAt || Date.now() - d._cachedAt > LOCATION_MAX_AGE_MS) {
+      localStorage.removeItem(LOCATION_CACHE_KEY);
+      return null;
+    }
+    return d;
+  } catch {
+    return null;
+  }
+}
+
+function _browserGeolocation() {
+  return new Promise((resolve, reject) => {
+    if (!navigator.geolocation) {
+      reject(new Error("Browser geolocation is not supported"));
+      return;
+    }
+    navigator.geolocation.getCurrentPosition(
+      (pos) => resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
+      (err) => {
+        const msg =
+          err.code === err.PERMISSION_DENIED
+            ? "Location permission denied. Enable it in your browser settings."
+            : err.code === err.POSITION_UNAVAILABLE
+              ? "Location unavailable. Check your network or GPS."
+              : "Location request timed out.";
+        reject(new Error(msg));
+      },
+      { enableHighAccuracy: false, timeout: 10000, maximumAge: 5 * 60_000 },
+    );
+  });
+}
+
+const LOCATION_ASKED_KEY = "nea:loc_asked";
+
+async function autoPromptLocationIfNeeded() {
+  // Only ask once per browser, unless previously denied
+  if (localStorage.getItem(LOCATION_ASKED_KEY) === "1") return;
+  if (!navigator.geolocation) return;
+
+  // Check the current permission state without triggering a prompt
+  let permState = null;
+  try {
+    if (navigator.permissions && navigator.permissions.query) {
+      const p = await navigator.permissions.query({ name: "geolocation" });
+      permState = p.state; // "granted" | "prompt" | "denied"
+    }
+  } catch {}
+
+  if (permState === "denied") {
+    localStorage.setItem(LOCATION_ASKED_KEY, "1");
+    return;
+  }
+
+  // If permission was already granted, resolve silently
+  if (permState === "granted") {
+    try {
+      await detectLocationFromBrowser();
+      localStorage.setItem(LOCATION_ASKED_KEY, "1");
+    } catch {}
+    return;
+  }
+
+  // Permission is "prompt" — showing a modal first is nicer than the raw browser dialog
+  // But if you want the raw dialog, just call detectLocationFromBrowser() directly.
+  // Here we trigger it directly so the browser dialog appears:
+  try {
+    await detectLocationFromBrowser();
+    localStorage.setItem(LOCATION_ASKED_KEY, "1");
+  } catch {
+    // User said "block" or timed out — don't ask again this session
+    localStorage.setItem(LOCATION_ASKED_KEY, "1");
+  }
+}
+
+async function detectLocationFromBrowser() {
+  try {
+    const coords = await _browserGeolocation();
+    const d = await api.get(
+      `/location/get?lat=${coords.lat}&lon=${coords.lon}`,
+    );
+
+    state.detected = {
+      lat: coords.lat,
+      lon: coords.lon,
+      city: d.city,
+      state: d.state,
+      country: d.country,
+      country_code: d.country_code,
+      postcode: d.postcode,
+      formatted_address: d.formatted_address,
+      source: "browser",
+      cached: d.cached,
+    };
+    _persistDetected(state.detected);
+
+    const match = _matchCuratedCity(d.city, d.state, d.country_code);
+    if (match) {
+      state.prayerCity = match.key;
+      state.prayerCityPage = match.key;
+      toast(`Location detected: ${d.city}, ${d.country}`);
+    } else {
+      state.prayerCity = null;
+      state.prayerCityPage = null;
+      toast(
+        `Detected ${d.city || "your area"} — no curated prayer times for this city. Use "Prayer times by coordinate" instead.`,
+        true,
+      );
+    }
+
+    // Auto re-render if we're on a location-dependent page
+    if (state.page === "Dashboard" || state.page === "Prayer Times") {
+      await go(state.page);
+    }
+
+    return { coords, data: d, match };
+  } catch (e) {
+    toast(e.message || "Could not detect location", true);
+    throw e;
+  }
+}
+
 async function loadTodayPrayerTimes() {
-  const cities = await ensurePrayerCities();
-  const city = state.prayerCity || cities[0]?.key || "nadiad";
+  const city = state.prayerCity;
+  if (!city) {
+    // No city resolved — return null so the caller shows "Location not detected"
+    return null;
+  }
   const today = new Date().toISOString().slice(0, 10);
   try {
     const r = await api.get(
@@ -744,13 +1125,21 @@ async function loadTodayPrayerTimes() {
   }
 }
 
-function renderNextPrayer(todayTimes, cities) {
-  const cityOpts = cities
-    .map(
-      (c) =>
-        `<option value="${esc(c.key)}"${c.key === state.prayerCity ? " selected" : ""}>${esc(c.name)}</option>`,
-    )
-    .join("");
+function renderNextPrayer(todayTimes, cities, overrideCity = null) {
+  // Build dropdown list. If we're on a "detected" location, inject it at the top.
+  let opts = cities.map(
+    (c) =>
+      `<option value="${esc(c.key)}"${
+        c.key === state.prayerCity && !overrideCity ? " selected" : ""
+      }>${esc(c.name)}</option>`,
+  );
+  if (overrideCity) {
+    opts = [
+      `<option value="__detected__" selected>${esc(overrideCity)} (detected)</option>`,
+      ...opts,
+    ];
+  }
+  const cityOpts = opts.join("");
 
   if (!todayTimes) {
     return `<div class="card glass s4 np" style="justify-content:center">
@@ -773,8 +1162,14 @@ function renderNextPrayer(todayTimes, cities) {
   return `<div class="card glass s4 np">
         <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;margin-bottom:6px">
             <small>Next prayer</small>
-            <select class="in" style="height:32px;font-size:12px;max-width:140px;padding:0 8px"
-                data-change="np-city">${cityOpts}</select>
+            <div style="display:flex;gap:6px;align-items:center">
+              <button type="button" data-act="dash-refresh-loc" title="Refresh location"
+                style="width:28px;height:28px;border-radius:8px;border:1px solid var(--line);background:rgba(255,255,255,0.5);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;color:inherit;padding:0">
+                ${ic("refresh")}
+              </button>
+              <select class="in" style="height:28px;font-size:12px;max-width:130px;padding:0 8px"
+                  data-change="np-city">${cityOpts}</select>
+            </div>
         </div>
         <div class="rg">
             <svg viewBox="0 0 36 36" aria-hidden="true">
@@ -910,32 +1305,20 @@ const CRUD = {
       { k: "status_info", l: "Status info", t: "area", full: 1 },
     ],
   },
-  Translators: {
-    endpoint: "/translators",
-    title: "Translators",
-    sub: "Quran translation providers",
-    icon: "globe",
-    label: (x) => x.full_name || `#${x.id}`,
-    columns: [
-      { label: "Full name", get: (x) => x.full_name },
-      { label: "Short name", get: (x) => x.short_name },
-      { label: "Language", get: (x) => x.language },
-      { label: "Language code", get: (x) => x.language_code },
-    ],
-    fields: [
-      { k: "full_name", l: "Full name", req: 1 },
-      { k: "short_name", l: "Short name", req: 1 },
-      { k: "language", l: "Language", req: 1 },
-      { k: "language_code", l: "Language code (e.g. en, ar, ur)", req: 1 },
-    ],
-  },
   Administrators: {
     endpoint: "/administrators",
     title: "Administrators",
-    sub: "People who can sign in to this panel",
+    sub: "People who can sign in — new admins come in via Invitations",
     icon: "shield",
     label: (x) =>
       `${x.first_name || ""} ${x.last_name || ""}`.trim() || x.email,
+    primaryAction: {
+      label: "Invite admin",
+      icon: "key",
+      act: "invite-open",
+    },
+    hideDelete: true, // ← never delete from this page
+    reinvite: true, // ← expose re-invite action
     columns: [
       {
         label: "Name",
@@ -947,61 +1330,67 @@ const CRUD = {
         html: true,
         get: (x) => {
           const roles = x.roles || [];
-          if (!roles.length) {
-            return x.is_admin
-              ? `<span class="pill">Admin</span>`
-              : `<span class="pill off">User</span>`;
+          const pills = [];
+          if (roles.length) {
+            pills.push(
+              roles
+                .map(
+                  (r) =>
+                    `<span class="pill" style="margin-right:4px">${esc(r.name)}</span>`,
+                )
+                .join(""),
+            );
+          } else if (x.is_admin) {
+            pills.push(`<span class="pill">Admin</span>`);
+          } else {
+            pills.push(`<span class="pill off">User</span>`);
           }
-          return roles
-            .map(
-              (r) =>
-                `<span class="pill" style="margin-right:4px">${esc(r.name)}</span>`,
-            )
-            .join("");
+          if (x.has_pending_invite) {
+            pills.push(
+              `<span class="pill warn" title="Re-invite pending — waiting for acceptance">pending</span>`,
+            );
+          }
+          return pills.join("");
         },
       },
     ],
     fields: [
-      { k: "email", l: "Email", t: "email", req: 1 },
-      {
-        k: "password",
-        l: "Password",
-        req: 1,
-        h: "Minimum 6 characters. Required on create.",
-      },
       { k: "first_name", l: "First name" },
       { k: "last_name", l: "Last name" },
-      // role_ids is handled specially in openCrudForm
     ],
     async prepareForm(existing) {
-      // Inject role selector into the form after opening
       setTimeout(async () => {
         const form = $("#mform");
         if (!form) return;
+
         const roles = await ensureRoles();
         const currentIds = new Set((existing?.roles || []).map((r) => r.id));
+
         const block = document.createElement("div");
         block.className = "full";
-        block.style.marginTop = "12px";
+        block.style.marginTop = "4px";
         block.innerHTML = `
-          <label>Roles</label>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;padding:8px;background:rgba(255,255,255,0.5);border-radius:14px;border:1px solid var(--line);min-height:50px">
+          <label style="display:block;margin-bottom:8px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)">Roles</label>
+          <div id="roles-box" style="display:flex;flex-wrap:wrap;gap:8px;padding:10px;background:rgba(255,255,255,0.55);border-radius:14px;border:1px solid var(--line);min-height:48px">
             ${
               roles.length
                 ? roles
                     .map(
                       (r) => `
-                  <label style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.7);cursor:pointer">
-                    <input type="checkbox" name="__role_${r.id}" value="${r.id}" ${currentIds.has(r.id) ? "checked" : ""}>
+                  <label class="role-chip" style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.75);border:1px solid var(--line);cursor:pointer;font-size:13px">
+                    <input type="checkbox" name="__role_${r.id}" value="${r.id}" ${currentIds.has(r.id) ? "checked" : ""} style="margin:0;cursor:pointer">
                     <span>${esc(r.name)}</span>
                   </label>
                 `,
                     )
                     .join("")
-                : `<small style="color:var(--mut)">No roles yet — create one first</small>`
+                : `<small style="color:var(--mut);font-size:12px">No roles exist yet — click "+ New role" to create the first one.</small>`
             }
           </div>
-          <div style="margin-top:8px"><button type="button" class="b3" data-act="role-create-open">+ New role</button></div>
+          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+            <button type="button" class="b3" data-act="role-create-open" style="font-size:13px">${ic("plus")}New role</button>
+            <button type="button" class="b3" data-act="role-refresh" style="font-size:13px">${ic("refresh")}Reload roles</button>
+          </div>
         `;
         form.querySelector(".mf").appendChild(block);
       }, 20);
@@ -1009,9 +1398,7 @@ const CRUD = {
     collectExtraData() {
       const ids = [];
       $$('#mform input[type="checkbox"][name^="__role_"]:checked').forEach(
-        (cb) => {
-          ids.push(parseInt(cb.value, 10));
-        },
+        (cb) => ids.push(parseInt(cb.value, 10)),
       );
       return { role_ids: ids };
     },
@@ -1037,33 +1424,71 @@ async function crudPage(key) {
   });
   const items = list.items || [];
 
+  // Header action: default is "+ Add X"; a page can override via cfg.primaryAction
+  const headAction = cfg.primaryAction
+    ? can(permissionFor(key) + ":write")
+      ? `<button type="button" class="b2" data-act="${esc(cfg.primaryAction.act)}">${ic(cfg.primaryAction.icon || "plus")}${esc(cfg.primaryAction.label)}</button>`
+      : ""
+    : can(permissionFor(key) + ":write")
+      ? `<button type="button" class="b2" data-act="crud-add" data-key="${esc(key)}">${ic("plus")}Add ${esc(key.replace(/s$/, "").toLowerCase())}</button>`
+      : "";
+
   const head = `
         <div class="eh">
             <div class="ic">${ic(cfg.icon)}</div>
             <div><h3>${esc(cfg.title)}</h3><p>${esc(cfg.sub)}</p></div>
-            <button type="button" class="b2" data-act="crud-add" data-key="${esc(key)}">
-                ${ic("plus")}Add ${esc(key.replace(/s$/, "").toLowerCase())}
-            </button>
+            ${headAction}
         </div>`;
 
+  // Empty state — same header, helpful hint
   if (!items.length) {
+    const emptyHint = cfg.primaryAction
+      ? `Nothing here yet. Use the <b>${esc(cfg.primaryAction.label)}</b> button above to send the first one.`
+      : `Nothing here yet. Use the button above to add the first one.`;
     return `<div class="card glass s12">${head}
-            <div class="empty">Nothing here yet. Use the button above to add the first one.</div>
+            <div class="empty">${emptyHint}</div>
         </div>`;
   }
+
+  // Row-level actions — Edit + Delete for every page.
+  // A page can hide edit or delete via cfg.hideEdit / cfg.hideDelete.
+  const actionsFor = (x) => {
+    const id = x.id;
+    const out = [];
+    if (!cfg.hideEdit && can(permissionFor(key) + ":write")) {
+      out.push(
+        `<button type="button" title="Edit" data-act="crud-edit" data-key="${esc(key)}" data-id="${id}">${ic("edit")}</button>`,
+      );
+    }
+    // Re-invite action (Administrators page only)
+    if (cfg.reinvite && can("invitations:write")) {
+      const pending = x.has_pending_invite === true;
+      out.push(
+        `<button type="button" title="${pending ? "Resend invite" : "Re-invite admin"}"
+          data-act="admin-reinvite"
+          data-id="${id}"
+          data-email="${esc(x.email)}"
+          data-pending="${pending}"
+          style="${pending ? "color:var(--warn)" : ""}">${ic("refresh")}</button>`,
+      );
+    }
+    if (!cfg.hideDelete && can(permissionFor(key) + ":write")) {
+      out.push(
+        `<button type="button" class="d" title="Delete" data-act="crud-del" data-key="${esc(key)}" data-id="${id}" data-label="${esc(cfg.label(x))}">${ic("trash")}</button>`,
+      );
+    }
+    return out.join("") || "—";
+  };
 
   const header =
     cfg.columns.map((c) => `<th>${esc(c.label)}</th>`).join("") +
     `<th>Action</th>`;
+
   const rows = items
     .map((x) => {
       const cells = cfg.columns.map((c) => renderCell(c, x)).join("");
-      const id = x.id;
-      return `<tr data-id="${id}">${cells}
-            <td><span class="act-b">
-                <button type="button" title="Edit" data-act="crud-edit" data-key="${esc(key)}" data-id="${id}">${ic("edit")}</button>
-                <button type="button" class="d" title="Delete" data-act="crud-del" data-key="${esc(key)}" data-id="${id}" data-label="${esc(cfg.label(x))}">${ic("trash")}</button>
-            </span></td></tr>`;
+      return `<tr data-id="${x.id}">${cells}
+            <td><span class="act-b">${actionsFor(x)}</span></td></tr>`;
     })
     .join("");
 
@@ -1090,6 +1515,11 @@ async function openCrudForm(key, id) {
       toast("Load failed: " + e.message, true);
       return;
     }
+  }
+
+  if (!can(permissionFor(key) + ":write")) {
+    toast("You don't have permission to edit this resource", true);
+    return;
   }
 
   let fields = cfg.fields.slice();
@@ -1134,8 +1564,154 @@ async function openCrudForm(key, id) {
   }
 }
 
-async function roleCreateModal() {
+// ============================================================================
+// Invitations
+// ============================================================================
+async function invitationsPage() {
+  let invites = [];
+  try {
+    invites = await api.get("/admin/invitations");
+  } catch (e) {
+    return `<div class="card glass s12">
+      <div class="empty">${ic("x")} ${esc(e.message || "Failed to load invitations")}</div>
+    </div>`;
+  }
+
+  const pending = invites.filter((x) => x.status === "pending").length;
+  const accepted = invites.filter((x) => x.status === "accepted").length;
+  const revoked = invites.filter((x) => x.status === "revoked").length;
+
+  const head = `
+    <div class="eh">
+      <div class="ic">${ic("key")}</div>
+      <div><h3>Invitations</h3><p>Pending, accepted, and revoked admin invitations</p></div>
+      <button type="button" class="b2" data-act="invite-open">${ic("plus")}Invite admin</button>
+    </div>`;
+
+  const stats = `
+    <div class="card glass s4 stat">
+      <div class="top"><div class="ic">${ic("clock")}</div></div>
+      <div class="num">${pending}</div><div class="lbl">Pending</div>
+    </div>
+    <div class="card glass s4 stat">
+      <div class="top"><div class="ic">${ic("check")}</div></div>
+      <div class="num">${accepted}</div><div class="lbl">Accepted</div>
+    </div>
+    <div class="card glass s4 stat">
+      <div class="top"><div class="ic">${ic("x")}</div></div>
+      <div class="num">${revoked}</div><div class="lbl">Revoked</div>
+    </div>`;
+
+  if (!invites.length) {
+    return `<div class="card glass s12">${head}</div>${stats}
+      <div class="card glass s12">
+        <div class="empty">No invitations yet. Click <b>Invite admin</b> to send the first one.</div>
+      </div>`;
+  }
+
+  const pill = (s) =>
+    ({
+      pending: `<span class="pill warn">pending</span>`,
+      accepted: `<span class="pill ok">accepted</span>`,
+      revoked: `<span class="pill off">revoked</span>`,
+      expired: `<span class="pill off">expired</span>`,
+    })[s] || `<span class="pill off">${esc(s)}</span>`;
+
+  const rows = invites
+    .map((inv) => {
+      const actions = [];
+      if (inv.status === "pending" || inv.status === "expired") {
+        actions.push(
+          `<button type="button" title="Resend" data-act="invite-resend" data-id="${inv.id}">${ic("refresh")}</button>`,
+        );
+      }
+      if (inv.status === "pending") {
+        actions.push(
+          `<button type="button" class="d" title="Revoke" data-act="invite-revoke" data-id="${inv.id}" data-email="${esc(inv.email)}">${ic("trash")}</button>`,
+        );
+      }
+      return `<tr>
+        <td>#${inv.id}</td>
+        <td>${esc(inv.email)}</td>
+        <td>${esc(inv.role_name || "—")}</td>
+        <td>${esc(inv.inviter_name || "—")}</td>
+        <td>${pill(inv.status)}</td>
+        <td>${esc((inv.expires_at || "").replace("T", " ").slice(0, 16))}</td>
+        <td>${esc((inv.created_at || "").replace("T", " ").slice(0, 16))}</td>
+        <td><span class="act-b">${actions.join("") || "—"}</span></td>
+      </tr>`;
+    })
+    .join("");
+
+  return `<div class="card glass s12">${head}</div>${stats}
+    <div class="card glass s12">
+      <div class="tb">
+        <div class="fld">${ic("search")}<input type="search" placeholder="Search invitations…" data-filter></div>
+      </div>
+      <div class="tw"><table>
+        <thead><tr>
+          <th>ID</th><th>Email</th><th>Role</th><th>Invited by</th>
+          <th>Status</th><th>Expires</th><th>Created</th><th>Actions</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table></div>
+      <div class="foot">${invites.length} total</div>
+    </div>`;
+}
+
+async function openInviteForm() {
+  if (!can("invitations:write")) {
+    toast("You don't have permission to invite admins", true);
+    return;
+  }
+
+  const roles = await ensureRoles();
   formModal({
+    title: "Invite a new administrator",
+    fields: [
+      {
+        k: "email",
+        l: "Email",
+        t: "email",
+        req: 1,
+        full: 1,
+        h: "They'll receive an invite email with a link to set their password.",
+      },
+      {
+        k: "role_id",
+        l: "Role",
+        t: "select",
+        o: ["", ...roles.map((r) => r.name)],
+        full: 1,
+        h: "Optional. The role the new admin will get.",
+      },
+    ],
+    onSubmit: async (vals) => {
+      const selectedRole = vals.role_id
+        ? roles.find((r) => r.name === vals.role_id)
+        : null;
+      try {
+        await api.post("/admin/invitations", {
+          email: vals.email,
+          role_id: selectedRole ? selectedRole.id : null,
+        });
+        api.cache.invalidate("invitations");
+        toast("Invitation sent");
+        await go("Invitations");
+        return null;
+      } catch (e) {
+        return e.message || "Invite failed";
+      }
+    },
+  });
+}
+
+async function roleCreateModal() {
+  if (!can("roles:write")) {
+    toast("You don't have permission to create roles", true);
+    return;
+  }
+  ({
     title: "Create role",
     fields: [
       {
@@ -1163,16 +1739,24 @@ async function roleCreateModal() {
         api.cache.invalidate("roles");
         state.roles = null;
         toast(`Role "${created.name}" created`);
-        // Reopen the admin modal so the new role appears
-        const reopened = await ensureRoles();
-        setTimeout(() => {
-          $$("#mform label").forEach((lbl) => {
-            if (lbl.textContent.trim() === "Roles") {
-              const checkbox = lbl.querySelector("input");
-              if (checkbox) checkbox.checked = true;
-            }
-          });
-        }, 100);
+
+        // If we're still inside the admin edit form, append the new role
+        // as an already-checked checkbox (freshly created → auto-assign).
+        const box = document.getElementById("roles-box");
+        if (box) {
+          const chip = document.createElement("label");
+          chip.className = "role-chip";
+          chip.style =
+            "display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.75);border:1px solid var(--line);cursor:pointer;font-size:13px";
+          chip.innerHTML = `
+            <input type="checkbox" name="__role_${created.id}" value="${created.id}" checked style="margin:0;cursor:pointer">
+            <span>${esc(created.name)}</span>
+          `;
+          // Remove the "no roles yet" hint if present
+          const hint = box.querySelector("small");
+          if (hint) hint.remove();
+          box.appendChild(chip);
+        }
         return null;
       } catch (e) {
         return e.message || "Create failed";
@@ -1244,6 +1828,10 @@ async function wallpapersPage() {
 }
 
 async function wallPreview(id) {
+  if (!can("wallpapers:read")) {
+    toast("You don't have permission to view wallpapers", true);
+    return;
+  }
   try {
     const w = await api.get(`/wallpapers/${id}`);
     openModal(
@@ -1264,6 +1852,11 @@ async function wallPreview(id) {
 }
 
 function openWallForm(existing) {
+  if (!can("wallpapers:write")) {
+    toast("You don't have permission to edit wallpapers", true);
+    return;
+  }
+
   const isEdit = !!existing;
   const initialName = existing?.name || "";
   const initialUrl = existing?.image || "";
@@ -1888,52 +2481,105 @@ const PRAYER_LABELS = {
 
 async function prayerTimesPage() {
   const cities = await ensureCities();
-  const defaultCity = state.prayerCityPage || cities[0]?.key || "nadiad";
+
+  // Resolve which city to use. Priority:
+  //   1. Explicit user selection (state.prayerCityPage)
+  //   2. Detected location matched to a curated city
+  //   3. Previous dashboard selection
+  //   4. FIRST city — but only as a "no location" placeholder, not silently
+  let resolvedKey =
+    state.prayerCityPage ||
+    (state.detected && state.detected.city
+      ? _matchCuratedCity(
+          state.detected.city,
+          state.detected.state,
+          state.detected.country_code,
+        )?.key
+      : null) ||
+    state.prayerCity ||
+    null;
+
+  // If nothing resolved and there are no cities, show an error
+  if (!cities.length) {
+    return `<div class="card glass s12">
+      <div class="empty">
+        ${ic("x")} No prayer time cities are configured on the server.<br>
+        <small style="color:var(--mut);margin-top:8px;display:block">
+          Ask an admin to seed cities or check <code>tools/cities.py</code>.
+        </small>
+      </div>
+    </div>`;
+  }
+
+  // If nothing resolved, use first city but SHOW A BANNER warning
+  const usedFallback = !resolvedKey;
+  if (!resolvedKey) {
+    resolvedKey = cities[0].key;
+  }
+
+  const defaultCity = resolvedKey;
   const year = state.prayerYear || new Date().getFullYear();
   const month = state.prayerMonth ?? new Date().getMonth();
 
-  const head = `
-        <div class="eh">
-            <div class="ic">${ic("clock")}</div>
-            <div><h3>Prayer Times</h3><p>${esc(defaultCity)} &middot; ${year}</p></div>
-            <button type="button" class="b2" data-act="prayer-seed">${ic("plus")}Generate year</button>
+  // Banner shown when we couldn't detect the user's location
+  const noLocationBanner = usedFallback
+    ? `<div class="card glass s12" style="margin-bottom:16px;border-left:4px solid var(--bad);background:rgba(255,240,235,0.5)">
+      <div class="ch">
+        <div class="ic" style="background:rgba(143,35,8,.15);color:var(--bad)">${ic("x")}</div>
+        <div>
+          <b style="color:var(--bad)">Showing "${esc(defaultCity)}" — that's not your detected location</b>
+          <small>We couldn't match your location to a known city.</small>
         </div>
-        <div class="tb" style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end">
-          <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:180px;max-width:280px">
-              <label for="pt-city" style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)">City</label>
-              <select class="in sel" id="pt-city" data-change="prayer-city">
-                  ${cities.map((c) => `<option value="${esc(c.key)}"${c.key === defaultCity ? " selected" : ""}>${esc(c.name)}</option>`).join("")}
-              </select>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:6px;min-width:140px">
-              <label for="pt-year" style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)">Year</label>
-              <select class="in sel" id="pt-year" data-change="prayer-year">
-                  ${(() => {
-                    const ys = [];
-                    for (let y = 2000; y <= 2030; y++) ys.push(y);
-                    if (!ys.includes(year)) {
-                      ys.push(year);
-                      ys.sort((a, b) => a - b);
-                    }
-                    return ys
-                      .map(
-                        (y) =>
-                          `<option value="${y}"${y === year ? " selected" : ""}>${y}</option>`,
-                      )
-                      .join("");
-                  })()}
-              </select>
-          </div>
       </div>
-        <div class="months" role="tablist">
-            ${Array.from(
-              { length: 12 },
-              (_, i) =>
-                `<button type="button" role="tab" class="${i === month ? "on" : ""}" data-act="prayer-month" data-m="${i}">
-                    ${new Date(2000, i, 1).toLocaleDateString("en-IN", { month: "short" })}
-                </button>`,
-            ).join("")}
-        </div>`;
+      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        <button type="button" class="btn" data-act="dash-detect-loc">${ic("globe")}Detect my location</button>
+        <button type="button" class="b3" data-act="go" data-p="Location">${ic("search")}Manual lookup</button>
+      </div>
+    </div>`
+    : "";
+
+  const head = `
+    <div class="eh">
+        <div class="ic">${ic("clock")}</div>
+        <div><h3>Prayer Times</h3><p>${esc(defaultCity)} &middot; ${year}</p></div>
+        <button type="button" class="b2" data-act="prayer-seed">${ic("plus")}Generate year</button>
+    </div>
+    <div class="tb" style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end">
+      <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:180px;max-width:280px">
+          <label for="pt-city" style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)">City</label>
+          <select class="in sel" id="pt-city" data-change="prayer-city">
+              ${cities.map((c) => `<option value="${esc(c.key)}"${c.key === defaultCity ? " selected" : ""}>${esc(c.name)}</option>`).join("")}
+          </select>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:140px">
+          <label for="pt-year" style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)">Year</label>
+          <select class="in sel" id="pt-year" data-change="prayer-year">
+              ${(() => {
+                const ys = [];
+                for (let y = 2000; y <= 2030; y++) ys.push(y);
+                if (!ys.includes(year)) {
+                  ys.push(year);
+                  ys.sort((a, b) => a - b);
+                }
+                return ys
+                  .map(
+                    (y) =>
+                      `<option value="${y}"${y === year ? " selected" : ""}>${y}</option>`,
+                  )
+                  .join("");
+              })()}
+          </select>
+      </div>
+    </div>
+    <div class="months" role="tablist">
+        ${Array.from(
+          { length: 12 },
+          (_, i) =>
+            `<button type="button" role="tab" class="${i === month ? "on" : ""}" data-act="prayer-month" data-m="${i}">
+                ${new Date(2000, i, 1).toLocaleDateString("en-IN", { month: "short" })}
+            </button>`,
+        ).join("")}
+    </div>`;
 
   let items = [];
   try {
@@ -1950,13 +2596,31 @@ async function prayerTimesPage() {
     toast("Load failed: " + e.message, true);
   }
 
+  // Card: prayer times by coordinate — sits BELOW the table, always visible
+  const coordCard = `
+    <div class="card glass s12" style="margin-top:16px">
+      <div class="ch">
+        <div class="ic">${ic("globe")}</div>
+        <div><b>Prayer times by coordinate</b><small>Any location — auto-computed &amp; cached</small></div>
+      </div>
+      <div class="fg2" style="margin-top:12px">
+        <div><label for="ptc-lat">Latitude</label><input class="in" id="ptc-lat" type="number" step="any" placeholder="22.689772"></div>
+        <div><label for="ptc-lon">Longitude</label><input class="in" id="ptc-lon" type="number" step="any" placeholder="72.855056"></div>
+      </div>
+      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        <button type="button" class="b3" data-act="pt-by-coord">${ic("clock")}Get times</button>
+        <button type="button" class="b3" data-act="pt-use-my-loc">${ic("globe")}Use my location</button>
+      </div>
+      <div id="pt-coord-result" style="margin-top:12px"></div>
+    </div>`;
+
   if (!items.length) {
-    return `<div class="card glass s12">${head}
+    return `${noLocationBanner}<div class="card glass s12">${head}
             <div class="empty">
                 No prayer times for this month.<br>
                 <button class="b3" data-act="prayer-seed" style="margin-top:14px">${ic("plus")}Generate year ${year}</button>
             </div>
-        </div>`;
+        </div>${coordCard}`;
   }
 
   const rows = items
@@ -1982,7 +2646,7 @@ async function prayerTimesPage() {
     })
     .join("");
 
-  return `<div class="card glass s12">${head}
+  return `${noLocationBanner}<div class="card glass s12">${head}
         <div class="tw"><table>
             <thead><tr>
                 <th>Date</th><th>Imsak</th><th>Fajr</th><th>Sunrise</th>
@@ -1991,10 +2655,14 @@ async function prayerTimesPage() {
             <tbody>${rows}</tbody>
         </table></div>
         <div class="foot">${items.length} days &middot; edit on Fridays to override jummah time</div>
-    </div>`;
+    </div>${coordCard}`;
 }
 
 async function prayerEdit(id) {
+  if (!can("prayer-times:write")) {
+    toast("You don't have permission to edit prayer times", true);
+    return;
+  }
   const it = await apiCall(api.get(`/prayer-times/${id}`), {
     errorPrefix: "Load",
   });
@@ -2022,9 +2690,22 @@ async function prayerEdit(id) {
 }
 
 async function prayerSeed() {
+  if (!can("prayer-times:write")) {
+    toast("You don't have permission to generate prayer times", true);
+    return;
+  }
   const cities = await ensureCities();
-  const city = state.prayerCityPage || cities[0]?.key || "nadiad";
+  const city = state.prayerCityPage || state.prayerCity;
   const year = state.prayerYear || new Date().getFullYear();
+
+  if (!city) {
+    toast(
+      "Pick a city first — we can't seed times for a location we don't know.",
+      true,
+    );
+    return;
+  }
+
   confirmBox({
     title: "Generate full year?",
     msg: `Generate 365 days of prayer times for ${city} in ${year}? Existing rows will be replaced.`,
@@ -2191,6 +2872,15 @@ function scheduleSettingsSave() {
   // No-op — settings page is profile-only now
 }
 
+async function refreshMe() {
+  try {
+    state.me = await api.get("/me");
+  } catch {
+    state.me = state.user;
+  }
+  return state.me;
+}
+
 // ============================================================================
 // Settings
 // ============================================================================
@@ -2200,6 +2890,21 @@ function scheduleSettingsSave() {
 async function settingsPage() {
   await refreshMe();
   const me = state.me || state.user || {};
+
+  // Load security settings (2fa_enabled). Default to "on" if unset.
+  let twoFa = "true";
+  try {
+    const r = await api.get("/settings/2fa_enabled");
+    if (r && r.value != null) twoFa = String(r.value).toLowerCase();
+  } catch (e) {
+    // 404 = not set yet → default "true" matches backend default
+    if (e && !String(e.message || "").includes("404")) {
+      // Network error — leave default
+    }
+  }
+  const twoFaOn = ["1", "true", "yes", "on"].includes(twoFa);
+  const isProd = api.config && api.config.env === "production";
+  // In production, show a locked state but still render (backend rejects the toggle)
 
   const head = `
         <div class="eh">
@@ -2259,9 +2964,48 @@ async function settingsPage() {
         </div>
 
         <div class="err" id="serr" role="alert"></div>
+    </div>
+
+    <div class="card glass s12" style="margin-top:16px" id="security-card">
+        <div class="eh">
+            <div class="ic">${ic("lock")}</div>
+            <div><h3>Security</h3><p>Controls for admin logins</p></div>
+        </div>
+
+        <div class="fg2" style="margin-top:4px">
+            <div class="full">
+                <label>Require 2FA for admin logins</label>
+                <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;background:rgba(255,255,255,0.55);border:1px solid var(--line);border-radius:14px">
+                    <button type="button"
+                        id="tf-toggle"
+                        class="tf-switch ${twoFaOn ? "on" : "off"}"
+                        data-act="toggle-2fa"
+                        aria-pressed="${twoFaOn ? "true" : "false"}"
+                        aria-label="Toggle 2FA"
+                        ${isProd && twoFaOn ? 'title="This setting is locked in production"' : ""}>
+                        <span class="tf-knob"></span>
+                    </button>
+                    <div style="flex:1">
+                        <b style="display:block;font-size:14px">${twoFaOn ? "Enabled" : "Disabled"}</b>
+                        <small style="color:var(--mut);font-size:12px">
+                            ${
+                              twoFaOn
+                                ? "A 6-digit code will be emailed on every sign-in."
+                                : "Admins sign in with just a password. Not recommended."
+                            }
+                            ${isProd ? "<br><b style='color:var(--or)'>Locked in production — this toggle will not disable 2FA.</b>" : ""}
+                        </small>
+                    </div>
+                </div>
+                <div class="hint">
+                    Changing this takes effect on the <b>next login</b>. Existing sessions are not affected.
+                </div>
+            </div>
+        </div>
+
+        <div class="err" id="tf-err" role="alert"></div>
     </div>`;
 }
-
 // ============================================================================
 // Stubs
 // ============================================================================
@@ -2478,12 +3222,308 @@ async function uploadStart() {
   }
 }
 
+// Build the permission-grid HTML for the modal
+function _rolePermGridHtml(catalog, selectedCodes) {
+  const selected = new Set(selectedCodes || []);
+  const titleCase = (s) =>
+    s.replace(/[-_]/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+
+  return Object.keys(catalog.groups || {})
+    .sort()
+    .map((group) => {
+      const codes = catalog.groups[group];
+      const groupChecked = codes.every((c) => selected.has(c));
+      return `
+        <div style="margin-bottom:14px" class="perm-group">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <input type="checkbox" id="pg_${esc(group)}"
+              data-group="${esc(group)}" ${groupChecked ? "checked" : ""}
+              style="cursor:pointer">
+            <label for="pg_${esc(group)}"
+              style="cursor:pointer;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)">
+              ${esc(titleCase(group))}
+            </label>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;padding-left:26px">
+            ${codes
+              .map(
+                (code) => `
+                  <label class="role-chip"
+                    style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.7);border:1px solid var(--line);cursor:pointer;font-size:12px">
+                    <input type="checkbox" name="__perm" value="${esc(code)}"
+                      data-group="${esc(group)}"
+                      ${selected.has(code) ? "checked" : ""}
+                      style="margin:0;cursor:pointer">
+                    <span>${esc(code.split(":")[1] || code)}</span>
+                  </label>`,
+              )
+              .join("")}
+          </div>
+        </div>`;
+    })
+    .join("");
+}
+
+function _wireRolePermGrid() {
+  const form = $("#mform");
+  if (!form) return;
+  $$('#mform input[data-group][id^="pg_"]').forEach((grpCb) => {
+    grpCb.addEventListener("change", () => {
+      const g = grpCb.dataset.group;
+      $$(`#mform input[name="__perm"][data-group="${g}"]`).forEach(
+        (cb) => (cb.checked = grpCb.checked),
+      );
+    });
+  });
+  // Child toggles → update group checkbox
+  $$('#mform input[name="__perm"]').forEach((cb) => {
+    cb.addEventListener("change", () => {
+      const g = cb.dataset.group;
+      const siblings = $$(`#mform input[name="__perm"][data-group="${g}"]`);
+      const allOn = siblings.every((s) => s.checked);
+      const grp = $(`#mform input[id="pg_${g}"]`);
+      if (grp) grp.checked = allOn;
+    });
+  });
+}
+
+// Open the modal in create mode (or edit if `existing` is passed)
+async function openRoleForm(existing) {
+  if (!can("roles:write")) {
+    toast("You don't have permission to manage roles", true);
+    return;
+  }
+
+  let catalog;
+  try {
+    catalog = await api.get("/roles/permissions/catalog");
+  } catch (e) {
+    toast("Could not load permission catalogue: " + e.message, true);
+    return;
+  }
+
+  const isEdit = !!existing;
+  const initialCodes = (existing?.permissions || []).slice();
+
+  formModal({
+    title: isEdit ? `Edit role: ${existing.name}` : "Create role",
+    fields: [
+      {
+        k: "name",
+        l: "Role name",
+        req: 1,
+        full: 1,
+        h: "e.g. Content Manager, Moderator",
+      },
+      {
+        k: "description",
+        l: "Description",
+        full: 1,
+        h: "Optional. Short summary shown in the Roles page.",
+      },
+    ],
+    data: existing || {},
+    okLabel: isEdit ? "Save changes" : "Create role",
+    onSubmit: async (vals) => {
+      const permissions = $$('#mform input[name="__perm"]:checked').map(
+        (cb) => cb.value,
+      );
+      if (!permissions.length) {
+        return "Pick at least one permission.";
+      }
+      try {
+        if (isEdit) {
+          await api.patch(`/roles/${existing.id}`, {
+            name: vals.name,
+            description: vals.description || null,
+            permissions,
+          });
+          toast(
+            `Role "${vals.name}" updated (${permissions.length} permissions)`,
+          );
+        } else {
+          await api.post("/roles", {
+            name: vals.name,
+            description: vals.description || null,
+            permissions,
+            is_admin: true,
+            is_default: false,
+          });
+          toast(
+            `Role "${vals.name}" created (${permissions.length} permissions)`,
+          );
+        }
+        api.cache.invalidate("roles");
+        state.roles = null;
+        await go("Roles");
+        return null;
+      } catch (e) {
+        return e.message || "Save failed";
+      }
+    },
+  });
+
+  // Inject permission grid after form renders
+  setTimeout(() => {
+    const form = $("#mform");
+    if (!form) return;
+    const block = document.createElement("div");
+    block.className = "full";
+    block.style.marginTop = "4px";
+    block.innerHTML = `
+      <label style="display:block;margin-bottom:8px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)">
+        Permissions <span style="color:var(--mut);font-weight:500;text-transform:none;letter-spacing:0">(${initialCodes.length} pre-selected)</span>
+      </label>
+      <div style="max-height:380px;overflow:auto;padding:10px;background:rgba(255,255,255,0.55);border-radius:14px;border:1px solid var(--line)">
+        ${_rolePermGridHtml(catalog, initialCodes)}
+      </div>
+      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        <button type="button" class="b3" data-act="role-perms-all">${ic("check")}Select all</button>
+        <button type="button" class="b3" data-act="role-perms-none">${ic("x")}Clear</button>
+      </div>
+    `;
+    form.querySelector(".mf").appendChild(block);
+    _wireRolePermGrid();
+  }, 20);
+}
+
+// Delete a role with confirmation + safety check on user_count
+function confirmDeleteRole(id, name, userCount) {
+  if (!can("roles:write")) {
+    toast("You don't have permission to delete roles", true);
+    return;
+  }
+  confirmBox({
+    title: `Delete role "${name}"?`,
+    msg:
+      userCount > 0
+        ? `This role is assigned to ${userCount} admin${userCount === 1 ? "" : "s"}. They will lose these permissions on next request. This cannot be undone.`
+        : `This role has no assigned users. Deletion is safe.`,
+    ok: "Delete",
+    onOk: async () => {
+      try {
+        await api.del(`/roles/${id}`);
+        toast(`Role "${name}" deleted`);
+        api.cache.invalidate("roles");
+        state.roles = null;
+        await go("Roles");
+      } catch (e) {
+        toast(e.message || "Delete failed", true);
+      }
+    },
+  });
+}
+
+// ============================================================================
+// Roles page
+// ============================================================================
+async function rolesPage() {
+  // Load catalogue + roles in parallel
+  let roles = [];
+  let catalog = { groups: {}, all: [] };
+  try {
+    [roles, catalog] = await Promise.all([
+      api.get("/roles"),
+      api.get("/roles/permissions/catalog"),
+    ]);
+  } catch (e) {
+    return `<div class="card glass s12">
+      <div class="empty">${ic("x")} ${esc(e.message || "Failed to load roles")}</div>
+    </div>`;
+  }
+
+  const canWrite = can("roles:write");
+
+  const head = `
+    <div class="eh">
+      <div class="ic">${ic("roles")}</div>
+      <div>
+        <h3>Roles</h3>
+        <p>${roles.length} role${roles.length === 1 ? "" : "s"} · permissions granted to admins</p>
+      </div>
+      ${
+        canWrite
+          ? `<button type="button" class="b2" data-act="role-create">${ic("plus")}New role</button>`
+          : ""
+      }
+    </div>`;
+
+  if (!roles.length) {
+    return `<div class="card glass s12">${head}
+      <div class="empty">
+        No roles yet. ${canWrite ? `Click <b>New role</b> to create the first one.` : `Ask a Super Admin to create one.`}
+      </div>
+    </div>`;
+  }
+
+  // --- Table ---
+  const rows = roles
+    .map((r) => {
+      const permCount = (r.permissions || []).length;
+      const pill = r.is_default
+        ? `<span class="pill ok">default</span>`
+        : r.is_admin
+          ? `<span class="pill">admin</span>`
+          : `<span class="pill off">user</span>`;
+
+      return `<tr data-id="${r.id}">
+        <td>#${r.id}</td>
+        <td><b>${esc(r.name)}</b></td>
+        <td>${r.description ? esc(r.description) : `<span style="color:var(--mut)">—</span>`}</td>
+        <td>${pill}</td>
+        <td><b>${permCount}</b> / ${catalog.all.length}</td>
+        <td>${r.user_count || 0}</td>
+        <td>
+          <span class="act-b">
+            ${
+              canWrite
+                ? `<button type="button" title="Edit permissions"
+                     data-act="role-edit-perms" data-id="${r.id}">
+                     ${ic("edit")}
+                   </button>`
+                : ""
+            }
+            ${
+              canWrite && !r.is_default
+                ? `<button type="button" class="d" title="Delete"
+                     data-act="role-delete" data-id="${r.id}"
+                     data-name="${esc(r.name)}"
+                     data-users="${r.user_count || 0}">
+                     ${ic("trash")}
+                   </button>`
+                : ""
+            }
+          </span>
+        </td>
+      </tr>`;
+    })
+    .join("");
+
+  return `<div class="card glass s12">${head}
+    <div class="tb">
+      <div class="fld">
+        ${ic("search")}
+        <input type="search" placeholder="Search roles…" data-filter>
+      </div>
+    </div>
+    <div class="tw"><table>
+      <thead><tr>
+        <th>ID</th><th>Name</th><th>Description</th>
+        <th>Type</th><th>Permissions</th><th>Users</th><th>Actions</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>
+    <div class="foot">${roles.length} total</div>
+  </div>`;
+}
+
 // ============================================================================
 // Page registry
 // ============================================================================
 const PAGE_RENDERERS = {
   Dashboard: dashboardPage,
   Administrators: () => crudPage("Administrators"),
+  Roles: rolesPage, // ← ADD
   "Prayer Times": prayerTimesPage,
   Reciters: recitersPage,
   Duas: () => crudPage("Duas"),
@@ -2491,14 +3531,215 @@ const PAGE_RENDERERS = {
   Wallpapers: wallpapersPage,
   "Sifat Names": () => crudPage("Sifat Names"),
   "Haram Codes": () => crudPage("Haram Codes"),
-  Translators: () => crudPage("Translators"),
+  // Translators: () => crudPage("Translators"),
   Uploads: uploadsPage,
   Settings: settingsPage,
   Backup: backupPage,
   Sync: syncPage,
   "Dhikr Campaigns": dhikrCampaignsPage,
   Devices: devicesPage,
+  Invitations: invitationsPage,
+  // Location: locationPage,
 };
+
+// ============================================================================
+// Location lookup
+// ============================================================================
+// async function locationPage() {
+//   return `
+//     <div class="card glass s12">
+//       <div class="eh">
+//         <div class="ic">${ic("globe")}</div>
+//         <div><h3>Location Lookup</h3><p>Reverse-geocode any coordinate, get prayer times</p></div>
+//       </div>
+
+//       <div class="fg2" style="margin-top:16px">
+//         <div>
+//           <label for="loc-lat">Latitude</label>
+//           <input class="in" id="loc-lat" type="number" step="any" placeholder="22.689772">
+//         </div>
+//         <div>
+//           <label for="loc-lon">Longitude</label>
+//           <input class="in" id="loc-lon" type="number" step="any" placeholder="72.855056">
+//         </div>
+//       </div>
+
+//       <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+//         <button type="button" class="btn" data-act="loc-lookup">${ic("search")}Reverse-lookup</button>
+//         <button type="button" class="b3" data-act="loc-prayer">${ic("clock")}Prayer times here</button>
+//         <button type="button" class="b3" data-act="loc-my-ip">${ic("globe")}Use my IP</button>
+//       </div>
+
+//       <div id="loc-result" style="margin-top:18px"></div>
+//       <div id="loc-prayer-result" style="margin-top:18px"></div>
+//     </div>`;
+// }
+
+async function doLocLookup() {
+  const latEl = $("#loc-lat");
+  const lonEl = $("#loc-lon");
+  const out = $("#loc-result");
+  if (!latEl || !lonEl || !out) return;
+
+  const lat = parseFloat(latEl.value);
+  const lon = parseFloat(lonEl.value);
+  if (Number.isNaN(lat) || Number.isNaN(lon)) {
+    toast("Enter valid lat/lon", true);
+    return;
+  }
+
+  out.innerHTML = `<div class="empty">${ic("refresh")}Looking up…</div>`;
+
+  try {
+    const d = await api.get(`/location/get?lat=${lat}&lon=${lon}`);
+
+    // ── NEW: save detected location ──
+    state.detected = {
+      lat,
+      lon,
+      city: d.city,
+      state: d.state,
+      country: d.country,
+      country_code: d.country_code,
+      postcode: d.postcode,
+      formatted_address: d.formatted_address,
+      source: d.source,
+      cached: d.cached,
+    };
+
+    // ── NEW: match to nearest curated city (for prayer times) ──
+    const match = _matchCuratedCity(d.city, d.state, d.country_code);
+
+    out.innerHTML = `
+      <div class="card glass s12" style="background:rgba(255,255,255,0.4)">
+        <div class="fg2">
+          <div><label>City</label><b>${esc(d.city || "—")}</b></div>
+          <div><label>State</label><b>${esc(d.state || "—")}</b></div>
+          <div><label>Country</label><b>${esc(d.country || "—")}</b></div>
+          <div><label>Postcode</label><b>${esc(d.postcode || "—")}</b></div>
+          <div class="full"><label>Coordinates</label><b>${lat.toFixed(6)}, ${lon.toFixed(6)}</b></div>
+          <div class="full"><label>Formatted</label><b>${esc(d.formatted_address || "—")}</b></div>
+          <div class="full">
+            <label>Cache</label>
+            <b>${d.cached ? `<span class="pill ok">cached</span>` : `<span class="pill warn">fresh</span>`} · source: ${esc(d.source || "—")}</b>
+          </div>
+          ${
+            match
+              ? `<div class="full"><label>Auto-matched city</label><b>${esc(match.name)} <span class="pill ok">will use for prayer times</span></b></div>`
+              : `<div class="full"><label>Auto-matched city</label><b style="color:var(--mut)">No curated city found — prayer times will be computed on the fly</b></div>`
+          }
+        </div>
+        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+          ${
+            match
+              ? `<button type="button" class="btn" data-act="apply-city" data-city="${esc(match.key)}">${ic("check")}Use ${esc(match.name)} for prayer times</button>`
+              : `<button type="button" class="btn" data-act="apply-detected">${ic("clock")}Use this location for prayer times</button>`
+          }
+        </div>
+      </div>`;
+  } catch (e) {
+    out.innerHTML = `<div class="empty">${ic("x")} ${esc(e.message || "Lookup failed")}</div>`;
+  }
+}
+
+function _matchCuratedCity(city, stateName, countryCode) {
+  if (!city || !state.prayerCityList) return null;
+  const needle = city.toLowerCase().trim();
+  return (
+    state.prayerCityList.find((c) => {
+      // Match against city key or name
+      const key = c.key.toLowerCase();
+      const name = c.name.toLowerCase();
+      return (
+        key === needle ||
+        name === needle ||
+        name.startsWith(needle) ||
+        needle.startsWith(name)
+      );
+    }) || null
+  );
+}
+
+async function doLocPrayer() {
+  const latEl = $("#loc-lat");
+  const lonEl = $("#loc-lon");
+  const out = $("#loc-prayer-result");
+  if (!latEl || !lonEl || !out) return;
+
+  const lat = parseFloat(latEl.value);
+  const lon = parseFloat(lonEl.value);
+  if (Number.isNaN(lat) || Number.isNaN(lon)) {
+    toast("Enter valid lat/lon", true);
+    return;
+  }
+
+  out.innerHTML = `<div class="empty">${ic("refresh")}Computing prayer times…</div>`;
+
+  try {
+    const d = await api.get(`/prayer-times/for-location?lat=${lat}&lon=${lon}`);
+    const t = d.timings || {};
+    out.innerHTML = `
+      <div class="card glass s12" style="background:rgba(255,255,255,0.4)">
+        <div class="ch" style="margin-bottom:12px">
+          <div class="ic">${ic("clock")}</div>
+          <div>
+            <b>${esc(d.city_name || "Computed location")}</b>
+            <small>${esc(d.date)} · ${esc(d.source)}${d.cached ? " (cached)" : ""}</small>
+          </div>
+        </div>
+        <div class="tw"><table>
+          <thead><tr>
+            <th>Imsak</th><th>Fajr</th><th>Sunrise</th><th>Dhuhr</th>
+            <th>Asr</th><th>Sunset</th><th>Maghrib</th><th>Isha</th>
+          </tr></thead>
+          <tbody><tr>
+            <td>${esc(t.imsak || "—")}</td>
+            <td><b>${esc(t.fajr || "—")}</b></td>
+            <td>${esc(t.sunrise || "—")}</td>
+            <td><b>${esc(t.dhuhr || "—")}</b></td>
+            <td>${esc(t.asr || "—")}</td>
+            <td>${esc(t.sunset || "—")}</td>
+            <td><b>${esc(t.maghrib || "—")}</b></td>
+            <td><b>${esc(t.isha || "—")}</b></td>
+          </tr></tbody>
+        </table></div>
+        ${d.is_friday ? `<div style="margin-top:10px"><span class="pill warn">Friday (Jummah)</span></div>` : ""}
+      </div>`;
+  } catch (e) {
+    out.innerHTML = `<div class="empty">${ic("x")} ${esc(e.message || "Prayer times failed")}</div>`;
+  }
+}
+
+async function doMyIp() {
+  const out = $("#loc-result");
+  if (out)
+    out.innerHTML = `<div class="empty">${ic("refresh")}Resolving your IP…</div>`;
+  try {
+    const d = await api.get("/location/get");
+    if (d.lat != null) {
+      const latEl = $("#loc-lat");
+      const lonEl = $("#loc-lon");
+      if (latEl) latEl.value = d.lat;
+      if (lonEl) lonEl.value = d.lon;
+    }
+    await doLocLookup();
+    // Auto-apply the matched city
+    if (state.detected && state.detected.city) {
+      const match = _matchCuratedCity(
+        state.detected.city,
+        state.detected.state,
+        state.detected.country_code,
+      );
+      if (match) {
+        state.prayerCity = match.key;
+        state.prayerCityPage = match.key;
+      }
+    }
+  } catch (e) {
+    if (out)
+      out.innerHTML = `<div class="empty">${ic("x")} ${esc(e.message || "IP lookup failed")}</div>`;
+  }
+}
 
 async function backupPage() {
   const head = `
@@ -2829,6 +4070,10 @@ async function syncPage() {
 }
 
 async function syncStartAction() {
+  if (!can("sync:write")) {
+    toast("You don't have permission to start sync jobs", true);
+    return;
+  }
   try {
     const r = await api.post("/admin/sync/ayah/start", {});
     toast(
@@ -2845,6 +4090,10 @@ async function syncStartAction() {
 }
 
 async function syncStopAction() {
+  if (!can("sync:write")) {
+    toast("You don't have permission to stop sync jobs", true);
+    return;
+  }
   try {
     await api.post("/admin/sync/ayah/stop", {});
     toast("Stop requested — job will halt after the current ayah");
@@ -2855,6 +4104,10 @@ async function syncStopAction() {
 }
 
 function backupRestoreConfirm(filename) {
+  if (!can("backup:write")) {
+    toast("You don't have permission to restore backups", true);
+    return;
+  }
   confirmBox({
     title: "Restore database backup?",
     msg: `"${filename}" will replace ALL current data. This cannot be undone. Type RESTORE in the prompt below.`,
@@ -2876,6 +4129,10 @@ function backupRestoreConfirm(filename) {
 }
 
 function backupRunNow() {
+  if (!can("backup:write")) {
+    toast("You don't have permission to run backups", true);
+    return;
+  }
   confirmBox({
     title: "Run database backup?",
     msg: "This runs scripts/backup.sh server-side and uploads the SQL dump to R2. Takes 5-15 seconds.",
@@ -2907,6 +4164,187 @@ document.addEventListener("click", async (e) => {
 
   try {
     switch (act) {
+      case "role-create":
+        await openRoleForm(null);
+        break;
+
+      case "role-edit-perms": {
+        const id = parseInt(el.dataset.id, 10);
+        try {
+          const roles = await api.get("/roles");
+          const existing = roles.find((r) => r.id === id);
+          if (!existing) {
+            toast("Role not found", true);
+            break;
+          }
+          await openRoleForm(existing);
+        } catch (e) {
+          toast(e.message || "Could not load role", true);
+        }
+        break;
+      }
+
+      case "role-delete": {
+        const id = parseInt(el.dataset.id, 10);
+        const name = el.dataset.name || "role";
+        const userCount = parseInt(el.dataset.users || "0", 10);
+        confirmDeleteRole(id, name, userCount);
+        break;
+      }
+
+      case "role-perms-all":
+        $$('#mform input[name="__perm"]').forEach((cb) => (cb.checked = true));
+        $$('#mform input[id^="pg_"]').forEach((cb) => (cb.checked = true));
+        break;
+
+      case "role-perms-none":
+        $$('#mform input[name="__perm"]').forEach((cb) => (cb.checked = false));
+        $$('#mform input[id^="pg_"]').forEach((cb) => (cb.checked = false));
+        break;
+      case "dash-detect-loc": {
+        try {
+          await detectLocationFromBrowser();
+          await go("Dashboard");
+        } catch {}
+        break;
+      }
+      case "admin-reinvite": {
+        const id = parseInt(el.dataset.id, 10);
+        const email = el.dataset.email || "this admin";
+        const wasPending = el.dataset.pending === "true";
+        confirmBox({
+          title: wasPending ? "Resend invitation?" : "Re-invite this admin?",
+          msg: wasPending
+            ? `A fresh invitation will be sent to "${email}". Their current pending invite will be replaced.`
+            : `A new invitation will be sent to "${email}". Their current sessions will be invalidated until they accept the invite and set a password again.`,
+          ok: wasPending ? "Resend" : "Re-invite",
+          onOk: async () => {
+            try {
+              await api.post(`/admin/invitations/reinvite/${id}`, {});
+              toast(
+                wasPending
+                  ? "Invitation resent"
+                  : "Re-invite sent — status set to pending",
+              );
+              await go("Administrators");
+            } catch (e) {
+              toast(e.message || "Re-invite failed", true);
+            }
+          },
+        });
+        break;
+      }
+      case "toggle-2fa": {
+        const btn = el;
+        const errEl = $("#tf-err");
+        if (errEl) errEl.textContent = "";
+
+        const currentlyOn = btn.classList.contains("on");
+        const target = currentlyOn ? "false" : "true";
+        if (!can("settings:write")) {
+          api.toast("You don't have permission to change this setting", true);
+          break;
+        }
+
+        btn.disabled = true;
+        btn.style.opacity = "0.6";
+        try {
+          await api.put("/settings/2fa_enabled", { value: target });
+
+          // Flip the visual state
+          btn.classList.toggle("on", target === "true");
+          btn.classList.toggle("off", target === "false");
+          btn.setAttribute(
+            "aria-pressed",
+            target === "true" ? "true" : "false",
+          );
+
+          // Update the label + helper text without a full re-render
+          const labelEl = btn.parentElement.querySelector("b");
+          const hintEl = btn.parentElement.querySelector("small");
+          if (labelEl)
+            labelEl.textContent = target === "true" ? "Enabled" : "Disabled";
+          if (hintEl) {
+            const prodNote = hintEl.innerHTML.includes("Locked in production")
+              ? "<br><b style='color:var(--or)'>Locked in production — this toggle will not disable 2FA.</b>"
+              : "";
+            hintEl.innerHTML =
+              (target === "true"
+                ? "A 6-digit code will be emailed on every sign-in."
+                : "Admins sign in with just a password. Not recommended.") +
+              prodNote;
+          }
+
+          api.cache.invalidate("settings");
+          api.toast(target === "true" ? "2FA enabled" : "2FA disabled");
+        } catch (e) {
+          // Backend refused (likely production lock)
+          const msg = e.message || "Could not update 2FA setting";
+          if (errEl) errEl.textContent = msg;
+          api.toast(msg, true);
+        } finally {
+          btn.disabled = false;
+          btn.style.opacity = "";
+        }
+        break;
+      }
+      case "dash-refresh-loc": {
+        // Force a fresh fix — bypass cache
+        localStorage.removeItem(LOCATION_CACHE_KEY);
+        state.detected = null;
+        try {
+          await detectLocationFromBrowser();
+          await go(state.page);
+        } catch {}
+        break;
+      }
+      case "pt-use-my-loc": {
+        try {
+          const { coords } = await detectLocationFromBrowser();
+          const latEl = $("#ptc-lat");
+          const lonEl = $("#ptc-lon");
+          if (latEl) latEl.value = coords.lat;
+          if (lonEl) lonEl.value = coords.lon;
+          // Trigger the coordinate lookup
+          const btn = $('[data-act="pt-by-coord"]');
+          if (btn) btn.click();
+        } catch {}
+        break;
+      }
+      case "pt-by-coord": {
+        const latEl = $("#ptc-lat");
+        const lonEl = $("#ptc-lon");
+        const out = $("#pt-coord-result");
+        if (!latEl || !lonEl || !out) break;
+        const lat = parseFloat(latEl.value);
+        const lon = parseFloat(lonEl.value);
+        if (Number.isNaN(lat) || Number.isNaN(lon)) {
+          toast("Enter valid coords", true);
+          break;
+        }
+        out.innerHTML = `<div class="empty">${ic("refresh")}Fetching…</div>`;
+        try {
+          const d = await api.get(
+            `/prayer-times/for-location?lat=${lat}&lon=${lon}`,
+          );
+          const t = d.timings || {};
+          out.innerHTML = `
+            <div class="tw"><table style="font-size:13px">
+              <tr><td>Fajr</td><td><b>${esc(t.fajr || "—")}</b></td></tr>
+              <tr><td>Sunrise</td><td>${esc(t.sunrise || "—")}</td></tr>
+              <tr><td>Dhuhr</td><td><b>${esc(t.dhuhr || "—")}</b></td></tr>
+              <tr><td>Asr</td><td>${esc(t.asr || "—")}</td></tr>
+              <tr><td>Maghrib</td><td><b>${esc(t.maghrib || "—")}</b></td></tr>
+              <tr><td>Isha</td><td><b>${esc(t.isha || "—")}</b></td></tr>
+            </table>
+            <small style="color:var(--mut);display:block;margin-top:6px">
+              ${esc(d.city_name || "")} · ${esc(d.source)}${d.cached ? " (cached)" : ""}
+            </small>`;
+        } catch (e) {
+          out.innerHTML = `<div class="empty">${ic("x")} ${esc(e.message)}</div>`;
+        }
+        break;
+      }
       case "go": {
         const p = el.dataset.p;
         await go(p);
@@ -2924,6 +4362,15 @@ document.addEventListener("click", async (e) => {
         break;
       case "close":
         closeModal();
+        break;
+      case "loc-lookup":
+        await doLocLookup();
+        break;
+      case "loc-prayer":
+        await doLocPrayer();
+        break;
+      case "loc-my-ip":
+        await doMyIp();
         break;
       case "confirm": {
         const cb = modalCtx?.onOk;
@@ -2954,6 +4401,79 @@ document.addEventListener("click", async (e) => {
         });
         break;
       }
+      case "invite-open":
+        await openInviteForm();
+        break;
+
+      case "invite-resend": {
+        try {
+          await api.post(`/admin/invitations/${el.dataset.id}/resend`, {});
+          toast("Invitation resent");
+          await go("Invitations");
+        } catch (e) {
+          toast(e.message || "Resend failed", true);
+        }
+        break;
+      }
+
+      case "invite-revoke": {
+        const id = el.dataset.id;
+        const email = el.dataset.email || "this email";
+        confirmBox({
+          title: "Revoke this invitation?",
+          msg: `The invitation sent to "${email}" will be cancelled. They will get a cancellation email and won't be able to use the link.`,
+          ok: "Revoke",
+          onOk: async () => {
+            try {
+              await api.del(`/admin/invitations/${id}`);
+              toast("Invitation revoked");
+              await go("Invitations");
+            } catch (e) {
+              toast(e.message || "Revoke failed", true);
+            }
+          },
+        });
+        break;
+      }
+      case "role-refresh": {
+        state.roles = null;
+        api.cache.invalidate("roles");
+        const roles = await ensureRoles();
+        const box = $("#roles-box");
+        if (!box) break;
+        const checked = new Set(
+          $$('#mform input[type="checkbox"][name^="__role_"]:checked').map(
+            (cb) => parseInt(cb.value, 10),
+          ),
+        );
+        box.innerHTML = roles.length
+          ? roles
+              .map(
+                (r) => `
+            <label class="role-chip" style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.75);border:1px solid var(--line);cursor:pointer;font-size:13px">
+              <input type="checkbox" name="__role_${r.id}" value="${r.id}" ${checked.has(r.id) ? "checked" : ""} style="margin:0;cursor:pointer">
+              <span>${esc(r.name)}</span>
+            </label>`,
+              )
+              .join("")
+          : `<small style="color:var(--mut);font-size:12px">No roles exist yet — click "+ New role" to create the first one.</small>`;
+        toast(`Reloaded ${roles.length} role${roles.length === 1 ? "" : "s"}`);
+        break;
+      }
+      case "apply-city": {
+        const cityKey = el.dataset.city;
+        state.prayerCity = cityKey;
+        state.prayerCityPage = cityKey;
+        toast(`Prayer times will use "${cityKey}"`);
+        await doLocPrayer();
+        break;
+      }
+      case "apply-detected": {
+        // No curated match — use the coordinates directly
+        await doLocPrayer();
+        toast("Prayer times computed for this exact location");
+        break;
+      }
 
       // Dhikr
       case "dhikr-tab":
@@ -2978,7 +4498,7 @@ document.addEventListener("click", async (e) => {
           toast(e.message, true);
         }
         break;
-            case "dhikr-delete": {
+      case "dhikr-delete": {
         const campaignId = el.dataset.id;
         const title = el.dataset.title;
         confirmBox({
@@ -3038,7 +4558,7 @@ document.addEventListener("click", async (e) => {
         try {
           // Toggle to inactive — only if currently active
           const all = await api.get("/admin/dhikr/campaigns");
-          const found = all.find(c => c.id === parseInt(campaignId, 10));
+          const found = all.find((c) => c.id === parseInt(campaignId, 10));
           if (found && found.is_active) {
             await api.post(`/admin/dhikr/campaigns/${campaignId}/toggle`);
           }
@@ -3223,7 +4743,9 @@ document.addEventListener("change", async (e) => {
   if (!ch) return;
 
   if (ch === "np-city") {
+    if (x.value === "__detected__") return; // no-op, this is the current state
     state.prayerCity = x.value;
+    state.prayerCityPage = x.value;
     await go("Dashboard");
     return;
   }
@@ -3964,6 +5486,11 @@ async function renderSubmissionsTab(campaigns) {
   `;
 }
 async function openCampaignForm(existing) {
+  if (!can("dhikr-campaigns:write")) {
+    toast("You don't have permission to edit dhikr campaigns", true);
+    return;
+  }
+
   const isEdit = !!existing;
   formModal({
     title: isEdit ? `Edit: ${existing.title}` : "New Dhikr Campaign",
@@ -4005,8 +5532,25 @@ async function init() {
     return;
   }
 
-  // Remove dead language toggle (we don't translate the panel UI)
   $('[data-act="lang"]')?.remove();
+
+  // ── Load city catalogue FIRST (needed for _matchCuratedCity) ──
+  await ensurePrayerCities();
+
+  // ── Then restore cached detection ──
+  const cached = _loadPersistedDetected();
+  if (cached) {
+    state.detected = cached;
+    const match = _matchCuratedCity(
+      cached.city,
+      cached.state,
+      cached.country_code,
+    );
+    if (match) {
+      state.prayerCity = match.key;
+      state.prayerCityPage = match.key;
+    }
+  }
 
   await ensureSettings();
   await refreshMe();
@@ -4016,6 +5560,16 @@ async function init() {
 
   const hash = decodeURIComponent(location.hash.slice(1));
   await go(NAV.some(([n]) => n === hash) ? hash : "Dashboard");
+
+  setTimeout(async () => {
+    if (state.detected) return;
+    try {
+      await autoPromptLocationIfNeeded();
+      if (state.page === "Dashboard" && state.detected) {
+        go("Dashboard");
+      }
+    } catch {}
+  }, 500);
 }
 
 init();

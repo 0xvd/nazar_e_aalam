@@ -8,12 +8,11 @@ from zoneinfo import ZoneInfo
 
 import requests
 from bs4 import BeautifulSoup
+from database import db
+from database.models import PrayerTime, Setting
 from hijridate import Gregorian
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-
-from database import db
-from database.models import PrayerTime, Setting
 
 _CITY_TZ = ZoneInfo("Asia/Kolkata")
 _GUJCHAND_URL = "https://gujchand.com/"

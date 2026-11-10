@@ -1,353 +1,530 @@
-from typing import Sequence, Union
+from collections.abc import Sequence
 
-from alembic import op
 import sqlalchemy as sa
+from alembic import op
 from sqlalchemy.dialects import mysql
 
-
-revision: str = 'e1cf7e6f4e73'
-down_revision: Union[str, None] = None
-branch_labels: Union[str, Sequence[str], None] = None
-depends_on: Union[str, Sequence[str], None] = None
+revision: str = "e1cf7e6f4e73"
+down_revision: str | None = None
+branch_labels: str | Sequence[str] | None = None
+depends_on: str | Sequence[str] | None = None
 
 
 def upgrade() -> None:
 
-    op.create_table('chapters',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('arabic_name', sa.String(length=255), nullable=False),
-    sa.Column('verses_count', sa.Integer(), nullable=False),
-    sa.Column('revelation_place', sa.String(length=255), nullable=False),
-    sa.Column('revelation_order', sa.String(length=255), nullable=False),
-    sa.Column('bismillah_pre', sa.Boolean(), server_default='1', nullable=False),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "chapters",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("arabic_name", sa.String(length=255), nullable=False),
+        sa.Column("verses_count", sa.Integer(), nullable=False),
+        sa.Column("revelation_place", sa.String(length=255), nullable=False),
+        sa.Column("revelation_order", sa.String(length=255), nullable=False),
+        sa.Column("bismillah_pre", sa.Boolean(), server_default="1", nullable=False),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_table('device_infos',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('ip_address', sa.String(length=255), nullable=True),
-    sa.Column('os', sa.String(length=255), nullable=True),
-    sa.Column('country', sa.String(length=255), nullable=True),
-    sa.Column('state', sa.String(length=255), nullable=True),
-    sa.Column('latitude', sa.String(length=255), nullable=True),
-    sa.Column('longitude', sa.String(length=255), nullable=True),
-    sa.Column('count', sa.Integer(), server_default='0', nullable=False),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "device_infos",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("ip_address", sa.String(length=255), nullable=True),
+        sa.Column("os", sa.String(length=255), nullable=True),
+        sa.Column("country", sa.String(length=255), nullable=True),
+        sa.Column("state", sa.String(length=255), nullable=True),
+        sa.Column("latitude", sa.String(length=255), nullable=True),
+        sa.Column("longitude", sa.String(length=255), nullable=True),
+        sa.Column("count", sa.Integer(), server_default="0", nullable=False),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_table('dhikrs',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('position', sa.Integer(), nullable=True),
-    sa.Column('en_short_name', sa.String(length=255), nullable=True),
-    sa.Column('en_full_name', sa.Text().with_variant(mysql.LONGTEXT(), 'mysql'), nullable=True),
-    sa.Column('ar_short_name', sa.String(length=255), nullable=True),
-    sa.Column('ar_full_name', sa.Text().with_variant(mysql.LONGTEXT(), 'mysql'), nullable=True),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "dhikrs",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("position", sa.Integer(), nullable=True),
+        sa.Column("en_short_name", sa.String(length=255), nullable=True),
+        sa.Column(
+            "en_full_name",
+            sa.Text().with_variant(mysql.LONGTEXT(), "mysql"),
+            nullable=True,
+        ),
+        sa.Column("ar_short_name", sa.String(length=255), nullable=True),
+        sa.Column(
+            "ar_full_name",
+            sa.Text().with_variant(mysql.LONGTEXT(), "mysql"),
+            nullable=True,
+        ),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_table('duas',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('position', sa.Integer(), nullable=True),
-    sa.Column('en_short_name', sa.String(length=255), nullable=True),
-    sa.Column('en_full_name', sa.Text().with_variant(mysql.LONGTEXT(), 'mysql'), nullable=True),
-    sa.Column('ar_short_name', sa.String(length=255), nullable=True),
-    sa.Column('ar_full_name', sa.Text().with_variant(mysql.LONGTEXT(), 'mysql'), nullable=True),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "duas",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("position", sa.Integer(), nullable=True),
+        sa.Column("en_short_name", sa.String(length=255), nullable=True),
+        sa.Column(
+            "en_full_name",
+            sa.Text().with_variant(mysql.LONGTEXT(), "mysql"),
+            nullable=True,
+        ),
+        sa.Column("ar_short_name", sa.String(length=255), nullable=True),
+        sa.Column(
+            "ar_full_name",
+            sa.Text().with_variant(mysql.LONGTEXT(), "mysql"),
+            nullable=True,
+        ),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_table('haram_codes',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('code', sa.String(length=255), nullable=True),
-    sa.Column('name', sa.String(length=255), nullable=True),
-    sa.Column('description', sa.Text(), nullable=True),
-    sa.Column('status_info', sa.Text(), nullable=True),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "haram_codes",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("code", sa.String(length=255), nullable=True),
+        sa.Column("name", sa.String(length=255), nullable=True),
+        sa.Column("description", sa.Text(), nullable=True),
+        sa.Column("status_info", sa.Text(), nullable=True),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_table('password_reset_tokens',
-    sa.Column('email', sa.String(length=255), nullable=False),
-    sa.Column('token', sa.String(length=255), nullable=False),
-    sa.Column('created_at', sa.DateTime(), nullable=True),
-    sa.PrimaryKeyConstraint('email')
+    op.create_table(
+        "password_reset_tokens",
+        sa.Column("email", sa.String(length=255), nullable=False),
+        sa.Column("token", sa.String(length=255), nullable=False),
+        sa.Column("created_at", sa.DateTime(), nullable=True),
+        sa.PrimaryKeyConstraint("email"),
     )
-    op.create_table('permissions',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('name', sa.String(length=255), nullable=False),
-    sa.Column('group_name', sa.String(length=255), nullable=False),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "permissions",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("name", sa.String(length=255), nullable=False),
+        sa.Column("group_name", sa.String(length=255), nullable=False),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_table('prayer_times',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('date', sa.Date(), nullable=False),
-    sa.Column('city', sa.String(length=255), nullable=True),
-    sa.Column('imsak', sa.String(length=255), nullable=True),
-    sa.Column('sunrise', sa.String(length=255), nullable=True),
-    sa.Column('sunset', sa.String(length=255), nullable=True),
-    sa.Column('fajr_start', sa.String(length=255), nullable=True),
-    sa.Column('zuhr_start', sa.String(length=255), nullable=True),
-    sa.Column('asr_start', sa.String(length=255), nullable=True),
-    sa.Column('maghrib_start', sa.String(length=255), nullable=True),
-    sa.Column('isha_start', sa.String(length=255), nullable=True),
-    sa.Column('sehri', sa.String(length=255), nullable=True),
-    sa.Column('iftar', sa.String(length=255), nullable=True),
-    sa.Column('iftar_notification', sa.Boolean(), server_default='0', nullable=False),
-    sa.Column('sehri_notification', sa.Boolean(), server_default='0', nullable=False),
-    sa.Column('second', sa.String(length=255), nullable=True),
-    sa.Column('se_notify', sa.String(length=255), nullable=True),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "prayer_times",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("date", sa.Date(), nullable=False),
+        sa.Column("city", sa.String(length=255), nullable=True),
+        sa.Column("imsak", sa.String(length=255), nullable=True),
+        sa.Column("sunrise", sa.String(length=255), nullable=True),
+        sa.Column("sunset", sa.String(length=255), nullable=True),
+        sa.Column("fajr_start", sa.String(length=255), nullable=True),
+        sa.Column("zuhr_start", sa.String(length=255), nullable=True),
+        sa.Column("asr_start", sa.String(length=255), nullable=True),
+        sa.Column("maghrib_start", sa.String(length=255), nullable=True),
+        sa.Column("isha_start", sa.String(length=255), nullable=True),
+        sa.Column("sehri", sa.String(length=255), nullable=True),
+        sa.Column("iftar", sa.String(length=255), nullable=True),
+        sa.Column(
+            "iftar_notification", sa.Boolean(), server_default="0", nullable=False
+        ),
+        sa.Column(
+            "sehri_notification", sa.Boolean(), server_default="0", nullable=False
+        ),
+        sa.Column("second", sa.String(length=255), nullable=True),
+        sa.Column("se_notify", sa.String(length=255), nullable=True),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_index(op.f('ix_prayer_times_date'), 'prayer_times', ['date'], unique=False)
-    op.create_table('reciters',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('slug', sa.String(length=100), nullable=False),
-    sa.Column('name', sa.String(length=100), nullable=False),
-    sa.Column('position', sa.Integer(), nullable=True),
-    sa.Column('profile_picture', sa.String(length=255), nullable=True),
-    sa.Column('bitrate', sa.String(length=20), nullable=True),
-    sa.Column('total_ayahs', sa.Integer(), server_default='6236', nullable=False),
-    sa.Column('base_ayah_url', sa.String(length=500), nullable=True),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_index(
+        op.f("ix_prayer_times_date"), "prayer_times", ["date"], unique=False
     )
-    op.create_index(op.f('ix_reciters_slug'), 'reciters', ['slug'], unique=True)
-    op.create_table('roles',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('name', sa.String(length=50), nullable=False),
-    sa.Column('alias', sa.String(length=100), nullable=True),
-    sa.Column('is_admin', sa.Boolean(), server_default='0', nullable=False),
-    sa.Column('is_default', sa.Boolean(), server_default='0', nullable=False),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "reciters",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("slug", sa.String(length=100), nullable=False),
+        sa.Column("name", sa.String(length=100), nullable=False),
+        sa.Column("position", sa.Integer(), nullable=True),
+        sa.Column("profile_picture", sa.String(length=255), nullable=True),
+        sa.Column("bitrate", sa.String(length=20), nullable=True),
+        sa.Column("total_ayahs", sa.Integer(), server_default="6236", nullable=False),
+        sa.Column("base_ayah_url", sa.String(length=500), nullable=True),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_table('settings',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('name', sa.String(length=255), nullable=False),
-    sa.Column('value', sa.Text().with_variant(mysql.LONGTEXT(), 'mysql'), nullable=True),
-    sa.Column('settingable_type', sa.String(length=160), nullable=True),
-    sa.Column('settingable_id', sa.BigInteger(), nullable=True),
-    sa.Column('context', sa.Text().with_variant(mysql.LONGTEXT(), 'mysql'), nullable=True),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_index(op.f("ix_reciters_slug"), "reciters", ["slug"], unique=True)
+    op.create_table(
+        "roles",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("name", sa.String(length=50), nullable=False),
+        sa.Column("alias", sa.String(length=100), nullable=True),
+        sa.Column("is_admin", sa.Boolean(), server_default="0", nullable=False),
+        sa.Column("is_default", sa.Boolean(), server_default="0", nullable=False),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_index('settingable_index', 'settings', ['settingable_type', 'settingable_id'], unique=False)
-    op.create_table('sifat_names',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('position', sa.Integer(), nullable=True),
-    sa.Column('name', sa.String(length=255), nullable=True),
-    sa.Column('ar_name', sa.String(length=255), nullable=True),
-    sa.Column('translated_name', sa.Text(), nullable=True),
-    sa.Column('meaning', sa.Text(), nullable=True),
-    sa.Column('name_benefits', sa.Text(), nullable=True),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "settings",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("name", sa.String(length=255), nullable=False),
+        sa.Column(
+            "value", sa.Text().with_variant(mysql.LONGTEXT(), "mysql"), nullable=True
+        ),
+        sa.Column("settingable_type", sa.String(length=160), nullable=True),
+        sa.Column("settingable_id", sa.BigInteger(), nullable=True),
+        sa.Column(
+            "context", sa.Text().with_variant(mysql.LONGTEXT(), "mysql"), nullable=True
+        ),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_table('translators',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('full_name', sa.String(length=255), nullable=False),
-    sa.Column('short_name', sa.String(length=255), nullable=False),
-    sa.Column('language', sa.String(length=255), nullable=False),
-    sa.Column('language_code', sa.String(length=255), nullable=False),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_index(
+        "settingable_index",
+        "settings",
+        ["settingable_type", "settingable_id"],
+        unique=False,
     )
-    op.create_table('users',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('first_name', sa.String(length=255), nullable=True),
-    sa.Column('last_name', sa.String(length=255), nullable=True),
-    sa.Column('email', sa.String(length=255), nullable=False),
-    sa.Column('email_verified_at', sa.DateTime(), nullable=True),
-    sa.Column('expired_at', sa.DateTime(), nullable=True),
-    sa.Column('password', sa.String(length=255), nullable=True),
-    sa.Column('is_admin', sa.Boolean(), server_default='0', nullable=False),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "sifat_names",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("position", sa.Integer(), nullable=True),
+        sa.Column("name", sa.String(length=255), nullable=True),
+        sa.Column("ar_name", sa.String(length=255), nullable=True),
+        sa.Column("translated_name", sa.Text(), nullable=True),
+        sa.Column("meaning", sa.Text(), nullable=True),
+        sa.Column("name_benefits", sa.Text(), nullable=True),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)
-    op.create_table('wall_papers',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('name', sa.String(length=255), nullable=False),
-    sa.Column('image', sa.String(length=255), nullable=False),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "translators",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("full_name", sa.String(length=255), nullable=False),
+        sa.Column("short_name", sa.String(length=255), nullable=False),
+        sa.Column("language", sa.String(length=255), nullable=False),
+        sa.Column("language_code", sa.String(length=255), nullable=False),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_table('bulk_sura_imports',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('reciter_id', sa.BigInteger(), nullable=False),
-    sa.Column('zip_path', sa.String(length=255), nullable=True),
-    sa.Column('original_name', sa.String(length=255), nullable=True),
-    sa.Column('replace_existing', sa.Boolean(), server_default='0', nullable=False),
-    sa.Column('status', sa.String(length=20), nullable=False),
-    sa.Column('current_file', sa.String(length=255), nullable=True),
-    sa.Column('total_files', sa.Integer(), server_default='0', nullable=False),
-    sa.Column('processed', sa.Integer(), server_default='0', nullable=False),
-    sa.Column('success_count', sa.Integer(), server_default='0', nullable=False),
-    sa.Column('failed_count', sa.Integer(), server_default='0', nullable=False),
-    sa.Column('skipped_count', sa.Integer(), server_default='0', nullable=False),
-    sa.Column('message', sa.Text(), nullable=True),
-    sa.Column('error_log', sa.JSON(), nullable=True),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.ForeignKeyConstraint(['reciter_id'], ['reciters.id'], ondelete='CASCADE'),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "users",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("first_name", sa.String(length=255), nullable=True),
+        sa.Column("last_name", sa.String(length=255), nullable=True),
+        sa.Column("email", sa.String(length=255), nullable=False),
+        sa.Column("email_verified_at", sa.DateTime(), nullable=True),
+        sa.Column("expired_at", sa.DateTime(), nullable=True),
+        sa.Column("password", sa.String(length=255), nullable=True),
+        sa.Column("is_admin", sa.Boolean(), server_default="0", nullable=False),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_table('chapter_details',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('chapter_id', sa.BigInteger(), nullable=False),
-    sa.Column('arabic_name', sa.Text(), nullable=False),
-    sa.Column('english_transliteration', sa.Text(), nullable=True),
-    sa.Column('verse_number', sa.Integer(), nullable=False),
-    sa.Column('verse_key', sa.String(length=10), nullable=False),
-    sa.Column('hizb_number', sa.Integer(), nullable=False),
-    sa.Column('rub_el_hizb_number', sa.Integer(), nullable=False),
-    sa.Column('ruku_number', sa.Integer(), nullable=False),
-    sa.Column('manzil_number', sa.Integer(), nullable=False),
-    sa.Column('sajdah_number', sa.Integer(), nullable=False),
-    sa.Column('page_number', sa.Integer(), nullable=False),
-    sa.Column('juz_number', sa.Integer(), nullable=False),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.ForeignKeyConstraint(['chapter_id'], ['chapters.id'], ondelete='CASCADE'),
-    sa.PrimaryKeyConstraint('id')
+    op.create_index(op.f("ix_users_email"), "users", ["email"], unique=True)
+    op.create_table(
+        "wall_papers",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("name", sa.String(length=255), nullable=False),
+        sa.Column("image", sa.String(length=255), nullable=False),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_index('chapter_detail_index', 'chapter_details', ['chapter_id', 'verse_number', 'page_number', 'juz_number'], unique=False)
-    op.create_table('chapter_translations',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('chapter_id', sa.BigInteger(), nullable=False),
-    sa.Column('translator_id', sa.BigInteger(), nullable=False),
-    sa.Column('translate_name', sa.String(length=255), nullable=False),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.ForeignKeyConstraint(['chapter_id'], ['chapters.id'], ondelete='CASCADE'),
-    sa.ForeignKeyConstraint(['translator_id'], ['translators.id'], ondelete='CASCADE'),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "bulk_sura_imports",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("reciter_id", sa.BigInteger(), nullable=False),
+        sa.Column("zip_path", sa.String(length=255), nullable=True),
+        sa.Column("original_name", sa.String(length=255), nullable=True),
+        sa.Column("replace_existing", sa.Boolean(), server_default="0", nullable=False),
+        sa.Column("status", sa.String(length=20), nullable=False),
+        sa.Column("current_file", sa.String(length=255), nullable=True),
+        sa.Column("total_files", sa.Integer(), server_default="0", nullable=False),
+        sa.Column("processed", sa.Integer(), server_default="0", nullable=False),
+        sa.Column("success_count", sa.Integer(), server_default="0", nullable=False),
+        sa.Column("failed_count", sa.Integer(), server_default="0", nullable=False),
+        sa.Column("skipped_count", sa.Integer(), server_default="0", nullable=False),
+        sa.Column("message", sa.Text(), nullable=True),
+        sa.Column("error_log", sa.JSON(), nullable=True),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.ForeignKeyConstraint(["reciter_id"], ["reciters.id"], ondelete="CASCADE"),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_index('chapter_translation_index', 'chapter_translations', ['chapter_id', 'translator_id', 'translate_name'], unique=False)
-    op.create_table('permission_role',
-    sa.Column('role_id', sa.BigInteger(), nullable=False),
-    sa.Column('permission_id', sa.BigInteger(), nullable=False),
-    sa.ForeignKeyConstraint(['permission_id'], ['permissions.id'], ondelete='CASCADE'),
-    sa.ForeignKeyConstraint(['role_id'], ['roles.id'], ondelete='CASCADE'),
-    sa.PrimaryKeyConstraint('role_id', 'permission_id')
+    op.create_table(
+        "chapter_details",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("chapter_id", sa.BigInteger(), nullable=False),
+        sa.Column("arabic_name", sa.Text(), nullable=False),
+        sa.Column("english_transliteration", sa.Text(), nullable=True),
+        sa.Column("verse_number", sa.Integer(), nullable=False),
+        sa.Column("verse_key", sa.String(length=10), nullable=False),
+        sa.Column("hizb_number", sa.Integer(), nullable=False),
+        sa.Column("rub_el_hizb_number", sa.Integer(), nullable=False),
+        sa.Column("ruku_number", sa.Integer(), nullable=False),
+        sa.Column("manzil_number", sa.Integer(), nullable=False),
+        sa.Column("sajdah_number", sa.Integer(), nullable=False),
+        sa.Column("page_number", sa.Integer(), nullable=False),
+        sa.Column("juz_number", sa.Integer(), nullable=False),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.ForeignKeyConstraint(["chapter_id"], ["chapters.id"], ondelete="CASCADE"),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_index('role_permission_index', 'permission_role', ['role_id', 'permission_id'], unique=False)
-    op.create_table('profiles',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('user_id', sa.BigInteger(), nullable=False),
-    sa.Column('gender', sa.Enum('male', 'female', 'other', name='gender'), nullable=False),
-    sa.Column('date_of_birth', sa.Date(), nullable=True),
-    sa.Column('profile_picture', sa.String(length=255), nullable=True),
-    sa.Column('phone_number', sa.String(length=255), nullable=True),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ondelete='CASCADE'),
-    sa.PrimaryKeyConstraint('id')
+    op.create_index(
+        "chapter_detail_index",
+        "chapter_details",
+        ["chapter_id", "verse_number", "page_number", "juz_number"],
+        unique=False,
     )
-    op.create_table('reciter_suras',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('reciter_id', sa.BigInteger(), nullable=False),
-    sa.Column('name', sa.String(length=100), nullable=False),
-    sa.Column('number', sa.Integer(), nullable=False),
-    sa.Column('duration', sa.Integer(), nullable=True),
-    sa.Column('revealed_place', sa.Enum('Makka', 'Madina', name='revealedplace'), nullable=False),
-    sa.Column('path', sa.String(length=255), nullable=False),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.ForeignKeyConstraint(['reciter_id'], ['reciters.id'], ondelete='CASCADE'),
-    sa.PrimaryKeyConstraint('id')
+    op.create_table(
+        "chapter_translations",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("chapter_id", sa.BigInteger(), nullable=False),
+        sa.Column("translator_id", sa.BigInteger(), nullable=False),
+        sa.Column("translate_name", sa.String(length=255), nullable=False),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.ForeignKeyConstraint(["chapter_id"], ["chapters.id"], ondelete="CASCADE"),
+        sa.ForeignKeyConstraint(
+            ["translator_id"], ["translators.id"], ondelete="CASCADE"
+        ),
+        sa.PrimaryKeyConstraint("id"),
     )
-    op.create_table('refresh_tokens',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('user_id', sa.BigInteger(), nullable=False),
-    sa.Column('token_hash', sa.String(length=64), nullable=False),
-    sa.Column('expires_at', sa.DateTime(), nullable=False),
-    sa.Column('revoked', sa.Boolean(), server_default='0', nullable=False),
-    sa.Column('revoked_at', sa.DateTime(), nullable=True),
-    sa.Column('user_agent', sa.String(length=255), nullable=True),
-    sa.Column('ip_address', sa.String(length=45), nullable=True),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ondelete='CASCADE'),
-    sa.PrimaryKeyConstraint('id'),
-    sa.UniqueConstraint('token_hash')
+    op.create_index(
+        "chapter_translation_index",
+        "chapter_translations",
+        ["chapter_id", "translator_id", "translate_name"],
+        unique=False,
     )
-    op.create_index(op.f('ix_refresh_tokens_expires_at'), 'refresh_tokens', ['expires_at'], unique=False)
-    op.create_index(op.f('ix_refresh_tokens_user_id'), 'refresh_tokens', ['user_id'], unique=False)
-    op.create_table('role_user',
-    sa.Column('user_id', sa.BigInteger(), nullable=False),
-    sa.Column('role_id', sa.BigInteger(), nullable=False),
-    sa.ForeignKeyConstraint(['role_id'], ['roles.id'], ondelete='CASCADE'),
-    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ondelete='CASCADE'),
-    sa.PrimaryKeyConstraint('user_id', 'role_id')
+    op.create_table(
+        "permission_role",
+        sa.Column("role_id", sa.BigInteger(), nullable=False),
+        sa.Column("permission_id", sa.BigInteger(), nullable=False),
+        sa.ForeignKeyConstraint(
+            ["permission_id"], ["permissions.id"], ondelete="CASCADE"
+        ),
+        sa.ForeignKeyConstraint(["role_id"], ["roles.id"], ondelete="CASCADE"),
+        sa.PrimaryKeyConstraint("role_id", "permission_id"),
     )
-    op.create_index('user_role_index', 'role_user', ['user_id', 'role_id'], unique=False)
-    op.create_table('verse_translations',
-    sa.Column('id', sa.BigInteger(), autoincrement=True, nullable=False),
-    sa.Column('chapter_id', sa.BigInteger(), nullable=False),
-    sa.Column('chapter_detail_id', sa.BigInteger(), nullable=False),
-    sa.Column('translator_id', sa.BigInteger(), nullable=False),
-    sa.Column('verse_number', sa.Integer(), nullable=False),
-    sa.Column('translate_name', sa.Text(), nullable=False),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
-    sa.ForeignKeyConstraint(['chapter_detail_id'], ['chapter_details.id'], ondelete='CASCADE'),
-    sa.ForeignKeyConstraint(['chapter_id'], ['chapters.id'], ondelete='CASCADE'),
-    sa.ForeignKeyConstraint(['translator_id'], ['translators.id'], ondelete='CASCADE'),
-    sa.PrimaryKeyConstraint('id')
+    op.create_index(
+        "role_permission_index",
+        "permission_role",
+        ["role_id", "permission_id"],
+        unique=False,
     )
-    op.create_index('verse_translation_index', 'verse_translations', ['chapter_id', 'translator_id', 'verse_number'], unique=False)
-
+    op.create_table(
+        "profiles",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("user_id", sa.BigInteger(), nullable=False),
+        sa.Column(
+            "gender", sa.Enum("male", "female", "other", name="gender"), nullable=False
+        ),
+        sa.Column("date_of_birth", sa.Date(), nullable=True),
+        sa.Column("profile_picture", sa.String(length=255), nullable=True),
+        sa.Column("phone_number", sa.String(length=255), nullable=True),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.ForeignKeyConstraint(["user_id"], ["users.id"], ondelete="CASCADE"),
+        sa.PrimaryKeyConstraint("id"),
+    )
+    op.create_table(
+        "reciter_suras",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("reciter_id", sa.BigInteger(), nullable=False),
+        sa.Column("name", sa.String(length=100), nullable=False),
+        sa.Column("number", sa.Integer(), nullable=False),
+        sa.Column("duration", sa.Integer(), nullable=True),
+        sa.Column(
+            "revealed_place",
+            sa.Enum("Makka", "Madina", name="revealedplace"),
+            nullable=False,
+        ),
+        sa.Column("path", sa.String(length=255), nullable=False),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.ForeignKeyConstraint(["reciter_id"], ["reciters.id"], ondelete="CASCADE"),
+        sa.PrimaryKeyConstraint("id"),
+    )
+    op.create_table(
+        "refresh_tokens",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("user_id", sa.BigInteger(), nullable=False),
+        sa.Column("token_hash", sa.String(length=64), nullable=False),
+        sa.Column("expires_at", sa.DateTime(), nullable=False),
+        sa.Column("revoked", sa.Boolean(), server_default="0", nullable=False),
+        sa.Column("revoked_at", sa.DateTime(), nullable=True),
+        sa.Column("user_agent", sa.String(length=255), nullable=True),
+        sa.Column("ip_address", sa.String(length=45), nullable=True),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.ForeignKeyConstraint(["user_id"], ["users.id"], ondelete="CASCADE"),
+        sa.PrimaryKeyConstraint("id"),
+        sa.UniqueConstraint("token_hash"),
+    )
+    op.create_index(
+        op.f("ix_refresh_tokens_expires_at"),
+        "refresh_tokens",
+        ["expires_at"],
+        unique=False,
+    )
+    op.create_index(
+        op.f("ix_refresh_tokens_user_id"), "refresh_tokens", ["user_id"], unique=False
+    )
+    op.create_table(
+        "role_user",
+        sa.Column("user_id", sa.BigInteger(), nullable=False),
+        sa.Column("role_id", sa.BigInteger(), nullable=False),
+        sa.ForeignKeyConstraint(["role_id"], ["roles.id"], ondelete="CASCADE"),
+        sa.ForeignKeyConstraint(["user_id"], ["users.id"], ondelete="CASCADE"),
+        sa.PrimaryKeyConstraint("user_id", "role_id"),
+    )
+    op.create_index(
+        "user_role_index", "role_user", ["user_id", "role_id"], unique=False
+    )
+    op.create_table(
+        "verse_translations",
+        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),
+        sa.Column("chapter_id", sa.BigInteger(), nullable=False),
+        sa.Column("chapter_detail_id", sa.BigInteger(), nullable=False),
+        sa.Column("translator_id", sa.BigInteger(), nullable=False),
+        sa.Column("verse_number", sa.Integer(), nullable=False),
+        sa.Column("translate_name", sa.Text(), nullable=False),
+        sa.Column(
+            "created_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(), server_default=sa.text("now()"), nullable=False
+        ),
+        sa.ForeignKeyConstraint(
+            ["chapter_detail_id"], ["chapter_details.id"], ondelete="CASCADE"
+        ),
+        sa.ForeignKeyConstraint(["chapter_id"], ["chapters.id"], ondelete="CASCADE"),
+        sa.ForeignKeyConstraint(
+            ["translator_id"], ["translators.id"], ondelete="CASCADE"
+        ),
+        sa.PrimaryKeyConstraint("id"),
+    )
+    op.create_index(
+        "verse_translation_index",
+        "verse_translations",
+        ["chapter_id", "translator_id", "verse_number"],
+        unique=False,
+    )
 
 
 def downgrade() -> None:
 
-    op.drop_index('verse_translation_index', table_name='verse_translations')
-    op.drop_table('verse_translations')
-    op.drop_index('user_role_index', table_name='role_user')
-    op.drop_table('role_user')
-    op.drop_index(op.f('ix_refresh_tokens_user_id'), table_name='refresh_tokens')
-    op.drop_index(op.f('ix_refresh_tokens_expires_at'), table_name='refresh_tokens')
-    op.drop_table('refresh_tokens')
-    op.drop_table('reciter_suras')
-    op.drop_table('profiles')
-    op.drop_index('role_permission_index', table_name='permission_role')
-    op.drop_table('permission_role')
-    op.drop_index('chapter_translation_index', table_name='chapter_translations')
-    op.drop_table('chapter_translations')
-    op.drop_index('chapter_detail_index', table_name='chapter_details')
-    op.drop_table('chapter_details')
-    op.drop_table('bulk_sura_imports')
-    op.drop_table('wall_papers')
-    op.drop_index(op.f('ix_users_email'), table_name='users')
-    op.drop_table('users')
-    op.drop_table('translators')
-    op.drop_table('sifat_names')
-    op.drop_index('settingable_index', table_name='settings')
-    op.drop_table('settings')
-    op.drop_table('roles')
-    op.drop_index(op.f('ix_reciters_slug'), table_name='reciters')
-    op.drop_table('reciters')
-    op.drop_index(op.f('ix_prayer_times_date'), table_name='prayer_times')
-    op.drop_table('prayer_times')
-    op.drop_table('permissions')
-    op.drop_table('password_reset_tokens')
-    op.drop_table('haram_codes')
-    op.drop_table('duas')
-    op.drop_table('dhikrs')
-    op.drop_table('device_infos')
-    op.drop_table('chapters')
-
+    op.drop_index("verse_translation_index", table_name="verse_translations")
+    op.drop_table("verse_translations")
+    op.drop_index("user_role_index", table_name="role_user")
+    op.drop_table("role_user")
+    op.drop_index(op.f("ix_refresh_tokens_user_id"), table_name="refresh_tokens")
+    op.drop_index(op.f("ix_refresh_tokens_expires_at"), table_name="refresh_tokens")
+    op.drop_table("refresh_tokens")
+    op.drop_table("reciter_suras")
+    op.drop_table("profiles")
+    op.drop_index("role_permission_index", table_name="permission_role")
+    op.drop_table("permission_role")
+    op.drop_index("chapter_translation_index", table_name="chapter_translations")
+    op.drop_table("chapter_translations")
+    op.drop_index("chapter_detail_index", table_name="chapter_details")
+    op.drop_table("chapter_details")
+    op.drop_table("bulk_sura_imports")
+    op.drop_table("wall_papers")
+    op.drop_index(op.f("ix_users_email"), table_name="users")
+    op.drop_table("users")
+    op.drop_table("translators")
+    op.drop_table("sifat_names")
+    op.drop_index("settingable_index", table_name="settings")
+    op.drop_table("settings")
+    op.drop_table("roles")
+    op.drop_index(op.f("ix_reciters_slug"), table_name="reciters")
+    op.drop_table("reciters")
+    op.drop_index(op.f("ix_prayer_times_date"), table_name="prayer_times")
+    op.drop_table("prayer_times")
+    op.drop_table("permissions")
+    op.drop_table("password_reset_tokens")
+    op.drop_table("haram_codes")
+    op.drop_table("duas")
+    op.drop_table("dhikrs")
+    op.drop_table("device_infos")
+    op.drop_table("chapters")

@@ -1,16 +1,3 @@
-#!/usr/bin/env python3
-"""
-Format Python code with Ruff (lint-fix + format).
-Prints one line per file: <path> : formatted | unchanged | error
-
-Reads ignore patterns from .formatignore (project root by default),
-merged with built-in skips. Prints which patterns are active.
-
-Usage:
-  python devtools/format_code.py <path> [-r] [-w]
-  python devtools/format_code.py <path> [-r] [-w] --ignore-file .formatignore
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -19,7 +6,6 @@ import subprocess
 import sys
 from pathlib import Path
 
-# Built-in skips that are never removable (safety)
 _DEFAULT_SKIP_DIRS = (
     ".venv",
     "venv",
@@ -52,13 +38,12 @@ def _matches_ignore(path: Path, patterns: list[str]) -> str | None:
     """Return the matching pattern (for reporting), or None."""
     s = str(path)
     for pat in patterns:
-        # 1. glob against the path and its name
         if fnmatch.fnmatch(s, pat) or fnmatch.fnmatch(path.name, pat):
             return pat
-        # 2. plain substring (so 'migrations/' or 'tests/fixtures' works)
+
         if pat.rstrip("/") in s:
             return pat
-        # 3. directory name exact match
+
         if path.is_dir() and path.name == pat.rstrip("/"):
             return pat
     return None
@@ -102,7 +87,6 @@ def main(argv: list[str] | None = None) -> int:
 
     user_patterns = _load_ignore_patterns(args.ignore_file)
 
-    # Always print what is being ignored, as requested
     print("Ignoring (built-in): " + ", ".join(_DEFAULT_SKIP_DIRS))
     if user_patterns:
         print("Ignoring (from %s): %s" % (args.ignore_file, ", ".join(user_patterns)))
@@ -110,7 +94,6 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Ignoring (from {args.ignore_file}): <file not found or empty>")
     print()
 
-    # Collect candidates
     files: list[Path] = []
     for pin in args.paths:
         if pin.is_dir():
@@ -124,11 +107,10 @@ def main(argv: list[str] | None = None) -> int:
     kept: list[Path] = []
     skipped: list[tuple[Path, str]] = []
     for f in files:
-        # 1. built-in dirs anywhere in the path
         if any(part in _DEFAULT_SKIP_DIRS for part in f.parts):
             skipped.append((f, "<built-in dir>"))
             continue
-        # 2. user patterns
+
         hit = _matches_ignore(f, user_patterns)
         if hit:
             skipped.append((f, hit))
@@ -145,11 +127,9 @@ def main(argv: list[str] | None = None) -> int:
         print("No files to process.")
         return 0
 
-    # Process
     for f in kept:
         print(_process(f, write=args.write))
 
-    # Summary
     verb = "formatted" if args.write else "would format"
     print(
         f"\nSummary: {len(kept)} processed ({verb} as needed), "

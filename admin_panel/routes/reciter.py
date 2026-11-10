@@ -1,13 +1,9 @@
 from __future__ import annotations
 
-from fastapi import Depends, HTTPException, Response, status
-from sqlalchemy import select
-from sqlalchemy.orm import Session
-
 from config import ENV
 from database import db
 from database.models import Chapter, Reciter
-from routes.base_router import make_crud_router
+from fastapi import Depends, HTTPException, Response, status
 from schemas.reciter import ReciterCreate, ReciterRead, ReciterUpdate
 from schemas.surah_audio import (
     ReciterMini,
@@ -16,7 +12,11 @@ from schemas.surah_audio import (
     SurahsListResponse,
     SurahSummary,
 )
+from sqlalchemy import select
+from sqlalchemy.orm import Session
 from tools.sync_quran import AYAH_COUNTS
+
+from routes.base_router import make_crud_router
 
 router = make_crud_router(
     model=Reciter,
@@ -27,6 +27,8 @@ router = make_crud_router(
     read_schema=ReciterRead,
     order_by="position",
     search_fields=("name", "slug"),
+    read_perm="reciters:read",
+    write_perm="reciters:write",
 )
 
 

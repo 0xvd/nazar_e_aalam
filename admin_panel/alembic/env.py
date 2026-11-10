@@ -7,15 +7,13 @@ from pathlib import Path
 from alembic import context
 from sqlalchemy import engine_from_config, pool
 
-
 _ROOT = Path(__file__).resolve().parent.parent
 if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 
-from config import ENV  # noqa: E402
-from database.database import Base  # noqa: E402
-from database import models  # noqa: E402,F401  — registers every model
-
+from config import ENV
+from database import models  # noqa: F401  — registers every model
+from database.database import Base
 
 config = context.config
 

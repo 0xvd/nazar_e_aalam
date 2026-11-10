@@ -6,6 +6,8 @@ from pydantic import BaseModel, ConfigDict, EmailStr, Field
 
 
 class AdministratorCreate(BaseModel):
+    """Kept for backwards-compat; POST /administrators returns 410."""
+
     email: EmailStr
     password: str = Field(..., min_length=6, max_length=128)
     first_name: str | None = Field(None, max_length=255)
@@ -14,12 +16,17 @@ class AdministratorCreate(BaseModel):
 
 
 class AdministratorUpdate(BaseModel):
-    email: EmailStr | None = None
-    password: str | None = Field(None, min_length=6, max_length=128)
     first_name: str | None = Field(None, max_length=255)
     last_name: str | None = Field(None, max_length=255)
     is_admin: bool | None = None
     role_ids: list[int] | None = None
+
+
+class RoleBrief(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+    id: int
+    name: str
+    alias: str | None = None
 
 
 class AdministratorRead(BaseModel):
@@ -33,10 +40,4 @@ class AdministratorRead(BaseModel):
     created_at: datetime
     updated_at: datetime
     roles: list[RoleBrief] = []
-
-
-class RoleBrief(BaseModel):
-    model_config = ConfigDict(from_attributes=True)
-    id: int
-    name: str
-    alias: str | None = None
+    has_pending_invite: bool = False

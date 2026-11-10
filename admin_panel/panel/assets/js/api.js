@@ -240,7 +240,6 @@ window.api = (() => {
     });
 
     if (!res.ok) {
-      // Extract a human-readable message from any FastAPI error shape
       let msg = "Invalid email or password";
       let rawDetail = null;
       try {
@@ -252,7 +251,6 @@ window.api = (() => {
         if (typeof rawDetail === "string") {
           msg = rawDetail;
         } else if (Array.isArray(rawDetail)) {
-          // Pydantic validation errors: [{loc, msg, type}, ...]
           msg = rawDetail
             .map((e) => {
               if (e && typeof e === "object" && e.msg) {
@@ -265,21 +263,62 @@ window.api = (() => {
             })
             .join(" · ");
         } else if (typeof rawDetail === "object") {
-          // Custom structured error like {"error": "...", "message": "..."}
           msg =
             rawDetail.message || rawDetail.error || JSON.stringify(rawDetail);
         }
       }
 
-      // Debug: see exactly what the server returned
       console.error("[login] HTTP", res.status, "detail:", rawDetail);
-
       throw new Error(String(msg));
     }
 
     const data = await res.json();
+
+    // 2FA challenge — do NOT store tokens. Caller will call verifyOtp().
+    if (data && data.challenge_token) {
+      return data;
+    }
+
+    // 2FA off (dev) — store tokens and return user
     storeTokens(data);
     return data.user;
+  }
+  async function verifyOtp(challengeToken, otp) {
+    await ready();
+    const res = await fetch(CONFIG.api_base + "/auth/verify-otp", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ challenge_token: challengeToken, otp }),
+    });
+    if (!res.ok) {
+      let msg = "Verification failed";
+      try {
+        const d = await res.json();
+        msg = (d && (d.detail || d.message)) || msg;
+      } catch {}
+      throw new Error(String(msg));
+    }
+    const data = await res.json();
+    storeTokens(data);
+    return data;
+  }
+
+  async function resendOtp(challengeToken) {
+    await ready();
+    const res = await fetch(CONFIG.api_base + "/auth/resend-otp", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ challenge_token: challengeToken }),
+    });
+    if (!res.ok) {
+      let msg = "Resend failed";
+      try {
+        const d = await res.json();
+        msg = (d && (d.detail || d.message)) || msg;
+      } catch {}
+      throw new Error(String(msg));
+    }
+    return res.json();
   }
 
   async function logout() {
@@ -411,6 +450,8 @@ window.api = (() => {
     patch,
     put,
     del,
+    verifyOtp, // ← new
+    resendOtp, // ← new
     login,
     logout,
     toast,

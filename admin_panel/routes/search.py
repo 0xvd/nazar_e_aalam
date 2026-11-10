@@ -1,13 +1,12 @@
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends, Query
-from sqlalchemy import or_, select
-from sqlalchemy.orm import Session
-
 from database import db
 from database.models import Dhikr, Dua, Reciter, Translator, User, Wallpaper
 from dependencies.auth import require_admin
+from fastapi import APIRouter, Depends, Query
 from schemas.search import SearchHit, SearchResponse
+from sqlalchemy import or_, select
+from sqlalchemy.orm import Session
 
 router = APIRouter(prefix="/search", tags=["search"])
 

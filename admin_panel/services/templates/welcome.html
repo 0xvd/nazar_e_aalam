@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Welcome to Nazar-e-Aalam Admin</title>
+</head>
+<body style="margin:0;padding:0;background:#fdf6ef;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fdf6ef;padding:40px 16px;">
+    <tr><td align="center">
+      <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;background:#ffffff;border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(180,90,30,.08);">
+        <tr>
+          <td style="background:linear-gradient(135deg,#ffa03f,#e4530b);padding:36px 32px 28px;">
+            <div style="font-size:20px;font-weight:800;color:#ffffff;letter-spacing:-.3px;">Nazar-e-Aalam</div>
+            <div style="font-size:12px;color:#fff3e0;margin-top:2px;letter-spacing:.4px;text-transform:uppercase;">Admin Panel</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:36px 32px 8px;">
+            <h1 style="margin:0 0 12px;font-size:24px;line-height:1.3;color:#2b1608;font-weight:800;">Your account is ready ✅</h1>
+            <p style="margin:0 0 18px;font-size:15px;line-height:1.65;color:#5c4435;">
+              Hi {{ first_name or 'there' }}, your Nazar-e-Aalam admin account has been activated as
+              <span style="display:inline-block;background:#fde4c2;color:#7a3b00;padding:2px 10px;border-radius:999px;font-size:13px;font-weight:700;">{{ role_name }}</span>.
+            </p>
+            <p style="margin:0 0 28px;font-size:15px;line-height:1.65;color:#5c4435;">
+              You can now sign in with your email and password. Each login requires a 6-digit code sent to this address.
+            </p>
+            <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 28px;">
+              <tr><td style="border-radius:12px;background:linear-gradient(135deg,#ffa03f,#e4530b);">
+                <a href="{{ login_url }}" style="display:inline-block;padding:14px 32px;font-size:15px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:12px;">Open admin panel</a>
+              </td></tr>
+            </table>
+            <p style="margin:0 0 28px;font-size:13px;line-height:1.6;color:#a08675;">
+              For security, keep this email address private and never share your verification codes.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:24px 32px 32px;border-top:1px solid #f5e6d8;">
+            <p style="margin:0;font-size:12px;line-height:1.6;color:#a08675;">
+              If you didn't create this account, please contact the panel administrator immediately.
+            </p>
+          </td>
+        </tr>
+      </table>
+      <p style="margin:20px 0 0;font-size:11px;color:#b8a090;">© {{ year }} Nazar-e-Aalam · This is an automated message, please do not reply.</p>
+    </td></tr>
+  </table>
+</body>
+</html>

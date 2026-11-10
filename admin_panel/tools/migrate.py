@@ -4,10 +4,9 @@ from pathlib import Path
 
 from alembic.config import Config
 from alembic.script import ScriptDirectory
-from sqlalchemy import text
-
 from config import ENV
 from database import db
+from sqlalchemy import text
 
 _ROOT = Path(__file__).resolve().parent.parent
 

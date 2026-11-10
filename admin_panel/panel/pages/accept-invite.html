@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Accept invitation · Nazar-e-Aalam Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/login.css">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+</head>
+<body>
+  <div class="bgfx"><div class="au a1"></div><div class="au a2"></div></div>
+  <section id="login">
+    <div class="lbrand">
+      <img class="logo-big" src="../assets/img/logo.png" alt="Nazar-e-Aalam">
+      <div class="ar">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+      <h1>Nazar-e-Aalam</h1>
+      <p>You've been invited to the admin panel. Set a password to activate your account.</p>
+    </div>
+    <div class="lform">
+      <form class="glass lc" id="af" novalidate hidden>
+        <h2 id="af-title">Welcome</h2>
+        <p class="sub" id="af-sub">Loading invitation…</p>
+
+        <div id="af-loading" style="padding:16px;text-align:center;color:var(--mut)">Loading…</div>
+
+        <div id="af-fields" hidden>
+          <label for="fn">First name</label>
+          <div class="fld"><input id="fn" type="text" autocomplete="given-name"></div>
+
+          <label for="ln">Last name</label>
+          <div class="fld"><input id="ln" type="text" autocomplete="family-name"></div>
+
+          <label for="pw">Password</label>
+          <div class="fld">
+            <svg class="i" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+            <input id="pw" type="password" placeholder="Minimum 6 characters" autocomplete="new-password" required>
+            <button type="button" class="eye" id="eye" aria-label="Show or hide password">
+              <svg class="i" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+
+          <label for="pw2">Confirm password</label>
+          <div class="fld">
+            <input id="pw2" type="password" placeholder="Repeat password" autocomplete="new-password" required>
+          </div>
+
+          <div class="err" id="err" role="alert"></div>
+          <button class="btn" type="submit"><span class="bt">Activate account</span><span class="sp2"></span></button>
+        </div>
+
+        <div id="af-error" hidden style="padding:16px;text-align:center;color:var(--bad)"></div>
+      </form>
+    </div>
+  </section>
+<script src="../assets/js/api.js"></script>
+<script src="../assets/js/accept-invite.js"></script>
+</body>
+</html>

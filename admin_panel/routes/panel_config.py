@@ -3,9 +3,8 @@ from __future__ import annotations
 from datetime import UTC, datetime
 from zoneinfo import ZoneInfo
 
-from fastapi import APIRouter, Request, Response
-
 from config import ENV
+from fastapi import APIRouter, Request, Response
 from schemas.panel_config import MaintenanceConfig, PanelConfigResponse
 
 router = APIRouter(prefix="/panel_config", tags=["panel"])

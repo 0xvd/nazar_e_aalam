@@ -223,6 +223,9 @@ class Role(TimestampMixin, Base):
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
     name: Mapped[str] = mapped_column(String(50), nullable=False)
     alias: Mapped[str | None] = mapped_column(String(100))
+    description: Mapped[str | None] = mapped_column(String(255))
+    permissions_json: Mapped[list[str] | None] = mapped_column(JSON)
+
     is_admin: Mapped[bool] = mapped_column(Boolean, default=False, server_default="0")
     is_default: Mapped[bool] = mapped_column(Boolean, default=False, server_default="0")
 
@@ -232,6 +235,10 @@ class Role(TimestampMixin, Base):
     permissions: Mapped[list[Permission]] = relationship(
         secondary=permission_role, back_populates="roles"
     )
+
+    @property
+    def permission_codes(self) -> list[str]:
+        return list(self.permissions_json or [])
 
 
 class Permission(TimestampMixin, Base):
@@ -458,6 +465,7 @@ class PrayerTime(TimestampMixin, Base):
     )
     second: Mapped[str | None] = mapped_column(String(255))
     se_notify: Mapped[str | None] = mapped_column(String(255))
+    is_friday: Mapped[bool] = mapped_column(Boolean, default=False, server_default="0")
 
 
 class DeviceInfo(TimestampMixin, Base):
@@ -703,3 +711,167 @@ class DhikrSubmission(TimestampMixin, Base):
 
     def __repr__(self) -> str:
         return f"<DhikrSubmission(id={self.id}, campaign_id={self.campaign_id}, count={self.count})>"
+
+
+class LocationCache(TimestampMixin, Base):
+    """
+    Cache of reverse-geocoded locations.
+    Rounded coordinates form the lookup key — nearby requests share a row.
+    """
+
+    __tablename__ = "location_cache"
+    __table_args__ = (Index("location_cache_grid_idx", "lat_grid", "lon_grid"),)
+
+    id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
+    lat_grid: Mapped[float] = mapped_column(Float(precision=53), nullable=False)
+    lon_grid: Mapped[float] = mapped_column(Float(precision=53), nullable=False)
+
+    city: Mapped[str | None] = mapped_column(String(255))
+    state: Mapped[str | None] = mapped_column(String(255))
+    country: Mapped[str | None] = mapped_column(String(255))
+    country_code: Mapped[str | None] = mapped_column(String(10))
+    postcode: Mapped[str | None] = mapped_column(String(20))
+    timezone: Mapped[str | None] = mapped_column(String(100))
+    formatted_address: Mapped[str | None] = mapped_column(Text)
+
+    source: Mapped[str | None] = mapped_column(String(50))
+    ip_address: Mapped[str | None] = mapped_column(String(45))
+    last_fetched_at: Mapped[datetime | None] = mapped_column(DateTime)
+
+    def __repr__(self) -> str:
+        return f"<LocationCache(city={self.city!r}, country={self.country!r})>"
+
+
+class PrayerTimeCache(TimestampMixin, Base):
+    """
+    Cached prayer times for arbitrary coordinates that aren't in the curated
+    city catalogue. Keyed by grid-rounded lat/lon + date.
+
+    Values are produced by `tools.prayer_calc.calculate()` — no external API.
+    """
+
+    __tablename__ = "prayer_time_cache"
+    __table_args__ = (
+        Index("prayer_time_cache_grid_idx", "lat_grid", "lon_grid", "date"),
+    )
+
+    id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
+    lat_grid: Mapped[float] = mapped_column(Float, nullable=False)
+    lon_grid: Mapped[float] = mapped_column(Float, nullable=False)
+    date: Mapped[date] = mapped_column(Date, nullable=False, index=True)
+
+    nearest_city: Mapped[str | None] = mapped_column(String(50))
+    timezone: Mapped[str | None] = mapped_column(String(100))
+
+    imsak: Mapped[str | None] = mapped_column(String(10))
+    fajr_start: Mapped[str | None] = mapped_column(String(10))
+    sunrise: Mapped[str | None] = mapped_column(String(10))
+    zuhr_start: Mapped[str | None] = mapped_column(String(10))
+    asr_start: Mapped[str | None] = mapped_column(String(10))
+    sunset: Mapped[str | None] = mapped_column(String(10))
+    maghrib_start: Mapped[str | None] = mapped_column(String(10))
+    isha_start: Mapped[str | None] = mapped_column(String(10))
+    is_friday: Mapped[bool] = mapped_column(Boolean, default=False, server_default="0")
+
+    def __repr__(self) -> str:
+        return (
+            f"<PrayerTimeCache({self.lat_grid:.3f},{self.lon_grid:.3f} on {self.date})>"
+        )
+
+
+class Invitation(TimestampMixin, Base):
+    """
+    A pending invite from an admin to a new administrator.
+
+    Lifecycle:
+        pending  → accepted (user created)   | revoked (admin)   | expired (48h)
+    Status is derived from used_at / revoked_at / expires_at — not stored.
+    """
+
+    __tablename__ = "invitations"
+    __table_args__ = (
+        Index("invitations_email_idx", "email"),
+        Index("invitations_status_idx", "used_at", "revoked_at", "expires_at"),
+    )
+
+    id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
+    email: Mapped[str] = mapped_column(String(255), nullable=False, index=True)
+    token_hash: Mapped[str] = mapped_column(String(64), unique=True, nullable=False)
+    role_id: Mapped[int | None] = mapped_column(
+        BigInteger, ForeignKey("roles.id", ondelete="SET NULL")
+    )
+    invited_by_id: Mapped[int | None] = mapped_column(
+        BigInteger, ForeignKey("users.id", ondelete="SET NULL")
+    )
+    expires_at: Mapped[datetime] = mapped_column(DateTime, nullable=False)
+    used_at: Mapped[datetime | None] = mapped_column(DateTime)
+    revoked_at: Mapped[datetime | None] = mapped_column(DateTime)
+    accepted_by_id: Mapped[int | None] = mapped_column(
+        BigInteger, ForeignKey("users.id", ondelete="SET NULL")
+    )
+
+    role: Mapped[Role | None] = relationship(foreign_keys=[role_id])
+    invited_by: Mapped[User | None] = relationship(foreign_keys=[invited_by_id])
+    accepted_by: Mapped[User | None] = relationship(foreign_keys=[accepted_by_id])
+
+    @property
+    def status(self) -> str:
+        if self.used_at is not None:
+            return "accepted"
+        if self.revoked_at is not None:
+            return "revoked"
+        if self.expires_at <= datetime.utcnow():
+            return "expired"
+        return "pending"
+
+    @property
+    def is_valid(self) -> bool:
+        return self.status == "pending"
+
+    def __repr__(self) -> str:
+        return (
+            f"<Invitation(id={self.id}, email={self.email!r}, status={self.status!r})>"
+        )
+
+
+class OtpChallenge(TimestampMixin, Base):
+    """
+    A pending email-OTP challenge created after a successful password check.
+    The raw OTP is never stored — only its SHA-256 hash. The challenge_token
+    returned to the client is a short-lived JWT whose `purpose` claim is
+    "otp_challenge", so it can never be used as an access token.
+    """
+
+    __tablename__ = "otp_challenges"
+    __table_args__ = (
+        Index("otp_challenges_user_idx", "user_id", "created_at"),
+        Index("otp_challenges_active_idx", "user_id", "used_at", "expires_at"),
+    )
+
+    id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
+    user_id: Mapped[int] = mapped_column(
+        BigInteger,
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    otp_hash: Mapped[str] = mapped_column(String(64), nullable=False)
+    attempts: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    max_attempts: Mapped[int] = mapped_column(Integer, default=3, server_default="3")
+    expires_at: Mapped[datetime] = mapped_column(DateTime, nullable=False)
+    used_at: Mapped[datetime | None] = mapped_column(DateTime)
+    resend_count: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    last_resend_at: Mapped[datetime | None] = mapped_column(DateTime)
+
+    user: Mapped[User] = relationship(foreign_keys=[user_id])
+
+    @property
+    def is_valid(self) -> bool:
+        return (
+            self.used_at is None
+            and self.attempts < self.max_attempts
+            and self.expires_at > datetime.utcnow()
+        )
+
+    def __repr__(self) -> str:
+        return f"<OtpChallenge(id={self.id}, user_id={self.user_id}, attempts={self.attempts})>"

@@ -1,12 +1,8 @@
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
-from sqlalchemy import select
-from sqlalchemy.orm import Session
-
 from database import db
 from database.models import Chapter, ChapterDetail, VerseTranslation
-from routes.base_router import make_crud_router
+from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from schemas.chapter import ChapterRead
 from schemas.chapter_detail import (
     ChapterDetailCreate,
@@ -15,6 +11,10 @@ from schemas.chapter_detail import (
 )
 from schemas.chapter_verses import ChapterVersesResponse, VerseWithTranslations
 from schemas.verse_translation import VerseTranslationRead
+from sqlalchemy import select
+from sqlalchemy.orm import Session
+
+from routes.base_router import make_crud_router
 
 crud_router = make_crud_router(
     model=ChapterDetail,

@@ -4,21 +4,18 @@ import threading
 from contextlib import asynccontextmanager
 from pathlib import Path
 
+from config import ENV
+from database import init_db
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
-from sqlalchemy import inspect
-from starlette.middleware.base import BaseHTTPMiddleware
-
-from config import ENV
-from database import init_db
 from logging_config import setup_logging
 from routes import (
     admin_backup_router,
     admin_devices_router,
-    c_dhikr_router,
     admin_dhikr_router,
+    admin_invitations_router,
     administrator_router,
     auth_router,
     c_dhikr_router,
@@ -29,6 +26,7 @@ from routes import (
     dua_router,
     haram_code_router,
     hijri_router,
+    location_router,
     me_router,
     mosque_router,
     panel_config_router,
@@ -39,11 +37,11 @@ from routes import (
     setting_router,
     sifat_name_router,
     sync_router,
-    translator_router,
-    verse_translation_router,
     wallpaper_router,
 )
 from seed import seed_default_roles, seed_initial_admin
+from sqlalchemy import inspect
+from starlette.middleware.base import BaseHTTPMiddleware
 from tools.seed_chapters import run as seed_chapters
 
 logger = setup_logging()
@@ -216,7 +214,7 @@ class _SecurityHeaders(BaseHTTPMiddleware):
             )
             response.headers.setdefault(
                 "Permissions-Policy",
-                "geolocation=(), microphone=(), camera=()",
+                "geolocation=(self), microphone=(), camera=()",
             )
         else:
             response.headers["X-Env"] = ENV.APP_ENV
@@ -249,7 +247,6 @@ class _ErrorShield(BaseHTTPMiddleware):
 
 app.add_middleware(_ErrorShield)
 
-
 app.include_router(panel_config_router)
 app.include_router(auth_router)
 app.include_router(me_router)
@@ -258,12 +255,12 @@ app.include_router(dhikr_router)
 app.include_router(wallpaper_router)
 app.include_router(sifat_name_router)
 app.include_router(haram_code_router)
-app.include_router(translator_router)
+
+
 app.include_router(chapter_router)
 app.include_router(reciter_router)
 app.include_router(chapter_verses_router)
 app.include_router(chapter_verses_full_router)
-app.include_router(verse_translation_router)
 app.include_router(administrator_router)
 app.include_router(setting_router)
 app.include_router(prayer_time_router)
@@ -276,6 +273,8 @@ app.include_router(mosque_router)
 app.include_router(admin_devices_router)
 app.include_router(c_dhikr_router)
 app.include_router(admin_dhikr_router)
+app.include_router(location_router)
+app.include_router(admin_invitations_router)
 
 if ENV.is_debug():
     from routes.debug import router as debug_router

@@ -2,20 +2,18 @@ from __future__ import annotations
 
 from datetime import UTC, datetime
 
-from fastapi import APIRouter, Depends, HTTPException, Query, status
-from sqlalchemy import func, or_, select
-from sqlalchemy.orm import Session
-
 from database import db
-from database.models import Role, User
-from dependencies.auth import require_admin
+from database.models import Invitation, Role, User
+from dependencies.auth import require_permission
+from fastapi import APIRouter, Depends, HTTPException, Query, status
 from schemas.administrator import (
     AdministratorCreate,
     AdministratorRead,
     AdministratorUpdate,
 )
 from schemas.common import Page
-from security.passwords import hash_password
+from sqlalchemy import func, or_, select
+from sqlalchemy.orm import Session
 
 router = APIRouter(prefix="/administrators", tags=["administrators"])
 
@@ -24,13 +22,41 @@ def _utcnow_naive() -> datetime:
     return datetime.now(UTC).replace(tzinfo=None)
 
 
+def _pending_emails(session: Session, emails: list[str]) -> set[str]:
+    """
+    Return the subset of `emails` that currently have an unexpired,
+    unaccepted, unrevoked invitation row.
+    """
+    if not emails:
+        return set()
+    rows = (
+        session.execute(
+            select(Invitation.email).where(
+                Invitation.email.in_(emails),
+                Invitation.used_at.is_(None),
+                Invitation.revoked_at.is_(None),
+                Invitation.expires_at > _utcnow_naive(),
+            )
+        )
+        .scalars()
+        .all()
+    )
+    return set(rows)
+
+
+def _serialize(user: User, pending: bool) -> AdministratorRead:
+    dto = AdministratorRead.model_validate(user)
+    dto.has_pending_invite = pending
+    return dto
+
+
 @router.get("", response_model=Page[AdministratorRead])
 def list_administrators(
     skip: int = Query(0, ge=0),
     limit: int = Query(50, ge=1, le=500),
     search: str | None = Query(None, max_length=200),
     session: Session = Depends(db.get_db),
-    _: User = Depends(require_admin),
+    _: User = Depends(require_permission("administrators:read")),
 ):
     base = select(User).where(User.is_admin.is_(True))
     if search:
@@ -52,8 +78,11 @@ def list_administrators(
         .scalars()
         .all()
     )
+
+    pending = _pending_emails(session, [u.email for u in items])
+
     return Page[AdministratorRead].build(
-        [AdministratorRead.model_validate(u) for u in items],
+        [_serialize(u, u.email in pending) for u in items],
         total=total,
         skip=skip,
         limit=limit,
@@ -64,62 +93,49 @@ def list_administrators(
 def get_administrator(
     admin_id: int,
     session: Session = Depends(db.get_db),
-    _: User = Depends(require_admin),
+    _: User = Depends(require_permission("administrators:read")),
 ):
     user = session.get(User, admin_id)
     if user is None:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Administrator not found")
-    return user
+
+    pending = session.execute(
+        select(Invitation).where(
+            Invitation.email == user.email,
+            Invitation.used_at.is_(None),
+            Invitation.revoked_at.is_(None),
+            Invitation.expires_at > _utcnow_naive(),
+        )
+    ).scalar_one_or_none()
+
+    return _serialize(user, pending is not None)
 
 
 @router.post(
     "",
     response_model=AdministratorRead,
     status_code=status.HTTP_201_CREATED,
+    include_in_schema=False,
 )
 def create_administrator(
     body: AdministratorCreate,
     session: Session = Depends(db.get_db),
-    _: User = Depends(require_admin),
+    _: User = Depends(require_permission("administrators:write")),
 ):
-    if body.role_ids:
-        roles = (
-            session.execute(select(Role).where(Role.id.in_(body.role_ids)))
-            .scalars()
-            .all()
-        )
-        user.roles = list(roles)
-
-    email = body.email.lower().strip()
-
-    existing = session.execute(
-        select(User).where(User.email == email)
-    ).scalar_one_or_none()
-    if existing is not None:
-        raise HTTPException(status.HTTP_409_CONFLICT, "Email already in use")
-
-    user = User(
-        email=email,
-        password=hash_password(body.password),
-        first_name=body.first_name,
-        last_name=body.last_name,
-        is_admin=True,
-        email_verified_at=_utcnow_naive(),
+    """Direct admin creation is disabled — use POST /admin/invitations."""
+    raise HTTPException(
+        status.HTTP_410_GONE,
+        "Direct admin creation is disabled. Use POST /admin/invitations.",
     )
-    session.add(user)
-    session.commit()
-    session.refresh(user)
-    return user
 
 
 @router.patch("/{admin_id}", response_model=AdministratorRead)
 def update_administrator(
     admin_id: int,
     body: AdministratorUpdate,
-    current: User = Depends(require_admin),
+    current: User = Depends(require_permission("administrators:write")),
     session: Session = Depends(db.get_db),
 ):
-
     target = session.get(User, admin_id)
     if target is None:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Administrator not found")
@@ -140,30 +156,28 @@ def update_administrator(
     if data.get("is_admin") is False and target.id == current.id:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "You cannot demote yourself")
 
-    if "email" in data and data["email"] is not None:
-        new_email = data["email"].lower().strip()
-        dup = session.execute(
-            select(User).where(User.email == new_email, User.id != target.id)
-        ).scalar_one_or_none()
-        if dup is not None:
-            raise HTTPException(status.HTTP_409_CONFLICT, "Email already in use")
-        data["email"] = new_email
-
-    if "password" in data and data["password"] is not None:
-        data["password"] = hash_password(data["password"])
-
     for field, value in data.items():
         setattr(target, field, value)
 
     session.commit()
     session.refresh(target)
-    return target
+
+    pending = session.execute(
+        select(Invitation).where(
+            Invitation.email == target.email,
+            Invitation.used_at.is_(None),
+            Invitation.revoked_at.is_(None),
+            Invitation.expires_at > _utcnow_naive(),
+        )
+    ).scalar_one_or_none()
+
+    return _serialize(target, pending is not None)
 
 
 @router.delete("/{admin_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_administrator(
     admin_id: int,
-    current: User = Depends(require_admin),
+    current: User = Depends(require_permission("administrators:write")),
     session: Session = Depends(db.get_db),
 ) -> None:
     if admin_id == current.id:

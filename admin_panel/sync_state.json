@@ -1,4 +1,71 @@
 {
-  "reciters": {},
-  "last_run": "2026-10-20T08:38:31Z"
+  "reciters": {
+    "mishary-rashid-alafasy": {
+      "name": "Mishary Rashid Alafasy",
+      "everyayah_slug": "Alafasy_64kbps",
+      "bitrate": "64",
+      "bytes": 0,
+      "uploaded": 0,
+      "skipped": 6236,
+      "failed": 0,
+      "failures": [],
+      "completed_at": "2026-11-08T14:03:46Z"
+    },
+    "yasser-al-dosari": {
+      "name": "Yasser Al-Dosari",
+      "everyayah_slug": "Yasser_Ad-Dussary_128kbps",
+      "bitrate": "128",
+      "bytes": 0,
+      "uploaded": 0,
+      "skipped": 6236,
+      "failed": 0,
+      "failures": [],
+      "completed_at": "2026-11-08T14:03:54Z"
+    },
+    "abdul-rahman-al-sudais": {
+      "name": "Abdul Rahman Al-Sudais",
+      "everyayah_slug": "Abdurrahmaan_As-Sudais_64kbps",
+      "bitrate": "64",
+      "bytes": 0,
+      "uploaded": 0,
+      "skipped": 6236,
+      "failed": 0,
+      "failures": [],
+      "completed_at": "2026-11-08T14:04:02Z"
+    },
+    "maher-al-muaiqly": {
+      "name": "Maher Al-Muaiqly",
+      "everyayah_slug": "Maher_AlMuaiqly_64kbps",
+      "bitrate": "64",
+      "bytes": 0,
+      "uploaded": 0,
+      "skipped": 6236,
+      "failed": 0,
+      "failures": [],
+      "completed_at": "2026-11-08T14:04:09Z"
+    },
+    "abdul-basit-abdul-samad": {
+      "name": "Abdul Basit Abdul Samad",
+      "everyayah_slug": "AbdulSamad_64kbps_QuranExplorer.Com",
+      "bitrate": "64",
+      "bytes": 0,
+      "uploaded": 0,
+      "skipped": 6236,
+      "failed": 0,
+      "failures": [],
+      "completed_at": "2026-11-08T14:04:16Z"
+    },
+    "saad-al-ghamdi": {
+      "name": "Saad Al-Ghamdi",
+      "everyayah_slug": "Ghamadi_40kbps",
+      "bitrate": "40",
+      "bytes": 0,
+      "uploaded": 0,
+      "skipped": 6236,
+      "failed": 0,
+      "failures": [],
+      "completed_at": "2026-11-08T14:04:23Z"
+    }
+  },
+  "last_run": "2026-11-08T14:04:23Z"
 }

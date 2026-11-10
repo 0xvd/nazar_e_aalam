@@ -5,15 +5,15 @@ import uuid
 
 import boto3
 from botocore.exceptions import BotoCoreError, ClientError
-from fastapi import Depends, File, Form, HTTPException, UploadFile, status
-from sqlalchemy.orm import Session
-
 from config import ENV
 from database import db
 from database.models import User, Wallpaper
-from dependencies.auth import require_admin
-from routes.base_router import make_crud_router
+from dependencies.auth import require_permission
+from fastapi import Depends, File, Form, HTTPException, UploadFile, status
 from schemas.wallpaper import WallpaperCreate, WallpaperRead, WallpaperUpdate
+from sqlalchemy.orm import Session
+
+from routes.base_router import make_crud_router
 
 router = make_crud_router(
     model=Wallpaper,
@@ -24,6 +24,8 @@ router = make_crud_router(
     read_schema=WallpaperRead,
     order_by="name",
     search_fields=("name",),
+    read_perm="wallpapers:read",
+    write_perm="wallpapers:write",
 )
 
 _ALLOWED = {"image/jpeg", "image/png", "image/webp"}
@@ -48,7 +50,7 @@ async def upload_wallpaper(
     file: UploadFile = File(...),
     name: str = Form(...),
     session: Session = Depends(db.get_db),
-    _: User = Depends(require_admin),
+    _: User = Depends(require_permission("wallpapers:write")),
 ) -> Wallpaper:
     if file.content_type not in _ALLOWED:
         raise HTTPException(
@@ -99,7 +101,7 @@ async def upload_wallpaper(
 @router.post("/upload-image", status_code=status.HTTP_200_OK)
 async def upload_wallpaper_image(
     file: UploadFile = File(...),
-    _: User = Depends(require_admin),
+    _: User = Depends(require_permission("wallpapers:write")),
 ) -> dict:
     """Upload an image to R2 and return its URL. Does NOT create a DB row.
 

@@ -5,16 +5,15 @@ import uuid
 
 import boto3
 from botocore.exceptions import BotoCoreError, ClientError
-from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status
-from sqlalchemy import select
-from sqlalchemy.orm import Session
-
 from config import ENV
 from database import db
 from database.models import Setting, User
 from dependencies.auth import get_current_user
-from schemas.me import MeResponse, MeUpdate, PasswordChange
+from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status
+from schemas.me import MeResponse, MeUpdate, PasswordChange, RoleBrief
 from security.passwords import hash_password, verify_password
+from sqlalchemy import select
+from sqlalchemy.orm import Session
 
 router = APIRouter(prefix="/me", tags=["me"])
 
@@ -59,18 +58,6 @@ def _r2():
         aws_access_key_id=ENV.R2_ACCESS_KEY_ID,
         aws_secret_access_key=ENV.R2_SECRET_ACCESS_KEY,
         region_name="auto",
-    )
-
-
-def _serialize(session: Session, user: User) -> MeResponse:
-    return MeResponse(
-        id=user.id,
-        email=user.email,
-        first_name=user.first_name,
-        last_name=user.last_name,
-        is_admin=user.is_admin,
-        avatar=_read_avatar(session, user.id),
-        created_at=user.created_at,
     )
 
 
@@ -188,3 +175,23 @@ def change_password(
         )
     user.password = hash_password(body.new_password)
     session.commit()
+
+
+def _serialize(session: Session, user: User) -> MeResponse:
+    return MeResponse(
+        id=user.id,
+        email=user.email,
+        first_name=user.first_name,
+        last_name=user.last_name,
+        is_admin=user.is_admin,
+        avatar=_read_avatar(session, user.id),
+        created_at=user.created_at,
+        roles=[
+            RoleBrief(
+                id=r.id,
+                name=r.name,
+                permissions=list(r.permissions_json or []),
+            )
+            for r in (user.roles or [])
+        ],
+    )

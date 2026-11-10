@@ -10,14 +10,14 @@ import 'package:nazar_e_alam/view/screens/dhikr/local%20stroge%20dhikr/local_dhi
 import 'package:nazar_e_alam/view/screens/dua/api%20dua/api_dua_view_screen.dart';
 import 'package:nazar_e_alam/view/screens/dua/dua_screen.dart';
 import 'package:nazar_e_alam/view/screens/dua/local%20stroge%20dua/local_dhikr_add_screen.dart';
-import 'package:nazar_e_alam/view/screens/hadith/all_hadith_screen.dart';
-import 'package:nazar_e_alam/view/screens/hadith/hadis_book_name_screen.dart';
-import 'package:nazar_e_alam/view/screens/hadith/hadith_chapters_screen.dart';
-import 'package:nazar_e_alam/view/screens/hadith/hadith_details_screen.dart';
+// import 'package:nazar_e_alam/view/screens/hadith/all_hadith_screen.dart';
+// import 'package:nazar_e_alam/view/screens/hadith/hadis_book_name_screen.dart';
+// import 'package:nazar_e_alam/view/screens/hadith/hadith_chapters_screen.dart';
+// import 'package:nazar_e_alam/view/screens/hadith/hadith_details_screen.dart';
 import 'package:nazar_e_alam/view/screens/haram_ingredients_food/haram_food_detaile_info.dart';
 import 'package:nazar_e_alam/view/screens/haram_ingredients_food/haram_ingredients_food.dart';
 import 'package:nazar_e_alam/view/screens/home/home_screen.dart';
-import 'package:nazar_e_alam/view/screens/name_generator/islamic_name_generator_screen.dart';
+// import 'package:nazar_e_alam/view/screens/name_generator/islamic_name_generator_screen.dart';
 import 'package:nazar_e_alam/view/screens/nearby_mosque/nearby_mosque_screen.dart';
 // import 'package:nazar_e_alam/view/screens/payment/donation_type_screen.dart';
 // import 'package:nazar_e_alam/view/screens/payment/payment_type_screen.dart';
@@ -165,26 +165,26 @@ class RouteHelper {
       page: () => const SifatNameDetailsScreen(appBackButton: true),
       transition: Transition.cupertinoDialog,
     ),
-    GetPage(
-      name: hadithChapters,
-      page: () => const HadithChaptersScreen(appBackButton: true),
-      transition: Transition.cupertinoDialog,
-    ),
-    GetPage(
-      name: allHadith,
-      page: () => const AllHadithScreen(appBackButton: true),
-      transition: Transition.cupertinoDialog,
-    ),
-    GetPage(
-      name: hadithDetails,
-      page: () => HadithDetailsScreen(appBackButton: true),
-      transition: Transition.cupertinoDialog,
-    ),
-    GetPage(
-      name: hadithBookName,
-      page: () => HadisBookNameScreen(appBackButton: true),
-      transition: Transition.cupertinoDialog,
-    ),
+    // GetPage(
+    //   name: hadithChapters,
+    //   page: () => const HadithChaptersScreen(appBackButton: true),
+    //   transition: Transition.cupertinoDialog,
+    // ),
+    // GetPage(
+    //   name: allHadith,
+    //   page: () => const AllHadithScreen(appBackButton: true),
+    //   transition: Transition.cupertinoDialog,
+    // ),
+    // GetPage(
+    //   name: hadithDetails,
+    //   page: () => HadithDetailsScreen(appBackButton: true),
+    //   transition: Transition.cupertinoDialog,
+    // ),
+    // GetPage(
+    //   name: hadithBookName,
+    //   page: () => HadisBookNameScreen(appBackButton: true),
+    //   transition: Transition.cupertinoDialog,
+    // ),
     GetPage(
       name: haramIngredientsFood,
       page: () => const HaramIngredientsFood(appBackButton: true),
@@ -268,10 +268,10 @@ class RouteHelper {
       page: () => PrayerAdjustmentScreen(appBackButton: true),
       transition: Transition.cupertinoDialog,
     ),
-    GetPage(
-      name: aiNameGenerator,
-      page: () => IslamicNameGeneratorScreen(appBackButton: true),
-      transition: Transition.cupertinoDialog,
-    ),
+    // GetPage(
+    //   name: aiNameGenerator,
+    //   page: () => IslamicNameGeneratorScreen(appBackButton: true),
+    //   transition: Transition.cupertinoDialog,
+    // ),
   ];
 }

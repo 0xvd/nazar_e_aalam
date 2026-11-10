@@ -14,21 +14,24 @@
   <div class="bgfx"><div class="au a1"></div><div class="au a2"></div></div>
   <section id="login">
     <div class="lbrand">
-    <img class="logo-big" src="../assets/img/logo.png" alt="Nazar-e-Aalam">
-      <!-- <svg class="logo-big" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Nazar-e-Aalam"><path d="M15.5 3.2a9 9 0 1 0 5.3 11.9A7.2 7.2 0 0 1 15.5 3.2z"/><path d="M18.5 4l.7 1.6 1.6.7-1.6.7-.7 1.6-.7-1.6-1.6-.7 1.6-.7z"/></svg> -->
+      <img class="logo-big" src="../assets/img/logo.png" alt="Nazar-e-Aalam">
       <div class="ar">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
       <h1>Nazar-e-Aalam</h1>
       <p>Manage your Islamic app content, prayer times and settings in one place.</p>
     </div>
+
     <div class="lform">
+      <!-- Step 1: password -->
       <form class="glass lc" id="lf" novalidate>
         <h2>Welcome back</h2>
         <p class="sub">Sign in to continue to your admin panel</p>
+
         <label for="em">Email</label>
         <div class="fld">
           <svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 8l9 6 9-6"/></svg>
           <input id="em" type="email" placeholder="admin@nazareaalam.com" autocomplete="username" required>
         </div>
+
         <label for="pw">Password</label>
         <div class="fld">
           <svg class="i" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
@@ -37,9 +40,37 @@
             <svg class="i" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
           </button>
         </div>
+
         <div class="err" id="err" role="alert"></div>
-        <button class="btn" type="submit"><span class="bt">Sign in</span><span class="sp2"></span></button>
-        <p class="sub note">Demo: any email + password (6+ characters)</p>
+        <button class="btn" type="submit"><span class="bt">Continue</span><span class="sp2"></span></button>
+      </form>
+
+      <!-- Step 2: OTP (hidden until step 1 returns a challenge) -->
+      <form class="glass lc" id="of" novalidate hidden>
+        <h2>Check your email</h2>
+        <p class="sub" id="otp-sub">We sent a 6-digit code to your email.</p>
+
+        <label for="otp">Verification code</label>
+        <div class="fld">
+          <svg class="i" viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="14" rx="3"/><path d="M8 11h8M8 15h5"/></svg>
+          <input id="otp" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="6"
+                 placeholder="000000" autocomplete="one-time-code" required
+                 style="letter-spacing: 8px; font-variant-numeric: tabular-nums;">
+        </div>
+
+        <div class="err" id="oerr" role="alert"></div>
+        <button class="btn" type="submit"><span class="bt">Verify</span><span class="sp2"></span></button>
+
+        <p class="sub note" style="text-align:center">
+          Didn't get the code?
+          <a href="#" id="resend" style="color:var(--or);text-decoration:none;font-weight:700">Resend</a>
+          <span id="resend-cd" style="color:var(--mut);display:none">
+            · wait <span id="resend-sec">30</span>s
+          </span>
+        </p>
+        <p class="sub note" style="text-align:center">
+          <a href="#" id="back-to-login" style="color:var(--mut);text-decoration:none">← Use a different account</a>
+        </p>
       </form>
     </div>
   </section>

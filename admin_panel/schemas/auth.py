@@ -62,3 +62,22 @@ class DeviceOut(BaseModel):
     revoked: bool
     last_seen_at: datetime | None = None
     created_at: datetime
+
+
+class OtpChallengeResponse(BaseModel):
+    """Returned by POST /auth/login when the account has 2FA enabled."""
+
+    challenge_token: str
+    method: Literal["email_otp"] = "email_otp"
+    email_hint: str
+    expires_in: int
+    attempts_left: int
+
+
+class VerifyOtpRequest(BaseModel):
+    challenge_token: str = Field(min_length=20)
+    otp: str = Field(min_length=4, max_length=8)
+
+
+class ResendOtpRequest(BaseModel):
+    challenge_token: str = Field(min_length=20)

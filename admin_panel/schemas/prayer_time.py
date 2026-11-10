@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import date
 
-from pydantic import BaseModel, ConfigDict, computed_field
+from pydantic import BaseModel, ConfigDict, Field, computed_field
 
 
 class PrayerTimeRead(BaseModel):
@@ -63,3 +63,27 @@ class CityInfo(BaseModel):
     latitude: float
     longitude: float
     timezone: str
+
+
+class AutoSeedRequest(BaseModel):
+    """Input for POST /prayer-times/auto-seed — create a city on the fly."""
+
+    name: str = Field(
+        ...,
+        min_length=1,
+        max_length=50,
+        description="City key/slug (lowercase). e.g. 'tokyo'",
+    )
+    lat: float = Field(..., ge=-90, le=90)
+    lon: float = Field(..., ge=-180, le=180)
+    tz: str = Field(
+        ...,
+        min_length=1,
+        max_length=64,
+        description="IANA timezone, e.g. 'Asia/Tokyo'",
+    )
+
+
+class AutoSeedResponse(BaseModel):
+    city: str
+    inserted: int

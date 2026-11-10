@@ -109,7 +109,6 @@ class ENV:
 
     CACHE_BACKEND: str
     CACHE_DEFAULT_TTL: int
-    REDIS_URL: str
 
     RATE_LIMIT_ENABLED: bool
     RATE_LIMIT_PER_MINUTE: int
@@ -117,13 +116,6 @@ class ENV:
     UPLOAD_DIR: str
     MEDIA_URL: str
     MAX_UPLOAD_SIZE_MB: int
-
-    SMTP_HOST: str
-    SMTP_PORT: int
-    SMTP_USER: str
-    SMTP_PASSWORD: str
-    SMTP_FROM: str
-    SMTP_TLS: bool
 
     LOG_LEVEL: str
 
@@ -157,6 +149,14 @@ class ENV:
 
     DEVICE_TOKEN_TTL_DAYS: int
     DEVICE_REGISTER_RATE_LIMIT: int
+
+    SMTP_HOST: str
+    SMTP_PORT: int
+    SMTP_USER: str
+    SMTP_PASSWORD: str
+    SMTP_FROM: str
+    SMTP_FROM_NAME: str
+    SMTP_TLS: bool
 
     @classmethod
     def reload(cls) -> None:
@@ -193,18 +193,11 @@ class ENV:
             "COOKIE_SAMESITE": get_env("COOKIE_SAMESITE", "lax"),
             "CACHE_BACKEND": get_env("CACHE_BACKEND", "memory"),
             "CACHE_DEFAULT_TTL": get_env_int("CACHE_DEFAULT_TTL", 300),
-            "REDIS_URL": get_env("REDIS_URL", "redis://localhost:6379/0"),
             "RATE_LIMIT_ENABLED": get_env_bool("RATE_LIMIT_ENABLED", True),
             "RATE_LIMIT_PER_MINUTE": get_env_int("RATE_LIMIT_PER_MINUTE", 60),
             "UPLOAD_DIR": get_env("UPLOAD_DIR", "./uploads"),
             "MEDIA_URL": get_env("MEDIA_URL", "/media"),
             "MAX_UPLOAD_SIZE_MB": get_env_int("MAX_UPLOAD_SIZE_MB", 10),
-            "SMTP_HOST": get_env("SMTP_HOST", ""),
-            "SMTP_PORT": get_env_int("SMTP_PORT", 587),
-            "SMTP_USER": get_env("SMTP_USER", ""),
-            "SMTP_PASSWORD": get_env("SMTP_PASSWORD", ""),
-            "SMTP_FROM": get_env("SMTP_FROM", "noreply@example.com"),
-            "SMTP_TLS": get_env_bool("SMTP_TLS", True),
             "LOG_LEVEL": get_env("LOG_LEVEL", "INFO"),
             "R2_ACCOUNT_ID": get_env("R2_ACCOUNT_ID", ""),
             "R2_ACCESS_KEY_ID": get_env("R2_ACCESS_KEY_ID", ""),
@@ -229,6 +222,13 @@ class ENV:
             "GOOGLE_MAPS_API_KEY": get_env("GOOGLE_MAPS_API_KEY", ""),
             "DEVICE_TOKEN_TTL_DAYS": get_env_int("DEVICE_TOKEN_TTL_DAYS", 3650),
             "DEVICE_REGISTER_RATE_LIMIT": get_env_int("DEVICE_REGISTER_RATE_LIMIT", 10),
+            "SMTP_HOST": get_env("SMTP_HOST", "smtp.gmail.com"),
+            "SMTP_PORT": get_env_int("SMTP_PORT", 587),
+            "SMTP_USER": get_env("SMTP_USER", ""),
+            "SMTP_PASSWORD": get_env("SMTP_PASSWORD", ""),
+            "SMTP_FROM": get_env("SMTP_FROM", ""),
+            "SMTP_FROM_NAME": get_env("SMTP_FROM_NAME", "Nazar-e-Aalam"),
+            "SMTP_TLS": get_env_bool("SMTP_TLS", True),
         }
         for name, value in values.items():
             setattr(cls, name, value)

@@ -1,12 +1,10 @@
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
-from sqlalchemy import select
-from sqlalchemy.orm import Session
-
+from config import ENV
 from database import db
 from database.models import Setting
-from dependencies.auth import require_admin
+from dependencies.auth import require_permission
+from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from schemas.setting import (
     SettingBulkResult,
     SettingBulkUpsert,
@@ -15,12 +13,36 @@ from schemas.setting import (
     SettingRead,
     SettingUpsert,
 )
+from sqlalchemy import select
+from sqlalchemy.orm import Session
 
 router = APIRouter(prefix="/settings", tags=["settings"])
 
 _CONTEXT_DEFAULT = "app"
 _CONTEXT_MAX = 50
 _NAME_MAX = 255
+
+
+_PROD_LOCKED_SETTINGS = {"2fa_enabled"}
+_FALSEY = {"", "0", "false", "no", "off", "none"}
+
+
+def _assert_not_prod_locked(name: str, value) -> None:
+    """
+    In production, security-critical settings can't be turned off via the
+    panel. Fail loudly instead of silently ignoring — a red banner in the
+    panel is far better than a quiet downgrade.
+    """
+    if name not in _PROD_LOCKED_SETTINGS:
+        return
+    if not ENV.is_production():
+        return
+    as_str = "false" if value is None else str(value).strip().lower()
+    if as_str in _FALSEY:
+        raise HTTPException(
+            status.HTTP_400_BAD_REQUEST,
+            f"Setting '{name}' cannot be disabled in production.",
+        )
 
 
 def _ctx(context: str | None) -> str:
@@ -87,7 +109,7 @@ def bulk_upsert_settings(
     body: SettingBulkUpsert,
     context: str = Query(_CONTEXT_DEFAULT, max_length=_CONTEXT_MAX),
     session: Session = Depends(db.get_db),
-    _=Depends(require_admin),
+    _=Depends(require_permission("settings:write")),
 ):
     ctx = _ctx(context)
     created = updated = 0
@@ -95,6 +117,8 @@ def bulk_upsert_settings(
 
     for raw_name, value in body.values.items():
         name = _validate_name(raw_name)
+        _assert_not_prod_locked(name, value)
+
         existing = _find(session, name, ctx)
         if existing is not None:
             existing.value = value
@@ -140,9 +164,11 @@ def upsert_setting(
     response: Response,
     context: str = Query(_CONTEXT_DEFAULT, max_length=_CONTEXT_MAX),
     session: Session = Depends(db.get_db),
-    _=Depends(require_admin),
+    _=Depends(require_permission("settings:write")),
 ):
     clean_name = _validate_name(name)
+    _assert_not_prod_locked(clean_name, body.value)
+
     ctx = _ctx(context)
     existing = _find(session, clean_name, ctx)
 
@@ -166,7 +192,7 @@ def delete_setting(
     name: str,
     context: str = Query(_CONTEXT_DEFAULT, max_length=_CONTEXT_MAX),
     session: Session = Depends(db.get_db),
-    _=Depends(require_admin),
+    _=Depends(require_permission("settings:write")),
 ) -> None:
     ctx = _ctx(context)
     row = _find(session, name.strip(), ctx)

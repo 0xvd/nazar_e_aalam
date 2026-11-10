@@ -18,7 +18,6 @@ from botocore.exceptions import (
     BotoCoreError,
     ClientError,
 )
-
 from config import ENV
 
 RECITERS: dict[str, dict] = {

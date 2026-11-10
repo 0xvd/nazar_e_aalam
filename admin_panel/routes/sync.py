@@ -4,13 +4,10 @@ import threading
 from datetime import datetime
 from pathlib import Path
 
-from fastapi import APIRouter, Depends, HTTPException, Query, status
-from sqlalchemy import select
-from sqlalchemy.orm import Session
-
 from database import db
 from database.models import SyncJob, User
 from dependencies.auth import require_admin
+from fastapi import APIRouter, Depends, HTTPException, Query, status
 from schemas.sync import (
     SyncJobStatus,
     SyncLogChunk,
@@ -18,6 +15,8 @@ from schemas.sync import (
     SyncStartResponse,
     SyncStatusResponse,
 )
+from sqlalchemy import select
+from sqlalchemy.orm import Session
 from tools import ayah_sync_runner
 
 router = APIRouter(prefix="/admin/sync", tags=["admin-sync"])

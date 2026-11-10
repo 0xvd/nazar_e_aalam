@@ -2,26 +2,26 @@ from __future__ import annotations
 
 from datetime import UTC, date, datetime
 
-from fastapi import APIRouter, Depends, HTTPException, Request, status
-from sqlalchemy.orm import Session
-
 from cache import rate_limiter
 from config import ENV
 from database import db
 from database.models import DeviceProfile, DhikrCampaign, DhikrSubmission, User
 from dependencies.auth import get_current_user
+from fastapi import APIRouter, Depends, HTTPException, Request, status
 from schemas.dhikr import (
     DhikrConfig,
     DhikrSubmitRequest,
     DhikrSubmitResponse,
     PublicCampaign,
 )
+from sqlalchemy.orm import Session
 
 router = APIRouter(prefix="/dhikr", tags=["dhikr"])
 
 
 def _utcnow_naive() -> datetime:
     return datetime.now(UTC).replace(tzinfo=None)
+
 
 def _client_ip(request: Request) -> str:
     xff = request.headers.get("x-forwarded-for")

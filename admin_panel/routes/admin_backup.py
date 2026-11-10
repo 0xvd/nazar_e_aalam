@@ -6,11 +6,10 @@ from pathlib import Path
 
 import boto3
 from botocore.exceptions import BotoCoreError, ClientError
-from fastapi import APIRouter, Depends, HTTPException, status
-
 from config import ENV
 from database.models import User
-from dependencies.auth import require_admin
+from dependencies.auth import require_permission
+from fastapi import APIRouter, Depends, HTTPException, status
 from schemas.backup import (
     BackupInfo,
     BackupListResponse,
@@ -91,7 +90,9 @@ def _merge(local: dict, r2: dict) -> list[BackupInfo]:
 
 
 @router.post("", response_model=BackupTriggerResponse)
-def trigger_backup_now(_: User = Depends(require_admin)) -> BackupTriggerResponse:
+def trigger_backup_now(
+    _: User = Depends(require_permission("backup:write")),
+) -> BackupTriggerResponse:
     if not _BACKUP_SCRIPT.exists():
         raise HTTPException(
             status.HTTP_500_INTERNAL_SERVER_ERROR,
@@ -126,7 +127,9 @@ def trigger_backup_now(_: User = Depends(require_admin)) -> BackupTriggerRespons
 
 
 @router.get("", response_model=BackupListResponse)
-def list_backups(_: User = Depends(require_admin)) -> BackupListResponse:
+def list_backups(
+    _: User = Depends(require_permission("backup:read")),
+) -> BackupListResponse:
     merged = _merge(_list_local(), _list_r2())
     return BackupListResponse(count=len(merged), backups=merged[:50])
 
@@ -134,7 +137,7 @@ def list_backups(_: User = Depends(require_admin)) -> BackupListResponse:
 @router.post("/restore", response_model=RestoreResponse)
 def restore_backup(
     body: RestoreRequest,
-    _: User = Depends(require_admin),
+    _: User = Depends(require_permission("backup:write")),
 ) -> RestoreResponse:
     if body.confirm != "RESTORE":
         raise HTTPException(
@@ -199,7 +202,9 @@ def restore_backup(
 
 
 @router.post("/verify", response_model=VerifyResponse)
-def verify_backup(_: User = Depends(require_admin)) -> VerifyResponse:
+def verify_backup(
+    _: User = Depends(require_permission("backup:write")),
+) -> VerifyResponse:
     if not _VERIFY_SCRIPT.exists():
         raise HTTPException(
             status.HTTP_500_INTERNAL_SERVER_ERROR,
@@ -220,7 +225,9 @@ def verify_backup(_: User = Depends(require_admin)) -> VerifyResponse:
 
 
 @router.get("/status", response_model=BackupStatusResponse)
-def backup_status(_: User = Depends(require_admin)) -> BackupStatusResponse:
+def backup_status(
+    _: User = Depends(require_permission("backup:read")),
+) -> BackupStatusResponse:
     state = backup_scheduler.get_state()
     local = _list_local()
     r2 = _list_r2()

@@ -1,9 +1,8 @@
 from urllib.parse import quote
 
 import requests
-from fastapi import APIRouter, Query
-
 from config import ENV
+from fastapi import APIRouter, Query
 
 router = APIRouter(prefix="/mosques", tags=["mosques"])
 

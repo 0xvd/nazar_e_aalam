@@ -8,10 +8,10 @@ _ROOT = Path(__file__).resolve().parent.parent
 if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 
-from sqlalchemy import delete, select
-
 from database import db
 from database.models import PrayerTime
+from sqlalchemy import delete, select
+
 from tools import cities
 from tools.prayer_calc import calculate
 

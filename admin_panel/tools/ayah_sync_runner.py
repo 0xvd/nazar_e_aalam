@@ -8,10 +8,10 @@ from contextlib import redirect_stderr, redirect_stdout
 from datetime import datetime
 from pathlib import Path
 
-from sqlalchemy import select
-
 from database import db
 from database.models import SyncJob
+from sqlalchemy import select
+
 from tools import sync_quran as _sq
 
 _ROOT = Path(__file__).resolve().parent.parent

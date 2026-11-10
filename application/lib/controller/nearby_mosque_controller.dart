@@ -142,7 +142,7 @@ class NearbyMosqueController extends GetxController {
 
       debugPrint("Map api key: $apiKey");
       var url =
-          '${AppConstants.NEARBY_MOSQUE_URL}/json?location=${userLocation.value}&radius=${1000 * kmToRadious}&type=mosque&key=$apiKey';
+          '${AppConstants.APP_NAME}/json?location=${userLocation.value}&radius=${1000 * kmToRadious}&type=mosque&key=$apiKey';
       var response = await http.get(Uri.parse(url));
       var decoded = json.decode(response.body);
       places.value = decoded['results'];

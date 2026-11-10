@@ -1,10 +1,9 @@
+from database import Base, BaseRepository, db
+from dependencies.auth import require_admin, require_permission
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, status
 from pydantic import BaseModel
-from sqlalchemy.orm import Session
-
-from database import Base, BaseRepository, db
-from dependencies.auth import require_admin
 from schemas.common import Page
+from sqlalchemy.orm import Session
 
 
 def make_crud_router(
@@ -17,8 +16,28 @@ def make_crud_router(
     read_schema: type[BaseModel],
     order_by: str = "id",
     search_fields: tuple[str, ...] = (),
+    read_perm: str | None = None,
+    write_perm: str | None = None,
     extra_filters: dict[str, str] | None = None,
+    public_read: bool = True,
 ) -> APIRouter:
+    """
+    CRUD router factory.
+
+    Auth model:
+      - `public_read=True` (default): GET / and GET /{id} are UNAUTHENTICATED.
+        This is what the mobile app needs.
+      - `public_read=False`: GETs require `read_perm` (or admin if unset).
+        Use only for internal admin-only resources.
+      - All writes (POST, PATCH, DELETE) require `write_perm` (or admin if unset).
+    """
+    write_dep = require_permission(write_perm) if write_perm else require_admin
+
+    if public_read:
+        read_dep = None
+    else:
+        read_dep = require_permission(read_perm) if read_perm else require_admin
+
     router = APIRouter(prefix=prefix, tags=[tag])
     repo_cls = type(f"{model.__name__}Repository", (BaseRepository,), {"model": model})
     PageOut = Page[read_schema]  # type: ignore[misc]
@@ -27,7 +46,6 @@ def make_crud_router(
         return repo_cls(session)  # type: ignore[return-value]
 
     def _parent(request: Request) -> dict[str, int]:
-        """Extract parent FK values from path params → {db_col: int_value}."""
         if not extra_filters:
             return {}
         out: dict[str, int] = {}
@@ -52,15 +70,33 @@ def make_crud_router(
             if getattr(obj, db_col) != val:
                 raise HTTPException(status.HTTP_404_NOT_FOUND, "Not found")
 
-    @router.get("", response_model=PageOut)
-    def list_items(
-        request: Request,
-        skip: int = Query(0, ge=0),
-        limit: int = Query(50, ge=1, le=500),
-        search: str | None = Query(None, max_length=200),
-        order_dir: str = Query("asc", pattern="^(asc|desc)$"),
-        repo: BaseRepository = Depends(get_repo),
-    ):
+    if read_dep is None:
+
+        @router.get("", response_model=PageOut)
+        def list_items(
+            request: Request,
+            skip: int = Query(0, ge=0),
+            limit: int = Query(50, ge=1, le=500),
+            search: str | None = Query(None, max_length=200),
+            order_dir: str = Query("asc", pattern="^(asc|desc)$"),
+            repo: BaseRepository = Depends(get_repo),
+        ):
+            return _list_impl(repo, request, skip, limit, search, order_dir)
+    else:
+
+        @router.get("", response_model=PageOut)
+        def list_items(
+            request: Request,
+            skip: int = Query(0, ge=0),
+            limit: int = Query(50, ge=1, le=500),
+            search: str | None = Query(None, max_length=200),
+            order_dir: str = Query("asc", pattern="^(asc|desc)$"),
+            repo: BaseRepository = Depends(get_repo),
+            _=Depends(read_dep),
+        ):
+            return _list_impl(repo, request, skip, limit, search, order_dir)
+
+    def _list_impl(repo, request, skip, limit, search, order_dir):
         parent = _parent(request)
         items, total = repo.paginate(
             skip=skip,
@@ -78,12 +114,27 @@ def make_crud_router(
             limit=limit,
         )
 
-    @router.get("/{item_id}", response_model=read_schema)
-    def get_item(
-        item_id: int,
-        request: Request,
-        repo: BaseRepository = Depends(get_repo),
-    ):
+    if read_dep is None:
+
+        @router.get("/{item_id}", response_model=read_schema)
+        def get_item(
+            item_id: int,
+            request: Request,
+            repo: BaseRepository = Depends(get_repo),
+        ):
+            return _get_impl(item_id, request, repo)
+    else:
+
+        @router.get("/{item_id}", response_model=read_schema)
+        def get_item(
+            item_id: int,
+            request: Request,
+            repo: BaseRepository = Depends(get_repo),
+            _=Depends(read_dep),
+        ):
+            return _get_impl(item_id, request, repo)
+
+    def _get_impl(item_id, request, repo):
         obj = repo.get(item_id)
         if obj is None:
             raise HTTPException(status.HTTP_404_NOT_FOUND, "Not found")
@@ -95,7 +146,7 @@ def make_crud_router(
         body: create_schema,  # type: ignore[valid-type]
         request: Request,
         repo: BaseRepository = Depends(get_repo),
-        _=Depends(require_admin),
+        _=Depends(write_dep),
     ):
         data = body.model_dump()
         data.update(_parent(request))
@@ -110,7 +161,7 @@ def make_crud_router(
         body: update_schema,  # type: ignore[valid-type]
         request: Request,
         repo: BaseRepository = Depends(get_repo),
-        _=Depends(require_admin),
+        _=Depends(write_dep),
     ):
         obj = repo.get(item_id)
         if obj is None:
@@ -130,7 +181,7 @@ def make_crud_router(
         item_id: int,
         request: Request,
         repo: BaseRepository = Depends(get_repo),
-        _=Depends(require_admin),
+        _=Depends(write_dep),
     ) -> None:
         obj = repo.get(item_id)
         if obj is None:

@@ -1,13 +1,12 @@
 from __future__ import annotations
 
-from fastapi import Depends, HTTPException, status
-from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
-from sqlalchemy.orm import Session
-
 from database import db
 from database.models import User
+from fastapi import Depends, HTTPException, status
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from repositories.user_repository import UserRepository
 from security._jwt import TokenError, TokenType, decode_token
+from sqlalchemy.orm import Session
 
 _bearer = HTTPBearer(auto_error=False)
 
@@ -34,6 +33,13 @@ def get_current_user(
             headers={"WWW-Authenticate": "Bearer"},
         ) from exc
 
+    if payload.get("purpose") not in (None, "access"):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid token type",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+
     try:
         user_id = int(payload["sub"])
     except (KeyError, ValueError) as exc:
@@ -53,3 +59,28 @@ def require_admin(user: User = Depends(get_current_user)) -> User:
             detail="Admin access required",
         )
     return user
+
+
+def require_permission(perm: str):
+    """
+    Dependency factory. Usage:
+
+        @router.get("")
+        def list_duas(..., _: User = Depends(require_permission("duas:read"))):
+            ...
+
+    Combines the admin check with a permission check. Returns the current user.
+    """
+
+    def _check(user: User = Depends(require_admin)) -> User:
+        codes = set()
+        for r in user.roles:
+            codes.update(r.permissions_json or [])
+        if perm not in codes:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail=f"Missing permission: {perm}",
+            )
+        return user
+
+    return _check

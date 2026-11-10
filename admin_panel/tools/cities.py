@@ -1,3 +1,5 @@
+import math
+
 CITIES: dict[str, dict] = {
     "nadiad": {"name": "Nadiad", "lat": 22.6939, "lon": 72.8616, "tz": "Asia/Kolkata"},
     "ahmedabad": {
@@ -204,3 +206,33 @@ def get(city_key: str) -> dict | None:
 
 def all_keys() -> list[str]:
     return list(CITIES)
+
+
+def nearest(lat: float, lon: float) -> tuple[str, float] | None:
+    """
+    Return (city_key, distance_km) of the closest curated city.
+    Returns None if the CITIES dict is empty.
+    """
+    if not CITIES:
+        return None
+
+    def dist(la1, lo1, la2, lo2):
+
+        R = 6371.0
+        dlat = math.radians(la2 - la1)
+        dlon = math.radians(lo2 - lo1)
+        a = (
+            math.sin(dlat / 2) ** 2
+            + math.cos(math.radians(la1))
+            * math.cos(math.radians(la2))
+            * math.sin(dlon / 2) ** 2
+        )
+        return R * 2 * math.asin(math.sqrt(a))
+
+    best_key, best_d = None, float("inf")
+    for key, info in CITIES.items():
+        d = dist(lat, lon, info["lat"], info["lon"])
+        if d < best_d:
+            best_d = d
+            best_key = key
+    return (best_key, best_d) if best_key else None

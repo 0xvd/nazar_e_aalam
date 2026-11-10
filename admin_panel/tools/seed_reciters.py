@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from sqlalchemy import inspect, select
-
 from config import ENV
 from database import db
 from database.models import Reciter
+from sqlalchemy import inspect, select
+
 from tools.sync_quran import AYAH_COUNTS, RECITERS
 
 REQUIRED_COLUMNS = {"slug", "base_ayah_url", "bitrate", "total_ayahs"}

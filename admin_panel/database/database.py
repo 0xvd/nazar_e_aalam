@@ -4,12 +4,11 @@ from collections.abc import Generator
 from contextlib import contextmanager
 from typing import Any, Generic, TypeVar
 
+from config import ENV
 from sqlalchemy import asc, create_engine, desc, func, or_, select
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
 from sqlalchemy.sql import Executable
-
-from config import ENV
 
 
 class Base(DeclarativeBase):
