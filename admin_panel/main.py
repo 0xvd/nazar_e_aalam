@@ -214,7 +214,7 @@ class _SecurityHeaders(BaseHTTPMiddleware):
             )
             response.headers.setdefault(
                 "Permissions-Policy",
-                "geolocation=(self), microphone=(), camera=()",
+                "geolocation=self, microphone=(), camera=()",
             )
         else:
             response.headers["X-Env"] = ENV.APP_ENV
