@@ -35,6 +35,90 @@ function fmtDuration(totalSec) {
   const s = Math.floor(totalSec % 60);
   return `${pad(h)}:${pad(m)}:${pad(s)}`;
 }
+// ---- 12/24-hour display preference --------------------------------
+const TIME_FMT_KEY = "nea:time_fmt_v1"; // "12" | "24"
+let _timeFmt = "12"; // default 12-hour
+
+function _loadTimeFmt() {
+  try {
+    const v = localStorage.getItem(TIME_FMT_KEY);
+    if (v === "12" || v === "24") return v;
+  } catch {}
+  return "12";
+}
+function _saveTimeFmt(v) {
+  try {
+    localStorage.setItem(TIME_FMT_KEY, v);
+  } catch {}
+}
+function getTimeFmt() {
+  return _timeFmt;
+}
+function setTimeFmt(v) {
+  if (v !== "12" && v !== "24") return;
+  _timeFmt = v;
+  _saveTimeFmt(v);
+}
+
+// Format HH:MM (24h input) → display string honoring current preference
+// Returns { text, suffix } — suffix is "" for 24h, "AM"/"PM" for 12h
+function fmtTimeParts(hhmm) {
+  if (!hhmm) return { text: "—", suffix: "" };
+  const m = String(hhmm).match(/^(\d{1,2}):(\d{2})/);
+  if (!m) return { text: String(hhmm), suffix: "" };
+  let h = parseInt(m[1], 10);
+  const min = m[2];
+  if (_timeFmt === "24") {
+    return { text: `${pad(h)}:${min}`, suffix: "" };
+  }
+  const suffix = h >= 12 ? "PM" : "AM";
+  h = h % 12 || 12;
+  return { text: `${h}:${min}`, suffix };
+}
+
+// HTML-safe version with muted AM/PM badge
+function fmtTimeHtml(hhmm) {
+  if (!hhmm) return "—";
+  const { text, suffix } = fmtTimeParts(hhmm);
+  if (!suffix) return esc(text);
+  return `${esc(text)}<span class="ampm">${suffix}</span>`;
+}
+
+// Plain text version (for titles, toasts)
+function fmtTimeText(hhmm) {
+  if (!hhmm) return "—";
+  const { text, suffix } = fmtTimeParts(hhmm);
+  return suffix ? `${text} ${suffix}` : text;
+}
+
+// ---- 12-hour time formatting helpers -------------------------------
+function to12h(hhmm) {
+  if (!hhmm) return hhmm;
+  const m = String(hhmm).match(/^(\d{1,2}):(\d{2})/);
+  if (!m) return hhmm;
+  let h = parseInt(m[1], 10);
+  const min = m[2];
+  const suffix = h >= 12 ? "PM" : "AM";
+  h = h % 12;
+  if (h === 0) h = 12;
+  return `${h}:${min}`;
+}
+
+function fmtTime12(hhmm) {
+  // Preference-aware: delegates to fmtTimeHtml which respects _timeFmt
+  return fmtTimeHtml(hhmm);
+}
+
+// Convert HH:MM to 12h + AM/PM suffix (for plain text / titles)
+function hhmmTo12Parts(hhmm) {
+  if (!hhmm) return { time: "—", suffix: "" };
+  const m = String(hhmm).match(/^(\d{1,2}):(\d{2})/);
+  if (!m) return { time: esc(hhmm), suffix: "" };
+  let h = parseInt(m[1], 10);
+  const suffix = h >= 12 ? "PM" : "AM";
+  h = h % 12 || 12;
+  return { time: `${h}:${m[2]}`, suffix };
+}
 
 async function apiCall(promise, { success = null, errorPrefix = "" } = {}) {
   try {
@@ -94,7 +178,8 @@ const ICONS = {
   bell: '<path d="M18 16H6l1.5-2V9a4.5 4.5 0 019 0v5L18 16z"/><path d="M10 19a2 2 0 004 0"/>',
   mobile:
     '<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/>',
-  roles: '<circle cx="9" cy="7" r="3"/><path d="M2 21v-2a5 5 0 0110 0v2"/><circle cx="17" cy="9" r="2.2"/><path d="M14 21v-1.5a4 4 0 017.5-1.5"/>',
+  roles:
+    '<circle cx="9" cy="7" r="3"/><path d="M2 21v-2a5 5 0 0110 0v2"/><circle cx="17" cy="9" r="2.2"/><path d="M14 21v-1.5a4 4 0 017.5-1.5"/>',
 };
 
 const ic = (n) => {
@@ -716,8 +801,7 @@ async function dashboardPage() {
   const name =
     (u && (u.first_name || (u.email || "").split("@")[0])) || "admin";
   const hour = new Date().getHours();
-  const greet =
-    hour < 12 ? "Good morning" : hour < 18 ? "Good afternoon" : "Good evening";
+  const greet = 'السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّهِ وَبَرَكاتُهُ'
   const today = new Date().toLocaleDateString("en-IN", {
     weekday: "long",
     year: "numeric",
@@ -922,7 +1006,6 @@ async function dashboardPage() {
             <svg class="wv" viewBox="0 0 800 70" preserveAspectRatio="none" aria-hidden="true">
                 <path d="M0 35C50 5 150 65 200 35S350 5 400 35 550 65 600 35 750 5 800 35V70H0Z"/>
             </svg>
-            <div class="ar">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
             <h2>${esc(greet)}, ${esc(cap(name))} 👋</h2>
             <p>${hijriLine ? esc(hijriLine) + " · " : ""}</p>
             <div class="hrow"><span>${ic("clock")}${esc(today)}</span></div>
@@ -949,6 +1032,22 @@ async function dashboardPage() {
 }
 
 const LOCATION_CACHE_KEY = "nea:detected_v1";
+const CITY_PREF_KEY = "nea:prayer_city_v1";
+
+function _savePrayerCityPref(key) {
+  try {
+    if (key && key !== "__detected__") {
+      localStorage.setItem(CITY_PREF_KEY, key);
+    }
+  } catch {}
+}
+function _loadPrayerCityPref() {
+  try {
+    return localStorage.getItem(CITY_PREF_KEY);
+  } catch {
+    return null;
+  }
+}
 const LOCATION_MAX_AGE_MS = 24 * 60 * 60 * 1000; // 24 hours
 
 function _persistDetected(detected) {
@@ -1159,10 +1258,18 @@ function renderNextPrayer(todayTimes, cities, overrideCity = null) {
     ["isha", "Isha", t.isha],
   ].filter(([, , v]) => v);
 
+  const fmtBtn = `<button type="button" data-act="toggle-time-fmt"
+      title="Switch between 12-hour and 24-hour"
+      aria-label="Switch time format"
+      style="height:28px;min-width:44px;padding:0 10px;border-radius:8px;border:1px solid var(--line);background:rgba(255,255,255,0.5);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;color:inherit;font-size:12px;font-weight:700;letter-spacing:.03em">
+      ${_timeFmt === "12" ? "12h" : "24h"}
+    </button>`;
+
   return `<div class="card glass s4 np">
         <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;margin-bottom:6px">
             <small>Next prayer</small>
             <div style="display:flex;gap:6px;align-items:center">
+              ${fmtBtn}
               <button type="button" data-act="dash-refresh-loc" title="Refresh location"
                 style="width:28px;height:28px;border-radius:8px;border:1px solid var(--line);background:rgba(255,255,255,0.5);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;color:inherit;padding:0">
                 ${ic("refresh")}
@@ -1185,7 +1292,7 @@ function renderNextPrayer(todayTimes, cities, overrideCity = null) {
             ${list
               .map(
                 ([key, label, time]) =>
-                  `<div data-prayer="${key}"><span>${esc(label)}</span><b>${esc(time)}</b></div>`,
+                  `<div data-prayer="${key}"><span>${esc(label)}</span><b>${fmtTimeHtml(time)}</b></div>`,
               )
               .join("")}
         </div>
@@ -4167,7 +4274,14 @@ document.addEventListener("click", async (e) => {
       case "role-create":
         await openRoleForm(null);
         break;
-
+      case "toggle-time-fmt": {
+        const next = _timeFmt === "12" ? "24" : "12";
+        setTimeFmt(next);
+        toast(`Time format: ${next}-hour`);
+        // Re-render current page so all times update everywhere
+        await go(state.page);
+        break;
+      }
       case "role-edit-perms": {
         const id = parseInt(el.dataset.id, 10);
         try {
@@ -4743,14 +4857,21 @@ document.addEventListener("change", async (e) => {
   if (!ch) return;
 
   if (ch === "np-city") {
-    if (x.value === "__detected__") return; // no-op, this is the current state
+    if (x.value === "__detected__") return;
     state.prayerCity = x.value;
     state.prayerCityPage = x.value;
+    _savePrayerCityPref(x.value);
+    const label = x.options[x.selectedIndex]?.text || x.value;
+    toast(`📍 Prayer city set to ${label}`);
     await go("Dashboard");
     return;
   }
   if (ch === "prayer-city") {
     state.prayerCityPage = x.value;
+    state.prayerCity = x.value;
+    _savePrayerCityPref(x.value);
+    const label = x.options[x.selectedIndex]?.text || x.value;
+    toast(`📍 Prayer city set to ${label}`);
     await go("Prayer Times");
     return;
   }
@@ -5525,51 +5646,119 @@ async function openCampaignForm(existing) {
 // Init
 // ============================================================================
 async function init() {
+  // ── Time format preference ──
+  _timeFmt = _loadTimeFmt();
+
+  // ── Boot overlay wiring ──
+  const boot = document.getElementById("boot-overlay");
+  const bootStatus = document.getElementById("boot-status");
+  const bootLogo = document.getElementById("boot-logo");
+  const setBoot = (msg) => {
+    if (bootStatus) bootStatus.textContent = msg;
+  };
+  const finishBoot = () => {
+    if (!boot) return;
+    boot.classList.add("hide");
+    setTimeout(() => {
+      try {
+        boot.remove();
+      } catch {}
+    }, 550);
+  };
+  const failBoot = (msg) => {
+    if (!boot) return;
+    boot.innerHTML = `<div class="boot-card glass" style="max-width:420px">
+        <div class="boot-brand">
+          <img src="assets/img/logo.png" alt="" style="width:44px;height:44px;border-radius:10px" />
+          <b style="color:#8f2308">Cannot reach server</b>
+        </div>
+        <p style="font-size:13px;color:#7d5a42;margin:4px 0 16px;text-align:center;line-height:1.5">${esc(msg)}</p>
+        <button type="button" class="btn" onclick="location.reload()"
+          style="padding:10px 20px;border-radius:10px;border:none;background:linear-gradient(135deg,#ffa03f,#e4530b);color:#fff;font-weight:700;cursor:pointer">
+          Retry
+        </button>
+      </div>`;
+    if (bootStatus) bootStatus.style.display = "none";
+  };
+
   try {
+    setBoot("Connecting to server…");
     await api.ready();
   } catch (err) {
-    document.body.innerHTML = `<h1 style="padding:32px;font-family:sans-serif">Cannot reach server — ${esc(err.message)}</h1>`;
+    failBoot(err.message || "Network error");
     return;
   }
 
-  $('[data-act="lang"]')?.remove();
+  try {
+    // Hide the language switcher (unused)
+    $('[data-act="lang"]')?.remove();
 
-  // ── Load city catalogue FIRST (needed for _matchCuratedCity) ──
-  await ensurePrayerCities();
+    // ── Load city catalogue FIRST (needed for _matchCuratedCity) ──
+    setBoot("Loading cities…");
+    await ensurePrayerCities();
 
-  // ── Then restore cached detection ──
-  const cached = _loadPersistedDetected();
-  if (cached) {
-    state.detected = cached;
-    const match = _matchCuratedCity(
-      cached.city,
-      cached.state,
-      cached.country_code,
-    );
-    if (match) {
-      state.prayerCity = match.key;
-      state.prayerCityPage = match.key;
-    }
-  }
-
-  await ensureSettings();
-  await refreshMe();
-  applyBrand();
-  applyUserHeader();
-  renderNav();
-
-  const hash = decodeURIComponent(location.hash.slice(1));
-  await go(NAV.some(([n]) => n === hash) ? hash : "Dashboard");
-
-  setTimeout(async () => {
-    if (state.detected) return;
-    try {
-      await autoPromptLocationIfNeeded();
-      if (state.page === "Dashboard" && state.detected) {
-        go("Dashboard");
+    // ── Restore cached location detection ──
+    setBoot("Restoring preferences…");
+    const cached = _loadPersistedDetected();
+    if (cached) {
+      state.detected = cached;
+      const match = _matchCuratedCity(
+        cached.city,
+        cached.state,
+        cached.country_code,
+      );
+      if (match) {
+        state.prayerCity = match.key;
+        state.prayerCityPage = match.key;
       }
-    } catch {}
-  }, 500);
+    }
+
+    // ── Restore saved prayer-city preference (overrides detection) ──
+    const savedCity = _loadPrayerCityPref();
+    if (savedCity) {
+      const exists = (state.prayerCityList || []).some(
+        (c) => c.key === savedCity,
+      );
+      if (exists) {
+        state.prayerCity = savedCity;
+        state.prayerCityPage = savedCity;
+      }
+    }
+
+    // ── Settings + profile ──
+    setBoot("Loading settings…");
+    await ensureSettings();
+
+    setBoot("Loading profile…");
+    await refreshMe();
+    applyBrand();
+    applyUserHeader();
+    renderNav();
+
+    // ── First render ──
+    setBoot("Rendering…");
+    const hash = decodeURIComponent(location.hash.slice(1));
+    await go(NAV.some(([n]) => n === hash) ? hash : "Dashboard");
+
+    // ── Done ──
+    finishBoot();
+
+    // ── Auto-prompt for location (after first paint) ──
+    setTimeout(async () => {
+      if (state.detected) return;
+      try {
+        await autoPromptLocationIfNeeded();
+        if (state.page === "Dashboard" && state.detected) {
+          go("Dashboard");
+        }
+      } catch {}
+    }, 500);
+  } catch (err) {
+    console.error("[init]", err);
+    failBoot(err.message || "Initialization failed");
+    toast(err.message || "Initialization failed", true);
+    finishBoot();
+  }
 }
 
 init();

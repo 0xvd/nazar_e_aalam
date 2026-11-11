@@ -2706,3 +2706,85 @@ td .pill {
   white-space: nowrap;
   vertical-align: middle;
 }
+
+/* ===== Boot overlay ===== */
+#boot-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: grid;
+  place-items: center;
+  background: rgba(251, 217, 181, 0.55);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  opacity: 1;
+  transition: opacity 0.45s ease, visibility 0.45s ease;
+}
+#boot-overlay.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.boot-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 36px 44px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(43, 22, 8, 0.18);
+}
+.boot-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.boot-brand img {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  object-fit: contain;
+}
+.boot-brand b {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.boot-brand span {
+  font-size: 12px;
+  color: var(--mut, #7d5a42);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+.boot-spinner svg {
+  width: 44px;
+  height: 44px;
+}
+.boot-status {
+  font-size: 13px;
+  color: var(--mut, #7d5a42);
+  min-height: 18px;
+  transition: opacity 0.25s;
+}
+
+/* ===== AM/PM badge in prayer times ===== */
+.ampm {
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--mut, #7d5a42);
+  margin-left: 3px;
+  text-transform: uppercase;
+  vertical-align: 0.15em;
+}
+
+/* Large next-prayer clock */
+#cd .ampm {
+  font-size: 0.45em;
+  margin-left: 4px;
+  opacity: 0.75;
+  vertical-align: 0.4em;
+}

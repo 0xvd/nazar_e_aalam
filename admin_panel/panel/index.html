@@ -17,6 +17,55 @@
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   </head>
   <body>
+    <div id="boot-overlay" aria-live="polite" aria-busy="true">
+      <div class="boot-card glass">
+        <div class="boot-brand">
+          <img src="assets/img/logo.png" alt="" id="boot-logo" />
+          <b>Nazar-e-Aalam</b>
+          <span>Admin panel</span>
+        </div>
+        <div class="boot-spinner" aria-hidden="true">
+          <svg viewBox="0 0 50 50">
+            <circle
+              cx="25"
+              cy="25"
+              r="20"
+              fill="none"
+              stroke-width="4"
+              stroke="rgba(130,60,10,.15)"
+            />
+            <circle
+              cx="25"
+              cy="25"
+              r="20"
+              fill="none"
+              stroke-width="4"
+              stroke="url(#bootGrad)"
+              stroke-linecap="round"
+              pathLength="100"
+              stroke-dasharray="100"
+              stroke-dashoffset="70"
+            >
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 25 25"
+                to="360 25 25"
+                dur="1s"
+                repeatCount="indefinite"
+              />
+            </circle>
+            <defs>
+              <linearGradient id="bootGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffa03f" />
+                <stop offset="1" stop-color="#e4530b" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="boot-status" id="boot-status">Connecting to server…</div>
+      </div>
+    </div>
     <div class="bgfx" aria-hidden="true">
       <div class="au a1"></div>
       <div class="au a2"></div>

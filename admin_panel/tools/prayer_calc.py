@@ -79,6 +79,7 @@ def calculate(
     asr_shadow: float = 2.0,
     sunrise_angle: float = 0.833,
     imsak_offset_min: int = 10,
+    maghrib_ihtiyat_min: int = 4,
 ) -> dict[str, str | bool | None]:
     jd = _julian_day(d.year, d.month, d.day) + 0.5
     decl, eqt_h = _sun_position(jd)
@@ -109,7 +110,7 @@ def calculate(
         "dhuhr": _fmt(dhuhr),
         "asr": _fmt(asr),
         "sunset": _fmt(sunset),
-        "maghrib": _fmt(sunset),
+        "maghrib": _fmt(sunset + maghrib_ihtiyat_min / 60) if sunset else None,
         "isha": _fmt(isha),
         "is_friday": is_friday,
     }
