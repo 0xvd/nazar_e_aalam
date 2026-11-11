@@ -801,7 +801,7 @@ async function dashboardPage() {
   const name =
     (u && (u.first_name || (u.email || "").split("@")[0])) || "admin";
   const hour = new Date().getHours();
-  const greet = 'السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّهِ وَبَرَكاتُهُ'
+  const greet = "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّهِ وَبَرَكاتُهُ";
   const today = new Date().toLocaleDateString("en-IN", {
     weekday: "long",
     year: "numeric",
@@ -929,7 +929,10 @@ async function dashboardPage() {
     },
   ];
 
-  Promise.allSettled(stats.map((s) => api.get(s.endpoint))).then((results) => {
+  // Fill stat counters async — but expose the promise so boot can await it
+  const statsPromise = Promise.allSettled(
+    stats.map((s) => api.get(s.endpoint)),
+  ).then((results) => {
     if (state.page !== "Dashboard") return;
     results.forEach((r, i) => {
       const el = $(`[data-count="${stats[i].key}"]`);
@@ -941,6 +944,8 @@ async function dashboardPage() {
       }
     });
   });
+  // Stash so go()/init() can wait on it before hiding the boot overlay
+  state._dashboardReady = statsPromise;
 
   // ── Next prayer card ──
   let npCard;
@@ -5642,6 +5647,19 @@ async function openCampaignForm(existing) {
   });
 }
 
+// Wait until no visible "…" placeholder remains in the page container,
+// or maxWait elapses. Used to keep the boot overlay up until the first
+// render's async fillers (stat counters, prayer times) have landed.
+async function waitForPageReady(container, maxWait = 4000) {
+  const pagePromise = state._dashboardReady;
+  const timeout = new Promise((r) => setTimeout(r, maxWait));
+  if (pagePromise) {
+    await Promise.race([pagePromise, timeout]);
+  } else {
+    // Non-dashboard page → just wait one frame for innerHTML paint
+    await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+  }
+}
 // ============================================================================
 // Init
 // ============================================================================
@@ -5680,6 +5698,8 @@ async function init() {
       </div>`;
     if (bootStatus) bootStatus.style.display = "none";
   };
+
+  const minVisible = new Promise((r) => setTimeout(r, 450));
 
   try {
     setBoot("Connecting to server…");
@@ -5739,6 +5759,13 @@ async function init() {
     setBoot("Rendering…");
     const hash = decodeURIComponent(location.hash.slice(1));
     await go(NAV.some(([n]) => n === hash) ? hash : "Dashboard");
+
+    // ── Wait until the dashboard's async stat counters + prayer times land ──
+    setBoot("Finishing up…");
+    await waitForPageReady(document.getElementById("page"), 4000);
+
+    // ── Enforce minimum visible time so the user actually SEES the overlay ──
+    await minVisible;
 
     // ── Done ──
     finishBoot();
