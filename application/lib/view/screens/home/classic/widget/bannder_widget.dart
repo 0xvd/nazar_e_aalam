@@ -164,7 +164,7 @@ class BannerWidget extends StatelessWidget {
             ),
             const SizedBox(width: 8),
             Image.asset(
-              Images.NewBanner_Image,
+              Images.APP_LOGO,
               height: 120,
               width: 120,
               fit: BoxFit.contain,

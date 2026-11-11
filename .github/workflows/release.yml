@@ -35,6 +35,7 @@ jobs:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+          lfs: true
 
       - name: Run version bump
         id: bump
@@ -75,7 +76,7 @@ jobs:
     uses: ./.github/workflows/build-platform.yml
     with:
       target: 'ios'
-      os:     'macos-latest'
+      os:     'macos-15'
       build_cmd:     'flutter build ipa --release --export-method app-store'
       artifact_path: 'build/ios/ipa'
     secrets: inherit

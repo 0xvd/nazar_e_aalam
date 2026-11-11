@@ -91,11 +91,7 @@ class ClassicHomeScreen extends StatelessWidget {
       ),
       title: Row(
         children: [
-          SvgPicture.asset(
-            Images.Icon_Location,
-            height: 16,
-            colorFilter: ColorFilter.mode(accent, BlendMode.srcIn),
-          ),
+          const Icon(Icons.location_on_rounded, size: 19, color: Colors.white),
           const SizedBox(width: 6),
           Expanded(
             child: Text(
@@ -200,7 +196,8 @@ class ClassicHomeScreen extends StatelessWidget {
   }
 
   Widget _buildPrayerTimesGrid(dynamic prayerData, bool is24HourFormat) {
-    final showRamadan = Get.find<SettingsController>()
+    final showRamadan =
+        Get.find<SettingsController>()
             .mosqueSettingsApiData
             ?.data
             ?.ramadanSchedule ==
@@ -332,10 +329,12 @@ class ClassicHomeScreen extends StatelessWidget {
           jamah: displayTime,
           isSunrise: isSunrise,
           sunriseStart: isSunrise ? displayTime : "00:00",
-          isAdjusted:
-              canAdjust ? TimeAdjustmentHelper().isTimeAdjusted(prayerKey) : false,
-          adjustmentText:
-              canAdjust ? TimeAdjustmentHelper().getAdjustmentText(prayerKey) : '',
+          isAdjusted: canAdjust
+              ? TimeAdjustmentHelper().isTimeAdjusted(prayerKey)
+              : false,
+          adjustmentText: canAdjust
+              ? TimeAdjustmentHelper().getAdjustmentText(prayerKey)
+              : '',
         );
       },
     );

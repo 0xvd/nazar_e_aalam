@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:nazar_e_alam/controller/home_layout_controller.dart';
 import 'package:nazar_e_alam/util/dimensions.dart';
 import 'package:nazar_e_alam/util/styles.dart';
+import 'package:nazar_e_alam/view/base/grain_overlay.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
@@ -31,7 +32,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _isClassic ? _buildClassicAppBar(context) : _buildModernAppBar(context);
+    return _isClassic
+        ? _buildClassicAppBar(context)
+        : _buildModernAppBar(context);
   }
 
   // ───────────── Classic: flat, clean, saffron (card colour in dark) ─────────────
@@ -63,8 +66,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: _hasBack
           ? IconButton(
               splashRadius: 22,
-              icon: Icon(Icons.arrow_back_ios_new_rounded,
-                  size: 20, color: accent),
+              icon: Icon(
+                Icons.arrow_back_ios_new_rounded,
+                size: 20,
+                color: accent,
+              ),
               onPressed: () => _back(context),
             )
           : const SizedBox(),
@@ -87,23 +93,23 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       systemOverlayStyle: SystemUiOverlayStyle.light,
       flexibleSpace: ClipRRect(
         borderRadius: const BorderRadius.vertical(bottom: Radius.circular(28)),
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: dark
-                  ? [
-                      const Color(0xFF1A1A1A),
-                      const Color(0xFF2A1A12),
-                    ]
-                  : [
-                      const Color(0xFFF26B21),
-                      const Color(0xFFF58220),
-                    ],
+        child: Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: dark
+                      ? [const Color(0xFF1A1A1A), const Color(0xFF2A1A12)]
+                      : [const Color(0xFFF26B21), const Color(0xFFF58220)],
+                ),
+              ),
             ),
-          ),
-          child: null,
+            const Positioned.fill(
+              child: IgnorePointer(child: GrainOverlay(fps: 12)),
+            ),
+          ],
         ),
       ),
       title: title != null
@@ -144,7 +150,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             )
           : const SizedBox(),
       actions: actions
-          ?.map((a) => Padding(padding: const EdgeInsets.only(right: 6), child: a))
+          ?.map(
+            (a) => Padding(padding: const EdgeInsets.only(right: 6), child: a),
+          )
           .toList(),
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(28)),

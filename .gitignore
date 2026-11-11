@@ -52,3 +52,5 @@ downloads/
 
 .env
 backups/
+application/android/key.properties
+application/android/app/*.jks

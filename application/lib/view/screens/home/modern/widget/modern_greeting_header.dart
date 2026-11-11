@@ -6,20 +6,13 @@ import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
 import 'package:nazar_e_alam/controller/theme_controller.dart';
 import 'package:nazar_e_alam/helper/route_helper.dart';
 import 'package:nazar_e_alam/util/styles.dart';
+import 'package:nazar_e_alam/view/base/grain_overlay.dart';
 
-/// Modern header: brand gradient with soft circles, greeting, mosque name,
-/// location and two glass action buttons. The next-prayer card overlaps its
-/// bottom 25px (see ModernHomeScreen), hence the 44px bottom padding.
+/// Modern header: deep, rich brand gradient (no pale/white corner) with a
+/// heavy static grain for a premium matte look.
 class ModernGreetingHeader extends StatelessWidget {
   final dynamic mosqueData;
   const ModernGreetingHeader({super.key, required this.mosqueData});
-
-  String get _greeting {
-    final hour = DateTime.now().hour;
-    if (hour < 12) return 'good_morning'.tr;
-    if (hour < 17) return 'good_afternoon'.tr;
-    return 'good_evening'.tr;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,38 +21,42 @@ class ModernGreetingHeader extends StatelessWidget {
     final primary = theme.primaryColor;
     final prayer = Get.find<PrayerTimeController>();
 
+    // Every stop is a saturated colour, so nothing reads as a white shade.
     final gradient = dark
-        ? const [Color(0xFF3A2414), Color(0xFF1F150E)]
-        : [primary, Color.lerp(primary, const Color(0xFFE8202A), 0.35)!];
+        ? const [Color(0xFF3A2112), Color(0xFF241810), Color(0xFF16100B)]
+        : [
+            const Color(0xFFF26B21),
+            const Color(0xFFE0561A),
+            Color.lerp(primary, const Color(0xFFE8202A), 0.55)!,
+          ];
 
     return ClipRRect(
-      borderRadius: const BorderRadius.vertical(bottom: Radius.circular(28)),
+      borderRadius: const BorderRadius.vertical(bottom: Radius.circular(30)),
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: gradient,
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
+            stops: const [0.0, 0.55, 1.0],
           ),
         ),
         child: Stack(
           children: [
-            Positioned(
-              top: -50,
-              right: -30,
-              child: _Circle(size: 170, alpha: 0.10),
-            ),
-            Positioned(
-              bottom: -40,
-              left: -40,
-              child: _Circle(size: 130, alpha: 0.07),
+            // Fine, moving film grain.
+            Positioned.fill(
+              child: GrainOverlay(
+                density: dark ? 0.45 : 0.42,
+                opacity: dark ? 0.16 : 0.20,
+                fps: 9,
+              ),
             ),
             Padding(
               padding: EdgeInsets.fromLTRB(
                 20,
                 MediaQuery.of(context).padding.top + 14,
                 20,
-                44,
+                26,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,28 +64,15 @@ class ModernGreetingHeader extends StatelessWidget {
                   Row(
                     children: [
                       Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              _greeting,
-                              style: robotoRegular.copyWith(
-                                fontSize: 14,
-                                color: Colors.white.withOpacity(0.85),
-                              ),
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              (mosqueData?.mosqueName ?? 'Nazar e Aalam')
-                                  .toString(),
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: robotoBold.copyWith(
-                                fontSize: 24,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ],
+                        child: Text(
+                          'Nazar e Aalam',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: robotoBold.copyWith(
+                            fontSize: 24,
+                            letterSpacing: 0.2,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                       _GlassButton(
@@ -106,32 +90,37 @@ class ModernGreetingHeader extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10),
-                  Text(
-                    'may_allah_bless_you'.tr,
-                    style: robotoRegular.copyWith(
-                      fontSize: 12,
-                      color: Colors.white.withOpacity(0.75),
-                    ),
-                  ),
-                  const SizedBox(height: 12),
+                  // Location
                   Row(
                     children: [
-                      const Icon(
-                        Icons.location_on_outlined,
-                        size: 16,
-                        color: Colors.white,
-                      ),
-                      const SizedBox(width: 4),
-                      Expanded(
-                        child: Text(
-                          prayer.saveLocalStoreCity ??
-                              prayer.currentAddress.toString(),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: robotoMedium.copyWith(
-                            fontSize: 14,
-                            color: Colors.white,
+                      Flexible(
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 7,
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Icon(
+                                Icons.location_on_rounded,
+                                size: 16,
+                                color: Colors.white,
+                              ),
+                              const SizedBox(width: 6),
+                              Flexible(
+                                child: Text(
+                                  prayer.saveLocalStoreCity ??
+                                      prayer.currentAddress.toString(),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: robotoMedium.copyWith(
+                                    fontSize: 13,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -142,24 +131,6 @@ class ModernGreetingHeader extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class _Circle extends StatelessWidget {
-  final double size;
-  final double alpha;
-  const _Circle({required this.size, required this.alpha});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: size,
-      height: size,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: Colors.white.withOpacity(alpha),
       ),
     );
   }

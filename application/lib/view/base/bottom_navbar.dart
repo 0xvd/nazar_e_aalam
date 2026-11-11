@@ -7,7 +7,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:nazar_e_alam/controller/home_layout_controller.dart';
 import 'package:nazar_e_alam/controller/internet_check_controller.dart';
-import 'package:nazar_e_alam/theme/light_theme.dart';
 import 'package:nazar_e_alam/util/dimensions.dart';
 import 'package:nazar_e_alam/util/images.dart';
 import 'package:nazar_e_alam/util/styles.dart';
@@ -33,10 +32,12 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
   final internetController = Get.put(InternetController());
 
   static const double _baseWidth = 375;
-  static const double _barHeight = 68;
-  static const double _fabSize = 58;
-  // Total height of the nav area (bar + the part of the FAB above the bar).
-  static const double _navAreaHeight = 86;
+  static const double _barHeight = 70;
+  static const double _fabSize = 60;
+  static const double _navAreaHeight = 90;
+
+  // Classic notch: the round cut in the middle of the bar.
+  // FAB centre sits 15px below the bar top (see _navAreaHeight - _barHeight).
 
   @override
   void initState() {
@@ -45,7 +46,6 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
   }
 
   void _selectPage(int index) {
-    // Nearby mosque is online-only (Settings works offline)
     if (index == 3 && !internetController.hasInternet.value) {
       showNoInternetDialog();
       return;
@@ -54,15 +54,18 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
   }
 
   double _responsiveFontSize(BuildContext context, double baseSize) {
-    final scale = (MediaQuery.of(context).size.width / _baseWidth)
-        .clamp(0.85, 1.25);
+    final scale = (MediaQuery.of(context).size.width / _baseWidth).clamp(
+      0.85,
+      1.25,
+    );
     return baseSize * scale;
   }
 
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      final isModern = Get.find<HomeLayoutController>().currentLayout.value ==
+      final isModern =
+          Get.find<HomeLayoutController>().currentLayout.value ==
           HomeLayoutController.modern;
 
       final pages = <Widget>[
@@ -76,23 +79,20 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
       ];
 
       return Scaffold(
-        // Modern: content scrolls behind the floating glass bar.
-        // NOTE: scrollable screens should add ~100px bottom padding in modern.
         extendBody: isModern,
         body: pages[_selectedPageIndex],
-        bottomNavigationBar:
-            isModern ? _buildModernNavBar(context) : _buildClassicNavBar(context),
+        bottomNavigationBar: isModern
+            ? _buildModernNavBar(context)
+            : _buildClassicNavBar(context),
       );
     });
   }
-
-  // ───────────────────────── CLASSIC ─────────────────────────
 
   Widget _buildClassicNavBar(BuildContext context) {
     final theme = Theme.of(context);
     final dark = theme.brightness == Brightness.dark;
     final barColor = dark ? theme.cardColor : Colors.white;
-
+    final primary = theme.primaryColor;
     return SizedBox(
       height: _navAreaHeight + MediaQuery.of(context).padding.bottom,
       child: Stack(
@@ -101,12 +101,14 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
         children: [
           Container(
             height: _barHeight + MediaQuery.of(context).padding.bottom,
-            padding:
-                EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom),
+            padding: EdgeInsets.only(
+              bottom: MediaQuery.of(context).padding.bottom,
+            ),
             decoration: BoxDecoration(
               color: barColor,
-              borderRadius:
-                  const BorderRadius.vertical(top: Radius.circular(26)),
+              borderRadius: const BorderRadius.vertical(
+                top: Radius.circular(26),
+              ),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(dark ? 0.4 : 0.10),
@@ -115,78 +117,102 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
                 ),
               ],
             ),
-            child: _buildItemsRow(context, glass: false),
+            child: _buildItemsRow(context, glass: false, primary: primary),
           ),
           Positioned(
             top: 0,
             child: _buildQuranFab(
               ringColor: theme.scaffoldBackgroundColor,
               glow: false,
+              primary: primary,
             ),
           ),
         ],
       ),
     );
   }
-
   // ───────────────────────── MODERN (glass) ─────────────────────────
 
   Widget _buildModernNavBar(BuildContext context) {
     final dark = Theme.of(context).brightness == Brightness.dark;
-    final fill = dark ? const Color(0x33FFFFFF) : const Color(0x80FFFFFF);
-    final border = dark ? const Color(0x40FFFFFF) : const Color(0xB3FFFFFF);
+    final primary = Theme.of(context).primaryColor;
+
+    final fill = dark ? const Color(0x2AFFFFFF) : const Color(0x6AFFFFFF);
+    final border = dark ? const Color(0x55FFFFFF) : const Color(0x99FFFFFF);
+    final saffronGlow = dark
+        ? primary.withOpacity(0.35)
+        : primary.withOpacity(0.50);
 
     return SafeArea(
       top: false,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
+        padding: const EdgeInsets.fromLTRB(12, 0, 12, 16),
         child: SizedBox(
           height: _navAreaHeight,
           child: Stack(
             clipBehavior: Clip.none,
             alignment: Alignment.bottomCenter,
             children: [
-              // Glass bar
               Container(
                 height: _barHeight,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(32),
+                  borderRadius: BorderRadius.circular(34),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(dark ? 0.45 : 0.14),
+                      color: Colors.black.withOpacity(dark ? 0.50 : 0.18),
+                      blurRadius: 32,
+                      offset: const Offset(0, 14),
+                    ),
+                    BoxShadow(
+                      color: saffronGlow.withOpacity(dark ? 0.18 : 0.12),
                       blurRadius: 24,
-                      offset: const Offset(0, 10),
+                      offset: const Offset(0, -6),
                     ),
                   ],
                 ),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(32),
+                  borderRadius: BorderRadius.circular(34),
                   child: BackdropFilter(
-                    filter: ImageFilter.blur(sigmaX: 22, sigmaY: 22),
+                    filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                     child: Container(
                       decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(34),
                         color: fill,
-                        borderRadius: BorderRadius.circular(32),
-                        border: Border.all(color: border, width: 1.2),
+                        border: Border.all(color: border, width: 1.5),
                         gradient: LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           colors: [
-                            Colors.white.withOpacity(dark ? 0.18 : 0.55),
-                            Colors.white.withOpacity(dark ? 0.06 : 0.25),
+                            Colors.white.withOpacity(dark ? 0.22 : 0.45),
+                            Colors.white.withOpacity(dark ? 0.04 : 0.15),
                           ],
                         ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.white.withOpacity(dark ? 0.12 : 0.30),
+                            blurRadius: 0,
+                            spreadRadius: 0,
+                            offset: const Offset(0, 1),
+                          ),
+                        ],
                       ),
-                      child: _buildItemsRow(context, glass: true),
+                      child: _buildItemsRow(
+                        context,
+                        glass: true,
+                        primary: primary,
+                      ),
                     ),
                   ),
                 ),
               ),
               Positioned(
-                top: 0,
+                top: -6,
                 child: _buildQuranFab(
-                  ringColor: Colors.white.withOpacity(dark ? 0.12 : 0.55),
+                  ringColor: dark
+                      ? Colors.white.withOpacity(0.14)
+                      : Colors.white.withOpacity(0.60),
                   glow: true,
+                  primary: primary,
                 ),
               ),
             ],
@@ -198,7 +224,11 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
 
   // ───────────────────────── SHARED PIECES ─────────────────────────
 
-  Widget _buildItemsRow(BuildContext context, {required bool glass}) {
+  Widget _buildItemsRow(
+    BuildContext context, {
+    required bool glass,
+    required Color primary,
+  }) {
     return Row(
       children: [
         Expanded(
@@ -208,6 +238,7 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
             icon: glass ? Images.ModernIcon_Home : Images.Icon_Home,
             label: 'home'.tr,
             tint: !glass,
+            primary: primary,
           ),
         ),
         Expanded(
@@ -217,15 +248,17 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
             icon: glass ? Images.ModernIcon_QiblaKaaba : Images.Icon_Qibla,
             label: 'compass'.tr,
             tint: !glass,
+            primary: primary,
           ),
         ),
-        const SizedBox(width: _fabSize + 14), // space for the raised button
+        const SizedBox(width: _fabSize + 14),
         Expanded(
           child: _buildNavItem(
             context,
             index: 3,
             icon: Images.Icon_near_mosque,
             label: 'nearby'.tr,
+            primary: primary,
           ),
         ),
         Expanded(
@@ -234,6 +267,7 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
             index: 4,
             icon: Images.Icon_app_setting,
             label: 'settings'.tr,
+            primary: primary,
           ),
         ),
       ],
@@ -246,13 +280,14 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
     required String icon,
     required String label,
     bool tint = true,
+    required Color primary,
   }) {
     final theme = Theme.of(context);
     final dark = theme.brightness == Brightness.dark;
     final active = _selectedPageIndex == index;
 
     final inactive = dark ? const Color(0xFFC9B8A6) : const Color(0xFF8A7B6D);
-    final color = active ? AppColor.primaryColor : inactive;
+    final color = active ? primary : inactive;
 
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
@@ -260,38 +295,59 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          // The pill grows when selected; the icon lifts and pops.
           AnimatedContainer(
-            duration: const Duration(milliseconds: 220),
-            curve: Curves.easeOut,
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 5),
+            duration: const Duration(milliseconds: 280),
+            curve: Curves.easeOutCubic,
+            padding: EdgeInsets.symmetric(
+              horizontal: active ? 16 : 8,
+              vertical: 5,
+            ),
             decoration: BoxDecoration(
               color: active
-                  ? AppColor.primaryColor.withOpacity(dark ? 0.22 : 0.14)
+                  ? primary.withOpacity(dark ? 0.20 : 0.16)
                   : Colors.transparent,
               borderRadius: BorderRadius.circular(16),
             ),
-            child: Opacity(
-              opacity: tint || active ? 1 : 0.6,
-              child: SvgPicture.asset(
-                icon,
-                height: 24,
-                colorFilter:
-                    tint ? ColorFilter.mode(color, BlendMode.srcIn) : null,
+            child: AnimatedSlide(
+              duration: const Duration(milliseconds: 280),
+              curve: Curves.easeOutCubic,
+              offset: active ? const Offset(0, -0.08) : Offset.zero,
+              child: AnimatedScale(
+                duration: const Duration(milliseconds: 360),
+                curve: Curves.easeOutBack,
+                scale: active ? 1.18 : 1.0,
+                child: Opacity(
+                  opacity: tint || active ? 1 : 0.55,
+                  child: SvgPicture.asset(
+                    icon,
+                    height: 24,
+                    width: 24,
+                    colorFilter: tint
+                        ? ColorFilter.mode(color, BlendMode.srcIn)
+                        : null,
+                  ),
+                ),
               ),
             ),
           ),
           const SizedBox(height: 3),
-          Text(
-            label,
-            maxLines: 1,
-            softWrap: false,
-            overflow: TextOverflow.ellipsis,
+          AnimatedDefaultTextStyle(
+            duration: const Duration(milliseconds: 200),
             style: robotoMedium.copyWith(
-              fontSize:
-                  _responsiveFontSize(context, Dimensions.FONT_SIZE_SMALL - 1),
+              fontSize: _responsiveFontSize(
+                context,
+                Dimensions.FONT_SIZE_SMALL - 1,
+              ),
               height: 1.0,
               fontWeight: active ? FontWeight.w700 : FontWeight.w500,
               color: color,
+            ),
+            child: Text(
+              label,
+              maxLines: 1,
+              softWrap: false,
+              overflow: TextOverflow.ellipsis,
             ),
           ),
         ],
@@ -299,35 +355,52 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
     );
   }
 
-  Widget _buildQuranFab({required Color ringColor, required bool glow}) {
+  Widget _buildQuranFab({
+    required Color ringColor,
+    required bool glow,
+    required Color primary,
+  }) {
     return GestureDetector(
       onTap: () => _selectPage(2),
-      child: Container(
-        padding: const EdgeInsets.all(5),
-        decoration: BoxDecoration(shape: BoxShape.circle, color: ringColor),
+      child: AnimatedScale(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeOutBack,
+        scale: 1.0,
         child: Container(
-          width: _fabSize,
-          height: _fabSize,
+          padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            gradient: const LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [Color(0xFFFF8A4C), Color(0xFFF26B21)],
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0xFFF26B21).withOpacity(glow ? 0.55 : 0.35),
-                blurRadius: glow ? 20 : 10,
-                offset: const Offset(0, 5),
-              ),
-            ],
+            color: ringColor,
+            border: glow
+                ? Border.all(color: primary.withOpacity(0.25), width: 1)
+                : null,
           ),
-          child: Center(
-            child: Image.asset(
-              Images.Nav_quran,
-              height: 30,
-              color: Colors.white,
+          child: Container(
+            width: _fabSize,
+            height: _fabSize,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              gradient: const LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Color(0xFFFF8A4C), Color(0xFFF26B21)],
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(
+                    0xFFF26B21,
+                  ).withOpacity(glow ? 0.50 : 0.30),
+                  blurRadius: glow ? 24 : 12,
+                  offset: const Offset(0, 6),
+                ),
+              ],
+            ),
+            child: Center(
+              child: Image.asset(
+                Images.Nav_quran,
+                height: 30,
+                // color: Colors.white,
+              ),
             ),
           ),
         ),

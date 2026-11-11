@@ -1,7 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'dart:async';
-import 'package:flutter/foundation.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:nazar_e_alam/controller/quran_settings_controller.dart';
@@ -142,15 +141,12 @@ class NearbyMosqueController extends GetxController {
 
       debugPrint("Map api key: $apiKey");
       var url =
-          '${AppConstants.APP_NAME}/json?location=${userLocation.value}&radius=${1000 * kmToRadious}&type=mosque&key=$apiKey';
+          '${AppConstants.NEARBY_MOSQUE_URL}/json?location=${userLocation.value}&radius=${1000 * kmToRadious}&type=mosque&key=$apiKey';
       var response = await http.get(Uri.parse(url));
       var decoded = json.decode(response.body);
       places.value = decoded['results'];
     } catch (e) {
-      // rethrow;
-      if (kDebugMode) {
-        print("Near By Mosque api Error: $e");
-      }
+        debugPrint("Near By Mosque api Error: $e");
     } finally {
       isLoading(false);
     }

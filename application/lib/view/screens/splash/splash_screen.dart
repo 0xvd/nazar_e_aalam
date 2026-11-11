@@ -6,6 +6,7 @@ import 'package:nazar_e_alam/util/app_constants.dart';
 import 'package:nazar_e_alam/util/dimensions.dart';
 import 'package:nazar_e_alam/util/images.dart';
 import 'package:nazar_e_alam/util/styles.dart';
+// import 'package:path/path.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -43,7 +44,9 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     // Get.find<PrayerTimeController>().getLocation();
     // Get.find<SplashController>().navigator();
+    debugPrint('Splash Screen App logo Path ${Images.APP_LOGO}');
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -51,9 +54,8 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             // logo image
             Image.asset(
-              Images.Dark_APP_LOGO,
-              height: 80,
-              color: Theme.of(context).primaryColor,
+              Images.APP_LOGO,
+              height: 120,
               fit: BoxFit.contain,
             ),
             const SizedBox(height: Dimensions.PADDING_SIZE_EXTRA_SMALL),
