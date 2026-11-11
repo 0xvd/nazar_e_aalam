@@ -4,7 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Skip version bump & push (dry run)'
+        description: 'Skip version bump and release'
+        type: boolean
+        default: false
+      build_ios:
+        description: 'Build iOS (requires Apple signing certificates)'
         type: boolean
         default: false
 
@@ -26,11 +30,12 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ !inputs.dry_run && github.run_attempt == 1 }}
     outputs:
-      new_version:  ${{ steps.bump.outputs.new_version }}
+      new_version: ${{ steps.bump.outputs.new_version }}
       version_name: ${{ steps.bump.outputs.version_name }}
       build_number: ${{ steps.bump.outputs.build_number }}
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
         with:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
@@ -41,15 +46,15 @@ jobs:
         id: bump
         run: |
           bash .github/scripts/bump_version.sh
-          echo "new_version=$NEW_VERSION"   >> "$GITHUB_OUTPUT"
+          echo "new_version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
           echo "version_name=$VERSION_NAME" >> "$GITHUB_OUTPUT"
           echo "build_number=$BUILD_NUMBER" >> "$GITHUB_OUTPUT"
         env:
           PUBSPEC_PATH: ${{ env.APP_DIR }}/pubspec.yaml
 
-      - name: Commit & push version bump
+      - name: Commit and push version bump
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add "${{ env.APP_DIR }}/pubspec.yaml"
           if git diff --cached --quiet; then
@@ -61,23 +66,23 @@ jobs:
 
   build-android:
     needs: bump-version
-    if: ${{ always() && !cancelled() && (success() || needs.bump-version.result == 'skipped') }}
+    if: ${{ always() && !cancelled() && (needs.bump-version.result == 'success' || needs.bump-version.result == 'skipped') }}
     uses: ./.github/workflows/build-platform.yml
     with:
       target: 'android'
-      os:     'ubuntu-latest'
-      build_cmd:     'flutter build apk --release --split-per-abi && flutter build appbundle --release'
+      os: 'ubuntu-latest'
+      build_cmd: 'flutter build apk --release --split-per-abi && flutter build appbundle --release'
       artifact_path: 'build/app/outputs'
     secrets: inherit
 
   build-ios:
     needs: bump-version
-    if: ${{ always() && !cancelled() && (success() || needs.bump-version.result == 'skipped') }}
+    if: ${{ inputs.build_ios && always() && !cancelled() && (needs.bump-version.result == 'success' || needs.bump-version.result == 'skipped') }}
     uses: ./.github/workflows/build-platform.yml
     with:
       target: 'ios'
-      os:     'macos-15'
-      build_cmd:     'flutter build ipa --release --export-method app-store'
+      os: 'macos-15'
+      build_cmd: 'flutter build ipa --release --export-method app-store'
       artifact_path: 'build/ios/ipa'
     secrets: inherit
 
@@ -87,11 +92,15 @@ jobs:
       - bump-version
       - build-android
       - build-ios
-    if: ${{ always() && !cancelled() && !inputs.dry_run && needs.bump-version.result == 'success' }}
+    if: >-
+      ${{ always() && !cancelled() && !inputs.dry_run
+          && needs.bump-version.result == 'success'
+          && needs.build-android.result == 'success'
+          && (needs.build-ios.result == 'success' || needs.build-ios.result == 'skipped') }}
     runs-on: ubuntu-latest
     steps:
       - name: Download all build artifacts
-        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
         with:
           path: artifacts
           merge-multiple: false
@@ -99,15 +108,24 @@ jobs:
       - name: Inventory
         run: find artifacts -type f -exec ls -lh {} \;
 
+      - name: Collect release files
+        id: files
+        run: |
+          {
+            echo 'list<<EOF'
+            find artifacts -type f -name '*.zip' -print
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+          echo "--- collected ---"
+          find artifacts -type f -name '*.zip' -print
+
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v2
+        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64
         with:
           tag_name: v${{ needs.bump-version.outputs.version_name }}-b${{ needs.bump-version.outputs.build_number }}
           name: Release ${{ needs.bump-version.outputs.new_version }}
           generate_release_notes: true
           make_latest: true
-          files: |
-            artifacts/android-build/**/*.zip
-            artifacts/ios-build/**/*.zip
+          files: ${{ steps.files.outputs.list }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
