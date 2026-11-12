@@ -44,11 +44,9 @@ class _NotificationSoundSelectorState extends State<NotificationSoundSelector> {
                 ),
               ),
             ),
-            ListView.builder(
-              primary: false,
-              shrinkWrap: true,
-              itemCount: notiController.sounds.length,
-              itemBuilder: (context, index) {
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: List.generate(notiController.sounds.length, (index) {
                 return Obx(
                   () => Card(
                     clipBehavior: Clip.antiAlias,
@@ -77,7 +75,7 @@ class _NotificationSoundSelectorState extends State<NotificationSoundSelector> {
                     ),
                   ),
                 );
-              },
+              }),
             ),
           ],
         );

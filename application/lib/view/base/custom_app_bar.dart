@@ -37,7 +37,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         : _buildModernAppBar(context);
   }
 
-  // ───────────── Classic: flat, clean, saffron (card colour in dark) ─────────────
   Widget _buildClassicAppBar(BuildContext context) {
     final theme = Theme.of(context);
     final dark = theme.brightness == Brightness.dark;

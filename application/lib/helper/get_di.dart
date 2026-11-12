@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 
+// import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -30,7 +31,7 @@ import 'package:nazar_e_alam/controller/theme_controller.dart';
 import 'package:nazar_e_alam/controller/wallpaper_controller.dart';
 import 'package:nazar_e_alam/controller/zakat_calculator_controller.dart';
 import 'package:nazar_e_alam/data/api/api_client.dart';
-import 'package:nazar_e_alam/data/model/response/language_model.dart';
+// import 'package:nazar_e_alam/data/model/response/language_model.dart';
 // import 'package:nazar_e_alam/data/repository/ai_assistant_repo.dart';
 import 'package:nazar_e_alam/data/repository/dikir_list_repo.dart';
 // import 'package:nazar_e_alam/data/repository/donation_repo.dart';
@@ -42,10 +43,7 @@ import 'package:nazar_e_alam/data/repository/splash_repo.dart';
 import 'package:nazar_e_alam/data/repository/wallpaper_repo.dart';
 import 'package:nazar_e_alam/util/app_constants.dart';
 
-Future<Map<String, Map<String, String>>> init() async {
-  // Core
-  final sharedPreferences = await SharedPreferences.getInstance();
-
+Future<Map<String, Map<String, String>>> init(SharedPreferences sharedPreferences) async {
   Get.lazyPut(() => sharedPreferences);
   Get.lazyPut(
     () => ApiClient(
@@ -126,20 +124,55 @@ Future<Map<String, Map<String, String>>> init() async {
   Get.lazyPut(() => BookMarkController());
   Get.lazyPut(() => CategoryListController());
   Get.lazyPut(() => ZakatCalculatorController());
+  return {};
+}
 
-  // Retrieving localized data
-  Map<String, Map<String, String>> languages = {};
-  for (LanguageModel languageModel in AppConstants.languages) {
-    String jsonStringValues = await rootBundle.loadString(
+/// Loads every language JSON.
+/// NOTE: This is the slow path (~1000ms on low-end devices). Prefer
+/// `loadActiveLanguage()` for startup. Kept for compatibility.
+Future<Map<String, Map<String, String>>> loadLanguages() async {
+  final languages = <String, Map<String, String>>{};
+  for (final languageModel in AppConstants.languages) {
+    final jsonString = await rootBundle.loadString(
       'assets/language/${languageModel.languageCode}.json',
     );
-    Map<String, dynamic> mappedJson = json.decode(jsonStringValues);
-    Map<String, String> _json = {};
-    mappedJson.forEach((key, value) {
-      _json[key] = value.toString();
-    });
+    final mappedJson = json.decode(jsonString) as Map<String, dynamic>;
+    final translations = <String, String>{};
+    for (final entry in mappedJson.entries) {
+      translations[entry.key] = entry.value.toString();
+    }
     languages['${languageModel.languageCode}_${languageModel.countryCode}'] =
-        _json;
+        translations;
   }
   return languages;
+}
+
+/// Loads ONE language JSON — the one the user currently has selected.
+/// This is what `_Bootstrap` awaits; it's ~10x faster than `loadLanguages()`.
+Future<Map<String, Map<String, String>>> loadActiveLanguage() async {
+  final prefs = Get.find<SharedPreferences>();
+
+  // Read the saved language/country. Adjust the keys if your
+  // `LocalizationController` uses different names.
+  final code = prefs.getString(AppConstants.LANGUAGE_CODE) ??
+      AppConstants.languages.first.languageCode!;
+  final country = prefs.getString(AppConstants.COUNTRY_CODE) ??
+      AppConstants.languages.first.countryCode!;
+
+  final map = await loadLanguage(code);
+  return {'${code}_$country': map};
+}
+
+/// Loads a single language JSON by code. Used by `loadActiveLanguage()` and
+/// by the language-switcher at runtime.
+Future<Map<String, String>> loadLanguage(String languageCode) async {
+  final jsonString = await rootBundle.loadString(
+    'assets/language/$languageCode.json',
+  );
+  final decoded = json.decode(jsonString) as Map<String, dynamic>;
+  final out = <String, String>{};
+  for (final entry in decoded.entries) {
+    out[entry.key] = entry.value.toString();
+  }
+  return out;
 }

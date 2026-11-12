@@ -56,14 +56,15 @@ class LanguageDWWidget extends StatelessWidget {
                 ],
               ),
               children: [
-                ListView.builder(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: localizationController.languages.length,
-                  itemBuilder: (context, index) => LanguageWidget(
-                    languageModel: localizationController.languages[index],
-                    localizationController: localizationController,
-                    index: index,
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: List.generate(
+                    localizationController.languages.length,
+                    (index) => LanguageWidget(
+                      languageModel: localizationController.languages[index],
+                      localizationController: localizationController,
+                      index: index,
+                    ),
                   ),
                 ),
               ],

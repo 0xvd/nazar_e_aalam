@@ -403,11 +403,11 @@ class PrayerTimeController extends GetxController implements GetxService {
 
   // 12 or 24 hour format
 
-  RxBool is24HourFormat = true.obs;
+  RxBool is24HourFormat = false.obs;
 
   Future<void> loadSwitchValue() async {
     final prefs = await SharedPreferences.getInstance();
-    is24HourFormat.value = prefs.getBool('is24HrFormat') ?? true;
+    is24HourFormat.value = prefs.getBool('is24HrFormat') ?? false;
   }
 
   Future<void> updateSwitchValue(bool value) async {

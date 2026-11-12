@@ -1,6 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api, deprecated_member_use
 
-import 'dart:math' show pi;
+// import 'dart:math' show pi;
 import 'package:flutter/material.dart';
 import 'package:flutter_qiblah/flutter_qiblah.dart';
 import 'package:get/get.dart';
@@ -17,6 +17,8 @@ class QiblahCompassWidget extends StatefulWidget {
 }
 
 class _QiblahCompassWidgetState extends State<QiblahCompassWidget> {
+  double _deviceTurns = 0;
+  double _qiblahTurns = 0;
   double _previousDevice = 0;
   double _previousQiblah = 0;
 
@@ -30,11 +32,12 @@ class _QiblahCompassWidgetState extends State<QiblahCompassWidget> {
         }
 
         final qiblahDirection = snapshot.data!;
-        double deviceAngle =
-            _normalizeAngle(qiblahDirection.direction, _previousDevice);
-        double qiblahAngle =
-            _normalizeAngle(qiblahDirection.qiblah, _previousQiblah);
+        final deviceAngle = qiblahDirection.direction;
+        final qiblahAngle = qiblahDirection.qiblah;
 
+        // Accumulate turns along the shortest arc
+        _deviceTurns += _shortestTurn(deviceAngle, _previousDevice);
+        _qiblahTurns += _shortestTurn(qiblahAngle, _previousQiblah);
         _previousDevice = deviceAngle;
         _previousQiblah = qiblahAngle;
 
@@ -47,18 +50,11 @@ class _QiblahCompassWidgetState extends State<QiblahCompassWidget> {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    // Compass background (rotates with device)
-                    TweenAnimationBuilder<double>(
-                      tween: Tween<double>(
-                          begin: _previousDevice, end: deviceAngle),
-                      duration: const Duration(milliseconds: 700),
-                      curve: Curves.easeOutExpo,
-                      builder: (_, angle, child) {
-                        return Transform.rotate(
-                          angle: (-angle) * (pi / 180),
-                          child: child,
-                        );
-                      },
+                    // Compass background
+                    AnimatedRotation(
+                      turns: -_deviceTurns,
+                      duration: const Duration(milliseconds: 200),
+                      curve: Curves.linear,
                       child: Image.asset(
                         Images.Compass,
                         height: 330,
@@ -66,18 +62,11 @@ class _QiblahCompassWidgetState extends State<QiblahCompassWidget> {
                         color: Theme.of(context).primaryColor,
                       ),
                     ),
-                    // Needle (rotates towards Qiblah)
-                    TweenAnimationBuilder<double>(
-                      tween: Tween<double>(
-                          begin: _previousQiblah, end: qiblahAngle),
-                      duration: const Duration(milliseconds: 1000),
-                      curve: Curves.easeOutExpo,
-                      builder: (_, angle, child) {
-                        return Transform.rotate(
-                          angle: (-angle) * (pi / 180),
-                          child: child,
-                        );
-                      },
+                    // Needle
+                    AnimatedRotation(
+                      turns: -_qiblahTurns,
+                      duration: const Duration(milliseconds: 250),
+                      curve: Curves.linear,
                       child: Image.asset(
                         Images.Compass_Needle,
                         height: 400,
@@ -128,17 +117,13 @@ class _QiblahCompassWidgetState extends State<QiblahCompassWidget> {
     );
   }
 
-  double _normalizeAngle(double current, double previous) {
+  double _shortestTurn(double current, double previous) {
     double diff = current - previous;
-    if (diff.abs() > 180) {
-      if (diff > 0) {
-        current -= 360;
-      } else {
-        current += 360;
-      }
-    }
-    return current;
+    if (diff > 180) diff -= 360;
+    if (diff < -180) diff += 360;
+    return diff / 360;
   }
+
 }
 // class QiblahCompassWidget extends StatefulWidget {
 //   const QiblahCompassWidget({super.key});

@@ -68,9 +68,7 @@ class _NofificationDWWidgetState extends State<NofificationDWWidget> {
               collapsedShape: const RoundedRectangleBorder(
                 side: BorderSide.none,
               ),
-              shape: const RoundedRectangleBorder(
-                side: BorderSide.none,
-              ),
+              shape: const RoundedRectangleBorder(side: BorderSide.none),
               expansionAnimationStyle: AnimationStyle(
                 duration: const Duration(milliseconds: 500),
               ),
@@ -86,9 +84,7 @@ class _NofificationDWWidgetState extends State<NofificationDWWidget> {
                         height: 25,
                         color: Theme.of(context).primaryColor,
                       ),
-                      const SizedBox(
-                        width: Dimensions.PADDING_SIZE_DEFAULT,
-                      ),
+                      const SizedBox(width: Dimensions.PADDING_SIZE_DEFAULT),
                       Text(
                         "notification_settings".tr,
                         style: robotoMedium.copyWith(
@@ -102,7 +98,8 @@ class _NofificationDWWidgetState extends State<NofificationDWWidget> {
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: Dimensions.FONT_SIZE_DEFAULT),
+                    horizontal: Dimensions.FONT_SIZE_DEFAULT,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -119,12 +116,10 @@ class _NofificationDWWidgetState extends State<NofificationDWWidget> {
                     ],
                   ),
                 ),
-                ListView.builder(
-                  primary: false,
-                  shrinkWrap: true,
-                  itemCount: salatList.length,
-                  itemBuilder: (context, index) {
-                    var salat = salatList[index];
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: List.generate(salatList.length, (index) {
+                    final salat = salatList[index];
                     return Card(
                       clipBehavior: Clip.antiAlias,
                       color: Theme.of(context).cardColor,
@@ -132,8 +127,9 @@ class _NofificationDWWidgetState extends State<NofificationDWWidget> {
                           ? Colors.grey[800]!
                           : Colors.grey[200]!,
                       shape: RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(Dimensions.RADIUS_DEFAULT),
+                        borderRadius: BorderRadius.circular(
+                          Dimensions.RADIUS_DEFAULT,
+                        ),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -141,7 +137,8 @@ class _NofificationDWWidgetState extends State<NofificationDWWidget> {
                           Row(
                             children: [
                               const SizedBox(
-                                  width: Dimensions.PADDING_SIZE_DEFAULT),
+                                width: Dimensions.PADDING_SIZE_DEFAULT,
+                              ),
                               Text(
                                 salat.name.toLowerCase().tr,
                                 style: robotoMedium,
@@ -151,30 +148,30 @@ class _NofificationDWWidgetState extends State<NofificationDWWidget> {
                           Switch(
                             activeColor: Theme.of(context).primaryColor,
                             activeTrackColor: Theme.of(context).primaryColor,
-                            inactiveThumbColor:
-                                Theme.of(context).colorScheme.error,
-                            inactiveTrackColor:
-                                Theme.of(context).colorScheme.error,
+                            inactiveThumbColor: Theme.of(
+                              context,
+                            ).colorScheme.error,
+                            inactiveTrackColor: Theme.of(
+                              context,
+                            ).colorScheme.error,
                             value: salat.isNotificationEnabled,
                             onChanged: (value) async {
                               salat.isNotificationEnabled = value;
-
                               await _salatWaqtRepository.saveSalatWaqt(salat);
-
                               if (value) {
                                 await _adhanNotificationService
                                     .scheduleNotification(
-                                        id: salat.id,
-                                        title: salat.name.tr,
-                                        body:
-                                            '${'time_for'.tr} ${salat.name} ${'started_at'.tr} ${DateFormat.jm().format(salat.time)}',
-                                        dateTime: salat.time,
-                                        payload: salat.time.toIso8601String());
+                                      id: salat.id,
+                                      title: salat.name.tr,
+                                      body:
+                                          '${'time_for'.tr} ${salat.name} ${'started_at'.tr} ${DateFormat.jm().format(salat.time)}',
+                                      dateTime: salat.time,
+                                      payload: salat.time.toIso8601String(),
+                                    );
                               } else {
                                 await _adhanNotificationService
                                     .cancelNotification(salat.id);
                               }
-
                               await getSalatList();
                               await getNotification();
                             },
@@ -182,7 +179,7 @@ class _NofificationDWWidgetState extends State<NofificationDWWidget> {
                         ],
                       ),
                     );
-                  },
+                  }),
                 ),
                 const NotificationSoundSelector(),
               ],
