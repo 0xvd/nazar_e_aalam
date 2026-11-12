@@ -46,6 +46,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
+          ref: ${{ github.ref_name }}
           lfs: true
 
       - name: Verify Android secrets
@@ -175,72 +176,82 @@ jobs:
       - name: Build
         run: ${{ inputs.build_cmd }}
 
-      - name: Package Android zips
+      - name: Stage Android assets
         if: inputs.target == 'android'
         run: |
           set -e
-          OUT_DIR="$GITHUB_WORKSPACE/release-zips"
+          OUT_DIR="$GITHUB_WORKSPACE/release-assets"
+          HOLDER="$GITHUB_WORKSPACE/apk-holder"
           mkdir -p "$OUT_DIR"
-          VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}' | cut -d'+' -f1)
-          BUILD=$(grep '^version:' pubspec.yaml | awk '{print $2}' | cut -d'+' -f2)
-          APP_NAME="${{ env.APP_NAME }}"
-          echo "Packaging ${APP_NAME} for version ${VERSION}+${BUILD}"
 
-          # Per-ABI APKs: extract ABI from filename, rename with custom prefix
-          for apk in build/app/outputs/flutter-apk/*.apk; do
+          if [ ! -d "$HOLDER" ]; then
+            echo "::error::apk-holder not found at $HOLDER - build_cmd did not create it"
+            exit 1
+          fi
+          if [ -z "$(ls -A "$HOLDER" 2>/dev/null)" ]; then
+            echo "::error::apk-holder is empty - no APKs/AABs were copied"
+            exit 1
+          fi
+
+          VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}' | cut -d'+' -f1)
+          APP_NAME="${{ env.APP_NAME }}"
+
+          if [ -z "$VERSION" ]; then
+            echo "::error::could not read version from pubspec.yaml"
+            exit 1
+          fi
+
+          for apk in "$HOLDER"/*.apk; do
             [ -e "$apk" ] || continue
             base=$(basename "$apk" .apk)
-            # base looks like: app-arm64-v8a-release
-            # Extract the ABI part
-            abi=$(echo "$base" | sed 's/^app-//; s/-release$//')
-            if [ "$abi" = "app" ] || [ -z "$abi" ]; then
-              # Non-split fallback: app-release.apk
-              zip -j "$OUT_DIR/${APP_NAME}-release-v${VERSION}.zip" "$apk"
+            if [ "$base" = "app-release" ]; then
+              cp "$apk" "$OUT_DIR/${APP_NAME}-universal-release-v${VERSION}.apk"
             else
-              zip -j "$OUT_DIR/${APP_NAME}-${abi}-release-v${VERSION}.zip" "$apk"
+              abi=$(echo "$base" | sed 's/^app-//; s/-release$//')
+              cp "$apk" "$OUT_DIR/${APP_NAME}-${abi}-release-v${VERSION}.apk"
             fi
           done
 
-          # AAB -> custom name
-          for aab in build/app/outputs/bundle/release/*.aab; do
+          for aab in "$HOLDER"/*.aab; do
             [ -e "$aab" ] || continue
-            zip -j "$OUT_DIR/${APP_NAME}-release-v${VERSION}.zip" "$aab"
+            cp "$aab" "$OUT_DIR/${APP_NAME}-release-v${VERSION}.aab"
           done
 
-          echo "--- packaged ---"
           ls -lh "$OUT_DIR"
 
-      - name: Package iOS zip
+      - name: Stage iOS assets
         if: inputs.target == 'ios'
         run: |
           set -e
-          OUT_DIR="$GITHUB_WORKSPACE/release-zips"
+          OUT_DIR="$GITHUB_WORKSPACE/release-assets"
           mkdir -p "$OUT_DIR"
           VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}' | cut -d'+' -f1)
           APP_NAME="${{ env.APP_NAME }}"
-
+          if [ -z "$VERSION" ]; then
+            echo "::error::could not read version from pubspec.yaml"
+            exit 1
+          fi
           for ipa in build/ios/ipa/*.ipa; do
             [ -e "$ipa" ] || continue
-            zip -j "$OUT_DIR/${APP_NAME}-ios-appstore-v${VERSION}.zip" "$ipa"
+            cp "$ipa" "$OUT_DIR/${APP_NAME}-ios-appstore-v${VERSION}.ipa"
           done
 
-          echo "--- packaged ---"
           ls -lh "$OUT_DIR"
 
-      - name: Upload Android release zips
+      - name: Upload Android assets
         if: inputs.target == 'android'
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: android-release-zips
-          path: ${{ github.workspace }}/release-zips/*.zip
+          name: android-assets
+          path: ${{ github.workspace }}/release-assets/*
           if-no-files-found: error
           retention-days: 14
 
-      - name: Upload iOS release zip
+      - name: Upload iOS assets
         if: inputs.target == 'ios'
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: ios-release-zips
-          path: ${{ github.workspace }}/release-zips/*.zip
+          name: ios-assets
+          path: ${{ github.workspace }}/release-assets/*
           if-no-files-found: error
           retention-days: 14

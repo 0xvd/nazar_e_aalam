@@ -27,7 +27,7 @@ env:
 jobs:
   bump-version:
     name: Bump Version
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     if: ${{ !inputs.dry_run && github.run_attempt == 1 }}
     outputs:
       new_version: ${{ steps.bump.outputs.new_version }}
@@ -44,11 +44,7 @@ jobs:
 
       - name: Run version bump
         id: bump
-        run: |
-          bash .github/scripts/bump_version.sh
-          echo "new_version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
-          echo "version_name=$VERSION_NAME" >> "$GITHUB_OUTPUT"
-          echo "build_number=$BUILD_NUMBER" >> "$GITHUB_OUTPUT"
+        run: bash .github/scripts/bump_version.sh
         env:
           PUBSPEC_PATH: ${{ env.APP_DIR }}/pubspec.yaml
 
@@ -71,7 +67,15 @@ jobs:
     with:
       target: 'android'
       os: 'ubuntu-latest'
-      build_cmd: 'flutter build apk --release --split-per-abi && flutter build appbundle --release'
+      build_cmd: |
+        set -e
+        flutter build apk --release --target-platform android-arm,android-arm64,android-x64,android-x86
+        mkdir -p "$GITHUB_WORKSPACE/apk-holder"
+        cp build/app/outputs/flutter-apk/app-release.apk "$GITHUB_WORKSPACE/apk-holder/app-release.apk"
+        flutter build apk --release --split-per-abi --target-platform android-arm,android-arm64,android-x64,android-x86
+        cp build/app/outputs/flutter-apk/*.apk "$GITHUB_WORKSPACE/apk-holder/"
+        flutter build appbundle --release
+        cp build/app/outputs/bundle/release/*.aab "$GITHUB_WORKSPACE/apk-holder/"
       artifact_path: 'build/app/outputs'
     secrets: inherit
 
@@ -95,7 +99,7 @@ jobs:
           && (needs.build-ios.result == 'success' || needs.build-ios.result == 'skipped') }}
     runs-on: ubuntu-latest
     steps:
-      - name: Download all release zips
+      - name: Download all artifacts
         uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
         with:
           path: artifacts
@@ -104,8 +108,7 @@ jobs:
       - name: Generate checksums.txt
         run: |
           cd artifacts
-          find . -type f -name '*.zip' -exec sha256sum {} \; | sed 's|\./||' | sort > checksums.txt
-          echo "--- checksums.txt ---"
+          find . -type f \( -name '*.apk' -o -name '*.aab' -o -name '*.ipa' \) -exec sha256sum {} \; | sed 's|\./||' | sort > checksums.txt
           cat checksums.txt
 
       - name: Upload checksums artifact
@@ -125,14 +128,52 @@ jobs:
       - generate-checksums
     if: >-
       ${{ always() && !cancelled() && !inputs.dry_run
-          && needs.bump-version.result == 'success'
           && needs.build-android.result == 'success'
           && (needs.build-ios.result == 'success' || needs.build-ios.result == 'skipped')
           && needs.generate-checksums.result == 'success' }}
     runs-on: ubuntu-latest
     steps:
-      - name: Download all build artifacts (zips + checksums)
-        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      - name: Checkout (for version fallback)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.ref_name }}
+          sparse-checkout: |
+            ${{ env.APP_DIR }}
+          sparse-checkout-cone-mode: true
+          lfs: false
+          fetch-depth: 1
+
+      - name: Determine version
+        id: ver
+        run: |
+          VERSION_NAME="${{ needs.bump-version.outputs.version_name }}"
+          BUILD_NUMBER="${{ needs.bump-version.outputs.build_number }}"
+          NEW_VERSION="${{ needs.bump-version.outputs.new_version }}"
+
+          if [ -z "$VERSION_NAME" ] || [ -z "$BUILD_NUMBER" ]; then
+            PUBSPEC="${{ env.APP_DIR }}/pubspec.yaml"
+            if [ ! -f "$PUBSPEC" ]; then
+              echo "::error::pubspec.yaml not found at $PUBSPEC"
+              exit 1
+            fi
+            FULL_VERSION=$(grep '^version:' "$PUBSPEC" | awk '{print $2}')
+            VERSION_NAME="${FULL_VERSION%%+*}"
+            BUILD_NUMBER="${FULL_VERSION##*+}"
+            NEW_VERSION="$FULL_VERSION"
+          fi
+
+          if [ -z "$VERSION_NAME" ] || [ -z "$BUILD_NUMBER" ]; then
+            echo "::error::Could not determine version - refusing to create v-b tag"
+            exit 1
+          fi
+
+          echo "version_name=$VERSION_NAME" >> "$GITHUB_OUTPUT"
+          echo "build_number=$BUILD_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "new_version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
+          echo "Tag: v${VERSION_NAME}-b${BUILD_NUMBER}"
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
         with:
           path: release-assets
           merge-multiple: true
@@ -145,17 +186,16 @@ jobs:
         run: |
           {
             echo 'list<<EOF'
-            find release-assets -type f \( -name '*.zip' -o -name 'checksums.txt' \) -print
+            find release-assets -type f \( -name '*.apk' -o -name '*.aab' -o -name '*.ipa' -o -name 'checksums.txt' \) -print
             echo 'EOF'
           } >> "$GITHUB_OUTPUT"
-          echo "--- collected ---"
-          find release-assets -type f \( -name '*.zip' -o -name 'checksums.txt' \) -print
+          find release-assets -type f \( -name '*.apk' -o -name '*.aab' -o -name '*.ipa' -o -name 'checksums.txt' \) -print
 
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@8a0cd651e5b2365bd640854a3fa5dfc70e4875f3
+      - name: Create or update GitHub Release
+        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64
         with:
-          tag_name: v${{ needs.bump-version.outputs.version_name }}-b${{ needs.bump-version.outputs.build_number }}
-          name: Release ${{ needs.bump-version.outputs.new_version }}
+          tag_name: v${{ steps.ver.outputs.version_name }}-b${{ steps.ver.outputs.build_number }}
+          name: Release ${{ steps.ver.outputs.new_version }}
           generate_release_notes: true
           make_latest: true
           files: ${{ steps.files.outputs.list }}
