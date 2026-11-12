@@ -34,6 +34,7 @@ on:
 env:
   FLUTTER_VERSION: '3.47.7'
   APP_DIR: 'application'
+  APP_NAME: 'nazar-e-aalam'
 
 jobs:
   build:
@@ -174,32 +175,72 @@ jobs:
       - name: Build
         run: ${{ inputs.build_cmd }}
 
-      - name: Zip Android artifacts
+      - name: Package Android zips
         if: inputs.target == 'android'
         run: |
-          cd build/app/outputs
-          zip -r "$GITHUB_WORKSPACE/android-build.zip" .
+          set -e
+          OUT_DIR="$GITHUB_WORKSPACE/release-zips"
+          mkdir -p "$OUT_DIR"
+          VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}' | cut -d'+' -f1)
+          BUILD=$(grep '^version:' pubspec.yaml | awk '{print $2}' | cut -d'+' -f2)
+          APP_NAME="${{ env.APP_NAME }}"
+          echo "Packaging ${APP_NAME} for version ${VERSION}+${BUILD}"
 
-      - name: Zip iOS artifacts
+          # Per-ABI APKs: extract ABI from filename, rename with custom prefix
+          for apk in build/app/outputs/flutter-apk/*.apk; do
+            [ -e "$apk" ] || continue
+            base=$(basename "$apk" .apk)
+            # base looks like: app-arm64-v8a-release
+            # Extract the ABI part
+            abi=$(echo "$base" | sed 's/^app-//; s/-release$//')
+            if [ "$abi" = "app" ] || [ -z "$abi" ]; then
+              # Non-split fallback: app-release.apk
+              zip -j "$OUT_DIR/${APP_NAME}-release-v${VERSION}.zip" "$apk"
+            else
+              zip -j "$OUT_DIR/${APP_NAME}-${abi}-release-v${VERSION}.zip" "$apk"
+            fi
+          done
+
+          # AAB -> custom name
+          for aab in build/app/outputs/bundle/release/*.aab; do
+            [ -e "$aab" ] || continue
+            zip -j "$OUT_DIR/${APP_NAME}-release-v${VERSION}.zip" "$aab"
+          done
+
+          echo "--- packaged ---"
+          ls -lh "$OUT_DIR"
+
+      - name: Package iOS zip
         if: inputs.target == 'ios'
         run: |
-          cd build/ios
-          zip -r "$GITHUB_WORKSPACE/ios-appstore.zip" ipa
+          set -e
+          OUT_DIR="$GITHUB_WORKSPACE/release-zips"
+          mkdir -p "$OUT_DIR"
+          VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}' | cut -d'+' -f1)
+          APP_NAME="${{ env.APP_NAME }}"
 
-      - name: Upload Android artifact
+          for ipa in build/ios/ipa/*.ipa; do
+            [ -e "$ipa" ] || continue
+            zip -j "$OUT_DIR/${APP_NAME}-ios-appstore-v${VERSION}.zip" "$ipa"
+          done
+
+          echo "--- packaged ---"
+          ls -lh "$OUT_DIR"
+
+      - name: Upload Android release zips
         if: inputs.target == 'android'
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: android-build
-          path: ${{ github.workspace }}/android-build.zip
+          name: android-release-zips
+          path: ${{ github.workspace }}/release-zips/*.zip
           if-no-files-found: error
           retention-days: 14
 
-      - name: Upload iOS artifact
+      - name: Upload iOS release zip
         if: inputs.target == 'ios'
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: ios-build
-          path: ${{ github.workspace }}/ios-appstore.zip
+          name: ios-release-zips
+          path: ${{ github.workspace }}/release-zips/*.zip
           if-no-files-found: error
           retention-days: 14
