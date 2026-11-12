@@ -68,11 +68,10 @@ jobs:
       target: 'android'
       os: 'ubuntu-latest'
       build_cmd: |
-        set -e
-        flutter build apk --release --target-platform android-arm,android-arm64,android-x64,android-x86
+        flutter build apk --release --target-platform android-arm,android-arm64,android-x64
         mkdir -p "$GITHUB_WORKSPACE/apk-holder"
         cp build/app/outputs/flutter-apk/app-release.apk "$GITHUB_WORKSPACE/apk-holder/app-release.apk"
-        flutter build apk --release --split-per-abi --target-platform android-arm,android-arm64,android-x64,android-x86
+        flutter build apk --release --split-per-abi --target-platform android-arm,android-arm64,android-x64
         cp build/app/outputs/flutter-apk/*.apk "$GITHUB_WORKSPACE/apk-holder/"
         flutter build appbundle --release
         cp build/app/outputs/bundle/release/*.aab "$GITHUB_WORKSPACE/apk-holder/"
