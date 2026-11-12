@@ -51,7 +51,7 @@ dependencies:
   flutter_tts: ^4.2.3
   connectivity_plus: ^7.0.0
   flutter_sslcommerz: ^3.0.2
-  google_fonts: ^8.2.0
+  google_fonts: ^9.0.0
   flutter_displaymode: ^0.7.0
 
   # just_audio: ^0.9.38
