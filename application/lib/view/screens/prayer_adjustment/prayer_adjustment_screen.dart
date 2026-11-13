@@ -8,7 +8,7 @@ import 'package:nazar_e_alam/util/images.dart';
 import 'package:nazar_e_alam/util/styles.dart';
 import 'package:nazar_e_alam/view/base/custom_app_bar.dart';
 
-import '../../../controller/package_prayer_time_controller.dart';
+import '../../../controller/prayer_time_controller.dart';
 import '../../../controller/prayer_time_adjustment.dart';
 import '../../../util/dimensions.dart';
 import 'widget/time_selector_screen.dart';

@@ -17,7 +17,7 @@ import 'package:nazar_e_alam/util/images.dart';
 import 'package:nazar_e_alam/util/styles.dart';
 
 import 'controller/internet_check_controller.dart';
-import 'controller/package_prayer_time_controller.dart';
+import 'controller/prayer_time_controller.dart';
 import 'helper/audio_service_helper.dart';
 import 'helper/get_di.dart' as di;
 import 'helper/route_helper.dart';
@@ -30,21 +30,9 @@ void main() {
     FlutterDisplayMode.setHighRefreshRate().catchError((_) => <DisplayMode>[]);
   }
 
-  // Paints the splash frame immediately. Nothing blocks before this.
   runApp(const _Bootstrap());
 }
 
-/// Shows the branded splash (logo + app name) while `SharedPreferences`,
-/// DI registration, and the active language JSON load behind it.
-///
-/// Timeline on a Redmi Note 10 (cold start):
-///   0–200 ms   MIUI black window (system, unavoidable)
-///   200 ms     Flutter splash frame with logo fades in
-///   200–1200ms SharedPreferences (~1s) runs BEHIND the visible splash
-///   1200 ms    MyApp mounts → home
-///
-/// The 1-second SharedPreferences read still happens — but the user sees
-/// the logo, not a black screen, while it runs.
 class _Bootstrap extends StatefulWidget {
   const _Bootstrap();
 
@@ -59,42 +47,35 @@ class _BootstrapState extends State<_Bootstrap> {
   @override
   void initState() {
     super.initState();
-    // Wait one frame so the splash (with logo) paints first, THEN start
-    // the slow work. This is the key to hiding SharedPreferences.
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
-      final future = _boot(); // start work first
+      final future = _boot();
       setState(() {
-        _ready = future; // then assign synchronously
+        _ready = future;
       });
     });
   }
 
   Future<_BootConfig> _boot() async {
-    // Audio service runs fully in the background — never blocks the splash.
     unawaited(
       AudioServiceHelper.init().catchError((Object e, StackTrace st) {
         debugPrint('AudioServiceHelper init failed: $e\n$st');
       }),
     );
 
-    // Precache the logo so the visible splash actually shows it.
     await precacheImage(const AssetImage(Images.APP_LOGO), context);
     if (!mounted) throw StateError('_Bootstrap unmounted during boot');
     setState(() => _logoReady = true);
 
-    // Now do the slow work — the logo is already on screen.
     final prefs = await SharedPreferences.getInstance();
     await di.init(prefs);
 
     Get.put(InternetController());
 
-    // Kick off location in the background — splash shouldn't wait on it.
     unawaited(
       Get.find<PrayerTimeController>().getLocation().catchError((_) {}),
     );
 
-    // Fast path: load only the currently-selected language JSON.
   final languages = await di.loadLanguages();
 
     final layout = Get.find<HomeLayoutController>().currentLayout.value;
@@ -108,15 +89,12 @@ class _BootstrapState extends State<_Bootstrap> {
   Widget build(BuildContext context) {
     final cfg = _ready;
     if (cfg == null) {
-      // First frame: splash without logo yet (logo fades in once precached).
       return _buildSplash(context);
     }
     return FutureBuilder<_BootConfig>(
       future: cfg,
       builder: (context, snap) {
         if (snap.connectionState != ConnectionState.done || snap.hasError) {
-          // Still booting — keep the splash on screen. This is what covers
-          // the ~1s SharedPreferences read.
           return _buildSplash(context);
         }
         final data = snap.data!;

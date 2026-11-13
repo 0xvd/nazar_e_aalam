@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
+import 'package:nazar_e_alam/controller/prayer_time_controller.dart';
 import 'package:nazar_e_alam/controller/prayer_time_adjustment.dart';
 import 'package:nazar_e_alam/util/app_constants.dart';
 import 'package:nazar_e_alam/view/screens/notification/widgets/salat_waqt.dart';

@@ -28,11 +28,10 @@ class FeatureItems {
         FeatureItem(
             titleKey: 'dikir', icon: Images.Icon_Dikir, route: RouteHelper.dhikr),
         FeatureItem(titleKey: 'dua', icon: Images.Icon_Dua, route: RouteHelper.dua),
-        // REMOVE this item when hadith is removed
-        // FeatureItem(
-        //     titleKey: 'hadith',
-        //     icon: Images.Icon_Hadith,
-        //     route: RouteHelper.hadithBookName),
+        FeatureItem(
+            titleKey: 'hadith',
+            icon: Images.Icon_Hadith,
+            route: RouteHelper.hadithBookName),
         FeatureItem(
             titleKey: 'allah_name',
             icon: Images.Icon_Allah_99_name,

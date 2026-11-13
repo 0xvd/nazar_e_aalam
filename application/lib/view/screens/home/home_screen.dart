@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:nazar_e_alam/controller/home_layout_controller.dart';
 import 'package:nazar_e_alam/controller/internet_check_controller.dart';
-import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
+import 'package:nazar_e_alam/controller/prayer_time_controller.dart';
 import 'package:nazar_e_alam/controller/prayer_time_adjustment.dart';
 import 'package:nazar_e_alam/controller/quran_settings_controller.dart';
 import 'package:nazar_e_alam/helper/salat_waqt_service.dart';

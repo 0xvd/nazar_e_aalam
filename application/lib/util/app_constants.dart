@@ -14,7 +14,7 @@ class AppConstants {
   static const String BASE_URL = "https://zabi.theme29.com";
 
   // API's and API Kay's
-  // static const String HADITH_BASE_URL = 'https://www.hadithapi.com/public';
+  static const String HADITH_BASE_URL = 'https://www.hadithapi.com/public';
   static const String NEARBY_MOSQUE_URL = 'https://maps.googleapis.com/maps/api/place/nearbysearch';
 
   //Endpoint url

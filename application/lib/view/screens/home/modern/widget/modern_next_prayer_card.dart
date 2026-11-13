@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
+import 'package:nazar_e_alam/controller/prayer_time_controller.dart';
 import 'package:nazar_e_alam/helper/date_converter.dart';
 import 'package:nazar_e_alam/helper/translator_helper.dart';
 import 'package:nazar_e_alam/util/images.dart';

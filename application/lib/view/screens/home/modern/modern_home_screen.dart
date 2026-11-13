@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nazar_e_alam/controller/internet_check_controller.dart';
-import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
+import 'package:nazar_e_alam/controller/prayer_time_controller.dart';
 import 'package:nazar_e_alam/controller/quran_settings_controller.dart';
 import 'package:nazar_e_alam/shimmer/all_shimmer_loder.dart';
 import 'package:nazar_e_alam/theme/modern_light_theme.dart';

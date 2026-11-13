@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
+import 'package:nazar_e_alam/controller/prayer_time_controller.dart';
 import 'package:nazar_e_alam/controller/splash_controller.dart';
 import 'package:nazar_e_alam/util/app_constants.dart';
 import 'package:nazar_e_alam/util/dimensions.dart';

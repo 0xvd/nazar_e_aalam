@@ -65,8 +65,4 @@ class LocalizationController extends GetxController implements GetxService {
     _selectedIndex = index;
     update();
   }
-
-
-
-
 }

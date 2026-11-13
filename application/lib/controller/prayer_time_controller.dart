@@ -1,9 +1,8 @@
 // ignore_for_file: avoid_print, deprecated_member_use, strict_top_level_inference
 
 import 'dart:async';
-import 'dart:io';
+// import 'dart:io';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:geocoding/geocoding.dart';
@@ -40,6 +39,8 @@ class PrayerTimeController extends GetxController implements GetxService {
   RxString currentWaqtName = "--".obs;
 
   RxString currentAddress = '--'.obs;
+  RxString currentAddressFull =
+      '--'.obs; // "Nadiad, Gujarat" — what the UI shows
   RxString saveAddress = '--'.obs;
   RxBool isLocationDenied = false.obs;
 
@@ -67,7 +68,7 @@ class PrayerTimeController extends GetxController implements GetxService {
     if (permission == LocationPermission.denied) {
       // If permission is denied, request permission from the user
       permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) { 
+      if (permission == LocationPermission.denied) {
         //   If permission is still denied, show a message to the user using GetX's Snackbar
         showCustomSnackBar(
           "for_getting_Automatic_Prayer_Time_Nearby_Mosque_Qibla_Compass_need_to_enable_location_permission"
@@ -111,26 +112,20 @@ class PrayerTimeController extends GetxController implements GetxService {
           position.latitude,
           position.longitude,
         );
-        final callAddress = addressList.first;
-        currentAddress.value = Platform.isIOS
-            ? callAddress.administrativeArea!
-            : callAddress.subAdministrativeArea!;
-
+        // Pick the first non-empty meaningful field — works on Android and iOS.
+        _applyPlacemark(addressList.first);
         final prefs = await SharedPreferences.getInstance();
         final isPrayerTme = prefs.getBool(AppConstants.isPrayerTme);
         bool isTimeTrue = prefs.getBool(AppConstants.isPrayerTme) ?? false;
 
         isPrayerTimes.value = isTimeTrue;
-        debugPrint("isTimeTrue: ${isPrayerTimes.value}");
-
         final saveCityName = prefs.getString(AppConstants.saveCityName);
 
-        fetchPrayerTime(
+        await fetchPrayerTime(
           reload: false,
           isManualPrayerTme: isPrayerTme ?? false,
-          manualCity: saveCityName ?? currentAddress.toString(),
+          manualCity: saveCityName ?? currentAddress.value,
         );
-
         update();
       } catch (e) {
         await prefs.setBool("isLocationDenied", true);
@@ -252,11 +247,8 @@ class PrayerTimeController extends GetxController implements GetxService {
     bool isManualPrayerTme = false,
     String? manualCity,
   }) async {
-
     if (_isFetchingPrayerTime) {
-      if (kDebugMode) {
-        print("Prayer time request already running, skipping...");
-      }
+      debugPrint("Prayer time request already running, skipping...");
       return;
     }
 
@@ -286,13 +278,7 @@ class PrayerTimeController extends GetxController implements GetxService {
         position.latitude,
         position.longitude,
       );
-      final callAddress = addressList.first;
-      currentAddress.value = Platform.isIOS
-          ? callAddress.administrativeArea!
-          : callAddress.subAdministrativeArea!;
-      if (kDebugMode) {
-        print("Address: ${currentAddress.value}");
-      }
+      _applyPlacemark(addressList.first);
       // Get the current date and time
       DateTime currentDate = DateTime.now();
       String formattedDate = DateFormat('yyyy-MM-dd').format(currentDate);
@@ -321,9 +307,7 @@ class PrayerTimeController extends GetxController implements GetxService {
         prayerNameAndTimes();
       }
     } catch (e) {
-      if (kDebugMode) {
-        print("Error fetching data: $e");
-      }
+        debugPrint("Error fetching data: $e");
     } finally {
       isprayerTimeLoading(false);
       update();
@@ -392,9 +376,7 @@ class PrayerTimeController extends GetxController implements GetxService {
         cityModelData = CityesModel.fromJson(response.body);
       }
     } catch (e) {
-      if (kDebugMode) {
-        print("Error fetching data: $e");
-      }
+        debugPrint("Error fetching data: $e");
     } finally {
       isCityListLoading(false);
       update();
@@ -414,5 +396,26 @@ class PrayerTimeController extends GetxController implements GetxService {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('is24HrFormat', value);
     is24HourFormat.value = value;
+  }
+
+  String? _firstNonEmpty(List<String?> candidates) {
+    for (final c in candidates) {
+      if (c != null && c.trim().isNotEmpty) return c.trim();
+    }
+    return null;
+  }
+
+  void _applyPlacemark(Placemark p) {
+    final city = _firstNonEmpty([
+      p.locality,
+      p.subLocality,
+      p.subAdministrativeArea,
+    ]);
+    final state = _firstNonEmpty([p.administrativeArea, p.country]);
+
+    currentAddress.value = city ?? state ?? '--';
+
+    final parts = [city, state].whereType<String>().where((s) => s.isNotEmpty);
+    currentAddressFull.value = parts.isEmpty ? '--' : parts.join(', ');
   }
 }

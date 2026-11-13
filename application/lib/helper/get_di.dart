@@ -14,14 +14,14 @@ import 'package:nazar_e_alam/controller/category_controller.dart';
 import 'package:nazar_e_alam/controller/dhikr_controller.dart';
 // import 'package:nazar_e_alam/controller/donation_controller.dart';
 import 'package:nazar_e_alam/controller/dua_controller.dart';
-// import 'package:nazar_e_alam/controller/hadith_controller.dart';
+import 'package:nazar_e_alam/controller/hadith_controller.dart';
 import 'package:nazar_e_alam/controller/home_layout_controller.dart';
 import 'package:nazar_e_alam/controller/internet_check_controller.dart';
 // import 'package:nazar_e_alam/controller/islamic_name_controller.dart';
 import 'package:nazar_e_alam/controller/localization_controller.dart';
 import 'package:nazar_e_alam/controller/nearby_mosque_controller.dart';
 import 'package:nazar_e_alam/controller/noti_sound_controller.dart';
-import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
+import 'package:nazar_e_alam/controller/prayer_time_controller.dart';
 import 'package:nazar_e_alam/controller/prayer_time_adjustment.dart';
 import 'package:nazar_e_alam/controller/quran_controller.dart';
 import 'package:nazar_e_alam/controller/quran_milestone_controller.dart';
@@ -115,7 +115,7 @@ Future<Map<String, Map<String, String>>> init(SharedPreferences sharedPreference
   // old controller
   Get.lazyPut(() => ThemeController(sharedPreferences: Get.find()));
   Get.lazyPut(() => SplashController(splashRepo: Get.find()));
-  // Get.lazyPut(() => HadithController());
+  Get.lazyPut(() => HadithController());
   Get.lazyPut(() => NearbyMosqueController());
   Get.lazyPut(
     () => SettingsController(quranSettingRepo: Get.find()),

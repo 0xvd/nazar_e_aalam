@@ -79,15 +79,15 @@ class _QiblahCompassWidgetState extends State<QiblahCompassWidget> {
               Container(
                 padding: const EdgeInsets.symmetric(
                     horizontal: 32.0, vertical: 10.0),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Theme.of(context).hintColor.withOpacity(0.05),
-                      Theme.of(context).hintColor.withOpacity(0.10),
-                    ],
-                  ),
-                  borderRadius: BorderRadius.circular(18.0),
-                ),
+                // decoration: BoxDecoration(
+                //   gradient: LinearGradient(
+                //     colors: [
+                //       Theme.of(context).hintColor.withOpacity(0.05),
+                //       Theme.of(context).hintColor.withOpacity(0.10),
+                //     ],
+                //   ),
+                //   borderRadius: BorderRadius.circular(18.0),
+                // ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [

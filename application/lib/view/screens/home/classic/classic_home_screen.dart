@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:nazar_e_alam/controller/internet_check_controller.dart';
-import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
+import 'package:nazar_e_alam/controller/prayer_time_controller.dart';
 import 'package:nazar_e_alam/controller/quran_settings_controller.dart';
 import 'package:nazar_e_alam/controller/theme_controller.dart';
 import 'package:nazar_e_alam/helper/date_converter.dart';
@@ -95,8 +95,11 @@ class ClassicHomeScreen extends StatelessWidget {
           const SizedBox(width: 6),
           Expanded(
             child: Text(
-              prayerTimeController.saveLocalStoreCity ??
-                  prayerTimeController.currentAddress.toString(),
+              prayerTimeController.isManualPrayerTime.value &&
+                      prayerTimeController.saveLocalStoreCity?.isNotEmpty ==
+                          true
+                  ? prayerTimeController.saveLocalStoreCity!
+                  : prayerTimeController.currentAddressFull.value,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: robotoMedium.copyWith(
@@ -183,7 +186,7 @@ class ClassicHomeScreen extends StatelessWidget {
           const SizedBox(width: 8),
           Expanded(
             child: Text(
-              "${"todays_Prayer_Time_in".tr} ${controller.saveAddress.value.isNotEmpty ? controller.saveAddress.value : controller.currentAddress.value}",
+              "${"todays_Prayer_Time_in".tr} ${controller.saveAddress.value.isNotEmpty ? controller.saveAddress.value : controller.currentAddressFull.value}",
               style: robotoBold.copyWith(
                 fontSize: Dimensions.FONT_SIZE_LARGE,
                 color: Theme.of(Get.context!).textTheme.bodyMedium?.color,

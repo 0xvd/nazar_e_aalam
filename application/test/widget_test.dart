@@ -14,7 +14,8 @@ void main() {
     SharedPreferences.setMockInitialValues({});
 
     debugPrint('STEP 1: Starting dependency initialization');
-    final languages = await di.init();
+    final prefs = await SharedPreferences.getInstance();
+    final languages = await di.init(prefs);
     debugPrint('STEP 2: Dependencies initialized');
 
     // Create themes the same way main() does

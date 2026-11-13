@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
+import 'package:nazar_e_alam/controller/prayer_time_controller.dart';
 import 'package:nazar_e_alam/helper/salat_waqt_service.dart';
 import 'package:nazar_e_alam/util/app_constants.dart';
 import 'package:nazar_e_alam/util/dimensions.dart';
@@ -38,8 +38,9 @@ class CustomCityDialog extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Theme.of(context).hintColor.withOpacity(0.1),
-                    borderRadius:
-                        BorderRadius.circular(Dimensions.RADIUS_SMALL),
+                    borderRadius: BorderRadius.circular(
+                      Dimensions.RADIUS_SMALL,
+                    ),
                   ),
                   child: TextField(
                     controller: prayerTimeController.citySearchController,
@@ -63,22 +64,21 @@ class CustomCityDialog extends StatelessWidget {
                   onTap: () async {
                     final prefs = await SharedPreferences.getInstance();
                     await prefs.setBool(AppConstants.isPrayerTme, false);
-                    await prefs.setString(
-                      AppConstants.saveCityName,
-                      prayerTimeController.currentAddress.toString(),
-                    );
+                    // Automatic mode → no manual city. Clear any previously saved one.
+                    await prefs.remove(AppConstants.saveCityName);
 
-                    prayerTimeController.fetchPrayerTime(
-                      isManualPrayerTme: false,
-                      manualCity: prayerTimeController.currentAddress.value,
-                    );
-                    prayerTimeController.getLocation();
+                    // getLocation() already calls fetchPrayerTime() internally with
+                    // isManualPrayerTme: false and the current address, so don't call
+                    // fetchPrayerTime() here — it would double-fetch.
+                    await prayerTimeController.getLocation();
                     Get.back();
                     SalatWaqtService.initializeSalatWaqt();
                   },
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 12, vertical: 10),
+                      horizontal: 12,
+                      vertical: 10,
+                    ),
                     child: Row(
                       children: [
                         SvgPicture.asset(
@@ -121,8 +121,11 @@ class CustomCityDialog extends StatelessWidget {
                       prayerTimeController.cityModelData?.data ?? [];
 
                   final filteredList = cityList
-                      .where((city) => city.toLowerCase().contains(
-                          prayerTimeController.search.value.toLowerCase()))
+                      .where(
+                        (city) => city.toLowerCase().contains(
+                          prayerTimeController.search.value.toLowerCase(),
+                        ),
+                      )
                       .toList();
 
                   if (filteredList.isEmpty) {
@@ -130,7 +133,8 @@ class CustomCityDialog extends StatelessWidget {
                       child: Text(
                         'no_data_found'.tr,
                         style: robotoMedium.copyWith(
-                            fontSize: Dimensions.FONT_SIZE_LARGE),
+                          fontSize: Dimensions.FONT_SIZE_LARGE,
+                        ),
                       ),
                     );
                   }
@@ -147,19 +151,24 @@ class CustomCityDialog extends StatelessWidget {
                             final prefs = await SharedPreferences.getInstance();
                             await prefs.setBool(AppConstants.isPrayerTme, true);
                             await prefs.setString(
-                                AppConstants.saveCityName, cityName);
+                              AppConstants.saveCityName,
+                              cityName,
+                            );
 
-                            prayerTimeController.fetchPrayerTime(
+                            await prayerTimeController.fetchPrayerTime(
                               isManualPrayerTme: true,
                               manualCity: cityName,
                             );
-                            prayerTimeController.getLocation();
+                            // Do NOT call getLocation() here — manual mode uses the picked city,
+                            // not GPS. getLocation() would overwrite currentAddress with GPS.
                             Get.back();
                             SalatWaqtService.initializeSalatWaqt();
                           },
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 12, vertical: 10),
+                              horizontal: 12,
+                              vertical: 10,
+                            ),
                             child: Row(
                               children: [
                                 SvgPicture.asset(

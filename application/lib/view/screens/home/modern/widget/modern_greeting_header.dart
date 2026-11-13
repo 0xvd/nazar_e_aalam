@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nazar_e_alam/controller/package_prayer_time_controller.dart';
+import 'package:nazar_e_alam/controller/prayer_time_controller.dart';
 import 'package:nazar_e_alam/controller/theme_controller.dart';
 import 'package:nazar_e_alam/helper/route_helper.dart';
 import 'package:nazar_e_alam/util/styles.dart';
@@ -48,7 +48,7 @@ class ModernGreetingHeader extends StatelessWidget {
               child: GrainOverlay(
                 density: dark ? 0.45 : 0.42,
                 opacity: dark ? 0.16 : 0.20,
-                fps: 9,
+                animate: false,
               ),
             ),
             Padding(
@@ -110,8 +110,13 @@ class ModernGreetingHeader extends StatelessWidget {
                               const SizedBox(width: 6),
                               Flexible(
                                 child: Text(
-                                  prayer.saveLocalStoreCity ??
-                                      prayer.currentAddress.toString(),
+                                  prayer.isManualPrayerTime.value &&
+                                          prayer
+                                                  .saveLocalStoreCity
+                                                  ?.isNotEmpty ==
+                                              true
+                                      ? prayer.saveLocalStoreCity!
+                                      : prayer.currentAddressFull.value,
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: robotoMedium.copyWith(
